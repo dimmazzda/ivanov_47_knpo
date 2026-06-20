@@ -166,6 +166,17 @@ class DirGraph
 * @param argc [in] Количество переданных аргументов командной строки
 * @param argv[1] [in] Путь к проектному файлу
 * @param argv[2] [in] Путь к выходной директории
-* @return 0, если функция завершилась успешна
+* @return 0, если функция завершилась успешно
 */
 int main(int argc, char* argv[]);
+
+
+/**
+* @brief функция чтения текста из файла
+* @param fileText [in/out] Контейнер для записи текста из файла
+* @param fileName [in] Путь к файлу с текстом
+* @param errorVector [in/out] Контейнер для ошибок
+* @return true, если функция завершилась успешно
+* @return false, если функция завершилась с ошибками
+*/
+bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName, std::vector<Error> errorVector);
