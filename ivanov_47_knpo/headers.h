@@ -212,3 +212,15 @@ bool extractTokensFromString(std::string & delimeter, std::vector<std::string> &
 * @return Тип графа
 */
 graphType findGraphType(const DirGraph & graph, adjacencyList & edgeDifference);
+
+
+/**
+* @brief функция создания выходного файла
+* @param type [in] Найденный тип входного графа
+* @param inputFilePlainText [in] Текстовое описание входного графа
+* @param edgesToDelete [in] Дуги для удаления
+* @param outputFileName [in] Имя выходного файла
+* @param errorsVector [in/out] Контейнер для ошибок
+* @return 0, если файл успешно создан
+*/
+int generateOutputFile(graphType type, std::vector<std::string> & inputFilePlainText, adjacencyList & edgesToDelete, std::string & outputFileName,std::vector<Error> & errorsVector);
