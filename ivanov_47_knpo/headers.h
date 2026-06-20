@@ -224,3 +224,10 @@ graphType findGraphType(const DirGraph & graph, adjacencyList & edgeDifference);
 * @return 0, если файл успешно создан
 */
 int generateOutputFile(graphType type, std::vector<std::string> & inputFilePlainText, adjacencyList & edgesToDelete, std::string & outputFileName,std::vector<Error> & errorsVector);
+
+
+/**
+* @brief вывод в консоль информации об ошибках
+* @param errorsVector [in] контейнер с ошибками
+*/
+void printErrorsMessages(std::vector<Error>& errorsVector);
