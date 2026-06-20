@@ -180,3 +180,13 @@ int main(int argc, char* argv[]);
 * @return false, если функция завершилась с ошибками
 */
 bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName, std::vector<Error> errorVector);
+
+
+/**
+* @brief функция парсинга графа из текста
+* @param fileText [in] Контейнер с текстом
+* @param inDegrees [in/out] Массив со степенями полузаходов вершин
+* @param errorVector [in/out] Контейнер для ошибок
+* @return Указатель на созданный граф
+*/
+DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int * inDegrees[1000], std::vector<Error> errorVector);
