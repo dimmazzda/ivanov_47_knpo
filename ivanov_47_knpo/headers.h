@@ -1,5 +1,7 @@
 #pragma once
 #include <vector>
+#include <string>
+
 
 /**
 * @brief возможные типы графа в терминах задачи
@@ -60,4 +62,25 @@ struct adjacencyList
 	* @return Указатель на новый список - результат вычитания
 	*/
 	adjacencyList * substract(const adjacencyList & subtrahend);
+};
+
+
+/**
+* @brief класс для ошибок
+*/
+class Error
+{
+	//поля
+	errorType type;		///<тип ошибки
+	std::string errorInputFileWay;		///<строка пути, откуда не удалось прочитать файл
+	std::string errorOutputFileWay;		///<строка пути, куда не удалось записать файл
+	std::string errorTagName;			///<строка, хранящая имя неизвестного тега
+
+
+	//методы
+	/**
+	* @brief генерация сообщения об ошибке
+	* @return строка с сообщением об ошибке
+	*/
+	std::string generateErrorMessage();
 };
