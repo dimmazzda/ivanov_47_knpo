@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ivanov_47_knpo/ivanov_47_knpo.vcxproj" />
+</Solution>
