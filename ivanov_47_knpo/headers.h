@@ -157,3 +157,15 @@ class DirGraph
 	*/
 	DirGraph * generateSpanningTree(int rootVertex);
 };
+
+
+// описания функций
+
+/**
+* @brief главная функция программы
+* @param argc [in] Количество переданных аргументов командной строки
+* @param argv[1] [in] Путь к проектному файлу
+* @param argv[2] [in] Путь к выходной директории
+* @return 0, если функция завершилась успешна
+*/
+int main(int argc, char* argv[]);
