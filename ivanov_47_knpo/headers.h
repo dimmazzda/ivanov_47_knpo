@@ -190,3 +190,14 @@ bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName
 * @return Указатель на созданный граф
 */
 DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int * inDegrees[1000], std::vector<Error> errorVector);
+
+
+/**
+* @brief делит строку на токены по заданному разделителю
+* @details возможен многосимвольный разделитель
+* @param delimeter [in] Строка с разделителем
+* @param tokens [in/out] Вектор с токенами
+* @return true Если функция завершилась успешно
+* @return false Если функция завершилась с ошибками
+*/
+bool extractTokensFromString(std::string & delimeter, std::vector<std::string> & tokens);
