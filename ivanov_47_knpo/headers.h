@@ -201,3 +201,14 @@ DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int * inDegree
 * @return false Если функция завершилась с ошибками
 */
 bool extractTokensFromString(std::string & delimeter, std::vector<std::string> & tokens);
+
+
+/**
+* @brief определить тип графа
+* @details определяет тип графа в соответствии с перечесленим graphType и возвращает его. Если граф приводим
+* к дереву, находит список дуг, удаление которых сделает граф деревом
+* @param graph [in] Константная ссылка на граф
+* @param edgeDifference [in/out] Список смежности для разности дуг между графом и его остовным деревом
+* @return Тип графа
+*/
+graphType findGraphType(const DirGraph & graph, adjacencyList & edgeDifference);
