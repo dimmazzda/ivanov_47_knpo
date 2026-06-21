@@ -75,7 +75,7 @@ class Error
 	std::string errorInputFileWay;		///<строка пути, откуда не удалось прочитать файл
 	std::string errorOutputFileWay;		///<строка пути, куда не удалось записать файл
 	std::string errorTagName;			///<строка, хранящая имя неизвестного тега
-
+	int line;							///<номер строки с ошибкой, если ошибка во внутренней структуре файла
 
 	//методы
 	/**
@@ -83,6 +83,15 @@ class Error
 	* @return строка с сообщением об ошибке
 	*/
 	std::string generateErrorMessage();
+
+
+	/**
+	* @brief проверка ошибок на равенство
+	* @return true, если ошибки одинаковые
+	* return false, если ошибки разные
+	*/
+	bool isEqualTo(const Error & otherError);
+
 };
 
 
