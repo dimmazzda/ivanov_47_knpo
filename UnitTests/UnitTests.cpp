@@ -526,8 +526,278 @@ namespace UnitTests
 			return true;
 		}
 
-		
+		TEST_METHOD(basicValidGraph)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"}"
+			};
 
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(3);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(1, 2);
+			int expDegrees[1000] = { 0,1,1 };
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 3));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(isolatedVertices)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(4);
+			expectedGraph.addEdge(0, 1);
+			int expDegrees[1000] = { 0, 1, 0, 0 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 4));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(loops)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->1",
+				"2->2",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(3);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(1, 1);
+			expectedGraph.addEdge(2, 2);
+			int expDegrees[1000] = { 0, 2, 1 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 3));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(multigraph)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"0->1",
+				"0->2",
+				"2->0",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(3);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(0, 2);
+			expectedGraph.addEdge(2, 0);
+			int expDegrees[1000] = { 1, 2, 1 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 3));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(noEdges)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(3);
+			int expDegrees[1000] = { 0, 0, 0 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 3));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(emptyGraph)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(0);
+			int expDegrees[1000] = { 0 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 0));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(whiteDelimeters)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"   0   ",
+				"  1 ",
+				"2",
+				"",
+				"    0  ->  1 ",
+				"1->2",
+				"",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(3);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(1, 2);
+			int expDegrees[1000] = { 0, 1, 1 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 3));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(disconnectedComponents)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"1->0",
+				"3->4",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//запаршенный граф
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемые данные
+			DirGraph expectedGraph(5);
+			expectedGraph.addEdge(0, 1);
+			expectedGraph.addEdge(1, 0);
+			expectedGraph.addEdge(3, 4);
+			int expDegrees[1000] = { 1, 1, 0, 0, 1 };
+
+			//проверка
+			Assert::IsTrue(parsedGraph->dirGraphIsEqual(expectedGraph));
+			Assert::AreEqual((size_t)0, errorVector.size());
+			Assert::IsTrue(arraysAreEqual(inDegrees, expDegrees, 5));
+
+			//зачистка
+			delete parsedGraph;
+		}
+
+		
 	};
 
 
