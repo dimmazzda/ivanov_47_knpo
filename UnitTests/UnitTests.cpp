@@ -526,6 +526,26 @@ namespace UnitTests
 			return true;
 		}
 
+		bool errorVectorsAreEqual(const std::vector<Error>& vector1, const std::vector<Error>& vector2)
+		{
+			// Проверяем размеры векторов
+			if (vector1.size() != vector2.size())
+			{
+				return false;
+			}
+
+			// Сравниваем каждую ошибку поэлементно, порядок ошибок единственно-возможный по порядку строк
+			for (int i = 0; i < vector1.size(); i++)
+			{
+				if (!(vector1[i].isEqualTo(vector2[i])))
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
 		TEST_METHOD(basicValidGraph)
 		{
 			//входные данные
