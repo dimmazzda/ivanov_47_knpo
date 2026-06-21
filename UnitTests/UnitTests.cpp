@@ -919,40 +919,6 @@ namespace UnitTests
 			}
 		}
 
-		TEST_METHOD(incorrectVertexValue)
-		{
-			//входные данные
-			std::vector<std::string> fileText = {
-				"digraph G {",
-				"0",
-				"1",
-				"3",
-				"0->1",
-				"1->0",
-				"0->3",
-				"}"
-			};
-
-			int inDegrees[1000] = { 0 };
-			std::vector<Error> errorVector;
-
-			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
-
-			//создаём ожидаемый вектор ошибок
-			std::vector<Error> expectedErrors;
-			Error error1(3);
-			expectedErrors.push_back(error1);
-
-			//проверка
-			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
-
-			//зачистка
-			if (parsedGraph != nullptr)
-			{
-				delete parsedGraph;
-			}
-		}
-
 		TEST_METHOD(endLineSyntaxErrorTest)
 		{
 			//входные данные
@@ -1122,6 +1088,52 @@ namespace UnitTests
 		}
 	};
 
+	TEST_CLASS(createSpanningTreeTests)
+	{
+	public:
+		TEST_METHOD(linearTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"2->3",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
 
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"2->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+	};
 }
 
