@@ -1988,5 +1988,682 @@ namespace UnitTests
 			delete expectedGraph;
 		}
 	};
+
+	TEST_CLASS(findGraphTypeTests)
+	{
+	public:
+		TEST_METHOD(linearTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"2->3",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление (их состав не будет участвовать в коде)
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = tree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(classicTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->2",
+				"1->3",
+				"1->4",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = tree;
+
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(oneVertexTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = tree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(isolatedVertex)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = notConvertibleToTree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(severalPotentialRoots)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->3",
+				"2->3",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = notConvertibleToTree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(onePotentialRoot)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"2->3",
+				"3->2",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = notConvertibleToTree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(noRoot)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"2->0",
+				"2->1",
+				"2->3",
+				"3->2",
+				"3->1",
+				"1->0",
+				"4->5",
+				"5->4",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = notConvertibleToTree;
+
+			Assert::IsTrue(resultType == expectedType);
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(simpleCycle)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"2->0",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 3;
+			expectedEdgeDifference.neighbours = {
+				{},
+				{},
+				{0}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(excessEdge)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"0->2",
+				"2->1",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 3;
+			expectedEdgeDifference.neighbours = {
+				{},
+				{},
+				{1}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(onePotentialRoot)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->4",
+				"1->2",
+				"4->2",
+				"2->3",
+				"3->1",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 5;
+			expectedEdgeDifference.neighbours = {
+				{},
+				{},
+				{},
+				{1},
+				{2}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(noPotentialRoot)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->4",
+				"1->2",
+				"4->2",
+				"2->0",
+				"2->3",
+				"3->1",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 5;
+			expectedEdgeDifference.neighbours = {
+				{1},
+				{},
+				{3},
+				{},
+				{2}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(multiGraph)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->4",
+				"1->2",
+				"4->2",
+				"2->0",
+				"2->3",
+				"3->1",
+				"3->1",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 5;
+			expectedEdgeDifference.neighbours = {
+				{1},
+				{},
+				{3},
+				{1},
+				{2}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(weakConnectedCycles)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"0->1",
+				"1->2",
+				"2->0",
+				"3->4",
+				"4->5",
+				"5->3",
+				"5->0",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.neighbours = {
+				{},
+				{},
+				{0},
+				{},
+				{},
+				{3}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(strongConnectedCycles)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"0->1",
+				"1->0",
+				"1->2",
+				"2->1",
+				"2->0",
+				"0->2",
+				"3->0",
+				"0->3",
+				"3->4",
+				"4->3",
+				"4->5",
+				"5->4",
+				"3->5",
+				"5->3",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.neighbours = {
+				{1, 2},
+				{0, 2},
+				{},
+				{0},
+				{3, 5},
+				{3, 4}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(loops)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->4",
+				"4->2",
+				"2->0",
+				"1->1",
+				"1->2",
+				"2->3",
+				"3->1",
+				"3->3",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.neighbours = {
+				{1},
+				{1},
+				{3},
+				{3},
+				{2}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(complexTest1)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"0->1",
+				"0->1",
+				"0->2",
+				"1->1",
+				"1->3",
+				"1->4",
+				"1->5",
+				"2->3",
+				"2->3",
+				"2->4",
+				"3->1",
+				"3->2",
+				"3->3",
+				"4->0",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.neighbours = {
+				{1,1,2},
+				{1,3},
+				{3,4},
+				{2,3},
+				{},
+				{}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+
+		TEST_METHOD(complexTest2)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->1",
+				"0->0",
+				"0->3",
+				"1->2",
+				"2->0",
+				"4->2",
+				"6->4",
+				"5->4",
+				"4->5",
+				"4->5",
+				"}"
+			};
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			//дуги попадающие под удаление
+			adjacencyList edgeDifference;
+			//найденный тип графа
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			//ождиаемые данные
+			graphType expectedType = convertibleToTree;
+			adjacencyList expectedEdgeDifference;
+			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.neighbours = {
+				{1,1,2},
+				{1,3},
+				{3,4},
+				{2,3},
+				{},
+				{}
+			};
+
+			Assert::IsTrue(resultType == expectedType);
+			Assert::IsTrue(expectedEdgeDifference.isEqualTo(edgeDifference));
+
+			delete parsedGraph;
+		}
+	};
 }
 
