@@ -817,7 +817,309 @@ namespace UnitTests
 			delete parsedGraph;
 		}
 
-		
+		TEST_METHOD(definitionLineSyntaxErrorTest)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"bigraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"1->0",
+				"3->4",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(defenitionLineSyntaxError);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(incorrectEdgeSyntax)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0--1",
+				"1->0",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(4);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(incorrectVertexSyntax)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"a",
+				"0->1",
+				"1->0",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(3);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(incorrectVertexValue)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"3",
+				"0->1",
+				"1->0",
+				"0->3",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(3);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(endLineSyntaxErrorTest)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->0",
+				"]"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(endLineSyntaxError);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(combinatedErrors)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"bigraph G {",
+				"0",
+				"1",
+				"2",
+				"0--1",
+				"1->0",
+				"]"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(defenitionLineSyntaxError);
+			Error error2(4);
+			Error error3(endLineSyntaxError);
+			expectedErrors.push_back(error1);
+			expectedErrors.push_back(error2);
+			expectedErrors.push_back(error3);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(notStatedVertex)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"0->1",
+				"1->2",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(4);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(wrongDescriptionOrder)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0->1",
+				"1->2",
+				"0",
+				"1",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(1);
+			expectedErrors.push_back(error1);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
+
+		TEST_METHOD(combinatedErrors)
+		{
+			//входные данные
+			std::vector<std::string> fileText = {
+				"digraph G {",
+				"0",
+				"1",
+				"0--1",
+				"1-<0",
+				"}"
+			};
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			DirGraph* parsedGraph = parseGraphFromText(fileText, inDegrees, errorVector);
+
+			//создаём ожидаемый вектор ошибок
+			std::vector<Error> expectedErrors;
+			Error error1(3);
+			Error error2(4);
+			expectedErrors.push_back(error1);
+			expectedErrors.push_back(error2);
+
+			//проверка
+			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));
+
+			//зачистка
+			if (parsedGraph != nullptr)
+			{
+				delete parsedGraph;
+			}
+		}
 	};
 
 
