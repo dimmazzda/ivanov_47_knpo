@@ -97,7 +97,7 @@ class Error
 	* @return true, если ошибки одинаковые
 	* return false, если ошибки разные
 	*/
-	bool isEqualTo(const Error & otherError);
+	bool isEqualTo(const Error& otherError) const;
 
 };
 
