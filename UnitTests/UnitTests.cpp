@@ -1134,6 +1134,859 @@ namespace UnitTests
 			delete expectedGraph;
 		}
 
+		TEST_METHOD(shrinkedlinearTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"2->3",
+				"}"
+			};
+			int inputRootVertex = 1; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"1",
+				"2",
+				"3",
+				"1->2",
+				"2->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}	
+
+		TEST_METHOD(basicNonLinearTree)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"0->2",
+				"0->3",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"0->2",
+				"0->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(rootInDrain)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"0->2",
+				"0->3",
+				"}"
+			};
+			int inputRootVertex = 2; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"0->2",
+				"0->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(severalRoots)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->2",
+				"1->2",
+				"2->3",
+				"2->4",
+				"}"
+			};
+			int inputRootVertex = 1; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"1",
+				"2",
+				"3",
+				"4",
+				"1->2",
+				"2->3",
+				"2->4",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(simpleCycle)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"2->0",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(containsCycle)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"2->0",
+				"1->3",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"1->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(twoDirectionCycle)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->0",
+				"1->2",
+				"2->1",
+				"0->2",
+				"2->0",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->2",
+				"1->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(unreachebleVertices)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"0->2",
+				"3->2",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"0->2",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(isolatedComponent)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"0->1",
+				"0->2",
+				"3->4",
+				"4->3",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"0->2",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(searchOrderTest)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"0->2",
+				"0->4",
+				"2->1",
+				"2->3",
+				"3->5",
+				"4->5",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"0->2",
+				"0->4",
+				"2->1",
+				"2->3",
+				"4->5",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(multigraph)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"0->1",
+				"1->2",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+		
+		TEST_METHOD(stronglyConnectedGraph)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->1",
+				"1->0",
+				"1->2",
+				"2->1",
+				"1->3",
+				"3->1",
+				"}"
+			};
+			int inputRootVertex = 1; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"1->0",
+				"1->2",
+				"1->3",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(simpleLoop)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->1",
+				"1->2",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"0->1",
+				"1->2",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(complexLoops)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"0->0",
+				"0->0",
+				"0->1",
+				"1->1",
+				"1->2",
+				"1->3",
+				"3->0",
+				"3->1",
+				"}"
+			};
+			int inputRootVertex = 1; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"1->2",
+				"1->3",
+				"3->0",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(complexTest1)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"10",
+				"11",
+				"0->1",
+				"0->1",
+				"0->2",
+				"0->3",
+				"1->4",
+				"1->5",
+				"2->4",
+				"2->6",
+				"3->3",
+				"3->1",
+				"3->5",
+				"10->11",
+				"11->10",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->1",
+				"0->2",
+				"0->3",
+				"1->4",
+				"1->5",
+				"2->6",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(complexTest2)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"7",
+				"8",
+				"0->1",
+				"0->1",
+				"0->2",
+				"0->3",
+				"1->4",
+				"1->5",
+				"2->4",
+				"2->6",
+				"3->3",
+				"3->5",
+				"7->0",
+				"7->8",
+				"8->7",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->1",
+				"0->2",
+				"0->3",
+				"1->4",
+				"1->5",
+				"2->6",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(complexTest3)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->2",
+				"2->0",
+				"2->5",
+				"5->5",
+				"5->3",
+				"5->4",
+				"3->4",
+				"3->6",
+				"0->3",
+				"3->5",
+				"7->0",
+				"7->8",
+				"8->7",
+				"}"
+			};
+			int inputRootVertex = 5; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"3",
+				"4",
+				"5",
+				"6",
+				"5->3",
+				"5->4",
+				"3->6",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
+
+		TEST_METHOD(complexTest4)
+		{
+			//входной граф
+			std::vector<std::string> inputText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->1",
+				"0->2",
+				"0->3",
+				"2->0",
+				"2->5",
+				"5->5",
+				"5->3",
+				"5->4",
+				"3->6",
+				"3->4",
+				"}"
+			};
+			int inputRootVertex = 0; //входной корень
+
+			int inDegrees[1000] = { 0 };
+			std::vector<Error> errorVector;
+
+			//результат ф-ции
+			DirGraph* parsedGraph = parseGraphFromText(inputText, inDegrees, errorVector);
+			DirGraph* createdTree = parsedGraph->generateSpanningTree(inputRootVertex);
+			//ожидаемый граф
+			std::vector<std::string> expectedText = {
+				"digraph G {",
+				"0",
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"0->1",
+				"0->2",
+				"0->3",
+				"2->5",
+				"3->4",
+				"3->6",
+				"}"
+			};
+			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
+			Assert::IsTrue(createdTree->dirGraphIsEqual(*expectedGraph));
+
+			//зачистка	
+			delete parsedGraph;
+			delete createdTree;
+			delete expectedGraph;
+		}
 	};
 }
 
