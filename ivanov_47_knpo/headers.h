@@ -108,6 +108,7 @@ class Error
 class DirGraph
 {
 	// поля
+	std::vector<int> vertices;		///<список вершин графа
 	adjacencyList edges;	///< дуги графа в виде списка смежности
 
 
