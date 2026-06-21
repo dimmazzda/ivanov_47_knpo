@@ -41,6 +41,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(equalLists)
@@ -74,6 +76,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(noOverlap)
@@ -104,6 +108,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(fullOverlapOfSubtrahend)
@@ -137,6 +143,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(fullOverlapOfMinuend)
@@ -167,6 +175,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(emptyMinuend)
@@ -200,6 +210,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(emptySubtrahend)
@@ -233,6 +245,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(diffVertexCntMinSmler)
@@ -264,6 +278,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(diffVertexCntMinBger)
@@ -296,6 +312,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(selfSubtraction)
@@ -319,6 +337,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(duplicateEdges)
@@ -349,6 +369,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(loopEdges)
@@ -382,6 +404,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(complexTest1)
@@ -415,6 +439,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(complexTest2)
@@ -447,6 +473,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 
 		TEST_METHOD(complexTest3)
@@ -480,6 +508,8 @@ namespace UnitTests
 
 			//проверка
 			Assert::IsTrue(result->isEqualTo(expected));
+
+			delete result;
 		}
 	};
 }
