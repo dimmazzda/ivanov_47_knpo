@@ -214,16 +214,15 @@ DirGraph* DirGraph::generateSpanningTree(int rootVertex)
 	// проверка, что такой корень есть
 	auto itRoot = std::find(vertices.begin(), vertices.end(), rootVertex);
 	if (itRoot == vertices.end())
-	{
-		return nullptr; // корень не найден
-	}
+		return nullptr;
 	int rootIndex = std::distance(vertices.begin(), itRoot);
 
 	// массив посещённых
 	std::vector<bool> visited(vertices.size(), false);
-
-	// корень сразу считается посещённым
 	visited[rootIndex] = true;
+
+	// дуги, по которым мы прошли
+	std::vector<std::pair<int, int>> treeEdges;
 
 	// очередь для вершин
 	std::queue<int> queue;
@@ -235,21 +234,22 @@ DirGraph* DirGraph::generateSpanningTree(int rootVertex)
 		int sourceIdx = queue.front();
 		queue.pop();
 
-		// перебираем непосещённых соседей 
 		for (int neighborIdx : edges.neighbours[sourceIdx])
 		{
 			if (!visited[neighborIdx])
 			{
 				visited[neighborIdx] = true;
 				queue.push(neighborIdx);
+				// запоминаем дугу, по которой прошли
+				treeEdges.push_back({ sourceIdx, neighborIdx });
 			}
 		}
 	}
 
-	// для посещённых вершин пересчитываем индекс с учётом удалённых вершин
-	std::vector<int> oldToNewIndex(vertices.size(), -1); // -1 = вершина не в дереве
+	// пересчитываем индексы для посещённых вершин
+	std::vector<int> oldToNewIndex(vertices.size(), -1);
 	int newIndex = 0;
-	for (int i = 0; i < vertices.size(); i++)
+	for (size_t i = 0; i < vertices.size(); i++)
 	{
 		if (visited[i])
 		{
@@ -258,36 +258,27 @@ DirGraph* DirGraph::generateSpanningTree(int rootVertex)
 		}
 	}
 
-	// подготавливаем результирующий граф
+	// создаём результирующий граф
 	DirGraph* tree = new DirGraph();
 	tree->edges.countOfVertices = newIndex;
 	tree->edges.neighbours.resize(newIndex);
 
-	// заносим в граф только попавшие в обход вершины
-	for (int i = 0; i < vertices.size(); i++)
-	{
-		if (visited[i])
-		{
-			tree->vertices.push_back(vertices[i]);
-		}
-	}
-
-	// заполняем список смежности, пересчитывая индексы
+	// заносим посещённые вершины
 	for (size_t i = 0; i < vertices.size(); i++)
 		if (visited[i])
-		{
-			int currentNewIdx = oldToNewIndex[i];
+			tree->vertices.push_back(vertices[i]);
 
-			for (int neighborOldIdx : edges.neighbours[i])
-			{
-				// Добавляем дугу только если сосед тоже посещён
-				if (visited[neighborOldIdx])
-				{
-					int neighborNewIdx = oldToNewIndex[neighborOldIdx];
-					tree->edges.neighbours[currentNewIdx].push_back(neighborNewIdx);
-				}
-			}
-		}
+	// заполняем список смежности
+	for (const auto& edge : treeEdges)
+	{
+		int fromOldIdx = edge.first;
+		int toOldIdx = edge.second;
+
+		int fromNewIdx = oldToNewIndex[fromOldIdx];
+		int toNewIdx = oldToNewIndex[toOldIdx];
+
+		tree->edges.neighbours[fromNewIdx].push_back(toNewIdx);
+	}
 
 	return tree;
 }
