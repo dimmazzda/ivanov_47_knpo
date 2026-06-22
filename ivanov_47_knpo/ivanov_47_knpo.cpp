@@ -638,18 +638,18 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 
 graphType tryBuildTreeFromVertex(const DirGraph& graph, int rootIdx, int vertexCount, adjacencyList& edgeDifference)
 {
+	//строим остовное дерево
 	DirGraph* spanningTree = graph.generateSpanningTree(graph.vertices[rootIdx]);
-
+	//если не построилось или охватывает не все вершины
 	if (spanningTree == nullptr || spanningTree->getVertexCount() != vertexCount)
 	{
 		delete spanningTree;
 		return notConvertibleToTree;
 	}
-
 	adjacencyList* graphEdges = graph.getEdges();
 	adjacencyList* treeEdges = spanningTree->getEdges();
 	edgeDifference = *graphEdges->substract(*treeEdges);
-
+	//зачистка
 	delete graphEdges;
 	delete treeEdges;
 	delete spanningTree;
