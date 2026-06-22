@@ -512,7 +512,7 @@ namespace UnitTests
 			delete result;
 		}
 	};
-/*
+
 	TEST_CLASS(parseGraphFromTextTests)
 	{
 	public:
@@ -567,6 +567,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(3);
+			expectedGraph.vertices = { 0,1,2 };
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(1, 2);
 			int expDegrees[1000] = { 0,1,1 };
@@ -600,6 +601,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(4);
+			expectedGraph.vertices = { 0,1,2,3 };
 			expectedGraph.addEdge(0, 1);
 			int expDegrees[1000] = { 0, 1, 0, 0 };
 
@@ -634,6 +636,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(3);
+			expectedGraph.vertices = { 0,1,2};
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(1, 1);
 			expectedGraph.addEdge(2, 2);
@@ -671,6 +674,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(3);
+			expectedGraph.vertices = { 0,1,2 };
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(0, 2);
@@ -705,6 +709,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(3);
+			expectedGraph.vertices = { 0,1,2 };
 			int expDegrees[1000] = { 0, 0, 0 };
 
 			//проверка
@@ -732,6 +737,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(0);
+			expectedGraph.vertices = {};
 			int expDegrees[1000] = { 0 };
 
 			//проверка
@@ -766,6 +772,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(3);
+			expectedGraph.vertices = { 0,1,2 };
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(1, 2);
 			int expDegrees[1000] = { 0, 1, 1 };
@@ -803,6 +810,7 @@ namespace UnitTests
 
 			//создаём ожидаемые данные
 			DirGraph expectedGraph(5);
+			expectedGraph.vertices = { 0,1,2,3,4 };
 			expectedGraph.addEdge(0, 1);
 			expectedGraph.addEdge(1, 0);
 			expectedGraph.addEdge(3, 4);
@@ -1053,7 +1061,7 @@ namespace UnitTests
 			}
 		}
 
-		TEST_METHOD(combinatedErrors)
+		TEST_METHOD(severalInnerDescriptionErrors)
 		{
 			//входные данные
 			std::vector<std::string> fileText = {
@@ -1087,7 +1095,7 @@ namespace UnitTests
 			}
 		}
 	};
-
+/*
 	TEST_CLASS(createSpanningTreeTests)
 	{
 	public:
@@ -2665,5 +2673,6 @@ namespace UnitTests
 			delete parsedGraph;
 		}
 	};
-*/}
+	*/
+}
 
