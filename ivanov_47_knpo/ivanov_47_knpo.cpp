@@ -772,6 +772,56 @@ void printErrorsMessages(const std::vector<Error>& errorsVector)
 }
 
 
+std::string processEdgeLine(const std::string& line, graphType type, const std::vector<std::string>& vertexNames, const std::map<std::pair<int, int>, int>& edgesToDeleteCount, std::map<std::pair<int, int>, int>& highlightedCount)
+{
+	std::string trimmed = trim(line);
+
+	// если граф не приводимый или строка не дуга
+	if (type != convertibleToTree || trimmed.find("->") == std::string::npos)
+		return line;
+
+	std::vector<std::string> tokens;
+	std::string arrow = "->";
+	extractTokensFromString(trimmed, arrow, tokens);
+
+	// если строка не по формату
+	if (tokens.size() != 2)
+		return line;
+
+	std::string fromName = trim(tokens[0]);
+	std::string toName = trim(tokens[1]);
+
+	auto itFrom = std::find(vertexNames.begin(), vertexNames.end(), fromName);
+	auto itTo = std::find(vertexNames.begin(), vertexNames.end(), toName);
+
+	// если одной из вершин нет
+	if (itFrom == vertexNames.end() || itTo == vertexNames.end())
+		return line;
+
+	int fromIdx = std::distance(vertexNames.begin(), itFrom);
+	int toIdx = std::distance(vertexNames.begin(), itTo);
+
+	auto key = std::make_pair(fromIdx, toIdx);
+
+	// если дуги нет в карте, считаем, что 0
+	int requiredCount = 0;
+	auto itCount = edgesToDeleteCount.find(key);
+	if (itCount != edgesToDeleteCount.end())
+		requiredCount = itCount->second;
+
+	int currentCount = highlightedCount[key];
+
+	// Если ещё не все дуги помечены — помечаем текущую
+	if (currentCount < requiredCount)
+	{
+		highlightedCount[key]++;
+		return trimmed + " [color=\"red\"]";
+	}
+
+	return line;
+}
+
+
 std::vector<std::string> generateOutputText(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete)
 {
 	std::vector<std::string> outputText;
@@ -784,16 +834,13 @@ std::vector<std::string> generateOutputText(graphType type, std::vector<std::str
 		if (trimmed.empty() ||
 			trimmed.find("digraph") != std::string::npos ||
 			trimmed == "}")
-		{
 			continue;
-		}
+
 		if (trimmed.find("->") == std::string::npos)
-		{
 			vertexNames.push_back(trimmed);
-		}
 	}
 
-	// Преобразование enum graphType в строку
+	// преобразование enum graphType в строку
 	auto typeToString = [](graphType t) -> std::string
 		{
 			switch (t)
@@ -825,54 +872,17 @@ std::vector<std::string> generateOutputText(graphType type, std::vector<std::str
 	for (const auto& line : inputFilePlainText)
 	{
 		std::string trimmed = trim(line);
-		std::string outputLine = line;
 
-		// Вставляем вершину-результат закрывающей скобкой
+		// вставляем вершину-результат перед закрывающей скобкой
 		if (trimmed == "}" && !resultNodeInserted)
 		{
 			outputText.push_back("\"" + resultNodeName + "\"");
 			resultNodeInserted = true;
 		}
 
-		// если тип приводимый и строка является дугой, проверяем её на удаление
-		if (type == convertibleToTree && trimmed.find("->") != std::string::npos)
-		{
-			std::vector<std::string> tokens;
-			std::string arrow = "->";
-			extractTokensFromString(trimmed, arrow, tokens);
-
-			if (tokens.size() == 2)
-			{
-				std::string fromName = trim(tokens[0]);
-				std::string toName = trim(tokens[1]);
-
-				// Находим индексы вершин
-				auto itFrom = std::find(vertexNames.begin(), vertexNames.end(), fromName);
-				auto itTo = std::find(vertexNames.begin(), vertexNames.end(), toName);
-
-				if (itFrom != vertexNames.end() && itTo != vertexNames.end())
-				{
-					int fromIdx = std::distance(vertexNames.begin(), itFrom);
-					int toIdx = std::distance(vertexNames.begin(), itTo);
-
-					// проверка: сколько раз дуга должна быть выделена
-					auto key = std::make_pair(fromIdx, toIdx);
-					int requiredCount = edgesToDeleteCount[key];
-					int currentCount = highlightedCount[key];
-
-					// если ещё не все удалили - помечаем
-					if (currentCount < requiredCount)
-					{
-						// форматируем строку
-						outputLine = trimmed + " [color=\"red\"]";
-						// увеличиваем счётчик выделенных дуг
-						highlightedCount[key]++;
-					}
-				}
-			}
-		}
-
-		outputText.push_back(outputLine);
+		// обработка строки
+		outputText.push_back(processEdgeLine(line, type, vertexNames,
+			edgesToDeleteCount, highlightedCount));
 	}
 
 	// Если в файле не оказалось "}", вставляем результат в конец

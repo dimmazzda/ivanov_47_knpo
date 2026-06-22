@@ -307,6 +307,17 @@ void printErrorsMessages(const std::vector<Error>& errorsVector);
 
 
 /**
+* @brief Обработка строки с дугой: если дуга подлежит удалению, помечает её красным
+* @param [in] line Исходная строка из файла
+* @param [in] type Тип графа
+* @param [in] vertexNames Имена вершин графа (в порядке объявления)
+* @param [in] edgesToDeleteCount Количество каждой дуги, подлежащей удалению
+* @param [in/out] highlightedCount Счётчик уже помеченных дуг
+* @return Модифицированная строка (с пометкой [color="red"]) или исходная строка
+*/
+std::string processEdgeLine(const std::string& line, graphType type, const std::vector<std::string>& vertexNames, const std::map<std::pair<int, int>, int>& edgesToDeleteCount, std::map<std::pair<int, int>, int>& highlightedCount);
+
+/**
 * @brief формирование текста выходного файла
 * @param [in] type Найденный тип входного графа
 * @param [in] inputFilePlainText Текстовое описание входного графа
