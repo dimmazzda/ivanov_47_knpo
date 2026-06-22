@@ -199,7 +199,7 @@ int main(int argc, char* argv[]);
 * @return true, если функция завершилась успешно
 * @return false, если функция завершилась с ошибками
 */
-bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName, std::vector<Error> errorVector);
+bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName, std::vector<Error> & errorVector);
 
 
 /**
