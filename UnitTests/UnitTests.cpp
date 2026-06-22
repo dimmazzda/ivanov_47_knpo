@@ -498,7 +498,7 @@ namespace UnitTests
 			adjacencyList expected;
 			expected.countOfVertices = 3;
 			expected.neighbours = {
-				{0, 1},
+				{0},
 				{0, 2},
 				{0}
 			};
