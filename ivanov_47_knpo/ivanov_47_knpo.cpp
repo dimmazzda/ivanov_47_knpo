@@ -6,6 +6,8 @@
 #include <stack>
 #include <fstream>
 #include <windows.h>
+#include <map>
+
 
 bool adjacencyList::isEmpty()
     {
@@ -796,7 +798,7 @@ void printErrorsMessages(const std::vector<Error>& errorsVector)
 
 int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete, std::string& outputFileName, std::vector<Error>& errorsVector)
 {
-	// открываем выходной файл
+	// открываем входной файл
 	std::ofstream outFile(outputFileName);
 	if (!outFile.is_open())
 	{
@@ -804,29 +806,27 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		err.type = createOutFileFail;
 		err.errorOutputFileWay = outputFileName;
 		errorsVector.push_back(err);
-		return 1; // код ошибки
+		return 1;
 	}
 
-	// извлекаем имена вершин в порядке объявления для маппинга индексов -> имена
+	// извлекаем имена вершин
 	std::vector<std::string> vertexNames;
 	for (const auto& line : inputFilePlainText)
 	{
 		std::string trimmed = trim(line);
-		// пропускаем служебные строки
 		if (trimmed.empty() ||
 			trimmed.find("digraph") != std::string::npos ||
 			trimmed == "}")
 		{
 			continue;
 		}
-		// если в строке нет "->", это объявление вершины
 		if (trimmed.find("->") == std::string::npos)
 		{
 			vertexNames.push_back(trimmed);
 		}
 	}
 
-	// преобразуем graphType в строку
+	// 3. Преобразование enum graphType в строку
 	auto typeToString = [](graphType t) -> std::string
 		{
 			switch (t)
@@ -839,7 +839,20 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		};
 	std::string resultNodeName = "resultOfAnalysis: " + typeToString(type);
 
+	// ✅ 4. ПОДСЧЁТ КОЛИЧЕСТВА КАЖДОЙ ДУГИ В edgesToDelete
+	std::map<std::pair<int, int>, int> edgesToDeleteCount;
+	for (int fromIdx = 0; fromIdx < edgesToDelete.countOfVertices; fromIdx++)
+	{
+		for (int toIdx : edgesToDelete.neighbours[fromIdx])
+		{
+			edgesToDeleteCount[{fromIdx, toIdx}]++;
+		}
+	}
 
+	// ✅ 5. СЧЁТЧИК УЖЕ ПОДСВЕЧЕННЫХ ДУГ
+	std::map<std::pair<int, int>, int> highlightedCount;
+
+	// 6. Построчная запись с модификацией
 	bool resultNodeInserted = false;
 
 	for (const auto& line : inputFilePlainText)
@@ -847,14 +860,14 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		std::string trimmed = trim(line);
 		std::string outputLine = line;
 
-		// вставляем вершину-результат перед закрывающей скобкой
+		// Вставляем вершину-результат ПЕРЕД закрывающей скобкой
 		if (trimmed == "}" && !resultNodeInserted)
 		{
 			outFile << "\"" << resultNodeName << "\"\n";
 			resultNodeInserted = true;
 		}
 
-		// если тип приводимый и строка является дугой, проверяем её на отметку красным
+		// Если тип приводимый и строка является дугой, проверяем её на подсветку
 		if (type == convertibleToTree && trimmed.find("->") != std::string::npos)
 		{
 			std::vector<std::string> tokens;
@@ -866,7 +879,7 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 				std::string fromName = trim(tokens[0]);
 				std::string toName = trim(tokens[1]);
 
-				// находим индексы вершин
+				// Находим индексы вершин
 				auto itFrom = std::find(vertexNames.begin(), vertexNames.end(), fromName);
 				auto itTo = std::find(vertexNames.begin(), vertexNames.end(), toName);
 
@@ -875,20 +888,31 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 					int fromIdx = std::distance(vertexNames.begin(), itFrom);
 					int toIdx = std::distance(vertexNames.begin(), itTo);
 
-					// проверяем, есть ли дуга в списке на удаление
-					bool shouldHighlight = false;
-					if (fromIdx >= 0 && fromIdx < edgesToDelete.countOfVertices)
-					{
-						const auto& neighbours = edgesToDelete.neighbours[fromIdx];
-						shouldHighlight = (std::find(neighbours.begin(), neighbours.end(), toIdx) != neighbours.end());
-					}
+					// ✅ ПРОВЕРКА: сколько раз эта дуга должна быть подсвечена
+					auto key = std::make_pair(fromIdx, toIdx);
+					int requiredCount = edgesToDeleteCount[key];  // сколько раз дуга в edgesToDelete
+					int currentCount = highlightedCount[key];     // сколько раз уже подсветили
 
-					// если дуга помечена на удаление, добавляем атрибут цвета
-					if (shouldHighlight)
-						outputLine = trimmed + " [color=\"red\"]";
+					// Если ещё не достигли нужного количества — подсвечиваем
+					if (currentCount < requiredCount)
+					{
+						// Сохраняем оригинальное форматирование
+						if (!trimmed.empty() && trimmed.back() == ';')
+						{
+							outputLine = trimmed.substr(0, trimmed.size() - 1) + " [color=\"red\"];";
+						}
+						else
+						{
+							outputLine = trimmed + " [color=\"red\"]";
+						}
+
+						// ✅ УВЕЛИЧИВАЕМ СЧЁТЧИК
+						highlightedCount[key]++;
+					}
 				}
 			}
 		}
+
 		outFile << outputLine << "\n";
 	}
 
@@ -899,7 +923,7 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 	}
 
 	outFile.close();
-	return 0; // успех
+	return 0;
 }
 
 
