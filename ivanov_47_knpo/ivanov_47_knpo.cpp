@@ -661,9 +661,8 @@ graphType tryBuildTreeFromVertex(const DirGraph& graph, int rootIdx, int vertexC
 graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, int inDegrees[1000])
 {
 	int vertexCount = graph.vertices.size();
-	// Обработка пустого графа
 	if (vertexCount == 0)
-		return tree; // пустой граф считаем деревом
+		return tree;
 
 	// ищем потенциальные корни
 	std::vector<int> potentialRoots;
@@ -677,103 +676,61 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 
 	// если корень 1 - строим из него дерево
 	if (potentialRoots.size() == 1)
-	{
-		int rootIdx = potentialRoots[0];
-		int rootVertex = graph.vertices[rootIdx];
+		return tryBuildTreeFromVertex(graph, potentialRoots[0], vertexCount, edgeDifference);
 
-		DirGraph* spanningTree = graph.generateSpanningTree(rootVertex);
-		// проверяем, охватывает ли дерево все вершины
-		if (spanningTree->getVertexCount() != vertexCount)
+	// если потенциальных корней нет
+	std::vector<bool> tried(vertexCount, false);
+	std::stack<int> stack;
+
+	stack.push(0);
+	tried[0] = true;
+
+	// пока стек непустой
+	while (!stack.empty())
+	{
+		int currentIdx = stack.top();
+		stack.pop();
+
+		// находим неопробованных родителей
+		std::vector<int> untriedParents;
+		for (int i = 0; i < vertexCount; i++)
 		{
-			delete spanningTree;
-			return notConvertibleToTree;
+			if (tried[i] || i == currentIdx)
+				continue;
+
+			for (int neighborIdx : graph.edges.neighbours[i])
+			{
+				if (neighborIdx == currentIdx)
+				{
+					untriedParents.push_back(i);
+					break;
+				}
+			}
+		}
+
+		if (untriedParents.empty())
+		{
+			// нет родителей - пытаемся построить дерево
+			graphType result = tryBuildTreeFromVertex(graph, currentIdx, vertexCount, edgeDifference);
+			if (result != notConvertibleToTree)
+				return result;
+		}
+		else if (untriedParents.size() == 1)
+		{
+			stack.push(untriedParents[0]);
+			tried[untriedParents[0]] = true;
 		}
 		else
 		{
-			// Вычисляем разность дуг
-			adjacencyList* graphEdges = graph.getEdges();
-			adjacencyList* treeEdges = spanningTree->getEdges();
-			edgeDifference = *graphEdges->substract(*treeEdges);
-			delete graphEdges;
-			delete treeEdges;
-			delete spanningTree;
-			if (edgeDifference.isEmpty())
-				return tree;
-			else
-				return convertibleToTree;
-
-			return edgeDifference.isEmpty() ? tree : convertibleToTree;
+			for (int i = (int)untriedParents.size() - 1; i >= 0; i--)
+			{
+				stack.push(untriedParents[i]);
+				tried[untriedParents[i]] = true;
+			}
 		}
 	}
 
-	if (potentialRoots.size() == 0)
-	{// если потенциальных корней нет
-		std::vector<bool> tried(vertexCount, false);
-		std::stack<int> stack;
-
-		// инициализируем стек первой вершиной
-		stack.push(0);
-		tried[0] = true;
-
-		// пока стек непустой
-		while (!stack.empty())
-		{
-			int currentIdx = stack.top();
-			stack.pop();
-
-			// находим неопробованных родителей
-			std::vector<int> untriedParents;
-			for (int i = 0; i < vertexCount; i++)
-			{
-				if (tried[i] || i==currentIdx)
-					continue;
-
-				for (int neighborIdx : graph.edges.neighbours[i])
-				{
-					if (neighborIdx == currentIdx)
-					{
-						untriedParents.push_back(i);
-						break;
-					}
-				}
-			}
-
-			if (untriedParents.empty())
-			{
-				// нет родителей - пытаемся построить дерево
-				int rootVertex = graph.vertices[currentIdx];
-				DirGraph* spanningTree = graph.generateSpanningTree(rootVertex);
-				if (spanningTree != nullptr && spanningTree->getVertexCount() == vertexCount)
-				{
-					adjacencyList* graphEdges = graph.getEdges();
-					adjacencyList* treeEdges = spanningTree->getEdges();
-					edgeDifference = *graphEdges->substract(*treeEdges);
-
-					delete graphEdges;
-					delete treeEdges;
-					delete spanningTree;
-
-					return edgeDifference.isEmpty() ? tree : convertibleToTree;
-				}
-				delete spanningTree;
-			}
-			else if (untriedParents.size() == 1)
-			{
-				stack.push(untriedParents[0]);
-				tried[untriedParents[0]] = true;
-			}
-			else
-			{
-				for (int i = untriedParents.size() - 1; i >= 0; i--)
-				{
-					stack.push(untriedParents[i]);
-					tried[untriedParents[i]] = true;
-				}
-			}
-		}
-
-		return notConvertibleToTree;
-	}
+	return notConvertibleToTree;
 }
 
 
