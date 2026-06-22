@@ -277,6 +277,17 @@ bool extractTokensFromString(std::string& str, const std::string& delimeter, std
 
 
 /**
+* @brief попытаться построить остовное дерево из указанной вершины
+* @param [in] graph Исходный граф
+* @param [in] rootIdx Индекс вершины-корня
+* @param [in] vertexCount Количество вершин в графе
+* @param [in/out] edgeDifference Разность дуг графа и дерева
+* @return Тип графа: tree, convertibleToTree или notConvertibleToTree
+*/
+graphType tryBuildTreeFromVertex(const DirGraph& graph, int rootIdx, int vertexCount, adjacencyList& edgeDifference);
+
+
+/**
 * @brief определить тип графа
 * @details определяет тип графа в соответствии с перечесленим graphType и возвращает его. Если граф приводим
 * к дереву, находит список дуг, удаление которых сделает граф деревом

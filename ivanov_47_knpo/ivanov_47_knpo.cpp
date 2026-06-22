@@ -636,6 +636,28 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 }
 
 
+graphType tryBuildTreeFromVertex(const DirGraph& graph, int rootIdx, int vertexCount, adjacencyList& edgeDifference)
+{
+	DirGraph* spanningTree = graph.generateSpanningTree(graph.vertices[rootIdx]);
+
+	if (spanningTree == nullptr || spanningTree->getVertexCount() != vertexCount)
+	{
+		delete spanningTree;
+		return notConvertibleToTree;
+	}
+
+	adjacencyList* graphEdges = graph.getEdges();
+	adjacencyList* treeEdges = spanningTree->getEdges();
+	edgeDifference = *graphEdges->substract(*treeEdges);
+
+	delete graphEdges;
+	delete treeEdges;
+	delete spanningTree;
+
+	return edgeDifference.isEmpty() ? tree : convertibleToTree;
+}
+
+
 graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, int inDegrees[1000])
 {
 	int vertexCount = graph.vertices.size();
