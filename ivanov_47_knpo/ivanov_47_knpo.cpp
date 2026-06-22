@@ -291,19 +291,76 @@ DirGraph* DirGraph::generateSpanningTree(int rootVertex)
 	return tree;
 }
 
+
+std::string trim(const std::string& str)
+{
+	// набор whitespace-символов
+	const std::string whitespace = " \t\n\r\f\v";
+
+	// ищем первый пробельный символ
+	size_t start = str.find_first_not_of(whitespace);
+	if (start == std::string::npos)
+	{
+		// строка пустая/состоит из пробелов
+		return "";
+	}
+	// ищем последний не пробельный символ
+	size_t end = str.find_last_not_of(whitespace);
+
+	// возвращаем подстроку от start до end включительно
+	return str.substr(start, end - start + 1);
+}
+
+
+bool extractTokensFromString(std::string& str, std::string& delimeter, std::vector<std::string>& tokens)
+{
+	// пустой разделитель - некорректные данные
+	if (delimeter.empty())
+	{
+		return false;
+	}
+
+	// очищаем токены
+	tokens.clear();
+
+	// если строка пустая, оставляем вектор пустым
+	if (str.empty())
+	{
+		return true;
+	}
+
+	int start = 0;
+	int end = 0;
+	int delimLen = delimeter.length();
+
+	// ищем разделители в строке
+	while ((end = str.find(delimeter, start)) != std::string::npos)
+	{
+		// извлекаем токен и обрезаем пробелы по краям
+		std::string token = trim(str.substr(start, end - start));
+
+		// если токен непустой, добавляем его
+		if (!token.empty())
+		{
+			tokens.push_back(token);
+		}
+
+		// сдвигаем начало на позицию после разделителя
+		start = end + delimLen;
+	}
+
+	// обрабатываем последний токен (после последнего разделителя)
+	std::string lastToken = trim(str.substr(start));
+	if (!lastToken.empty())
+	{
+		tokens.push_back(lastToken);
+	}
+
+	return true;
+}
+
+
 int main(int argc, char * argv[])
 {
-	DirGraph graph1(4);
-	graph1.vertices = { 0,1,2,3 };
-	graph1.addEdge(0, 1);
-	graph1.addEdge(0, 2);
-	graph1.addEdge(3, 2);
 	
-	DirGraph graph2 = *graph1.generateSpanningTree(0);
-	
-	DirGraph graph3(3);
-	graph3.vertices = { 0,1,2 };
-	graph3.addEdge(0, 1);
-	graph3.addEdge(0, 2);
-	printf("%d", graph3.dirGraphIsEqual(graph2));
 }
