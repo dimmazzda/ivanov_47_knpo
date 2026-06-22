@@ -737,7 +737,7 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 			}
 			else
 			{
-				for (int i = (int)untriedParents.size() - 1; i >= 0; i--)
+				for (int i = untriedParents.size() - 1; i >= 0; i--)
 				{
 					stack.push(untriedParents[i]);
 					tried[untriedParents[i]] = true;
@@ -750,6 +750,14 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 }
 
 
+void printErrorsMessages(std::vector<Error>& errorsVector)
+{
+	for (int i = 0; i < errorsVector.size(); i++)
+	{
+		std::string curMessage = errorsVector[i].generateErrorMessage();
+		printf("%s", curMessage);
+	}
+}
 int main(int argc, char * argv[])
 {
 	
