@@ -70,6 +70,7 @@ struct adjacencyList
 */
 class Error
 {
+public:
 	//поля
 	errorType type;		///<тип ошибки
 	std::string errorInputFileWay;		///<строка пути, откуда не удалось прочитать файл
@@ -208,7 +209,7 @@ bool readTextFromFile(std::vector<std::string>& fileText, std::string & fileName
 * @param errorVector [in/out] Контейнер для ошибок
 * @return Указатель на созданный граф
 */
-DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error> errorVector);
+DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error> & errorVector);
 
 
 /**
