@@ -452,6 +452,63 @@ bool tryParseInt(const std::string& str, int& result)
 		return false;
 	}
 }
+
+
+void parseInnerLine(const std::string& line, int lineNumber, std::vector<int>& vertexList, std::vector<std::pair<int, int>>& edgeList, std::vector<int>& edgeLineNumbers, bool& edgesStarted, std::vector<Error>& errorVector)
+{
+	//обрезаем лишние пробелы
+	std::string trimmed = trim(line);
+	if (trimmed.empty())
+		return;
+
+	std::string arrow = "->";
+		//если содержит знак ->
+	if (trimmed.find(arrow) != std::string::npos)
+	{
+		// Строка является дугой
+		edgesStarted = true;
+
+		std::vector<std::string> tokens;
+		extractTokensFromString(trimmed, arrow, tokens);
+		//если не соответствует шаблону число->число
+		if (tokens.size() != 2)
+		{
+			errorVector.push_back(Error(lineNumber));
+			return;
+		}
+
+		int fromVertex, toVertex;
+		if (!tryParseInt(tokens[0], fromVertex) || !tryParseInt(tokens[1], toVertex))
+		{
+			errorVector.push_back(Error(lineNumber));
+			return;
+		}
+
+		edgeList.push_back({ fromVertex, toVertex });
+		edgeLineNumbers.push_back(lineNumber);
+	}
+	else
+	{
+		// Строка является вершиной
+		if (edgesStarted)
+		{
+			errorVector.push_back(Error(lineNumber));
+			return;
+		}
+
+		int vertex;
+		//если не парсится как число - ошибка
+		if (!tryParseInt(trimmed, vertex))
+		{
+			errorVector.push_back(Error(lineNumber));
+			return;
+		}
+
+		vertexList.push_back(vertex);
+	}
+}
+
+
 DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error>& errorVector)
 {	//очистка входных данных
 	for (int i = 0; i < 1000; i++)

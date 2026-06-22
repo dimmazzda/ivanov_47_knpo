@@ -256,6 +256,20 @@ bool tryParseInt(const std::string& str, int& result);
 
 
 /**
+* @brief Обработка одной строки внутреннего описания графа
+* @details Определяет тип строки (дуга или вершина), парсит её и добавляет в соответствующий список.
+*          При ошибке синтаксиса добавляет ошибку в errorVector.
+* @param [in] line Строка для обработки
+* @param [in] lineNumber Номер строки в файле (для сообщений об ошибках)
+* @param [in/out] vertexList Список вершин (может быть дополнен)
+* @param [in/out] edgeList Список дуг (может быть дополнен)
+* @param [in/out] edgeLineNumbers Номера строк с дугами (может быть дополнен)
+* @param [in/out] edgesStarted Флаг: встречалась ли уже хотя бы одна дуга
+* @param [in/out] errorVector Контейнер для ошибок
+*/
+void parseInnerLine(const std::string& line, int lineNumber, std::vector<int>& vertexList, std::vector<std::pair<int, int>>& edgeList, std::vector<int>& edgeLineNumbers, bool& edgesStarted, std::vector<Error>& errorVector);
+
+/**
 * @brief функция парсинга графа из текста
 * @param [in] fileText Контейнер с текстом
 * @param [in/out] inDegrees Массив со степенями полузаходов вершин
