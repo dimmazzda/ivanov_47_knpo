@@ -219,7 +219,7 @@ DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[
 * @return true Если функция завершилась успешно
 * @return false Если функция завершилась с ошибками
 */
-bool extractTokensFromString(std::string & delimeter, std::vector<std::string> & tokens);
+bool extractTokensFromString(std::string & str, std::string & delimeter, std::vector<std::string> & tokens);
 
 
 /**
