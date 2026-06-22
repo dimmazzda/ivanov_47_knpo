@@ -319,6 +319,17 @@ Error::~Error() {
 	;
 }
 
+bool Error::isEqualTo(const Error& otherError) const {
+	if (type == otherError.type &&
+		errorInputFileWay == otherError.errorInputFileWay &&
+		errorOutputFileWay == otherError.errorOutputFileWay &&
+		errorTagName == otherError.errorTagName &&
+		line == otherError.line)
+		return true;
+	else return false;
+}
+
+
 std::string Error::generateErrorMessage() const
 {
 	switch (type)
