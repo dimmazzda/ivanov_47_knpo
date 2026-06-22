@@ -698,7 +698,7 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 			std::vector<int> untriedParents;
 			for (int i = 0; i < vertexCount; i++)
 			{
-				if (tried[i])
+				if (tried[i] || i==currentIdx)
 					continue;
 
 				for (int neighborIdx : graph.edges.neighbours[i])
