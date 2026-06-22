@@ -784,12 +784,12 @@ bool readTextFromFile(std::vector<std::string>& fileText, std::string& fileName,
 	return true;
 }
 
-void printErrorsMessages(std::vector<Error>& errorsVector)
+void printErrorsMessages(const std::vector<Error>& errorsVector)
 {
 	for (int i = 0; i < errorsVector.size(); i++)
 	{
 		std::string curMessage = errorsVector[i].generateErrorMessage();
-		printf("%s", curMessage);
+		std::cout << curMessage << std::endl;
 	}
 }
 
