@@ -454,7 +454,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 	std::string space = " ";
 	extractTokensFromString(firstLine, space, defTokens);
 
-	// ожидаемый формат "digraph <name> {"
+	// проверка на соответствие ожидаемому формату "digraph <name> {"
 	if (defTokens.size() < 2 || defTokens[0] != "digraph" || defTokens.back() != "{")
 	{
 		Error err;
@@ -462,7 +462,6 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 		err.line = 1;
 		errorVector.push_back(err);
 	}
-
 	// ищем закрывающую скобку
 	int endLineIndex = -1;
 	bool endLineNotFound = false;
@@ -475,7 +474,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 			break;
 		}
 	}
-		//если не нашли
+	//если не нашли
 	if (endLineIndex == -1)
 	{
 		endLineNotFound = true;
@@ -521,7 +520,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 
 			if (edgeTokens.size() != 2)	//должно быть 2 токена
 			{
-				Error err(i+1);
+				Error err(i + 1);
 				errorVector.push_back(err);
 				continue;
 			}
@@ -533,16 +532,16 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 				fromVertex = std::stoi(edgeTokens[0], &pos1);
 				toVertex = std::stoi(edgeTokens[1], &pos2);
 
-				if (pos1 != edgeTokens[0].length() || pos2 != edgeTokens[1].length())
+				if (pos1 != edgeTokens[0].length() || pos2 != edgeTokens[1].length())	//если длины не совпадают - значит есть лишние символы
 				{
-					Error err(i+1);
+					Error err(i + 1);
 					errorVector.push_back(err);
 					continue;
 				}
 			}
 			catch (...)
 			{
-				Error err(i+1);
+				Error err(i + 1);
 				errorVector.push_back(err);
 				continue;
 			}
@@ -554,7 +553,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 		{	// Строка является вершиной
 			if (edgesStarted)		//неправильный порядок
 			{
-				Error err(i+1);
+				Error err(i + 1);
 				errorVector.push_back(err);
 				continue;
 			}
@@ -565,14 +564,14 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 				vertex = std::stoi(line, &pos);
 				if (pos != line.length())
 				{
-					Error err(i+1);
+					Error err(i + 1);
 					errorVector.push_back(err);
 					continue;
 				}
 			}
 			catch (...)
 			{
-				Error err(i+1);
+				Error err(i + 1);
 				errorVector.push_back(err);
 				continue;
 			}
@@ -602,22 +601,25 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 		int toVertex = edgeList[i].second;
 		int lineNumber = edgeLineNumbers[i];  // номер строки в файле
 
-		bool fromExists = std::find(vertexList.begin(), vertexList.end(), fromVertex) != vertexList.end();
-		bool toExists = std::find(vertexList.begin(), vertexList.end(), toVertex) != vertexList.end();
+		// проверяем, что обе вершины существуют в графе
+		auto itFrom = std::find(vertexList.begin(), vertexList.end(), fromVertex);
+		auto itTo = std::find(vertexList.begin(), vertexList.end(), toVertex);
 
-		if (!fromExists || !toExists)
+		if (itFrom == vertexList.end() || itTo == vertexList.end())
 		{
-			Error err(lineNumber);  // ✅ ИСПРАВЛЕНО: lineNumber вместо i
+			Error err(lineNumber);
 			errorVector.push_back(err);
 			continue;
 		}
 
+		// находим индекс вершины-приёмника
+		int toIndex = std::distance(vertexList.begin(), itTo);
+
+		// добавляем дугу в граф
 		graph->addEdge(fromVertex, toVertex);
 
-		if (toVertex >= 0 && toVertex < 1000)
-		{
-			inDegrees[toVertex]++;
-		}
+		// 
+		inDegrees[toIndex]++;
 	}
 	//сортируем ошибки по номеру строки, где она появилась
 	std::sort(errorVector.begin(), errorVector.end(),
@@ -625,7 +627,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 			return a.line < b.line;
 		});
 	return graph;
-}	
+}
 
 
 
