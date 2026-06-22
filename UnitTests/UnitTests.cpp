@@ -983,8 +983,10 @@ namespace UnitTests
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
 			Error error1(defenitionLineSyntaxError);
-			Error error2(4);
+			error1.line = 1;
+			Error error2(5);
 			Error error3(endLineSyntaxError);
+			error3.line = 7;
 			expectedErrors.push_back(error1);
 			expectedErrors.push_back(error2);
 			expectedErrors.push_back(error3);
@@ -1050,8 +1052,15 @@ namespace UnitTests
 
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
-			Error error1(1);
+			Error error1(2);  
+			Error error2(3);  
+			Error error3(4);  
+			Error error4(5);
+
 			expectedErrors.push_back(error1);
+			expectedErrors.push_back(error2);
+			expectedErrors.push_back(error3);
+			expectedErrors.push_back(error4);
 
 			//проверка
 			Assert::IsTrue(errorVectorsAreEqual(errorVector, expectedErrors));

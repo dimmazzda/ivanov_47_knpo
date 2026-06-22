@@ -2,6 +2,7 @@
 #include "headers.h"
 #include <algorithm>
 #include <queue>
+#include <stdexcept>
 
 bool adjacencyList::isEmpty()
     {
@@ -441,42 +442,40 @@ bool extractTokensFromString(std::string& str, std::string& delimeter, std::vect
 }
 
 
-DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error> & errorVector) 
-{
-	// Очистка входных данных
+DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error>& errorVector)
+{	//очистка входных данных
 	for (int i = 0; i < 1000; i++)
-	{
 		inDegrees[i] = 0;
-	}
 	errorVector.clear();
 
+	// проверка на пустой файл
 	if (fileText.empty())
 	{
-		Error err;
-		err.type = defenitionLineSyntaxError;
+		Error err(defenitionLineSyntaxError);
 		err.line = 1;
 		errorVector.push_back(err);
 		return nullptr;
 	}
 
-	// === ПРОВЕРКА СТРОКИ ОПРЕДЕЛЕНИЯ (первая строка) ===
+	// извлекаем definition line
 	std::string firstLine = trim(fileText[0]);
 	std::vector<std::string> defTokens;
 	std::string space = " ";
 	extractTokensFromString(firstLine, space, defTokens);
 
-	// Ожидаемый формат первой строки "digraph G {", не подходит - ошибка
+	// ожидаемый формат "digraph <name> {"
 	if (defTokens.size() < 2 || defTokens[0] != "digraph" || defTokens.back() != "{")
 	{
 		Error err;
 		err.type = defenitionLineSyntaxError;
 		err.line = 1;
 		errorVector.push_back(err);
-		return nullptr;
 	}
-	// Ищем закрывающую скобку
+
+	// ищем закрывающую скобку
 	int endLineIndex = -1;
-	for (int i = fileText.size() - 1; i >= 1; i--)
+	bool endLineNotFound = false;
+	for (int i = (int)fileText.size() - 1; i >= 1; i--)
 	{
 		std::string line = trim(fileText[i]);
 		if (line == "}")
@@ -485,64 +484,70 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 			break;
 		}
 	}
-	if (endLineIndex == -1)	//если не нашли - ошибка
+		//если не нашли
+	if (endLineIndex == -1)
 	{
-		Error err;
-		err.type = endLineSyntaxError;
-		err.line = (int)fileText.size();
-		errorVector.push_back(err);
-		return nullptr;
-	}
-
-	// проверка, что после "}" нет непустых строк
-	for (int i = endLineIndex + 1; i < (int)fileText.size(); i++)
-	{
-		if (!trim(fileText[i]).empty())
+		endLineNotFound = true;
+		// Находим последнюю непустую строку
+		int lastNonEmptyLine = -1;
+		for (int i = fileText.size() - 1; i >= 1; i--)
 		{
-			Error err;
-			err.type = endLineSyntaxError;
-			err.line = i + 1;
-			errorVector.push_back(err);
-			break;
+			if (!trim(fileText[i]).empty())
+			{
+				lastNonEmptyLine = i;
+				break;
+			}
 		}
+
+		if (lastNonEmptyLine != -1)
+			// парсим все до последней непустой строки невключительно
+			endLineIndex = lastNonEmptyLine;
+		else
+			endLineIndex = (int)fileText.size();
+
 	}
 
-	//парсим сам граф
-	std::vector<int> vertexList;                     // список объявленных вершин
-	std::vector<std::pair<int, int>> edgeList;       // список дуг (from, to)
-	std::vector<int> edgeLineNumbers;                // номера строк с дугами
-	bool edgesStarted = false;                       // флаг: уже встречали дуги
+	// парсим граф
+	std::vector<int> vertexList;
+	std::vector<std::pair<int, int>> edgeList;
+	std::vector<int> edgeLineNumbers;
+	bool edgesStarted = false;
 	std::string arrow = "->";
 
 	for (int i = 1; i < endLineIndex; i++)
 	{
 		std::string line = trim(fileText[i]);
 		if (line.empty())
-		{
-			continue; // пропускаем пустые строки
-		}
-		// определяем наличие символа ->
+			continue;
+
 		if (line.find(arrow) != std::string::npos)
 		{
+			// строка является дугой
 			edgesStarted = true;
 
 			std::vector<std::string> edgeTokens;
 			extractTokensFromString(line, arrow, edgeTokens);
 
-			// по формату должно быть 2 числовых токена
-			if (edgeTokens.size() != 2)
+			if (edgeTokens.size() != 2)	//должно быть 2 токена
 			{
 				Error err(i+1);
 				errorVector.push_back(err);
 				continue;
 			}
 
-			// пытаемся преобразовать токены в числа
 			int fromVertex, toVertex;
 			try
 			{
-				fromVertex = std::stoi(edgeTokens[0]);
-				toVertex = std::stoi(edgeTokens[1]);
+				size_t pos1, pos2;		//токены должны быть числами без лишних символов
+				fromVertex = std::stoi(edgeTokens[0], &pos1);
+				toVertex = std::stoi(edgeTokens[1], &pos2);
+
+				if (pos1 != edgeTokens[0].length() || pos2 != edgeTokens[1].length())
+				{
+					Error err(i+1);
+					errorVector.push_back(err);
+					continue;
+				}
 			}
 			catch (...)
 			{
@@ -555,9 +560,9 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 			edgeLineNumbers.push_back(i + 1);
 		}
 		else
-		{
-			if (edgesStarted)
-			{	// вершина после дуги — нарушение порядка описания => ошибка
+		{	// Строка является вершиной
+			if (edgesStarted)		//неправильный порядок
+			{
 				Error err(i+1);
 				errorVector.push_back(err);
 				continue;
@@ -565,7 +570,14 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 			int vertex;
 			try
 			{
-				vertex = std::stoi(line);
+				size_t pos;
+				vertex = std::stoi(line, &pos);
+				if (pos != line.length())
+				{
+					Error err(i+1);
+					errorVector.push_back(err);
+					continue;
+				}
 			}
 			catch (...)
 			{
@@ -577,40 +589,52 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 		}
 	}
 
-	DirGraph* graph = new DirGraph(vertexList.size());	//Создаём граф
+	// добавляем в конец ошибку об отсутствии закрывающей скобки
+	if (endLineNotFound)
+	{
+		Error err;
+		err.type = endLineSyntaxError;
+		err.line = (endLineIndex == fileText.size()) ? fileText.size() : (endLineIndex + 1);
+		errorVector.push_back(err);
+	}
 
-	// заполняем вершины
+	// создаём граф
+	DirGraph* graph = new DirGraph((int)vertexList.size());
 	graph->vertices = vertexList;
-	graph->edges.countOfVertices = vertexList.size();
+	graph->edges.countOfVertices = (int)vertexList.size();
 	graph->edges.neighbours.resize(vertexList.size());
 
-	// добавляем дуги и параллельно подсчитываем степени захода
-	for (int i = 0; i < edgeList.size(); i++)
+	// заносим дуги и считаем степени захода
+	for (size_t i = 0; i < edgeList.size(); i++)
 	{
 		int fromVertex = edgeList[i].first;
 		int toVertex = edgeList[i].second;
-		int lineNumber = edgeLineNumbers[i];
+		int lineNumber = edgeLineNumbers[i];  // номер строки в файле
 
-		// проверяем, что обе вершины объявлены
 		bool fromExists = std::find(vertexList.begin(), vertexList.end(), fromVertex) != vertexList.end();
 		bool toExists = std::find(vertexList.begin(), vertexList.end(), toVertex) != vertexList.end();
 
 		if (!fromExists || !toExists)
 		{
-			Error err(lineNumber);
+			Error err(lineNumber);  // ✅ ИСПРАВЛЕНО: lineNumber вместо i
 			errorVector.push_back(err);
 			continue;
 		}
 
-		// Добавляем дугу в граф
 		graph->addEdge(fromVertex, toVertex);
 
-		// Увеличиваем степень захода целевой вершины
 		if (toVertex >= 0 && toVertex < 1000)
+		{
 			inDegrees[toVertex]++;
+		}
 	}
+	//сортируем ошибки по номеру строки, где она появилась
+	std::sort(errorVector.begin(), errorVector.end(),
+		[](const Error& a, const Error& b) {
+			return a.line < b.line;
+		});
 	return graph;
-}
+}	
 
 
 
