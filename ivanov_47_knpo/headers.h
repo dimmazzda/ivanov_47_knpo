@@ -239,9 +239,10 @@ bool extractTokensFromString(std::string & str, std::string & delimeter, std::ve
 * к дереву, находит список дуг, удаление которых сделает граф деревом
 * @param graph [in] Константная ссылка на граф
 * @param edgeDifference [in/out] Список смежности для разности дуг между графом и его остовным деревом
+* @param inDegrees [in] Вычисленные при парсинге степепи заходов вершин
 * @return Тип графа
 */
-graphType findGraphType(const DirGraph & graph, adjacencyList & edgeDifference);
+graphType findGraphType(const DirGraph & graph, adjacencyList & edgeDifference, int inDegrees[1000]);
 
 
 /**
