@@ -927,79 +927,59 @@ int writeTextToFile(std::vector<std::string>& outputText, std::string& outputFil
 	return 0;
 }
 
+
 int main(int argc, char* argv[])
 {
+	// настройка кодировки консоли
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
 
+	// проверка количества аргументов
 	if (argc != 3)
-	{
-		std::cerr << "Использование: " << argv[0] << " <входной_файл> <выходной_файл>" << std::endl;
 		return 1;
-	}
 
 	std::string inputFileName = argv[1];
 	std::string outputFileName = argv[2];
 
-	// чтение входного файла ===
+	// читаем входной файл
 	std::vector<std::string> fileText;
 	std::vector<Error> errorsVector;
-
 	if (!readTextFromFile(fileText, inputFileName, errorsVector))
 	{
-		std::cerr << "Ошибка чтения файла:" << std::endl;
-		printErrorsMessages(errorsVector); 
+		printErrorsMessages(errorsVector);
 		return 1;
 	}
-
-	std::cout << "Файл успешно прочитан. Строк: " << fileText.size() << std::endl;
 
 	// парсинг графа
 	int inDegrees[1000] = { 0 };
 	DirGraph* graph = parseGraphFromText(fileText, inDegrees, errorsVector);
 
-	if (graph == nullptr)
+	// если парсинг неудачный - выводим ошибки
+	if (!errorsVector.empty())
 	{
-		std::cerr << "Ошибка парсинга графа:" << std::endl;
-		printErrorsMessages(errorsVector); 
+		printErrorsMessages(errorsVector);
+		delete graph;  // освобождаем память
 		return 1;
 	}
 
-	if (!errorsVector.empty())
-	{
-		std::cout << "Предупреждения при парсинге:" << std::endl;
-		printErrorsMessages(errorsVector);  
-	}
 
-	std::cout << "Граф успешно распарсен. Вершин: " << graph->vertices.size() << std::endl;
-
-	// находим тип графа
+	// анализ графа
 	errorsVector.clear();
 	adjacencyList edgesToDelete;
 	graphType type = findGraphType(*graph, edgesToDelete, inDegrees);
 
-	std::string typeStr;
-	switch (type)
-	{
-	case tree:                 typeStr = "дерево"; break;
-	case convertibleToTree:    typeStr = "приводим к дереву"; break;
-	case notConvertibleToTree: typeStr = "неприводим к дереву"; break;
-	default:                   typeStr = "неизвестный тип"; break;
-	}
+	// формируем выходной текст
+	std::vector<std::string> outputText = generateOutputText(type, fileText, edgesToDelete);
 
-	std::cout << "Тип графа: " << typeStr << std::endl;
-
-	// создаём выходной файл
-	if (generateOutputFile(type, fileText, edgesToDelete, outputFileName, errorsVector) != 0)
+	// записываем в файл
+	if (writeTextToFile(outputText, outputFileName, errorsVector) != 0)
 	{
-		std::cerr << "Ошибка создания выходного файла:" << std::endl;
-		printErrorsMessages(errorsVector); 
+		printErrorsMessages(errorsVector);
 		delete graph;
 		return 1;
 	}
 
-	std::cout << "Выходной файл успешно создан: " << outputFileName << std::endl;
-
+	// Освобождение памяти
 	delete graph;
 	return 0;
 }
