@@ -230,7 +230,7 @@ std::string trim(const std::string& str);
 * @return true Если функция завершилась успешно
 * @return false Если функция завершилась с ошибками
 */
-bool extractTokensFromString(std::string & str, std::string & delimeter, std::vector<std::string> & tokens);
+bool extractTokensFromString(std::string & str, const std::string & delimeter, std::vector<std::string> & tokens);
 
 
 /**
