@@ -660,77 +660,73 @@ graphType tryBuildTreeFromVertex(const DirGraph& graph, int rootIdx, int vertexC
 
 graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, int inDegrees[1000])
 {
+	//считаем кол-во вершин
 	int vertexCount = graph.vertices.size();
 	if (vertexCount == 0)
 		return tree;
 
-	// ищем потенциальные корни
+	//считаем потенциальные корни
 	std::vector<int> potentialRoots;
 	for (int i = 0; i < vertexCount; i++)
 		if (inDegrees[i] == 0)
 			potentialRoots.push_back(i);
 
-	// если корней > 1 граф неприводим
-	if (potentialRoots.size() > 1)
-		return notConvertibleToTree;
-
-	// если корень 1 - строим из него дерево
-	if (potentialRoots.size() == 1)
+	switch (potentialRoots.size())
+	{
+	case 1:	// потенциальный корень один
 		return tryBuildTreeFromVertex(graph, potentialRoots[0], vertexCount, edgeDifference);
 
-	// если потенциальных корней нет
-	std::vector<bool> tried(vertexCount, false);
-	std::stack<int> stack;
-
-	stack.push(0);
-	tried[0] = true;
-
-	// пока стек непустой
-	while (!stack.empty())
+	case 0:		// потенциальных корней нет
 	{
-		int currentIdx = stack.top();
-		stack.pop();
+		//создаём хранилища для опробованных вершин и вершин, которые остаётся опробовать
+		std::vector<bool> tried(vertexCount, false);
+		std::stack<int> stack;
 
-		// находим неопробованных родителей
-		std::vector<int> untriedParents;
-		for (int i = 0; i < vertexCount; i++)
+		stack.push(0);
+		tried[0] = true;
+		//пока в стеке есть вершины на апробацию
+		while (!stack.empty())
 		{
-			if (tried[i] || i == currentIdx)
-				continue;
+			int currentIdx = stack.top();
+			stack.pop();
 
-			for (int neighborIdx : graph.edges.neighbours[i])
+			std::vector<int> untriedParents;
+			for (int i = 0; i < vertexCount; i++)
 			{
-				if (neighborIdx == currentIdx)
+				if (tried[i] || i == currentIdx)	//если это петля или уже опробованная вершина скип
+					continue;
+				//ищем родителей
+				for (int neighborIdx : graph.edges.neighbours[i])
 				{
-					untriedParents.push_back(i);
-					break;
+					if (neighborIdx == currentIdx)
+					{
+						untriedParents.push_back(i);
+						break;
+					}
+				}
+			}
+			//Если родителей нет
+			if (untriedParents.empty())
+			{
+				graphType result = tryBuildTreeFromVertex(graph, currentIdx, vertexCount, edgeDifference);
+				if (result != notConvertibleToTree)
+					return result;
+			}
+			else          //если есть - строим из первого по номеру, остальные заносим в стек (если есть)
+			{
+				for (int i = (int)untriedParents.size() - 1; i >= 0; i--)
+				{
+					stack.push(untriedParents[i]);
+					tried[untriedParents[i]] = true;
 				}
 			}
 		}
-
-		if (untriedParents.empty())
-		{
-			// нет родителей - пытаемся построить дерево
-			graphType result = tryBuildTreeFromVertex(graph, currentIdx, vertexCount, edgeDifference);
-			if (result != notConvertibleToTree)
-				return result;
-		}
-		else if (untriedParents.size() == 1)
-		{
-			stack.push(untriedParents[0]);
-			tried[untriedParents[0]] = true;
-		}
-		else
-		{
-			for (int i = (int)untriedParents.size() - 1; i >= 0; i--)
-			{
-				stack.push(untriedParents[i]);
-				tried[untriedParents[i]] = true;
-			}
-		}
+		return notConvertibleToTree;
 	}
 
-	return notConvertibleToTree;
+	default:
+		return notConvertibleToTree;
+	}
 }
 
 
