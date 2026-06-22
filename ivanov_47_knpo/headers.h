@@ -212,8 +212,18 @@ DirGraph * parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[
 
 
 /**
+* @brief обрезает пробельные символы по краям строки
+* @details удаляет пробелы, табы, переносы строк и другие whitespace-символы
+*          с начала и конца строки. Пробелы внутри строки сохраняются.
+* @param str [in] Исходная строка
+* @return Обрезанная строка. Если строка состояла только из пробелов — пустая строка
+*/
+std::string trim(const std::string& str);
+
+/**
 * @brief делит строку на токены по заданному разделителю
 * @details возможен многосимвольный разделитель
+* @param str [in] Строка символов
 * @param delimeter [in] Строка с разделителем
 * @param tokens [in/out] Вектор с токенами
 * @return true Если функция завершилась успешно
