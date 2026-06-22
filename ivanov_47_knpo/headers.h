@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
-
+#include <map>
 
 /**
  * @mainpage Программа переброски слагаемых и множителей
