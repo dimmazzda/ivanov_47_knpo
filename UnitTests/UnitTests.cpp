@@ -849,6 +849,7 @@ namespace UnitTests
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
 			Error error1(defenitionLineSyntaxError);
+			error1.line = 1;
 			expectedErrors.push_back(error1);
 
 			//проверка
@@ -881,7 +882,7 @@ namespace UnitTests
 
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
-			Error error1(4);
+			Error error1(5);
 			expectedErrors.push_back(error1);
 
 			//проверка
@@ -914,7 +915,7 @@ namespace UnitTests
 
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
-			Error error1(3);
+			Error error1(4);
 			expectedErrors.push_back(error1);
 
 			//проверка
@@ -948,6 +949,7 @@ namespace UnitTests
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
 			Error error1(endLineSyntaxError);
+			error1.line = 7;
 			expectedErrors.push_back(error1);
 
 			//проверка
@@ -1016,7 +1018,7 @@ namespace UnitTests
 
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
-			Error error1(4);
+			Error error1(5);
 			expectedErrors.push_back(error1);
 
 			//проверка
@@ -1080,8 +1082,8 @@ namespace UnitTests
 
 			//создаём ожидаемый вектор ошибок
 			std::vector<Error> expectedErrors;
-			Error error1(3);
-			Error error2(4);
+			Error error1(4);
+			Error error2(5);
 			expectedErrors.push_back(error1);
 			expectedErrors.push_back(error2);
 
