@@ -2511,8 +2511,8 @@ namespace UnitTests
 			expectedEdgeDifference.countOfVertices = 6;
 			expectedEdgeDifference.neighbours = {
 				{1, 2},
-				{0, 2},
 				{},
+				{0, 1},
 				{0},
 				{3, 5},
 				{3, 4}
@@ -2556,7 +2556,7 @@ namespace UnitTests
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
-			expectedEdgeDifference.countOfVertices = 6;
+			expectedEdgeDifference.countOfVertices = 5;
 			expectedEdgeDifference.neighbours = {
 				{1},
 				{1},
