@@ -261,4 +261,4 @@ int generateOutputFile(graphType type, std::vector<std::string> & inputFilePlain
 * @brief вывод в консоль информации об ошибках
 * @param errorsVector [in] контейнер с ошибками
 */
-void printErrorsMessages(std::vector<Error>& errorsVector);
+void printErrorsMessages(const std::vector<Error>& errorsVector);
