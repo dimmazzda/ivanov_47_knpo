@@ -1999,7 +1999,7 @@ namespace UnitTests
 			delete expectedGraph;
 		}
 	};
-	/*
+	
 	TEST_CLASS(findGraphTypeTests)
 	{
 	public:
@@ -2024,7 +2024,7 @@ namespace UnitTests
 			//дуги попадающие под удаление (их состав не будет участвовать в коде)
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = tree;
 
@@ -2056,7 +2056,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = tree;
 
@@ -2081,7 +2081,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = tree;
 
@@ -2108,7 +2108,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = notConvertibleToTree;
 
@@ -2138,7 +2138,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = notConvertibleToTree;
 
@@ -2168,7 +2168,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = notConvertibleToTree;
 
@@ -2205,7 +2205,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = notConvertibleToTree;
 
@@ -2234,15 +2234,15 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
 			expectedEdgeDifference.countOfVertices = 3;
 			expectedEdgeDifference.neighbours = {
+				{1},
 				{},
-				{},
-				{0}
+				{}
 			};
 
 			Assert::IsTrue(resultType == expectedType);
@@ -2271,7 +2271,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2313,7 +2313,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2358,7 +2358,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2404,7 +2404,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2450,7 +2450,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2504,7 +2504,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2552,7 +2552,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2605,7 +2605,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2656,7 +2656,7 @@ namespace UnitTests
 			//дуги попадающие под удаление
 			adjacencyList edgeDifference;
 			//найденный тип графа
-			graphType resultType = findGraphType(*parsedGraph, edgeDifference);
+			graphType resultType = findGraphType(*parsedGraph, edgeDifference, inDegrees);
 			//ождиаемые данные
 			graphType expectedType = convertibleToTree;
 			adjacencyList expectedEdgeDifference;
@@ -2676,6 +2676,5 @@ namespace UnitTests
 			delete parsedGraph;
 		}
 	};
-	*/
 }
 
