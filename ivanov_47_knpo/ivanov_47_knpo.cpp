@@ -317,6 +317,7 @@ Error::~Error() {
 }
 
 bool Error::isEqualTo(const Error& otherError) const {
+	//сравниваем все поля
 	if (type == otherError.type &&
 		errorInputFileWay == otherError.errorInputFileWay &&
 		errorOutputFileWay == otherError.errorOutputFileWay &&
@@ -331,24 +332,24 @@ std::string Error::generateErrorMessage() const
 {
 	switch (type)
 	{
-	case inFileNotExist:
+	case inFileNotExist:	//нет входного файла
 		return "Ошибка: входной файл не существует или недоступен для чтения. Путь: \""
 			+ errorInputFileWay + "\"";
 
-	case createOutFileFail:
+	case createOutFileFail:		//не создался выходной файл
 		return "Ошибка: не удалось создать или открыть выходной файл для записи. Путь: \""
 			+ errorOutputFileWay + "\"";
 
-	case edgeNumberError:
+	case edgeNumberError:		//неверное кол-во дуг
 		return "Ошибка: некорректное количество дуг в графе.";
 
-	case verticesNumberError:
+	case verticesNumberError:	//неверное кол-во вершин
 		return "Ошибка: некорректное количество вершин в графе.";
 
-	case defenitionLineSyntaxError:
+	case defenitionLineSyntaxError:		//ошибка в строке объявления графа
 		return "Ошибка синтаксиса в строке определения графа (ожидается \"digraph <имя> {\").";
 
-	case innerDescriptionSyntaxError:
+	case innerDescriptionSyntaxError:	//ошибка во внутреннем описании графа
 		if (line >= 0)
 		{
 			return "Ошибка синтаксиса во внутреннем описании графа в строке "
@@ -356,7 +357,7 @@ std::string Error::generateErrorMessage() const
 		}
 		return "Ошибка синтаксиса во внутреннем описании графа.";
 
-	case endLineSyntaxError:
+	case endLineSyntaxError:		//ошибка в последней строке
 		if (line >= 0)
 		{
 			return "Ошибка синтаксиса в строке завершения графа (ожидается \"}\") в строке "
@@ -787,7 +788,7 @@ bool readTextFromFile(std::vector<std::string>& fileText, std::string& fileName,
 }
 
 void printErrorsMessages(const std::vector<Error>& errorsVector)
-{
+{	//для каждой ошибки выводим сообщение
 	for (int i = 0; i < errorsVector.size(); i++)
 	{
 		std::string curMessage = errorsVector[i].generateErrorMessage();
