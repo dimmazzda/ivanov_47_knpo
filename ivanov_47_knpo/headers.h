@@ -289,19 +289,28 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 
 
 /**
-* @brief функция создания выходного файла
-* @param [in] type Найденный тип входного графа
-* @param [in] inputFilePlainText Текстовое описание входного графа
-* @param [in] edgesToDelete Дуги для удаления
-* @param [in] outputFileName Имя выходного файла
-* @param [in/out] errorsVector Контейнер для ошибок
-* @return 0, если файл успешно создан
-*/
-int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete, std::string& outputFileName, std::vector<Error>& errorsVector);
-
-
-/**
 * @brief вывод в консоль информации об ошибках
 * @param [in] errorsVector контейнер с ошибками
 */
 void printErrorsMessages(const std::vector<Error>& errorsVector);
+
+
+/**
+* @brief формирование текста выходного файла
+* @param [in] type Найденный тип входного графа
+* @param [in] inputFilePlainText Текстовое описание входного графа
+* @param [in] edgesToDelete Дуги для удаления
+* @return Вектор строк с текстом выходного файла
+*/
+std::vector<std::string> generateOutputText(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete);
+
+
+/**
+* @brief запись текста в файл
+* @param [in] outputText Текст для записи
+* @param [in] outputFileName Имя выходного файла
+* @param [in/out] errorsVector Контейнер для ошибок
+* @return 0, если файл успешно создан
+* @return 1, если файл не удалось создать
+*/
+int writeTextToFile(std::vector<std::string>& outputText, std::string& outputFileName, std::vector<Error>& errorsVector);
