@@ -903,9 +903,81 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 }
 
 
-int main(int argc, char * argv[])
+int main(int argc, char* argv[])
 {
 	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+
+	if (argc != 3)
+	{
+		std::cerr << "Использование: " << argv[0] << " <входной_файл> <выходной_файл>" << std::endl;
+		return 1;
+	}
+
+	std::string inputFileName = argv[1];
+	std::string outputFileName = argv[2];
+
+	// чтение входного файла ===
+	std::vector<std::string> fileText;
+	std::vector<Error> errorsVector;
+
+	if (!readTextFromFile(fileText, inputFileName, errorsVector))
+	{
+		std::cerr << "Ошибка чтения файла:" << std::endl;
+		printErrorsMessages(errorsVector); 
+		return 1;
+	}
+
+	std::cout << "Файл успешно прочитан. Строк: " << fileText.size() << std::endl;
+
+	// парсинг графа
+	int inDegrees[1000] = { 0 };
+	DirGraph* graph = parseGraphFromText(fileText, inDegrees, errorsVector);
+
+	if (graph == nullptr)
+	{
+		std::cerr << "Ошибка парсинга графа:" << std::endl;
+		printErrorsMessages(errorsVector); 
+		return 1;
+	}
+
+	if (!errorsVector.empty())
+	{
+		std::cout << "Предупреждения при парсинге:" << std::endl;
+		printErrorsMessages(errorsVector);  
+	}
+
+	std::cout << "Граф успешно распарсен. Вершин: " << graph->vertices.size() << std::endl;
+
+	// находим тип графа
+	errorsVector.clear();
+	adjacencyList edgesToDelete;
+	graphType type = findGraphType(*graph, edgesToDelete, inDegrees);
+
+	std::string typeStr;
+	switch (type)
+	{
+	case tree:                 typeStr = "дерево"; break;
+	case convertibleToTree:    typeStr = "приводим к дереву"; break;
+	case notConvertibleToTree: typeStr = "неприводим к дереву"; break;
+	default:                   typeStr = "неизвестный тип"; break;
+	}
+
+	std::cout << "Тип графа: " << typeStr << std::endl;
+
+	// создаём выходной файл
+	if (generateOutputFile(type, fileText, edgesToDelete, outputFileName, errorsVector) != 0)
+	{
+		std::cerr << "Ошибка создания выходного файла:" << std::endl;
+		printErrorsMessages(errorsVector); 
+		delete graph;
+		return 1;
+	}
+
+	std::cout << "Выходной файл успешно создан: " << outputFileName << std::endl;
+
+	delete graph;
+	return 0;
 }
 
 
