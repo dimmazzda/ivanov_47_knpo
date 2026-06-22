@@ -907,7 +907,25 @@ std::vector<std::string> generateOutputText(graphType type, std::vector<std::str
 }
 
 
-
+int writeTextToFile(std::vector<std::string>& outputText, std::string& outputFileName, std::vector<Error>& errorsVector)
+{
+	//пытаемся открыть файл
+	std::ofstream outFile(outputFileName);
+	if (!outFile.is_open())
+	{
+		Error err;
+		err.type = createOutFileFail;
+		err.errorOutputFileWay = outputFileName;
+		errorsVector.push_back(err);
+		return 1;
+	}
+	//выводим построчно
+	for (const auto& line : outputText)
+		outFile << line << "\n";
+	//закрываем файл
+	outFile.close();
+	return 0;
+}
 
 int main(int argc, char* argv[])
 {
