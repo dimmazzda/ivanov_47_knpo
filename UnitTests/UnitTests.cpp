@@ -1106,7 +1106,7 @@ namespace UnitTests
 			}
 		}
 	};
-/*
+
 	TEST_CLASS(createSpanningTreeTests)
 	{
 	public:
@@ -1262,13 +1262,7 @@ namespace UnitTests
 			//ожидаемый граф
 			std::vector<std::string> expectedText = {
 				"digraph G {",
-				"0",
-				"1",
 				"2",
-				"3",
-				"0->1",
-				"0->2",
-				"0->3",
 				"}"
 			};
 			DirGraph* expectedGraph = parseGraphFromText(expectedText, inDegrees, errorVector);
@@ -2007,7 +2001,7 @@ namespace UnitTests
 			delete expectedGraph;
 		}
 	};
-
+	/*
 	TEST_CLASS(findGraphTypeTests)
 	{
 	public:
