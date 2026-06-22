@@ -1,14 +1,14 @@
 ﻿#include <iostream>
 #include "headers.h"
 #include <algorithm>
-
+#include <queue>
 
 bool adjacencyList::isEmpty()
     {
         for (int i = 0; i < countOfVertices; i++)       //если для всех вершин нет связей, список пустой
             if (neighbours[i].size() != 0)              //если хоть для одной есть - непустой
                 return false;
-        return false;
+        return true;
     }
 
 bool adjacencyList::isEqualTo(const adjacencyList& otherList)
@@ -94,8 +94,216 @@ adjacencyList* adjacencyList::substract(const adjacencyList& subtrahend)
 	return result;
 }
 
+DirGraph::DirGraph()
+{
+	vertices.clear();
+    edges.countOfVertices = 0;  //вершин нет т.к. граф пустой
+    edges.neighbours.clear();
+}
+
+DirGraph::DirGraph(int countOfVertices)
+{
+	vertices.clear();
+	vertices.resize(countOfVertices);
+    edges.countOfVertices = countOfVertices; 
+    edges.neighbours.clear();
+    edges.neighbours.resize(countOfVertices);
+}
+
+DirGraph::~DirGraph() {
+	;
+}
+
+int DirGraph::getVertexCount() {
+    return edges.countOfVertices;
+}
+
+bool DirGraph::hasEdge(int fromVertex, int toVertex)
+{
+	// находим индекс вершины fromVertex в списке vertices
+	auto itFrom = std::find(vertices.begin(), vertices.end(), fromVertex);
+	if (itFrom == vertices.end())
+	{
+		return false; // вершина fromVertex не существует в графе
+	}
+	int indexFrom = std::distance(vertices.begin(), itFrom);
+
+	// находим индекс вершины toVertex в списке vertices
+	auto itTo = std::find(vertices.begin(), vertices.end(), toVertex);
+	if (itTo == vertices.end())
+	{
+		return false; // вершина toVertex не существует в графе
+	}
+	int indexTo = std::distance(vertices.begin(), itTo);
+
+	// проверка, что индекс fromVertex корректен
+	if (indexFrom < 0 || indexFrom >= (int)edges.neighbours.size())
+	{
+		return false;
+	}
+
+	// ищем индекс toVertex в списке смежности вершины fromVertex
+	const std::vector<int>& neighboursOfFrom = edges.neighbours[indexFrom];
+	auto itEdge = std::find(neighboursOfFrom.begin(), neighboursOfFrom.end(), indexTo);
+
+	// Если нашли - дуга существует
+	return itEdge != neighboursOfFrom.end();
+}
+
+
+bool DirGraph::addEdge(int fromVertex, int toVertex)
+{
+	// ищем fromVertex
+	auto itFrom = std::find(vertices.begin(), vertices.end(), fromVertex);
+	if (itFrom == vertices.end())
+	{
+		return false; // вершина fromVertex не существует в графе
+	}
+	int indexFrom = std::distance(vertices.begin(), itFrom);
+
+	// ищем toVertex
+	auto itTo = std::find(vertices.begin(), vertices.end(), toVertex);
+	if (itTo == vertices.end())
+	{
+		return false; // вершина toVertex не существует в графе
+	}
+	int indexTo = std::distance(vertices.begin(), itTo);
+
+	// проверяем корректность
+	if (indexFrom < 0 || indexFrom >= (int)edges.neighbours.size())
+	{
+		return false;
+	}
+
+	// добавляем индекс в список смежности
+	edges.neighbours[indexFrom].push_back(indexTo);
+
+	return true;
+}
+
+
+adjacencyList* DirGraph::getEdges()
+{
+	// создаём новый объект в динамической памяти
+	adjacencyList* result = new adjacencyList();
+
+	// копируем данные из внутреннего поля графа
+	result->countOfVertices = edges.countOfVertices;
+	result->neighbours = edges.neighbours;
+
+	return result;
+}
+
+
+bool DirGraph::dirGraphIsEqual(const DirGraph & otherGraph)
+{
+	// сравниваем вершины
+	if (vertices != otherGraph.vertices)
+	{
+		return false;
+	}
+
+	// Сравниваем списки смежности через готовый метод isEqualTo
+	return edges.isEqualTo(otherGraph.edges);
+}
+
+
+DirGraph* DirGraph::generateSpanningTree(int rootVertex)
+{
+	// проверка, что такой корень есть
+	auto itRoot = std::find(vertices.begin(), vertices.end(), rootVertex);
+	if (itRoot == vertices.end())
+	{
+		return nullptr; // корень не найден
+	}
+	int rootIndex = std::distance(vertices.begin(), itRoot);
+
+	// массив посещённых
+	std::vector<bool> visited(vertices.size(), false);
+
+	// корень сразу считается посещённым
+	visited[rootIndex] = true;
+
+	// очередь для вершин
+	std::queue<int> queue;
+	queue.push(rootIndex);
+
+	// обходим граф в ширину
+	while (!queue.empty())
+	{
+		int sourceIdx = queue.front();
+		queue.pop();
+
+		// перебираем непосещённых соседей 
+		for (int neighborIdx : edges.neighbours[sourceIdx])
+		{
+			if (!visited[neighborIdx])
+			{
+				visited[neighborIdx] = true;
+				queue.push(neighborIdx);
+			}
+		}
+	}
+
+	// для посещённых вершин пересчитываем индекс с учётом удалённых вершин
+	std::vector<int> oldToNewIndex(vertices.size(), -1); // -1 = вершина не в дереве
+	int newIndex = 0;
+	for (int i = 0; i < vertices.size(); i++)
+	{
+		if (visited[i])
+		{
+			oldToNewIndex[i] = newIndex;
+			newIndex++;
+		}
+	}
+
+	// подготавливаем результирующий граф
+	DirGraph* tree = new DirGraph();
+	tree->edges.countOfVertices = newIndex;
+	tree->edges.neighbours.resize(newIndex);
+
+	// заносим в граф только попавшие в обход вершины
+	for (int i = 0; i < vertices.size(); i++)
+	{
+		if (visited[i])
+		{
+			tree->vertices.push_back(vertices[i]);
+		}
+	}
+
+	// заполняем список смежности, пересчитывая индексы
+	for (size_t i = 0; i < vertices.size(); i++)
+		if (visited[i])
+		{
+			int currentNewIdx = oldToNewIndex[i];
+
+			for (int neighborOldIdx : edges.neighbours[i])
+			{
+				// Добавляем дугу только если сосед тоже посещён
+				if (visited[neighborOldIdx])
+				{
+					int neighborNewIdx = oldToNewIndex[neighborOldIdx];
+					tree->edges.neighbours[currentNewIdx].push_back(neighborNewIdx);
+				}
+			}
+		}
+
+	return tree;
+}
 
 int main(int argc, char * argv[])
 {
-
+	DirGraph graph1(4);
+	graph1.vertices = { 0,1,2,3 };
+	graph1.addEdge(0, 1);
+	graph1.addEdge(0, 2);
+	graph1.addEdge(3, 2);
+	
+	DirGraph graph2 = *graph1.generateSpanningTree(0);
+	
+	DirGraph graph3(3);
+	graph3.vertices = { 0,1,2 };
+	graph3.addEdge(0, 1);
+	graph3.addEdge(0, 2);
+	printf("%d", graph3.dirGraphIsEqual(graph2));
 }

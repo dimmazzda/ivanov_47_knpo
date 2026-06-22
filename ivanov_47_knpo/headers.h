@@ -107,8 +107,9 @@ class Error
 */
 class DirGraph
 {
+public:
 	// поля
-	std::vector<int> vertices;		///<список вершин графа
+	std::vector<int> vertices;		///<список вершин графа (упорядоченный)
 	adjacencyList edges;	///< дуги графа в виде списка смежности
 
 
