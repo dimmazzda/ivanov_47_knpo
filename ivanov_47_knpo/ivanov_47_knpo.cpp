@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <queue>
 #include <stdexcept>
+#include <stack>
 
 bool adjacencyList::isEmpty()
     {
@@ -183,7 +184,7 @@ bool DirGraph::addEdge(int fromVertex, int toVertex)
 }
 
 
-adjacencyList* DirGraph::getEdges()
+adjacencyList* DirGraph::getEdges() const
 {
 	// создаём новый объект в динамической памяти
 	adjacencyList* result = new adjacencyList();
@@ -209,7 +210,7 @@ bool DirGraph::dirGraphIsEqual(const DirGraph & otherGraph)
 }
 
 
-DirGraph* DirGraph::generateSpanningTree(int rootVertex)
+DirGraph* DirGraph::generateSpanningTree(int rootVertex) const
 {
 	// проверка, что такой корень есть
 	auto itRoot = std::find(vertices.begin(), vertices.end(), rootVertex);
@@ -630,8 +631,123 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 }
 
 
+graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, int inDegrees[1000])
+{
+	int vertexCount = graph.vertices.size();
+	// Обработка пустого графа
+	if (vertexCount == 0)
+		return tree; // пустой граф считаем деревом
 
+	// ищем потенциальные корни
+	std::vector<int> potentialRoots;
+	for (int i = 0; i < vertexCount; i++)
+		if (inDegrees[i] == 0)
+			potentialRoots.push_back(i);
 
+	// если корней > 1 граф неприводим
+	if (potentialRoots.size() > 1)
+		return notConvertibleToTree;
+
+	// если корень 1 - строим из него дерево
+	if (potentialRoots.size() == 1)
+	{
+		int rootIdx = potentialRoots[0];
+		int rootVertex = graph.vertices[rootIdx];
+
+		DirGraph* spanningTree = graph.generateSpanningTree(rootVertex);
+		// проверяем, охватывает ли дерево все вершины
+		if (spanningTree->getVertexCount() != vertexCount)
+		{
+			delete spanningTree;
+			return notConvertibleToTree;
+		}
+		else
+		{
+			// Вычисляем разность дуг
+			adjacencyList* graphEdges = graph.getEdges();
+			adjacencyList* treeEdges = spanningTree->getEdges();
+			edgeDifference = *graphEdges->substract(*treeEdges);
+			delete graphEdges;
+			delete treeEdges;
+			delete spanningTree;
+			if (edgeDifference.isEmpty())
+				return tree;
+			else
+				return convertibleToTree;
+
+			return edgeDifference.isEmpty() ? tree : convertibleToTree;
+		}
+	}
+
+	if (potentialRoots.size() == 0)
+	{// если потенциальных корней нет
+		std::vector<bool> tried(vertexCount, false);
+		std::stack<int> stack;
+
+		// инициализируем стек первой вершиной
+		stack.push(0);
+		tried[0] = true;
+
+		// пока стек непустой
+		while (!stack.empty())
+		{
+			int currentIdx = stack.top();
+			stack.pop();
+
+			// находим неопробованных родителей
+			std::vector<int> untriedParents;
+			for (int i = 0; i < vertexCount; i++)
+			{
+				if (tried[i])
+					continue;
+
+				for (int neighborIdx : graph.edges.neighbours[i])
+				{
+					if (neighborIdx == currentIdx)
+					{
+						untriedParents.push_back(i);
+						break;
+					}
+				}
+			}
+
+			if (untriedParents.empty())
+			{
+				// нет родителей - пытаемся построить дерево
+				int rootVertex = graph.vertices[currentIdx];
+				DirGraph* spanningTree = graph.generateSpanningTree(rootVertex);
+				if (spanningTree != nullptr && spanningTree->getVertexCount() == vertexCount)
+				{
+					adjacencyList* graphEdges = graph.getEdges();
+					adjacencyList* treeEdges = spanningTree->getEdges();
+					edgeDifference = *graphEdges->substract(*treeEdges);
+
+					delete graphEdges;
+					delete treeEdges;
+					delete spanningTree;
+
+					return edgeDifference.isEmpty() ? tree : convertibleToTree;
+				}
+				delete spanningTree;
+			}
+			else if (untriedParents.size() == 1)
+			{
+				stack.push(untriedParents[0]);
+				tried[untriedParents[0]] = true;
+			}
+			else
+			{
+				for (int i = (int)untriedParents.size() - 1; i >= 0; i--)
+				{
+					stack.push(untriedParents[i]);
+					tried[untriedParents[i]] = true;
+				}
+			}
+		}
+
+		return notConvertibleToTree;
+	}
+}
 
 
 int main(int argc, char * argv[])

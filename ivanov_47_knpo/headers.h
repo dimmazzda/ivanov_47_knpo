@@ -156,7 +156,7 @@ public:
 	* @details извлекает дуги графа в виде списка смежности для последующих операций
 	* @return указатель на список смежности
 	*/
-	adjacencyList * getEdges();
+	adjacencyList * getEdges() const;
 
 
 	/**
@@ -175,7 +175,7 @@ public:
 	* @param rootVertex [in] Индекс вершины-корня
 	* @return указатель на новый граф - остовное дерево
 	*/
-	DirGraph * generateSpanningTree(int rootVertex);
+	DirGraph * generateSpanningTree(int rootVertex) const;
 };
 
 
