@@ -796,18 +796,9 @@ void printErrorsMessages(const std::vector<Error>& errorsVector)
 }
 
 
-int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete, std::string& outputFileName, std::vector<Error>& errorsVector)
+std::vector<std::string> generateOutputText(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete)
 {
-	// открываем входной файл
-	std::ofstream outFile(outputFileName);
-	if (!outFile.is_open())
-	{
-		Error err;
-		err.type = createOutFileFail;
-		err.errorOutputFileWay = outputFileName;
-		errorsVector.push_back(err);
-		return 1;
-	}
+	std::vector<std::string> outputText;
 
 	// извлекаем имена вершин
 	std::vector<std::string> vertexNames;
@@ -826,7 +817,7 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		}
 	}
 
-	// 3. Преобразование enum graphType в строку
+	// Преобразование enum graphType в строку
 	auto typeToString = [](graphType t) -> std::string
 		{
 			switch (t)
@@ -839,7 +830,7 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		};
 	std::string resultNodeName = "resultOfAnalysis: " + typeToString(type);
 
-	// ✅ 4. ПОДСЧЁТ КОЛИЧЕСТВА КАЖДОЙ ДУГИ В edgesToDelete
+	// подсчёт кол-ва каждой дуги edgesToDelete
 	std::map<std::pair<int, int>, int> edgesToDeleteCount;
 	for (int fromIdx = 0; fromIdx < edgesToDelete.countOfVertices; fromIdx++)
 	{
@@ -849,10 +840,10 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		}
 	}
 
-	// ✅ 5. СЧЁТЧИК УЖЕ ПОДСВЕЧЕННЫХ ДУГ
+	// счётчик уже выделенных дуг
 	std::map<std::pair<int, int>, int> highlightedCount;
 
-	// 6. Построчная запись с модификацией
+	// построчная обработка с модификацией
 	bool resultNodeInserted = false;
 
 	for (const auto& line : inputFilePlainText)
@@ -860,14 +851,14 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 		std::string trimmed = trim(line);
 		std::string outputLine = line;
 
-		// Вставляем вершину-результат ПЕРЕД закрывающей скобкой
+		// Вставляем вершину-результат закрывающей скобкой
 		if (trimmed == "}" && !resultNodeInserted)
 		{
-			outFile << "\"" << resultNodeName << "\"\n";
+			outputText.push_back("\"" + resultNodeName + "\"");
 			resultNodeInserted = true;
 		}
 
-		// Если тип приводимый и строка является дугой, проверяем её на подсветку
+		// если тип приводимый и строка является дугой, проверяем её на удаление
 		if (type == convertibleToTree && trimmed.find("->") != std::string::npos)
 		{
 			std::vector<std::string> tokens;
@@ -888,43 +879,34 @@ int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainT
 					int fromIdx = std::distance(vertexNames.begin(), itFrom);
 					int toIdx = std::distance(vertexNames.begin(), itTo);
 
-					// ✅ ПРОВЕРКА: сколько раз эта дуга должна быть подсвечена
+					// проверка: сколько раз дуга должна быть выделена
 					auto key = std::make_pair(fromIdx, toIdx);
-					int requiredCount = edgesToDeleteCount[key];  // сколько раз дуга в edgesToDelete
-					int currentCount = highlightedCount[key];     // сколько раз уже подсветили
+					int requiredCount = edgesToDeleteCount[key];
+					int currentCount = highlightedCount[key];
 
-					// Если ещё не достигли нужного количества — подсвечиваем
+					// если ещё не все удалили - помечаем
 					if (currentCount < requiredCount)
 					{
-						// Сохраняем оригинальное форматирование
-						if (!trimmed.empty() && trimmed.back() == ';')
-						{
-							outputLine = trimmed.substr(0, trimmed.size() - 1) + " [color=\"red\"];";
-						}
-						else
-						{
-							outputLine = trimmed + " [color=\"red\"]";
-						}
-
-						// ✅ УВЕЛИЧИВАЕМ СЧЁТЧИК
+						// форматируем строку
+						outputLine = trimmed + " [color=\"red\"]";
+						// увеличиваем счётчик выделенных дуг
 						highlightedCount[key]++;
 					}
 				}
 			}
 		}
 
-		outFile << outputLine << "\n";
+		outputText.push_back(outputLine);
 	}
 
 	// Если в файле не оказалось "}", вставляем результат в конец
 	if (!resultNodeInserted)
-	{
-		outFile << "\"" << resultNodeName << "\"\n";
-	}
+		outputText.push_back("\"" + resultNodeName + "\"");
 
-	outFile.close();
-	return 0;
+	return outputText;
 }
+
+
 
 
 int main(int argc, char* argv[])
