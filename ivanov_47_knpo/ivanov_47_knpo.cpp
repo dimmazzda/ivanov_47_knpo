@@ -64,7 +64,7 @@ adjacencyList* adjacencyList::substract(const adjacencyList& subtrahend)
 	result->countOfVertices = countOfVertices;
 	result->neighbours.resize(countOfVertices);
 
-	// для всех вершин уменьшаемого
+	// для всех вершин уменьшаемого		
 	for (int i = 0; i < countOfVertices; i++)
 	{
 		// копируем вектор дуг уменьшаемого
@@ -121,7 +121,7 @@ DirGraph::~DirGraph() {
 }
 
 int DirGraph::getVertexCount() {
-    return edges.countOfVertices;
+    return edges.countOfVertices;	//возвращаем значения
 }
 
 bool DirGraph::hasEdge(int fromVertex, int toVertex)
@@ -623,7 +623,7 @@ DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1
 		// добавляем дугу в граф
 		graph->addEdge(fromVertex, toVertex);
 
-		// 
+		// увеличиваем степень захода
 		inDegrees[toIndex]++;
 	}
 	//сортируем ошибки по номеру строки, где она появилась
