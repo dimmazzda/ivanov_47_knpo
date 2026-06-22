@@ -388,7 +388,7 @@ std::string trim(const std::string& str)
 }
 
 
-bool extractTokensFromString(std::string& str, std::string& delimeter, std::vector<std::string>& tokens)
+bool extractTokensFromString(std::string& str, const std::string & delimeter, std::vector<std::string>& tokens)
 {
 	// пустой разделитель - некорректные данные
 	if (delimeter.empty())
@@ -792,7 +792,131 @@ void printErrorsMessages(std::vector<Error>& errorsVector)
 		printf("%s", curMessage);
 	}
 }
+
+
+int generateOutputFile(graphType type, std::vector<std::string>& inputFilePlainText, adjacencyList& edgesToDelete, std::string& outputFileName, std::vector<Error>& errorsVector)
+{
+	// 1. Открываем выходной файл
+	std::ofstream outFile(outputFileName);
+	if (!outFile.is_open())
+	{
+		Error err;
+		err.type = createOutFileFail;
+		err.errorOutputFileWay = outputFileName;
+		errorsVector.push_back(err);
+		return 1; // код ошибки
+	}
+
+	// 2. Извлекаем имена вершин в порядке объявления для маппинга индексов -> имена
+	std::vector<std::string> vertexNames;
+	for (const auto& line : inputFilePlainText)
+	{
+		std::string trimmed = trim(line);
+		// Пропускаем служебные строки
+		if (trimmed.empty() ||
+			trimmed.find("digraph") != std::string::npos ||
+			trimmed.find("{") != std::string::npos ||
+			trimmed == "}")
+		{
+			continue;
+		}
+		// Если в строке нет "->", это объявление вершины
+		if (trimmed.find("->") == std::string::npos)
+		{
+			vertexNames.push_back(trimmed);
+		}
+	}
+
+	// 3. Преобразование enum graphType в строку
+	auto typeToString = [](graphType t) -> std::string
+		{
+			switch (t)
+			{
+			case tree:                 return "tree";
+			case convertibleToTree:    return "convertibleToTree";
+			case notConvertibleToTree: return "notConvertibleToTree";
+			default:                   return "unknown";
+			}
+		};
+	std::string resultNodeName = "resultOfAnalysis: " + typeToString(type);
+
+	// 4. Построчная запись с модификацией
+	bool resultNodeInserted = false;
+
+	for (const auto& line : inputFilePlainText)
+	{
+		std::string trimmed = trim(line);
+		std::string outputLine = line;
+
+		// Вставляем вершину-результат ПЕРЕД закрывающей скобкой
+		if (trimmed == "}" && !resultNodeInserted)
+		{
+			outFile << "\"" << resultNodeName << "\" ;\n";
+			resultNodeInserted = true;
+		}
+
+		// Если тип приводимый и строка является дугой, проверяем её на подсветку
+		if (type == convertibleToTree && trimmed.find("->") != std::string::npos)
+		{
+			std::vector<std::string> tokens;
+			extractTokensFromString(trimmed, "->", tokens);
+
+			if (tokens.size() == 2)
+			{
+				std::string fromName = trim(tokens[0]);
+				std::string toName = trim(tokens[1]);
+
+				// Находим индексы вершин
+				auto itFrom = std::find(vertexNames.begin(), vertexNames.end(), fromName);
+				auto itTo = std::find(vertexNames.begin(), vertexNames.end(), toName);
+
+				if (itFrom != vertexNames.end() && itTo != vertexNames.end())
+				{
+					int fromIdx = std::distance(vertexNames.begin(), itFrom);
+					int toIdx = std::distance(vertexNames.begin(), itTo);
+
+					// Проверяем, есть ли дуга в списке на удаление
+					bool shouldHighlight = false;
+					if (fromIdx >= 0 && fromIdx < edgesToDelete.countOfVertices)
+					{
+						const auto& neighbours = edgesToDelete.neighbours[fromIdx];
+						shouldHighlight = (std::find(neighbours.begin(), neighbours.end(), toIdx) != neighbours.end());
+					}
+
+					// Если дуга помечена на удаление, добавляем атрибут цвета
+					if (shouldHighlight)
+					{
+						if (trimmed.back() == ';')
+						{
+							outputLine = trimmed.substr(0, trimmed.size() - 1) + " [color=\"red\"] ;";
+						}
+						else
+						{
+							outputLine = trimmed + " [color=\"red\"] ;";
+						}
+					}
+				}
+			}
+		}
+
+		outFile << outputLine << "\n";
+	}
+
+	// Если в файле не оказалось "}", вставляем результат в конец
+	if (!resultNodeInserted)
+	{
+		outFile << "\"" << resultNodeName << "\" ;\n";
+	}
+
+	outFile.close();
+	return 0; // успех
+}
+
+
 int main(int argc, char * argv[])
 {
-	
+	SetConsoleOutputCP(CP_UTF8);	
 }
+
+
+
