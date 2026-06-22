@@ -246,6 +246,16 @@ bool readTextFromFile(std::vector<std::string>& fileText, std::string& fileName,
 
 
 /**
+* @brief Попытка распарсить строку как целое число
+* @param [in] str Строка для парсинга
+* @param [out] result Результат парсинга (валидно только если функция вернула true)
+* @return true если строка полностью является валидным целым числом
+* @return false если строка содержит лишние символы или не является числом
+*/
+bool tryParseInt(const std::string& str, int& result);
+
+
+/**
 * @brief функция парсинга графа из текста
 * @param [in] fileText Контейнер с текстом
 * @param [in/out] inDegrees Массив со степенями полузаходов вершин

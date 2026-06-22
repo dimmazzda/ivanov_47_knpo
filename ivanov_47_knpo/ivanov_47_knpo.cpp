@@ -439,6 +439,19 @@ bool extractTokensFromString(std::string& str, const std::string & delimeter, st
 }
 
 
+bool tryParseInt(const std::string& str, int& result)
+{
+	try
+	{
+		size_t pos;
+		result = std::stoi(str, &pos);
+		return pos == str.length(); // все символы строки потреблены
+	}
+	catch (...)
+	{
+		return false;
+	}
+}
 DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error>& errorVector)
 {	//очистка входных данных
 	for (int i = 0; i < 1000; i++)
