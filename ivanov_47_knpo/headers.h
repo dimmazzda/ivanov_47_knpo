@@ -89,7 +89,7 @@ class Error
 	* @brief генерация сообщения об ошибке
 	* @return строка с сообщением об ошибке
 	*/
-	std::string generateErrorMessage();
+	std::string generateErrorMessage() const;
 
 
 	/**

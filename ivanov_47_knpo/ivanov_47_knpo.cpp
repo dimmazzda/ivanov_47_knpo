@@ -292,6 +292,76 @@ DirGraph* DirGraph::generateSpanningTree(int rootVertex)
 }
 
 
+Error::Error() {
+	errorInputFileWay = "";
+	errorOutputFileWay = "";
+	errorTagName = "";
+	int line = -1;
+}
+
+Error::Error(errorType typeOfError) {
+	type = typeOfError;
+	errorInputFileWay = "";
+	errorOutputFileWay = "";
+	errorTagName = "";
+	line = -1;
+}
+
+Error::Error(int lineOfError) {
+	type = defenitionLineSyntaxError;
+	errorInputFileWay = "";
+	errorOutputFileWay = "";
+	errorTagName = "";
+	line = lineOfError;
+}
+
+Error::~Error() {
+	;
+}
+
+std::string Error::generateErrorMessage() const
+{
+	switch (type)
+	{
+	case inFileNotExist:
+		return "Ошибка: входной файл не существует или недоступен для чтения. Путь: \""
+			+ errorInputFileWay + "\"";
+
+	case createOutFileFail:
+		return "Ошибка: не удалось создать или открыть выходной файл для записи. Путь: \""
+			+ errorOutputFileWay + "\"";
+
+	case edgeNumberError:
+		return "Ошибка: некорректное количество дуг в графе.";
+
+	case verticesNumberError:
+		return "Ошибка: некорректное количество вершин в графе.";
+
+	case defenitionLineSyntaxError:
+		return "Ошибка синтаксиса в строке определения графа (ожидается \"digraph <имя> {\").";
+
+	case innerDescriptionSyntaxError:
+		if (line >= 0)
+		{
+			return "Ошибка синтаксиса во внутреннем описании графа в строке "
+				+ std::to_string(line) + ".";
+		}
+		return "Ошибка синтаксиса во внутреннем описании графа.";
+
+	case endLineSyntaxError:
+		if (line >= 0)
+		{
+			return "Ошибка синтаксиса в строке завершения графа (ожидается \"}\") в строке "
+				+ std::to_string(line) + ".";
+		}
+		return "Ошибка синтаксиса в строке завершения графа (ожидается \"}\").";
+
+	default:
+		return "Неизвестная ошибка.";
+	}
+}
+
+
 std::string trim(const std::string& str)
 {
 	// набор whitespace-символов
