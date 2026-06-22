@@ -4,6 +4,8 @@
 #include <queue>
 #include <stdexcept>
 #include <stack>
+#include <fstream>
+#include <windows.h>
 
 bool adjacencyList::isEmpty()
     {
@@ -749,6 +751,38 @@ graphType findGraphType(const DirGraph& graph, adjacencyList& edgeDifference, in
 	}
 }
 
+
+bool readTextFromFile(std::vector<std::string>& fileText, std::string& fileName, std::vector<Error>& errorVector)
+{
+	// очищаем контейнер перед заполнением
+	fileText.clear();
+
+	// открываем файл для чтения
+	std::ifstream file(fileName);
+
+	// проверяем, что файл успешно открылся
+	if (!file.is_open())
+	{
+		Error err;
+		err.type = inFileNotExist;
+		err.errorInputFileWay = fileName;
+		err.line = -1;
+		errorVector.push_back(err);
+		return false;
+	}
+
+	// Считываем файл построчно
+	std::string line;
+	while (std::getline(file, line))
+	{
+		fileText.push_back(line);
+	}
+
+	// Закрываем файл
+	file.close();
+
+	return true;
+}
 
 void printErrorsMessages(std::vector<Error>& errorsVector)
 {
