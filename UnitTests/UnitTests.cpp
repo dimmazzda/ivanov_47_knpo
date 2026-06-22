@@ -2147,7 +2147,7 @@ namespace UnitTests
 			delete parsedGraph;
 		}
 
-		TEST_METHOD(onePotentialRoot)
+		TEST_METHOD(onePotentialRootNotConvertible)
 		{
 			//входной граф
 			std::vector<std::string> inputText = {
@@ -2288,7 +2288,7 @@ namespace UnitTests
 			delete parsedGraph;
 		}
 
-		TEST_METHOD(onePotentialRoot)
+		TEST_METHOD(onePotentialRootConvertible)
 		{
 			//входной граф
 			std::vector<std::string> inputText = {
