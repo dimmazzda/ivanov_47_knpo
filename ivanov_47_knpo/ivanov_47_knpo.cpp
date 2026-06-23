@@ -296,12 +296,11 @@ Error::Error() {
 	int line = -1;
 }
 
-Error::Error(errorType typeOfError) {
-	type = typeOfError;
-	errorInputFileWay = "";
-	errorOutputFileWay = "";
-	errorTagName = "";
-	line = -1;
+Error::Error(errorType type)
+	: type(type),
+	errorInputFileWay(""),
+	errorOutputFileWay(""),
+	errorTagName("") {
 }
 
 Error::Error(int lineOfError) {
