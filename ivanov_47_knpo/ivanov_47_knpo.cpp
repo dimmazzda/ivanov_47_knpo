@@ -107,7 +107,7 @@ DirGraph::DirGraph()
     edges.neighbours.clear();
 }
 
-explicit DirGraph::DirGraph(int countOfVertices)
+DirGraph::DirGraph(int countOfVertices)
 {
 	vertices.clear();
 	vertices.resize(countOfVertices);
@@ -296,14 +296,14 @@ Error::Error() {
 	int line = -1;
 }
 
-explicit Error::Error(errorType type)
+Error::Error(errorType type)
 	: type(type),
 	errorInputFileWay(""),
 	errorOutputFileWay(""),
 	errorTagName("") {
 }
 
-explicit Error::Error(int lineOfError) {
+Error::Error(int lineOfError) {
 	type = innerDescriptionSyntaxError;
 	errorInputFileWay = "";
 	errorOutputFileWay = "";
