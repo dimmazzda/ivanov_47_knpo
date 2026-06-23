@@ -115,11 +115,11 @@ class Error
 {
 public:
 	//поля
-	errorType type;		///<тип ошибки
+	errorType type = defenitionLineSyntaxError;		///<тип ошибки
 	std::string errorInputFileWay;		///<строка пути, откуда не удалось прочитать файл
 	std::string errorOutputFileWay;		///<строка пути, куда не удалось записать файл
 	std::string errorTagName;			///<строка, хранящая имя неизвестного тега
-	int line;							///<номер строки с ошибкой, если ошибка во внутренней структуре файла
+	int line = 0;							///<номер строки с ошибкой, если ошибка во внутренней структуре файла
 	
 
 	//конструктор/деструктор
