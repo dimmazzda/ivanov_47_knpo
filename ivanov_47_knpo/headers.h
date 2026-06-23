@@ -72,7 +72,7 @@ struct adjacencyList
 	//поля структуры
 
 	std::vector<std::vector<int>> neighbours; ///< двуменый массив дуг
-	int countOfVertices; ///< количество вершин
+	int countOfVertices = 0; ///< количество вершин
 
 
 	//методы
