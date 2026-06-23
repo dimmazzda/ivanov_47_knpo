@@ -269,6 +269,19 @@ bool tryParseInt(const std::string& str, int& result);
 */
 void parseInnerLine(const std::string& line, int lineNumber, std::vector<int>& vertexList, std::vector<std::pair<int, int>>& edgeList, std::vector<int>& edgeLineNumbers, bool& edgesStarted, std::vector<Error>& errorVector);
 
+
+/**
+* @brief Добавление дуг в граф и подсчет степеней захода
+* @param [in] edgeList Список дуг для добавления
+* @param [in] edgeLineNumbers Номера строк с дугами (для ошибок)
+* @param [in] vertexList Список вершин графа
+* @param [in/out] graph Граф, в который добавляются дуги
+* @param [in/out] inDegrees Массив степеней захода вершин
+* @param [in/out] errorVector Контейнер для ошибок
+*/
+void processEdges(const std::vector<std::pair<int, int>>& edgeList, const std::vector<int>& edgeLineNumbers, const std::vector<int>& vertexList, DirGraph* graph, int inDegrees[1000], std::vector<Error>& errorVector);
+
+
 /**
 * @brief функция парсинга графа из текста
 * @param [in] fileText Контейнер с текстом

@@ -509,6 +509,33 @@ void parseInnerLine(const std::string& line, int lineNumber, std::vector<int>& v
 }
 
 
+
+void processEdges(const std::vector<std::pair<int, int>>& edgeList, const std::vector<int>& edgeLineNumbers, const std::vector<int>& vertexList, DirGraph* graph, int inDegrees[1000], std::vector<Error>& errorVector)
+{
+	//для каждой вершины
+	for (size_t i = 0; i < edgeList.size(); i++)
+	{
+		int fromVertex = edgeList[i].first;
+		int toVertex = edgeList[i].second;
+		int lineNumber = edgeLineNumbers[i];
+		//проверяем наличие 
+		auto itFrom = std::find(vertexList.begin(), vertexList.end(), fromVertex);
+		auto itTo = std::find(vertexList.begin(), vertexList.end(), toVertex);
+
+		if (itFrom == vertexList.end() || itTo == vertexList.end())
+		{
+			Error err(lineNumber);
+			errorVector.push_back(err);
+			continue;
+		}
+		//добавляем
+		int toIndex = std::distance(vertexList.begin(), itTo);
+		graph->addEdge(fromVertex, toVertex);
+		inDegrees[toIndex]++;
+	}
+}
+
+
 DirGraph* parseGraphFromText(std::vector<std::string>& fileText, int inDegrees[1000], std::vector<Error>& errorVector)
 {	//очистка входных данных
 	for (int i = 0; i < 1000; i++)
