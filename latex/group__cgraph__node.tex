@@ -1,0 +1,904 @@
+\doxysubsubsubsection{nodes }
+\hypertarget{group__cgraph__node}{}\label{group__cgraph__node}\index{nodes@{nodes}}
+\doxysubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agsubnode__s}{Agsubnode\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em This is the node struct allocated per graph (or subgraph). \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agnode__s}{Agnode\+\_\+s}}
+\item 
+struct \doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0affbf5af96f331f4426bf5dd340c9ec}{ND\+\_\+id}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga756b74075ae0a75309ad5a012550c5b0}{ND\+\_\+alg}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab2e2ec5a6d410abc991d5ddae1db134c}{ND\+\_\+\+UF\+\_\+parent}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga6c07a73ad18bd14f7ccf938532f541ac}{ND\+\_\+set}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad00f2be2e982b4737f81b32a62cbcbe2}{ND\+\_\+\+UF\+\_\+size}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga24be5471334ac496135e0c94f0377da2}{ND\+\_\+bb}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga56e6c495adc9afcce11b7ecb8a1f4daf}{ND\+\_\+clust}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae5c4c0a0cc39024b09a5bf94251aceff}{ND\+\_\+coord}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae9e7b39a3525fb90ba0b334c9e320cf3}{ND\+\_\+dist}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae4437bfd2417303a177a8955b73cd2f8}{ND\+\_\+flat\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga7ac213b39266f3dd86f60bb9f39ee5a5}{ND\+\_\+flat\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1931c9487f15292849c2b49c3e96b6a4}{ND\+\_\+gui\+\_\+state}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga325000a2fc365352eafcbfb8be910b00}{ND\+\_\+has\+\_\+port}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaaf40a53b50e0a203b67453a6127bb508}{ND\+\_\+rep}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga656493ad251af9524cfc5552dc213383}{ND\+\_\+heapindex}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaa323a7137791d555fdf08f7f0f2eff02}{ND\+\_\+height}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac1f79021f7fecf1ff682bf57e9050241}{ND\+\_\+hops}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1bb4c002fbbf73f2e4061de8efcbe453}{ND\+\_\+ht}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae5f583e129d6061a535d76fdb170e94c}{ND\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga74eefa711e291975c7d89493d5df1d5b}{ND\+\_\+label}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaca812c68db4d6ec5856ebdcfac4d8284}{ND\+\_\+xlabel}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga2b836cfd06a967ad326d658a8138c146}{ND\+\_\+lim}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gadb513eaede379fa8cf40bb5e335e0c32}{ND\+\_\+low}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaafdc3f915c57fc734959a7936feba1c2}{ND\+\_\+lw}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga932f96bdb911ef9d25ff3a5f4f9fcdea}{ND\+\_\+mark}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab6cf44ed9beadb42dec6cbf1e215d683}{ND\+\_\+mval}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0e22e496fee82db6b89acdd5ef6c37c7}{ND\+\_\+n\+\_\+cluster}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga3bb87e7928ed2fd3686ac378858b293f}{ND\+\_\+next}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9ea2bead61709465110b8141bcf68721}{ND\+\_\+node\+\_\+type}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga15cbeaea7dab64dcfbcde1cad226c552}{ND\+\_\+onstack}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac2743f96dd3d2c06547e3d25d9471c7c}{ND\+\_\+order}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga5d0398c1cdeb6735e6b95b7a027c573f}{ND\+\_\+other}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gafb8b0da4ea62a1bbd2a4ae3ce52e7384}{ND\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0d8f0d5ac52747cf400e221049be2677}{ND\+\_\+outline\+\_\+width}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga154d127461cb6e85b34bf1eb5df0676e}{ND\+\_\+outline\+\_\+height}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga4bd342b70058683d7d2f510f4b82f819}{ND\+\_\+par}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga50b5fb87a83783653f9a5bd28109ff07}{ND\+\_\+pinned}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gadd78de551f9363227c013ce673f2b573}{ND\+\_\+pos}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1805943530ef1049887e85db4bc918b7}{ND\+\_\+prev}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gafe5072a4ab915d5cd6a1994c446db319}{ND\+\_\+priority}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0baa35dbbb9c1b03e40b48b26deb0b38}{ND\+\_\+rank}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gade7cf787f4b798952fcefb4abb3c256d}{ND\+\_\+ranktype}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9cb8c502c548e420aa8b507b162a2d2e}{ND\+\_\+rw}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga5d7bd45bc6b14c164b47f2e477115d13}{ND\+\_\+save\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab4b05872287c433b1e9b163037827813}{ND\+\_\+save\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae90c22cfce70f108bb551499ac52dc54}{ND\+\_\+shape}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad25b873ee39c60fc1067d18051dd6ebc}{ND\+\_\+shape\+\_\+info}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga2d474280f17cea3b13984c60b7fdf335}{ND\+\_\+showboxes}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga359619b85d94d92c966cdff435c80ce6}{ND\+\_\+state}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9ec32b051f012346111fee4912756843}{ND\+\_\+clustnode}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga06fb60e161258ecbf1558df103ec704c}{ND\+\_\+tree\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac4da309537bc828fd6ecc56046258a48}{ND\+\_\+tree\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad20fffb76a5d5801962b2e9ca678109f}{ND\+\_\+weight\+\_\+class}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaac55d17a94648f59f637f29aabb3259b}{ND\+\_\+width}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaf99fce39f8dcc513002af9c1f97c9b3b}{ND\+\_\+xsize}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga3cee88e9b3eff3a89e96837ca91a723f}{ND\+\_\+ysize}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae309bfc1ef6997297934402bc684f0f5}{agfindnode}}(g,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga62ab34e97050c33903a56359783a1753}{agfindnodeattr}}(g,  a)
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agnode__s}{Agnode\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em node (atom) \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agsubnode__s}{Agsubnode\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\+\_\+t}}
+\item 
+typedef struct Agnodeinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__node_ga99f5e71bafc639934d8a78307c510dfe}{Agnodeinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_ga1e8d44a7de90600adccd069df68e1fdc}{agnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, char \texorpdfstring{$\ast$}{*}name, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_ga61fc8bec39e11279c569d2e2f798361c}{agidnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_ga03a53b6f715e313db550a8f6190eb10c}{agsubnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_gad268407778a4c0bf3751274fefdba46b}{agfstnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_ga47450693c22286ed8d4a1d99c2397409}{agnxtnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_gaa18cb7517fbe8be4bdcb18cf52acd2c7}{aglstnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_ga42ea9ee41f66ac773553fa490ae931c0}{agprvnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__node_gadad4a1e185307c87499d6f729a4a2348}{agsubrep}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__node_gad53cb3497ec9bec98db2ac7e5c54f0b3}{agnodebefore}} (\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}u, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}v)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__node_ga0673ef5a28252affd27980820f2c2774}{agdelnode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}arg\+\_\+n)
+\begin{DoxyCompactList}\small\item\em removes a node from a graph or subgraph. \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__node_ga94e70a22f74df89275f02b0f4450b9d9}{agrelabel\+\_\+node}} (\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n, char \texorpdfstring{$\ast$}{*}newname)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+A node is created by giving a unique string name or programmer defined integer ID, and is represented by a unique internal object. (Node equality can checked by pointer comparison.)
+
+\label{group__cgraph__node_doc-define-members}
+\Hypertarget{group__cgraph__node_doc-define-members}
+\doxysubsubsubsubsection{Макросы}
+\Hypertarget{group__cgraph__node_gae309bfc1ef6997297934402bc684f0f5}\index{nodes@{nodes}!agfindnode@{agfindnode}}
+\index{agfindnode@{agfindnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfindnode}{agfindnode}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae309bfc1ef6997297934402bc684f0f5} 
+\+\#define agfindnode(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__node_ga1e8d44a7de90600adccd069df68e1fdc}{agnode}}(g,n,0))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga62ab34e97050c33903a56359783a1753}\index{nodes@{nodes}!agfindnodeattr@{agfindnodeattr}}
+\index{agfindnodeattr@{agfindnodeattr}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfindnodeattr}{agfindnodeattr}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga62ab34e97050c33903a56359783a1753} 
+\+\#define agfindnodeattr(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__attr_ga7523d2c3b09fce2d069cc8f98f6b156f}{agattr\_text}}(g,\doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}},a,NULL))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga756b74075ae0a75309ad5a012550c5b0}\index{nodes@{nodes}!ND\_alg@{ND\_alg}}
+\index{ND\_alg@{ND\_alg}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_alg}{ND\_alg}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga756b74075ae0a75309ad5a012550c5b0} 
+\+\#define ND\+\_\+alg(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>alg)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga24be5471334ac496135e0c94f0377da2}\index{nodes@{nodes}!ND\_bb@{ND\_bb}}
+\index{ND\_bb@{ND\_bb}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_bb}{ND\_bb}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga24be5471334ac496135e0c94f0377da2} 
+\+\#define ND\+\_\+bb(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>bb)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga56e6c495adc9afcce11b7ecb8a1f4daf}\index{nodes@{nodes}!ND\_clust@{ND\_clust}}
+\index{ND\_clust@{ND\_clust}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_clust}{ND\_clust}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga56e6c495adc9afcce11b7ecb8a1f4daf} 
+\+\#define ND\+\_\+clust(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>clust)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga9ec32b051f012346111fee4912756843}\index{nodes@{nodes}!ND\_clustnode@{ND\_clustnode}}
+\index{ND\_clustnode@{ND\_clustnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_clustnode}{ND\_clustnode}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga9ec32b051f012346111fee4912756843} 
+\+\#define ND\+\_\+clustnode(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>clustnode)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gae5c4c0a0cc39024b09a5bf94251aceff}\index{nodes@{nodes}!ND\_coord@{ND\_coord}}
+\index{ND\_coord@{ND\_coord}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_coord}{ND\_coord}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae5c4c0a0cc39024b09a5bf94251aceff} 
+\+\#define ND\+\_\+coord(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>coord)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gae9e7b39a3525fb90ba0b334c9e320cf3}\index{nodes@{nodes}!ND\_dist@{ND\_dist}}
+\index{ND\_dist@{ND\_dist}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_dist}{ND\_dist}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae9e7b39a3525fb90ba0b334c9e320cf3} 
+\+\#define ND\+\_\+dist(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>dist)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gae4437bfd2417303a177a8955b73cd2f8}\index{nodes@{nodes}!ND\_flat\_in@{ND\_flat\_in}}
+\index{ND\_flat\_in@{ND\_flat\_in}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_flat\_in}{ND\_flat\_in}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae4437bfd2417303a177a8955b73cd2f8} 
+\+\#define ND\+\_\+flat\+\_\+in(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>flat\_in)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga7ac213b39266f3dd86f60bb9f39ee5a5}\index{nodes@{nodes}!ND\_flat\_out@{ND\_flat\_out}}
+\index{ND\_flat\_out@{ND\_flat\_out}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_flat\_out}{ND\_flat\_out}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga7ac213b39266f3dd86f60bb9f39ee5a5} 
+\+\#define ND\+\_\+flat\+\_\+out(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>flat\_out)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga1931c9487f15292849c2b49c3e96b6a4}\index{nodes@{nodes}!ND\_gui\_state@{ND\_gui\_state}}
+\index{ND\_gui\_state@{ND\_gui\_state}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_gui\_state}{ND\_gui\_state}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga1931c9487f15292849c2b49c3e96b6a4} 
+\+\#define ND\+\_\+gui\+\_\+state(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>gui\_state)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga325000a2fc365352eafcbfb8be910b00}\index{nodes@{nodes}!ND\_has\_port@{ND\_has\_port}}
+\index{ND\_has\_port@{ND\_has\_port}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_has\_port}{ND\_has\_port}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga325000a2fc365352eafcbfb8be910b00} 
+\+\#define ND\+\_\+has\+\_\+port(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>has\_port)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga656493ad251af9524cfc5552dc213383}\index{nodes@{nodes}!ND\_heapindex@{ND\_heapindex}}
+\index{ND\_heapindex@{ND\_heapindex}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_heapindex}{ND\_heapindex}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga656493ad251af9524cfc5552dc213383} 
+\+\#define ND\+\_\+heapindex(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>heapindex)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaa323a7137791d555fdf08f7f0f2eff02}\index{nodes@{nodes}!ND\_height@{ND\_height}}
+\index{ND\_height@{ND\_height}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_height}{ND\_height}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaa323a7137791d555fdf08f7f0f2eff02} 
+\+\#define ND\+\_\+height(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>height)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gac1f79021f7fecf1ff682bf57e9050241}\index{nodes@{nodes}!ND\_hops@{ND\_hops}}
+\index{ND\_hops@{ND\_hops}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_hops}{ND\_hops}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gac1f79021f7fecf1ff682bf57e9050241} 
+\+\#define ND\+\_\+hops(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>hops)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga1bb4c002fbbf73f2e4061de8efcbe453}\index{nodes@{nodes}!ND\_ht@{ND\_ht}}
+\index{ND\_ht@{ND\_ht}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_ht}{ND\_ht}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga1bb4c002fbbf73f2e4061de8efcbe453} 
+\+\#define ND\+\_\+ht(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>ht)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga0affbf5af96f331f4426bf5dd340c9ec}\index{nodes@{nodes}!ND\_id@{ND\_id}}
+\index{ND\_id@{ND\_id}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_id}{ND\_id}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga0affbf5af96f331f4426bf5dd340c9ec} 
+\+\#define ND\+\_\+id(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>\textcolor{keywordtype}{id})}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gae5f583e129d6061a535d76fdb170e94c}\index{nodes@{nodes}!ND\_in@{ND\_in}}
+\index{ND\_in@{ND\_in}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_in}{ND\_in}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae5f583e129d6061a535d76fdb170e94c} 
+\+\#define ND\+\_\+in(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>in)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga74eefa711e291975c7d89493d5df1d5b}\index{nodes@{nodes}!ND\_label@{ND\_label}}
+\index{ND\_label@{ND\_label}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_label}{ND\_label}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga74eefa711e291975c7d89493d5df1d5b} 
+\+\#define ND\+\_\+label(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>label)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga2b836cfd06a967ad326d658a8138c146}\index{nodes@{nodes}!ND\_lim@{ND\_lim}}
+\index{ND\_lim@{ND\_lim}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_lim}{ND\_lim}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga2b836cfd06a967ad326d658a8138c146} 
+\+\#define ND\+\_\+lim(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>lim)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gadb513eaede379fa8cf40bb5e335e0c32}\index{nodes@{nodes}!ND\_low@{ND\_low}}
+\index{ND\_low@{ND\_low}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_low}{ND\_low}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gadb513eaede379fa8cf40bb5e335e0c32} 
+\+\#define ND\+\_\+low(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>low)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaafdc3f915c57fc734959a7936feba1c2}\index{nodes@{nodes}!ND\_lw@{ND\_lw}}
+\index{ND\_lw@{ND\_lw}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_lw}{ND\_lw}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaafdc3f915c57fc734959a7936feba1c2} 
+\+\#define ND\+\_\+lw(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>lw)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga932f96bdb911ef9d25ff3a5f4f9fcdea}\index{nodes@{nodes}!ND\_mark@{ND\_mark}}
+\index{ND\_mark@{ND\_mark}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_mark}{ND\_mark}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga932f96bdb911ef9d25ff3a5f4f9fcdea} 
+\+\#define ND\+\_\+mark(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>mark)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gab6cf44ed9beadb42dec6cbf1e215d683}\index{nodes@{nodes}!ND\_mval@{ND\_mval}}
+\index{ND\_mval@{ND\_mval}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_mval}{ND\_mval}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gab6cf44ed9beadb42dec6cbf1e215d683} 
+\+\#define ND\+\_\+mval(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>mval)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga0e22e496fee82db6b89acdd5ef6c37c7}\index{nodes@{nodes}!ND\_n\_cluster@{ND\_n\_cluster}}
+\index{ND\_n\_cluster@{ND\_n\_cluster}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_n\_cluster}{ND\_n\_cluster}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga0e22e496fee82db6b89acdd5ef6c37c7} 
+\+\#define ND\+\_\+n\+\_\+cluster(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>n\_cluster)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga3bb87e7928ed2fd3686ac378858b293f}\index{nodes@{nodes}!ND\_next@{ND\_next}}
+\index{ND\_next@{ND\_next}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_next}{ND\_next}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga3bb87e7928ed2fd3686ac378858b293f} 
+\+\#define ND\+\_\+next(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>next)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga9ea2bead61709465110b8141bcf68721}\index{nodes@{nodes}!ND\_node\_type@{ND\_node\_type}}
+\index{ND\_node\_type@{ND\_node\_type}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_node\_type}{ND\_node\_type}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga9ea2bead61709465110b8141bcf68721} 
+\+\#define ND\+\_\+node\+\_\+type(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>node\_type)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga15cbeaea7dab64dcfbcde1cad226c552}\index{nodes@{nodes}!ND\_onstack@{ND\_onstack}}
+\index{ND\_onstack@{ND\_onstack}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_onstack}{ND\_onstack}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga15cbeaea7dab64dcfbcde1cad226c552} 
+\+\#define ND\+\_\+onstack(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>onstack)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gac2743f96dd3d2c06547e3d25d9471c7c}\index{nodes@{nodes}!ND\_order@{ND\_order}}
+\index{ND\_order@{ND\_order}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_order}{ND\_order}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gac2743f96dd3d2c06547e3d25d9471c7c} 
+\+\#define ND\+\_\+order(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>order)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga5d0398c1cdeb6735e6b95b7a027c573f}\index{nodes@{nodes}!ND\_other@{ND\_other}}
+\index{ND\_other@{ND\_other}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_other}{ND\_other}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga5d0398c1cdeb6735e6b95b7a027c573f} 
+\+\#define ND\+\_\+other(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>other)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gafb8b0da4ea62a1bbd2a4ae3ce52e7384}\index{nodes@{nodes}!ND\_out@{ND\_out}}
+\index{ND\_out@{ND\_out}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_out}{ND\_out}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gafb8b0da4ea62a1bbd2a4ae3ce52e7384} 
+\+\#define ND\+\_\+out(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>out)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga154d127461cb6e85b34bf1eb5df0676e}\index{nodes@{nodes}!ND\_outline\_height@{ND\_outline\_height}}
+\index{ND\_outline\_height@{ND\_outline\_height}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_outline\_height}{ND\_outline\_height}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga154d127461cb6e85b34bf1eb5df0676e} 
+\+\#define ND\+\_\+outline\+\_\+height(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>outline\_height)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga0d8f0d5ac52747cf400e221049be2677}\index{nodes@{nodes}!ND\_outline\_width@{ND\_outline\_width}}
+\index{ND\_outline\_width@{ND\_outline\_width}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_outline\_width}{ND\_outline\_width}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga0d8f0d5ac52747cf400e221049be2677} 
+\+\#define ND\+\_\+outline\+\_\+width(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>outline\_width)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga4bd342b70058683d7d2f510f4b82f819}\index{nodes@{nodes}!ND\_par@{ND\_par}}
+\index{ND\_par@{ND\_par}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_par}{ND\_par}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga4bd342b70058683d7d2f510f4b82f819} 
+\+\#define ND\+\_\+par(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>par)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga50b5fb87a83783653f9a5bd28109ff07}\index{nodes@{nodes}!ND\_pinned@{ND\_pinned}}
+\index{ND\_pinned@{ND\_pinned}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_pinned}{ND\_pinned}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga50b5fb87a83783653f9a5bd28109ff07} 
+\+\#define ND\+\_\+pinned(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>pinned)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gadd78de551f9363227c013ce673f2b573}\index{nodes@{nodes}!ND\_pos@{ND\_pos}}
+\index{ND\_pos@{ND\_pos}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_pos}{ND\_pos}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gadd78de551f9363227c013ce673f2b573} 
+\+\#define ND\+\_\+pos(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>pos)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga1805943530ef1049887e85db4bc918b7}\index{nodes@{nodes}!ND\_prev@{ND\_prev}}
+\index{ND\_prev@{ND\_prev}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_prev}{ND\_prev}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga1805943530ef1049887e85db4bc918b7} 
+\+\#define ND\+\_\+prev(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>prev)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gafe5072a4ab915d5cd6a1994c446db319}\index{nodes@{nodes}!ND\_priority@{ND\_priority}}
+\index{ND\_priority@{ND\_priority}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_priority}{ND\_priority}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gafe5072a4ab915d5cd6a1994c446db319} 
+\+\#define ND\+\_\+priority(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>priority)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga0baa35dbbb9c1b03e40b48b26deb0b38}\index{nodes@{nodes}!ND\_rank@{ND\_rank}}
+\index{ND\_rank@{ND\_rank}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_rank}{ND\_rank}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga0baa35dbbb9c1b03e40b48b26deb0b38} 
+\+\#define ND\+\_\+rank(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>rank)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gade7cf787f4b798952fcefb4abb3c256d}\index{nodes@{nodes}!ND\_ranktype@{ND\_ranktype}}
+\index{ND\_ranktype@{ND\_ranktype}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_ranktype}{ND\_ranktype}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gade7cf787f4b798952fcefb4abb3c256d} 
+\+\#define ND\+\_\+ranktype(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>ranktype)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaaf40a53b50e0a203b67453a6127bb508}\index{nodes@{nodes}!ND\_rep@{ND\_rep}}
+\index{ND\_rep@{ND\_rep}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_rep}{ND\_rep}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaaf40a53b50e0a203b67453a6127bb508} 
+\+\#define ND\+\_\+rep(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>rep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga9cb8c502c548e420aa8b507b162a2d2e}\index{nodes@{nodes}!ND\_rw@{ND\_rw}}
+\index{ND\_rw@{ND\_rw}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_rw}{ND\_rw}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga9cb8c502c548e420aa8b507b162a2d2e} 
+\+\#define ND\+\_\+rw(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>rw)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga5d7bd45bc6b14c164b47f2e477115d13}\index{nodes@{nodes}!ND\_save\_in@{ND\_save\_in}}
+\index{ND\_save\_in@{ND\_save\_in}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_save\_in}{ND\_save\_in}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga5d7bd45bc6b14c164b47f2e477115d13} 
+\+\#define ND\+\_\+save\+\_\+in(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>save\_in)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gab4b05872287c433b1e9b163037827813}\index{nodes@{nodes}!ND\_save\_out@{ND\_save\_out}}
+\index{ND\_save\_out@{ND\_save\_out}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_save\_out}{ND\_save\_out}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gab4b05872287c433b1e9b163037827813} 
+\+\#define ND\+\_\+save\+\_\+out(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>save\_out)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga6c07a73ad18bd14f7ccf938532f541ac}\index{nodes@{nodes}!ND\_set@{ND\_set}}
+\index{ND\_set@{ND\_set}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_set}{ND\_set}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga6c07a73ad18bd14f7ccf938532f541ac} 
+\+\#define ND\+\_\+set(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>set)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gae90c22cfce70f108bb551499ac52dc54}\index{nodes@{nodes}!ND\_shape@{ND\_shape}}
+\index{ND\_shape@{ND\_shape}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_shape}{ND\_shape}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gae90c22cfce70f108bb551499ac52dc54} 
+\+\#define ND\+\_\+shape(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>shape)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gad25b873ee39c60fc1067d18051dd6ebc}\index{nodes@{nodes}!ND\_shape\_info@{ND\_shape\_info}}
+\index{ND\_shape\_info@{ND\_shape\_info}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_shape\_info}{ND\_shape\_info}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gad25b873ee39c60fc1067d18051dd6ebc} 
+\+\#define ND\+\_\+shape\+\_\+info(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>shape\_info)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga2d474280f17cea3b13984c60b7fdf335}\index{nodes@{nodes}!ND\_showboxes@{ND\_showboxes}}
+\index{ND\_showboxes@{ND\_showboxes}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_showboxes}{ND\_showboxes}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga2d474280f17cea3b13984c60b7fdf335} 
+\+\#define ND\+\_\+showboxes(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>showboxes)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga359619b85d94d92c966cdff435c80ce6}\index{nodes@{nodes}!ND\_state@{ND\_state}}
+\index{ND\_state@{ND\_state}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_state}{ND\_state}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga359619b85d94d92c966cdff435c80ce6} 
+\+\#define ND\+\_\+state(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>state)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga06fb60e161258ecbf1558df103ec704c}\index{nodes@{nodes}!ND\_tree\_in@{ND\_tree\_in}}
+\index{ND\_tree\_in@{ND\_tree\_in}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_tree\_in}{ND\_tree\_in}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga06fb60e161258ecbf1558df103ec704c} 
+\+\#define ND\+\_\+tree\+\_\+in(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>tree\_in)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gac4da309537bc828fd6ecc56046258a48}\index{nodes@{nodes}!ND\_tree\_out@{ND\_tree\_out}}
+\index{ND\_tree\_out@{ND\_tree\_out}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_tree\_out}{ND\_tree\_out}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gac4da309537bc828fd6ecc56046258a48} 
+\+\#define ND\+\_\+tree\+\_\+out(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>tree\_out)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gab2e2ec5a6d410abc991d5ddae1db134c}\index{nodes@{nodes}!ND\_UF\_parent@{ND\_UF\_parent}}
+\index{ND\_UF\_parent@{ND\_UF\_parent}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_UF\_parent}{ND\_UF\_parent}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gab2e2ec5a6d410abc991d5ddae1db134c} 
+\+\#define ND\+\_\+\+UF\+\_\+parent(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>UF\_parent)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gad00f2be2e982b4737f81b32a62cbcbe2}\index{nodes@{nodes}!ND\_UF\_size@{ND\_UF\_size}}
+\index{ND\_UF\_size@{ND\_UF\_size}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_UF\_size}{ND\_UF\_size}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gad00f2be2e982b4737f81b32a62cbcbe2} 
+\+\#define ND\+\_\+\+UF\+\_\+size(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>UF\_size)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gad20fffb76a5d5801962b2e9ca678109f}\index{nodes@{nodes}!ND\_weight\_class@{ND\_weight\_class}}
+\index{ND\_weight\_class@{ND\_weight\_class}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_weight\_class}{ND\_weight\_class}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gad20fffb76a5d5801962b2e9ca678109f} 
+\+\#define ND\+\_\+weight\+\_\+class(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>weight\_class)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaac55d17a94648f59f637f29aabb3259b}\index{nodes@{nodes}!ND\_width@{ND\_width}}
+\index{ND\_width@{ND\_width}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_width}{ND\_width}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaac55d17a94648f59f637f29aabb3259b} 
+\+\#define ND\+\_\+width(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>width)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaca812c68db4d6ec5856ebdcfac4d8284}\index{nodes@{nodes}!ND\_xlabel@{ND\_xlabel}}
+\index{ND\_xlabel@{ND\_xlabel}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_xlabel}{ND\_xlabel}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaca812c68db4d6ec5856ebdcfac4d8284} 
+\+\#define ND\+\_\+xlabel(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(n))-\/>xlabel)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_gaf99fce39f8dcc513002af9c1f97c9b3b}\index{nodes@{nodes}!ND\_xsize@{ND\_xsize}}
+\index{ND\_xsize@{ND\_xsize}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_xsize}{ND\_xsize}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaf99fce39f8dcc513002af9c1f97c9b3b} 
+\+\#define ND\+\_\+xsize(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__node_gaafdc3f915c57fc734959a7936feba1c2}{ND\_lw}}(n)+\doxymbox{\hyperlink{group__cgraph__node_ga9cb8c502c548e420aa8b507b162a2d2e}{ND\_rw}}(n))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__node_ga3cee88e9b3eff3a89e96837ca91a723f}\index{nodes@{nodes}!ND\_ysize@{ND\_ysize}}
+\index{ND\_ysize@{ND\_ysize}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ND\_ysize}{ND\_ysize}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga3cee88e9b3eff3a89e96837ca91a723f} 
+\+\#define ND\+\_\+ysize(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__node_ga1bb4c002fbbf73f2e4061de8efcbe453}{ND\_ht}}(n))}
+
+\end{DoxyCode}
+
+
+\label{group__cgraph__node_doc-typedef-members}
+\Hypertarget{group__cgraph__node_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}\index{nodes@{nodes}!Agnode\_t@{Agnode\_t}}
+\index{Agnode\_t@{Agnode\_t}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agnode\_t}{Agnode\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6} 
+typedef struct \doxymbox{\hyperlink{struct_agnode__s}{Agnode\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}}}
+
+\Hypertarget{group__cgraph__node_ga99f5e71bafc639934d8a78307c510dfe}\index{nodes@{nodes}!Agnodeinfo\_t@{Agnodeinfo\_t}}
+\index{Agnodeinfo\_t@{Agnodeinfo\_t}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agnodeinfo\_t}{Agnodeinfo\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga99f5e71bafc639934d8a78307c510dfe} 
+typedef struct Agnodeinfo\+\_\+t Agnodeinfo\+\_\+t}
+
+\Hypertarget{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}\index{nodes@{nodes}!Agsubnode\_t@{Agsubnode\_t}}
+\index{Agsubnode\_t@{Agsubnode\_t}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agsubnode\_t}{Agsubnode\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27} 
+typedef struct \doxymbox{\hyperlink{struct_agsubnode__s}{Agsubnode\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\+\_\+t}}}
+
+
+
+\label{group__cgraph__node_doc-func-members}
+\Hypertarget{group__cgraph__node_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__node_ga0673ef5a28252affd27980820f2c2774}\index{nodes@{nodes}!agdelnode@{agdelnode}}
+\index{agdelnode@{agdelnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agdelnode()}{agdelnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga0673ef5a28252affd27980820f2c2774} 
+CGRAPH\+\_\+\+API int agdelnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{arg\+\_\+n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_gad268407778a4c0bf3751274fefdba46b}\index{nodes@{nodes}!agfstnode@{agfstnode}}
+\index{agfstnode@{agfstnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfstnode()}{agfstnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gad268407778a4c0bf3751274fefdba46b} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agfstnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga61fc8bec39e11279c569d2e2f798361c}\index{nodes@{nodes}!agidnode@{agidnode}}
+\index{agidnode@{agidnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agidnode()}{agidnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga61fc8bec39e11279c569d2e2f798361c} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agidnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}}]{id}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_gaa18cb7517fbe8be4bdcb18cf52acd2c7}\index{nodes@{nodes}!aglstnode@{aglstnode}}
+\index{aglstnode@{aglstnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aglstnode()}{aglstnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gaa18cb7517fbe8be4bdcb18cf52acd2c7} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} aglstnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga1e8d44a7de90600adccd069df68e1fdc}\index{nodes@{nodes}!agnode@{agnode}}
+\index{agnode@{agnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnode()}{agnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga1e8d44a7de90600adccd069df68e1fdc} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_gad53cb3497ec9bec98db2ac7e5c54f0b3}\index{nodes@{nodes}!agnodebefore@{agnodebefore}}
+\index{agnodebefore@{agnodebefore}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnodebefore()}{agnodebefore()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gad53cb3497ec9bec98db2ac7e5c54f0b3} 
+CGRAPH\+\_\+\+API int agnodebefore (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{u}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{v}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga47450693c22286ed8d4a1d99c2397409}\index{nodes@{nodes}!agnxtnode@{agnxtnode}}
+\index{agnxtnode@{agnxtnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnxtnode()}{agnxtnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga47450693c22286ed8d4a1d99c2397409} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agnxtnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga42ea9ee41f66ac773553fa490ae931c0}\index{nodes@{nodes}!agprvnode@{agprvnode}}
+\index{agprvnode@{agprvnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agprvnode()}{agprvnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga42ea9ee41f66ac773553fa490ae931c0} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agprvnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga94e70a22f74df89275f02b0f4450b9d9}\index{nodes@{nodes}!agrelabel\_node@{agrelabel\_node}}
+\index{agrelabel\_node@{agrelabel\_node}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agrelabel\_node()}{agrelabel\_node()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga94e70a22f74df89275f02b0f4450b9d9} 
+CGRAPH\+\_\+\+API int agrelabel\+\_\+node (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{newname}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_ga03a53b6f715e313db550a8f6190eb10c}\index{nodes@{nodes}!agsubnode@{agsubnode}}
+\index{agsubnode@{agsubnode}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agsubnode()}{agsubnode()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_ga03a53b6f715e313db550a8f6190eb10c} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agsubnode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__node_gadad4a1e185307c87499d6f729a4a2348}\index{nodes@{nodes}!agsubrep@{agsubrep}}
+\index{agsubrep@{agsubrep}!nodes@{nodes}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agsubrep()}{agsubrep()}}
+{\footnotesize\ttfamily \label{group__cgraph__node_gadad4a1e185307c87499d6f729a4a2348} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\+\_\+t}} \texorpdfstring{$\ast$}{*} agsubrep (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+

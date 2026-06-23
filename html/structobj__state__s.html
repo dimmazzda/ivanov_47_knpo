@@ -1,0 +1,1005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Структура obj_state_s</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structobj__state__s.html','','structobj__state__s-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура obj_state_s</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="gvcjob_8h_source.html">gvcjob.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac7e652fa645b990a3d273c322c72ed37" id="r_ac7e652fa645b990a3d273c322c72ed37"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#a02731e816998f46b1511d36eff0260ec">obj_state_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac7e652fa645b990a3d273c322c72ed37">parent</a></td></tr>
+<tr class="memitem:a686b61b585902fdb816869e1fc705f46" id="r_a686b61b585902fdb816869e1fc705f46"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#ac87c026b772bad1b7bb6edea6200fc92">obj_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a686b61b585902fdb816869e1fc705f46">type</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon">union {&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:aa85be249ec48cabde8bd146954f63ff5" id="r_aa85be249ec48cabde8bd146954f63ff5"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;&#160;&#160;<a class="el" href="#a1372678d0083a80f6658fa10e20e5928">g</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:afd749b4b66de2f323f1e5e5ed7a3ce1f" id="r_afd749b4b66de2f323f1e5e5ed7a3ce1f"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;&#160;&#160;<a class="el" href="#a993330749d875cfdde890df21c90977b">sg</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a8a4704a51bd13b027211fe9f7eb0813c" id="r_a8a4704a51bd13b027211fe9f7eb0813c"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;&#160;&#160;<a class="el" href="#a8881569da82b88c1a535103486995cab">n</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a5be79bfceb79e672d8cf344f7ab04de9" id="r_a5be79bfceb79e672d8cf344f7ab04de9"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#ab6289995bb0656f4da2ae67d80fea6d2">edge_t</a> *&#160;&#160;&#160;<a class="el" href="#a1c67e6c02b5ba0ed613e8012b76b2937">e</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a56a884d5d44cb431bbd1ebc83f6f2c39" id="r_a56a884d5d44cb431bbd1ebc83f6f2c39"><td class="memItemLeft anonEnd">}&#160;</td><td class="memItemRight"><a class="el" href="#a56a884d5d44cb431bbd1ebc83f6f2c39">u</a></td></tr>
+<tr class="memitem:ab8fe9ae126dfd7c449be2be22734efd5" id="r_ab8fe9ae126dfd7c449be2be22734efd5"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#a9d67f57cb353edb06b582591b3f1eaf0">emit_state_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab8fe9ae126dfd7c449be2be22734efd5">emit_state</a></td></tr>
+<tr class="memitem:aa214195f79e7eedee74006bbe9765f79" id="r_aa214195f79e7eedee74006bbe9765f79"><td class="memItemLeft"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa214195f79e7eedee74006bbe9765f79">pencolor</a></td></tr>
+<tr class="memitem:a25db9225d76b6e43e74d70f3bfc23ae1" id="r_a25db9225d76b6e43e74d70f3bfc23ae1"><td class="memItemLeft"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a25db9225d76b6e43e74d70f3bfc23ae1">fillcolor</a></td></tr>
+<tr class="memitem:a73194a8c35b272cbf588ee0c91531b2b" id="r_a73194a8c35b272cbf588ee0c91531b2b"><td class="memItemLeft"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73194a8c35b272cbf588ee0c91531b2b">stopcolor</a></td></tr>
+<tr class="memitem:ab51fa5bd497eb6e0723587da6d232043" id="r_ab51fa5bd497eb6e0723587da6d232043"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab51fa5bd497eb6e0723587da6d232043">gradient_angle</a></td></tr>
+<tr class="memitem:a2c66787d48ed6a875b64981c46aa0048" id="r_a2c66787d48ed6a875b64981c46aa0048"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a2c66787d48ed6a875b64981c46aa0048">gradient_frac</a></td></tr>
+<tr class="memitem:a7e97e6de2402896579423006d60898ba" id="r_a7e97e6de2402896579423006d60898ba"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#a056abdc3e65632a0666767d8395bdc44">pen_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7e97e6de2402896579423006d60898ba">pen</a></td></tr>
+<tr class="memitem:afe082b5b0510dd76bbf67af5ab822790" id="r_afe082b5b0510dd76bbf67af5ab822790"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#a8b3c1e8eaca9ba6bf60627aee8bb9e72">fill_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#afe082b5b0510dd76bbf67af5ab822790">fill</a></td></tr>
+<tr class="memitem:aff055afa76950cf86469f202b2a24bce" id="r_aff055afa76950cf86469f202b2a24bce"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#aff055afa76950cf86469f202b2a24bce">penwidth</a></td></tr>
+<tr class="memitem:ab16ee35fe85d88cdf01eca253d04c6e7" id="r_ab16ee35fe85d88cdf01eca253d04c6e7"><td class="memItemLeft">char **&#160;</td><td class="memItemRight"><a class="el" href="#ab16ee35fe85d88cdf01eca253d04c6e7">rawstyle</a></td></tr>
+<tr class="memitem:a3fdff9f4082ad335b463d4249f25fcb3" id="r_a3fdff9f4082ad335b463d4249f25fcb3"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a3fdff9f4082ad335b463d4249f25fcb3">z</a></td></tr>
+<tr class="memitem:ac811d320f6f7f92b3bde32973c008123" id="r_ac811d320f6f7f92b3bde32973c008123"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ac811d320f6f7f92b3bde32973c008123">tail_z</a></td></tr>
+<tr class="memitem:accbb1d0b8a6396d098b25b8845d41332" id="r_accbb1d0b8a6396d098b25b8845d41332"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#accbb1d0b8a6396d098b25b8845d41332">head_z</a></td></tr>
+<tr class="memitem:aecd95cd41e2138f93653455a56d94dbb" id="r_aecd95cd41e2138f93653455a56d94dbb"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#aecd95cd41e2138f93653455a56d94dbb">label</a></td></tr>
+<tr class="memitem:a5d7d0d7323188a1e70b3c931b5a160cd" id="r_a5d7d0d7323188a1e70b3c931b5a160cd"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a5d7d0d7323188a1e70b3c931b5a160cd">xlabel</a></td></tr>
+<tr class="memitem:a2d61811979b08939e64c3cd351f5771d" id="r_a2d61811979b08939e64c3cd351f5771d"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a2d61811979b08939e64c3cd351f5771d">taillabel</a></td></tr>
+<tr class="memitem:a0dba8f9bfa3c473395dc9b8c8a875c54" id="r_a0dba8f9bfa3c473395dc9b8c8a875c54"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a0dba8f9bfa3c473395dc9b8c8a875c54">headlabel</a></td></tr>
+<tr class="memitem:a46647452bcb8f9c39a81d86a70c58f1b" id="r_a46647452bcb8f9c39a81d86a70c58f1b"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a46647452bcb8f9c39a81d86a70c58f1b">url</a></td></tr>
+<tr class="memitem:ab49cb90241cd45f10de7c3bbd8a9d119" id="r_ab49cb90241cd45f10de7c3bbd8a9d119"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#ab49cb90241cd45f10de7c3bbd8a9d119">id</a></td></tr>
+<tr class="memitem:a548c5cdf0cca91b6326a74240c892cbc" id="r_a548c5cdf0cca91b6326a74240c892cbc"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a548c5cdf0cca91b6326a74240c892cbc">labelurl</a></td></tr>
+<tr class="memitem:a556a06e041082ccdded147aca3b84141" id="r_a556a06e041082ccdded147aca3b84141"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a556a06e041082ccdded147aca3b84141">tailurl</a></td></tr>
+<tr class="memitem:a9f9572f9eae6c8ca21a02119755c253d" id="r_a9f9572f9eae6c8ca21a02119755c253d"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a9f9572f9eae6c8ca21a02119755c253d">headurl</a></td></tr>
+<tr class="memitem:a26e255085bf4abac828ff3d355d10caf" id="r_a26e255085bf4abac828ff3d355d10caf"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a26e255085bf4abac828ff3d355d10caf">tooltip</a></td></tr>
+<tr class="memitem:a64d8062b517dc492b186a92ba8edca8e" id="r_a64d8062b517dc492b186a92ba8edca8e"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a64d8062b517dc492b186a92ba8edca8e">labeltooltip</a></td></tr>
+<tr class="memitem:a6d3a114f924c556b7d0daa6b3a6fc21a" id="r_a6d3a114f924c556b7d0daa6b3a6fc21a"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a6d3a114f924c556b7d0daa6b3a6fc21a">tailtooltip</a></td></tr>
+<tr class="memitem:a833143bf1da45c6a561c255a7843e605" id="r_a833143bf1da45c6a561c255a7843e605"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a833143bf1da45c6a561c255a7843e605">headtooltip</a></td></tr>
+<tr class="memitem:a67ecd72ea2c7797ee1eba30f6617c7ec" id="r_a67ecd72ea2c7797ee1eba30f6617c7ec"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a67ecd72ea2c7797ee1eba30f6617c7ec">target</a></td></tr>
+<tr class="memitem:abbd1afaea15ed5882237086d37f7804c" id="r_abbd1afaea15ed5882237086d37f7804c"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#abbd1afaea15ed5882237086d37f7804c">labeltarget</a></td></tr>
+<tr class="memitem:ac94ea92ecf1e13e33dd3543f143336db" id="r_ac94ea92ecf1e13e33dd3543f143336db"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#ac94ea92ecf1e13e33dd3543f143336db">tailtarget</a></td></tr>
+<tr class="memitem:a67a65a9f5ea7d8ddaffb9c2daeb9417f" id="r_a67a65a9f5ea7d8ddaffb9c2daeb9417f"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a67a65a9f5ea7d8ddaffb9c2daeb9417f">headtarget</a></td></tr>
+<tr class="memitem:a4a399071e23511e55ec0f0bed9498b58" id="r_a4a399071e23511e55ec0f0bed9498b58"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a4a399071e23511e55ec0f0bed9498b58">explicit_tooltip</a>:1</td></tr>
+<tr class="memitem:a868b91918dbb0b205714abae1d50e776" id="r_a868b91918dbb0b205714abae1d50e776"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a868b91918dbb0b205714abae1d50e776">explicit_tailtooltip</a>:1</td></tr>
+<tr class="memitem:ad56d3a32b2223c0c57e43ecd538aed6c" id="r_ad56d3a32b2223c0c57e43ecd538aed6c"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#ad56d3a32b2223c0c57e43ecd538aed6c">explicit_headtooltip</a>:1</td></tr>
+<tr class="memitem:a849f801a4e4ded4ee63a6252e65430d7" id="r_a849f801a4e4ded4ee63a6252e65430d7"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a849f801a4e4ded4ee63a6252e65430d7">explicit_labeltooltip</a>:1</td></tr>
+<tr class="memitem:a14e900b425aa0c3b2c0ee7e5bedf42f8" id="r_a14e900b425aa0c3b2c0ee7e5bedf42f8"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a14e900b425aa0c3b2c0ee7e5bedf42f8">explicit_tailtarget</a>:1</td></tr>
+<tr class="memitem:a98192ce9d96d928a6a4d61bf0af4db11" id="r_a98192ce9d96d928a6a4d61bf0af4db11"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a98192ce9d96d928a6a4d61bf0af4db11">explicit_headtarget</a>:1</td></tr>
+<tr class="memitem:a27c6c75743c7964d477be71222a4348b" id="r_a27c6c75743c7964d477be71222a4348b"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a27c6c75743c7964d477be71222a4348b">explicit_edgetarget</a>:1</td></tr>
+<tr class="memitem:a85fe2940b9a172b121a6367221360a47" id="r_a85fe2940b9a172b121a6367221360a47"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a85fe2940b9a172b121a6367221360a47">explicit_tailurl</a>:1</td></tr>
+<tr class="memitem:a8ad9790f997f253d768656c106637676" id="r_a8ad9790f997f253d768656c106637676"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a8ad9790f997f253d768656c106637676">explicit_headurl</a>:1</td></tr>
+<tr class="memitem:ae3497e84f301a86d70a73b58663e4f72" id="r_ae3497e84f301a86d70a73b58663e4f72"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#ae3497e84f301a86d70a73b58663e4f72">labeledgealigned</a>:1</td></tr>
+<tr class="memitem:a85f1fc3bc225a43626d8b6b1c0e21f00" id="r_a85f1fc3bc225a43626d8b6b1c0e21f00"><td class="memItemLeft"><a class="el" href="gvcjob_8h.html#a5ce3b3a21716351feb74e0155b6499bb">map_shape_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a85f1fc3bc225a43626d8b6b1c0e21f00">url_map_shape</a></td></tr>
+<tr class="memitem:aee57847ab4c6b3328d9e36dfe624149f" id="r_aee57847ab4c6b3328d9e36dfe624149f"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#aee57847ab4c6b3328d9e36dfe624149f">url_map_n</a></td></tr>
+<tr class="memitem:a1d158324172a38958b42d46939da8345" id="r_a1d158324172a38958b42d46939da8345"><td class="memItemLeft"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1d158324172a38958b42d46939da8345">url_map_p</a></td></tr>
+<tr class="memitem:a3bea5dd8dfb8a5d8a568753bd1420ed6" id="r_a3bea5dd8dfb8a5d8a568753bd1420ed6"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a3bea5dd8dfb8a5d8a568753bd1420ed6">url_bsplinemap_poly_n</a></td></tr>
+<tr class="memitem:a6b3a3e105444a53c96b1c094a453f482" id="r_a6b3a3e105444a53c96b1c094a453f482"><td class="memItemLeft">size_t *&#160;</td><td class="memItemRight"><a class="el" href="#a6b3a3e105444a53c96b1c094a453f482">url_bsplinemap_n</a></td></tr>
+<tr class="memitem:a862a9abf5d1961cca70e34ccdf0cb150" id="r_a862a9abf5d1961cca70e34ccdf0cb150"><td class="memItemLeft"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a862a9abf5d1961cca70e34ccdf0cb150">url_bsplinemap_p</a></td></tr>
+<tr class="memitem:a0553e8338e2157222e76d52ed6aa5ee5" id="r_a0553e8338e2157222e76d52ed6aa5ee5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0553e8338e2157222e76d52ed6aa5ee5">tailendurl_map_n</a></td></tr>
+<tr class="memitem:a23f5fdf30bc511ddbc117463732dab49" id="r_a23f5fdf30bc511ddbc117463732dab49"><td class="memItemLeft"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a23f5fdf30bc511ddbc117463732dab49">tailendurl_map_p</a></td></tr>
+<tr class="memitem:abc46c842b84cdf93ef64c76053de1444" id="r_abc46c842b84cdf93ef64c76053de1444"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abc46c842b84cdf93ef64c76053de1444">headendurl_map_n</a></td></tr>
+<tr class="memitem:a4725b38952851159659998e665abe35d" id="r_a4725b38952851159659998e665abe35d"><td class="memItemLeft"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4725b38952851159659998e665abe35d">headendurl_map_p</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a1c67e6c02b5ba0ed613e8012b76b2937" name="a1c67e6c02b5ba0ed613e8012b76b2937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c67e6c02b5ba0ed613e8012b76b2937">&#9670;&#160;</a></span>e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ab6289995bb0656f4da2ae67d80fea6d2">edge_t</a>* obj_state_s::e</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8fe9ae126dfd7c449be2be22734efd5" name="ab8fe9ae126dfd7c449be2be22734efd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8fe9ae126dfd7c449be2be22734efd5">&#9670;&#160;</a></span>emit_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#a9d67f57cb353edb06b582591b3f1eaf0">emit_state_t</a> obj_state_s::emit_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27c6c75743c7964d477be71222a4348b" name="a27c6c75743c7964d477be71222a4348b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27c6c75743c7964d477be71222a4348b">&#9670;&#160;</a></span>explicit_edgetarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_edgetarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98192ce9d96d928a6a4d61bf0af4db11" name="a98192ce9d96d928a6a4d61bf0af4db11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98192ce9d96d928a6a4d61bf0af4db11">&#9670;&#160;</a></span>explicit_headtarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_headtarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad56d3a32b2223c0c57e43ecd538aed6c" name="ad56d3a32b2223c0c57e43ecd538aed6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56d3a32b2223c0c57e43ecd538aed6c">&#9670;&#160;</a></span>explicit_headtooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_headtooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ad9790f997f253d768656c106637676" name="a8ad9790f997f253d768656c106637676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad9790f997f253d768656c106637676">&#9670;&#160;</a></span>explicit_headurl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_headurl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a849f801a4e4ded4ee63a6252e65430d7" name="a849f801a4e4ded4ee63a6252e65430d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849f801a4e4ded4ee63a6252e65430d7">&#9670;&#160;</a></span>explicit_labeltooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_labeltooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14e900b425aa0c3b2c0ee7e5bedf42f8" name="a14e900b425aa0c3b2c0ee7e5bedf42f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e900b425aa0c3b2c0ee7e5bedf42f8">&#9670;&#160;</a></span>explicit_tailtarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_tailtarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a868b91918dbb0b205714abae1d50e776" name="a868b91918dbb0b205714abae1d50e776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868b91918dbb0b205714abae1d50e776">&#9670;&#160;</a></span>explicit_tailtooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_tailtooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85fe2940b9a172b121a6367221360a47" name="a85fe2940b9a172b121a6367221360a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fe2940b9a172b121a6367221360a47">&#9670;&#160;</a></span>explicit_tailurl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_tailurl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a399071e23511e55ec0f0bed9498b58" name="a4a399071e23511e55ec0f0bed9498b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a399071e23511e55ec0f0bed9498b58">&#9670;&#160;</a></span>explicit_tooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::explicit_tooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe082b5b0510dd76bbf67af5ab822790" name="afe082b5b0510dd76bbf67af5ab822790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe082b5b0510dd76bbf67af5ab822790">&#9670;&#160;</a></span>fill</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#a8b3c1e8eaca9ba6bf60627aee8bb9e72">fill_type</a> obj_state_s::fill</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25db9225d76b6e43e74d70f3bfc23ae1" name="a25db9225d76b6e43e74d70f3bfc23ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25db9225d76b6e43e74d70f3bfc23ae1">&#9670;&#160;</a></span>fillcolor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a> obj_state_s::fillcolor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1372678d0083a80f6658fa10e20e5928" name="a1372678d0083a80f6658fa10e20e5928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1372678d0083a80f6658fa10e20e5928">&#9670;&#160;</a></span>g</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a>* obj_state_s::g</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab51fa5bd497eb6e0723587da6d232043" name="ab51fa5bd497eb6e0723587da6d232043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab51fa5bd497eb6e0723587da6d232043">&#9670;&#160;</a></span>gradient_angle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int obj_state_s::gradient_angle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c66787d48ed6a875b64981c46aa0048" name="a2c66787d48ed6a875b64981c46aa0048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c66787d48ed6a875b64981c46aa0048">&#9670;&#160;</a></span>gradient_frac</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double obj_state_s::gradient_frac</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accbb1d0b8a6396d098b25b8845d41332" name="accbb1d0b8a6396d098b25b8845d41332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbb1d0b8a6396d098b25b8845d41332">&#9670;&#160;</a></span>head_z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double obj_state_s::head_z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc46c842b84cdf93ef64c76053de1444" name="abc46c842b84cdf93ef64c76053de1444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc46c842b84cdf93ef64c76053de1444">&#9670;&#160;</a></span>headendurl_map_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int obj_state_s::headendurl_map_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4725b38952851159659998e665abe35d" name="a4725b38952851159659998e665abe35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4725b38952851159659998e665abe35d">&#9670;&#160;</a></span>headendurl_map_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>* obj_state_s::headendurl_map_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0dba8f9bfa3c473395dc9b8c8a875c54" name="a0dba8f9bfa3c473395dc9b8c8a875c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dba8f9bfa3c473395dc9b8c8a875c54">&#9670;&#160;</a></span>headlabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::headlabel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67a65a9f5ea7d8ddaffb9c2daeb9417f" name="a67a65a9f5ea7d8ddaffb9c2daeb9417f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a65a9f5ea7d8ddaffb9c2daeb9417f">&#9670;&#160;</a></span>headtarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::headtarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a833143bf1da45c6a561c255a7843e605" name="a833143bf1da45c6a561c255a7843e605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833143bf1da45c6a561c255a7843e605">&#9670;&#160;</a></span>headtooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::headtooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f9572f9eae6c8ca21a02119755c253d" name="a9f9572f9eae6c8ca21a02119755c253d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9572f9eae6c8ca21a02119755c253d">&#9670;&#160;</a></span>headurl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::headurl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab49cb90241cd45f10de7c3bbd8a9d119" name="ab49cb90241cd45f10de7c3bbd8a9d119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49cb90241cd45f10de7c3bbd8a9d119">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecd95cd41e2138f93653455a56d94dbb" name="aecd95cd41e2138f93653455a56d94dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecd95cd41e2138f93653455a56d94dbb">&#9670;&#160;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3497e84f301a86d70a73b58663e4f72" name="ae3497e84f301a86d70a73b58663e4f72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3497e84f301a86d70a73b58663e4f72">&#9670;&#160;</a></span>labeledgealigned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned obj_state_s::labeledgealigned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbd1afaea15ed5882237086d37f7804c" name="abbd1afaea15ed5882237086d37f7804c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd1afaea15ed5882237086d37f7804c">&#9670;&#160;</a></span>labeltarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::labeltarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64d8062b517dc492b186a92ba8edca8e" name="a64d8062b517dc492b186a92ba8edca8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d8062b517dc492b186a92ba8edca8e">&#9670;&#160;</a></span>labeltooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::labeltooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a548c5cdf0cca91b6326a74240c892cbc" name="a548c5cdf0cca91b6326a74240c892cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548c5cdf0cca91b6326a74240c892cbc">&#9670;&#160;</a></span>labelurl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::labelurl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8881569da82b88c1a535103486995cab" name="a8881569da82b88c1a535103486995cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8881569da82b88c1a535103486995cab">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* obj_state_s::n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7e652fa645b990a3d273c322c72ed37" name="ac7e652fa645b990a3d273c322c72ed37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e652fa645b990a3d273c322c72ed37">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#a02731e816998f46b1511d36eff0260ec">obj_state_t</a>* obj_state_s::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e97e6de2402896579423006d60898ba" name="a7e97e6de2402896579423006d60898ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e97e6de2402896579423006d60898ba">&#9670;&#160;</a></span>pen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#a056abdc3e65632a0666767d8395bdc44">pen_type</a> obj_state_s::pen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa214195f79e7eedee74006bbe9765f79" name="aa214195f79e7eedee74006bbe9765f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa214195f79e7eedee74006bbe9765f79">&#9670;&#160;</a></span>pencolor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a> obj_state_s::pencolor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff055afa76950cf86469f202b2a24bce" name="aff055afa76950cf86469f202b2a24bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff055afa76950cf86469f202b2a24bce">&#9670;&#160;</a></span>penwidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double obj_state_s::penwidth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab16ee35fe85d88cdf01eca253d04c6e7" name="ab16ee35fe85d88cdf01eca253d04c6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab16ee35fe85d88cdf01eca253d04c6e7">&#9670;&#160;</a></span>rawstyle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** obj_state_s::rawstyle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a993330749d875cfdde890df21c90977b" name="a993330749d875cfdde890df21c90977b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993330749d875cfdde890df21c90977b">&#9670;&#160;</a></span>sg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a>* obj_state_s::sg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73194a8c35b272cbf588ee0c91531b2b" name="a73194a8c35b272cbf588ee0c91531b2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73194a8c35b272cbf588ee0c91531b2b">&#9670;&#160;</a></span>stopcolor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a> obj_state_s::stopcolor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac811d320f6f7f92b3bde32973c008123" name="ac811d320f6f7f92b3bde32973c008123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac811d320f6f7f92b3bde32973c008123">&#9670;&#160;</a></span>tail_z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double obj_state_s::tail_z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0553e8338e2157222e76d52ed6aa5ee5" name="a0553e8338e2157222e76d52ed6aa5ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0553e8338e2157222e76d52ed6aa5ee5">&#9670;&#160;</a></span>tailendurl_map_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int obj_state_s::tailendurl_map_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23f5fdf30bc511ddbc117463732dab49" name="a23f5fdf30bc511ddbc117463732dab49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f5fdf30bc511ddbc117463732dab49">&#9670;&#160;</a></span>tailendurl_map_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>* obj_state_s::tailendurl_map_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d61811979b08939e64c3cd351f5771d" name="a2d61811979b08939e64c3cd351f5771d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d61811979b08939e64c3cd351f5771d">&#9670;&#160;</a></span>taillabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::taillabel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac94ea92ecf1e13e33dd3543f143336db" name="ac94ea92ecf1e13e33dd3543f143336db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94ea92ecf1e13e33dd3543f143336db">&#9670;&#160;</a></span>tailtarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::tailtarget</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d3a114f924c556b7d0daa6b3a6fc21a" name="a6d3a114f924c556b7d0daa6b3a6fc21a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3a114f924c556b7d0daa6b3a6fc21a">&#9670;&#160;</a></span>tailtooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::tailtooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a556a06e041082ccdded147aca3b84141" name="a556a06e041082ccdded147aca3b84141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556a06e041082ccdded147aca3b84141">&#9670;&#160;</a></span>tailurl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::tailurl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67ecd72ea2c7797ee1eba30f6617c7ec" name="a67ecd72ea2c7797ee1eba30f6617c7ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ecd72ea2c7797ee1eba30f6617c7ec">&#9670;&#160;</a></span>target</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::target</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26e255085bf4abac828ff3d355d10caf" name="a26e255085bf4abac828ff3d355d10caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e255085bf4abac828ff3d355d10caf">&#9670;&#160;</a></span>tooltip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::tooltip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a686b61b585902fdb816869e1fc705f46" name="a686b61b585902fdb816869e1fc705f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a686b61b585902fdb816869e1fc705f46">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#ac87c026b772bad1b7bb6edea6200fc92">obj_type</a> obj_state_s::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56a884d5d44cb431bbd1ebc83f6f2c39" name="a56a884d5d44cb431bbd1ebc83f6f2c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56a884d5d44cb431bbd1ebc83f6f2c39">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  obj_state_s::u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46647452bcb8f9c39a81d86a70c58f1b" name="a46647452bcb8f9c39a81d86a70c58f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46647452bcb8f9c39a81d86a70c58f1b">&#9670;&#160;</a></span>url</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::url</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b3a3e105444a53c96b1c094a453f482" name="a6b3a3e105444a53c96b1c094a453f482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3a3e105444a53c96b1c094a453f482">&#9670;&#160;</a></span>url_bsplinemap_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t* obj_state_s::url_bsplinemap_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a862a9abf5d1961cca70e34ccdf0cb150" name="a862a9abf5d1961cca70e34ccdf0cb150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862a9abf5d1961cca70e34ccdf0cb150">&#9670;&#160;</a></span>url_bsplinemap_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>* obj_state_s::url_bsplinemap_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bea5dd8dfb8a5d8a568753bd1420ed6" name="a3bea5dd8dfb8a5d8a568753bd1420ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bea5dd8dfb8a5d8a568753bd1420ed6">&#9670;&#160;</a></span>url_bsplinemap_poly_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t obj_state_s::url_bsplinemap_poly_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee57847ab4c6b3328d9e36dfe624149f" name="aee57847ab4c6b3328d9e36dfe624149f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee57847ab4c6b3328d9e36dfe624149f">&#9670;&#160;</a></span>url_map_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t obj_state_s::url_map_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d158324172a38958b42d46939da8345" name="a1d158324172a38958b42d46939da8345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d158324172a38958b42d46939da8345">&#9670;&#160;</a></span>url_map_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>* obj_state_s::url_map_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85f1fc3bc225a43626d8b6b1c0e21f00" name="a85f1fc3bc225a43626d8b6b1c0e21f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85f1fc3bc225a43626d8b6b1c0e21f00">&#9670;&#160;</a></span>url_map_shape</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcjob_8h.html#a5ce3b3a21716351feb74e0155b6499bb">map_shape_t</a> obj_state_s::url_map_shape</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d7d0d7323188a1e70b3c931b5a160cd" name="a5d7d0d7323188a1e70b3c931b5a160cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d7d0d7323188a1e70b3c931b5a160cd">&#9670;&#160;</a></span>xlabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* obj_state_s::xlabel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fdff9f4082ad335b463d4249f25fcb3" name="a3fdff9f4082ad335b463d4249f25fcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fdff9f4082ad335b463d4249f25fcb3">&#9670;&#160;</a></span>z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double obj_state_s::z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>Graphviz/include/graphviz/<a class="el" href="gvcjob_8h_source.html">gvcjob.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="structobj__state__s.html">obj_state_s</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

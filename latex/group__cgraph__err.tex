@@ -1,0 +1,149 @@
+\doxysubsubsubsection{error handling }
+\hypertarget{group__cgraph__err}{}\label{group__cgraph__err}\index{error handling@{error handling}}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}}) (char \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}} \{ \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c}{AGWARN}}
+, \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2}{AGERR}}
+, \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77}{AGMAX}}
+, \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398}{AGPREV}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__err_gac8b80f854859b4017499e42067bae5b7}{agseterr}} (\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}})
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__err_ga4776647f453831f116fee7e200ee2823}{aglasterr}} (void)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7}{agerr}} (\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}} level, const char \texorpdfstring{$\ast$}{*}fmt,...) PRINTF\+\_\+\+LIKE(2
+\item 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__err_gaf80e0604e4bcff00064559e46261b8d4}{agerrorf}} (const char \texorpdfstring{$\ast$}{*}fmt,...) PRINTF\+\_\+\+LIKE(1
+\item 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__err_ga1b3c7fe6147832a992f62fcd28e79a82}{agwarningf}} (const char \texorpdfstring{$\ast$}{*}fmt,...) PRINTF\+\_\+\+LIKE(1
+\item 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__err_gac3dd9f429c7f6f0b7147e8ffd5c83ed5}{agerrors}} (void)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__err_gacc4553d6d246fc943e79b267299437d2}{agreseterrors}} (void)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}} \doxymbox{\hyperlink{group__cgraph__err_gadee66a17e220d081d595875a1afc0c2c}{agseterrf}} (\doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+The library provides a variety of mechanisms to control the reporting of errors and warnings. A message is only written if its type has higher priority than a programmer-\/controlled minimum, which is \doxylink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c}{AGWARN} by default. The programmer can set this value using \doxylink{group__cgraph__err_gac8b80f854859b4017499e42067bae5b7}{agseterr}, which returns the previous value. Calling {\ttfamily agseterr(\+AGMAX)} turns off the writing of messages.
+
+The function \doxylink{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7}{agerr} is the main entry point for reporting an anomaly. The first argument indicates the type of message. Usually, the first argument is \doxylink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c}{AGWARN} or \doxylink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2}{AGERR} to indicate warnings and errors, respectively. Sometimes additional context information is only available in functions calling the function where the error is actually caught. In this case, the calling function can indicate that it is continuing the current error by using \doxylink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398}{AGPREV} as the first argument. The remaining arguments to \doxylink{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7}{agerr} are the same as the arguments to {\ttfamily printf}.
+
+The functions \doxylink{group__cgraph__err_ga1b3c7fe6147832a992f62fcd28e79a82}{agwarningf} and \doxylink{group__cgraph__err_gaf80e0604e4bcff00064559e46261b8d4}{agerrorf} are shorthand for {\ttfamily agerr(\+AGWARN,...)} and {\ttfamily agerr(\+AGERR,...)}, respectively.
+
+Some applications desire to directly control the writing of messages. Such an application can use the function \doxylink{group__cgraph__err_gadee66a17e220d081d595875a1afc0c2c}{agseterrf} to register the function that the library should call to actually write the message. The previous error function is returned. By default, the message is written to {\ttfamily stderr}.
+
+Errors not written are stored in a log file. The last recorded error can be retrieved by calling \doxylink{group__cgraph__err_ga4776647f453831f116fee7e200ee2823}{aglasterr}. Unless the printing of error messages has been completely disabled by a call to {\ttfamily agseterr(\+AGMAX)}, standard error must not be wide-\/oriented, even if a user-\/provided error printing function is provided.
+
+The function \doxylink{group__cgraph__err_gac3dd9f429c7f6f0b7147e8ffd5c83ed5}{agerrors} returns non-\/zero if errors have been reported. 
+
+\label{group__cgraph__err_doc-typedef-members}
+\Hypertarget{group__cgraph__err_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}\index{error handling@{error handling}!agusererrf@{agusererrf}}
+\index{agusererrf@{agusererrf}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agusererrf}{agusererrf}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6} 
+typedef int(\texorpdfstring{$\ast$}{*} agusererrf) (char \texorpdfstring{$\ast$}{*})}
+
+
+
+\label{group__cgraph__err_doc-enum-members}
+\Hypertarget{group__cgraph__err_doc-enum-members}
+\doxysubsubsubsubsection{Перечисления}
+\Hypertarget{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}\index{error handling@{error handling}!agerrlevel\_t@{agerrlevel\_t}}
+\index{agerrlevel\_t@{agerrlevel\_t}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agerrlevel\_t}{agerrlevel\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf} 
+enum \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGWARN@{AGWARN}!error handling@{error handling}}
+\index{error handling@{error handling}!AGWARN@{AGWARN}}
+}\Hypertarget{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c}\label{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c} 
+AGWARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGERR@{AGERR}!error handling@{error handling}}
+\index{error handling@{error handling}!AGERR@{AGERR}}
+}\Hypertarget{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2}\label{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2} 
+AGERR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGMAX@{AGMAX}!error handling@{error handling}}
+\index{error handling@{error handling}!AGMAX@{AGMAX}}
+}\Hypertarget{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77}\label{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77} 
+AGMAX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGPREV@{AGPREV}!error handling@{error handling}}
+\index{error handling@{error handling}!AGPREV@{AGPREV}}
+}\Hypertarget{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398}\label{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398} 
+AGPREV&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group__cgraph__err_doc-func-members}
+\Hypertarget{group__cgraph__err_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7}\index{error handling@{error handling}!agerr@{agerr}}
+\index{agerr@{agerr}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agerr()}{agerr()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7} 
+CGRAPH\+\_\+\+API int agerr (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}}}]{level}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_gaf80e0604e4bcff00064559e46261b8d4}\index{error handling@{error handling}!agerrorf@{agerrorf}}
+\index{agerrorf@{agerrorf}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agerrorf()}{agerrorf()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gaf80e0604e4bcff00064559e46261b8d4} 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void agerrorf (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_gac3dd9f429c7f6f0b7147e8ffd5c83ed5}\index{error handling@{error handling}!agerrors@{agerrors}}
+\index{agerrors@{agerrors}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agerrors()}{agerrors()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gac3dd9f429c7f6f0b7147e8ffd5c83ed5} 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API int agerrors (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_ga4776647f453831f116fee7e200ee2823}\index{error handling@{error handling}!aglasterr@{aglasterr}}
+\index{aglasterr@{aglasterr}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aglasterr()}{aglasterr()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_ga4776647f453831f116fee7e200ee2823} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} aglasterr (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_gacc4553d6d246fc943e79b267299437d2}\index{error handling@{error handling}!agreseterrors@{agreseterrors}}
+\index{agreseterrors@{agreseterrors}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agreseterrors()}{agreseterrors()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gacc4553d6d246fc943e79b267299437d2} 
+CGRAPH\+\_\+\+API int agreseterrors (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_gac8b80f854859b4017499e42067bae5b7}\index{error handling@{error handling}!agseterr@{agseterr}}
+\index{agseterr@{agseterr}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agseterr()}{agseterr()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gac8b80f854859b4017499e42067bae5b7} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}} agseterr (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\+\_\+t}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_gadee66a17e220d081d595875a1afc0c2c}\index{error handling@{error handling}!agseterrf@{agseterrf}}
+\index{agseterrf@{agseterrf}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agseterrf()}{agseterrf()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_gadee66a17e220d081d595875a1afc0c2c} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}} agseterrf (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__err_ga1b3c7fe6147832a992f62fcd28e79a82}\index{error handling@{error handling}!agwarningf@{agwarningf}}
+\index{agwarningf@{agwarningf}!error handling@{error handling}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agwarningf()}{agwarningf()}}
+{\footnotesize\ttfamily \label{group__cgraph__err_ga1b3c7fe6147832a992f62fcd28e79a82} 
+CGRAPH\+\_\+\+API int CGRAPH\+\_\+\+API void CGRAPH\+\_\+\+API void agwarningf (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+

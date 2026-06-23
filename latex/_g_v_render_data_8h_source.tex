@@ -1,0 +1,69 @@
+\doxysection{GVRender\+Data.\+h}
+\hypertarget{_g_v_render_data_8h_source}{}\label{_g_v_render_data_8h_source}\index{Graphviz/include/graphviz/GVRenderData.h@{Graphviz/include/graphviz/GVRenderData.h}}
+\doxymbox{\hyperlink{_g_v_render_data_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string\_view>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#if\ gvc\_\_\_EXPORTS\ }\textcolor{comment}{//\ CMake's\ substitution\ of\ gvc++\_EXPORTS}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ GVRENDER\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ GVRENDER\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ GVRENDER\_API}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ GVRENDER\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_g_v_c}{GVC}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }GVLayout;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{_g_v_render_data_8h_a673016204fe0496aa3ce567ecb974306}{GVRENDER\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_af20c81c997c7bd1ae4e93e9df215e657}{\string~GVRenderData}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//\ delete\ copy\ for\ now\ since\ we\ cannot\ use\ default\ because\ we\ manage\ a\ C}}
+\DoxyCodeLine{00032\ \ \ \textcolor{comment}{//\ string\ using\ a\ raw\ pointer}}
+\DoxyCodeLine{00033\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a8bd25b1da9d54d22773519c97e6976a3}{operator=}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{comment}{//\ delete\ move\ for\ now\ since\ we\ cannot\ use\ default\ because\ we\ manage\ a\ C}}
+\DoxyCodeLine{00037\ \ \ \textcolor{comment}{//\ string\ using\ a\ raw\ pointer}}
+\DoxyCodeLine{00038\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a12acf997c9bd76181874a4046793c9de}{GVRenderData}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_af8c8bc836bbdff54ab0d929f63e324d7}{operator=}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//\ get\ the\ rendered\ string\ as\ a\ C\ string.\ The\ string\ is\ null\ terminated,\ but}}
+\DoxyCodeLine{00042\ \ \ \textcolor{comment}{//\ that\ is\ not\ useful\ for\ binary\ formats.\ Combine\ with\ the\ length\ method\ for}}
+\DoxyCodeLine{00043\ \ \ \textcolor{comment}{//\ that\ case.}}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_ab5ba64938dd4d2430f4dac61cc529692}{c\_str}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_data;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{comment}{//\ get\ the\ length\ of\ the\ rendered\ string}}
+\DoxyCodeLine{00047\ \ \ std::size\_t\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a464172bbf3dce89a03a070bcabca4014}{length}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_length;\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ get\ the\ rendered\ string\ as\ a\ string\ view}}
+\DoxyCodeLine{00050\ \ \ std::string\_view\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a751c282d422ac06bf71f7496bd35a0e7}{string\_view}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{return}\ std::string\_view\{m\_data,\ m\_length\};}
+\DoxyCodeLine{00052\ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{friend}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a138f14e827bdbfdc1192208e30460724}{GVLayout}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \textcolor{comment}{//\ use\ GVLayout::render\ to\ constuct\ a\ GVRenderData\ object}}
+\DoxyCodeLine{00058\ \ \ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_aa73cf85e5f9b2c5780a09f28cc2c510a}{GVRenderData}}(\textcolor{keywordtype}{char}\ *rendered\_data,\ std::size\_t\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data_a464172bbf3dce89a03a070bcabca4014}{length}});}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{comment}{//\ the\ underlying\ C\ data\ structure}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{char}\ *m\_data\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00062\ \ \ std::size\_t\ m\_length\ =\ 0;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \}\ \textcolor{comment}{//\ \ namespace\ GVC}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#undef\ GVRENDER\_API}}
+
+\end{DoxyCode}

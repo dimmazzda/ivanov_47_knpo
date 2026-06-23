@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Структура hsvrgbacolor_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structhsvrgbacolor__t.html','','structhsvrgbacolor__t-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура hsvrgbacolor_t</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="color_8h_source.html">color.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ae86e35caea2c585343419c6122e5cc3d" id="r_ae86e35caea2c585343419c6122e5cc3d"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#ae86e35caea2c585343419c6122e5cc3d">name</a></td></tr>
+<tr class="memitem:a519f5db8370777b193bcba9d4c69d3a1" id="r_a519f5db8370777b193bcba9d4c69d3a1"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a519f5db8370777b193bcba9d4c69d3a1">h</a></td></tr>
+<tr class="memitem:aa8534788c747f1dc38f2baad8f44a149" id="r_aa8534788c747f1dc38f2baad8f44a149"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#aa8534788c747f1dc38f2baad8f44a149">s</a></td></tr>
+<tr class="memitem:ab16c706c5e2a729bd9f611cf43d05562" id="r_ab16c706c5e2a729bd9f611cf43d05562"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#ab16c706c5e2a729bd9f611cf43d05562">v</a></td></tr>
+<tr class="memitem:ac2d9e4fa53394ac95f24e642a089d4a3" id="r_ac2d9e4fa53394ac95f24e642a089d4a3"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#ac2d9e4fa53394ac95f24e642a089d4a3">r</a></td></tr>
+<tr class="memitem:a88638d694c1e1ca6be87c7b8a8dd7777" id="r_a88638d694c1e1ca6be87c7b8a8dd7777"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a88638d694c1e1ca6be87c7b8a8dd7777">g</a></td></tr>
+<tr class="memitem:a6e97c507d2837f83468b35d41692893b" id="r_a6e97c507d2837f83468b35d41692893b"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a6e97c507d2837f83468b35d41692893b">b</a></td></tr>
+<tr class="memitem:a54171dd8a727b6be154f15ff852d3430" id="r_a54171dd8a727b6be154f15ff852d3430"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a54171dd8a727b6be154f15ff852d3430">a</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a54171dd8a727b6be154f15ff852d3430" name="a54171dd8a727b6be154f15ff852d3430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54171dd8a727b6be154f15ff852d3430">&#9670;&#160;</a></span>a</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e97c507d2837f83468b35d41692893b" name="a6e97c507d2837f83468b35d41692893b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e97c507d2837f83468b35d41692893b">&#9670;&#160;</a></span>b</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88638d694c1e1ca6be87c7b8a8dd7777" name="a88638d694c1e1ca6be87c7b8a8dd7777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88638d694c1e1ca6be87c7b8a8dd7777">&#9670;&#160;</a></span>g</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::g</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a519f5db8370777b193bcba9d4c69d3a1" name="a519f5db8370777b193bcba9d4c69d3a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519f5db8370777b193bcba9d4c69d3a1">&#9670;&#160;</a></span>h</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::h</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae86e35caea2c585343419c6122e5cc3d" name="ae86e35caea2c585343419c6122e5cc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86e35caea2c585343419c6122e5cc3d">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* hsvrgbacolor_t::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2d9e4fa53394ac95f24e642a089d4a3" name="ac2d9e4fa53394ac95f24e642a089d4a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d9e4fa53394ac95f24e642a089d4a3">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8534788c747f1dc38f2baad8f44a149" name="aa8534788c747f1dc38f2baad8f44a149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8534788c747f1dc38f2baad8f44a149">&#9670;&#160;</a></span>s</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab16c706c5e2a729bd9f611cf43d05562" name="ab16c706c5e2a729bd9f611cf43d05562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab16c706c5e2a729bd9f611cf43d05562">&#9670;&#160;</a></span>v</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char hsvrgbacolor_t::v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>Graphviz/include/graphviz/<a class="el" href="color_8h_source.html">color.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="structhsvrgbacolor__t.html">hsvrgbacolor_t</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

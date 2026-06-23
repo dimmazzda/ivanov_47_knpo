@@ -1,0 +1,142 @@
+\doxysection{headers.\+h}
+\hypertarget{headers_8h_source}{}\label{headers_8h_source}\index{C:/Users/Дмитрий/source/repos/ivanov\_47\_knpo/ivanov\_47\_knpo/headers.h@{C:/Users/Дмитрий/source/repos/ivanov\_47\_knpo/ivanov\_47\_knpo/headers.h}}
+\doxymbox{\hyperlink{headers_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graphType}}\ \{\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490ea9d9f0ad70d95b267fda40075d0c175a8}{tree}},\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490eafa9867eb9c29433c284981cc06413b57}{convertibleToTree}},\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490ea9d437de50202df67d5e4bb3f063a0a36}{notConvertibleToTree}}\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{errorType}}\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffda70c996e5c727116a7da0d09727739660}{inFileNotExist}},\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdad3dfd2cafc36ddb2de5631863b7f8cb7}{createOutFileFail}},\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffda754540592addfb5cbbbc70bbdee2dda4}{edgeNumberError}},\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdae7b5854aafdb508f40348564fe95f1b3}{verticesNumberError}},}
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988}{defenitionLineSyntaxError}},\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffda1518ee993957042de8f0391858b6f4f5}{innerDescriptionSyntaxError}},\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffda00dce12c51057a7afa272b0869582168}{endLineSyntaxError}}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//поля\ структуры}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ std::vector<std::vector<int>>\ \doxymbox{\hyperlink{structadjacency_list_a9e5e04100d7defcdf332b58fc4e1a584}{neighbours}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structadjacency_list_a5cdc6a2c9f0faef95b0b74f8b0833996}{countOfVertices}}\ =\ 0;\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//методы}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structadjacency_list_a9389bdf15afb4896f4480d6a308d59bb}{isEmpty}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structadjacency_list_aa75a0ef0b5b5836b168572df5708ec78}{isEqualTo}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\ \&\ otherList);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00107\ \ \ \ \ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\ *\ \doxymbox{\hyperlink{structadjacency_list_aae4f3b782a9b161a3502993b2d677848}{substract}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\ \&\ subtrahend);}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}}}
+\DoxyCodeLine{00115\ \{}
+\DoxyCodeLine{00116\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//поля}}
+\DoxyCodeLine{00118\ \ \ \ \ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{errorType}}\ \doxymbox{\hyperlink{class_error_ace282524365cfa282569141008d87cf1}{type}}\ =\ \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988}{defenitionLineSyntaxError}};\ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_error_a25f87a7089257e6dfd0dff6c2db50003}{errorInputFileWay}};\ \ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_error_ae03a955cba26da091cb6297060e44733}{errorOutputFileWay}};\ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_error_af271bf76144dd69b235cff2005b950da}{errorTagName}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_error_a0a68d7cee0febeeaf288bee19020cdef}{line}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//конструктор/деструктор}}
+\DoxyCodeLine{00126\ \ \ \ \ \doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}}(\doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{errorType}}\ \doxymbox{\hyperlink{class_error_ace282524365cfa282569141008d87cf1}{type}});\ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}}(\textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_error_a0a68d7cee0febeeaf288bee19020cdef}{line}});\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \doxymbox{\hyperlink{class_error_a1a45d42a3a035d510333cdfeb36a0e93}{\string~Error}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//методы}}
+\DoxyCodeLine{00136\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_error_a1ce614c1825787b826fe0349e7dca8dc}{generateErrorMessage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_error_aa05c46825e48ef92d2c90adbe497f5be}{isEqualTo}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}}\&\ otherError)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{DirGraph}}}
+\DoxyCodeLine{00153\ \{}
+\DoxyCodeLine{00154\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ поля}}
+\DoxyCodeLine{00156\ \ \ \ \ std::vector<int>\ \doxymbox{\hyperlink{class_dir_graph_a94d3d1dd413f938c0eca995bb0bf2141}{vertices}};\ \ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\ \doxymbox{\hyperlink{class_dir_graph_a199d516e49886a86839275954489a7b0}{edges}};\ \ \ \ }
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//\ конструктор/деструктор}}
+\DoxyCodeLine{00161\ \ \ \ \ \doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{DirGraph}}();\ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{DirGraph}}(\textcolor{keywordtype}{int}\ countOfVertices);\ \ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \doxymbox{\hyperlink{class_dir_graph_a3b321c8f734f1dcd9912537a66fed389}{\string~DirGraph}}();\ \ \ \ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{//\ методы}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_dir_graph_a8bca7a0af41481d14816792b3a6eaeaa}{getVertexCount}}();}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_dir_graph_ab74cac37fedb36f9c9d7a0a80fc12799}{hasEdge}}(\textcolor{keywordtype}{int}\ fromVertex,\ \textcolor{keywordtype}{int}\ toVertex);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_dir_graph_a15a22fd8f3ad29fd2eaa23a2eac4df5c}{addEdge}}(\textcolor{keywordtype}{int}\ fromVertex,\ \textcolor{keywordtype}{int}\ toVertex);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00202\ \ \ \ \ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}*\ \doxymbox{\hyperlink{class_dir_graph_a1dc1d1db5f70c46a164a40adf3ab34f3}{getEdges}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_dir_graph_a6657a5b7b1b8b5e0e9019db557760eed}{dirGraphIsEqual}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{DirGraph}}\&\ otherGraph);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00221\ \ \ \ \ \doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{DirGraph}}*\ \doxymbox{\hyperlink{class_dir_graph_a3d986feb5b3d0140af07be70bd0015bb}{generateSpanningTree}}(\textcolor{keywordtype}{int}\ rootVertex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00222\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{comment}{//\ описания\ функций}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00234\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{headers_8h_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}*\ argv[]);}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00245\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{headers_8h_a093ad82c389c2b6be4b3b39246f288f1}{readTextFromFile}}(std::vector<std::string>\&\ fileText,\ std::string\&\ fileName,\ std::vector<Error>\&\ errorVector);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00255\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{headers_8h_ab431435b8c948ce4334e6b1c3bb5d8f5}{tryParseInt}}(\textcolor{keyword}{const}\ std::string\&\ str,\ \textcolor{keywordtype}{int}\&\ result);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00270\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{headers_8h_aa5410876102f5c4c410f2a4dbcf33532}{parseInnerLine}}(\textcolor{keyword}{const}\ std::string\&\ line,\ \textcolor{keywordtype}{int}\ lineNumber,\ std::vector<int>\&\ vertexList,\ std::vector<std::pair<int,\ int>>\&\ edgeList,\ std::vector<int>\&\ edgeLineNumbers,\ \textcolor{keywordtype}{bool}\&\ edgesStarted,\ std::vector<Error>\&\ errorVector);}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00282\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{headers_8h_a60b864ebf63323026ffce3c0cf919ee9}{processEdges}}(\textcolor{keyword}{const}\ std::vector<std::pair<int,\ int>>\&\ edgeList,\ \textcolor{keyword}{const}\ std::vector<int>\&\ edgeLineNumbers,\ \textcolor{keyword}{const}\ std::vector<int>\&\ vertexList,\ \doxymbox{\hyperlink{class_dir_graph}{DirGraph}}*\ graph,\ \textcolor{keywordtype}{int}\ inDegrees[1000],\ std::vector<Error>\&\ errorVector);}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00292\ \doxymbox{\hyperlink{class_dir_graph}{DirGraph}}*\ \doxymbox{\hyperlink{headers_8h_a41963a7c7731566bd55f6522eb6e3195}{parseGraphFromText}}(std::vector<std::string>\&\ fileText,\ \textcolor{keywordtype}{int}\ inDegrees[1000],\ std::vector<Error>\&\ errorVector);}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00302\ std::string\ \doxymbox{\hyperlink{headers_8h_a5a01f705cc7b4a7317a57f6bf41aef25}{trim}}(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00313\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{headers_8h_abe8e52bfa901d7a508084e909fc3249d}{extractTokensFromString}}(std::string\&\ str,\ \textcolor{keyword}{const}\ std::string\&\ delimeter,\ std::vector<std::string>\&\ tokens);}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00324\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graphType}}\ \doxymbox{\hyperlink{headers_8h_acf7b86c9b4a6117aa43bc5aee344d915}{tryBuildTreeFromVertex}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dir_graph}{DirGraph}}\&\ graph,\ \textcolor{keywordtype}{int}\ rootIdx,\ \textcolor{keywordtype}{int}\ vertexCount,\ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\&\ edgeDifference);}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00336\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graphType}}\ \doxymbox{\hyperlink{headers_8h_a862d24e23d8544b1c80213413cc8e9fc}{findGraphType}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_dir_graph}{DirGraph}}\&\ graph,\ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\&\ edgeDifference,\ \textcolor{keywordtype}{int}\ inDegrees[1000]);}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00343\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{headers_8h_a16d6086fe09142fd48acdf26c2aeb756}{printErrorsMessages}}(\textcolor{keyword}{const}\ std::vector<Error>\&\ errorsVector);}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00355\ std::string\ \doxymbox{\hyperlink{headers_8h_a1bdf42983f66b1811188c1fca9ccbb3f}{processEdgeLine}}(\textcolor{keyword}{const}\ std::string\&\ line,\ \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graphType}}\ type,\ \textcolor{keyword}{const}\ std::vector<std::string>\&\ vertexNames,\ \textcolor{keyword}{const}\ std::map<std::pair<int,\ int>,\ \textcolor{keywordtype}{int}>\&\ edgesToDeleteCount,\ std::map<std::pair<int,\ int>,\ \textcolor{keywordtype}{int}>\&\ highlightedCount);}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00364\ std::vector<std::string>\ \doxymbox{\hyperlink{headers_8h_a4ef3aec89a4de921f48fb8704c021bcb}{generateOutputText}}(\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graphType}}\ type,\ std::vector<std::string>\&\ inputFilePlainText,\ \doxymbox{\hyperlink{structadjacency_list}{adjacencyList}}\&\ edgesToDelete);}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00375\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{headers_8h_acfb23957a861227c7bc4e37c3f37b429}{writeTextToFile}}(std::vector<std::string>\&\ outputText,\ std::string\&\ outputFileName,\ std::vector<Error>\&\ errorsVector);}
+
+\end{DoxyCode}

@@ -1,0 +1,62 @@
+\doxysection{GVLayout.\+h}
+\hypertarget{_g_v_layout_8h_source}{}\label{_g_v_layout_8h_source}\index{Graphviz/include/graphviz/GVLayout.h@{Graphviz/include/graphviz/GVLayout.h}}
+\doxymbox{\hyperlink{_g_v_layout_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_a_graph_8h}{AGraph.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_g_v_context_8h}{GVContext.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_g_v_render_data_8h}{GVRenderData.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#if\ gvc\_\_\_EXPORTS\ }\textcolor{comment}{//\ CMake's\ substitution\ of\ gvc++\_EXPORTS}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ GVLAYOUT\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ GVLAYOUT\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ GVLAYOUT\_API}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ GVLAYOUT\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_g_v_c}{GVC}}\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}(\textcolor{keyword}{const}\ std::shared\_ptr<GVContext>\ \&gvc,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::shared\_ptr<CGraph::AGraph>\ \&g,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&engine);}
+\DoxyCodeLine{00033\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_ad8d95f83f8c1227512a25665b6ea0c85}{GVLayout}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_context}{GVContext}}\ \&\&gvc,\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph}{CGraph::AGraph}}\ \&\&g,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&engine);}
+\DoxyCodeLine{00035\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a61d4f67b700a0368b16a696b3398d224}{GVLayout}}(std::shared\_ptr<GVContext>\ gvc,\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph}{CGraph::AGraph}}\ \&\&g,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&engine);}
+\DoxyCodeLine{00037\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_ae494ab6427df13a05fde29cc352ddbdb}{GVLayout}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_context}{GVContext}}\ \&\&gvc,\ std::shared\_ptr<CGraph::AGraph>\ g,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&engine);}
+\DoxyCodeLine{00039\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a8d758dbed9da8709ce0964cdb5db2e00}{\string~GVLayout}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//\ default\ copy\ since\ we\ manage\ resources\ through\ movable\ types}}
+\DoxyCodeLine{00042\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a065a2cbe365a74fc6912faa773d0d44f}{GVLayout}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00043\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_aa1f9dabb02359edfdff47261d5e4d414}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \textcolor{comment}{//\ default\ move\ since\ we\ manage\ resources\ through\ movable\ types}}
+\DoxyCodeLine{00046\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_ac40708b3d6a254f5e8b74043d60ce04c}{GVLayout}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00047\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_aa83800dbdfe6355ae00b6db96928e01d}{operator=}}(\doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_a2c1860a48f1578874c2945aef27865b1}{GVLayout}}\ \&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ render\ the\ layout\ in\ the\ specified\ format}}
+\DoxyCodeLine{00050\ \ \ \doxymbox{\hyperlink{_g_v_layout_8h_af0e6de9a8115030216fad5a998e15f2e}{GVLAYOUT\_API}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_render_data}{GVRenderData}}\ \doxymbox{\hyperlink{class_g_v_c_1_1_g_v_layout_adcd8b5ed7c97532103d771ef5dbd6173}{render}}(\textcolor{keyword}{const}\ std::string\ \&format)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ std::shared\_ptr<GVContext>\ m\_gvc;}
+\DoxyCodeLine{00054\ \ \ std::shared\_ptr<CGraph::AGraph>\ m\_g;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ \ namespace\ GVC}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#undef\ GVLAYOUT\_API}}
+
+\end{DoxyCode}

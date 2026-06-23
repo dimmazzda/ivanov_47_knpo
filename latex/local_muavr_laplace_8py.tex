@@ -1,0 +1,30 @@
+\doxysection{Файл Teor\+Ver/\+ТеорВерЛР3\+\_\+задание2/\+local\+Muavr\+Laplace.py}
+\hypertarget{local_muavr_laplace_8py}{}\label{local_muavr_laplace_8py}\index{TeorVer/ТеорВерЛР3\_задание2/localMuavrLaplace.py@{TeorVer/ТеорВерЛР3\_задание2/localMuavrLaplace.py}}
+\doxysubsubsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacelocal_muavr_laplace}{local\+Muavr\+Laplace}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a023a75a841f692660e6510f5c5cafc10}{local\+Muavr\+Laplace.\+n}} = int(input("{}Введите n:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespacelocal_muavr_laplace_af34e9450880de16e98b481abd7166ba4}{local\+Muavr\+Laplace.\+m}} = int(input("{}Введите m:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a135b55dc83808d853dd4bcbde2008e2e}{local\+Muavr\+Laplace.\+p}} = float(input("{}Введите p:\+ "{}))
+\item 
+int \doxymbox{\hyperlink{namespacelocal_muavr_laplace_aec81986e0d94815d6302c7bbb6c4f3d8}{local\+Muavr\+Laplace.\+q}} = 1 -\/ \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a135b55dc83808d853dd4bcbde2008e2e}{p}}
+\item 
+int \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a2a0326934ceaada6eae73a96b969371a}{local\+Muavr\+Laplace.\+npq}} = \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a023a75a841f692660e6510f5c5cafc10}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a135b55dc83808d853dd4bcbde2008e2e}{p}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespacelocal_muavr_laplace_aec81986e0d94815d6302c7bbb6c4f3d8}{q}}
+\item 
+tuple \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a899e969432214f46ee8819b02cf34933}{local\+Muavr\+Laplace.\+x0}} = (\doxymbox{\hyperlink{namespacelocal_muavr_laplace_af34e9450880de16e98b481abd7166ba4}{m}} -\/ \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a023a75a841f692660e6510f5c5cafc10}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a135b55dc83808d853dd4bcbde2008e2e}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a2a0326934ceaada6eae73a96b969371a}{npq}})
+\item 
+tuple \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a52caf8dad9406845fed01291aa943b94}{local\+Muavr\+Laplace.\+phi}} = (1 /\+ math.\+sqrt(2 \texorpdfstring{$\ast$}{*} math.\+pi)) \texorpdfstring{$\ast$}{*} math.\+exp(-\/\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a899e969432214f46ee8819b02cf34933}{x0}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}2 /\+ 2)
+\item 
+tuple \doxymbox{\hyperlink{namespacelocal_muavr_laplace_aa43dca19aa0e73f3365d5ae7f2b8258f}{local\+Muavr\+Laplace.\+P\+\_\+ml}} = \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a52caf8dad9406845fed01291aa943b94}{phi}} /\+ math.\+sqrt(\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a2a0326934ceaada6eae73a96b969371a}{npq}})
+\item 
+tuple \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a8083cf9ee8176d2b2bc1c0a01dfd194d}{local\+Muavr\+Laplace.\+P\+\_\+bern}}
+\item 
+\doxymbox{\hyperlink{namespacelocal_muavr_laplace_a0d4eb640858005bd60f6b4d82f4d1b6b}{local\+Muavr\+Laplace.\+diff}} = abs(\doxymbox{\hyperlink{namespacelocal_muavr_laplace_aa43dca19aa0e73f3365d5ae7f2b8258f}{P\+\_\+ml}} -\/ \doxymbox{\hyperlink{namespacelocal_muavr_laplace_a8083cf9ee8176d2b2bc1c0a01dfd194d}{P\+\_\+bern}})
+\end{DoxyCompactItemize}

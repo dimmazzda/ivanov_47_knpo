@@ -1,0 +1,106 @@
+\doxysection{Cgraph\+\_\+app }
+\hypertarget{group__cgraph__app}{}\label{group__cgraph__app}\index{Cgraph\_app@{Cgraph\_app}}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structgraphviz__acyclic__options__t}{graphviz\+\_\+acyclic\+\_\+options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em options for passing to {\ttfamily \doxylink{group__cgraph__app_ga2e387331b63287e21a41d9da429a64c8}{graphviz\+\_\+acyclic}} \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structgraphviz__tred__options__t}{graphviz\+\_\+tred\+\_\+options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em options for passing to {\ttfamily \doxylink{group__cgraph__app_ga791b278307ca081f4bddcea037cb27b7}{graphviz\+\_\+tred}} \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structgraphviz__unflatten__options__t}{graphviz\+\_\+unflatten\+\_\+options\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em options for passing to {\ttfamily \doxylink{group__cgraph__app_gadf040141eb79b2031a0a438d0b421ab4}{graphviz\+\_\+unflatten}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API bool \doxymbox{\hyperlink{group__cgraph__app_ga2e387331b63287e21a41d9da429a64c8}{graphviz\+\_\+acyclic}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const \doxymbox{\hyperlink{structgraphviz__acyclic__options__t}{graphviz\+\_\+acyclic\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts, size\+\_\+t \texorpdfstring{$\ast$}{*}num\+\_\+rev)
+\item 
+CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__app_ga791b278307ca081f4bddcea037cb27b7}{graphviz\+\_\+tred}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const \doxymbox{\hyperlink{structgraphviz__tred__options__t}{graphviz\+\_\+tred\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts)
+\begin{DoxyCompactList}\small\item\em programmatic access to {\ttfamily tred} -\/ \href{https://en.wikipedia.org/wiki/Transitive_reduction}{\texttt{transitive reduction}} \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__app_gadf040141eb79b2031a0a438d0b421ab4}{graphviz\+\_\+unflatten}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const \doxymbox{\hyperlink{structgraphviz__unflatten__options__t}{graphviz\+\_\+unflatten\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}opts)
+\item 
+CGRAPH\+\_\+\+API size\+\_\+t \doxymbox{\hyperlink{group__cgraph__app_ga0e2371ffd718351120a6808bba7af6ab}{graphviz\+\_\+node\+\_\+induce}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}edgeset)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+
+
+\label{group__cgraph__app_doc-func-members}
+\Hypertarget{group__cgraph__app_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{group__cgraph__app_ga2e387331b63287e21a41d9da429a64c8}\index{Cgraph\_app@{Cgraph\_app}!graphviz\_acyclic@{graphviz\_acyclic}}
+\index{graphviz\_acyclic@{graphviz\_acyclic}!Cgraph\_app@{Cgraph\_app}}
+\doxysubsubsection{\texorpdfstring{graphviz\_acyclic()}{graphviz\_acyclic()}}
+{\footnotesize\ttfamily \label{group__cgraph__app_ga2e387331b63287e21a41d9da429a64c8} 
+CGRAPH\+\_\+\+API bool graphviz\+\_\+acyclic (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const \doxymbox{\hyperlink{structgraphviz__acyclic__options__t}{graphviz\+\_\+acyclic\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{num\+\_\+rev}{}\end{DoxyParamCaption})}
+
+programmatic access to {\ttfamily acyclic}
+
+See {\ttfamily man acyclic} for an explanation of the {\ttfamily acyclic} tool.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g} & Graph to operate on \\
+\hline
+{\em opts} & Options to control acyclic algorithm \\
+\hline
+{\em num\+\_\+rev} & \+[inout]\+ Running total of reversed edges \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+True if a cycle was found, indicating failure 
+\end{DoxyReturn}
+\Hypertarget{group__cgraph__app_ga0e2371ffd718351120a6808bba7af6ab}\index{Cgraph\_app@{Cgraph\_app}!graphviz\_node\_induce@{graphviz\_node\_induce}}
+\index{graphviz\_node\_induce@{graphviz\_node\_induce}!Cgraph\_app@{Cgraph\_app}}
+\doxysubsubsection{\texorpdfstring{graphviz\_node\_induce()}{graphviz\_node\_induce()}}
+{\footnotesize\ttfamily \label{group__cgraph__app_ga0e2371ffd718351120a6808bba7af6ab} 
+CGRAPH\+\_\+\+API size\+\_\+t graphviz\+\_\+node\+\_\+induce (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{edgeset}{}\end{DoxyParamCaption})}
+
+add to a graph any edges with both endpoints within that graph
+
+If {\ttfamily edgeset} is given as {\ttfamily NULL}, edges from the root graph of {\ttfamily g} will be considered. In this case if {\ttfamily g} itself is the root graph, this call is a no-\/op.
+
+If {\ttfamily g} is a connected component, the edges added will be all edges attached to any node in {\ttfamily g}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g} & Graph to add edges to \\
+\hline
+{\em edgeset} & Graph whose edges to consider \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Number of edges added 
+\end{DoxyReturn}
+\Hypertarget{group__cgraph__app_ga791b278307ca081f4bddcea037cb27b7}\index{Cgraph\_app@{Cgraph\_app}!graphviz\_tred@{graphviz\_tred}}
+\index{graphviz\_tred@{graphviz\_tred}!Cgraph\_app@{Cgraph\_app}}
+\doxysubsubsection{\texorpdfstring{graphviz\_tred()}{graphviz\_tred()}}
+{\footnotesize\ttfamily \label{group__cgraph__app_ga791b278307ca081f4bddcea037cb27b7} 
+CGRAPH\+\_\+\+API void graphviz\+\_\+tred (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const \doxymbox{\hyperlink{structgraphviz__tred__options__t}{graphviz\+\_\+tred\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})}
+
+See {\ttfamily man tred} for an explanation of the {\ttfamily tred} tool.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g} & Graph to operate on \\
+\hline
+{\em opts} & Options to control tred algorithm \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__cgraph__app_gadf040141eb79b2031a0a438d0b421ab4}\index{Cgraph\_app@{Cgraph\_app}!graphviz\_unflatten@{graphviz\_unflatten}}
+\index{graphviz\_unflatten@{graphviz\_unflatten}!Cgraph\_app@{Cgraph\_app}}
+\doxysubsubsection{\texorpdfstring{graphviz\_unflatten()}{graphviz\_unflatten()}}
+{\footnotesize\ttfamily \label{group__cgraph__app_gadf040141eb79b2031a0a438d0b421ab4} 
+CGRAPH\+\_\+\+API void graphviz\+\_\+unflatten (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const \doxymbox{\hyperlink{structgraphviz__unflatten__options__t}{graphviz\+\_\+unflatten\+\_\+options\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})}
+
+programmatic access to {\ttfamily unflatten}
+
+See {\ttfamily man unflatten} for an explanation of the {\ttfamily unflatten} tool.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em g} & Graph to operate on \\
+\hline
+{\em opts} & Options to control unflattening \\
+\hline
+\end{DoxyParams}

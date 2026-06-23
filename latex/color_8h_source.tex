@@ -1,0 +1,53 @@
+\doxysection{color.\+h}
+\hypertarget{color_8h_source}{}\label{color_8h_source}\index{Graphviz/include/graphviz/color.h@{Graphviz/include/graphviz/color.h}}
+\doxymbox{\hyperlink{color_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structhsvrgbacolor__t}{hsvrgbacolor\_t}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structhsvrgbacolor__t_ae86e35caea2c585343419c6122e5cc3d}{name}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structhsvrgbacolor__t_a519f5db8370777b193bcba9d4c69d3a1}{h}},\ \doxymbox{\hyperlink{structhsvrgbacolor__t_aa8534788c747f1dc38f2baad8f44a149}{s}},\ \doxymbox{\hyperlink{structhsvrgbacolor__t_ab16c706c5e2a729bd9f611cf43d05562}{v}};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structhsvrgbacolor__t_ac2d9e4fa53394ac95f24e642a089d4a3}{r}},\ \doxymbox{\hyperlink{structhsvrgbacolor__t_a88638d694c1e1ca6be87c7b8a8dd7777}{g}},\ \doxymbox{\hyperlink{structhsvrgbacolor__t_a6e97c507d2837f83468b35d41692893b}{b}},\ \doxymbox{\hyperlink{structhsvrgbacolor__t_a54171dd8a727b6be154f15ff852d3430}{a}};}
+\DoxyCodeLine{00023\ \}\ \doxymbox{\hyperlink{structhsvrgbacolor__t}{hsvrgbacolor\_t}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{/*\ possible\ representations\ of\ color\ in\ gvcolor\_t\ */}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182}{HSVA\_DOUBLE}},\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563}{RGBA\_BYTE}},\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6}{RGBA\_WORD}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945}{RGBA\_DOUBLE}},\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b}{COLOR\_STRING}},\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466}{COLOR\_INDEX}}\ \}\ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20}{color\_type\_t}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ gvcolor\_t\ can\ hold\ a\ color\ spec\ in\ a\ choice\ or\ representations\ */}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structcolor__s}{color\_s}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structcolor__s_a2aa06fe8deb3b9aab722153c87dec0ac}{RGBA}}[4];}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structcolor__s_a5138284bed348fafa3c1a72f22094377}{HSVA}}[4];}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structcolor__s_acfe59dac196e02b0d63d58468ab6be9b}{rgba}}[4];}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcolor__s_a3ba7369dd590b336d3c950d3d39af998}{rrggbbaa}}[4];}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structcolor__s_a236d63da02059b4df20358cf2eeecccd}{string}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structcolor__s_a01227ba12ab7210cfb839124b06e1779}{index}};}
+\DoxyCodeLine{00038\ \ \ \ \ \}\ \doxymbox{\hyperlink{structcolor__s_aecd492bc07da38ecf303085e18803cc7}{u}};}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20}{color\_type\_t}}\ \doxymbox{\hyperlink{structcolor__s_afff9b62d12e78b81a0d0939c1830011e}{type}};}
+\DoxyCodeLine{00040\ \}\ \doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\_t}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ COLOR\_MALLOC\_FAIL\ -\/1}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ COLOR\_UNKNOWN\ 1}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ COLOR\_OK\ 0}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

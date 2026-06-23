@@ -1,0 +1,816 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+types.h}
+\hypertarget{types_8h}{}\label{types_8h}\index{Graphviz/include/graphviz/types.h@{Graphviz/include/graphviz/types.h}}
+
+
+graphs, nodes and edges info:\+ \doxylink{struct_agraphinfo__t}{Agraphinfo\+\_\+t}, \doxylink{struct_agnodeinfo__t}{Agnodeinfo\+\_\+t} and \doxylink{struct_agedgeinfo__t}{Agedgeinfo\+\_\+t}  
+
+
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+{\ttfamily \+\#include $<$assert.\+h$>$}\newline
+{\ttfamily \+\#include $<$signal.\+h$>$}\newline
+{\ttfamily \+\#include "{}geom.\+h"{}}\newline
+{\ttfamily \+\#include "{}gvcext.\+h"{}}\newline
+{\ttfamily \+\#include "{}pathgeom.\+h"{}}\newline
+{\ttfamily \+\#include "{}textspan.\+h"{}}\newline
+{\ttfamily \+\#include "{}cgraph.\+h"{}}\newline
+{\ttfamily \+\#include "{}usershape.\+h"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structport}{port}}
+\item 
+struct \doxymbox{\hyperlink{structspline_info}{spline\+Info}}
+\item 
+struct \doxymbox{\hyperlink{structpathend__t}{pathend\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structpath}{path}}
+\item 
+struct \doxymbox{\hyperlink{structbezier}{bezier}}
+\item 
+struct \doxymbox{\hyperlink{structsplines}{splines}}
+\item 
+struct \doxymbox{\hyperlink{structtextlabel__t}{textlabel\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structgraphviz__polygon__style__t}{graphviz\+\_\+polygon\+\_\+style\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structpolygon__t}{polygon\+\_\+t}}
+\item 
+union \doxymbox{\hyperlink{unioninside__t}{inside\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structstroke__t}{stroke\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structshape__functions}{shape\+\_\+functions}}
+\item 
+struct \doxymbox{\hyperlink{structshape__desc}{shape\+\_\+desc}}
+\item 
+struct \doxymbox{\hyperlink{structrank__t}{rank\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structlayout__t}{layout\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structfield__t}{field\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structnlist__t}{nlist\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structelist}{elist}}
+\item 
+struct \doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_agnodeinfo__t}{Agnodeinfo\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structgvlayout__features__t}{gvlayout\+\_\+features\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a8348ff030220824389a59808aa46d30e}{WITH\+\_\+\+CGRAPH}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a12d1b461e7a9a9ef358c6bec5264a2e2}{TAIL\+\_\+\+ID}}~"{}tailport"{}
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_aaf9f916d15b0ab383ab871f5031c74eb}{HEAD\+\_\+\+ID}}~"{}headport"{}
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a6e210aba484615e657c8c46fab75b850}{GUI\+\_\+\+STATE\+\_\+\+ACTIVE}}~(1$<$$<$0)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_ad72428e0e76cd454bc58a3600bca7b23}{GUI\+\_\+\+STATE\+\_\+\+SELECTED}}~(1$<$$<$1)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_af0241d18f172aab5e76110b238e0f192}{GUI\+\_\+\+STATE\+\_\+\+VISITED}}~(1$<$$<$2)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_adcb50938e305addf6c9632dddb7513d9}{GUI\+\_\+\+STATE\+\_\+\+DELETED}}~(1$<$$<$3)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a911ab2551bc8ea9e16346460246940fe}{elist\+\_\+append}}(item,  L)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_ae0026dfea8f7eb0765f419f1fff65886}{alloc\+\_\+elist}}(n,  L)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a0daea177ae8f9997439bb552218fc70a}{free\+\_\+list}}(L)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7c4edc4279776663c7e0b498d32415f5}{GD\+\_\+parent}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa9a0f0587dc81585dd7e19bb37714b19}{GD\+\_\+level}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga304761d6ec6f0b12b6cef1b38d79fa37}{GD\+\_\+drawing}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga901aff57f7816b36b6e5f362c05ac2fe}{GD\+\_\+bb}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf0cd94956a3b6c26beb40b95ec14757f}{GD\+\_\+gvc}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gadbe1e26fccc1a3d1c0a78767510e81c6}{GD\+\_\+cleanup}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaeffb42301531359813d5128f243e1124}{GD\+\_\+dist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga67b630030eacd3cb15dd2433b3a863f5}{GD\+\_\+alg}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga518eb6cf9ba677d9d0315c492dfd582a}{GD\+\_\+border}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga5668dcc358c7a2113b24345806c6f59e}{GD\+\_\+clust}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaad569cb58d6640eb26ac9f5a41553e9f}{GD\+\_\+dotroot}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gad268734b2d2575d8e2af51e432748e2e}{GD\+\_\+comp}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf859a2be52c0c4c885468241f9f50cdc}{GD\+\_\+exact\+\_\+ranksep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gabeb0f73d67e12a8f52c28954d050e1f7}{GD\+\_\+expanded}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga75bb1b66668ed3d3aeb42c85a4448e9a}{GD\+\_\+flags}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf93c88eaf216675d42119439ec9e2a1e}{GD\+\_\+gui\+\_\+state}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae0c0e1c4d187901d851cb77143519def}{GD\+\_\+charset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga52c46fcffcec9b43212679e86a9c1339}{GD\+\_\+has\+\_\+labels}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7c90d72524042801c0d132672570dee5}{GD\+\_\+has\+\_\+images}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7d659b279f968f7560a4e95e8b92f388}{GD\+\_\+has\+\_\+flat\+\_\+edges}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae62105b8f1d3ab03b871a1ffb41b60cc}{GD\+\_\+ht1}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa9979ba2b7959ac3390f5a7a0f46bb9d}{GD\+\_\+ht2}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga5c6afbddcdf2311322cebb07fd21f3dd}{GD\+\_\+installed}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gad73f51275d97d6aa889862b23950a99b}{GD\+\_\+label}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gac660bf2efd1a9f02e8746d5c80b0491a}{GD\+\_\+leader}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga1d10b818e1ff69372cfb54ee0d469129}{GD\+\_\+rankdir2}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaee757533265228f46df219420f410273}{GD\+\_\+rankdir}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf280ec2b75bc7b00e15e6141c2b3eae7}{GD\+\_\+flip}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gab5f0385f4efbc680994dd7d1739c61b7}{GD\+\_\+realrankdir}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga0858386b028d64c0dbd191691a8be606}{GD\+\_\+realflip}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae1191ea3f43a6549bc00200e704fd27f}{GD\+\_\+ln}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga20984ce193d2d03b0aa85804f60aa1ae}{GD\+\_\+maxrank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga248701de5d81b4dc60f61ef53811ad18}{GD\+\_\+maxset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga0573f46f314d41f1dd3a93b5d5222d6d}{GD\+\_\+minrank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9f72a5780dc55294ba4fc9dc43dd4cfc}{GD\+\_\+minset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga6d5d20d8a29ad9536bc3529b64225e24}{GD\+\_\+minrep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga44fd0386ed15c0c89a6e8862d6cc3f42}{GD\+\_\+maxrep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga8732c573a23261f021563cb7889aec18}{GD\+\_\+move}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa6e5b25c4fec6eb18582a419b9ddd3fc}{GD\+\_\+n\+\_\+cluster}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gac7982d95b7f3e2f3aa38108cdaeca3dd}{GD\+\_\+ndim}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf8d793183ce04d75e7ebb59c98136d59}{GD\+\_\+odim}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf5f0296e7ebe013231a5337c3f346a64}{GD\+\_\+neato\+\_\+nlist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga90f9dcaed839738a87a918807c5b4a44}{GD\+\_\+nlist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gada22146929ee5be60bd05c07159d6c9e}{GD\+\_\+nodesep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7ab3956e95627faa3d013a0b7e9be148}{GD\+\_\+rank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf4f41d9fcc3048ec7cf65ccfe26839b0}{GD\+\_\+rankleader}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gafa6fda64bce7de9858030b3bd9ff577c}{GD\+\_\+ranksep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga6c9ffdd449bb900a5f2a45f26d494b68}{GD\+\_\+rn}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaac3b0f6b60c2b5c3eed9a0cfe90ecb66}{GD\+\_\+set\+\_\+type}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga96143dd3e09b113a765ea9bbe944f72f}{GD\+\_\+label\+\_\+pos}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9be6d03614124729a3f3ecc18851f7b7}{GD\+\_\+showboxes}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga25ebc4c1126df610cfe80ccc012e00a2}{GD\+\_\+fontnames}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf3ac828276b6b469e04bcc567ab4fbe5}{GD\+\_\+spring}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga589a746bbed5d188d6965e7337bf1a75}{GD\+\_\+sum\+\_\+t}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9432fa3c11bc7b85dd20bf70a6aaf5d9}{GD\+\_\+t}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0affbf5af96f331f4426bf5dd340c9ec}{ND\+\_\+id}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga756b74075ae0a75309ad5a012550c5b0}{ND\+\_\+alg}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab2e2ec5a6d410abc991d5ddae1db134c}{ND\+\_\+\+UF\+\_\+parent}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga6c07a73ad18bd14f7ccf938532f541ac}{ND\+\_\+set}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad00f2be2e982b4737f81b32a62cbcbe2}{ND\+\_\+\+UF\+\_\+size}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga24be5471334ac496135e0c94f0377da2}{ND\+\_\+bb}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga56e6c495adc9afcce11b7ecb8a1f4daf}{ND\+\_\+clust}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae5c4c0a0cc39024b09a5bf94251aceff}{ND\+\_\+coord}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae9e7b39a3525fb90ba0b334c9e320cf3}{ND\+\_\+dist}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae4437bfd2417303a177a8955b73cd2f8}{ND\+\_\+flat\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga7ac213b39266f3dd86f60bb9f39ee5a5}{ND\+\_\+flat\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1931c9487f15292849c2b49c3e96b6a4}{ND\+\_\+gui\+\_\+state}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga325000a2fc365352eafcbfb8be910b00}{ND\+\_\+has\+\_\+port}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaaf40a53b50e0a203b67453a6127bb508}{ND\+\_\+rep}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga656493ad251af9524cfc5552dc213383}{ND\+\_\+heapindex}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaa323a7137791d555fdf08f7f0f2eff02}{ND\+\_\+height}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac1f79021f7fecf1ff682bf57e9050241}{ND\+\_\+hops}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1bb4c002fbbf73f2e4061de8efcbe453}{ND\+\_\+ht}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae5f583e129d6061a535d76fdb170e94c}{ND\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga74eefa711e291975c7d89493d5df1d5b}{ND\+\_\+label}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaca812c68db4d6ec5856ebdcfac4d8284}{ND\+\_\+xlabel}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga2b836cfd06a967ad326d658a8138c146}{ND\+\_\+lim}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gadb513eaede379fa8cf40bb5e335e0c32}{ND\+\_\+low}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaafdc3f915c57fc734959a7936feba1c2}{ND\+\_\+lw}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga932f96bdb911ef9d25ff3a5f4f9fcdea}{ND\+\_\+mark}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab6cf44ed9beadb42dec6cbf1e215d683}{ND\+\_\+mval}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0e22e496fee82db6b89acdd5ef6c37c7}{ND\+\_\+n\+\_\+cluster}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga3bb87e7928ed2fd3686ac378858b293f}{ND\+\_\+next}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9ea2bead61709465110b8141bcf68721}{ND\+\_\+node\+\_\+type}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga15cbeaea7dab64dcfbcde1cad226c552}{ND\+\_\+onstack}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac2743f96dd3d2c06547e3d25d9471c7c}{ND\+\_\+order}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga5d0398c1cdeb6735e6b95b7a027c573f}{ND\+\_\+other}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gafb8b0da4ea62a1bbd2a4ae3ce52e7384}{ND\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0d8f0d5ac52747cf400e221049be2677}{ND\+\_\+outline\+\_\+width}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga154d127461cb6e85b34bf1eb5df0676e}{ND\+\_\+outline\+\_\+height}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga4bd342b70058683d7d2f510f4b82f819}{ND\+\_\+par}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga50b5fb87a83783653f9a5bd28109ff07}{ND\+\_\+pinned}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gadd78de551f9363227c013ce673f2b573}{ND\+\_\+pos}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga1805943530ef1049887e85db4bc918b7}{ND\+\_\+prev}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gafe5072a4ab915d5cd6a1994c446db319}{ND\+\_\+priority}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga0baa35dbbb9c1b03e40b48b26deb0b38}{ND\+\_\+rank}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gade7cf787f4b798952fcefb4abb3c256d}{ND\+\_\+ranktype}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9cb8c502c548e420aa8b507b162a2d2e}{ND\+\_\+rw}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga5d7bd45bc6b14c164b47f2e477115d13}{ND\+\_\+save\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gab4b05872287c433b1e9b163037827813}{ND\+\_\+save\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae90c22cfce70f108bb551499ac52dc54}{ND\+\_\+shape}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad25b873ee39c60fc1067d18051dd6ebc}{ND\+\_\+shape\+\_\+info}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga2d474280f17cea3b13984c60b7fdf335}{ND\+\_\+showboxes}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga359619b85d94d92c966cdff435c80ce6}{ND\+\_\+state}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga9ec32b051f012346111fee4912756843}{ND\+\_\+clustnode}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga06fb60e161258ecbf1558df103ec704c}{ND\+\_\+tree\+\_\+in}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gac4da309537bc828fd6ecc56046258a48}{ND\+\_\+tree\+\_\+out}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gad20fffb76a5d5801962b2e9ca678109f}{ND\+\_\+weight\+\_\+class}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaac55d17a94648f59f637f29aabb3259b}{ND\+\_\+width}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gaf99fce39f8dcc513002af9c1f97c9b3b}{ND\+\_\+xsize}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga3cee88e9b3eff3a89e96837ca91a723f}{ND\+\_\+ysize}}(n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaa2b7773c035a0866fa49e47682f03806}{ED\+\_\+alg}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga5322ddecbfd78b6219d7858130e8ba89}{ED\+\_\+conc\+\_\+opp\+\_\+flag}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga94822e795d402ebafb4f534f43fe58d3}{ED\+\_\+count}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gacb80190e3b238a47474e4e9a2d9a9a17}{ED\+\_\+cutvalue}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga9b03efc65b943a56a6da501119f61ff2}{ED\+\_\+edge\+\_\+type}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga14c23d9ac2ce08caf15e98a2b00e560f}{ED\+\_\+compound}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gacb5bb0e8c848dc4992471c3535dee33d}{ED\+\_\+adjacent}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gabb948350e25dda9a74389582ed8876d0}{ED\+\_\+factor}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga872eea083b0fc41d5cbe4aed44078d5b}{ED\+\_\+gui\+\_\+state}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7246ae9cbfda66cab6b9050c5e5a3494}{ED\+\_\+head\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gadec0e33e4e788c1ce603597b89d3055a}{ED\+\_\+head\+\_\+port}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gae590329810778be5909563f40375c458}{ED\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga60a2aa92dd94846e103ae74ea88a306a}{ED\+\_\+xlabel}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga634e2a938804e412ae5bd59c4952e1ff}{ED\+\_\+label\+\_\+ontop}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga33ee77a99cd045f6ce3432ac896dd7ef}{ED\+\_\+minlen}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaab0740676cd17e8496c1de18c579a182}{ED\+\_\+path}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga58e5543a5552a571c9ad286944f5e74d}{ED\+\_\+showboxes}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga8fb5cc3d3b3e8cb72c82e87c843f3432}{ED\+\_\+spl}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gabaffd96fcefc50e244c603930299a3fe}{ED\+\_\+tail\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaebbf6cf6d8a89d415a8d0b40df2c110d}{ED\+\_\+tail\+\_\+port}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga0a6706e6b353fb3420b0bacd7d3a2251}{ED\+\_\+to\+\_\+orig}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaf626c847d81347ad341596b6809a05e2}{ED\+\_\+to\+\_\+virt}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga0ee6b93c9004250a5f12e29e2c894167}{ED\+\_\+tree\+\_\+index}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7327a70c8b4346b7ebed6867736b7d53}{ED\+\_\+xpenalty}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga331c2d40ba790391413f9c335bdf1d1b}{ED\+\_\+dist}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaa50ab14aac03a171606749049925384f}{ED\+\_\+weight}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_a0e2f3c6c3a245eb9d16b83ff6b2b3c24}{ag\+\_\+xget}}(x,  a)
+\item 
+\+\#define \doxymbox{\hyperlink{types_8h_ac513571df7814fe16758f00c2a59fecf}{SET\+\_\+\+RANKDIR}}(g,  rd)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gab58bf52067c43e9deb7e9bad4fccfcba}{agfindedge}}(g,  t,  h)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_gae309bfc1ef6997297934402bc684f0f5}{agfindnode}}(g,  n)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga086057e1ffaf626987d480a024641c6e}{agfindgraphattr}}(g,  a)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__node_ga62ab34e97050c33903a56359783a1753}{agfindnodeattr}}(g,  a)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7321b58cb4928637f7309edf433bbea5}{agfindedgeattr}}(g,  a)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agraph__s}{Agraph\+\_\+s}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agnode__s}{Agnode\+\_\+s}} \doxymbox{\hyperlink{types_8h_aa54efbeed985023658063bdae73347ec}{node\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agedge__s}{Agedge\+\_\+s}} \doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agsym__s}{Agsym\+\_\+s}} \doxymbox{\hyperlink{types_8h_a074b8806dbdd80edff842d96051d4325}{attrsym\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{types_8h_ace6945bb2802e1190d98a4b4319c6d53}{htmllabel\+\_\+t}} \doxymbox{\hyperlink{types_8h_ace6945bb2802e1190d98a4b4319c6d53}{htmllabel\+\_\+t}}
+\item 
+typedef struct port \doxymbox{\hyperlink{types_8h_ae95a60d33b2914f06e5882ef97f6ce3e}{port}}
+\item 
+typedef struct pathend\+\_\+t \doxymbox{\hyperlink{types_8h_ad284ee6b03d9fc028b8269adbef5fc65}{pathend\+\_\+t}}
+\item 
+typedef struct path \doxymbox{\hyperlink{types_8h_a130fc11a930a5aa9d3e5e4793172c82d}{path}}
+\item 
+typedef struct bezier \doxymbox{\hyperlink{types_8h_a800a5a54f93310b21802f76661efa426}{bezier}}
+\item 
+typedef struct splines \doxymbox{\hyperlink{types_8h_a50a0ad9736b3bcace6e4531bd44d0759}{splines}}
+\item 
+typedef struct textlabel\+\_\+t \doxymbox{\hyperlink{types_8h_a3ec6402de3a86938ff9751e054bdd1cf}{textlabel\+\_\+t}}
+\item 
+typedef struct polygon\+\_\+t \doxymbox{\hyperlink{types_8h_a54fcc55206762e2cbac75fe208b9b235}{polygon\+\_\+t}}
+\item 
+typedef union inside\+\_\+t \doxymbox{\hyperlink{types_8h_ac04692d45a1fef6cd62f5d44bb078357}{inside\+\_\+t}}
+\item 
+typedef struct stroke\+\_\+t \doxymbox{\hyperlink{types_8h_ae3daf21c5a1c87ed4b22e46e41dc67b6}{stroke\+\_\+t}}
+\item 
+typedef struct shape\+\_\+functions \doxymbox{\hyperlink{types_8h_a6d6c2e66636ceb6cad0df539cf2442fe}{shape\+\_\+functions}}
+\item 
+typedef struct shape\+\_\+desc \doxymbox{\hyperlink{types_8h_a468eddb197afa13a3864ce4812c823cb}{shape\+\_\+desc}}
+\item 
+typedef struct \doxymbox{\hyperlink{types_8h_a90a81e34f2d8b7e78c0589584f51d645}{adjmatrix\+\_\+t}} \doxymbox{\hyperlink{types_8h_a90a81e34f2d8b7e78c0589584f51d645}{adjmatrix\+\_\+t}}
+\item 
+typedef struct rank\+\_\+t \doxymbox{\hyperlink{types_8h_a88b8fdea9d1dfb6e3b27ac7a94b786ca}{rank\+\_\+t}}
+\item 
+typedef struct layout\+\_\+t \doxymbox{\hyperlink{types_8h_ab70208e6f93ae550e6099ab4adc87330}{layout\+\_\+t}}
+\item 
+typedef struct field\+\_\+t \doxymbox{\hyperlink{types_8h_a8e3205a9a1e9d9c7608c678d900f845e}{field\+\_\+t}}
+\item 
+typedef struct nlist\+\_\+t \doxymbox{\hyperlink{types_8h_ad2a80a423612e0accdeb9e60421190c8}{nlist\+\_\+t}}
+\item 
+typedef struct elist \doxymbox{\hyperlink{types_8h_a29a6cb48b14cf8e1d183d055c5f7ff3b}{elist}}
+\item 
+typedef struct Agraphinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__graph_gac63023c62153c35af49136637b3918ca}{Agraphinfo\+\_\+t}}
+\item 
+typedef struct Agnodeinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__node_ga99f5e71bafc639934d8a78307c510dfe}{Agnodeinfo\+\_\+t}}
+\item 
+typedef struct Agedgeinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__edge_ga7f6006922902c3a180aa46008d9cda04}{Agedgeinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7c}{shape\+\_\+kind}} \{ \newline
+\doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca775dfd155f3c8185d05520101a033ff3}{SH\+\_\+\+UNSET}}
+, \doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cadd4ea7af512fbabd92af5be76d50e22e}{SH\+\_\+\+POLY}}
+, \doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca3d8cb0521bb6b92b2b396cf8cb870d6d}{SH\+\_\+\+RECORD}}
+, \doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cad9f3e7eed3b6d20cd282bb4856aa363a}{SH\+\_\+\+POINT}}
+, \newline
+\doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca20f460bfd46fdfdf3116925db34ae749}{SH\+\_\+\+EPSF}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3}{ratio\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3abec06f2a16e9fad36d80732a385b146c}{R\+\_\+\+NONE}}
+, \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3a4d90c50b9b54a8ce4dafdeb83b211d11}{R\+\_\+\+VALUE}}
+, \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3a5a44faf145f63c8202d16d9c5cfa8add}{R\+\_\+\+FILL}}
+, \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3a0d81d612dbac14feb838b55ac96ca292}{R\+\_\+\+COMPRESS}}
+, \newline
+\doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3a084b1de8767c8bf88efae83ecd4ea574}{R\+\_\+\+AUTO}}
+, \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3a929bb8521a6a4dc8bc0b5225d0bc6a41}{R\+\_\+\+EXPAND}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{types_8h_a2a6b72cfc1be9a7af92447c2f1372496}{fontname\+\_\+kind}} \{ \doxymbox{\hyperlink{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aa04601a2ac6cdc4251c48d174b0e2509}{NATIVEFONTS}}
+, \doxymbox{\hyperlink{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aac9e353cbe29ed058f39ae1b0b05b5e1}{PSFONTS}}
+, \doxymbox{\hyperlink{types_8h_a2a6b72cfc1be9a7af92447c2f1372496ab8851f34a473071b4ff971413c9c2acd}{SVGFONTS}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{types_8h_doc-define-members}
+\Hypertarget{types_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{types_8h_a0e2f3c6c3a245eb9d16b83ff6b2b3c24}\index{types.h@{types.h}!ag\_xget@{ag\_xget}}
+\index{ag\_xget@{ag\_xget}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{ag\_xget}{ag\_xget}}
+{\footnotesize\ttfamily \label{types_8h_a0e2f3c6c3a245eb9d16b83ff6b2b3c24} 
+\+\#define ag\+\_\+xget(\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__cgraph__attr_gad2d0f1fbd29039ec42d12ffb24c015b6}{agxget}}(x,a)}
+
+\end{DoxyCode}
+\Hypertarget{types_8h_ae0026dfea8f7eb0765f419f1fff65886}\index{types.h@{types.h}!alloc\_elist@{alloc\_elist}}
+\index{alloc\_elist@{alloc\_elist}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{alloc\_elist}{alloc\_elist}}
+{\footnotesize\ttfamily \label{types_8h_ae0026dfea8f7eb0765f419f1fff65886} 
+\+\#define alloc\+\_\+elist(\begin{DoxyParamCaption}\item[{}]{n}{, }\item[{}]{L}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ L.size\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ L.list\ =\ gv\_calloc(n\ +\ 1,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\_t}}\ *));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}\ (0)}
+
+\end{DoxyCode}
+\Hypertarget{types_8h_a911ab2551bc8ea9e16346460246940fe}\index{types.h@{types.h}!elist\_append@{elist\_append}}
+\index{elist\_append@{elist\_append}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{elist\_append}{elist\_append}}
+{\footnotesize\ttfamily \label{types_8h_a911ab2551bc8ea9e16346460246940fe} 
+\+\#define elist\+\_\+append(\begin{DoxyParamCaption}\item[{}]{item}{, }\item[{}]{L}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ L.list\ =\ gv\_recalloc(L.list,\ L.size\ +\ 1,\ L.size\ +\ 2,\ \textcolor{keyword}{sizeof}(\doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\_t}}\ *));\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ L.list[L.size++]\ =\ item;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ L.list[L.size]\ =\ NULL;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{while}\ (0)}
+
+\end{DoxyCode}
+\Hypertarget{types_8h_a0daea177ae8f9997439bb552218fc70a}\index{types.h@{types.h}!free\_list@{free\_list}}
+\index{free\_list@{free\_list}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{free\_list}{free\_list}}
+{\footnotesize\ttfamily \label{types_8h_a0daea177ae8f9997439bb552218fc70a} 
+\+\#define free\+\_\+list(\begin{DoxyParamCaption}\item[{}]{L}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{free(L.list)}
+
+\end{DoxyCode}
+\Hypertarget{types_8h_a6e210aba484615e657c8c46fab75b850}\index{types.h@{types.h}!GUI\_STATE\_ACTIVE@{GUI\_STATE\_ACTIVE}}
+\index{GUI\_STATE\_ACTIVE@{GUI\_STATE\_ACTIVE}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{GUI\_STATE\_ACTIVE}{GUI\_STATE\_ACTIVE}}
+{\footnotesize\ttfamily \label{types_8h_a6e210aba484615e657c8c46fab75b850} 
+\+\#define GUI\+\_\+\+STATE\+\_\+\+ACTIVE~(1$<$$<$0)}
+
+\Hypertarget{types_8h_adcb50938e305addf6c9632dddb7513d9}\index{types.h@{types.h}!GUI\_STATE\_DELETED@{GUI\_STATE\_DELETED}}
+\index{GUI\_STATE\_DELETED@{GUI\_STATE\_DELETED}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{GUI\_STATE\_DELETED}{GUI\_STATE\_DELETED}}
+{\footnotesize\ttfamily \label{types_8h_adcb50938e305addf6c9632dddb7513d9} 
+\+\#define GUI\+\_\+\+STATE\+\_\+\+DELETED~(1$<$$<$3)}
+
+\Hypertarget{types_8h_ad72428e0e76cd454bc58a3600bca7b23}\index{types.h@{types.h}!GUI\_STATE\_SELECTED@{GUI\_STATE\_SELECTED}}
+\index{GUI\_STATE\_SELECTED@{GUI\_STATE\_SELECTED}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{GUI\_STATE\_SELECTED}{GUI\_STATE\_SELECTED}}
+{\footnotesize\ttfamily \label{types_8h_ad72428e0e76cd454bc58a3600bca7b23} 
+\+\#define GUI\+\_\+\+STATE\+\_\+\+SELECTED~(1$<$$<$1)}
+
+\Hypertarget{types_8h_af0241d18f172aab5e76110b238e0f192}\index{types.h@{types.h}!GUI\_STATE\_VISITED@{GUI\_STATE\_VISITED}}
+\index{GUI\_STATE\_VISITED@{GUI\_STATE\_VISITED}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{GUI\_STATE\_VISITED}{GUI\_STATE\_VISITED}}
+{\footnotesize\ttfamily \label{types_8h_af0241d18f172aab5e76110b238e0f192} 
+\+\#define GUI\+\_\+\+STATE\+\_\+\+VISITED~(1$<$$<$2)}
+
+\Hypertarget{types_8h_aaf9f916d15b0ab383ab871f5031c74eb}\index{types.h@{types.h}!HEAD\_ID@{HEAD\_ID}}
+\index{HEAD\_ID@{HEAD\_ID}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{HEAD\_ID}{HEAD\_ID}}
+{\footnotesize\ttfamily \label{types_8h_aaf9f916d15b0ab383ab871f5031c74eb} 
+\+\#define HEAD\+\_\+\+ID~"{}headport"{}}
+
+\Hypertarget{types_8h_ac513571df7814fe16758f00c2a59fecf}\index{types.h@{types.h}!SET\_RANKDIR@{SET\_RANKDIR}}
+\index{SET\_RANKDIR@{SET\_RANKDIR}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{SET\_RANKDIR}{SET\_RANKDIR}}
+{\footnotesize\ttfamily \label{types_8h_ac513571df7814fe16758f00c2a59fecf} 
+\+\#define SET\+\_\+\+RANKDIR(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{rd}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__graph_ga1d10b818e1ff69372cfb54ee0d469129}{GD\_rankdir2}}(g)\ =\ rd)}
+
+\end{DoxyCode}
+\Hypertarget{types_8h_a12d1b461e7a9a9ef358c6bec5264a2e2}\index{types.h@{types.h}!TAIL\_ID@{TAIL\_ID}}
+\index{TAIL\_ID@{TAIL\_ID}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{TAIL\_ID}{TAIL\_ID}}
+{\footnotesize\ttfamily \label{types_8h_a12d1b461e7a9a9ef358c6bec5264a2e2} 
+\+\#define TAIL\+\_\+\+ID~"{}tailport"{}}
+
+\Hypertarget{types_8h_a8348ff030220824389a59808aa46d30e}\index{types.h@{types.h}!WITH\_CGRAPH@{WITH\_CGRAPH}}
+\index{WITH\_CGRAPH@{WITH\_CGRAPH}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{WITH\_CGRAPH}{WITH\_CGRAPH}}
+{\footnotesize\ttfamily \label{types_8h_a8348ff030220824389a59808aa46d30e} 
+\+\#define WITH\+\_\+\+CGRAPH~1}
+
+
+
+\label{types_8h_doc-typedef-members}
+\Hypertarget{types_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{types_8h_a90a81e34f2d8b7e78c0589584f51d645}\index{types.h@{types.h}!adjmatrix\_t@{adjmatrix\_t}}
+\index{adjmatrix\_t@{adjmatrix\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{adjmatrix\_t}{adjmatrix\_t}}
+{\footnotesize\ttfamily \label{types_8h_a90a81e34f2d8b7e78c0589584f51d645} 
+typedef struct \doxymbox{\hyperlink{types_8h_a90a81e34f2d8b7e78c0589584f51d645}{adjmatrix\+\_\+t}} \doxymbox{\hyperlink{types_8h_a90a81e34f2d8b7e78c0589584f51d645}{adjmatrix\+\_\+t}}}
+
+\Hypertarget{types_8h_a074b8806dbdd80edff842d96051d4325}\index{types.h@{types.h}!attrsym\_t@{attrsym\_t}}
+\index{attrsym\_t@{attrsym\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{attrsym\_t}{attrsym\_t}}
+{\footnotesize\ttfamily \label{types_8h_a074b8806dbdd80edff842d96051d4325} 
+typedef struct \doxymbox{\hyperlink{struct_agsym__s}{Agsym\+\_\+s}} \doxymbox{\hyperlink{types_8h_a074b8806dbdd80edff842d96051d4325}{attrsym\+\_\+t}}}
+
+\Hypertarget{types_8h_a800a5a54f93310b21802f76661efa426}\index{types.h@{types.h}!bezier@{bezier}}
+\index{bezier@{bezier}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{bezier}{bezier}}
+{\footnotesize\ttfamily \label{types_8h_a800a5a54f93310b21802f76661efa426} 
+typedef struct bezier bezier}
+
+\Hypertarget{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}\index{types.h@{types.h}!edge\_t@{edge\_t}}
+\index{edge\_t@{edge\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{edge\_t}{edge\_t}}
+{\footnotesize\ttfamily \label{types_8h_ab6289995bb0656f4da2ae67d80fea6d2} 
+typedef struct \doxymbox{\hyperlink{struct_agedge__s}{Agedge\+\_\+s}} \doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\+\_\+t}}}
+
+\Hypertarget{types_8h_a29a6cb48b14cf8e1d183d055c5f7ff3b}\index{types.h@{types.h}!elist@{elist}}
+\index{elist@{elist}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{elist}{elist}}
+{\footnotesize\ttfamily \label{types_8h_a29a6cb48b14cf8e1d183d055c5f7ff3b} 
+typedef struct elist elist}
+
+\Hypertarget{types_8h_a8e3205a9a1e9d9c7608c678d900f845e}\index{types.h@{types.h}!field\_t@{field\_t}}
+\index{field\_t@{field\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{field\_t}{field\_t}}
+{\footnotesize\ttfamily \label{types_8h_a8e3205a9a1e9d9c7608c678d900f845e} 
+typedef struct field\+\_\+t field\+\_\+t}
+
+\Hypertarget{types_8h_aedca4e11cb6b1a3893747040cb785c12}\index{types.h@{types.h}!graph\_t@{graph\_t}}
+\index{graph\_t@{graph\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{graph\_t}{graph\_t}}
+{\footnotesize\ttfamily \label{types_8h_aedca4e11cb6b1a3893747040cb785c12} 
+typedef struct \doxymbox{\hyperlink{struct_agraph__s}{Agraph\+\_\+s}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}}}
+
+\Hypertarget{types_8h_ace6945bb2802e1190d98a4b4319c6d53}\index{types.h@{types.h}!htmllabel\_t@{htmllabel\_t}}
+\index{htmllabel\_t@{htmllabel\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{htmllabel\_t}{htmllabel\_t}}
+{\footnotesize\ttfamily \label{types_8h_ace6945bb2802e1190d98a4b4319c6d53} 
+typedef struct \doxymbox{\hyperlink{types_8h_ace6945bb2802e1190d98a4b4319c6d53}{htmllabel\+\_\+t}} \doxymbox{\hyperlink{types_8h_ace6945bb2802e1190d98a4b4319c6d53}{htmllabel\+\_\+t}}}
+
+\Hypertarget{types_8h_ac04692d45a1fef6cd62f5d44bb078357}\index{types.h@{types.h}!inside\_t@{inside\_t}}
+\index{inside\_t@{inside\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{inside\_t}{inside\_t}}
+{\footnotesize\ttfamily \label{types_8h_ac04692d45a1fef6cd62f5d44bb078357} 
+typedef union inside\+\_\+t inside\+\_\+t}
+
+\Hypertarget{types_8h_ab70208e6f93ae550e6099ab4adc87330}\index{types.h@{types.h}!layout\_t@{layout\_t}}
+\index{layout\_t@{layout\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{layout\_t}{layout\_t}}
+{\footnotesize\ttfamily \label{types_8h_ab70208e6f93ae550e6099ab4adc87330} 
+typedef struct layout\+\_\+t layout\+\_\+t}
+
+\Hypertarget{types_8h_ad2a80a423612e0accdeb9e60421190c8}\index{types.h@{types.h}!nlist\_t@{nlist\_t}}
+\index{nlist\_t@{nlist\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{nlist\_t}{nlist\_t}}
+{\footnotesize\ttfamily \label{types_8h_ad2a80a423612e0accdeb9e60421190c8} 
+typedef struct nlist\+\_\+t nlist\+\_\+t}
+
+\Hypertarget{types_8h_aa54efbeed985023658063bdae73347ec}\index{types.h@{types.h}!node\_t@{node\_t}}
+\index{node\_t@{node\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{node\_t}{node\_t}}
+{\footnotesize\ttfamily \label{types_8h_aa54efbeed985023658063bdae73347ec} 
+typedef struct \doxymbox{\hyperlink{struct_agnode__s}{Agnode\+\_\+s}} \doxymbox{\hyperlink{types_8h_aa54efbeed985023658063bdae73347ec}{node\+\_\+t}}}
+
+\Hypertarget{types_8h_a130fc11a930a5aa9d3e5e4793172c82d}\index{types.h@{types.h}!path@{path}}
+\index{path@{path}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{types_8h_a130fc11a930a5aa9d3e5e4793172c82d} 
+typedef struct path path}
+
+\Hypertarget{types_8h_ad284ee6b03d9fc028b8269adbef5fc65}\index{types.h@{types.h}!pathend\_t@{pathend\_t}}
+\index{pathend\_t@{pathend\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{pathend\_t}{pathend\_t}}
+{\footnotesize\ttfamily \label{types_8h_ad284ee6b03d9fc028b8269adbef5fc65} 
+typedef struct pathend\+\_\+t pathend\+\_\+t}
+
+\Hypertarget{types_8h_a54fcc55206762e2cbac75fe208b9b235}\index{types.h@{types.h}!polygon\_t@{polygon\_t}}
+\index{polygon\_t@{polygon\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{polygon\_t}{polygon\_t}}
+{\footnotesize\ttfamily \label{types_8h_a54fcc55206762e2cbac75fe208b9b235} 
+typedef struct polygon\+\_\+t polygon\+\_\+t}
+
+\Hypertarget{types_8h_ae95a60d33b2914f06e5882ef97f6ce3e}\index{types.h@{types.h}!port@{port}}
+\index{port@{port}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily \label{types_8h_ae95a60d33b2914f06e5882ef97f6ce3e} 
+typedef struct port port}
+
+\Hypertarget{types_8h_a88b8fdea9d1dfb6e3b27ac7a94b786ca}\index{types.h@{types.h}!rank\_t@{rank\_t}}
+\index{rank\_t@{rank\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{rank\_t}{rank\_t}}
+{\footnotesize\ttfamily \label{types_8h_a88b8fdea9d1dfb6e3b27ac7a94b786ca} 
+typedef struct rank\+\_\+t rank\+\_\+t}
+
+\Hypertarget{types_8h_a468eddb197afa13a3864ce4812c823cb}\index{types.h@{types.h}!shape\_desc@{shape\_desc}}
+\index{shape\_desc@{shape\_desc}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{shape\_desc}{shape\_desc}}
+{\footnotesize\ttfamily \label{types_8h_a468eddb197afa13a3864ce4812c823cb} 
+typedef struct shape\+\_\+desc shape\+\_\+desc}
+
+\Hypertarget{types_8h_a6d6c2e66636ceb6cad0df539cf2442fe}\index{types.h@{types.h}!shape\_functions@{shape\_functions}}
+\index{shape\_functions@{shape\_functions}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{shape\_functions}{shape\_functions}}
+{\footnotesize\ttfamily \label{types_8h_a6d6c2e66636ceb6cad0df539cf2442fe} 
+typedef struct shape\+\_\+functions shape\+\_\+functions}
+
+\Hypertarget{types_8h_a50a0ad9736b3bcace6e4531bd44d0759}\index{types.h@{types.h}!splines@{splines}}
+\index{splines@{splines}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{splines}{splines}}
+{\footnotesize\ttfamily \label{types_8h_a50a0ad9736b3bcace6e4531bd44d0759} 
+typedef struct splines splines}
+
+\Hypertarget{types_8h_ae3daf21c5a1c87ed4b22e46e41dc67b6}\index{types.h@{types.h}!stroke\_t@{stroke\_t}}
+\index{stroke\_t@{stroke\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{stroke\_t}{stroke\_t}}
+{\footnotesize\ttfamily \label{types_8h_ae3daf21c5a1c87ed4b22e46e41dc67b6} 
+typedef struct stroke\+\_\+t stroke\+\_\+t}
+
+\Hypertarget{types_8h_a3ec6402de3a86938ff9751e054bdd1cf}\index{types.h@{types.h}!textlabel\_t@{textlabel\_t}}
+\index{textlabel\_t@{textlabel\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{textlabel\_t}{textlabel\_t}}
+{\footnotesize\ttfamily \label{types_8h_a3ec6402de3a86938ff9751e054bdd1cf} 
+typedef struct textlabel\+\_\+t textlabel\+\_\+t}
+
+
+
+\label{types_8h_doc-enum-members}
+\Hypertarget{types_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{types_8h_a2a6b72cfc1be9a7af92447c2f1372496}\index{types.h@{types.h}!fontname\_kind@{fontname\_kind}}
+\index{fontname\_kind@{fontname\_kind}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{fontname\_kind}{fontname\_kind}}
+{\footnotesize\ttfamily \label{types_8h_a2a6b72cfc1be9a7af92447c2f1372496} 
+enum \doxymbox{\hyperlink{types_8h_a2a6b72cfc1be9a7af92447c2f1372496}{fontname\+\_\+kind}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NATIVEFONTS@{NATIVEFONTS}!types.h@{types.h}}
+\index{types.h@{types.h}!NATIVEFONTS@{NATIVEFONTS}}
+}\Hypertarget{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aa04601a2ac6cdc4251c48d174b0e2509}\label{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aa04601a2ac6cdc4251c48d174b0e2509} 
+NATIVEFONTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PSFONTS@{PSFONTS}!types.h@{types.h}}
+\index{types.h@{types.h}!PSFONTS@{PSFONTS}}
+}\Hypertarget{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aac9e353cbe29ed058f39ae1b0b05b5e1}\label{types_8h_a2a6b72cfc1be9a7af92447c2f1372496aac9e353cbe29ed058f39ae1b0b05b5e1} 
+PSFONTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SVGFONTS@{SVGFONTS}!types.h@{types.h}}
+\index{types.h@{types.h}!SVGFONTS@{SVGFONTS}}
+}\Hypertarget{types_8h_a2a6b72cfc1be9a7af92447c2f1372496ab8851f34a473071b4ff971413c9c2acd}\label{types_8h_a2a6b72cfc1be9a7af92447c2f1372496ab8851f34a473071b4ff971413c9c2acd} 
+SVGFONTS&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3}\index{types.h@{types.h}!ratio\_t@{ratio\_t}}
+\index{ratio\_t@{ratio\_t}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{ratio\_t}{ratio\_t}}
+{\footnotesize\ttfamily \label{types_8h_af8bc308d7a0937e534f4e0aef70628a3} 
+enum \doxymbox{\hyperlink{types_8h_af8bc308d7a0937e534f4e0aef70628a3}{ratio\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_NONE@{R\_NONE}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_NONE@{R\_NONE}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3abec06f2a16e9fad36d80732a385b146c}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3abec06f2a16e9fad36d80732a385b146c} 
+R\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_VALUE@{R\_VALUE}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_VALUE@{R\_VALUE}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3a4d90c50b9b54a8ce4dafdeb83b211d11}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3a4d90c50b9b54a8ce4dafdeb83b211d11} 
+R\+\_\+\+VALUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_FILL@{R\_FILL}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_FILL@{R\_FILL}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3a5a44faf145f63c8202d16d9c5cfa8add}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3a5a44faf145f63c8202d16d9c5cfa8add} 
+R\+\_\+\+FILL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_COMPRESS@{R\_COMPRESS}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_COMPRESS@{R\_COMPRESS}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3a0d81d612dbac14feb838b55ac96ca292}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3a0d81d612dbac14feb838b55ac96ca292} 
+R\+\_\+\+COMPRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_AUTO@{R\_AUTO}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_AUTO@{R\_AUTO}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3a084b1de8767c8bf88efae83ecd4ea574}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3a084b1de8767c8bf88efae83ecd4ea574} 
+R\+\_\+\+AUTO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\_EXPAND@{R\_EXPAND}!types.h@{types.h}}
+\index{types.h@{types.h}!R\_EXPAND@{R\_EXPAND}}
+}\Hypertarget{types_8h_af8bc308d7a0937e534f4e0aef70628a3a929bb8521a6a4dc8bc0b5225d0bc6a41}\label{types_8h_af8bc308d7a0937e534f4e0aef70628a3a929bb8521a6a4dc8bc0b5225d0bc6a41} 
+R\+\_\+\+EXPAND&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7c}\index{types.h@{types.h}!shape\_kind@{shape\_kind}}
+\index{shape\_kind@{shape\_kind}!types.h@{types.h}}
+\doxysubsubsection{\texorpdfstring{shape\_kind}{shape\_kind}}
+{\footnotesize\ttfamily \label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7c} 
+enum \doxymbox{\hyperlink{types_8h_a89b3365676a2806c547d5bc9bf4d9d7c}{shape\+\_\+kind}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SH\_UNSET@{SH\_UNSET}!types.h@{types.h}}
+\index{types.h@{types.h}!SH\_UNSET@{SH\_UNSET}}
+}\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca775dfd155f3c8185d05520101a033ff3}\label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca775dfd155f3c8185d05520101a033ff3} 
+SH\+\_\+\+UNSET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SH\_POLY@{SH\_POLY}!types.h@{types.h}}
+\index{types.h@{types.h}!SH\_POLY@{SH\_POLY}}
+}\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cadd4ea7af512fbabd92af5be76d50e22e}\label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cadd4ea7af512fbabd92af5be76d50e22e} 
+SH\+\_\+\+POLY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SH\_RECORD@{SH\_RECORD}!types.h@{types.h}}
+\index{types.h@{types.h}!SH\_RECORD@{SH\_RECORD}}
+}\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca3d8cb0521bb6b92b2b396cf8cb870d6d}\label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca3d8cb0521bb6b92b2b396cf8cb870d6d} 
+SH\+\_\+\+RECORD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SH\_POINT@{SH\_POINT}!types.h@{types.h}}
+\index{types.h@{types.h}!SH\_POINT@{SH\_POINT}}
+}\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cad9f3e7eed3b6d20cd282bb4856aa363a}\label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7cad9f3e7eed3b6d20cd282bb4856aa363a} 
+SH\+\_\+\+POINT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SH\_EPSF@{SH\_EPSF}!types.h@{types.h}}
+\index{types.h@{types.h}!SH\_EPSF@{SH\_EPSF}}
+}\Hypertarget{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca20f460bfd46fdfdf3116925db34ae749}\label{types_8h_a89b3365676a2806c547d5bc9bf4d9d7ca20f460bfd46fdfdf3116925db34ae749} 
+SH\+\_\+\+EPSF&\\
+\hline
+
+\end{DoxyEnumFields}

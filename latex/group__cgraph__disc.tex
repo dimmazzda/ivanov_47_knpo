@@ -1,0 +1,85 @@
+\doxysubsubsubsection{disciplines }
+\hypertarget{group__cgraph__disc}{}\label{group__cgraph__disc}\index{disciplines@{disciplines}}
+
+
+disciplines for external resources needed by libcgraph  
+
+
+\doxysubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agiddisc__s}{Agiddisc\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em object ID allocator discipline \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agiodisc__s}{Agiodisc\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em IO services. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agdisc__s}{Agdisc\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em user\textquotesingle{}s discipline \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agiddisc__s}{Agiddisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em object ID allocator \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agiodisc__s}{Agiodisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em IO services. \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agdisc__s}{Agdisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em union of client discipline methods \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__disc_ga8dfe7271f23a5f54f97e73fa363ba0f3}{Ag\+Id\+Disc}}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__disc_ga24e9bd096c4092649607924dc6e969c8}{Ag\+Io\+Disc}}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__disc_gade3d1614ee2c32df0edd7a022f66478a}{Ag\+Default\+Disc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+(This section is not intended for casual users.)
+
+Programmer-\/defined disciplines customize certain resources:\+ ID namespace and I/\+O -\/ needed by Libcgraph. A discipline struct (or NULL) is passed at graph creation time.
+
+\label{group__cgraph__disc_doc-typedef-members}
+\Hypertarget{group__cgraph__disc_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}\index{disciplines@{disciplines}!Agdisc\_t@{Agdisc\_t}}
+\index{Agdisc\_t@{Agdisc\_t}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agdisc\_t}{Agdisc\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40} 
+typedef struct \doxymbox{\hyperlink{struct_agdisc__s}{Agdisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}}}
+
+\Hypertarget{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}\index{disciplines@{disciplines}!Agiddisc\_t@{Agiddisc\_t}}
+\index{Agiddisc\_t@{Agiddisc\_t}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agiddisc\_t}{Agiddisc\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac} 
+typedef struct \doxymbox{\hyperlink{struct_agiddisc__s}{Agiddisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\+\_\+t}}}
+
+\Hypertarget{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}\index{disciplines@{disciplines}!Agiodisc\_t@{Agiodisc\_t}}
+\index{Agiodisc\_t@{Agiodisc\_t}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agiodisc\_t}{Agiodisc\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d} 
+typedef struct \doxymbox{\hyperlink{struct_agiodisc__s}{Agiodisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\+\_\+t}}}
+
+
+
+\label{group__cgraph__disc_doc-var-members}
+\Hypertarget{group__cgraph__disc_doc-var-members}
+\doxysubsubsubsubsection{Переменные}
+\Hypertarget{group__cgraph__disc_gade3d1614ee2c32df0edd7a022f66478a}\index{disciplines@{disciplines}!AgDefaultDisc@{AgDefaultDisc}}
+\index{AgDefaultDisc@{AgDefaultDisc}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AgDefaultDisc}{AgDefaultDisc}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_gade3d1614ee2c32df0edd7a022f66478a} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} Ag\+Default\+Disc\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{group__cgraph__disc_ga8dfe7271f23a5f54f97e73fa363ba0f3}\index{disciplines@{disciplines}!AgIdDisc@{AgIdDisc}}
+\index{AgIdDisc@{AgIdDisc}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AgIdDisc}{AgIdDisc}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_ga8dfe7271f23a5f54f97e73fa363ba0f3} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\+\_\+t}} Ag\+Id\+Disc\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{group__cgraph__disc_ga24e9bd096c4092649607924dc6e969c8}\index{disciplines@{disciplines}!AgIoDisc@{AgIoDisc}}
+\index{AgIoDisc@{AgIoDisc}!disciplines@{disciplines}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AgIoDisc}{AgIoDisc}}
+{\footnotesize\ttfamily \label{group__cgraph__disc_ga24e9bd096c4092649607924dc6e969c8} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\+\_\+t}} Ag\+Io\+Disc\hspace{0.3cm}{\ttfamily [extern]}}
+

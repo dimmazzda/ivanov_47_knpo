@@ -1,0 +1,73 @@
+\doxysubsubsubsubsection{subgraphs }
+\hypertarget{group__cgraph__subgraph}{}\label{group__cgraph__subgraph}\index{subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__subgraph_ga2ca7f6ee15e2ed41b86b715d776ab230}{agsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, char \texorpdfstring{$\ast$}{*}name, int cflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__subgraph_ga1c19df4ad0b6221455f56230f7ef3252}{agidsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__subgraph_gabcd8466586e7f9dafd183b291427231f}{agfstsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__subgraph_gae997729f968b4ecc622d1a5eedf2b785}{agnxtsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}subg)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__subgraph_gaf7bfbe45c1682b483146507823af9007}{agparent}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__subgraph_gab1c83c6ec6158127af8d718352cea710}{agdelsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}sub)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsubsection{Подробное описание}
+A "{}main"{} or "{}root"{} graph defines a namespace for a collection of graph objects (subgraphs, nodes, edges) and their attributes. Objects may be named by unique strings or by integer IDs.
+
+\doxylink{group__cgraph__subgraph_ga2ca7f6ee15e2ed41b86b715d776ab230}{agsubg} finds or creates a subgraph by name.
+
+\doxylink{group__cgraph__subgraph_ga1c19df4ad0b6221455f56230f7ef3252}{agidsubg} allows a programmer to specify the subgraph by a unique integer ID.
+
+A new subgraph is initially empty and is of the same kind as its parent. Nested subgraph trees may be created. A subgraph\textquotesingle{}s name is only interpreted relative to its parent.
+
+A program can scan subgraphs under a given graph using \doxylink{group__cgraph__subgraph_gabcd8466586e7f9dafd183b291427231f}{agfstsubg} and \doxylink{group__cgraph__subgraph_gae997729f968b4ecc622d1a5eedf2b785}{agnxtsubg}.
+
+A subgraph is deleted with \doxylink{group__cgraph__subgraph_gab1c83c6ec6158127af8d718352cea710}{agdelsubg} (or \doxylink{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e}{agclose}).
+
+The \doxylink{group__cgraph__subgraph_gaf7bfbe45c1682b483146507823af9007}{agparent} function returns the immediate parent graph of a subgraph, or itself if the graph is already a root graph. 
+
+\label{group__cgraph__subgraph_doc-func-members}
+\Hypertarget{group__cgraph__subgraph_doc-func-members}
+\doxysubsubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__subgraph_gab1c83c6ec6158127af8d718352cea710}\index{subgraphs@{subgraphs}!agdelsubg@{agdelsubg}}
+\index{agdelsubg@{agdelsubg}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agdelsubg()}{agdelsubg()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_gab1c83c6ec6158127af8d718352cea710} 
+CGRAPH\+\_\+\+API int agdelsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{sub}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__subgraph_gabcd8466586e7f9dafd183b291427231f}\index{subgraphs@{subgraphs}!agfstsubg@{agfstsubg}}
+\index{agfstsubg@{agfstsubg}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agfstsubg()}{agfstsubg()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_gabcd8466586e7f9dafd183b291427231f} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agfstsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__subgraph_ga1c19df4ad0b6221455f56230f7ef3252}\index{subgraphs@{subgraphs}!agidsubg@{agidsubg}}
+\index{agidsubg@{agidsubg}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agidsubg()}{agidsubg()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_ga1c19df4ad0b6221455f56230f7ef3252} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agidsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__subgraph_gae997729f968b4ecc622d1a5eedf2b785}\index{subgraphs@{subgraphs}!agnxtsubg@{agnxtsubg}}
+\index{agnxtsubg@{agnxtsubg}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agnxtsubg()}{agnxtsubg()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_gae997729f968b4ecc622d1a5eedf2b785} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agnxtsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{subg}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__subgraph_gaf7bfbe45c1682b483146507823af9007}\index{subgraphs@{subgraphs}!agparent@{agparent}}
+\index{agparent@{agparent}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agparent()}{agparent()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_gaf7bfbe45c1682b483146507823af9007} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agparent (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__subgraph_ga2ca7f6ee15e2ed41b86b715d776ab230}\index{subgraphs@{subgraphs}!agsubg@{agsubg}}
+\index{agsubg@{agsubg}!subgraphs@{subgraphs}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agsubg()}{agsubg()}}
+{\footnotesize\ttfamily \label{group__cgraph__subgraph_ga2ca7f6ee15e2ed41b86b715d776ab230} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int}]{cflag}{}\end{DoxyParamCaption})}
+

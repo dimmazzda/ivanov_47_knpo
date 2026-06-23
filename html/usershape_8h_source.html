@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Исходный файл Graphviz/include/graphviz/usershape.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('usershape_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">usershape.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="usershape_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">/*************************************************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright (c) 2011 AT&amp;T Intellectual Property </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * All rights reserved. This program and the accompanying materials</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * are made available under the terms of the Eclipse Public License v1.0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * which accompanies this distribution, and is available at</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * https://www.eclipse.org/legal/epl-v10.html</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * Contributors: Details at https://graphviz.org</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="cdt_8h.html">cdt.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4">   24</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span> { <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4">FT_NULL</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d">   25</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d">FT_BMP</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9">FT_GIF</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9">FT_PNG</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806">FT_JPEG</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a">   26</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f">FT_PDF</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2">FT_PS</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a">FT_EPS</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd">FT_SVG</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8">FT_XML</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140">   27</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba">FT_RIFF</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e">FT_WEBP</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140">FT_ICO</a>, <a class="code hl_enumvalue" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075">FT_TIFF</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    } <a class="code hl_enumeration" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68c">imagetype_t</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3a">   30</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4">   31</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4">IMAGESCALE_FALSE</a>,  <span class="comment">/* no image scaling */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb">   32</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb">IMAGESCALE_TRUE</a>,   <span class="comment">/* scale image to fit but keep aspect ratio */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3">   33</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3">IMAGESCALE_WIDTH</a>,  <span class="comment">/* scale image width to fit, keep height fixed */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69">   34</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69">IMAGESCALE_HEIGHT</a>, <span class="comment">/* scale image height to fit, keep width fixed */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69">   35</a></span>    <a class="code hl_enumvalue" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69">IMAGESCALE_BOTH</a>    <span class="comment">/* scale image to fit without regard for aspect ratio */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    } <a class="code hl_enumeration" href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3a">imagescale_t</a>;</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213">   38</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de">   39</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de">IMAGEPOS_TOP_LEFT</a>,      <span class="comment">/* top left */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052">   40</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052">IMAGEPOS_TOP_CENTER</a>,    <span class="comment">/* top center */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0">   41</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0">IMAGEPOS_TOP_RIGHT</a>,     <span class="comment">/* top right */</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c">   42</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c">IMAGEPOS_MIDDLE_LEFT</a>,   <span class="comment">/* middle left */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50">   43</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50">IMAGEPOS_MIDDLE_CENTER</a>, <span class="comment">/* middle center (true center, the default)*/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9">   44</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9">IMAGEPOS_MIDDLE_RIGHT</a>,  <span class="comment">/* middle right */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523">   45</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523">IMAGEPOS_BOTTOM_LEFT</a>,   <span class="comment">/* bottom left */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f">   46</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f">IMAGEPOS_BOTTOM_CENTER</a>, <span class="comment">/* bottom center */</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd">   47</a></span>        <a class="code hl_enumvalue" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd">IMAGEPOS_BOTTOM_RIGHT</a>   <span class="comment">/* bottom right */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    } <a class="code hl_enumeration" href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213">imagepos_t</a>;</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="usershape_8h.html#a65c9d64037cce8c0cbf5fce493c8f8aa">   50</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structusershape__s.html">usershape_s</a> <a class="code hl_typedef" href="usershape_8h.html#a65c9d64037cce8c0cbf5fce493c8f8aa">usershape_t</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structusershape__s.html">   52</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structusershape__s.html">usershape_s</a> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structusershape__s.html#a40a2682187d2db02796ed4d446e82a2c">   53</a></span>    <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> <a class="code hl_variable" href="structusershape__s.html#a40a2682187d2db02796ed4d446e82a2c">link</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structusershape__s.html#a06a61b2edb37e229109ff14f619cd1aa">   54</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structusershape__s.html#a06a61b2edb37e229109ff14f619cd1aa">name</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structusershape__s.html#a523a462a282836af2f36192f3cfa9f82">   55</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structusershape__s.html#a523a462a282836af2f36192f3cfa9f82">macro_id</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structusershape__s.html#a79a9674ef74454eba073c6294a9081bc">   56</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structusershape__s.html#a79a9674ef74454eba073c6294a9081bc">must_inline</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structusershape__s.html#a6b4ed25a735f7b00843c838358e4754b">   57</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structusershape__s.html#a6b4ed25a735f7b00843c838358e4754b">nocache</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structusershape__s.html#a19d2fd0633b82a33999e8db59bb5e64a">   58</a></span>    FILE *<a class="code hl_variable" href="structusershape__s.html#a19d2fd0633b82a33999e8db59bb5e64a">f</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structusershape__s.html#a8d5d4ae51d9cdbf406bb7ebf9c5c51e1">   59</a></span>    <a class="code hl_enumeration" href="usershape_8h.html#aec44135355da1b53a922fab69dbea68c">imagetype_t</a> <a class="code hl_variable" href="structusershape__s.html#a8d5d4ae51d9cdbf406bb7ebf9c5c51e1">type</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structusershape__s.html#a1730cee3ca8168c5b06aefcd22f5d4ed">   60</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structusershape__s.html#a1730cee3ca8168c5b06aefcd22f5d4ed">stringtype</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structusershape__s.html#ad16c279f553f279d666df6cdcca9b93b">   61</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structusershape__s.html#a8ec0f0e32e680133945d4c37bf417ba4">x</a>, <a class="code hl_variable" href="structusershape__s.html#a948f5582a919aa50a6e1d5cbca60624a">y</a>, <a class="code hl_variable" href="structusershape__s.html#aeffb9708eeabb9dfbab06118df899f9f">w</a>, <a class="code hl_variable" href="structusershape__s.html#ad16c279f553f279d666df6cdcca9b93b">h</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structusershape__s.html#a0173c608d4bb680353ac56e499f4909e">   62</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structusershape__s.html#a0173c608d4bb680353ac56e499f4909e">dpi</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structusershape__s.html#a89fdc6e02e8b26990d5c6404f1a07686">   63</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structusershape__s.html#a89fdc6e02e8b26990d5c6404f1a07686">data</a>;                   <span class="comment">/* data loaded by a renderer */</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structusershape__s.html#a52ea6bed2e8d199a74ec5609ac2f9981">   64</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structusershape__s.html#a52ea6bed2e8d199a74ec5609ac2f9981">datasize</a>;              <span class="comment">/* size of data (if mmap&#39;ed) */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structusershape__s.html#a3cd7486d446eddaf02842cd8ceaa11a7">   65</a></span>    void (*<a class="code hl_variable" href="structusershape__s.html#a3cd7486d446eddaf02842cd8ceaa11a7">datafree</a>)(<a class="code hl_typedef" href="usershape_8h.html#a65c9d64037cce8c0cbf5fce493c8f8aa">usershape_t</a> *us); <span class="comment">/* renderer&#39;s function for freeing data */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    };</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acdt_8h_html"><div class="ttname"><a href="cdt_8h.html">cdt.h</a></div><div class="ttdoc">container data types API</div></div>
+<div class="ttc" id="acdt_8h_html_af1f4e66a09b733bea11936c64fe24bb6"><div class="ttname"><a href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a></div><div class="ttdeci">struct dtlink_s_ Dtlink_t</div><div class="ttdef"><b>Определения</b> cdt.h:41</div></div>
+<div class="ttc" id="astructusershape__s_html"><div class="ttname"><a href="structusershape__s.html">usershape_s</a></div><div class="ttdef"><b>Определения</b> usershape.h:52</div></div>
+<div class="ttc" id="astructusershape__s_html_a0173c608d4bb680353ac56e499f4909e"><div class="ttname"><a href="structusershape__s.html#a0173c608d4bb680353ac56e499f4909e">usershape_s::dpi</a></div><div class="ttdeci">int dpi</div><div class="ttdef"><b>Определения</b> usershape.h:62</div></div>
+<div class="ttc" id="astructusershape__s_html_a06a61b2edb37e229109ff14f619cd1aa"><div class="ttname"><a href="structusershape__s.html#a06a61b2edb37e229109ff14f619cd1aa">usershape_s::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Определения</b> usershape.h:54</div></div>
+<div class="ttc" id="astructusershape__s_html_a1730cee3ca8168c5b06aefcd22f5d4ed"><div class="ttname"><a href="structusershape__s.html#a1730cee3ca8168c5b06aefcd22f5d4ed">usershape_s::stringtype</a></div><div class="ttdeci">char * stringtype</div><div class="ttdef"><b>Определения</b> usershape.h:60</div></div>
+<div class="ttc" id="astructusershape__s_html_a19d2fd0633b82a33999e8db59bb5e64a"><div class="ttname"><a href="structusershape__s.html#a19d2fd0633b82a33999e8db59bb5e64a">usershape_s::f</a></div><div class="ttdeci">FILE * f</div><div class="ttdef"><b>Определения</b> usershape.h:58</div></div>
+<div class="ttc" id="astructusershape__s_html_a3cd7486d446eddaf02842cd8ceaa11a7"><div class="ttname"><a href="structusershape__s.html#a3cd7486d446eddaf02842cd8ceaa11a7">usershape_s::datafree</a></div><div class="ttdeci">void(* datafree)(usershape_t *us)</div><div class="ttdef"><b>Определения</b> usershape.h:65</div></div>
+<div class="ttc" id="astructusershape__s_html_a40a2682187d2db02796ed4d446e82a2c"><div class="ttname"><a href="structusershape__s.html#a40a2682187d2db02796ed4d446e82a2c">usershape_s::link</a></div><div class="ttdeci">Dtlink_t link</div><div class="ttdef"><b>Определения</b> usershape.h:53</div></div>
+<div class="ttc" id="astructusershape__s_html_a523a462a282836af2f36192f3cfa9f82"><div class="ttname"><a href="structusershape__s.html#a523a462a282836af2f36192f3cfa9f82">usershape_s::macro_id</a></div><div class="ttdeci">int macro_id</div><div class="ttdef"><b>Определения</b> usershape.h:55</div></div>
+<div class="ttc" id="astructusershape__s_html_a52ea6bed2e8d199a74ec5609ac2f9981"><div class="ttname"><a href="structusershape__s.html#a52ea6bed2e8d199a74ec5609ac2f9981">usershape_s::datasize</a></div><div class="ttdeci">size_t datasize</div><div class="ttdef"><b>Определения</b> usershape.h:64</div></div>
+<div class="ttc" id="astructusershape__s_html_a6b4ed25a735f7b00843c838358e4754b"><div class="ttname"><a href="structusershape__s.html#a6b4ed25a735f7b00843c838358e4754b">usershape_s::nocache</a></div><div class="ttdeci">bool nocache</div><div class="ttdef"><b>Определения</b> usershape.h:57</div></div>
+<div class="ttc" id="astructusershape__s_html_a79a9674ef74454eba073c6294a9081bc"><div class="ttname"><a href="structusershape__s.html#a79a9674ef74454eba073c6294a9081bc">usershape_s::must_inline</a></div><div class="ttdeci">bool must_inline</div><div class="ttdef"><b>Определения</b> usershape.h:56</div></div>
+<div class="ttc" id="astructusershape__s_html_a89fdc6e02e8b26990d5c6404f1a07686"><div class="ttname"><a href="structusershape__s.html#a89fdc6e02e8b26990d5c6404f1a07686">usershape_s::data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Определения</b> usershape.h:63</div></div>
+<div class="ttc" id="astructusershape__s_html_a8d5d4ae51d9cdbf406bb7ebf9c5c51e1"><div class="ttname"><a href="structusershape__s.html#a8d5d4ae51d9cdbf406bb7ebf9c5c51e1">usershape_s::type</a></div><div class="ttdeci">imagetype_t type</div><div class="ttdef"><b>Определения</b> usershape.h:59</div></div>
+<div class="ttc" id="astructusershape__s_html_a8ec0f0e32e680133945d4c37bf417ba4"><div class="ttname"><a href="structusershape__s.html#a8ec0f0e32e680133945d4c37bf417ba4">usershape_s::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Определения</b> usershape.h:61</div></div>
+<div class="ttc" id="astructusershape__s_html_a948f5582a919aa50a6e1d5cbca60624a"><div class="ttname"><a href="structusershape__s.html#a948f5582a919aa50a6e1d5cbca60624a">usershape_s::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Определения</b> usershape.h:61</div></div>
+<div class="ttc" id="astructusershape__s_html_ad16c279f553f279d666df6cdcca9b93b"><div class="ttname"><a href="structusershape__s.html#ad16c279f553f279d666df6cdcca9b93b">usershape_s::h</a></div><div class="ttdeci">double h</div><div class="ttdef"><b>Определения</b> usershape.h:61</div></div>
+<div class="ttc" id="astructusershape__s_html_aeffb9708eeabb9dfbab06118df899f9f"><div class="ttname"><a href="structusershape__s.html#aeffb9708eeabb9dfbab06118df899f9f">usershape_s::w</a></div><div class="ttdeci">double w</div><div class="ttdef"><b>Определения</b> usershape.h:61</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213">imagepos_t</a></div><div class="ttdeci">imagepos_t</div><div class="ttdef"><b>Определения</b> usershape.h:38</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50">IMAGEPOS_MIDDLE_CENTER</a></div><div class="ttdeci">@ IMAGEPOS_MIDDLE_CENTER</div><div class="ttdef"><b>Определения</b> usershape.h:43</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd">IMAGEPOS_BOTTOM_RIGHT</a></div><div class="ttdeci">@ IMAGEPOS_BOTTOM_RIGHT</div><div class="ttdef"><b>Определения</b> usershape.h:47</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0">IMAGEPOS_TOP_RIGHT</a></div><div class="ttdeci">@ IMAGEPOS_TOP_RIGHT</div><div class="ttdef"><b>Определения</b> usershape.h:41</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c">IMAGEPOS_MIDDLE_LEFT</a></div><div class="ttdeci">@ IMAGEPOS_MIDDLE_LEFT</div><div class="ttdef"><b>Определения</b> usershape.h:42</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052">IMAGEPOS_TOP_CENTER</a></div><div class="ttdeci">@ IMAGEPOS_TOP_CENTER</div><div class="ttdef"><b>Определения</b> usershape.h:40</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523">IMAGEPOS_BOTTOM_LEFT</a></div><div class="ttdeci">@ IMAGEPOS_BOTTOM_LEFT</div><div class="ttdef"><b>Определения</b> usershape.h:45</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de">IMAGEPOS_TOP_LEFT</a></div><div class="ttdeci">@ IMAGEPOS_TOP_LEFT</div><div class="ttdef"><b>Определения</b> usershape.h:39</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f">IMAGEPOS_BOTTOM_CENTER</a></div><div class="ttdeci">@ IMAGEPOS_BOTTOM_CENTER</div><div class="ttdef"><b>Определения</b> usershape.h:46</div></div>
+<div class="ttc" id="ausershape_8h_html_a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9"><div class="ttname"><a href="usershape_8h.html#a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9">IMAGEPOS_MIDDLE_RIGHT</a></div><div class="ttdeci">@ IMAGEPOS_MIDDLE_RIGHT</div><div class="ttdef"><b>Определения</b> usershape.h:44</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3a"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3a">imagescale_t</a></div><div class="ttdeci">imagescale_t</div><div class="ttdef"><b>Определения</b> usershape.h:30</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69">IMAGESCALE_BOTH</a></div><div class="ttdeci">@ IMAGESCALE_BOTH</div><div class="ttdef"><b>Определения</b> usershape.h:35</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3">IMAGESCALE_WIDTH</a></div><div class="ttdeci">@ IMAGESCALE_WIDTH</div><div class="ttdef"><b>Определения</b> usershape.h:33</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4">IMAGESCALE_FALSE</a></div><div class="ttdeci">@ IMAGESCALE_FALSE</div><div class="ttdef"><b>Определения</b> usershape.h:31</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb">IMAGESCALE_TRUE</a></div><div class="ttdeci">@ IMAGESCALE_TRUE</div><div class="ttdef"><b>Определения</b> usershape.h:32</div></div>
+<div class="ttc" id="ausershape_8h_html_a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69"><div class="ttname"><a href="usershape_8h.html#a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69">IMAGESCALE_HEIGHT</a></div><div class="ttdeci">@ IMAGESCALE_HEIGHT</div><div class="ttdef"><b>Определения</b> usershape.h:34</div></div>
+<div class="ttc" id="ausershape_8h_html_a65c9d64037cce8c0cbf5fce493c8f8aa"><div class="ttname"><a href="usershape_8h.html#a65c9d64037cce8c0cbf5fce493c8f8aa">usershape_t</a></div><div class="ttdeci">struct usershape_s usershape_t</div><div class="ttdef"><b>Определения</b> usershape.h:50</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68c"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68c">imagetype_t</a></div><div class="ttdeci">imagetype_t</div><div class="ttdef"><b>Определения</b> usershape.h:24</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d">FT_BMP</a></div><div class="ttdeci">@ FT_BMP</div><div class="ttdef"><b>Определения</b> usershape.h:25</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2">FT_PS</a></div><div class="ttdeci">@ FT_PS</div><div class="ttdef"><b>Определения</b> usershape.h:26</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140">FT_ICO</a></div><div class="ttdeci">@ FT_ICO</div><div class="ttdef"><b>Определения</b> usershape.h:27</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4">FT_NULL</a></div><div class="ttdeci">@ FT_NULL</div><div class="ttdef"><b>Определения</b> usershape.h:24</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075">FT_TIFF</a></div><div class="ttdeci">@ FT_TIFF</div><div class="ttdef"><b>Определения</b> usershape.h:27</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a">FT_EPS</a></div><div class="ttdeci">@ FT_EPS</div><div class="ttdef"><b>Определения</b> usershape.h:26</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd">FT_SVG</a></div><div class="ttdeci">@ FT_SVG</div><div class="ttdef"><b>Определения</b> usershape.h:26</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e">FT_WEBP</a></div><div class="ttdeci">@ FT_WEBP</div><div class="ttdef"><b>Определения</b> usershape.h:27</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9">FT_GIF</a></div><div class="ttdeci">@ FT_GIF</div><div class="ttdef"><b>Определения</b> usershape.h:25</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806">FT_JPEG</a></div><div class="ttdeci">@ FT_JPEG</div><div class="ttdef"><b>Определения</b> usershape.h:25</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba">FT_RIFF</a></div><div class="ttdeci">@ FT_RIFF</div><div class="ttdef"><b>Определения</b> usershape.h:27</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9">FT_PNG</a></div><div class="ttdeci">@ FT_PNG</div><div class="ttdef"><b>Определения</b> usershape.h:25</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8">FT_XML</a></div><div class="ttdeci">@ FT_XML</div><div class="ttdef"><b>Определения</b> usershape.h:26</div></div>
+<div class="ttc" id="ausershape_8h_html_aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f"><div class="ttname"><a href="usershape_8h.html#aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f">FT_PDF</a></div><div class="ttdeci">@ FT_PDF</div><div class="ttdef"><b>Определения</b> usershape.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="usershape_8h.html">usershape.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Исходный файл Graphviz/include/graphviz/GVLayout.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_g_v_layout_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GVLayout.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_g_v_layout_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_a_graph_8h.html">AGraph.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_g_v_context_8h.html">GVContext.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_g_v_render_data_8h.html">GVRenderData.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifdef GVDLL</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if gvc___EXPORTS </span><span class="comment">// CMake&#39;s substitution of gvc++_EXPORTS</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define GVLAYOUT_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define GVLAYOUT_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#ifndef GVLAYOUT_API</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">   19</a></span><span class="preprocessor">#define GVLAYOUT_API </span><span class="comment">/* nothing */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_g_v_c.html">GVC</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html">   28</a></span><span class="keyword">class </span><a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">   30</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a>(<span class="keyword">const</span> std::shared_ptr&lt;GVContext&gt; &amp;gvc,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                        <span class="keyword">const</span> std::shared_ptr&lt;CGraph::AGraph&gt; &amp;g,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        <span class="keyword">const</span> std::string &amp;engine);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#ad8d95f83f8c1227512a25665b6ea0c85">   33</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#ad8d95f83f8c1227512a25665b6ea0c85">GVLayout</a>(<a class="code hl_class" href="class_g_v_c_1_1_g_v_context.html">GVContext</a> &amp;&amp;gvc, <a class="code hl_class" href="class_c_graph_1_1_a_graph.html">CGraph::AGraph</a> &amp;&amp;g,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                        <span class="keyword">const</span> std::string &amp;engine);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#a61d4f67b700a0368b16a696b3398d224">   35</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a61d4f67b700a0368b16a696b3398d224">GVLayout</a>(std::shared_ptr&lt;GVContext&gt; gvc, <a class="code hl_class" href="class_c_graph_1_1_a_graph.html">CGraph::AGraph</a> &amp;&amp;g,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        <span class="keyword">const</span> std::string &amp;engine);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#ae494ab6427df13a05fde29cc352ddbdb">   37</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#ae494ab6427df13a05fde29cc352ddbdb">GVLayout</a>(<a class="code hl_class" href="class_g_v_c_1_1_g_v_context.html">GVContext</a> &amp;&amp;gvc, std::shared_ptr&lt;CGraph::AGraph&gt; g,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        <span class="keyword">const</span> std::string &amp;engine);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#a8d758dbed9da8709ce0964cdb5db2e00">   39</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a8d758dbed9da8709ce0964cdb5db2e00">~GVLayout</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// default copy since we manage resources through movable types</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#a065a2cbe365a74fc6912faa773d0d44f">   42</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a065a2cbe365a74fc6912faa773d0d44f">GVLayout</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#aa1f9dabb02359edfdff47261d5e4d414">   43</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;<a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#aa1f9dabb02359edfdff47261d5e4d414">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">// default move since we manage resources through movable types</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#ac40708b3d6a254f5e8b74043d60ce04c">   46</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#ac40708b3d6a254f5e8b74043d60ce04c">GVLayout</a>(<a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#aa83800dbdfe6355ae00b6db96928e01d">   47</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;<a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#aa83800dbdfe6355ae00b6db96928e01d">operator=</a>(<a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVLayout</a> &amp;&amp;) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">// render the layout in the specified format</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_g_v_c_1_1_g_v_layout.html#adcd8b5ed7c97532103d771ef5dbd6173">   50</a></span>  <a class="code hl_define" href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a> <a class="code hl_class" href="class_g_v_c_1_1_g_v_render_data.html">GVRenderData</a> <a class="code hl_function" href="class_g_v_c_1_1_g_v_layout.html#adcd8b5ed7c97532103d771ef5dbd6173">render</a>(<span class="keyword">const</span> std::string &amp;format) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  std::shared_ptr&lt;GVContext&gt; m_gvc;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  std::shared_ptr&lt;CGraph::AGraph&gt; m_g;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">//  namespace GVC</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#undef GVLAYOUT_API</span></div>
+<div class="ttc" id="a_a_graph_8h_html"><div class="ttname"><a href="_a_graph_8h.html">AGraph.h</a></div></div>
+<div class="ttc" id="a_g_v_context_8h_html"><div class="ttname"><a href="_g_v_context_8h.html">GVContext.h</a></div></div>
+<div class="ttc" id="a_g_v_layout_8h_html_af0e6de9a8115030216fad5a998e15f2e"><div class="ttname"><a href="_g_v_layout_8h.html#af0e6de9a8115030216fad5a998e15f2e">GVLAYOUT_API</a></div><div class="ttdeci">#define GVLAYOUT_API</div><div class="ttdef"><b>Определения</b> GVLayout.h:19</div></div>
+<div class="ttc" id="a_g_v_render_data_8h_html"><div class="ttname"><a href="_g_v_render_data_8h.html">GVRenderData.h</a></div></div>
+<div class="ttc" id="aclass_c_graph_1_1_a_graph_html"><div class="ttname"><a href="class_c_graph_1_1_a_graph.html">CGraph::AGraph</a></div><div class="ttdoc">The AGraph class represents an abstract graph.</div><div class="ttdef"><b>Определения</b> AGraph.h:26</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_context_html"><div class="ttname"><a href="class_g_v_c_1_1_g_v_context.html">GVC::GVContext</a></div><div class="ttdoc">The GVContext class represents a Graphviz context.</div><div class="ttdef"><b>Определения</b> GVContext.h:26</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_a065a2cbe365a74fc6912faa773d0d44f"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#a065a2cbe365a74fc6912faa773d0d44f">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(const GVLayout &amp;)=default</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_a2c1860a48f1578874c2945aef27865b1"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#a2c1860a48f1578874c2945aef27865b1">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(const std::shared_ptr&lt; GVContext &gt; &amp;gvc, const std::shared_ptr&lt; CGraph::AGraph &gt; &amp;g, const std::string &amp;engine)</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_a61d4f67b700a0368b16a696b3398d224"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#a61d4f67b700a0368b16a696b3398d224">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(std::shared_ptr&lt; GVContext &gt; gvc, CGraph::AGraph &amp;&amp;g, const std::string &amp;engine)</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_a8d758dbed9da8709ce0964cdb5db2e00"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#a8d758dbed9da8709ce0964cdb5db2e00">GVC::GVLayout::~GVLayout</a></div><div class="ttdeci">GVLAYOUT_API ~GVLayout()</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_aa1f9dabb02359edfdff47261d5e4d414"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#aa1f9dabb02359edfdff47261d5e4d414">GVC::GVLayout::operator=</a></div><div class="ttdeci">GVLAYOUT_API GVLayout &amp; operator=(const GVLayout &amp;)=default</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_aa83800dbdfe6355ae00b6db96928e01d"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#aa83800dbdfe6355ae00b6db96928e01d">GVC::GVLayout::operator=</a></div><div class="ttdeci">GVLAYOUT_API GVLayout &amp; operator=(GVLayout &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_ac40708b3d6a254f5e8b74043d60ce04c"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#ac40708b3d6a254f5e8b74043d60ce04c">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(GVLayout &amp;&amp;)=default</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_ad8d95f83f8c1227512a25665b6ea0c85"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#ad8d95f83f8c1227512a25665b6ea0c85">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(GVContext &amp;&amp;gvc, CGraph::AGraph &amp;&amp;g, const std::string &amp;engine)</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_adcd8b5ed7c97532103d771ef5dbd6173"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#adcd8b5ed7c97532103d771ef5dbd6173">GVC::GVLayout::render</a></div><div class="ttdeci">GVLAYOUT_API GVRenderData render(const std::string &amp;format) const</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_layout_html_ae494ab6427df13a05fde29cc352ddbdb"><div class="ttname"><a href="class_g_v_c_1_1_g_v_layout.html#ae494ab6427df13a05fde29cc352ddbdb">GVC::GVLayout::GVLayout</a></div><div class="ttdeci">GVLAYOUT_API GVLayout(GVContext &amp;&amp;gvc, std::shared_ptr&lt; CGraph::AGraph &gt; g, const std::string &amp;engine)</div></div>
+<div class="ttc" id="aclass_g_v_c_1_1_g_v_render_data_html"><div class="ttname"><a href="class_g_v_c_1_1_g_v_render_data.html">GVC::GVRenderData</a></div><div class="ttdoc">The GVRenderData class represents a rendered layout in a specific text format.</div><div class="ttdef"><b>Определения</b> GVRenderData.h:27</div></div>
+<div class="ttc" id="anamespace_g_v_c_html"><div class="ttname"><a href="namespace_g_v_c.html">GVC</a></div><div class="ttdef"><b>Определения</b> GVContext.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="_g_v_layout_8h.html">GVLayout.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

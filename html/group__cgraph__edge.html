@@ -1,0 +1,1299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: edges</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__cgraph__edge.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">edges <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__object.html">objects</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:Agedge_5Fs" id="r_Agedge_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_agedge__s.html">Agedge_s</a></td></tr>
+<tr class="memitem:Agedgepair_5Fs" id="r_Agedgepair_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_agedgepair__s.html">Agedgepair_s</a></td></tr>
+<tr class="memitem:Agedgeinfo_5Ft" id="r_Agedgeinfo_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ga3fc1ac2690431efedc87114c3e6feb77" id="r_ga3fc1ac2690431efedc87114c3e6feb77"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3fc1ac2690431efedc87114c3e6feb77">AGIN2OUT</a>(inedge)</td></tr>
+<tr class="memdesc:ga3fc1ac2690431efedc87114c3e6feb77"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_agedgepair__s.html#a137241a185cb7c1492f183ae85ec9935">Agedgepair_s.in</a> -&gt; <a class="el" href="struct_agedgepair__s.html#a3f91019e6eca1bc61d87e82675f0da06">Agedgepair_s.out</a>.  <br /></td></tr>
+<tr class="memitem:gafc0a5ce55b7eb368861077afcecba52f" id="r_gafc0a5ce55b7eb368861077afcecba52f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gafc0a5ce55b7eb368861077afcecba52f">AGOUT2IN</a>(outedge)</td></tr>
+<tr class="memdesc:gafc0a5ce55b7eb368861077afcecba52f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_agedgepair__s.html#a3f91019e6eca1bc61d87e82675f0da06">Agedgepair_s.out</a> -&gt; <a class="el" href="struct_agedgepair__s.html#a137241a185cb7c1492f183ae85ec9935">Agedgepair_s.in</a>.  <br /></td></tr>
+<tr class="memitem:gaed727d3e94d3aef53f5e679cc4041da2" id="r_gaed727d3e94d3aef53f5e679cc4041da2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaed727d3e94d3aef53f5e679cc4041da2">AGOPP</a>(e)</td></tr>
+<tr class="memitem:ga2629b0763de05c381161770b0640b0ad" id="r_ga2629b0763de05c381161770b0640b0ad"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga2629b0763de05c381161770b0640b0ad">AGMKOUT</a>(e)</td></tr>
+<tr class="memitem:ga8f16054047081a8639e79509f855fdf1" id="r_ga8f16054047081a8639e79509f855fdf1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8f16054047081a8639e79509f855fdf1">AGMKIN</a>(e)</td></tr>
+<tr class="memitem:gaddbb048b0b1e23abd8b4d40df33f0104" id="r_gaddbb048b0b1e23abd8b4d40df33f0104"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaddbb048b0b1e23abd8b4d40df33f0104">AGTAIL</a>(e)</td></tr>
+<tr class="memitem:gaf29d9915ddd2240bab9693727ef7b069" id="r_gaf29d9915ddd2240bab9693727ef7b069"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf29d9915ddd2240bab9693727ef7b069">AGHEAD</a>(e)</td></tr>
+<tr class="memitem:ga6c4d7e15c611303c142ce711229cda0a" id="r_ga6c4d7e15c611303c142ce711229cda0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6c4d7e15c611303c142ce711229cda0a">AGEQEDGE</a>(e,  f)</td></tr>
+<tr class="memitem:ga96fc1fa869456d5345e784a7bf9c615e" id="r_ga96fc1fa869456d5345e784a7bf9c615e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga96fc1fa869456d5345e784a7bf9c615e">agtail</a>(e)</td></tr>
+<tr class="memitem:gad106624d1b561de8683c142319ff630e" id="r_gad106624d1b561de8683c142319ff630e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gad106624d1b561de8683c142319ff630e">aghead</a>(e)</td></tr>
+<tr class="memitem:ga21ee14460f49ddb2e954f3cf9f9100a3" id="r_ga21ee14460f49ddb2e954f3cf9f9100a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga21ee14460f49ddb2e954f3cf9f9100a3">agopp</a>(e)</td></tr>
+<tr class="memdesc:ga21ee14460f49ddb2e954f3cf9f9100a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">opposite edge: flip <a class="el" href="struct_agedgepair__s.html#a3f91019e6eca1bc61d87e82675f0da06">Agedgepair_s.out</a> ⇄ <a class="el" href="struct_agedgepair__s.html#a137241a185cb7c1492f183ae85ec9935">Agedgepair_s.in</a>  <br /></td></tr>
+<tr class="memitem:ga8b777558e7d3375ab4e6cfd4f22c4528" id="r_ga8b777558e7d3375ab4e6cfd4f22c4528"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8b777558e7d3375ab4e6cfd4f22c4528">ageqedge</a>(e,  f)</td></tr>
+<tr class="memdesc:ga8b777558e7d3375ab4e6cfd4f22c4528"><td class="mdescLeft">&#160;</td><td class="mdescRight">edges are equal  <br /></td></tr>
+<tr class="memitem:ga21c6527e075feb0693a9112e122110ac" id="r_ga21c6527e075feb0693a9112e122110ac"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga21c6527e075feb0693a9112e122110ac">TAILPORT_ID</a>&#160;&#160;&#160;&quot;tailport&quot;</td></tr>
+<tr class="memitem:ga5bc7f7e2e3a0459be80728f8e6495c56" id="r_ga5bc7f7e2e3a0459be80728f8e6495c56"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5bc7f7e2e3a0459be80728f8e6495c56">HEADPORT_ID</a>&#160;&#160;&#160;&quot;headport&quot;</td></tr>
+<tr class="memitem:gaa2b7773c035a0866fa49e47682f03806" id="r_gaa2b7773c035a0866fa49e47682f03806"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaa2b7773c035a0866fa49e47682f03806">ED_alg</a>(e)</td></tr>
+<tr class="memitem:ga5322ddecbfd78b6219d7858130e8ba89" id="r_ga5322ddecbfd78b6219d7858130e8ba89"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga5322ddecbfd78b6219d7858130e8ba89">ED_conc_opp_flag</a>(e)</td></tr>
+<tr class="memitem:ga94822e795d402ebafb4f534f43fe58d3" id="r_ga94822e795d402ebafb4f534f43fe58d3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga94822e795d402ebafb4f534f43fe58d3">ED_count</a>(e)</td></tr>
+<tr class="memitem:gacb80190e3b238a47474e4e9a2d9a9a17" id="r_gacb80190e3b238a47474e4e9a2d9a9a17"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gacb80190e3b238a47474e4e9a2d9a9a17">ED_cutvalue</a>(e)</td></tr>
+<tr class="memitem:ga9b03efc65b943a56a6da501119f61ff2" id="r_ga9b03efc65b943a56a6da501119f61ff2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga9b03efc65b943a56a6da501119f61ff2">ED_edge_type</a>(e)</td></tr>
+<tr class="memitem:ga14c23d9ac2ce08caf15e98a2b00e560f" id="r_ga14c23d9ac2ce08caf15e98a2b00e560f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga14c23d9ac2ce08caf15e98a2b00e560f">ED_compound</a>(e)</td></tr>
+<tr class="memitem:gacb5bb0e8c848dc4992471c3535dee33d" id="r_gacb5bb0e8c848dc4992471c3535dee33d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gacb5bb0e8c848dc4992471c3535dee33d">ED_adjacent</a>(e)</td></tr>
+<tr class="memitem:gabb948350e25dda9a74389582ed8876d0" id="r_gabb948350e25dda9a74389582ed8876d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gabb948350e25dda9a74389582ed8876d0">ED_factor</a>(e)</td></tr>
+<tr class="memitem:ga872eea083b0fc41d5cbe4aed44078d5b" id="r_ga872eea083b0fc41d5cbe4aed44078d5b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga872eea083b0fc41d5cbe4aed44078d5b">ED_gui_state</a>(e)</td></tr>
+<tr class="memitem:ga7246ae9cbfda66cab6b9050c5e5a3494" id="r_ga7246ae9cbfda66cab6b9050c5e5a3494"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7246ae9cbfda66cab6b9050c5e5a3494">ED_head_label</a>(e)</td></tr>
+<tr class="memitem:gadec0e33e4e788c1ce603597b89d3055a" id="r_gadec0e33e4e788c1ce603597b89d3055a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gadec0e33e4e788c1ce603597b89d3055a">ED_head_port</a>(e)</td></tr>
+<tr class="memitem:gae590329810778be5909563f40375c458" id="r_gae590329810778be5909563f40375c458"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gae590329810778be5909563f40375c458">ED_label</a>(e)</td></tr>
+<tr class="memitem:ga60a2aa92dd94846e103ae74ea88a306a" id="r_ga60a2aa92dd94846e103ae74ea88a306a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga60a2aa92dd94846e103ae74ea88a306a">ED_xlabel</a>(e)</td></tr>
+<tr class="memitem:ga634e2a938804e412ae5bd59c4952e1ff" id="r_ga634e2a938804e412ae5bd59c4952e1ff"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga634e2a938804e412ae5bd59c4952e1ff">ED_label_ontop</a>(e)</td></tr>
+<tr class="memitem:ga33ee77a99cd045f6ce3432ac896dd7ef" id="r_ga33ee77a99cd045f6ce3432ac896dd7ef"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga33ee77a99cd045f6ce3432ac896dd7ef">ED_minlen</a>(e)</td></tr>
+<tr class="memitem:gaab0740676cd17e8496c1de18c579a182" id="r_gaab0740676cd17e8496c1de18c579a182"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaab0740676cd17e8496c1de18c579a182">ED_path</a>(e)</td></tr>
+<tr class="memitem:ga58e5543a5552a571c9ad286944f5e74d" id="r_ga58e5543a5552a571c9ad286944f5e74d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga58e5543a5552a571c9ad286944f5e74d">ED_showboxes</a>(e)</td></tr>
+<tr class="memitem:ga8fb5cc3d3b3e8cb72c82e87c843f3432" id="r_ga8fb5cc3d3b3e8cb72c82e87c843f3432"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8fb5cc3d3b3e8cb72c82e87c843f3432">ED_spl</a>(e)</td></tr>
+<tr class="memitem:gabaffd96fcefc50e244c603930299a3fe" id="r_gabaffd96fcefc50e244c603930299a3fe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gabaffd96fcefc50e244c603930299a3fe">ED_tail_label</a>(e)</td></tr>
+<tr class="memitem:gaebbf6cf6d8a89d415a8d0b40df2c110d" id="r_gaebbf6cf6d8a89d415a8d0b40df2c110d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaebbf6cf6d8a89d415a8d0b40df2c110d">ED_tail_port</a>(e)</td></tr>
+<tr class="memitem:ga0a6706e6b353fb3420b0bacd7d3a2251" id="r_ga0a6706e6b353fb3420b0bacd7d3a2251"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0a6706e6b353fb3420b0bacd7d3a2251">ED_to_orig</a>(e)</td></tr>
+<tr class="memitem:gaf626c847d81347ad341596b6809a05e2" id="r_gaf626c847d81347ad341596b6809a05e2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf626c847d81347ad341596b6809a05e2">ED_to_virt</a>(e)</td></tr>
+<tr class="memitem:ga0ee6b93c9004250a5f12e29e2c894167" id="r_ga0ee6b93c9004250a5f12e29e2c894167"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0ee6b93c9004250a5f12e29e2c894167">ED_tree_index</a>(e)</td></tr>
+<tr class="memitem:ga7327a70c8b4346b7ebed6867736b7d53" id="r_ga7327a70c8b4346b7ebed6867736b7d53"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7327a70c8b4346b7ebed6867736b7d53">ED_xpenalty</a>(e)</td></tr>
+<tr class="memitem:ga331c2d40ba790391413f9c335bdf1d1b" id="r_ga331c2d40ba790391413f9c335bdf1d1b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga331c2d40ba790391413f9c335bdf1d1b">ED_dist</a>(e)</td></tr>
+<tr class="memitem:gaa50ab14aac03a171606749049925384f" id="r_gaa50ab14aac03a171606749049925384f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaa50ab14aac03a171606749049925384f">ED_weight</a>(e)</td></tr>
+<tr class="memitem:gab58bf52067c43e9deb7e9bad4fccfcba" id="r_gab58bf52067c43e9deb7e9bad4fccfcba"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab58bf52067c43e9deb7e9bad4fccfcba">agfindedge</a>(g,  t,  h)</td></tr>
+<tr class="memitem:ga7321b58cb4928637f7309edf433bbea5" id="r_ga7321b58cb4928637f7309edf433bbea5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7321b58cb4928637f7309edf433bbea5">agfindedgeattr</a>(g,  a)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ga7c54f4922d88107ff771babd5e04dacb" id="r_ga7c54f4922d88107ff771babd5e04dacb"><td class="memItemLeft">typedef struct <a class="el" href="struct_agedge__s.html">Agedge_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a></td></tr>
+<tr class="memdesc:ga7c54f4922d88107ff771babd5e04dacb"><td class="mdescLeft">&#160;</td><td class="mdescRight">node pair  <br /></td></tr>
+<tr class="memitem:ga23808484bcb2730ccccc6138ef0fc0e2" id="r_ga23808484bcb2730ccccc6138ef0fc0e2"><td class="memItemLeft">typedef struct <a class="el" href="struct_agedgepair__s.html">Agedgepair_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga23808484bcb2730ccccc6138ef0fc0e2">Agedgepair_t</a></td></tr>
+<tr class="memdesc:ga23808484bcb2730ccccc6138ef0fc0e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the edge object  <br /></td></tr>
+<tr class="memitem:ga7f6006922902c3a180aa46008d9cda04" id="r_ga7f6006922902c3a180aa46008d9cda04"><td class="memItemLeft">typedef struct Agedgeinfo_t&#160;</td><td class="memItemRight"><a class="el" href="#ga7f6006922902c3a180aa46008d9cda04">Agedgeinfo_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga95def214657d6bb88fa9fb78c0a8decc" id="r_ga95def214657d6bb88fa9fb78c0a8decc"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga95def214657d6bb88fa9fb78c0a8decc">agedge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *t, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *h, char *name, int createflag)</td></tr>
+<tr class="memitem:ga0742c930a05dedd75c1af738c07a0838" id="r_ga0742c930a05dedd75c1af738c07a0838"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga0742c930a05dedd75c1af738c07a0838">agidedge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *t, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *h, <a class="el" href="group__cgraph__object.html#ga496f55d8b021184f08084dcecc4724ec">IDTYPE</a> id, int createflag)</td></tr>
+<tr class="memitem:ga118a898f2c8f8da04983ee098d6b4397" id="r_ga118a898f2c8f8da04983ee098d6b4397"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga118a898f2c8f8da04983ee098d6b4397">agsubedge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *e, int createflag)</td></tr>
+<tr class="memitem:ga96ce3a0e231ffa09821c1c5006ad4b3f" id="r_ga96ce3a0e231ffa09821c1c5006ad4b3f"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga96ce3a0e231ffa09821c1c5006ad4b3f">agfstin</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n)</td></tr>
+<tr class="memitem:ga131b383f7a6c07ba45cca2911f96acb4" id="r_ga131b383f7a6c07ba45cca2911f96acb4"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga131b383f7a6c07ba45cca2911f96acb4">agnxtin</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *e)</td></tr>
+<tr class="memitem:gad7746ce0558651807cc1c090dd7a10f9" id="r_gad7746ce0558651807cc1c090dd7a10f9"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gad7746ce0558651807cc1c090dd7a10f9">agfstout</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n)</td></tr>
+<tr class="memitem:ga114a41c25080ac2787b51b3b2514693b" id="r_ga114a41c25080ac2787b51b3b2514693b"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga114a41c25080ac2787b51b3b2514693b">agnxtout</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *e)</td></tr>
+<tr class="memitem:gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd" id="r_gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd">agfstedge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n)</td></tr>
+<tr class="memitem:gac30d1b378d21509656500ad476b7029b" id="r_gac30d1b378d21509656500ad476b7029b"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gac30d1b378d21509656500ad476b7029b">agnxtedge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *e, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n)</td></tr>
+<tr class="memitem:gaa6b8ecac59848235f597cf522634a371" id="r_gaa6b8ecac59848235f597cf522634a371"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gaa6b8ecac59848235f597cf522634a371">agdeledge</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *arg_e)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>An abstract edge has two endpoint nodes called tail and head where all outedges of the same node have it as the tail value and similarly all inedges have it as the head. In an undirected graph, head and tail are interchangeable. If a graph has multi-edges between the same pair of nodes, the edge's string name behaves as a secondary key.</p>
+<p>Note that an abstract edge has two distinct concrete representations: as an in-edge and as an out-edge. In particular, the pointer as an out-edge is different from the pointer as an in-edge. The function <a class="el" href="#ga8b777558e7d3375ab4e6cfd4f22c4528" title="ageqedge">ageqedge</a> canonicalizes the pointers before doing a comparison and so can be used to test edge equality. The sense of an edge can be flipped using <a class="el" href="#ga21ee14460f49ddb2e954f3cf9f9100a3" title="agopp">agopp</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="ga6c4d7e15c611303c142ce711229cda0a" name="ga6c4d7e15c611303c142ce711229cda0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c4d7e15c611303c142ce711229cda0a">&#9670;&#160;</a></span>AGEQEDGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGEQEDGE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#ga2629b0763de05c381161770b0640b0ad">AGMKOUT</a>(e) == <a class="code hl_define" href="#ga2629b0763de05c381161770b0640b0ad">AGMKOUT</a>(f))</div>
+<div class="ttc" id="agroup__cgraph__edge_html_ga2629b0763de05c381161770b0640b0ad"><div class="ttname"><a href="#ga2629b0763de05c381161770b0640b0ad">AGMKOUT</a></div><div class="ttdeci">#define AGMKOUT(e)</div><div class="ttdef"><b>Определения</b> cgraph.h:970</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga8b777558e7d3375ab4e6cfd4f22c4528" name="ga8b777558e7d3375ab4e6cfd4f22c4528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b777558e7d3375ab4e6cfd4f22c4528">&#9670;&#160;</a></span>ageqedge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ageqedge</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#ga6c4d7e15c611303c142ce711229cda0a">AGEQEDGE</a>(e, f)</div>
+<div class="ttc" id="agroup__cgraph__edge_html_ga6c4d7e15c611303c142ce711229cda0a"><div class="ttname"><a href="#ga6c4d7e15c611303c142ce711229cda0a">AGEQEDGE</a></div><div class="ttdeci">#define AGEQEDGE(e, f)</div><div class="ttdef"><b>Определения</b> cgraph.h:974</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gab58bf52067c43e9deb7e9bad4fccfcba" name="gab58bf52067c43e9deb7e9bad4fccfcba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab58bf52067c43e9deb7e9bad4fccfcba">&#9670;&#160;</a></span>agfindedge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define agfindedge</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>h</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="#ga95def214657d6bb88fa9fb78c0a8decc">agedge</a>(g,t,h,NULL,0))</div>
+<div class="ttc" id="agroup__cgraph__edge_html_ga95def214657d6bb88fa9fb78c0a8decc"><div class="ttname"><a href="#ga95def214657d6bb88fa9fb78c0a8decc">agedge</a></div><div class="ttdeci">CGRAPH_API Agedge_t * agedge(Agraph_t *g, Agnode_t *t, Agnode_t *h, char *name, int createflag)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga7321b58cb4928637f7309edf433bbea5" name="ga7321b58cb4928637f7309edf433bbea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7321b58cb4928637f7309edf433bbea5">&#9670;&#160;</a></span>agfindedgeattr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define agfindedgeattr</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="group__cgraph__attr.html#ga7523d2c3b09fce2d069cc8f98f6b156f">agattr_text</a>(g,<a class="code hl_enumvalue" href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1">AGEDGE</a>,a,NULL))</div>
+<div class="ttc" id="agroup__cgraph__attr_html_ga7523d2c3b09fce2d069cc8f98f6b156f"><div class="ttname"><a href="group__cgraph__attr.html#ga7523d2c3b09fce2d069cc8f98f6b156f">agattr_text</a></div><div class="ttdeci">CGRAPH_API Agsym_t * agattr_text(Agraph_t *g, int kind, char *name, const char *value)</div><div class="ttdoc">creates or looks up text attributes of a graph</div></div>
+<div class="ttc" id="agroup__cgraph__object_html_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1"><div class="ttname"><a href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1">AGEDGE</a></div><div class="ttdeci">@ AGEDGE</div><div class="ttdef"><b>Определения</b> cgraph.h:207</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaf29d9915ddd2240bab9693727ef7b069" name="gaf29d9915ddd2240bab9693727ef7b069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf29d9915ddd2240bab9693727ef7b069">&#9670;&#160;</a></span>AGHEAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGHEAD</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#ga2629b0763de05c381161770b0640b0ad">AGMKOUT</a>(e)-&gt;node)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gad106624d1b561de8683c142319ff630e" name="gad106624d1b561de8683c142319ff630e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad106624d1b561de8683c142319ff630e">&#9670;&#160;</a></span>aghead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define aghead</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaf29d9915ddd2240bab9693727ef7b069">AGHEAD</a>(e)</div>
+<div class="ttc" id="agroup__cgraph__edge_html_gaf29d9915ddd2240bab9693727ef7b069"><div class="ttname"><a href="#gaf29d9915ddd2240bab9693727ef7b069">AGHEAD</a></div><div class="ttdeci">#define AGHEAD(e)</div><div class="ttdef"><b>Определения</b> cgraph.h:973</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga3fc1ac2690431efedc87114c3e6feb77" name="ga3fc1ac2690431efedc87114c3e6feb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3fc1ac2690431efedc87114c3e6feb77">&#9670;&#160;</a></span>AGIN2OUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGIN2OUT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>inedge</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((inedge) - 1)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga8f16054047081a8639e79509f855fdf1" name="ga8f16054047081a8639e79509f855fdf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f16054047081a8639e79509f855fdf1">&#9670;&#160;</a></span>AGMKIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGMKIN</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="group__cgraph__object.html#ga91e26f76d41f9f199ef969d977412f23">AGTYPE</a>(e) == <a class="code hl_enumvalue" href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684">AGINEDGE</a> ? (e) : <a class="code hl_define" href="#gafc0a5ce55b7eb368861077afcecba52f">AGOUT2IN</a>(e))</div>
+<div class="ttc" id="agroup__cgraph__edge_html_gafc0a5ce55b7eb368861077afcecba52f"><div class="ttname"><a href="#gafc0a5ce55b7eb368861077afcecba52f">AGOUT2IN</a></div><div class="ttdeci">#define AGOUT2IN(outedge)</div><div class="ttdoc">Agedgepair_s.out -&gt; Agedgepair_s.in.</div><div class="ttdef"><b>Определения</b> cgraph.h:967</div></div>
+<div class="ttc" id="agroup__cgraph__object_html_ga91e26f76d41f9f199ef969d977412f23"><div class="ttname"><a href="group__cgraph__object.html#ga91e26f76d41f9f199ef969d977412f23">AGTYPE</a></div><div class="ttdeci">#define AGTYPE(obj)</div><div class="ttdoc">returns AGRAPH, AGNODE, or AGEDGE depending on the type of the object</div><div class="ttdef"><b>Определения</b> cgraph.h:216</div></div>
+<div class="ttc" id="agroup__cgraph__object_html_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684"><div class="ttname"><a href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684">AGINEDGE</a></div><div class="ttdeci">@ AGINEDGE</div><div class="ttdef"><b>Определения</b> cgraph.h:207</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga2629b0763de05c381161770b0640b0ad" name="ga2629b0763de05c381161770b0640b0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2629b0763de05c381161770b0640b0ad">&#9670;&#160;</a></span>AGMKOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGMKOUT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="group__cgraph__object.html#ga91e26f76d41f9f199ef969d977412f23">AGTYPE</a>(e) == <a class="code hl_enumvalue" href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb">AGOUTEDGE</a> ? (e) : <a class="code hl_define" href="#ga3fc1ac2690431efedc87114c3e6feb77">AGIN2OUT</a>(e))</div>
+<div class="ttc" id="agroup__cgraph__edge_html_ga3fc1ac2690431efedc87114c3e6feb77"><div class="ttname"><a href="#ga3fc1ac2690431efedc87114c3e6feb77">AGIN2OUT</a></div><div class="ttdeci">#define AGIN2OUT(inedge)</div><div class="ttdoc">Agedgepair_s.in -&gt; Agedgepair_s.out.</div><div class="ttdef"><b>Определения</b> cgraph.h:966</div></div>
+<div class="ttc" id="agroup__cgraph__object_html_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb"><div class="ttname"><a href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb">AGOUTEDGE</a></div><div class="ttdeci">@ AGOUTEDGE</div><div class="ttdef"><b>Определения</b> cgraph.h:207</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaed727d3e94d3aef53f5e679cc4041da2" name="gaed727d3e94d3aef53f5e679cc4041da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed727d3e94d3aef53f5e679cc4041da2">&#9670;&#160;</a></span>AGOPP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGOPP</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((<a class="code hl_define" href="group__cgraph__object.html#ga91e26f76d41f9f199ef969d977412f23">AGTYPE</a>(e) == <a class="code hl_enumvalue" href="group__cgraph__object.html#gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684">AGINEDGE</a>) ? <a class="code hl_define" href="#ga3fc1ac2690431efedc87114c3e6feb77">AGIN2OUT</a>(e) : <a class="code hl_define" href="#gafc0a5ce55b7eb368861077afcecba52f">AGOUT2IN</a>(e))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga21ee14460f49ddb2e954f3cf9f9100a3" name="ga21ee14460f49ddb2e954f3cf9f9100a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21ee14460f49ddb2e954f3cf9f9100a3">&#9670;&#160;</a></span>agopp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define agopp</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaed727d3e94d3aef53f5e679cc4041da2">AGOPP</a>(e)</div>
+<div class="ttc" id="agroup__cgraph__edge_html_gaed727d3e94d3aef53f5e679cc4041da2"><div class="ttname"><a href="#gaed727d3e94d3aef53f5e679cc4041da2">AGOPP</a></div><div class="ttdeci">#define AGOPP(e)</div><div class="ttdef"><b>Определения</b> cgraph.h:969</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gafc0a5ce55b7eb368861077afcecba52f" name="gafc0a5ce55b7eb368861077afcecba52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc0a5ce55b7eb368861077afcecba52f">&#9670;&#160;</a></span>AGOUT2IN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGOUT2IN</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>outedge</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((outedge) + 1)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaddbb048b0b1e23abd8b4d40df33f0104" name="gaddbb048b0b1e23abd8b4d40df33f0104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaddbb048b0b1e23abd8b4d40df33f0104">&#9670;&#160;</a></span>AGTAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AGTAIL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#ga8f16054047081a8639e79509f855fdf1">AGMKIN</a>(e)-&gt;node)</div>
+<div class="ttc" id="agroup__cgraph__edge_html_ga8f16054047081a8639e79509f855fdf1"><div class="ttname"><a href="#ga8f16054047081a8639e79509f855fdf1">AGMKIN</a></div><div class="ttdeci">#define AGMKIN(e)</div><div class="ttdef"><b>Определения</b> cgraph.h:971</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga96fc1fa869456d5345e784a7bf9c615e" name="ga96fc1fa869456d5345e784a7bf9c615e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96fc1fa869456d5345e784a7bf9c615e">&#9670;&#160;</a></span>agtail</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define agtail</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#gaddbb048b0b1e23abd8b4d40df33f0104">AGTAIL</a>(e)</div>
+<div class="ttc" id="agroup__cgraph__edge_html_gaddbb048b0b1e23abd8b4d40df33f0104"><div class="ttname"><a href="#gaddbb048b0b1e23abd8b4d40df33f0104">AGTAIL</a></div><div class="ttdeci">#define AGTAIL(e)</div><div class="ttdef"><b>Определения</b> cgraph.h:972</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gacb5bb0e8c848dc4992471c3535dee33d" name="gacb5bb0e8c848dc4992471c3535dee33d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb5bb0e8c848dc4992471c3535dee33d">&#9670;&#160;</a></span>ED_adjacent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_adjacent</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;adjacent)</div>
+<div class="ttc" id="agroup__cgraph__object_html_ga12a48d1c8103f642da615024eee9d7eb"><div class="ttname"><a href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a></div><div class="ttdeci">#define AGDATA(obj)</div><div class="ttdoc">returns Agrec_t</div><div class="ttdef"><b>Определения</b> cgraph.h:227</div></div>
+<div class="ttc" id="astruct_agedgeinfo__t_html"><div class="ttname"><a href="struct_agedgeinfo__t.html">Agedgeinfo_t</a></div><div class="ttdef"><b>Определения</b> types.h:543</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaa2b7773c035a0866fa49e47682f03806" name="gaa2b7773c035a0866fa49e47682f03806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2b7773c035a0866fa49e47682f03806">&#9670;&#160;</a></span>ED_alg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_alg</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;alg)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga14c23d9ac2ce08caf15e98a2b00e560f" name="ga14c23d9ac2ce08caf15e98a2b00e560f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14c23d9ac2ce08caf15e98a2b00e560f">&#9670;&#160;</a></span>ED_compound</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_compound</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;compound)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga5322ddecbfd78b6219d7858130e8ba89" name="ga5322ddecbfd78b6219d7858130e8ba89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5322ddecbfd78b6219d7858130e8ba89">&#9670;&#160;</a></span>ED_conc_opp_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_conc_opp_flag</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;conc_opp_flag)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga94822e795d402ebafb4f534f43fe58d3" name="ga94822e795d402ebafb4f534f43fe58d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94822e795d402ebafb4f534f43fe58d3">&#9670;&#160;</a></span>ED_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_count</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;count)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gacb80190e3b238a47474e4e9a2d9a9a17" name="gacb80190e3b238a47474e4e9a2d9a9a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb80190e3b238a47474e4e9a2d9a9a17">&#9670;&#160;</a></span>ED_cutvalue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_cutvalue</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;cutvalue)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga331c2d40ba790391413f9c335bdf1d1b" name="ga331c2d40ba790391413f9c335bdf1d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga331c2d40ba790391413f9c335bdf1d1b">&#9670;&#160;</a></span>ED_dist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_dist</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;dist)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga9b03efc65b943a56a6da501119f61ff2" name="ga9b03efc65b943a56a6da501119f61ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b03efc65b943a56a6da501119f61ff2">&#9670;&#160;</a></span>ED_edge_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_edge_type</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;edge_type)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gabb948350e25dda9a74389582ed8876d0" name="gabb948350e25dda9a74389582ed8876d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb948350e25dda9a74389582ed8876d0">&#9670;&#160;</a></span>ED_factor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_factor</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;factor)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga872eea083b0fc41d5cbe4aed44078d5b" name="ga872eea083b0fc41d5cbe4aed44078d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga872eea083b0fc41d5cbe4aed44078d5b">&#9670;&#160;</a></span>ED_gui_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_gui_state</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;gui_state)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga7246ae9cbfda66cab6b9050c5e5a3494" name="ga7246ae9cbfda66cab6b9050c5e5a3494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7246ae9cbfda66cab6b9050c5e5a3494">&#9670;&#160;</a></span>ED_head_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_head_label</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;head_label)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gadec0e33e4e788c1ce603597b89d3055a" name="gadec0e33e4e788c1ce603597b89d3055a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadec0e33e4e788c1ce603597b89d3055a">&#9670;&#160;</a></span>ED_head_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_head_port</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;head_port)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gae590329810778be5909563f40375c458" name="gae590329810778be5909563f40375c458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae590329810778be5909563f40375c458">&#9670;&#160;</a></span>ED_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_label</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;label)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga634e2a938804e412ae5bd59c4952e1ff" name="ga634e2a938804e412ae5bd59c4952e1ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga634e2a938804e412ae5bd59c4952e1ff">&#9670;&#160;</a></span>ED_label_ontop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_label_ontop</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;label_ontop)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga33ee77a99cd045f6ce3432ac896dd7ef" name="ga33ee77a99cd045f6ce3432ac896dd7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33ee77a99cd045f6ce3432ac896dd7ef">&#9670;&#160;</a></span>ED_minlen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_minlen</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;minlen)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaab0740676cd17e8496c1de18c579a182" name="gaab0740676cd17e8496c1de18c579a182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab0740676cd17e8496c1de18c579a182">&#9670;&#160;</a></span>ED_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_path</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;<a class="code hl_struct" href="structpath.html">path</a>)</div>
+<div class="ttc" id="astructpath_html"><div class="ttname"><a href="structpath.html">path</a></div><div class="ttdef"><b>Определения</b> types.h:81</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga58e5543a5552a571c9ad286944f5e74d" name="ga58e5543a5552a571c9ad286944f5e74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58e5543a5552a571c9ad286944f5e74d">&#9670;&#160;</a></span>ED_showboxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_showboxes</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;showboxes)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga8fb5cc3d3b3e8cb72c82e87c843f3432" name="ga8fb5cc3d3b3e8cb72c82e87c843f3432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fb5cc3d3b3e8cb72c82e87c843f3432">&#9670;&#160;</a></span>ED_spl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_spl</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;spl)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gabaffd96fcefc50e244c603930299a3fe" name="gabaffd96fcefc50e244c603930299a3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabaffd96fcefc50e244c603930299a3fe">&#9670;&#160;</a></span>ED_tail_label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_tail_label</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;tail_label)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaebbf6cf6d8a89d415a8d0b40df2c110d" name="gaebbf6cf6d8a89d415a8d0b40df2c110d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebbf6cf6d8a89d415a8d0b40df2c110d">&#9670;&#160;</a></span>ED_tail_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_tail_port</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;tail_port)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga0a6706e6b353fb3420b0bacd7d3a2251" name="ga0a6706e6b353fb3420b0bacd7d3a2251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a6706e6b353fb3420b0bacd7d3a2251">&#9670;&#160;</a></span>ED_to_orig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_to_orig</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;to_orig)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaf626c847d81347ad341596b6809a05e2" name="gaf626c847d81347ad341596b6809a05e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf626c847d81347ad341596b6809a05e2">&#9670;&#160;</a></span>ED_to_virt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_to_virt</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;to_virt)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga0ee6b93c9004250a5f12e29e2c894167" name="ga0ee6b93c9004250a5f12e29e2c894167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ee6b93c9004250a5f12e29e2c894167">&#9670;&#160;</a></span>ED_tree_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_tree_index</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;tree_index)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gaa50ab14aac03a171606749049925384f" name="gaa50ab14aac03a171606749049925384f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa50ab14aac03a171606749049925384f">&#9670;&#160;</a></span>ED_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_weight</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;weight)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga60a2aa92dd94846e103ae74ea88a306a" name="ga60a2aa92dd94846e103ae74ea88a306a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60a2aa92dd94846e103ae74ea88a306a">&#9670;&#160;</a></span>ED_xlabel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_xlabel</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;xlabel)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga7327a70c8b4346b7ebed6867736b7d53" name="ga7327a70c8b4346b7ebed6867736b7d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7327a70c8b4346b7ebed6867736b7d53">&#9670;&#160;</a></span>ED_xpenalty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ED_xpenalty</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_struct" href="struct_agedgeinfo__t.html">Agedgeinfo_t</a>*)<a class="code hl_define" href="group__cgraph__object.html#ga12a48d1c8103f642da615024eee9d7eb">AGDATA</a>(e))-&gt;xpenalty)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga5bc7f7e2e3a0459be80728f8e6495c56" name="ga5bc7f7e2e3a0459be80728f8e6495c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bc7f7e2e3a0459be80728f8e6495c56">&#9670;&#160;</a></span>HEADPORT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HEADPORT_ID&#160;&#160;&#160;&quot;headport&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga21c6527e075feb0693a9112e122110ac" name="ga21c6527e075feb0693a9112e122110ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21c6527e075feb0693a9112e122110ac">&#9670;&#160;</a></span>TAILPORT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAILPORT_ID&#160;&#160;&#160;&quot;tailport&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="ga7c54f4922d88107ff771babd5e04dacb" name="ga7c54f4922d88107ff771babd5e04dacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c54f4922d88107ff771babd5e04dacb">&#9670;&#160;</a></span>Agedge_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_agedge__s.html">Agedge_s</a> <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7f6006922902c3a180aa46008d9cda04" name="ga7f6006922902c3a180aa46008d9cda04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f6006922902c3a180aa46008d9cda04">&#9670;&#160;</a></span>Agedgeinfo_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct Agedgeinfo_t Agedgeinfo_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga23808484bcb2730ccccc6138ef0fc0e2" name="ga23808484bcb2730ccccc6138ef0fc0e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23808484bcb2730ccccc6138ef0fc0e2">&#9670;&#160;</a></span>Agedgepair_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_agedgepair__s.html">Agedgepair_s</a> <a class="el" href="#ga23808484bcb2730ccccc6138ef0fc0e2">Agedgepair_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="gaa6b8ecac59848235f597cf522634a371" name="gaa6b8ecac59848235f597cf522634a371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6b8ecac59848235f597cf522634a371">&#9670;&#160;</a></span>agdeledge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agdeledge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *</td>          <td class="paramname"><span class="paramname"><em>arg_e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga95def214657d6bb88fa9fb78c0a8decc" name="ga95def214657d6bb88fa9fb78c0a8decc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95def214657d6bb88fa9fb78c0a8decc">&#9670;&#160;</a></span>agedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agedge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>createflag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd" name="gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd">&#9670;&#160;</a></span>agfstedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agfstedge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga96ce3a0e231ffa09821c1c5006ad4b3f" name="ga96ce3a0e231ffa09821c1c5006ad4b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96ce3a0e231ffa09821c1c5006ad4b3f">&#9670;&#160;</a></span>agfstin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agfstin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad7746ce0558651807cc1c090dd7a10f9" name="gad7746ce0558651807cc1c090dd7a10f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7746ce0558651807cc1c090dd7a10f9">&#9670;&#160;</a></span>agfstout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agfstout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0742c930a05dedd75c1af738c07a0838" name="ga0742c930a05dedd75c1af738c07a0838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0742c930a05dedd75c1af738c07a0838">&#9670;&#160;</a></span>agidedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agidedge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>t</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__object.html#ga496f55d8b021184f08084dcecc4724ec">IDTYPE</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>createflag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac30d1b378d21509656500ad476b7029b" name="gac30d1b378d21509656500ad476b7029b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac30d1b378d21509656500ad476b7029b">&#9670;&#160;</a></span>agnxtedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agnxtedge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga131b383f7a6c07ba45cca2911f96acb4" name="ga131b383f7a6c07ba45cca2911f96acb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga131b383f7a6c07ba45cca2911f96acb4">&#9670;&#160;</a></span>agnxtin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agnxtin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga114a41c25080ac2787b51b3b2514693b" name="ga114a41c25080ac2787b51b3b2514693b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga114a41c25080ac2787b51b3b2514693b">&#9670;&#160;</a></span>agnxtout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agnxtout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga118a898f2c8f8da04983ee098d6b4397" name="ga118a898f2c8f8da04983ee098d6b4397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga118a898f2c8f8da04983ee098d6b4397">&#9670;&#160;</a></span>agsubedge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> * agsubedge </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga7c54f4922d88107ff771babd5e04dacb">Agedge_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>createflag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

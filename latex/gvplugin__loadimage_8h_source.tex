@@ -1,0 +1,56 @@
+\doxysection{gvplugin\+\_\+loadimage.\+h}
+\hypertarget{gvplugin__loadimage_8h_source}{}\label{gvplugin__loadimage_8h_source}\index{Graphviz/include/graphviz/gvplugin\_loadimage.h@{Graphviz/include/graphviz/gvplugin\_loadimage.h}}
+\doxymbox{\hyperlink{gvplugin__loadimage_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{gvplugin_8h}{gvplugin.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{gvcjob_8h}{gvcjob.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#ifdef\ GVC\_EXPORTS}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ GVPLUGIN\_LOADIMAGE\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ GVPLUGIN\_LOADIMAGE\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifndef\ GVPLUGIN\_LOADIMAGE\_API}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ GVPLUGIN\_LOADIMAGE\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ GVPLUGIN\_LOADIMAGE\_API\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__plugin__api_gace9759d6e99ae1334fe3f22ed1ac3260}{gvusershape\_file\_access}}(\doxymbox{\hyperlink{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}{usershape\_t}}\ *us);}
+\DoxyCodeLine{00044\ GVPLUGIN\_LOADIMAGE\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__plugin__api_gadc549d8bf1744f7a1858e2713729b0ca}{gvusershape\_file\_release}}(\doxymbox{\hyperlink{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}{usershape\_t}}\ *us);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structgvloadimage__engine__s}{gvloadimage\_engine\_s}}\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvloadimage__engine__s_a49ceb2e02b6d60e02f90754af59ef1c3}{loadimage}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *job,\ \doxymbox{\hyperlink{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}{usershape\_t}}\ *us,\ \doxymbox{\hyperlink{structboxf}{boxf}}\ b,\ \textcolor{keywordtype}{bool}\ filled);}
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#undef\ GVPLUGIN\_LOADIMAGE\_API}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

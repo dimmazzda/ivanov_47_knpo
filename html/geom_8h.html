@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/geom.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('geom_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл geom.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>geometric types and macros (e.g. points and boxes)  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="arith_8h_source.html">arith.h</a>&quot;</code><br />
+</div>
+<p><a href="geom_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:point" id="r_point"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpoint.html">point</a></td></tr>
+<tr class="memitem:pointf_5Fs" id="r_pointf_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structpointf__s.html">pointf_s</a></td></tr>
+<tr class="memitem:linef" id="r_linef"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structlinef.html">linef</a></td></tr>
+<tr class="memitem:box" id="r_box"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structbox.html">box</a></td></tr>
+<tr class="memitem:boxf" id="r_boxf"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structboxf.html">boxf</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ab69353e0ac74a73ef0ff9a8e7c060b0f" id="r_ab69353e0ac74a73ef0ff9a8e7c060b0f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab69353e0ac74a73ef0ff9a8e7c060b0f">HAVE_POINTF_S</a></td></tr>
+<tr class="memitem:ac001b1c07c2060720b4634dae4ebc0cc" id="r_ac001b1c07c2060720b4634dae4ebc0cc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac001b1c07c2060720b4634dae4ebc0cc">INSIDE</a>(p,  b)</td></tr>
+<tr class="memitem:a83a8ce04331b6e094a610e83109691b4" id="r_a83a8ce04331b6e094a610e83109691b4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a83a8ce04331b6e094a610e83109691b4">OVERLAP</a>(b0,  b1)</td></tr>
+<tr class="memitem:a125a16152ae7c6187c963a9a05ad8257" id="r_a125a16152ae7c6187c963a9a05ad8257"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a125a16152ae7c6187c963a9a05ad8257">CONTAINS</a>(b0,  b1)</td></tr>
+<tr class="memitem:a652bb32013460334427cd57045378a28" id="r_a652bb32013460334427cd57045378a28"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a652bb32013460334427cd57045378a28">LEN2</a>(a,  b)</td></tr>
+<tr class="memitem:acc0ec5372e4853b86c8e7ebe3a600bea" id="r_acc0ec5372e4853b86c8e7ebe3a600bea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acc0ec5372e4853b86c8e7ebe3a600bea">DIST2</a>(p,  q)</td></tr>
+<tr class="memitem:ae5c251cef9401f6422380216727a4549" id="r_ae5c251cef9401f6422380216727a4549"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae5c251cef9401f6422380216727a4549">DIST</a>(p,  q)</td></tr>
+<tr class="memitem:ae99ebec8aa1d257ed1164f2676994a08" id="r_ae99ebec8aa1d257ed1164f2676994a08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a>&#160;&#160;&#160;72</td></tr>
+<tr class="memitem:ae888418f7e295106634bee702d3b20ac" id="r_ae888418f7e295106634bee702d3b20ac"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae888418f7e295106634bee702d3b20ac">POINTS_PER_CM</a>&#160;&#160;&#160;((double)<a class="el" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a> * 0.393700787)</td></tr>
+<tr class="memitem:a3e85993634dfb89ca1e1c3623b4174a2" id="r_a3e85993634dfb89ca1e1c3623b4174a2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3e85993634dfb89ca1e1c3623b4174a2">POINTS_PER_MM</a>&#160;&#160;&#160;((double)<a class="el" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a> * 0.0393700787)</td></tr>
+<tr class="memitem:aa3f1922d8d1737c1b16cf23c40434f10" id="r_aa3f1922d8d1737c1b16cf23c40434f10"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa3f1922d8d1737c1b16cf23c40434f10">POINTS</a>(a_inches)</td></tr>
+<tr class="memitem:ae9e5ed37f3560b239db0497a354dffbc" id="r_ae9e5ed37f3560b239db0497a354dffbc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae9e5ed37f3560b239db0497a354dffbc">INCH2PS</a>(a_inches)</td></tr>
+<tr class="memitem:a7118931f8434d39d9e127817e70373d4" id="r_a7118931f8434d39d9e127817e70373d4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7118931f8434d39d9e127817e70373d4">PS2INCH</a>(a_points)</td></tr>
+<tr class="memitem:a53d8aa26e51b7fb6061863174547aa95" id="r_a53d8aa26e51b7fb6061863174547aa95"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a53d8aa26e51b7fb6061863174547aa95">P2PF</a>(p,  pf)</td></tr>
+<tr class="memitem:abf5270b3786d98a43aa4cf9c29869c0d" id="r_abf5270b3786d98a43aa4cf9c29869c0d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abf5270b3786d98a43aa4cf9c29869c0d">PF2P</a>(pf,  p)</td></tr>
+<tr class="memitem:a1f7542f527f0017fb314ba84dba193e6" id="r_a1f7542f527f0017fb314ba84dba193e6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1f7542f527f0017fb314ba84dba193e6">B2BF</a>(b,  bf)</td></tr>
+<tr class="memitem:aa31f5c05f726b16a20cf2376dc6bd652" id="r_aa31f5c05f726b16a20cf2376dc6bd652"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa31f5c05f726b16a20cf2376dc6bd652">APPROXEQPT</a>(p,  q,  tol)</td></tr>
+<tr class="memitem:a423711bbbda1aa37fecdf461f508aa37" id="r_a423711bbbda1aa37fecdf461f508aa37"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a423711bbbda1aa37fecdf461f508aa37">MILLIPOINT</a>&#160;&#160;&#160;.001</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ab1d4fa1dc6a3884bc0f897efb568a084" id="r_ab1d4fa1dc6a3884bc0f897efb568a084"><td class="memItemLeft">typedef struct <a class="el" href="structpointf__s.html">pointf_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>with application to, but no specific dependence on graphs </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="aa31f5c05f726b16a20cf2376dc6bd652" name="aa31f5c05f726b16a20cf2376dc6bd652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31f5c05f726b16a20cf2376dc6bd652">&#9670;&#160;</a></span>APPROXEQPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APPROXEQPT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>tol</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#acc0ec5372e4853b86c8e7ebe3a600bea">DIST2</a>((p),(q)) &lt; <a class="code hl_define" href="arith_8h.html#ad41630f833e920c1ffa34722f45a8e77">SQR</a>(tol))</div>
+<div class="ttc" id="aarith_8h_html_ad41630f833e920c1ffa34722f45a8e77"><div class="ttname"><a href="arith_8h.html#ad41630f833e920c1ffa34722f45a8e77">SQR</a></div><div class="ttdeci">#define SQR(a)</div><div class="ttdef"><b>Определения</b> arith.h:52</div></div>
+<div class="ttc" id="ageom_8h_html_acc0ec5372e4853b86c8e7ebe3a600bea"><div class="ttname"><a href="#acc0ec5372e4853b86c8e7ebe3a600bea">DIST2</a></div><div class="ttdeci">#define DIST2(p, q)</div><div class="ttdef"><b>Определения</b> geom.h:55</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f7542f527f0017fb314ba84dba193e6" name="a1f7542f527f0017fb314ba84dba193e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7542f527f0017fb314ba84dba193e6">&#9670;&#160;</a></span>B2BF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B2BF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>bf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#a53d8aa26e51b7fb6061863174547aa95">P2PF</a>((b).LL,(bf).LL),<a class="code hl_define" href="#a53d8aa26e51b7fb6061863174547aa95">P2PF</a>((b).UR,(bf).UR))</div>
+<div class="ttc" id="ageom_8h_html_a53d8aa26e51b7fb6061863174547aa95"><div class="ttname"><a href="#a53d8aa26e51b7fb6061863174547aa95">P2PF</a></div><div class="ttdeci">#define P2PF(p, pf)</div><div class="ttdef"><b>Определения</b> geom.h:66</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a125a16152ae7c6187c963a9a05ad8257" name="a125a16152ae7c6187c963a9a05ad8257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a125a16152ae7c6187c963a9a05ad8257">&#9670;&#160;</a></span>CONTAINS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONTAINS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b1</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((b0).UR.x &gt;= (b1).UR.x) &amp;&amp; ((b0).UR.y &gt;= (b1).UR.y) &amp;&amp; ((b0).LL.x &lt;= (b1).LL.x) &amp;&amp; ((b0).LL.y &lt;= (b1).LL.y))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5c251cef9401f6422380216727a4549" name="ae5c251cef9401f6422380216727a4549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c251cef9401f6422380216727a4549">&#9670;&#160;</a></span>DIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIST</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>q</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(sqrt(<a class="code hl_define" href="#acc0ec5372e4853b86c8e7ebe3a600bea">DIST2</a>((p),(q))))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acc0ec5372e4853b86c8e7ebe3a600bea" name="acc0ec5372e4853b86c8e7ebe3a600bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0ec5372e4853b86c8e7ebe3a600bea">&#9670;&#160;</a></span>DIST2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIST2</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>q</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#a652bb32013460334427cd57045378a28">LEN2</a>(((p).x - (q).x),((p).y - (q).y)))</div>
+<div class="ttc" id="ageom_8h_html_a652bb32013460334427cd57045378a28"><div class="ttname"><a href="#a652bb32013460334427cd57045378a28">LEN2</a></div><div class="ttdeci">#define LEN2(a, b)</div><div class="ttdef"><b>Определения</b> geom.h:53</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab69353e0ac74a73ef0ff9a8e7c060b0f" name="ab69353e0ac74a73ef0ff9a8e7c060b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69353e0ac74a73ef0ff9a8e7c060b0f">&#9670;&#160;</a></span>HAVE_POINTF_S</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAVE_POINTF_S</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9e5ed37f3560b239db0497a354dffbc" name="ae9e5ed37f3560b239db0497a354dffbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e5ed37f3560b239db0497a354dffbc">&#9670;&#160;</a></span>INCH2PS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INCH2PS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a_inches</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((a_inches)*(double)<a class="code hl_define" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a>)</div>
+<div class="ttc" id="ageom_8h_html_ae99ebec8aa1d257ed1164f2676994a08"><div class="ttname"><a href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a></div><div class="ttdeci">#define POINTS_PER_INCH</div><div class="ttdef"><b>Определения</b> geom.h:58</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac001b1c07c2060720b4634dae4ebc0cc" name="ac001b1c07c2060720b4634dae4ebc0cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac001b1c07c2060720b4634dae4ebc0cc">&#9670;&#160;</a></span>INSIDE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSIDE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="arith_8h.html#a043815e8b2e49280dc4fcd060fc56a38">BETWEEN</a>((b).LL.x,(p).x,(b).UR.x) &amp;&amp; <a class="code hl_define" href="arith_8h.html#a043815e8b2e49280dc4fcd060fc56a38">BETWEEN</a>((b).LL.y,(p).y,(b).UR.y))</div>
+<div class="ttc" id="aarith_8h_html_a043815e8b2e49280dc4fcd060fc56a38"><div class="ttname"><a href="arith_8h.html#a043815e8b2e49280dc4fcd060fc56a38">BETWEEN</a></div><div class="ttdeci">#define BETWEEN(a, b, c)</div><div class="ttdef"><b>Определения</b> arith.h:38</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a652bb32013460334427cd57045378a28" name="a652bb32013460334427cd57045378a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652bb32013460334427cd57045378a28">&#9670;&#160;</a></span>LEN2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LEN2</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="arith_8h.html#ad41630f833e920c1ffa34722f45a8e77">SQR</a>(a) + <a class="code hl_define" href="arith_8h.html#ad41630f833e920c1ffa34722f45a8e77">SQR</a>(b))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a423711bbbda1aa37fecdf461f508aa37" name="a423711bbbda1aa37fecdf461f508aa37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423711bbbda1aa37fecdf461f508aa37">&#9670;&#160;</a></span>MILLIPOINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MILLIPOINT&#160;&#160;&#160;.001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83a8ce04331b6e094a610e83109691b4" name="a83a8ce04331b6e094a610e83109691b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a8ce04331b6e094a610e83109691b4">&#9670;&#160;</a></span>OVERLAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OVERLAP</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b1</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((b0).UR.x &gt;= (b1).LL.x) &amp;&amp; ((b1).UR.x &gt;= (b0).LL.x) &amp;&amp; ((b0).UR.y &gt;= (b1).LL.y) &amp;&amp; ((b1).UR.y &gt;= (b0).LL.y))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53d8aa26e51b7fb6061863174547aa95" name="a53d8aa26e51b7fb6061863174547aa95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d8aa26e51b7fb6061863174547aa95">&#9670;&#160;</a></span>P2PF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define P2PF</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((pf).x = (p).x,(pf).y = (p).y)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abf5270b3786d98a43aa4cf9c29869c0d" name="abf5270b3786d98a43aa4cf9c29869c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf5270b3786d98a43aa4cf9c29869c0d">&#9670;&#160;</a></span>PF2P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PF2P</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>pf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((p).x = <a class="code hl_define" href="arith_8h.html#a91a8600e2a2859a47dbc2ba39960a352">ROUND</a>((pf).x),(p).y = <a class="code hl_define" href="arith_8h.html#a91a8600e2a2859a47dbc2ba39960a352">ROUND</a>((pf).y))</div>
+<div class="ttc" id="aarith_8h_html_a91a8600e2a2859a47dbc2ba39960a352"><div class="ttname"><a href="arith_8h.html#a91a8600e2a2859a47dbc2ba39960a352">ROUND</a></div><div class="ttdeci">#define ROUND(f)</div><div class="ttdef"><b>Определения</b> arith.h:48</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa3f1922d8d1737c1b16cf23c40434f10" name="aa3f1922d8d1737c1b16cf23c40434f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f1922d8d1737c1b16cf23c40434f10">&#9670;&#160;</a></span>POINTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a_inches</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="arith_8h.html#a91a8600e2a2859a47dbc2ba39960a352">ROUND</a>((a_inches)*<a class="code hl_define" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a>))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae888418f7e295106634bee702d3b20ac" name="ae888418f7e295106634bee702d3b20ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae888418f7e295106634bee702d3b20ac">&#9670;&#160;</a></span>POINTS_PER_CM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTS_PER_CM&#160;&#160;&#160;((double)<a class="el" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a> * 0.393700787)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae99ebec8aa1d257ed1164f2676994a08" name="ae99ebec8aa1d257ed1164f2676994a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99ebec8aa1d257ed1164f2676994a08">&#9670;&#160;</a></span>POINTS_PER_INCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTS_PER_INCH&#160;&#160;&#160;72</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e85993634dfb89ca1e1c3623b4174a2" name="a3e85993634dfb89ca1e1c3623b4174a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e85993634dfb89ca1e1c3623b4174a2">&#9670;&#160;</a></span>POINTS_PER_MM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POINTS_PER_MM&#160;&#160;&#160;((double)<a class="el" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a> * 0.0393700787)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7118931f8434d39d9e127817e70373d4" name="a7118931f8434d39d9e127817e70373d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7118931f8434d39d9e127817e70373d4">&#9670;&#160;</a></span>PS2INCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PS2INCH</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>a_points</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((a_points)/(double)<a class="code hl_define" href="#ae99ebec8aa1d257ed1164f2676994a08">POINTS_PER_INCH</a>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="ab1d4fa1dc6a3884bc0f897efb568a084" name="ab1d4fa1dc6a3884bc0f897efb568a084"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d4fa1dc6a3884bc0f897efb568a084">&#9670;&#160;</a></span>pointf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structpointf__s.html">pointf_s</a> <a class="el" href="#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="geom_8h.html">geom.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

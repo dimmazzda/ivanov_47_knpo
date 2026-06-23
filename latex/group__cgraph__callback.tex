@@ -1,0 +1,65 @@
+\doxysubsubsubsubsection{callbacks }
+\hypertarget{group__cgraph__callback}{}\label{group__cgraph__callback}\index{callbacks@{callbacks}}
+
+
+virtual methods of initialization, modification, and finalization of graph objects  
+
+
+\doxysubsubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agcbdisc__s}{Agcbdisc\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em client event callbacks, used in \doxylink{struct_agcbstack__s}{Agcbstack\+\_\+s} \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agcbstack__s}{Agcbstack\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em object event callbacks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agcbdisc__s}{Agcbdisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em client event callbacks \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agcbstack__s}{Agcbstack\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}{Agcbstack\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em enclosing state for \doxylink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__callback_ga536796e152d4e2880c6754897dacb1ca}{agpushdisc}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}disc, void \texorpdfstring{$\ast$}{*}state)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__callback_ga04dc55e336444df2689c70304e91a769}{agpopdisc}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}disc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsubsection{Подробное описание}
+An \doxylink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t} defines callbacks to be invoked by Libcgraph when initializing, modifying, or finalizing graph objects. Disciplines are kept on a stack. Libcgraph automatically calls the methods on the stack, top-\/down. Callbacks are installed with \doxylink{group__cgraph__callback_ga536796e152d4e2880c6754897dacb1ca}{agpushdisc}, uninstalled with \doxylink{group__cgraph__callback_ga04dc55e336444df2689c70304e91a769}{agpopdisc}.
+
+\label{group__cgraph__callback_doc-typedef-members}
+\Hypertarget{group__cgraph__callback_doc-typedef-members}
+\doxysubsubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}\index{callbacks@{callbacks}!Agcbdisc\_t@{Agcbdisc\_t}}
+\index{Agcbdisc\_t@{Agcbdisc\_t}!callbacks@{callbacks}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{Agcbdisc\_t}{Agcbdisc\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc} 
+typedef struct \doxymbox{\hyperlink{struct_agcbdisc__s}{Agcbdisc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}}}
+
+\Hypertarget{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}\index{callbacks@{callbacks}!Agcbstack\_t@{Agcbstack\_t}}
+\index{Agcbstack\_t@{Agcbstack\_t}!callbacks@{callbacks}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{Agcbstack\_t}{Agcbstack\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a} 
+typedef struct \doxymbox{\hyperlink{struct_agcbstack__s}{Agcbstack\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}{Agcbstack\+\_\+t}}}
+
+
+
+\label{group__cgraph__callback_doc-func-members}
+\Hypertarget{group__cgraph__callback_doc-func-members}
+\doxysubsubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__callback_ga04dc55e336444df2689c70304e91a769}\index{callbacks@{callbacks}!agpopdisc@{agpopdisc}}
+\index{agpopdisc@{agpopdisc}!callbacks@{callbacks}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agpopdisc()}{agpopdisc()}}
+{\footnotesize\ttfamily \label{group__cgraph__callback_ga04dc55e336444df2689c70304e91a769} 
+CGRAPH\+\_\+\+API int agpopdisc (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{disc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__callback_ga536796e152d4e2880c6754897dacb1ca}\index{callbacks@{callbacks}!agpushdisc@{agpushdisc}}
+\index{agpushdisc@{agpushdisc}!callbacks@{callbacks}}
+\doxysubsubsubsubsubsubsection{\texorpdfstring{agpushdisc()}{agpushdisc()}}
+{\footnotesize\ttfamily \label{group__cgraph__callback_ga536796e152d4e2880c6754897dacb1ca} 
+CGRAPH\+\_\+\+API void agpushdisc (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{disc}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+

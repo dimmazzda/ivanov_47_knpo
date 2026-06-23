@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Исходный файл Graphviz/include/graphviz/gvplugin_render.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gvplugin__render_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">gvplugin_render.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="gvplugin__render_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">/*************************************************************************</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Copyright (c) 2011 AT&amp;T Intellectual Property </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * All rights reserved. This program and the accompanying materials</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * are made available under the terms of the Eclipse Public License v1.0</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * which accompanies this distribution, and is available at</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * https://www.eclipse.org/legal/epl-v10.html</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * Contributors: Details at https://graphviz.org</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *************************************************************************/</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="types_8h.html">types.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="gvplugin_8h.html">gvplugin.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="gvcjob_8h.html">gvcjob.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structgvrender__engine__s.html">gvrender_engine_s</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ab77448cc624796d7602090035a5f3a28">   26</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ab77448cc624796d7602090035a5f3a28">begin_job</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a5dd4da474f0e6f6f0dde0504dcbe62df">   27</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a5dd4da474f0e6f6f0dde0504dcbe62df">end_job</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#add3e254ca58f87658f41d283271f3f2b">   28</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#add3e254ca58f87658f41d283271f3f2b">begin_graph</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ab3730d367fd769ddd74dd95bed1a0867">   29</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ab3730d367fd769ddd74dd95bed1a0867">end_graph</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a02548954923cb14790de005806b89a32">   30</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a02548954923cb14790de005806b89a32">begin_layer</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <span class="keywordtype">char</span> *layername,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                 <span class="keywordtype">int</span> layerNum, <span class="keywordtype">int</span> numLayers);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ab700f4e6ae1a5b1be92139ddf8350dfa">   32</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ab700f4e6ae1a5b1be92139ddf8350dfa">end_layer</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a4b9ed92904310113e0ed4208ada3fd87">   33</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a4b9ed92904310113e0ed4208ada3fd87">begin_page</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a846da51feeacfc96c406e5ff5de8e09d">   34</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a846da51feeacfc96c406e5ff5de8e09d">end_page</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a4adce6578d1997abd55f23ae67e0514c">   35</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a4adce6578d1997abd55f23ae67e0514c">begin_cluster</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ac70ab71309b063da8ecba0c772a56b28">   36</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ac70ab71309b063da8ecba0c772a56b28">end_cluster</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aab1fae12f3754c0bd8fc71a8a84a1302">   37</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aab1fae12f3754c0bd8fc71a8a84a1302">begin_nodes</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aefb34e2a4128865080a6af578ce54585">   38</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aefb34e2a4128865080a6af578ce54585">end_nodes</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#abad17e2932b7b2f4a26172a0d8001e17">   39</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#abad17e2932b7b2f4a26172a0d8001e17">begin_edges</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ac4bd2808af5c4fdf136cf7d4f74ed75f">   40</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ac4bd2808af5c4fdf136cf7d4f74ed75f">end_edges</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a5f84e0f2ae7a6db6e59e84e150975226">   41</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a5f84e0f2ae7a6db6e59e84e150975226">begin_node</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a996710ccc23d98de8fcfecd5dd4baef3">   42</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a996710ccc23d98de8fcfecd5dd4baef3">end_node</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aa7704db228202da9b0c973aaadb29820">   43</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aa7704db228202da9b0c973aaadb29820">begin_edge</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a9214933ea0ba0a7680d9c69cf5b28882">   44</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a9214933ea0ba0a7680d9c69cf5b28882">end_edge</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a41567ab3dfe84c7a487e612468203199">   45</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a41567ab3dfe84c7a487e612468203199">begin_anchor</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">char</span> *href, <span class="keywordtype">char</span> *tooltip, <span class="keywordtype">char</span> *target, <span class="keywordtype">char</span> *id);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aa5644443edbd8eb0ead422f4eac29651">   47</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aa5644443edbd8eb0ead422f4eac29651">end_anchor</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aee66812627b856a9c58b672f9d1b63fb">   48</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aee66812627b856a9c58b672f9d1b63fb">begin_label</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <a class="code hl_enumeration" href="gvcjob_8h.html#a27a2d3d0fcd201122f8c13d604f91e38">label_type</a> type);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a01c0dd5dca977c9aa5a138edee4322a3">   49</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a01c0dd5dca977c9aa5a138edee4322a3">end_label</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a9195f2083fbd928563284af73a7f6b47">   50</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a9195f2083fbd928563284af73a7f6b47">textspan</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> p, <a class="code hl_struct" href="structtextspan__t.html">textspan_t</a> * span);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a52e5ce59d3333f67552b3c37a776b1c6">   51</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a52e5ce59d3333f67552b3c37a776b1c6">resolve_color</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <a class="code hl_typedef" href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a> * color);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a6f598b5a14fb6f356f58cfc95f80d4b1">   52</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a6f598b5a14fb6f356f58cfc95f80d4b1">ellipse</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> * A, <span class="keywordtype">int</span> filled);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a8c84d8eb6701d0e2906d2aa850cfc9ee">   53</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a8c84d8eb6701d0e2906d2aa850cfc9ee">polygon</a>)(<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> filled);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#ad86b8346215bcb8bf95fc99d39ada873">   54</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#ad86b8346215bcb8bf95fc99d39ada873">beziercurve</a>)(<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *A, <span class="keywordtype">size_t</span> n, int);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aa631fa3210874a0cd701ca61229aec5e">   55</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aa631fa3210874a0cd701ca61229aec5e">polyline</a>)(<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *A, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#aff4c30db40d1f9c4b5389fc353658641">   56</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#aff4c30db40d1f9c4b5389fc353658641">comment</a>) (<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> * job, <span class="keywordtype">char</span> *<a class="code hl_variable" href="structgvrender__engine__s.html#aff4c30db40d1f9c4b5389fc353658641">comment</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structgvrender__engine__s.html#a54f4098d2c99b6c33bb1ae94deb2c175">   57</a></span>    void (*<a class="code hl_variable" href="structgvrender__engine__s.html#a54f4098d2c99b6c33bb1ae94deb2c175">library_shape</a>)(<a class="code hl_typedef" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job, <span class="keywordtype">char</span> *name, <a class="code hl_typedef" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *A, <span class="keywordtype">size_t</span> n, <span class="keywordtype">int</span> filled);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acolor_8h_html_ae1191eed3030f43658df2fef5fa202de"><div class="ttname"><a href="color_8h.html#ae1191eed3030f43658df2fef5fa202de">gvcolor_t</a></div><div class="ttdeci">struct color_s gvcolor_t</div></div>
+<div class="ttc" id="ageom_8h_html_ab1d4fa1dc6a3884bc0f897efb568a084"><div class="ttname"><a href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a></div><div class="ttdeci">struct pointf_s pointf</div></div>
+<div class="ttc" id="agvcext_8h_html_a9a257c86c8fde7d294726bece96315e5"><div class="ttname"><a href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a></div><div class="ttdeci">struct GVJ_s GVJ_t</div><div class="ttdef"><b>Определения</b> gvcext.h:35</div></div>
+<div class="ttc" id="agvcjob_8h_html"><div class="ttname"><a href="gvcjob_8h.html">gvcjob.h</a></div></div>
+<div class="ttc" id="agvcjob_8h_html_a27a2d3d0fcd201122f8c13d604f91e38"><div class="ttname"><a href="gvcjob_8h.html#a27a2d3d0fcd201122f8c13d604f91e38">label_type</a></div><div class="ttdeci">label_type</div><div class="ttdef"><b>Определения</b> gvcjob.h:38</div></div>
+<div class="ttc" id="agvplugin_8h_html"><div class="ttname"><a href="gvplugin_8h.html">gvplugin.h</a></div></div>
+<div class="ttc" id="astructgvrender__engine__s_html"><div class="ttname"><a href="structgvrender__engine__s.html">gvrender_engine_s</a></div><div class="ttdef"><b>Определения</b> gvplugin_render.h:25</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a01c0dd5dca977c9aa5a138edee4322a3"><div class="ttname"><a href="structgvrender__engine__s.html#a01c0dd5dca977c9aa5a138edee4322a3">gvrender_engine_s::end_label</a></div><div class="ttdeci">void(* end_label)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:49</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a02548954923cb14790de005806b89a32"><div class="ttname"><a href="structgvrender__engine__s.html#a02548954923cb14790de005806b89a32">gvrender_engine_s::begin_layer</a></div><div class="ttdeci">void(* begin_layer)(GVJ_t *job, char *layername, int layerNum, int numLayers)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:30</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a41567ab3dfe84c7a487e612468203199"><div class="ttname"><a href="structgvrender__engine__s.html#a41567ab3dfe84c7a487e612468203199">gvrender_engine_s::begin_anchor</a></div><div class="ttdeci">void(* begin_anchor)(GVJ_t *job, char *href, char *tooltip, char *target, char *id)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:45</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a4adce6578d1997abd55f23ae67e0514c"><div class="ttname"><a href="structgvrender__engine__s.html#a4adce6578d1997abd55f23ae67e0514c">gvrender_engine_s::begin_cluster</a></div><div class="ttdeci">void(* begin_cluster)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:35</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a4b9ed92904310113e0ed4208ada3fd87"><div class="ttname"><a href="structgvrender__engine__s.html#a4b9ed92904310113e0ed4208ada3fd87">gvrender_engine_s::begin_page</a></div><div class="ttdeci">void(* begin_page)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:33</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a52e5ce59d3333f67552b3c37a776b1c6"><div class="ttname"><a href="structgvrender__engine__s.html#a52e5ce59d3333f67552b3c37a776b1c6">gvrender_engine_s::resolve_color</a></div><div class="ttdeci">void(* resolve_color)(GVJ_t *job, gvcolor_t *color)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:51</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a54f4098d2c99b6c33bb1ae94deb2c175"><div class="ttname"><a href="structgvrender__engine__s.html#a54f4098d2c99b6c33bb1ae94deb2c175">gvrender_engine_s::library_shape</a></div><div class="ttdeci">void(* library_shape)(GVJ_t *job, char *name, pointf *A, size_t n, int filled)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:57</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a5dd4da474f0e6f6f0dde0504dcbe62df"><div class="ttname"><a href="structgvrender__engine__s.html#a5dd4da474f0e6f6f0dde0504dcbe62df">gvrender_engine_s::end_job</a></div><div class="ttdeci">void(* end_job)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:27</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a5f84e0f2ae7a6db6e59e84e150975226"><div class="ttname"><a href="structgvrender__engine__s.html#a5f84e0f2ae7a6db6e59e84e150975226">gvrender_engine_s::begin_node</a></div><div class="ttdeci">void(* begin_node)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:41</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a6f598b5a14fb6f356f58cfc95f80d4b1"><div class="ttname"><a href="structgvrender__engine__s.html#a6f598b5a14fb6f356f58cfc95f80d4b1">gvrender_engine_s::ellipse</a></div><div class="ttdeci">void(* ellipse)(GVJ_t *job, pointf *A, int filled)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:52</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a846da51feeacfc96c406e5ff5de8e09d"><div class="ttname"><a href="structgvrender__engine__s.html#a846da51feeacfc96c406e5ff5de8e09d">gvrender_engine_s::end_page</a></div><div class="ttdeci">void(* end_page)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:34</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a8c84d8eb6701d0e2906d2aa850cfc9ee"><div class="ttname"><a href="structgvrender__engine__s.html#a8c84d8eb6701d0e2906d2aa850cfc9ee">gvrender_engine_s::polygon</a></div><div class="ttdeci">void(* polygon)(GVJ_t *job, pointf *A, size_t n, int filled)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:53</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a9195f2083fbd928563284af73a7f6b47"><div class="ttname"><a href="structgvrender__engine__s.html#a9195f2083fbd928563284af73a7f6b47">gvrender_engine_s::textspan</a></div><div class="ttdeci">void(* textspan)(GVJ_t *job, pointf p, textspan_t *span)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:50</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a9214933ea0ba0a7680d9c69cf5b28882"><div class="ttname"><a href="structgvrender__engine__s.html#a9214933ea0ba0a7680d9c69cf5b28882">gvrender_engine_s::end_edge</a></div><div class="ttdeci">void(* end_edge)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:44</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_a996710ccc23d98de8fcfecd5dd4baef3"><div class="ttname"><a href="structgvrender__engine__s.html#a996710ccc23d98de8fcfecd5dd4baef3">gvrender_engine_s::end_node</a></div><div class="ttdeci">void(* end_node)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:42</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aa5644443edbd8eb0ead422f4eac29651"><div class="ttname"><a href="structgvrender__engine__s.html#aa5644443edbd8eb0ead422f4eac29651">gvrender_engine_s::end_anchor</a></div><div class="ttdeci">void(* end_anchor)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:47</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aa631fa3210874a0cd701ca61229aec5e"><div class="ttname"><a href="structgvrender__engine__s.html#aa631fa3210874a0cd701ca61229aec5e">gvrender_engine_s::polyline</a></div><div class="ttdeci">void(* polyline)(GVJ_t *job, pointf *A, size_t n)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:55</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aa7704db228202da9b0c973aaadb29820"><div class="ttname"><a href="structgvrender__engine__s.html#aa7704db228202da9b0c973aaadb29820">gvrender_engine_s::begin_edge</a></div><div class="ttdeci">void(* begin_edge)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:43</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aab1fae12f3754c0bd8fc71a8a84a1302"><div class="ttname"><a href="structgvrender__engine__s.html#aab1fae12f3754c0bd8fc71a8a84a1302">gvrender_engine_s::begin_nodes</a></div><div class="ttdeci">void(* begin_nodes)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:37</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ab3730d367fd769ddd74dd95bed1a0867"><div class="ttname"><a href="structgvrender__engine__s.html#ab3730d367fd769ddd74dd95bed1a0867">gvrender_engine_s::end_graph</a></div><div class="ttdeci">void(* end_graph)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:29</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ab700f4e6ae1a5b1be92139ddf8350dfa"><div class="ttname"><a href="structgvrender__engine__s.html#ab700f4e6ae1a5b1be92139ddf8350dfa">gvrender_engine_s::end_layer</a></div><div class="ttdeci">void(* end_layer)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:32</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ab77448cc624796d7602090035a5f3a28"><div class="ttname"><a href="structgvrender__engine__s.html#ab77448cc624796d7602090035a5f3a28">gvrender_engine_s::begin_job</a></div><div class="ttdeci">void(* begin_job)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:26</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_abad17e2932b7b2f4a26172a0d8001e17"><div class="ttname"><a href="structgvrender__engine__s.html#abad17e2932b7b2f4a26172a0d8001e17">gvrender_engine_s::begin_edges</a></div><div class="ttdeci">void(* begin_edges)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:39</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ac4bd2808af5c4fdf136cf7d4f74ed75f"><div class="ttname"><a href="structgvrender__engine__s.html#ac4bd2808af5c4fdf136cf7d4f74ed75f">gvrender_engine_s::end_edges</a></div><div class="ttdeci">void(* end_edges)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:40</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ac70ab71309b063da8ecba0c772a56b28"><div class="ttname"><a href="structgvrender__engine__s.html#ac70ab71309b063da8ecba0c772a56b28">gvrender_engine_s::end_cluster</a></div><div class="ttdeci">void(* end_cluster)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:36</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_ad86b8346215bcb8bf95fc99d39ada873"><div class="ttname"><a href="structgvrender__engine__s.html#ad86b8346215bcb8bf95fc99d39ada873">gvrender_engine_s::beziercurve</a></div><div class="ttdeci">void(* beziercurve)(GVJ_t *job, pointf *A, size_t n, int)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:54</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_add3e254ca58f87658f41d283271f3f2b"><div class="ttname"><a href="structgvrender__engine__s.html#add3e254ca58f87658f41d283271f3f2b">gvrender_engine_s::begin_graph</a></div><div class="ttdeci">void(* begin_graph)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:28</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aee66812627b856a9c58b672f9d1b63fb"><div class="ttname"><a href="structgvrender__engine__s.html#aee66812627b856a9c58b672f9d1b63fb">gvrender_engine_s::begin_label</a></div><div class="ttdeci">void(* begin_label)(GVJ_t *job, label_type type)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:48</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aefb34e2a4128865080a6af578ce54585"><div class="ttname"><a href="structgvrender__engine__s.html#aefb34e2a4128865080a6af578ce54585">gvrender_engine_s::end_nodes</a></div><div class="ttdeci">void(* end_nodes)(GVJ_t *job)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:38</div></div>
+<div class="ttc" id="astructgvrender__engine__s_html_aff4c30db40d1f9c4b5389fc353658641"><div class="ttname"><a href="structgvrender__engine__s.html#aff4c30db40d1f9c4b5389fc353658641">gvrender_engine_s::comment</a></div><div class="ttdeci">void(* comment)(GVJ_t *job, char *comment)</div><div class="ttdef"><b>Определения</b> gvplugin_render.h:56</div></div>
+<div class="ttc" id="astructtextspan__t_html"><div class="ttname"><a href="structtextspan__t.html">textspan_t</a></div><div class="ttdef"><b>Определения</b> textspan.h:64</div></div>
+<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div><div class="ttdoc">graphs, nodes and edges info: Agraphinfo_t, Agnodeinfo_t and Agedgeinfo_t</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="gvplugin__render_8h.html">gvplugin_render.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

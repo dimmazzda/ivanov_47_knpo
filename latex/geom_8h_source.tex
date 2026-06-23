@@ -1,0 +1,77 @@
+\doxysection{geom.\+h}
+\hypertarget{geom_8h_source}{}\label{geom_8h_source}\index{Graphviz/include/graphviz/geom.h@{Graphviz/include/graphviz/geom.h}}
+\doxymbox{\hyperlink{geom_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{arith_8h}{arith.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpoint_ad679b07fb69d55f5ad454d0f1f2891d5}{x}},\ \doxymbox{\hyperlink{structpoint_a9a82ca9504acabb1e30569f89c805471}{y}};\ \}\ \doxymbox{\hyperlink{structpoint}{point}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structpointf__s}{pointf\_s}}\ \{\ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structpointf__s_a4663f66ed0fc4b92ceb851eb124ac968}{x}},\ \doxymbox{\hyperlink{structpointf__s_ab603ada604b19e6e21599dacdc5b7912}{y}};\ \}\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00032\ \ \ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ \doxymbox{\hyperlink{structlinef_a65cf18d10077d30fdfc1c87b8962a49f}{p}};\ \textcolor{comment}{//\ arbitrary\ point\ on\ the\ line}}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structlinef_abf6d1c17209df2abe7291d6f3660ce35}{m}};\ \textcolor{comment}{//\ slope\ of\ the\ line}}
+\DoxyCodeLine{00034\ \}\ \doxymbox{\hyperlink{structlinef}{linef}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{/*\ tell\ pathplan/pathgeom.h\ */}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ HAVE\_POINTF\_S}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \doxymbox{\hyperlink{structpoint}{point}}\ \doxymbox{\hyperlink{structbox_a105be817f23ffb258c9cfc3dec022c86}{LL}},\ \doxymbox{\hyperlink{structbox_ab4d50647565ebd7f5f07396ddfda6690}{UR}};\ \}\ \doxymbox{\hyperlink{structbox}{box}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ \doxymbox{\hyperlink{structboxf_a537c5617ca905a0bff347f95463fdd53}{LL}},\ \doxymbox{\hyperlink{structboxf_a46f87993847e4bcc58c598f17b14f505}{UR}};\ \}\ \doxymbox{\hyperlink{structboxf}{boxf}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{/*\ true\ if\ point\ p\ is\ inside\ box\ b\ */}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ INSIDE(p,b)\ (BETWEEN((b).LL.x,(p).x,(b).UR.x)\ \&\&\ BETWEEN((b).LL.y,(p).y,(b).UR.y))}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ true\ if\ boxes\ b0\ and\ b1\ overlap\ */}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ OVERLAP(b0,b1)\ \ (((b0).UR.x\ >=\ (b1).LL.x)\ \&\&\ ((b1).UR.x\ >=\ (b0).LL.x)\ \&\&\ ((b0).UR.y\ >=\ (b1).LL.y)\ \&\&\ ((b1).UR.y\ >=\ (b0).LL.y))}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{/*\ true\ if\ box\ b0\ completely\ contains\ b1*/}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ CONTAINS(b0,b1)\ (((b0).UR.x\ >=\ (b1).UR.x)\ \&\&\ ((b0).UR.y\ >=\ (b1).UR.y)\ \&\&\ ((b0).LL.x\ <=\ (b1).LL.x)\ \&\&\ ((b0).LL.y\ <=\ (b1).LL.y))}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ LEN2(a,b)\ \ \ \ \ \ \ (SQR(a)\ +\ SQR(b))}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ DIST2(p,q)\ \ \ \ \ \ (LEN2(((p).x\ -\/\ (q).x),((p).y\ -\/\ (q).y)))}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ DIST(p,q)\ \ \ \ \ \ \ (sqrt(DIST2((p),(q))))}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ POINTS\_PER\_INCH\ 72}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ POINTS\_PER\_CM\ \ \ \ \ \ \ ((double)POINTS\_PER\_INCH\ *\ 0.393700787)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ POINTS\_PER\_MM\ \ \ \ \ \ \ ((double)POINTS\_PER\_INCH\ *\ 0.0393700787)}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ POINTS(a\_inches)\ \ \ \ (ROUND((a\_inches)*POINTS\_PER\_INCH))}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ INCH2PS(a\_inches)\ \ \ ((a\_inches)*(double)POINTS\_PER\_INCH)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ PS2INCH(a\_points)\ \ \ ((a\_points)/(double)POINTS\_PER\_INCH)}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ P2PF(p,pf)\ \ \ \ \ \ ((pf).x\ =\ (p).x,(pf).y\ =\ (p).y)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ PF2P(pf,p)\ \ \ \ \ \ ((p).x\ =\ ROUND((pf).x),(p).y\ =\ ROUND((pf).y))}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ B2BF(b,bf)\ \ \ \ \ \ (P2PF((b).LL,(bf).LL),P2PF((b).UR,(bf).UR))}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ APPROXEQPT(p,q,tol)\ (DIST2((p),(q))\ <\ SQR(tol))}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{/*\ common\ tolerance\ value\ */}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ MILLIPOINT\ .001}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{Структура Agsubnode\+\_\+s}
+\hypertarget{struct_agsubnode__s}{}\label{struct_agsubnode__s}\index{Agsubnode\_s@{Agsubnode\_s}}
+
+
+This is the node struct allocated per graph (or subgraph).  
+
+
+
+
+{\ttfamily \+\#include $<$cgraph.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \doxymbox{\hyperlink{struct_agsubnode__s_a4218b45bb1bc8e8d8220e38207e90688}{seq\+\_\+link}}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \doxymbox{\hyperlink{struct_agsubnode__s_a4f80a8fafe5aca9e0c738cb1fcd8abae}{id\+\_\+link}}
+\item 
+\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agsubnode__s_aabe87bcb566b5db602a8d1f332362f1e}{node}}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agsubnode__s_a47a9f2427ab60c3d6b159edb10bcde04}{in\+\_\+id}}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agsubnode__s_a40380062bc9ec5f5abbe0e2e80381769}{out\+\_\+id}}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agsubnode__s_ac437338b91fb9ace063f906895f94b48}{in\+\_\+seq}}
+\item 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agsubnode__s_a04181be1bf192265a7eb0f73ec7816a2}{out\+\_\+seq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+It resides in the n\+\_\+dict of the graph. The node set is maintained by libcdt, but transparently to libcgraph callers. Every node may be given an optional string name at its time of creation, or it is permissible to pass NULL for the name. 
+
+\label{struct_agsubnode__s_doc-variable-members}
+\Hypertarget{struct_agsubnode__s_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{struct_agsubnode__s_a4f80a8fafe5aca9e0c738cb1fcd8abae}\index{Agsubnode\_s@{Agsubnode\_s}!id\_link@{id\_link}}
+\index{id\_link@{id\_link}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{id\_link}{id\_link}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_a4f80a8fafe5aca9e0c738cb1fcd8abae} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} Agsubnode\+\_\+s::\+id\+\_\+link}
+
+\Hypertarget{struct_agsubnode__s_a47a9f2427ab60c3d6b159edb10bcde04}\index{Agsubnode\_s@{Agsubnode\_s}!in\_id@{in\_id}}
+\index{in\_id@{in\_id}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{in\_id}{in\_id}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_a47a9f2427ab60c3d6b159edb10bcde04} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}}\texorpdfstring{$\ast$}{*} Agsubnode\+\_\+s::\+in\+\_\+id}
+
+\Hypertarget{struct_agsubnode__s_ac437338b91fb9ace063f906895f94b48}\index{Agsubnode\_s@{Agsubnode\_s}!in\_seq@{in\_seq}}
+\index{in\_seq@{in\_seq}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{in\_seq}{in\_seq}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_ac437338b91fb9ace063f906895f94b48} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}}\texorpdfstring{$\ast$}{*} Agsubnode\+\_\+s::\+in\+\_\+seq}
+
+\Hypertarget{struct_agsubnode__s_aabe87bcb566b5db602a8d1f332362f1e}\index{Agsubnode\_s@{Agsubnode\_s}!node@{node}}
+\index{node@{node}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_aabe87bcb566b5db602a8d1f332362f1e} 
+\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}}\texorpdfstring{$\ast$}{*} Agsubnode\+\_\+s::\+node}
+
+\Hypertarget{struct_agsubnode__s_a40380062bc9ec5f5abbe0e2e80381769}\index{Agsubnode\_s@{Agsubnode\_s}!out\_id@{out\_id}}
+\index{out\_id@{out\_id}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{out\_id}{out\_id}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_a40380062bc9ec5f5abbe0e2e80381769} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} Agsubnode\+\_\+s::\+out\+\_\+id}
+
+\Hypertarget{struct_agsubnode__s_a04181be1bf192265a7eb0f73ec7816a2}\index{Agsubnode\_s@{Agsubnode\_s}!out\_seq@{out\_seq}}
+\index{out\_seq@{out\_seq}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{out\_seq}{out\_seq}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_a04181be1bf192265a7eb0f73ec7816a2} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} Agsubnode\+\_\+s::\+out\+\_\+seq}
+
+\Hypertarget{struct_agsubnode__s_a4218b45bb1bc8e8d8220e38207e90688}\index{Agsubnode\_s@{Agsubnode\_s}!seq\_link@{seq\_link}}
+\index{seq\_link@{seq\_link}!Agsubnode\_s@{Agsubnode\_s}}
+\doxysubsubsection{\texorpdfstring{seq\_link}{seq\_link}}
+{\footnotesize\ttfamily \label{struct_agsubnode__s_a4218b45bb1bc8e8d8220e38207e90688} 
+\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} Agsubnode\+\_\+s::\+seq\+\_\+link}
+
+
+
+Объявления и описания членов структуры находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+Graphviz/\+include/\+graphviz/\+\doxymbox{\hyperlink{cgraph_8h}{cgraph.\+h}}\end{DoxyCompactItemize}

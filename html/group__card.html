@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: set cardinality</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__card.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">set cardinality <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__misc.html">miscellaneous</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga4adc84a502d28ec87c931b98407846fd" id="r_ga4adc84a502d28ec87c931b98407846fd"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#ga4adc84a502d28ec87c931b98407846fd">agnnodes</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g)</td></tr>
+<tr class="memitem:gab6fefbed26b04eadf563f407a7d3774a" id="r_gab6fefbed26b04eadf563f407a7d3774a"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gab6fefbed26b04eadf563f407a7d3774a">agnedges</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g)</td></tr>
+<tr class="memitem:ga2995244a8e345f4574876251e8b449d2" id="r_ga2995244a8e345f4574876251e8b449d2"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#ga2995244a8e345f4574876251e8b449d2">agnsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g)</td></tr>
+<tr class="memitem:ga7bde08e6e67433a4afd6c046e0b62d9b" id="r_ga7bde08e6e67433a4afd6c046e0b62d9b"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#ga7bde08e6e67433a4afd6c046e0b62d9b">agdegree</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n, int in, int out)</td></tr>
+<tr class="memitem:gab2d5ab6810e74b55cf287bcb8490a8be" id="r_gab2d5ab6810e74b55cf287bcb8490a8be"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gab2d5ab6810e74b55cf287bcb8490a8be">agcountuniqedges</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *n, int in, int out)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>By default, nodes are stored in ordered sets for efficient random access to insert, find, and delete nodes.</p>
+<p><a class="el" href="#ga4adc84a502d28ec87c931b98407846fd" title="agnnodes">agnnodes</a>, <a class="el" href="#gab6fefbed26b04eadf563f407a7d3774a" title="agnedges">agnedges</a>, and <a class="el" href="#ga2995244a8e345f4574876251e8b449d2" title="agnsubg">agnsubg</a> return the sizes of node, edge and subgraph sets of a graph.</p>
+<p>The function <a class="el" href="#ga7bde08e6e67433a4afd6c046e0b62d9b" title="agdegree">agdegree</a> returns the size of a node’s edge set, and takes flags to select in-edges, out-edges, or both.</p>
+<p>The function <a class="el" href="#gab2d5ab6810e74b55cf287bcb8490a8be" title="agcountuniqedges">agcountuniqedges</a> returns the size of a node’s edge set, and takes flags to select in-edges, out-edges, or both. Unlike <a class="el" href="#ga7bde08e6e67433a4afd6c046e0b62d9b" title="agdegree">agdegree</a>, each loop is only counted once. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="gab2d5ab6810e74b55cf287bcb8490a8be" name="gab2d5ab6810e74b55cf287bcb8490a8be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2d5ab6810e74b55cf287bcb8490a8be">&#9670;&#160;</a></span>agcountuniqedges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agcountuniqedges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7bde08e6e67433a4afd6c046e0b62d9b" name="ga7bde08e6e67433a4afd6c046e0b62d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bde08e6e67433a4afd6c046e0b62d9b">&#9670;&#160;</a></span>agdegree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agdegree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__node.html#ga26c742547e98b7c2331cad7c85ff16c6">Agnode_t</a> *</td>          <td class="paramname"><span class="paramname"><em>n</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab6fefbed26b04eadf563f407a7d3774a" name="gab6fefbed26b04eadf563f407a7d3774a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6fefbed26b04eadf563f407a7d3774a">&#9670;&#160;</a></span>agnedges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agnedges </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4adc84a502d28ec87c931b98407846fd" name="ga4adc84a502d28ec87c931b98407846fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4adc84a502d28ec87c931b98407846fd">&#9670;&#160;</a></span>agnnodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agnnodes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2995244a8e345f4574876251e8b449d2" name="ga2995244a8e345f4574876251e8b449d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2995244a8e345f4574876251e8b449d2">&#9670;&#160;</a></span>agnsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agnsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

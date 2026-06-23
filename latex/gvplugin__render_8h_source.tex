@@ -1,0 +1,66 @@
+\doxysection{gvplugin\+\_\+render.\+h}
+\hypertarget{gvplugin__render_8h_source}{}\label{gvplugin__render_8h_source}\index{Graphviz/include/graphviz/gvplugin\_render.h@{Graphviz/include/graphviz/gvplugin\_render.h}}
+\doxymbox{\hyperlink{gvplugin__render_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{gvplugin_8h}{gvplugin.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{gvcjob_8h}{gvcjob.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structgvrender__engine__s}{gvrender\_engine\_s}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ab77448cc624796d7602090035a5f3a28}{begin\_job}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00027\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a5dd4da474f0e6f6f0dde0504dcbe62df}{end\_job}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00028\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_add3e254ca58f87658f41d283271f3f2b}{begin\_graph}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00029\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ab3730d367fd769ddd74dd95bed1a0867}{end\_graph}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00030\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a02548954923cb14790de005806b89a32}{begin\_layer}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \textcolor{keywordtype}{char}\ *layername,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ layerNum,\ \textcolor{keywordtype}{int}\ numLayers);}
+\DoxyCodeLine{00032\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ab700f4e6ae1a5b1be92139ddf8350dfa}{end\_layer}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00033\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a4b9ed92904310113e0ed4208ada3fd87}{begin\_page}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00034\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a846da51feeacfc96c406e5ff5de8e09d}{end\_page}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00035\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a4adce6578d1997abd55f23ae67e0514c}{begin\_cluster}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00036\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ac70ab71309b063da8ecba0c772a56b28}{end\_cluster}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00037\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aab1fae12f3754c0bd8fc71a8a84a1302}{begin\_nodes}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00038\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aefb34e2a4128865080a6af578ce54585}{end\_nodes}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00039\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_abad17e2932b7b2f4a26172a0d8001e17}{begin\_edges}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00040\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ac4bd2808af5c4fdf136cf7d4f74ed75f}{end\_edges}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00041\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a5f84e0f2ae7a6db6e59e84e150975226}{begin\_node}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00042\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a996710ccc23d98de8fcfecd5dd4baef3}{end\_node}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00043\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aa7704db228202da9b0c973aaadb29820}{begin\_edge}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00044\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a9214933ea0ba0a7680d9c69cf5b28882}{end\_edge}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00045\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a41567ab3dfe84c7a487e612468203199}{begin\_anchor}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *href,\ \textcolor{keywordtype}{char}\ *tooltip,\ \textcolor{keywordtype}{char}\ *target,\ \textcolor{keywordtype}{char}\ *id);}
+\DoxyCodeLine{00047\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aa5644443edbd8eb0ead422f4eac29651}{end\_anchor}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00048\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aee66812627b856a9c58b672f9d1b63fb}{begin\_label}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \doxymbox{\hyperlink{gvcjob_8h_a27a2d3d0fcd201122f8c13d604f91e38}{label\_type}}\ type);}
+\DoxyCodeLine{00049\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a01c0dd5dca977c9aa5a138edee4322a3}{end\_label}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job);}
+\DoxyCodeLine{00050\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a9195f2083fbd928563284af73a7f6b47}{textspan}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ p,\ \doxymbox{\hyperlink{structtextspan__t}{textspan\_t}}\ *\ span);}
+\DoxyCodeLine{00051\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a52e5ce59d3333f67552b3c37a776b1c6}{resolve\_color}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\_t}}\ *\ color);}
+\DoxyCodeLine{00052\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a6f598b5a14fb6f356f58cfc95f80d4b1}{ellipse}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *\ A,\ \textcolor{keywordtype}{int}\ filled);}
+\DoxyCodeLine{00053\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a8c84d8eb6701d0e2906d2aa850cfc9ee}{polygon}})(\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *job,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *A,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keywordtype}{int}\ filled);}
+\DoxyCodeLine{00054\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_ad86b8346215bcb8bf95fc99d39ada873}{beziercurve}})(\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *job,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *A,\ \textcolor{keywordtype}{size\_t}\ n,\ int);}
+\DoxyCodeLine{00055\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aa631fa3210874a0cd701ca61229aec5e}{polyline}})(\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *job,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *A,\ \textcolor{keywordtype}{size\_t}\ n);}
+\DoxyCodeLine{00056\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_aff4c30db40d1f9c4b5389fc353658641}{comment}})\ (\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *\ job,\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structgvrender__engine__s_aff4c30db40d1f9c4b5389fc353658641}{comment}});}
+\DoxyCodeLine{00057\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structgvrender__engine__s_a54f4098d2c99b6c33bb1ae94deb2c175}{library\_shape}})(\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}}\ *job,\ \textcolor{keywordtype}{char}\ *name,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *A,\ \textcolor{keywordtype}{size\_t}\ n,\ \textcolor{keywordtype}{int}\ filled);}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

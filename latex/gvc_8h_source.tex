@@ -1,0 +1,125 @@
+\doxysection{gvc.\+h}
+\hypertarget{gvc_8h_source}{}\label{gvc_8h_source}\index{Graphviz/include/graphviz/gvc.h@{Graphviz/include/graphviz/gvc.h}}
+\doxymbox{\hyperlink{gvc_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{gvplugin_8h}{gvplugin.h}}"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#ifdef\ GVC\_EXPORTS}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ GVC\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ GVC\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifndef\ GVC\_API}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ GVC\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ LAYOUT\_DONE(g)\ (agbindrec(g,\ "{}Agraphinfo\_t"{},\ 0,\ true)\ \&\&\ GD\_drawing(g))}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ misc\ */}}
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ FIXME\ -\/\ this\ needs\ eliminating\ or\ renaming\ */}}
+\DoxyCodeLine{00056\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gvc__api_ga018b112f47c2d5d0f16ba15d96da6b83}{gvToggle}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ set\ up\ a\ graphviz\ context\ */}}
+\DoxyCodeLine{00059\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *\doxymbox{\hyperlink{group__gvc__api_ga6f9134481fe1f165031eef2f7a15d757}{gvNEWcontext}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structlt__symlist__t}{lt\_symlist\_t}}\ *builtins,\ \textcolor{keywordtype}{int}\ demand\_loading);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*\ \ set\ up\ a\ graphviz\ context\ -\/\ and\ init\ graph\ -\/\ retaining\ old\ API\ */}}
+\DoxyCodeLine{00062\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *\doxymbox{\hyperlink{group__gvc__api_gac3f8b67fedaba6f18a2d590fd2215dd9}{gvContext}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ \ set\ up\ a\ graphviz\ context\ -\/\ and\ init\ graph\ -\/\ with\ builtins\ */}}
+\DoxyCodeLine{00064\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *\doxymbox{\hyperlink{group__gvc__api_ga7a7d68cec7821a013740b4f26691dde3}{gvContextPlugins}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{structlt__symlist__t}{lt\_symlist\_t}}\ *builtins,\ \textcolor{keywordtype}{int}\ demand\_loading);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{/*\ get\ information\ associated\ with\ a\ graphviz\ context\ */}}
+\DoxyCodeLine{00067\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{char}\ **\doxymbox{\hyperlink{group__gvc__api_ga00dbd3b38295f5d2a43f96f8204003f3}{gvcInfo}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}*);}
+\DoxyCodeLine{00068\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__gvc__api_ga66edadacbf11a308d4dbcdaf1839a953}{gvcVersion}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}*);}
+\DoxyCodeLine{00069\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__gvc__api_gaeb03050323b78e7964a86d7208745852}{gvcBuildDate}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}*);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{/*\ parse\ command\ line\ args\ -\/\ minimally\ argv[0]\ sets\ layout\ engine\ */}}
+\DoxyCodeLine{00072\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga1afe7f473fdb3f6bdc031d4dffaef68c}{gvParseArgs}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ **argv);}
+\DoxyCodeLine{00073\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *\doxymbox{\hyperlink{group__gvc__api_gae4b75fef75c05fbb8caf8f7706df4532}{gvNextInputGraph}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc);}
+\DoxyCodeLine{00074\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *\doxymbox{\hyperlink{group__gvc__api_ga3e8b6e342763fd924d91c79c61e0cec6}{gvPluginsGraph}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{comment}{/*\ Compute\ a\ layout\ using\ a\ specified\ engine\ */}}
+\DoxyCodeLine{00077\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga67788d439d9ee5c1eeda56ebf02813aa}{gvLayout}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *engine);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{/*\ Compute\ a\ layout\ using\ layout\ engine\ from\ command\ line\ args\ */}}
+\DoxyCodeLine{00080\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_gaaa732e30740522246477e06e6eca7d64}{gvLayoutJobs}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{/*\ Check\ if\ a\ layout\ has\ been\ done\ */}}
+\DoxyCodeLine{00083\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__gvc__api_ga970a70b771b2ad9758285406830ca31c}{gvLayoutDone}}(\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{/*\ Render\ layout\ into\ string\ attributes\ of\ the\ graph\ */}}
+\DoxyCodeLine{00086\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gvc__api_ga1cdc6ab9575d837bae9b4e9fa2aee014}{attach\_attrs}}(\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{comment}{/*\ Render\ layout\ in\ a\ specified\ format\ to\ an\ open\ FILE\ */}}
+\DoxyCodeLine{00089\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga76ad723902c7c6e808b174b6ef825b01}{gvRender}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ FILE\ *out);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{/*\ Render\ layout\ in\ a\ specified\ format\ to\ a\ file\ with\ the\ given\ name\ */}}
+\DoxyCodeLine{00092\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga2d56af58cb0bf82c3d978b46a6917703}{gvRenderFilename}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{comment}{/*\ Render\ layout\ in\ a\ specified\ format\ to\ an\ GVC\_APIal\ context\ */}}
+\DoxyCodeLine{00095\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga12cfb6aba5527c755f511f27e874e364}{gvRenderContext}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ \textcolor{keywordtype}{void}\ *context);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ Render\ layout\ in\ a\ specified\ format\ to\ a\ malloc'ed\ string\ */}}
+\DoxyCodeLine{00098\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga39869e53e6f5f8c7e65f44f403307204}{gvRenderData}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ **result,\ \textcolor{keywordtype}{size\_t}\ *length);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{/*\ Free\ memory\ allocated\ and\ pointed\ to\ by\ *result\ in\ gvRenderData\ */}}
+\DoxyCodeLine{00102\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gvc__api_gafa4ad95793974b7f7c630dc62cf10bf7}{gvFreeRenderData}}\ (\textcolor{keywordtype}{char}*\ data);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{/*\ Render\ layout\ according\ to\ -\/T\ and\ -\/o\ options\ found\ by\ gvParseArgs\ */}}
+\DoxyCodeLine{00105\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_gad4103215debda04c9af5c0c1a63adc7e}{gvRenderJobs}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{comment}{/*\ Clean\ up\ layout\ data\ structures\ -\/\ layouts\ are\ not\ nestable\ (yet)\ */}}
+\DoxyCodeLine{00108\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_gad14d00ac9b4d7cf10bce3a90ffff1a19}{gvFreeLayout}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{/*\ Clean\ up\ graphviz\ context\ */}}
+\DoxyCodeLine{00111\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gvc__api_ga9af0ef2b1a4645bcb168768b952b161a}{gvFinalize}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc);}
+\DoxyCodeLine{00112\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_ga86a2da027bb6065bb5e88f630a27456c}{gvFreeContext}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{/*\ Return\ list\ of\ plugins\ of\ type\ kind.}}
+\DoxyCodeLine{00115\ \textcolor{comment}{\ *\ kind\ would\ normally\ be\ "{}render"{}\ "{}layout"{}\ "{}textlayout"{}\ "{}device"{}\ "{}loadimage"{}}}
+\DoxyCodeLine{00116\ \textcolor{comment}{\ *\ The\ size\ of\ the\ list\ is\ stored\ in\ sz.}}
+\DoxyCodeLine{00117\ \textcolor{comment}{\ *\ The\ caller\ is\ responsible\ for\ freeing\ the\ storage.\ This\ involves}}
+\DoxyCodeLine{00118\ \textcolor{comment}{\ *\ freeing\ each\ item,\ then\ the\ list.}}
+\DoxyCodeLine{00119\ \textcolor{comment}{\ *\ Returns\ NULL\ on\ error,\ or\ if\ there\ are\ no\ plugins.}}
+\DoxyCodeLine{00120\ \textcolor{comment}{\ *\ In\ the\ former\ case,\ sz\ is\ unchanged;\ in\ the\ latter,\ sz\ =\ 0.}}
+\DoxyCodeLine{00121\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00122\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{char}\ **\doxymbox{\hyperlink{group__gvc__api_ga95d373728973c5ac191a31b7bc7d8572}{gvPluginList}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *kind,\ \textcolor{keywordtype}{int}\ *sz);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00128\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__gvc__api_gad78d42fe0cb3303d4bec3d6db8cace41}{gvAddLibrary}}(\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}}\ *gvc,\ \doxymbox{\hyperlink{structgvplugin__library__t}{gvplugin\_library\_t}}\ *lib);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__gvc__api_gad2db2fef176ff1719e9a83e3495e2c31}{gvToolTred}}(\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}}\ *g);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#undef\ GVC\_API}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00140\ \}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

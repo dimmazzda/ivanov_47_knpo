@@ -1,0 +1,132 @@
+\doxysection{Класс Error}
+\hypertarget{class_error}{}\label{class_error}\index{Error@{Error}}
+
+
+класс для ошибок  
+
+
+
+
+{\ttfamily \+\#include $<$headers.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_error_aca339d00ad8481fb4c184f0ece42698b}{Error}} ()
+\begin{DoxyCompactList}\small\item\em базовый конструктор \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_error_a3db8fb75701ccf7813b76c616deca1ee}{Error}} (\doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{error\+Type}} type)
+\begin{DoxyCompactList}\small\item\em конструктор ошибки с указанным типом \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_error_a422bf6e1d466bd5c150f99e941f91378}{Error}} (int line)
+\begin{DoxyCompactList}\small\item\em конструктор ошибки во внуреннем описании графа по номеру строки (тип ошибки по умолчанию=inner\+Description\+Syntax\+Error) \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_error_a1a45d42a3a035d510333cdfeb36a0e93}{\texorpdfstring{$\sim$}{\string~}\+Error}} ()
+\begin{DoxyCompactList}\small\item\em базовый деструктор \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_error_a1ce614c1825787b826fe0349e7dca8dc}{generate\+Error\+Message}} () const
+\begin{DoxyCompactList}\small\item\em генерация сообщения об ошибке \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_error_aa05c46825e48ef92d2c90adbe497f5be}{is\+Equal\+To}} (const \doxymbox{\hyperlink{class_error}{Error}} \&other\+Error) const
+\begin{DoxyCompactList}\small\item\em проверка ошибок на равенство \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{error\+Type}} \doxymbox{\hyperlink{class_error_ace282524365cfa282569141008d87cf1}{type}} = \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988}{defenition\+Line\+Syntax\+Error}}
+\begin{DoxyCompactList}\small\item\em тип ошибки \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_error_a25f87a7089257e6dfd0dff6c2db50003}{error\+Input\+File\+Way}}
+\begin{DoxyCompactList}\small\item\em строка пути, откуда не удалось прочитать файл \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_error_ae03a955cba26da091cb6297060e44733}{error\+Output\+File\+Way}}
+\begin{DoxyCompactList}\small\item\em строка пути, куда не удалось записать файл \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_error_af271bf76144dd69b235cff2005b950da}{error\+Tag\+Name}}
+\begin{DoxyCompactList}\small\item\em строка, хранящая имя неизвестного тега \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_error_a0a68d7cee0febeeaf288bee19020cdef}{line}} = 0
+\begin{DoxyCompactList}\small\item\em номер строки с ошибкой, если ошибка во внутренней структуре файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{class_error_doc-constructors}
+\Hypertarget{class_error_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_error_aca339d00ad8481fb4c184f0ece42698b}\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_error_aca339d00ad8481fb4c184f0ece42698b} 
+Error::\+\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_error_a3db8fb75701ccf7813b76c616deca1ee}\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_error_a3db8fb75701ccf7813b76c616deca1ee} 
+Error::\+\+Error (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{error\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_error_a422bf6e1d466bd5c150f99e941f91378}\index{Error@{Error}!Error@{Error}}
+\index{Error@{Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_error_a422bf6e1d466bd5c150f99e941f91378} 
+Error::\+\+Error (\begin{DoxyParamCaption}\item[{int}]{line}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_error_a1a45d42a3a035d510333cdfeb36a0e93}\index{Error@{Error}!````~Error@{\texorpdfstring{$\sim$}{\string~}Error}}
+\index{````~Error@{\texorpdfstring{$\sim$}{\string~}Error}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Error()}{\string~Error()}}
+{\footnotesize\ttfamily \label{class_error_a1a45d42a3a035d510333cdfeb36a0e93} 
+Error::\+\texorpdfstring{$\sim$}{\string~}\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_error_doc-func-members}
+\Hypertarget{class_error_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_error_a1ce614c1825787b826fe0349e7dca8dc}\index{Error@{Error}!generateErrorMessage@{generateErrorMessage}}
+\index{generateErrorMessage@{generateErrorMessage}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{generateErrorMessage()}{generateErrorMessage()}}
+{\footnotesize\ttfamily \label{class_error_a1ce614c1825787b826fe0349e7dca8dc} 
+std::\+string Error::\+generate\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Возвращает}
+строка с сообщением об ошибке 
+\end{DoxyReturn}
+\Hypertarget{class_error_aa05c46825e48ef92d2c90adbe497f5be}\index{Error@{Error}!isEqualTo@{isEqualTo}}
+\index{isEqualTo@{isEqualTo}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{isEqualTo()}{isEqualTo()}}
+{\footnotesize\ttfamily \label{class_error_aa05c46825e48ef92d2c90adbe497f5be} 
+bool Error::\+is\+Equal\+To (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_error}{Error}} \&}]{other\+Error}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Возвращает}
+true, если ошибки одинаковые return false, если ошибки разные 
+\end{DoxyReturn}
+
+
+\label{class_error_doc-variable-members}
+\Hypertarget{class_error_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{class_error_a25f87a7089257e6dfd0dff6c2db50003}\index{Error@{Error}!errorInputFileWay@{errorInputFileWay}}
+\index{errorInputFileWay@{errorInputFileWay}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{errorInputFileWay}{errorInputFileWay}}
+{\footnotesize\ttfamily \label{class_error_a25f87a7089257e6dfd0dff6c2db50003} 
+std::\+string Error::\+error\+Input\+File\+Way}
+
+\Hypertarget{class_error_ae03a955cba26da091cb6297060e44733}\index{Error@{Error}!errorOutputFileWay@{errorOutputFileWay}}
+\index{errorOutputFileWay@{errorOutputFileWay}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{errorOutputFileWay}{errorOutputFileWay}}
+{\footnotesize\ttfamily \label{class_error_ae03a955cba26da091cb6297060e44733} 
+std::\+string Error::\+error\+Output\+File\+Way}
+
+\Hypertarget{class_error_af271bf76144dd69b235cff2005b950da}\index{Error@{Error}!errorTagName@{errorTagName}}
+\index{errorTagName@{errorTagName}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{errorTagName}{errorTagName}}
+{\footnotesize\ttfamily \label{class_error_af271bf76144dd69b235cff2005b950da} 
+std::\+string Error::\+error\+Tag\+Name}
+
+\Hypertarget{class_error_a0a68d7cee0febeeaf288bee19020cdef}\index{Error@{Error}!line@{line}}
+\index{line@{line}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily \label{class_error_a0a68d7cee0febeeaf288bee19020cdef} 
+int Error::\+line = 0}
+
+\Hypertarget{class_error_ace282524365cfa282569141008d87cf1}\index{Error@{Error}!type@{type}}
+\index{type@{type}!Error@{Error}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{class_error_ace282524365cfa282569141008d87cf1} 
+\doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffd}{error\+Type}} Error::\+type = \doxymbox{\hyperlink{headers_8h_a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988}{defenition\+Line\+Syntax\+Error}}}
+
+
+
+Объявления и описания членов классов находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{headers_8h}{headers.\+h}}\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{ivanov__47__knpo_8cpp}{ivanov\+\_\+47\+\_\+knpo.\+cpp}}\end{DoxyCompactItemize}

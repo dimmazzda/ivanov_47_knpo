@@ -1,0 +1,190 @@
+\doxysection{cdt.\+h}
+\hypertarget{cdt_8h_source}{}\label{cdt_8h_source}\index{Graphviz/include/graphviz/cdt.h@{Graphviz/include/graphviz/cdt.h}}
+\doxymbox{\hyperlink{cdt_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{/*\ \ Public\ interface\ for\ the\ dictionary\ library}}
+\DoxyCodeLine{00020\ \textcolor{comment}{**}}
+\DoxyCodeLine{00021\ \textcolor{comment}{**\ \ \ \ \ \ Written\ by\ Kiem-\/Phong\ Vo}}
+\DoxyCodeLine{00022\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ CDT\_VERSION\ 20241216L}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <stddef.h>}\ \textcolor{comment}{/*\ size\_t\ */}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifdef\ EXPORT\_CDT}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ CDT\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ CDT\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#ifndef\ CDT\_API}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ CDT\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdtlink__s__}{dtlink\_s\_}}\ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}};}
+\DoxyCodeLine{00042\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdtdisc__s__}{dtdisc\_s\_}}\ \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}};}
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdt__s__}{dt\_s\_}}\ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdt__s__}{dt\_s\_}}\ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}};\ \textcolor{comment}{/*\ for\ libdict\ compatibility\ */}}
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ *(*Dtsearch\_f)(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \textcolor{keywordtype}{void}\ *,\ int);}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{void}\ *(*Dtmake\_f)(\textcolor{keywordtype}{void}\ *,\ \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}}\ *);}
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{cdt_8h_a42b4d6568328f598b0280b22c17d3573}{Dtfree\_f}})(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ int\ (*\doxymbox{\hyperlink{cdt_8h_a379a2fcb714d83cb4e1122f1e22b8bb0}{Dtcompar\_f}})(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdtlink__s__}{dtlink\_s\_}}\ \{}
+\DoxyCodeLine{00051\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{structdtlink__s___acf6084bccaf1f23aecfdafa71712b544}{right}};\ \textcolor{comment}{/*\ right\ child\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdtlink__s___a91787a7c279d549d5ddb61a08b91c5e0}{\_hash}};\ \textcolor{comment}{/*\ hash\ value\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00054\ \ \ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{structdtlink__s___a45fc2b57c4ac5d3c709f8dae01194902}{\_left}};\ \ \ \ \textcolor{comment}{/*\ left\ child\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00055\ \ \ \}\ \doxymbox{\hyperlink{structdtlink__s___a7b77145682f8894bfbe5556f641d961c}{hl}};}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{/*\ private\ structure\ to\ hold\ an\ object\ */}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00060\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_dthold__t_a6985aa3adc31ea11ff20fcaf1b3a7579}{hdr}};\ \textcolor{comment}{/*\ header\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{struct_dthold__t_aa71cbfb0be97101fba3ed2860c25b013}{obj}};\ \ \ \ \textcolor{comment}{/*\ user\ object\ \ \ \ \ \ */}}
+\DoxyCodeLine{00062\ \}\ \doxymbox{\hyperlink{struct_dthold__t}{Dthold\_t}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{/*\ method\ to\ manipulate\ dictionary\ structure\ */}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00066\ \ \ \doxymbox{\hyperlink{cdt_8h_ad302f306f9f77c3b1cfe6c0fdde2ffae}{Dtsearch\_f}}\ \doxymbox{\hyperlink{struct_dtmethod__t_a8cee5d5079bca1862b7957fd0eb9effe}{searchf}};\ \textcolor{comment}{/*\ search\ function\ \ \ \ */}}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtmethod__t_ac835513fbc0677fcaa19598be547bf95}{type}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ type\ of\ operation\ \ */}}
+\DoxyCodeLine{00068\ \}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ stuff\ that\ may\ be\ in\ shared\ memory\ */}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtdata__t_aa0c6d977db109d2a25b060006b274a2d}{type}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ type\ of\ dictionary\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00073\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{struct_dtdata__t_a9ede06e9fc5b33bf3eb6839186bfc2f1}{here}};\ \textcolor{comment}{/*\ finger\ to\ last\ search\ element\ \ */}}
+\DoxyCodeLine{00074\ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00075\ \ \ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ **\doxymbox{\hyperlink{struct_dtdata__t_a18e7d48a510dad9794fbc35341a85aca}{\_htab}};\ \textcolor{comment}{/*\ hash\ table\ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00076\ \ \ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{struct_dtdata__t_ae0ae3c6a5fc177e2c9936195993192b1}{\_head}};\ \ \textcolor{comment}{/*\ linked\ list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00077\ \ \ \}\ hh;}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtdata__t_ac4a8d385d1cd1a3cb502a91c44807b2d}{ntab}};\ \textcolor{comment}{/*\ number\ of\ hash\ slots\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtdata__t_a184544acd7ee3823a86d1e08b2a29011}{size}};\ \textcolor{comment}{/*\ number\ of\ objects\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtdata__t_aff0a0c7a4ddce3a90dab372b85e9946a}{loop}};\ \textcolor{comment}{/*\ number\ of\ nested\ loops\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00081\ \}\ \doxymbox{\hyperlink{struct_dtdata__t}{Dtdata\_t}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{/*\ structure\ to\ hold\ methods\ that\ manipulate\ an\ object\ */}}
+\DoxyCodeLine{00084\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdtdisc__s__}{dtdisc\_s\_}}\ \{}
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdtdisc__s___a41894c9a2eb002d137e7e7c7c2580c8e}{key}};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ where\ the\ key\ begins\ in\ an\ object\ \ */}}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdtdisc__s___a45250930b71a8bfdc5d51d61357c34aa}{size}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ key\ size\ and\ type\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdtdisc__s___a858e3daef49a3a773ac8bdb46faa9db9}{link}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ offset\ to\ Dtlink\_t\ field\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00088\ \ \ \doxymbox{\hyperlink{cdt_8h_a00198acc389f43f605c7c29567606f83}{Dtmake\_f}}\ \doxymbox{\hyperlink{structdtdisc__s___aa28904b653a597d147fb8ad2f0369e2e}{makef}};\ \ \ \ \ \textcolor{comment}{/*\ object\ constructor\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00089\ \ \ \doxymbox{\hyperlink{cdt_8h_a42b4d6568328f598b0280b22c17d3573}{Dtfree\_f}}\ \doxymbox{\hyperlink{structdtdisc__s___a04697f5205ea7b05b43938befe2939ff}{freef}};\ \ \ \ \ \textcolor{comment}{/*\ object\ destructor\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00090\ \ \ \doxymbox{\hyperlink{cdt_8h_a379a2fcb714d83cb4e1122f1e22b8bb0}{Dtcompar\_f}}\ \doxymbox{\hyperlink{structdtdisc__s___a88017b70b9e4ec7e15d050299a55a0ff}{comparf}};\ \textcolor{comment}{/*\ to\ compare\ two\ objects\ \ \ \ \ */}}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ DTDISC(dc,\ ky,\ sz,\ lk,\ mkf,\ frf,\ cmpf)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\ \ ((dc)-\/>key\ =\ (ky),\ (dc)-\/>size\ =\ (sz),\ (dc)-\/>link\ =\ (lk),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\ \ \ (dc)-\/>makef\ =\ (mkf),\ (dc)-\/>freef\ =\ (frf),\ (dc)-\/>comparf\ =\ (cmpf))}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ the\ dictionary\ structure\ itself\ */}}
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structdt__s__}{dt\_s\_}}\ \{}
+\DoxyCodeLine{00099\ \ \ \doxymbox{\hyperlink{cdt_8h_ad302f306f9f77c3b1cfe6c0fdde2ffae}{Dtsearch\_f}}\ \doxymbox{\hyperlink{structdt__s___a2fd09092232229457d8c94e898a96d35}{searchf}};\ \textcolor{comment}{/*\ search\ function\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00100\ \ \ \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}}\ *\doxymbox{\hyperlink{structdt__s___ac8734b94b0970d143142edb4dbfb04a2}{disc}};\ \ \ \ \ \textcolor{comment}{/*\ method\ to\ manipulate\ objs\ \ \ \ \ \ */}}
+\DoxyCodeLine{00101\ \ \ \doxymbox{\hyperlink{struct_dtdata__t}{Dtdata\_t}}\ \doxymbox{\hyperlink{structdt__s___a36d42a101c68038d276e61c1a75cfd5a}{data}};\ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{structdt__s___a02122d7943da452b81883782c5957022}{meth}};\ \ \ \textcolor{comment}{/*\ dictionary\ method\ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structdt__s___aa0a8c498fd25675b05acdcfd7c78375b}{nview}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ number\ of\ parent\ view\ dictionaries\ */}}
+\DoxyCodeLine{00104\ \ \ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *\doxymbox{\hyperlink{structdt__s___af8e1741ddd533084ff2ba10bf86c5d10}{view}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ next\ on\ viewpath\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00105\ \ \ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *\doxymbox{\hyperlink{structdt__s___a1c3968d444ad77f8a6a22c10832a0263}{walk}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ dictionary\ being\ walked\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{structdt__s___a664f4b3b8ea8cde8b23ff0e617cda75f}{user}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ for\ user's\ usage\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{/*\ structure\ to\ get\ status\ of\ a\ dictionary\ */}}
+\DoxyCodeLine{00110\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtstat__t_acc92e8ade5aee3e8bcd89b9c0eaea058}{dt\_meth}};\ \ \ \ \ \ \textcolor{comment}{/*\ method\ type\ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_dtstat__t_a8a9d5cfd31a6fa1cab4c8baf16da03eb}{dt\_size}};\ \ \ \ \ \ \textcolor{comment}{/*\ number\ of\ elements\ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{struct_dtstat__t_a0253744732cd3d09038eaa16383b0eac}{dt\_n}};\ \ \ \ \ \ \textcolor{comment}{//\ number\ of\ chains\ or\ levels}}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{struct_dtstat__t_ac57eaae93530dbfd779bdd9a8dcb1a7b}{dt\_max}};\ \ \ \ \textcolor{comment}{//\ max\ size\ of\ a\ chain\ or\ a\ level}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{size\_t}\ *\doxymbox{\hyperlink{struct_dtstat__t_ace746b08589a21d58b734048bd0c193b}{dt\_count}};\ \textcolor{comment}{//\ counts\ of\ chains\ or\ levels\ by\ size}}
+\DoxyCodeLine{00116\ \}\ \doxymbox{\hyperlink{struct_dtstat__t}{Dtstat\_t}};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{comment}{/*\ supported\ storage\ methods\ */}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ DT\_SET\ 0000001\ \ \ \ \ }\textcolor{comment}{/*\ set\ with\ unique\ elements\ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#define\ DT\_OSET\ 0000004\ \ \ \ }\textcolor{comment}{/*\ ordered\ set\ (self-\/adjusting\ tree)\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ DT\_OBAG\ 0000010\ \ \ \ }\textcolor{comment}{/*\ ordered\ multiset\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ DT\_METHODS\ 0000377\ }\textcolor{comment}{/*\ all\ currently\ supported\ methods\ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{comment}{/*\ types\ of\ search\ */}}
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ DT\_INSERT\ 0000001\ \ }\textcolor{comment}{/*\ insert\ object\ if\ not\ found\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#define\ DT\_DELETE\ 0000002\ \ }\textcolor{comment}{/*\ delete\ object\ if\ found\ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ DT\_SEARCH\ 0000004\ \ }\textcolor{comment}{/*\ look\ for\ an\ object\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#define\ DT\_NEXT\ 0000010\ \ \ \ }\textcolor{comment}{/*\ look\ for\ next\ element\ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#define\ DT\_PREV\ 0000020\ \ \ \ }\textcolor{comment}{/*\ find\ previous\ element\ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ DT\_RENEW\ 0000040\ \ \ }\textcolor{comment}{/*\ renewing\ an\ object\ \ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#define\ DT\_CLEAR\ 0000100\ \ \ }\textcolor{comment}{/*\ clearing\ all\ objects\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#define\ DT\_FIRST\ 0000200\ \ \ }\textcolor{comment}{/*\ get\ first\ object\ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ DT\_LAST\ 0000400\ \ \ \ }\textcolor{comment}{/*\ get\ last\ object\ \ \ \ \ \ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#define\ DT\_MATCH\ 0001000\ \ \ }\textcolor{comment}{/*\ find\ object\ matching\ key\ \ \ \ \ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ DT\_VSEARCH\ 0002000\ }\textcolor{comment}{/*\ search\ using\ internal\ representation\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ DT\_DETACH\ 0010000\ \ }\textcolor{comment}{/*\ detach\ an\ object\ from\ the\ dictionary\ \ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{cdt_8h_a43b7ee8085f341e219abd810b5861695}{Dtset}};\ \ }
+\DoxyCodeLine{00139\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{cdt_8h_ac17f2af349b0d37468df9c3890d65765}{Dtoset}};\ }
+\DoxyCodeLine{00140\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{cdt_8h_a5b337ee2980fe41be2e220c0102d9898}{Dtobag}};\ }
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{cdt_8h_aaf0578dbe76c834fcda77fdb36f90743}{Dttree}};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *\doxymbox{\hyperlink{cdt_8h_ae8ae3b9b0bb933f4b05923f28607feaa}{dtopen}}(\doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}}\ *,\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *);}
+\DoxyCodeLine{00145\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_ab24362a4f1e5bd3d3dccb25199f34270}{dtclose}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *);}
+\DoxyCodeLine{00146\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *\doxymbox{\hyperlink{cdt_8h_aa1e08b44b868cd6e22a6be6fadd0cbaa}{dtview}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *);}
+\DoxyCodeLine{00147\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}}\ *\doxymbox{\hyperlink{cdt_8h_ae83316e035da221c8a2f61d1e531e0d4}{dtdisc}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *dt,\ \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\_t}}\ *);}
+\DoxyCodeLine{00148\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *\doxymbox{\hyperlink{cdt_8h_a369970d5990f9a2a19ba566769affa68}{dtmethod}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\_t}}\ *);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{cdt_8h_a46b3a35c57ac634867000dcccf6afd78}{dtflatten}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *);}
+\DoxyCodeLine{00151\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{cdt_8h_a60ae78bab00270d3483f563980926821}{dtextract}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *);}
+\DoxyCodeLine{00152\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_ae141b0f4f8a18fb671dab2fc4602c234}{dtrestore}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_a1d4b83678cb2801ec406dc2836e3ce0d}{dtwalk}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \textcolor{keywordtype}{int}\ (*)(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{void}\ *),\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{cdt_8h_ab997ab5fe58d2ec14780b2d82e5c3dd6}{dtrenew}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_a70a5fc2d51f74f30b0a96228309b9873}{dtsize}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *);}
+\DoxyCodeLine{00159\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_ad5ced427c61b36dcd86b13701106418e}{dtstat}}(\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *,\ \doxymbox{\hyperlink{struct_dtstat__t}{Dtstat\_t}}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00160\ \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\_API}}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{cdt_8h_a75d95f2da18bdf82424eb16734354b9d}{dtstrhash}}(\textcolor{keywordtype}{void}\ *,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{comment}{/*\ internal\ functions\ for\ translating\ among\ holder,\ object\ and\ key\ */}}
+\DoxyCodeLine{00163\ \textcolor{preprocessor}{\#define\ \_DT(dt)\ ((Dt\_t\ *)(dt))}}
+\DoxyCodeLine{00164\ \textcolor{preprocessor}{\#define\ \_DTDSC(dc,\ ky,\ sz,\ lk,\ cmpf)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\ \ (ky\ =\ dc-\/>key,\ sz\ =\ dc-\/>size,\ lk\ =\ dc-\/>link,\ cmpf\ =\ dc-\/>comparf)}}
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ \_DTLNK(o,\ lk)\ ((Dtlink\_t\ *)((char\ *)(o)\ +\ lk))}}
+\DoxyCodeLine{00167\ \textcolor{preprocessor}{\#define\ \_DTOBJ(e,\ lk)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\ \ (lk\ <\ 0\ ?\ ((Dthold\_t\ *)(e))-\/>obj\ :\ (void\ *)((char\ *)(e)\ -\/\ lk))}}
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#define\ \_DTKEY(o,\ ky,\ sz)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\ \ (void\ *)(sz\ <\ 0\ ?\ *((char\ **)((char\ *)(o)\ +\ ky))\ :\ ((char\ *)(o)\ +\ ky))}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ \_DTCMP(k1,\ k2,\ cmpf,\ sz)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\ \ (cmpf\ ?\ (cmpf)(k1,\ k2)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ :\ (sz\ <=\ 0\ ?\ strcmp(k1,\ k2)\ :\ memcmp(k1,\ k2,\ (size\_t)sz)))}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#define\ dtlink(d,\ e)\ (((Dtlink\_t\ *)(e))-\/>right)}}
+\DoxyCodeLine{00177\ \textcolor{preprocessor}{\#define\ dtobj(d,\ e)\ \_DTOBJ((e),\ \_DT(d)-\/>disc-\/>link)}}
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#define\ dtfinger(d)\ (\_DT(d)-\/>data.here\ ?\ dtobj((d),\ \_DT(d)-\/>data.here)\ :\ NULL)}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#define\ dtfirst(d)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(0),\ DT\_FIRST)}}
+\DoxyCodeLine{00181\ \textcolor{preprocessor}{\#define\ dtnext(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_NEXT)}}
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ dtlast(d)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(0),\ DT\_LAST)}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#define\ dtprev(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_PREV)}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#define\ dtsearch(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_SEARCH)}}
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#define\ dtmatch(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_MATCH)}}
+\DoxyCodeLine{00186\ \textcolor{preprocessor}{\#define\ dtinsert(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_INSERT)}}
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#define\ dtdelete(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_DELETE)}}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#define\ dtdetach(d,\ o)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(o),\ DT\_DETACH)}}
+\DoxyCodeLine{00189\ \textcolor{preprocessor}{\#define\ dtclear(d)\ (*(\_DT(d)-\/>searchf))((d),\ (void\ *)(0),\ DT\_CLEAR)}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

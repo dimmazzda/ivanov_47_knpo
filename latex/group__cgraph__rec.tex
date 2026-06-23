@@ -1,0 +1,132 @@
+\doxysubsubsubsection{records }
+\hypertarget{group__cgraph__rec}{}\label{group__cgraph__rec}\index{records@{records}}
+
+
+These records are attached by client programs dynamically at runtime.  
+
+
+\doxysubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agrec__s}{Agrec\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em implementation of \doxylink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agsym__s}{Agsym\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em string attribute descriptors \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agattr__s}{Agattr\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga842c1770dab888f97a2124fd1c4beab5}{Agattr\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em string attribute container \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agdatadict__s}{Agdatadict\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_gaf9586e118422d27a92e6c9ac694e8810}{Agdatadict\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em set of dictionaries per graph \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agrec__s}{Agrec\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em generic header of \doxylink{struct_agattr__s}{Agattr\+\_\+s}, \doxylink{struct_agdatadict__s}{Agdatadict\+\_\+s} and user records \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}{agbindrec}} (void \texorpdfstring{$\ast$}{*}obj, const char \texorpdfstring{$\ast$}{*}name, unsigned int recsize, int move\+\_\+to\+\_\+front)
+\begin{DoxyCompactList}\small\item\em attaches a new record of the given size to the object \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee}{aggetrec}} (void \texorpdfstring{$\ast$}{*}obj, const char \texorpdfstring{$\ast$}{*}name, int move\+\_\+to\+\_\+front)
+\begin{DoxyCompactList}\small\item\em find record in circular list and do optional move-\/to-\/front and lock \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d}{agdelrec}} (void \texorpdfstring{$\ast$}{*}obj, const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em deletes a named record from one object \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a}{aginit}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, int kind, const char \texorpdfstring{$\ast$}{*}rec\+\_\+name, int rec\+\_\+size, int move\+\_\+to\+\_\+front)
+\begin{DoxyCompactList}\small\item\em attach new records to objects of specified kind \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API void \doxymbox{\hyperlink{group__cgraph__rec_gab9b463c58a79b8520413c6bc26fad4b5}{agclean}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, int kind, char \texorpdfstring{$\ast$}{*}rec\+\_\+name)
+\begin{DoxyCompactList}\small\item\em calls \doxylink{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d}{agdelrec} for all objects of the same class in an entire graph \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+Uninterpreted records may be attached to graphs, subgraphs, nodes, and edges for efficient operations on values such as marks, weights, counts, and pointers needed by algorithms. Application programmers define the fields of these records, but they must be declared with a common record header \doxylink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}.
+
+A unique string ID (stored in \doxylink{struct_agrec__s_a81a026cc6c0a0759940833065f88971d}{Agrec\+\_\+s::\+name}) must be given to each record attached to the same object. Cgraph has functions to create, search for, and delete these records. The records are maintained in a circular list, with \doxylink{struct_agobj__s_ac595be4c079abaf534843935f4db97b6}{Agobj\+\_\+s::\+data} pointing somewhere in the list. The search function \doxylink{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee}{aggetrec} has an option to lock this pointer on a given record. The application must be written so only one such lock is outstanding at a time.
+
+Records are created and managed by Libcgraph. A programmer must explicitly attach them to the objects in a graph, either to individual objects one at a time via \doxylink{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}{agbindrec}, or to all the objects of the same class in a graph via \doxylink{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a}{aginit}. The {\ttfamily name} argument of a record distinguishes various types of records, and is programmer defined.
+
+Libcgraph reserves the prefix "{}\+\_\+\+AG\+\_\+"{} (in Data\+Dict\+Name, Ag\+Data\+Rec\+Name, DRName).
+
+Internally, records \doxylink{struct_agrec__s}{Agrec\+\_\+s} are maintained in circular linked lists attached to graph objects \doxylink{struct_agobj__s}{Agobj\+\_\+s}. To allow referencing application-\/dependent data without function calls or search, Libcgraph allows setting and locking the list pointer of a graph, node, or edge on a particular record (see \doxylink{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be}{Agtag\+\_\+s::\+mtflock} and \doxylink{struct_agobj__s_ac595be4c079abaf534843935f4db97b6}{Agobj\+\_\+s::\+data}). This pointer can be obtained with the macro \doxylink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA(obj)}. A cast, generally within a macro or inline function, is usually applied to convert the list pointer to an appropriate programmer-\/defined type (eg. \doxylink{group__cgraph__graph_ga7c4edc4279776663c7e0b498d32415f5}{GD\+\_\+parent}).
+
+To control the setting of this pointer, the {\ttfamily move\+\_\+to\+\_\+front} flag may be TRUE or FALSE. If {\ttfamily move\+\_\+to\+\_\+front} is TRUE, the record will be locked \doxylink{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be}{Agtag\+\_\+s::\+mtflock} at the head of the list \doxylink{struct_agobj__s_ac595be4c079abaf534843935f4db97b6}{Agobj\+\_\+s::\+data}, so it can be accessed directly by \doxylink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA(obj)}.
+
+The lock protects the data pointer from being moved. Function \doxylink{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee}{aggetrec} reports error when data pointer and lock are reassigned.
+
+The lock can be released or reset by a call to \doxylink{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d}{agdelrec}.
+
+\label{group__cgraph__rec_doc-typedef-members}
+\Hypertarget{group__cgraph__rec_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__rec_ga842c1770dab888f97a2124fd1c4beab5}\index{records@{records}!Agattr\_t@{Agattr\_t}}
+\index{Agattr\_t@{Agattr\_t}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agattr\_t}{Agattr\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga842c1770dab888f97a2124fd1c4beab5} 
+typedef struct \doxymbox{\hyperlink{struct_agattr__s}{Agattr\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga842c1770dab888f97a2124fd1c4beab5}{Agattr\+\_\+t}}}
+
+\Hypertarget{group__cgraph__rec_gaf9586e118422d27a92e6c9ac694e8810}\index{records@{records}!Agdatadict\_t@{Agdatadict\_t}}
+\index{Agdatadict\_t@{Agdatadict\_t}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agdatadict\_t}{Agdatadict\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_gaf9586e118422d27a92e6c9ac694e8810} 
+typedef struct \doxymbox{\hyperlink{struct_agdatadict__s}{Agdatadict\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_gaf9586e118422d27a92e6c9ac694e8810}{Agdatadict\+\_\+t}}}
+
+\Hypertarget{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}\index{records@{records}!Agrec\_t@{Agrec\_t}}
+\index{Agrec\_t@{Agrec\_t}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agrec\_t}{Agrec\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a} 
+typedef struct \doxymbox{\hyperlink{struct_agrec__s}{Agrec\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}}}
+
+\Hypertarget{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}\index{records@{records}!Agsym\_t@{Agsym\_t}}
+\index{Agsym\_t@{Agsym\_t}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agsym\_t}{Agsym\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6} 
+typedef struct \doxymbox{\hyperlink{struct_agsym__s}{Agsym\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\+\_\+t}}}
+
+
+
+\label{group__cgraph__rec_doc-func-members}
+\Hypertarget{group__cgraph__rec_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}\index{records@{records}!agbindrec@{agbindrec}}
+\index{agbindrec@{agbindrec}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agbindrec()}{agbindrec()}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917} 
+CGRAPH\+\_\+\+API void \texorpdfstring{$\ast$}{*} agbindrec (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{unsigned int}]{recsize}{, }\item[{int}]{move\+\_\+to\+\_\+front}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em recsize} & if 0, the call to \doxylink{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}{agbindrec} is simply a lookup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+pointer to {\ttfamily \doxylink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}} and user data 
+\end{DoxyReturn}
+\Hypertarget{group__cgraph__rec_gab9b463c58a79b8520413c6bc26fad4b5}\index{records@{records}!agclean@{agclean}}
+\index{agclean@{agclean}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agclean()}{agclean()}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_gab9b463c58a79b8520413c6bc26fad4b5} 
+CGRAPH\+\_\+\+API void agclean (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{kind}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{rec\+\_\+name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d}\index{records@{records}!agdelrec@{agdelrec}}
+\index{agdelrec@{agdelrec}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agdelrec()}{agdelrec()}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d} 
+CGRAPH\+\_\+\+API int agdelrec (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee}\index{records@{records}!aggetrec@{aggetrec}}
+\index{aggetrec@{aggetrec}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aggetrec()}{aggetrec()}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t}} \texorpdfstring{$\ast$}{*} aggetrec (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int}]{move\+\_\+to\+\_\+front}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a}\index{records@{records}!aginit@{aginit}}
+\index{aginit@{aginit}!records@{records}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aginit()}{aginit()}}
+{\footnotesize\ttfamily \label{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a} 
+CGRAPH\+\_\+\+API void aginit (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{kind}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{rec\+\_\+name}{, }\item[{int}]{rec\+\_\+size}{, }\item[{int}]{move\+\_\+to\+\_\+front}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em kind} & may be \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}, \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}, or \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE} \\
+\hline
+{\em rec\+\_\+size} & if is negative (of the actual rec\+\_\+size) for graphs, \doxylink{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a}{aginit} is applied recursively to the graph and its subgraphs \\
+\hline
+\end{DoxyParams}

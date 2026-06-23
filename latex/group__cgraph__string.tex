@@ -1,0 +1,97 @@
+\doxysubsubsubsection{string utilities }
+\hypertarget{group__cgraph__string}{}\label{group__cgraph__string}\index{string utilities@{string utilities}}
+
+
+reference-\/counted strings  
+
+
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_ga63d197f6e77d5f5ac6d3b47580624b84}{agstrdup}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em returns a pointer to a reference-\/counted copy of the argument string, creating one if necessary \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_gac1bad18507cb3da698daac382085bfe2}{agstrdup\+\_\+text}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em returns a pointer to a reference-\/counted regular text copy of the argument string, creating one if necessary \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_ga4443d4d88064813323bac27514c727ac}{agstrdup\+\_\+html}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em returns a pointer to a reference-\/counted HTML-\/like copy of the argument string, creating one if necessary \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__string_ga4b85c338d71db56dccc18040f53638a7}{aghtmlstr}} (const char \texorpdfstring{$\ast$}{*})
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_ga83740b274c978d83d6ac8ac5b5cf0196}{agstrbind}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*})
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_ga092b478a64289fe521da748b84efa7d0}{agstrbind\+\_\+text}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*})
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_gaa50f90c93be533d833a0637d9c0bab7d}{agstrbind\+\_\+html}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*})
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__string_gaa0bb43286b278c334a2db74b0d699338}{agstrfree}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}, bool is\+\_\+html)
+\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__string_ga713d5399c53b10bf008eb7a1682ca98a}{agstrcanon}} (char \texorpdfstring{$\ast$}{*}, char \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+Storage management of strings as reference-\/counted strings. The caller does not need to dynamically allocate storage.
+
+All uses of cgraph strings need to be freed using \doxylink{group__cgraph__string_gaa0bb43286b278c334a2db74b0d699338}{agstrfree} in order to correctly maintain the reference count. 
+
+\label{group__cgraph__string_doc-func-members}
+\Hypertarget{group__cgraph__string_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__string_ga4b85c338d71db56dccc18040f53638a7}\index{string utilities@{string utilities}!aghtmlstr@{aghtmlstr}}
+\index{aghtmlstr@{aghtmlstr}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aghtmlstr()}{aghtmlstr()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga4b85c338d71db56dccc18040f53638a7} 
+CGRAPH\+\_\+\+API int aghtmlstr (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+query if a string is an ordinary string or an HTML-\/like string \Hypertarget{group__cgraph__string_ga83740b274c978d83d6ac8ac5b5cf0196}\index{string utilities@{string utilities}!agstrbind@{agstrbind}}
+\index{agstrbind@{agstrbind}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrbind()}{agstrbind()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga83740b274c978d83d6ac8ac5b5cf0196} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrbind (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+returns a pointer to a reference-\/counted string if it exists, or NULL if not \Hypertarget{group__cgraph__string_gaa50f90c93be533d833a0637d9c0bab7d}\index{string utilities@{string utilities}!agstrbind\_html@{agstrbind\_html}}
+\index{agstrbind\_html@{agstrbind\_html}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrbind\_html()}{agstrbind\_html()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_gaa50f90c93be533d833a0637d9c0bab7d} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrbind\+\_\+html (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+returns a pointer to a reference-\/counted HTML-\/like string if it exists, or NULL if not \Hypertarget{group__cgraph__string_ga092b478a64289fe521da748b84efa7d0}\index{string utilities@{string utilities}!agstrbind\_text@{agstrbind\_text}}
+\index{agstrbind\_text@{agstrbind\_text}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrbind\_text()}{agstrbind\_text()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga092b478a64289fe521da748b84efa7d0} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrbind\+\_\+text (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+returns a pointer to a reference-\/counted regular text string if it exists, or NULL if not \Hypertarget{group__cgraph__string_ga713d5399c53b10bf008eb7a1682ca98a}\index{string utilities@{string utilities}!agstrcanon@{agstrcanon}}
+\index{agstrcanon@{agstrcanon}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrcanon()}{agstrcanon()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga713d5399c53b10bf008eb7a1682ca98a} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrcanon (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__string_ga63d197f6e77d5f5ac6d3b47580624b84}\index{string utilities@{string utilities}!agstrdup@{agstrdup}}
+\index{agstrdup@{agstrdup}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrdup()}{agstrdup()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga63d197f6e77d5f5ac6d3b47580624b84} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrdup (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+Use of this function should be avoided where possible. It is not possible to explicitly indicate whether the caller is trying to create a regular text string or an HTML-\/like string. It is better to be explicit with your intent and instead call either \doxylink{group__cgraph__string_gac1bad18507cb3da698daac382085bfe2}{agstrdup\+\_\+text} or \doxylink{group__cgraph__string_ga4443d4d88064813323bac27514c727ac}{agstrdup\+\_\+html}. \Hypertarget{group__cgraph__string_ga4443d4d88064813323bac27514c727ac}\index{string utilities@{string utilities}!agstrdup\_html@{agstrdup\_html}}
+\index{agstrdup\_html@{agstrdup\_html}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrdup\_html()}{agstrdup\_html()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_ga4443d4d88064813323bac27514c727ac} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrdup\+\_\+html (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__string_gac1bad18507cb3da698daac382085bfe2}\index{string utilities@{string utilities}!agstrdup\_text@{agstrdup\_text}}
+\index{agstrdup\_text@{agstrdup\_text}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrdup\_text()}{agstrdup\_text()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_gac1bad18507cb3da698daac382085bfe2} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agstrdup\+\_\+text (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__string_gaa0bb43286b278c334a2db74b0d699338}\index{string utilities@{string utilities}!agstrfree@{agstrfree}}
+\index{agstrfree@{agstrfree}!string utilities@{string utilities}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agstrfree()}{agstrfree()}}
+{\footnotesize\ttfamily \label{group__cgraph__string_gaa0bb43286b278c334a2db74b0d699338} 
+CGRAPH\+\_\+\+API int agstrfree (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{bool}]{is\+\_\+html}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em is\+\_\+html} & Is the string being freed an HTML-\/like string? \\
+\hline
+\end{DoxyParams}

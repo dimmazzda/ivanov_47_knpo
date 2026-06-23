@@ -1,0 +1,1454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/cdt.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('cdt_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл cdt.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>container data types API  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="cdt_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:dtlink_5Fs_5F" id="r_dtlink_5Fs_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdtlink__s__.html">dtlink_s_</a></td></tr>
+<tr class="memitem:Dthold_5Ft" id="r_Dthold_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_dthold__t.html">Dthold_t</a></td></tr>
+<tr class="memitem:Dtmethod_5Ft" id="r_Dtmethod_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a></td></tr>
+<tr class="memitem:Dtdata_5Ft" id="r_Dtdata_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_dtdata__t.html">Dtdata_t</a></td></tr>
+<tr class="memitem:dtdisc_5Fs_5F" id="r_dtdisc_5Fs_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdtdisc__s__.html">dtdisc_s_</a></td></tr>
+<tr class="memitem:dt_5Fs_5F" id="r_dt_5Fs_5F"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdt__s__.html">dt_s_</a></td></tr>
+<tr class="memitem:Dtstat_5Ft" id="r_Dtstat_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_dtstat__t.html">Dtstat_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a15ac0da44b92ccaf93b7087cb6cf641e" id="r_a15ac0da44b92ccaf93b7087cb6cf641e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a15ac0da44b92ccaf93b7087cb6cf641e">CDT_VERSION</a>&#160;&#160;&#160;20241216L</td></tr>
+<tr class="memitem:a907f3780dfe2def28491c21efee0418d" id="r_a907f3780dfe2def28491c21efee0418d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a>&#160;&#160;&#160;/* nothing */</td></tr>
+<tr class="memitem:a576667c8240d18ab1da1138a42fe9f7c" id="r_a576667c8240d18ab1da1138a42fe9f7c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a576667c8240d18ab1da1138a42fe9f7c">DTDISC</a>(dc,  ky,  sz,  lk,  mkf,  frf,  cmpf)</td></tr>
+<tr class="memitem:a257bbc9fe9828352a627cd1894030fbb" id="r_a257bbc9fe9828352a627cd1894030fbb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a257bbc9fe9828352a627cd1894030fbb">DT_SET</a>&#160;&#160;&#160;0000001     /* set with unique elements     */</td></tr>
+<tr class="memitem:ab540f5d778fb80e2f825295c8ddf3ba7" id="r_ab540f5d778fb80e2f825295c8ddf3ba7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab540f5d778fb80e2f825295c8ddf3ba7">DT_OSET</a>&#160;&#160;&#160;0000004    /* ordered set (self-adjusting tree) */</td></tr>
+<tr class="memitem:a1acc2651207891a7c4d5f525aef60bc8" id="r_a1acc2651207891a7c4d5f525aef60bc8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1acc2651207891a7c4d5f525aef60bc8">DT_OBAG</a>&#160;&#160;&#160;0000010    /* ordered multiset          */</td></tr>
+<tr class="memitem:ab2ed93cb7ebee29498a079e553945b57" id="r_ab2ed93cb7ebee29498a079e553945b57"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab2ed93cb7ebee29498a079e553945b57">DT_METHODS</a>&#160;&#160;&#160;0000377 /* all currently supported methods  */</td></tr>
+<tr class="memitem:a8f9920c0fee0b9f50e0a3b23abd3fd26" id="r_a8f9920c0fee0b9f50e0a3b23abd3fd26"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8f9920c0fee0b9f50e0a3b23abd3fd26">DT_INSERT</a>&#160;&#160;&#160;0000001  /* insert object if not found      */</td></tr>
+<tr class="memitem:a645de2061b32735724c54c87fd5406a2" id="r_a645de2061b32735724c54c87fd5406a2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a645de2061b32735724c54c87fd5406a2">DT_DELETE</a>&#160;&#160;&#160;0000002  /* delete object if found      */</td></tr>
+<tr class="memitem:a47e5c8e948e61a82e17cb2a4bdb6caa2" id="r_a47e5c8e948e61a82e17cb2a4bdb6caa2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a47e5c8e948e61a82e17cb2a4bdb6caa2">DT_SEARCH</a>&#160;&#160;&#160;0000004  /* look for an object          */</td></tr>
+<tr class="memitem:a24fcda2658f9defe5bdb1984860d6240" id="r_a24fcda2658f9defe5bdb1984860d6240"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a24fcda2658f9defe5bdb1984860d6240">DT_NEXT</a>&#160;&#160;&#160;0000010    /* look for next element     */</td></tr>
+<tr class="memitem:a1bea70faf05bae1b0a7548ea96e1d511" id="r_a1bea70faf05bae1b0a7548ea96e1d511"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1bea70faf05bae1b0a7548ea96e1d511">DT_PREV</a>&#160;&#160;&#160;0000020    /* find previous element     */</td></tr>
+<tr class="memitem:a9f480f0a639e6cbdfc740e489f034433" id="r_a9f480f0a639e6cbdfc740e489f034433"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9f480f0a639e6cbdfc740e489f034433">DT_RENEW</a>&#160;&#160;&#160;0000040   /* renewing an object         */</td></tr>
+<tr class="memitem:a7001f50d84e9fedcf3f838636af4e62c" id="r_a7001f50d84e9fedcf3f838636af4e62c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7001f50d84e9fedcf3f838636af4e62c">DT_CLEAR</a>&#160;&#160;&#160;0000100   /* clearing all objects           */</td></tr>
+<tr class="memitem:af046cba51c33a3931219518d4d1fcf99" id="r_af046cba51c33a3931219518d4d1fcf99"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af046cba51c33a3931219518d4d1fcf99">DT_FIRST</a>&#160;&#160;&#160;0000200   /* get first object           */</td></tr>
+<tr class="memitem:a192bea83114b73344ba3e9aab4c796e3" id="r_a192bea83114b73344ba3e9aab4c796e3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a192bea83114b73344ba3e9aab4c796e3">DT_LAST</a>&#160;&#160;&#160;0000400    /* get last object           */</td></tr>
+<tr class="memitem:a01aca514b0b658320c893611601af6fa" id="r_a01aca514b0b658320c893611601af6fa"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a01aca514b0b658320c893611601af6fa">DT_MATCH</a>&#160;&#160;&#160;0001000   /* find object matching key       */</td></tr>
+<tr class="memitem:a4fa66c08b3e8b07466485051fa8c328e" id="r_a4fa66c08b3e8b07466485051fa8c328e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4fa66c08b3e8b07466485051fa8c328e">DT_VSEARCH</a>&#160;&#160;&#160;0002000 /* search using internal representation */</td></tr>
+<tr class="memitem:a93e662669aa505475549609079d64592" id="r_a93e662669aa505475549609079d64592"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a93e662669aa505475549609079d64592">DT_DETACH</a>&#160;&#160;&#160;0010000  /* detach an object from the dictionary    */</td></tr>
+<tr class="memitem:a71abe7f6cb4cc1c3892cc2e3f7798655" id="r_a71abe7f6cb4cc1c3892cc2e3f7798655"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(dt)</td></tr>
+<tr class="memitem:a0c558c127c5b56704889617c71bcdf09" id="r_a0c558c127c5b56704889617c71bcdf09"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0c558c127c5b56704889617c71bcdf09">_DTDSC</a>(dc,  ky,  sz,  lk,  cmpf)</td></tr>
+<tr class="memitem:a2366c9db1803f36d06e9e255fdbc6514" id="r_a2366c9db1803f36d06e9e255fdbc6514"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2366c9db1803f36d06e9e255fdbc6514">_DTLNK</a>(o,  lk)</td></tr>
+<tr class="memitem:acd1eb06f8072a9014ff132c253884d10" id="r_acd1eb06f8072a9014ff132c253884d10"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acd1eb06f8072a9014ff132c253884d10">_DTOBJ</a>(e,  lk)</td></tr>
+<tr class="memitem:a08a47e323cf4fdbd6f9d7bf0855ce5bf" id="r_a08a47e323cf4fdbd6f9d7bf0855ce5bf"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a08a47e323cf4fdbd6f9d7bf0855ce5bf">_DTKEY</a>(o,  ky,  sz)</td></tr>
+<tr class="memitem:acb44035c01b5dd7ffc96abe81d755ed9" id="r_acb44035c01b5dd7ffc96abe81d755ed9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acb44035c01b5dd7ffc96abe81d755ed9">_DTCMP</a>(k1,  k2,  cmpf,  sz)</td></tr>
+<tr class="memitem:a79be8633be14ddf98d3b356e0d40564d" id="r_a79be8633be14ddf98d3b356e0d40564d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a79be8633be14ddf98d3b356e0d40564d">dtlink</a>(d,  e)</td></tr>
+<tr class="memitem:a4717180611823cdf0c057abe1a45315a" id="r_a4717180611823cdf0c057abe1a45315a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4717180611823cdf0c057abe1a45315a">dtobj</a>(d,  e)</td></tr>
+<tr class="memitem:a820a52522c7b2de0619a793965d7d881" id="r_a820a52522c7b2de0619a793965d7d881"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a820a52522c7b2de0619a793965d7d881">dtfinger</a>(d)</td></tr>
+<tr class="memitem:af954ac773cdfecad7ec5ac45e9a63a23" id="r_af954ac773cdfecad7ec5ac45e9a63a23"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af954ac773cdfecad7ec5ac45e9a63a23">dtfirst</a>(d)</td></tr>
+<tr class="memitem:af6ea20c91403c1ef595681fc6b6ac30f" id="r_af6ea20c91403c1ef595681fc6b6ac30f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af6ea20c91403c1ef595681fc6b6ac30f">dtnext</a>(d,  o)</td></tr>
+<tr class="memitem:aba7b1b643434cc61b1692a1875c6029b" id="r_aba7b1b643434cc61b1692a1875c6029b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba7b1b643434cc61b1692a1875c6029b">dtlast</a>(d)</td></tr>
+<tr class="memitem:aa6a97d9b70597ac2a34565f956ae3703" id="r_aa6a97d9b70597ac2a34565f956ae3703"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa6a97d9b70597ac2a34565f956ae3703">dtprev</a>(d,  o)</td></tr>
+<tr class="memitem:a62014aa3c3853e006d7115b1dbfb81c9" id="r_a62014aa3c3853e006d7115b1dbfb81c9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a62014aa3c3853e006d7115b1dbfb81c9">dtsearch</a>(d,  o)</td></tr>
+<tr class="memitem:a4dff83f53eb9464965da060528b4cae8" id="r_a4dff83f53eb9464965da060528b4cae8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4dff83f53eb9464965da060528b4cae8">dtmatch</a>(d,  o)</td></tr>
+<tr class="memitem:a8ac18f2bf845640bd563a1545d2e3675" id="r_a8ac18f2bf845640bd563a1545d2e3675"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8ac18f2bf845640bd563a1545d2e3675">dtinsert</a>(d,  o)</td></tr>
+<tr class="memitem:ad351bb07a26ff918184f200ee1d655cc" id="r_ad351bb07a26ff918184f200ee1d655cc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad351bb07a26ff918184f200ee1d655cc">dtdelete</a>(d,  o)</td></tr>
+<tr class="memitem:a6590446c25a135161df8945b8633b42a" id="r_a6590446c25a135161df8945b8633b42a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6590446c25a135161df8945b8633b42a">dtdetach</a>(d,  o)</td></tr>
+<tr class="memitem:a5cc1e11802758b8c71f085d463393ef0" id="r_a5cc1e11802758b8c71f085d463393ef0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5cc1e11802758b8c71f085d463393ef0">dtclear</a>(d)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:af1f4e66a09b733bea11936c64fe24bb6" id="r_af1f4e66a09b733bea11936c64fe24bb6"><td class="memItemLeft">typedef struct <a class="el" href="structdtlink__s__.html">dtlink_s_</a>&#160;</td><td class="memItemRight"><a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a></td></tr>
+<tr class="memitem:a59a978b45171686ba566b57638fd371f" id="r_a59a978b45171686ba566b57638fd371f"><td class="memItemLeft">typedef struct <a class="el" href="structdtdisc__s__.html">dtdisc_s_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a></td></tr>
+<tr class="memitem:aa4cb2c86c90226c860518e4cf924a173" id="r_aa4cb2c86c90226c860518e4cf924a173"><td class="memItemLeft">typedef struct <a class="el" href="structdt__s__.html">dt_s_</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a></td></tr>
+<tr class="memitem:a0351a17d49d8cee0c6cea7412ddd6d58" id="r_a0351a17d49d8cee0c6cea7412ddd6d58"><td class="memItemLeft">typedef struct <a class="el" href="structdt__s__.html">dt_s_</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0351a17d49d8cee0c6cea7412ddd6d58">Dict_t</a></td></tr>
+<tr class="memitem:ad302f306f9f77c3b1cfe6c0fdde2ffae" id="r_ad302f306f9f77c3b1cfe6c0fdde2ffae"><td class="memItemLeft">typedef void *(*&#160;</td><td class="memItemRight"><a class="el" href="#ad302f306f9f77c3b1cfe6c0fdde2ffae">Dtsearch_f</a>) (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, void *, int)</td></tr>
+<tr class="memitem:a00198acc389f43f605c7c29567606f83" id="r_a00198acc389f43f605c7c29567606f83"><td class="memItemLeft">typedef void *(*&#160;</td><td class="memItemRight"><a class="el" href="#a00198acc389f43f605c7c29567606f83">Dtmake_f</a>) (void *, <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *)</td></tr>
+<tr class="memitem:a42b4d6568328f598b0280b22c17d3573" id="r_a42b4d6568328f598b0280b22c17d3573"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a42b4d6568328f598b0280b22c17d3573">Dtfree_f</a>) (void *)</td></tr>
+<tr class="memitem:a379a2fcb714d83cb4e1122f1e22b8bb0" id="r_a379a2fcb714d83cb4e1122f1e22b8bb0"><td class="memItemLeft">typedef int(*&#160;</td><td class="memItemRight"><a class="el" href="#a379a2fcb714d83cb4e1122f1e22b8bb0">Dtcompar_f</a>) (void *, void *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ae8ae3b9b0bb933f4b05923f28607feaa" id="r_ae8ae3b9b0bb933f4b05923f28607feaa"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae8ae3b9b0bb933f4b05923f28607feaa">dtopen</a> (<a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *, <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *)</td></tr>
+<tr class="memitem:ab24362a4f1e5bd3d3dccb25199f34270" id="r_ab24362a4f1e5bd3d3dccb25199f34270"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ab24362a4f1e5bd3d3dccb25199f34270">dtclose</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)</td></tr>
+<tr class="memitem:aa1e08b44b868cd6e22a6be6fadd0cbaa" id="r_aa1e08b44b868cd6e22a6be6fadd0cbaa"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa1e08b44b868cd6e22a6be6fadd0cbaa">dtview</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)</td></tr>
+<tr class="memitem:ae83316e035da221c8a2f61d1e531e0d4" id="r_ae83316e035da221c8a2f61d1e531e0d4"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae83316e035da221c8a2f61d1e531e0d4">dtdisc</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *dt, <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *)</td></tr>
+<tr class="memitem:a369970d5990f9a2a19ba566769affa68" id="r_a369970d5990f9a2a19ba566769affa68"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a369970d5990f9a2a19ba566769affa68">dtmethod</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *)</td></tr>
+<tr class="memitem:a46b3a35c57ac634867000dcccf6afd78" id="r_a46b3a35c57ac634867000dcccf6afd78"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a46b3a35c57ac634867000dcccf6afd78">dtflatten</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)</td></tr>
+<tr class="memitem:a60ae78bab00270d3483f563980926821" id="r_a60ae78bab00270d3483f563980926821"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a60ae78bab00270d3483f563980926821">dtextract</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)</td></tr>
+<tr class="memitem:ae141b0f4f8a18fb671dab2fc4602c234" id="r_ae141b0f4f8a18fb671dab2fc4602c234"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ae141b0f4f8a18fb671dab2fc4602c234">dtrestore</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *)</td></tr>
+<tr class="memitem:a1d4b83678cb2801ec406dc2836e3ce0d" id="r_a1d4b83678cb2801ec406dc2836e3ce0d"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#a1d4b83678cb2801ec406dc2836e3ce0d">dtwalk</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, int(*)(void *, void *), void *)</td></tr>
+<tr class="memitem:ab997ab5fe58d2ec14780b2d82e5c3dd6" id="r_ab997ab5fe58d2ec14780b2d82e5c3dd6"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> void *&#160;</td><td class="memItemRight"><a class="el" href="#ab997ab5fe58d2ec14780b2d82e5c3dd6">dtrenew</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, void *)</td></tr>
+<tr class="memitem:a70a5fc2d51f74f30b0a96228309b9873" id="r_a70a5fc2d51f74f30b0a96228309b9873"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#a70a5fc2d51f74f30b0a96228309b9873">dtsize</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)</td></tr>
+<tr class="memitem:ad5ced427c61b36dcd86b13701106418e" id="r_ad5ced427c61b36dcd86b13701106418e"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ad5ced427c61b36dcd86b13701106418e">dtstat</a> (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="el" href="struct_dtstat__t.html">Dtstat_t</a> *, int)</td></tr>
+<tr class="memitem:a75d95f2da18bdf82424eb16734354b9d" id="r_a75d95f2da18bdf82424eb16734354b9d"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> unsigned int&#160;</td><td class="memItemRight"><a class="el" href="#a75d95f2da18bdf82424eb16734354b9d">dtstrhash</a> (void *, int)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a43b7ee8085f341e219abd810b5861695" id="r_a43b7ee8085f341e219abd810b5861695"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a43b7ee8085f341e219abd810b5861695">Dtset</a></td></tr>
+<tr class="memdesc:a43b7ee8085f341e219abd810b5861695"><td class="mdescLeft">&#160;</td><td class="mdescRight">set with unique elements  <br /></td></tr>
+<tr class="memitem:ac17f2af349b0d37468df9c3890d65765" id="r_ac17f2af349b0d37468df9c3890d65765"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac17f2af349b0d37468df9c3890d65765">Dtoset</a></td></tr>
+<tr class="memdesc:ac17f2af349b0d37468df9c3890d65765"><td class="mdescLeft">&#160;</td><td class="mdescRight">ordered set (self-adjusting tree)  <br /></td></tr>
+<tr class="memitem:a5b337ee2980fe41be2e220c0102d9898" id="r_a5b337ee2980fe41be2e220c0102d9898"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5b337ee2980fe41be2e220c0102d9898">Dtobag</a></td></tr>
+<tr class="memdesc:a5b337ee2980fe41be2e220c0102d9898"><td class="mdescLeft">&#160;</td><td class="mdescRight">ordered multiset  <br /></td></tr>
+<tr class="memitem:aaf0578dbe76c834fcda77fdb36f90743" id="r_aaf0578dbe76c834fcda77fdb36f90743"><td class="memItemLeft"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf0578dbe76c834fcda77fdb36f90743">Dttree</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><b>CDT</b> manages run-time dictionaries using standard container data types: unordered set/multiset, ordered set/multiset, list, and stack.</p>
+<p><a href="https://graphviz.org/pdf/cdt.3.pdf">man 3 cdt</a> </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="a71abe7f6cb4cc1c3892cc2e3f7798655" name="a71abe7f6cb4cc1c3892cc2e3f7798655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71abe7f6cb4cc1c3892cc2e3f7798655">&#9670;&#160;</a></span>_DT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *)(dt))</div>
+<div class="ttc" id="acdt_8h_html_aa4cb2c86c90226c860518e4cf924a173"><div class="ttname"><a href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a></div><div class="ttdeci">struct dt_s_ Dt_t</div><div class="ttdef"><b>Определения</b> cdt.h:43</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb44035c01b5dd7ffc96abe81d755ed9" name="acb44035c01b5dd7ffc96abe81d755ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb44035c01b5dd7ffc96abe81d755ed9">&#9670;&#160;</a></span>_DTCMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DTCMP</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cmpf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(cmpf ? (cmpf)(k1, k2)                                                       \</div>
+<div class="line">      : (sz &lt;= 0 ? strcmp(k1, k2) : memcmp(k1, k2, (size_t)sz)))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0c558c127c5b56704889617c71bcdf09" name="a0c558c127c5b56704889617c71bcdf09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c558c127c5b56704889617c71bcdf09">&#9670;&#160;</a></span>_DTDSC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DTDSC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ky</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lk</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cmpf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(ky = dc-&gt;key, sz = dc-&gt;size, lk = dc-&gt;link, cmpf = dc-&gt;comparf)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a08a47e323cf4fdbd6f9d7bf0855ce5bf" name="a08a47e323cf4fdbd6f9d7bf0855ce5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a47e323cf4fdbd6f9d7bf0855ce5bf">&#9670;&#160;</a></span>_DTKEY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DTKEY</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ky</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<span class="keywordtype">void</span> *)(sz &lt; 0 ? *((<span class="keywordtype">char</span> **)((<span class="keywordtype">char</span> *)(o) + ky)) : ((<span class="keywordtype">char</span> *)(o) + ky))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2366c9db1803f36d06e9e255fdbc6514" name="a2366c9db1803f36d06e9e255fdbc6514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2366c9db1803f36d06e9e255fdbc6514">&#9670;&#160;</a></span>_DTLNK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DTLNK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lk</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *)((<span class="keywordtype">char</span> *)(o) + lk))</div>
+<div class="ttc" id="acdt_8h_html_af1f4e66a09b733bea11936c64fe24bb6"><div class="ttname"><a href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a></div><div class="ttdeci">struct dtlink_s_ Dtlink_t</div><div class="ttdef"><b>Определения</b> cdt.h:41</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acd1eb06f8072a9014ff132c253884d10" name="acd1eb06f8072a9014ff132c253884d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1eb06f8072a9014ff132c253884d10">&#9670;&#160;</a></span>_DTOBJ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DTOBJ</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lk</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(lk &lt; 0 ? ((<a class="code hl_struct" href="struct_dthold__t.html">Dthold_t</a> *)(e))-&gt;obj : (<span class="keywordtype">void</span> *)((<span class="keywordtype">char</span> *)(e) - lk))</div>
+<div class="ttc" id="astruct_dthold__t_html"><div class="ttname"><a href="struct_dthold__t.html">Dthold_t</a></div><div class="ttdef"><b>Определения</b> cdt.h:59</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a907f3780dfe2def28491c21efee0418d" name="a907f3780dfe2def28491c21efee0418d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a907f3780dfe2def28491c21efee0418d">&#9670;&#160;</a></span>CDT_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CDT_API&#160;&#160;&#160;/* nothing */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15ac0da44b92ccaf93b7087cb6cf641e" name="a15ac0da44b92ccaf93b7087cb6cf641e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ac0da44b92ccaf93b7087cb6cf641e">&#9670;&#160;</a></span>CDT_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CDT_VERSION&#160;&#160;&#160;20241216L</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7001f50d84e9fedcf3f838636af4e62c" name="a7001f50d84e9fedcf3f838636af4e62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7001f50d84e9fedcf3f838636af4e62c">&#9670;&#160;</a></span>DT_CLEAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_CLEAR&#160;&#160;&#160;0000100   /* clearing all objects           */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a645de2061b32735724c54c87fd5406a2" name="a645de2061b32735724c54c87fd5406a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645de2061b32735724c54c87fd5406a2">&#9670;&#160;</a></span>DT_DELETE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_DELETE&#160;&#160;&#160;0000002  /* delete object if found      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93e662669aa505475549609079d64592" name="a93e662669aa505475549609079d64592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e662669aa505475549609079d64592">&#9670;&#160;</a></span>DT_DETACH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_DETACH&#160;&#160;&#160;0010000  /* detach an object from the dictionary    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af046cba51c33a3931219518d4d1fcf99" name="af046cba51c33a3931219518d4d1fcf99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af046cba51c33a3931219518d4d1fcf99">&#9670;&#160;</a></span>DT_FIRST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_FIRST&#160;&#160;&#160;0000200   /* get first object           */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f9920c0fee0b9f50e0a3b23abd3fd26" name="a8f9920c0fee0b9f50e0a3b23abd3fd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9920c0fee0b9f50e0a3b23abd3fd26">&#9670;&#160;</a></span>DT_INSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_INSERT&#160;&#160;&#160;0000001  /* insert object if not found      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a192bea83114b73344ba3e9aab4c796e3" name="a192bea83114b73344ba3e9aab4c796e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a192bea83114b73344ba3e9aab4c796e3">&#9670;&#160;</a></span>DT_LAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_LAST&#160;&#160;&#160;0000400    /* get last object           */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01aca514b0b658320c893611601af6fa" name="a01aca514b0b658320c893611601af6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01aca514b0b658320c893611601af6fa">&#9670;&#160;</a></span>DT_MATCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_MATCH&#160;&#160;&#160;0001000   /* find object matching key       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2ed93cb7ebee29498a079e553945b57" name="ab2ed93cb7ebee29498a079e553945b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ed93cb7ebee29498a079e553945b57">&#9670;&#160;</a></span>DT_METHODS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_METHODS&#160;&#160;&#160;0000377 /* all currently supported methods  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24fcda2658f9defe5bdb1984860d6240" name="a24fcda2658f9defe5bdb1984860d6240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24fcda2658f9defe5bdb1984860d6240">&#9670;&#160;</a></span>DT_NEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_NEXT&#160;&#160;&#160;0000010    /* look for next element     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1acc2651207891a7c4d5f525aef60bc8" name="a1acc2651207891a7c4d5f525aef60bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1acc2651207891a7c4d5f525aef60bc8">&#9670;&#160;</a></span>DT_OBAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_OBAG&#160;&#160;&#160;0000010    /* ordered multiset          */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab540f5d778fb80e2f825295c8ddf3ba7" name="ab540f5d778fb80e2f825295c8ddf3ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab540f5d778fb80e2f825295c8ddf3ba7">&#9670;&#160;</a></span>DT_OSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_OSET&#160;&#160;&#160;0000004    /* ordered set (self-adjusting tree) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bea70faf05bae1b0a7548ea96e1d511" name="a1bea70faf05bae1b0a7548ea96e1d511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bea70faf05bae1b0a7548ea96e1d511">&#9670;&#160;</a></span>DT_PREV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_PREV&#160;&#160;&#160;0000020    /* find previous element     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f480f0a639e6cbdfc740e489f034433" name="a9f480f0a639e6cbdfc740e489f034433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f480f0a639e6cbdfc740e489f034433">&#9670;&#160;</a></span>DT_RENEW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_RENEW&#160;&#160;&#160;0000040   /* renewing an object         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47e5c8e948e61a82e17cb2a4bdb6caa2" name="a47e5c8e948e61a82e17cb2a4bdb6caa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47e5c8e948e61a82e17cb2a4bdb6caa2">&#9670;&#160;</a></span>DT_SEARCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_SEARCH&#160;&#160;&#160;0000004  /* look for an object          */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a257bbc9fe9828352a627cd1894030fbb" name="a257bbc9fe9828352a627cd1894030fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a257bbc9fe9828352a627cd1894030fbb">&#9670;&#160;</a></span>DT_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_SET&#160;&#160;&#160;0000001     /* set with unique elements     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fa66c08b3e8b07466485051fa8c328e" name="a4fa66c08b3e8b07466485051fa8c328e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa66c08b3e8b07466485051fa8c328e">&#9670;&#160;</a></span>DT_VSEARCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DT_VSEARCH&#160;&#160;&#160;0002000 /* search using internal representation */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cc1e11802758b8c71f085d463393ef0" name="a5cc1e11802758b8c71f085d463393ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc1e11802758b8c71f085d463393ef0">&#9670;&#160;</a></span>dtclear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtclear</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(0), <a class="code hl_define" href="#a7001f50d84e9fedcf3f838636af4e62c">DT_CLEAR</a>)</div>
+<div class="ttc" id="acdt_8h_html_a7001f50d84e9fedcf3f838636af4e62c"><div class="ttname"><a href="#a7001f50d84e9fedcf3f838636af4e62c">DT_CLEAR</a></div><div class="ttdeci">#define DT_CLEAR</div><div class="ttdef"><b>Определения</b> cdt.h:131</div></div>
+<div class="ttc" id="acdt_8h_html_a71abe7f6cb4cc1c3892cc2e3f7798655"><div class="ttname"><a href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a></div><div class="ttdeci">#define _DT(dt)</div><div class="ttdef"><b>Определения</b> cdt.h:163</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad351bb07a26ff918184f200ee1d655cc" name="ad351bb07a26ff918184f200ee1d655cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad351bb07a26ff918184f200ee1d655cc">&#9670;&#160;</a></span>dtdelete</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtdelete</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a645de2061b32735724c54c87fd5406a2">DT_DELETE</a>)</div>
+<div class="ttc" id="acdt_8h_html_a645de2061b32735724c54c87fd5406a2"><div class="ttname"><a href="#a645de2061b32735724c54c87fd5406a2">DT_DELETE</a></div><div class="ttdeci">#define DT_DELETE</div><div class="ttdef"><b>Определения</b> cdt.h:126</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6590446c25a135161df8945b8633b42a" name="a6590446c25a135161df8945b8633b42a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6590446c25a135161df8945b8633b42a">&#9670;&#160;</a></span>dtdetach</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtdetach</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a93e662669aa505475549609079d64592">DT_DETACH</a>)</div>
+<div class="ttc" id="acdt_8h_html_a93e662669aa505475549609079d64592"><div class="ttname"><a href="#a93e662669aa505475549609079d64592">DT_DETACH</a></div><div class="ttdeci">#define DT_DETACH</div><div class="ttdef"><b>Определения</b> cdt.h:136</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a576667c8240d18ab1da1138a42fe9f7c" name="a576667c8240d18ab1da1138a42fe9f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576667c8240d18ab1da1138a42fe9f7c">&#9670;&#160;</a></span>DTDISC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DTDISC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ky</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>sz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>lk</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mkf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>frf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>cmpf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">((dc)-&gt;key = (ky), (dc)-&gt;size = (sz), (dc)-&gt;link = (lk),                     \</div>
+<div class="line"> (dc)-&gt;makef = (mkf), (dc)-&gt;freef = (frf), (dc)-&gt;comparf = (cmpf))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a820a52522c7b2de0619a793965d7d881" name="a820a52522c7b2de0619a793965d7d881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a820a52522c7b2de0619a793965d7d881">&#9670;&#160;</a></span>dtfinger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtfinger</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;data.here ? <a class="code hl_define" href="#a4717180611823cdf0c057abe1a45315a">dtobj</a>((d), <a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;data.here) : NULL)</div>
+<div class="ttc" id="acdt_8h_html_a4717180611823cdf0c057abe1a45315a"><div class="ttname"><a href="#a4717180611823cdf0c057abe1a45315a">dtobj</a></div><div class="ttdeci">#define dtobj(d, e)</div><div class="ttdef"><b>Определения</b> cdt.h:177</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af954ac773cdfecad7ec5ac45e9a63a23" name="af954ac773cdfecad7ec5ac45e9a63a23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af954ac773cdfecad7ec5ac45e9a63a23">&#9670;&#160;</a></span>dtfirst</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtfirst</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(0), <a class="code hl_define" href="#af046cba51c33a3931219518d4d1fcf99">DT_FIRST</a>)</div>
+<div class="ttc" id="acdt_8h_html_af046cba51c33a3931219518d4d1fcf99"><div class="ttname"><a href="#af046cba51c33a3931219518d4d1fcf99">DT_FIRST</a></div><div class="ttdeci">#define DT_FIRST</div><div class="ttdef"><b>Определения</b> cdt.h:132</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ac18f2bf845640bd563a1545d2e3675" name="a8ac18f2bf845640bd563a1545d2e3675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac18f2bf845640bd563a1545d2e3675">&#9670;&#160;</a></span>dtinsert</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtinsert</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a8f9920c0fee0b9f50e0a3b23abd3fd26">DT_INSERT</a>)</div>
+<div class="ttc" id="acdt_8h_html_a8f9920c0fee0b9f50e0a3b23abd3fd26"><div class="ttname"><a href="#a8f9920c0fee0b9f50e0a3b23abd3fd26">DT_INSERT</a></div><div class="ttdeci">#define DT_INSERT</div><div class="ttdef"><b>Определения</b> cdt.h:125</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aba7b1b643434cc61b1692a1875c6029b" name="aba7b1b643434cc61b1692a1875c6029b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7b1b643434cc61b1692a1875c6029b">&#9670;&#160;</a></span>dtlast</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtlast</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(0), <a class="code hl_define" href="#a192bea83114b73344ba3e9aab4c796e3">DT_LAST</a>)</div>
+<div class="ttc" id="acdt_8h_html_a192bea83114b73344ba3e9aab4c796e3"><div class="ttname"><a href="#a192bea83114b73344ba3e9aab4c796e3">DT_LAST</a></div><div class="ttdeci">#define DT_LAST</div><div class="ttdef"><b>Определения</b> cdt.h:133</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a79be8633be14ddf98d3b356e0d40564d" name="a79be8633be14ddf98d3b356e0d40564d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79be8633be14ddf98d3b356e0d40564d">&#9670;&#160;</a></span>dtlink</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtlink</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(((<a class="code hl_typedef" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *)(e))-&gt;right)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4dff83f53eb9464965da060528b4cae8" name="a4dff83f53eb9464965da060528b4cae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dff83f53eb9464965da060528b4cae8">&#9670;&#160;</a></span>dtmatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtmatch</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a01aca514b0b658320c893611601af6fa">DT_MATCH</a>)</div>
+<div class="ttc" id="acdt_8h_html_a01aca514b0b658320c893611601af6fa"><div class="ttname"><a href="#a01aca514b0b658320c893611601af6fa">DT_MATCH</a></div><div class="ttdeci">#define DT_MATCH</div><div class="ttdef"><b>Определения</b> cdt.h:134</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af6ea20c91403c1ef595681fc6b6ac30f" name="af6ea20c91403c1ef595681fc6b6ac30f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ea20c91403c1ef595681fc6b6ac30f">&#9670;&#160;</a></span>dtnext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtnext</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a24fcda2658f9defe5bdb1984860d6240">DT_NEXT</a>)</div>
+<div class="ttc" id="acdt_8h_html_a24fcda2658f9defe5bdb1984860d6240"><div class="ttname"><a href="#a24fcda2658f9defe5bdb1984860d6240">DT_NEXT</a></div><div class="ttdeci">#define DT_NEXT</div><div class="ttdef"><b>Определения</b> cdt.h:128</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4717180611823cdf0c057abe1a45315a" name="a4717180611823cdf0c057abe1a45315a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4717180611823cdf0c057abe1a45315a">&#9670;&#160;</a></span>dtobj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtobj</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#acd1eb06f8072a9014ff132c253884d10">_DTOBJ</a>((e), <a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;disc-&gt;link)</div>
+<div class="ttc" id="acdt_8h_html_acd1eb06f8072a9014ff132c253884d10"><div class="ttname"><a href="#acd1eb06f8072a9014ff132c253884d10">_DTOBJ</a></div><div class="ttdeci">#define _DTOBJ(e, lk)</div><div class="ttdef"><b>Определения</b> cdt.h:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6a97d9b70597ac2a34565f956ae3703" name="aa6a97d9b70597ac2a34565f956ae3703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a97d9b70597ac2a34565f956ae3703">&#9670;&#160;</a></span>dtprev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtprev</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a1bea70faf05bae1b0a7548ea96e1d511">DT_PREV</a>)</div>
+<div class="ttc" id="acdt_8h_html_a1bea70faf05bae1b0a7548ea96e1d511"><div class="ttname"><a href="#a1bea70faf05bae1b0a7548ea96e1d511">DT_PREV</a></div><div class="ttdeci">#define DT_PREV</div><div class="ttdef"><b>Определения</b> cdt.h:129</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a62014aa3c3853e006d7115b1dbfb81c9" name="a62014aa3c3853e006d7115b1dbfb81c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62014aa3c3853e006d7115b1dbfb81c9">&#9670;&#160;</a></span>dtsearch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dtsearch</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(*(<a class="code hl_define" href="#a71abe7f6cb4cc1c3892cc2e3f7798655">_DT</a>(d)-&gt;searchf))((d), (<span class="keywordtype">void</span> *)(o), <a class="code hl_define" href="#a47e5c8e948e61a82e17cb2a4bdb6caa2">DT_SEARCH</a>)</div>
+<div class="ttc" id="acdt_8h_html_a47e5c8e948e61a82e17cb2a4bdb6caa2"><div class="ttname"><a href="#a47e5c8e948e61a82e17cb2a4bdb6caa2">DT_SEARCH</a></div><div class="ttdeci">#define DT_SEARCH</div><div class="ttdef"><b>Определения</b> cdt.h:127</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="a0351a17d49d8cee0c6cea7412ddd6d58" name="a0351a17d49d8cee0c6cea7412ddd6d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0351a17d49d8cee0c6cea7412ddd6d58">&#9670;&#160;</a></span>Dict_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdt__s__.html">dt_s_</a> <a class="el" href="#a0351a17d49d8cee0c6cea7412ddd6d58">Dict_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4cb2c86c90226c860518e4cf924a173" name="aa4cb2c86c90226c860518e4cf924a173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cb2c86c90226c860518e4cf924a173">&#9670;&#160;</a></span>Dt_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdt__s__.html">dt_s_</a> <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a379a2fcb714d83cb4e1122f1e22b8bb0" name="a379a2fcb714d83cb4e1122f1e22b8bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a379a2fcb714d83cb4e1122f1e22b8bb0">&#9670;&#160;</a></span>Dtcompar_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* Dtcompar_f) (void *, void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59a978b45171686ba566b57638fd371f" name="a59a978b45171686ba566b57638fd371f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59a978b45171686ba566b57638fd371f">&#9670;&#160;</a></span>Dtdisc_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdtdisc__s__.html">dtdisc_s_</a> <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42b4d6568328f598b0280b22c17d3573" name="a42b4d6568328f598b0280b22c17d3573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b4d6568328f598b0280b22c17d3573">&#9670;&#160;</a></span>Dtfree_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* Dtfree_f) (void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1f4e66a09b733bea11936c64fe24bb6" name="af1f4e66a09b733bea11936c64fe24bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f4e66a09b733bea11936c64fe24bb6">&#9670;&#160;</a></span>Dtlink_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structdtlink__s__.html">dtlink_s_</a> <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00198acc389f43f605c7c29567606f83" name="a00198acc389f43f605c7c29567606f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00198acc389f43f605c7c29567606f83">&#9670;&#160;</a></span>Dtmake_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void *(* Dtmake_f) (void *, <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad302f306f9f77c3b1cfe6c0fdde2ffae" name="ad302f306f9f77c3b1cfe6c0fdde2ffae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad302f306f9f77c3b1cfe6c0fdde2ffae">&#9670;&#160;</a></span>Dtsearch_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void *(* Dtsearch_f) (<a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, void *, int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ab24362a4f1e5bd3d3dccb25199f34270" name="ab24362a4f1e5bd3d3dccb25199f34270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24362a4f1e5bd3d3dccb25199f34270">&#9670;&#160;</a></span>dtclose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int dtclose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae83316e035da221c8a2f61d1e531e0d4" name="ae83316e035da221c8a2f61d1e531e0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83316e035da221c8a2f61d1e531e0d4">&#9670;&#160;</a></span>dtdisc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> * dtdisc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60ae78bab00270d3483f563980926821" name="a60ae78bab00270d3483f563980926821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ae78bab00270d3483f563980926821">&#9670;&#160;</a></span>dtextract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> * dtextract </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46b3a35c57ac634867000dcccf6afd78" name="a46b3a35c57ac634867000dcccf6afd78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b3a35c57ac634867000dcccf6afd78">&#9670;&#160;</a></span>dtflatten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> * dtflatten </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a369970d5990f9a2a19ba566769affa68" name="a369970d5990f9a2a19ba566769affa68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a369970d5990f9a2a19ba566769affa68">&#9670;&#160;</a></span>dtmethod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> * dtmethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8ae3b9b0bb933f4b05923f28607feaa" name="ae8ae3b9b0bb933f4b05923f28607feaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ae3b9b0bb933f4b05923f28607feaa">&#9670;&#160;</a></span>dtopen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> * dtopen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab997ab5fe58d2ec14780b2d82e5c3dd6" name="ab997ab5fe58d2ec14780b2d82e5c3dd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab997ab5fe58d2ec14780b2d82e5c3dd6">&#9670;&#160;</a></span>dtrenew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> void * dtrenew </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae141b0f4f8a18fb671dab2fc4602c234" name="ae141b0f4f8a18fb671dab2fc4602c234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae141b0f4f8a18fb671dab2fc4602c234">&#9670;&#160;</a></span>dtrestore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int dtrestore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70a5fc2d51f74f30b0a96228309b9873" name="a70a5fc2d51f74f30b0a96228309b9873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a5fc2d51f74f30b0a96228309b9873">&#9670;&#160;</a></span>dtsize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int dtsize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5ced427c61b36dcd86b13701106418e" name="ad5ced427c61b36dcd86b13701106418e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ced427c61b36dcd86b13701106418e">&#9670;&#160;</a></span>dtstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int dtstat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_dtstat__t.html">Dtstat_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75d95f2da18bdf82424eb16734354b9d" name="a75d95f2da18bdf82424eb16734354b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75d95f2da18bdf82424eb16734354b9d">&#9670;&#160;</a></span>dtstrhash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> unsigned int dtstrhash </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1e08b44b868cd6e22a6be6fadd0cbaa" name="aa1e08b44b868cd6e22a6be6fadd0cbaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1e08b44b868cd6e22a6be6fadd0cbaa">&#9670;&#160;</a></span>dtview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> * dtview </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d4b83678cb2801ec406dc2836e3ce0d" name="a1d4b83678cb2801ec406dc2836e3ce0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4b83678cb2801ec406dc2836e3ce0d">&#9670;&#160;</a></span>dtwalk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> int dtwalk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*</td>          <td class="paramname"><span class="paramname"><em>&#160;</em></span>)(void *, void *), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a5b337ee2980fe41be2e220c0102d9898" name="a5b337ee2980fe41be2e220c0102d9898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b337ee2980fe41be2e220c0102d9898">&#9670;&#160;</a></span>Dtobag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a>* Dtobag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac17f2af349b0d37468df9c3890d65765" name="ac17f2af349b0d37468df9c3890d65765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17f2af349b0d37468df9c3890d65765">&#9670;&#160;</a></span>Dtoset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a>* Dtoset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43b7ee8085f341e219abd810b5861695" name="a43b7ee8085f341e219abd810b5861695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b7ee8085f341e219abd810b5861695">&#9670;&#160;</a></span>Dtset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a>* Dtset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf0578dbe76c834fcda77fdb36f90743" name="aaf0578dbe76c834fcda77fdb36f90743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf0578dbe76c834fcda77fdb36f90743">&#9670;&#160;</a></span>Dttree</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="el" href="struct_dtmethod__t.html">Dtmethod_t</a>* Dttree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="cdt_8h.html">cdt.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

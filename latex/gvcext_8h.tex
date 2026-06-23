@@ -1,0 +1,117 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+gvcext.h}
+\hypertarget{gvcext_8h}{}\label{gvcext_8h}\index{Graphviz/include/graphviz/gvcext.h@{Graphviz/include/graphviz/gvcext.h}}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{gvcext_8h_abdbe963515b51a66d3c4bedcdac270d8}{APIS}}~\doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(render) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(layout) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(textlayout) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(device) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(loadimage)
+\item 
+\+\#define \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_g_v_j__s}{GVJ\+\_\+s}} \doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}}
+\item 
+typedef struct GVG\+\_\+s \doxymbox{\hyperlink{gvcext_8h_af6bd0e091413025a4d30fa7eca90b641}{GVG\+\_\+t}}
+\item 
+typedef struct GVC\+\_\+s \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em graphviz context \end{DoxyCompactList}\item 
+typedef struct gvplugin\+\_\+available\+\_\+s \doxymbox{\hyperlink{gvcext_8h_aae45d96279062a78e72e7c861600fd0e}{gvplugin\+\_\+available\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574}{api\+\_\+t}} \{ \doxymbox{\hyperlink{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de}{APIS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} \doxymbox{\hyperlink{gvcext_8h_a3722c3fc0f0be8654c675764e4bb7ef5}{lt\+\_\+preloaded\+\_\+symbols}} \+[$\,$]\+
+\end{DoxyCompactItemize}
+
+
+\label{gvcext_8h_doc-define-members}
+\Hypertarget{gvcext_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{gvcext_8h_abdbe963515b51a66d3c4bedcdac270d8}\index{gvcext.h@{gvcext.h}!APIS@{APIS}}
+\index{APIS@{APIS}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{APIS}{APIS}}
+{\footnotesize\ttfamily \label{gvcext_8h_abdbe963515b51a66d3c4bedcdac270d8} 
+\+\#define APIS~\doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(render) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(layout) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(textlayout) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(device) \doxymbox{\hyperlink{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}{ELEM}}(loadimage)}
+
+\Hypertarget{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736}\index{gvcext.h@{gvcext.h}!ELEM@{ELEM}}
+\index{ELEM@{ELEM}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{ELEM}{ELEM}}
+{\footnotesize\ttfamily \label{gvcext_8h_a362272c997ae8f67a45bc9a4b399c736} 
+\+\#define ELEM(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{API\_\#\#x,}
+
+\end{DoxyCode}
+
+
+\label{gvcext_8h_doc-typedef-members}
+\Hypertarget{gvcext_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}\index{gvcext.h@{gvcext.h}!GVC\_t@{GVC\_t}}
+\index{GVC\_t@{GVC\_t}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{GVC\_t}{GVC\_t}}
+{\footnotesize\ttfamily \label{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed} 
+typedef struct GVC\+\_\+s \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}}}
+
+\Hypertarget{gvcext_8h_af6bd0e091413025a4d30fa7eca90b641}\index{gvcext.h@{gvcext.h}!GVG\_t@{GVG\_t}}
+\index{GVG\_t@{GVG\_t}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{GVG\_t}{GVG\_t}}
+{\footnotesize\ttfamily \label{gvcext_8h_af6bd0e091413025a4d30fa7eca90b641} 
+typedef struct GVG\+\_\+s \doxymbox{\hyperlink{gvcext_8h_af6bd0e091413025a4d30fa7eca90b641}{GVG\+\_\+t}}}
+
+\Hypertarget{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}\index{gvcext.h@{gvcext.h}!GVJ\_t@{GVJ\_t}}
+\index{GVJ\_t@{GVJ\_t}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{GVJ\_t}{GVJ\_t}}
+{\footnotesize\ttfamily \label{gvcext_8h_a9a257c86c8fde7d294726bece96315e5} 
+typedef struct \doxymbox{\hyperlink{struct_g_v_j__s}{GVJ\+\_\+s}} \doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}}}
+
+\Hypertarget{gvcext_8h_aae45d96279062a78e72e7c861600fd0e}\index{gvcext.h@{gvcext.h}!gvplugin\_available\_t@{gvplugin\_available\_t}}
+\index{gvplugin\_available\_t@{gvplugin\_available\_t}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{gvplugin\_available\_t}{gvplugin\_available\_t}}
+{\footnotesize\ttfamily \label{gvcext_8h_aae45d96279062a78e72e7c861600fd0e} 
+typedef struct gvplugin\+\_\+available\+\_\+s \doxymbox{\hyperlink{gvcext_8h_aae45d96279062a78e72e7c861600fd0e}{gvplugin\+\_\+available\+\_\+t}}}
+
+
+
+\label{gvcext_8h_doc-enum-members}
+\Hypertarget{gvcext_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574}\index{gvcext.h@{gvcext.h}!api\_t@{api\_t}}
+\index{api\_t@{api\_t}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{api\_t}{api\_t}}
+{\footnotesize\ttfamily \label{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574} 
+enum \doxymbox{\hyperlink{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574}{api\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{APIS@{APIS}!gvcext.h@{gvcext.h}}
+\index{gvcext.h@{gvcext.h}!APIS@{APIS}}
+}\Hypertarget{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de}\label{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de} 
+APIS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{gvcext_8h_doc-var-members}
+\Hypertarget{gvcext_8h_doc-var-members}
+\doxysubsection{Переменные}
+\Hypertarget{gvcext_8h_a3722c3fc0f0be8654c675764e4bb7ef5}\index{gvcext.h@{gvcext.h}!lt\_preloaded\_symbols@{lt\_preloaded\_symbols}}
+\index{lt\_preloaded\_symbols@{lt\_preloaded\_symbols}!gvcext.h@{gvcext.h}}
+\doxysubsubsection{\texorpdfstring{lt\_preloaded\_symbols}{lt\_preloaded\_symbols}}
+{\footnotesize\ttfamily \label{gvcext_8h_a3722c3fc0f0be8654c675764e4bb7ef5} 
+\doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} lt\+\_\+preloaded\+\_\+symbols\+[$\,$]\+\hspace{0.3cm}{\ttfamily [extern]}}
+

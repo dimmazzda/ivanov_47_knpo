@@ -1,0 +1,70 @@
+\doxysection{pathgeom.\+h}
+\hypertarget{pathgeom_8h_source}{}\label{pathgeom_8h_source}\index{Graphviz/include/graphviz/pathgeom.h@{Graphviz/include/graphviz/pathgeom.h}}
+\doxymbox{\hyperlink{pathgeom_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifdef\ PATHPLAN\_EXPORTS}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ PATHGEOM\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ PATHGEOM\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ PATHGEOM\_API}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ PATHGEOM\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifdef\ HAVE\_POINTF\_S}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structpointf__s}{pointf\_s}}\ \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\_t}};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structpointf__s}{pointf\_s}}\ \doxymbox{\hyperlink{pathgeom_8h_a1601338d97d595819723e748357f2dca}{Pvector\_t}};}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_pxy__t}{Pxy\_t}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{struct_pxy__t_a8bfdfac06a9c292b12760d41fd8c5b91}{x}},\ \doxymbox{\hyperlink{struct_pxy__t_ab2a1cfb26785cc5b0215371cae157a1e}{y}};}
+\DoxyCodeLine{00039\ \ \ \ \ \}\ \doxymbox{\hyperlink{struct_pxy__t}{Pxy\_t}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_pxy__t}{Pxy\_t}}\ \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\_t}};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_pxy__t}{Pxy\_t}}\ \doxymbox{\hyperlink{pathgeom_8h_a1601338d97d595819723e748357f2dca}{Pvector\_t}};}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\_t}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\_t}}\ *\doxymbox{\hyperlink{struct_ppoly__t_a693e25a86e550ef1b164a8399d896a39}{ps}};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{struct_ppoly__t_a14adcb2af5f625ce47b590a13d9b89cc}{pn}};}
+\DoxyCodeLine{00048\ \ \ \ \ \}\ \doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\_t}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{typedef}\ \doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\_t}}\ \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_pedge__t}{Pedge\_t}}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\_t}}\ \doxymbox{\hyperlink{struct_pedge__t_aad7db338c15c9d818104faf9ea90f7aa}{a}},\ \doxymbox{\hyperlink{struct_pedge__t_a1753042bb23cb891962e2eae3d93c4a6}{b}};}
+\DoxyCodeLine{00054\ \ \ \ \ \}\ \doxymbox{\hyperlink{struct_pedge__t}{Pedge\_t}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{/*\ opaque\ state\ handle\ for\ visibility\ graph\ operations\ */}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }vconfig\_s\ \doxymbox{\hyperlink{pathgeom_8h_af3ccabb851a77a61426d26c737df54b1}{vconfig\_t}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87}{PATHGEOM\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pathgeom_8h_a894ef8e0d84f96a503874f750e0e7a02}{freePath}}(\doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}*\ p);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#undef\ PATHGEOM\_API}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,108 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+pathgeom.h}
+\hypertarget{pathgeom_8h}{}\label{pathgeom_8h}\index{Graphviz/include/graphviz/pathgeom.h@{Graphviz/include/graphviz/pathgeom.h}}
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_pxy__t}{Pxy\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_pedge__t}{Pedge\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87}{PATHGEOM\+\_\+\+API}}~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Pxy\+\_\+t \doxymbox{\hyperlink{pathgeom_8h_af111e6d99f20876ced371bf450346a55}{Pxy\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_pxy__t}{Pxy\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_pxy__t}{Pxy\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_a1601338d97d595819723e748357f2dca}{Pvector\+\_\+t}}
+\item 
+typedef struct Ppoly\+\_\+t \doxymbox{\hyperlink{pathgeom_8h_a7d960410b95012231fed454c0f6b7f86}{Ppoly\+\_\+t}}
+\item 
+typedef \doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\+\_\+t}}
+\item 
+typedef struct Pedge\+\_\+t \doxymbox{\hyperlink{pathgeom_8h_aeadb1c42ba14b5cc904fba100884cdd3}{Pedge\+\_\+t}}
+\item 
+typedef struct vconfig\+\_\+s \doxymbox{\hyperlink{pathgeom_8h_af3ccabb851a77a61426d26c737df54b1}{vconfig\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87}{PATHGEOM\+\_\+\+API}} void \doxymbox{\hyperlink{pathgeom_8h_a894ef8e0d84f96a503874f750e0e7a02}{free\+Path}} (\doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\+\_\+t}} \texorpdfstring{$\ast$}{*}p)
+\end{DoxyCompactItemize}
+
+
+\label{pathgeom_8h_doc-define-members}
+\Hypertarget{pathgeom_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87}\index{pathgeom.h@{pathgeom.h}!PATHGEOM\_API@{PATHGEOM\_API}}
+\index{PATHGEOM\_API@{PATHGEOM\_API}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{PATHGEOM\_API}{PATHGEOM\_API}}
+{\footnotesize\ttfamily \label{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87} 
+\+\#define PATHGEOM\+\_\+\+API~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+\label{pathgeom_8h_doc-typedef-members}
+\Hypertarget{pathgeom_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{pathgeom_8h_aeadb1c42ba14b5cc904fba100884cdd3}\index{pathgeom.h@{pathgeom.h}!Pedge\_t@{Pedge\_t}}
+\index{Pedge\_t@{Pedge\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Pedge\_t}{Pedge\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_aeadb1c42ba14b5cc904fba100884cdd3} 
+typedef struct Pedge\+\_\+t Pedge\+\_\+t}
+
+\Hypertarget{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}\index{pathgeom.h@{pathgeom.h}!Ppoint\_t@{Ppoint\_t}}
+\index{Ppoint\_t@{Ppoint\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Ppoint\_t}{Ppoint\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f} 
+typedef struct \doxymbox{\hyperlink{struct_pxy__t}{Pxy\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\+\_\+t}}}
+
+\Hypertarget{pathgeom_8h_a7d960410b95012231fed454c0f6b7f86}\index{pathgeom.h@{pathgeom.h}!Ppoly\_t@{Ppoly\_t}}
+\index{Ppoly\_t@{Ppoly\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Ppoly\_t}{Ppoly\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_a7d960410b95012231fed454c0f6b7f86} 
+typedef struct Ppoly\+\_\+t Ppoly\+\_\+t}
+
+\Hypertarget{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}\index{pathgeom.h@{pathgeom.h}!Ppolyline\_t@{Ppolyline\_t}}
+\index{Ppolyline\_t@{Ppolyline\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Ppolyline\_t}{Ppolyline\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_a40d0fc3e3db12860642e212281e44905} 
+typedef \doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\+\_\+t}}}
+
+\Hypertarget{pathgeom_8h_a1601338d97d595819723e748357f2dca}\index{pathgeom.h@{pathgeom.h}!Pvector\_t@{Pvector\_t}}
+\index{Pvector\_t@{Pvector\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Pvector\_t}{Pvector\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_a1601338d97d595819723e748357f2dca} 
+typedef struct \doxymbox{\hyperlink{struct_pxy__t}{Pxy\+\_\+t}} \doxymbox{\hyperlink{pathgeom_8h_a1601338d97d595819723e748357f2dca}{Pvector\+\_\+t}}}
+
+\Hypertarget{pathgeom_8h_af111e6d99f20876ced371bf450346a55}\index{pathgeom.h@{pathgeom.h}!Pxy\_t@{Pxy\_t}}
+\index{Pxy\_t@{Pxy\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{Pxy\_t}{Pxy\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_af111e6d99f20876ced371bf450346a55} 
+typedef struct Pxy\+\_\+t Pxy\+\_\+t}
+
+\Hypertarget{pathgeom_8h_af3ccabb851a77a61426d26c737df54b1}\index{pathgeom.h@{pathgeom.h}!vconfig\_t@{vconfig\_t}}
+\index{vconfig\_t@{vconfig\_t}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{vconfig\_t}{vconfig\_t}}
+{\footnotesize\ttfamily \label{pathgeom_8h_af3ccabb851a77a61426d26c737df54b1} 
+typedef struct vconfig\+\_\+s \doxymbox{\hyperlink{pathgeom_8h_af3ccabb851a77a61426d26c737df54b1}{vconfig\+\_\+t}}}
+
+
+
+\label{pathgeom_8h_doc-func-members}
+\Hypertarget{pathgeom_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{pathgeom_8h_a894ef8e0d84f96a503874f750e0e7a02}\index{pathgeom.h@{pathgeom.h}!freePath@{freePath}}
+\index{freePath@{freePath}!pathgeom.h@{pathgeom.h}}
+\doxysubsubsection{\texorpdfstring{freePath()}{freePath()}}
+{\footnotesize\ttfamily \label{pathgeom_8h_a894ef8e0d84f96a503874f750e0e7a02} 
+\doxymbox{\hyperlink{pathgeom_8h_a293da2369228cd10ad4a7ca31f78ca87}{PATHGEOM\+\_\+\+API}} void free\+Path (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+

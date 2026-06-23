@@ -1,0 +1,308 @@
+\doxysection{Файл C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo.cpp}
+\hypertarget{ivanov__47__knpo_8cpp}{}\label{ivanov__47__knpo_8cpp}\index{C:/Users/Дмитрий/source/repos/ivanov\_47\_knpo/ivanov\_47\_knpo/ivanov\_47\_knpo.cpp@{C:/Users/Дмитрий/source/repos/ivanov\_47\_knpo/ivanov\_47\_knpo/ivanov\_47\_knpo.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include "{}headers.\+h"{}}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$queue$>$}\newline
+{\ttfamily \+\#include $<$stdexcept$>$}\newline
+{\ttfamily \+\#include $<$stack$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$windows.\+h$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a5a01f705cc7b4a7317a57f6bf41aef25}{trim}} (const std::\+string \&str)
+\begin{DoxyCompactList}\small\item\em обрезает пробельные символы по краям строки \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_abe8e52bfa901d7a508084e909fc3249d}{extract\+Tokens\+From\+String}} (std::\+string \&str, const std::\+string \&delimeter, std::\+vector$<$ std::\+string $>$ \&tokens)
+\begin{DoxyCompactList}\small\item\em делит строку на токены по заданному разделителю \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_ab431435b8c948ce4334e6b1c3bb5d8f5}{try\+Parse\+Int}} (const std::\+string \&str, int \&result)
+\begin{DoxyCompactList}\small\item\em Попытка распарсить строку как целое число \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_aa5410876102f5c4c410f2a4dbcf33532}{parse\+Inner\+Line}} (const std::\+string \&line, int line\+Number, std::\+vector$<$ int $>$ \&vertex\+List, std::\+vector$<$ std::\+pair$<$ int, int $>$ $>$ \&edge\+List, std::\+vector$<$ int $>$ \&edge\+Line\+Numbers, bool \&edges\+Started, std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&error\+Vector)
+\begin{DoxyCompactList}\small\item\em Обработка одной строки внутреннего описания графа \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a60b864ebf63323026ffce3c0cf919ee9}{process\+Edges}} (const std::\+vector$<$ std::\+pair$<$ int, int $>$ $>$ \&edge\+List, const std::\+vector$<$ int $>$ \&edge\+Line\+Numbers, const std::\+vector$<$ int $>$ \&vertex\+List, \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*}graph, int in\+Degrees\+[1000]\+, std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&error\+Vector)
+\begin{DoxyCompactList}\small\item\em Добавление дуг в граф и подсчет степеней захода \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a41963a7c7731566bd55f6522eb6e3195}{parse\+Graph\+From\+Text}} (std::\+vector$<$ std::\+string $>$ \&file\+Text, int in\+Degrees\+[1000]\+, std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&error\+Vector)
+\begin{DoxyCompactList}\small\item\em функция парсинга графа из текста \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_acf7b86c9b4a6117aa43bc5aee344d915}{try\+Build\+Tree\+From\+Vertex}} (const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&graph, int root\+Idx, int vertex\+Count, \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&edge\+Difference)
+\begin{DoxyCompactList}\small\item\em попытаться построить остовное дерево из указанной вершины \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a862d24e23d8544b1c80213413cc8e9fc}{find\+Graph\+Type}} (const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&graph, \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&edge\+Difference, int in\+Degrees\+[1000]\+)
+\begin{DoxyCompactList}\small\item\em определить тип графа \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a093ad82c389c2b6be4b3b39246f288f1}{read\+Text\+From\+File}} (std::\+vector$<$ std::\+string $>$ \&file\+Text, std::\+string \&file\+Name, std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&error\+Vector)
+\begin{DoxyCompactList}\small\item\em функция чтения текста из файла \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a16d6086fe09142fd48acdf26c2aeb756}{print\+Errors\+Messages}} (const std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&errors\+Vector)
+\begin{DoxyCompactList}\small\item\em вывод в консоль информации об ошибках \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a1bdf42983f66b1811188c1fca9ccbb3f}{process\+Edge\+Line}} (const std::\+string \&line, \doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} type, const std::\+vector$<$ std::\+string $>$ \&vertex\+Names, const std::\+map$<$ std::\+pair$<$ int, int $>$, int $>$ \&edges\+To\+Delete\+Count, std::\+map$<$ std::\+pair$<$ int, int $>$, int $>$ \&highlighted\+Count)
+\begin{DoxyCompactList}\small\item\em Обработка строки с дугой:\+ если дуга подлежит удалению, помечает её красным \end{DoxyCompactList}\item 
+std::\+vector$<$ std::\+string $>$ \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a4ef3aec89a4de921f48fb8704c021bcb}{generate\+Output\+Text}} (\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} type, std::\+vector$<$ std::\+string $>$ \&input\+File\+Plain\+Text, \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&edges\+To\+Delete)
+\begin{DoxyCompactList}\small\item\em формирование текста выходного файла \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_acfb23957a861227c7bc4e37c3f37b429}{write\+Text\+To\+File}} (std::\+vector$<$ std::\+string $>$ \&output\+Text, std::\+string \&output\+File\+Name, std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&errors\+Vector)
+\begin{DoxyCompactList}\small\item\em запись текста в файл \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{ivanov__47__knpo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+)
+\begin{DoxyCompactList}\small\item\em главная функция программы \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{ivanov__47__knpo_8cpp_doc-func-members}
+\Hypertarget{ivanov__47__knpo_8cpp_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{ivanov__47__knpo_8cpp_abe8e52bfa901d7a508084e909fc3249d}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!extractTokensFromString@{extractTokensFromString}}
+\index{extractTokensFromString@{extractTokensFromString}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{extractTokensFromString()}{extractTokensFromString()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_abe8e52bfa901d7a508084e909fc3249d} 
+bool extract\+Tokens\+From\+String (\begin{DoxyParamCaption}\item[{std::\+string \&}]{str}{, }\item[{const std::\+string \&}]{delimeter}{, }\item[{std::\+vector$<$ std::\+string $>$ \&}]{tokens}{}\end{DoxyParamCaption})}
+
+возможен многосимвольный разделитель 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em str} & Строка символов \\
+\hline
+\doxymbox{\texttt{in}}  & {\em delimeter} & Строка с разделителем \\
+\hline
+ & {\em \+[in/\+out]\+} & tokens Вектор с токенами \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true Если функция завершилась успешно 
+
+false Если функция завершилась с ошибками 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a862d24e23d8544b1c80213413cc8e9fc}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!findGraphType@{findGraphType}}
+\index{findGraphType@{findGraphType}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{findGraphType()}{findGraphType()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a862d24e23d8544b1c80213413cc8e9fc} 
+\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} find\+Graph\+Type (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&}]{graph}{, }\item[{\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&}]{edge\+Difference}{, }\item[{int}]{in\+Degrees}{\+[1000]\+}\end{DoxyParamCaption})}
+
+определяет тип графа в соответствии с перечесленим \doxylink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type} и возвращает его. Если граф приводим к дереву, находит список дуг, удаление которых сделает граф деревом 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em graph} & Константная ссылка на граф \\
+\hline
+ & {\em \+[in/\+out]\+} & edge\+Difference Список смежности для разности дуг между графом и его остовным деревом \\
+\hline
+\doxymbox{\texttt{in}}  & {\em in\+Degrees} & Вычисленные при парсинге степепи заходов вершин \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Тип графа 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a4ef3aec89a4de921f48fb8704c021bcb}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!generateOutputText@{generateOutputText}}
+\index{generateOutputText@{generateOutputText}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{generateOutputText()}{generateOutputText()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a4ef3aec89a4de921f48fb8704c021bcb} 
+std::\+vector$<$ std::\+string $>$ generate\+Output\+Text (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}}}]{type}{, }\item[{std::\+vector$<$ std::\+string $>$ \&}]{input\+File\+Plain\+Text}{, }\item[{\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&}]{edges\+To\+Delete}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em type} & Найденный тип входного графа \\
+\hline
+\doxymbox{\texttt{in}}  & {\em input\+File\+Plain\+Text} & Текстовое описание входного графа \\
+\hline
+\doxymbox{\texttt{in}}  & {\em edges\+To\+Delete} & Дуги для удаления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Вектор строк с текстом выходного файла 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!main@{main}}
+\index{main@{main}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em argc} & Количество переданных аргументов командной строки \\
+\hline
+\doxymbox{\texttt{in}}  & {\em argc} & Путь к проектному файлу \\
+\hline
+\doxymbox{\texttt{in}}  & {\em argv} & Путь к выходной директории \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0, если функция завершилась успешно 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a41963a7c7731566bd55f6522eb6e3195}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!parseGraphFromText@{parseGraphFromText}}
+\index{parseGraphFromText@{parseGraphFromText}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{parseGraphFromText()}{parseGraphFromText()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a41963a7c7731566bd55f6522eb6e3195} 
+\doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*} parse\+Graph\+From\+Text (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+string $>$ \&}]{file\+Text}{, }\item[{int}]{in\+Degrees}{\+[1000]\+, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{error\+Vector}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em file\+Text} & Контейнер с текстом \\
+\hline
+ & {\em \+[in/\+out]\+} & in\+Degrees Массив со степенями полузаходов вершин \\
+\hline
+ & {\em \+[in/\+out]\+} & error\+Vector Контейнер для ошибок \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на созданный граф 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_aa5410876102f5c4c410f2a4dbcf33532}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!parseInnerLine@{parseInnerLine}}
+\index{parseInnerLine@{parseInnerLine}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{parseInnerLine()}{parseInnerLine()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_aa5410876102f5c4c410f2a4dbcf33532} 
+void parse\+Inner\+Line (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{line}{, }\item[{int}]{line\+Number}{, }\item[{std::\+vector$<$ int $>$ \&}]{vertex\+List}{, }\item[{std::\+vector$<$ std::\+pair$<$ int, int $>$ $>$ \&}]{edge\+List}{, }\item[{std::\+vector$<$ int $>$ \&}]{edge\+Line\+Numbers}{, }\item[{bool \&}]{edges\+Started}{, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{error\+Vector}{}\end{DoxyParamCaption})}
+
+Определяет тип строки (дуга или вершина), парсит её и добавляет в соответствующий список. При ошибке синтаксиса добавляет ошибку в error\+Vector. 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em line} & Строка для обработки \\
+\hline
+\doxymbox{\texttt{in}}  & {\em line\+Number} & Номер строки в файле (для сообщений об ошибках) \\
+\hline
+ & {\em \+[in/\+out]\+} & vertex\+List Список вершин (может быть дополнен) \\
+\hline
+ & {\em \+[in/\+out]\+} & edge\+List Список дуг (может быть дополнен) \\
+\hline
+ & {\em \+[in/\+out]\+} & edge\+Line\+Numbers Номера строк с дугами (может быть дополнен) \\
+\hline
+ & {\em \+[in/\+out]\+} & edges\+Started Флаг:\+ встречалась ли уже хотя бы одна дуга \\
+\hline
+ & {\em \+[in/\+out]\+} & error\+Vector Контейнер для ошибок \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ivanov__47__knpo_8cpp_a16d6086fe09142fd48acdf26c2aeb756}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!printErrorsMessages@{printErrorsMessages}}
+\index{printErrorsMessages@{printErrorsMessages}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{printErrorsMessages()}{printErrorsMessages()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a16d6086fe09142fd48acdf26c2aeb756} 
+void print\+Errors\+Messages (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{errors\+Vector}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em errors\+Vector} & контейнер с ошибками \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ivanov__47__knpo_8cpp_a1bdf42983f66b1811188c1fca9ccbb3f}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!processEdgeLine@{processEdgeLine}}
+\index{processEdgeLine@{processEdgeLine}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{processEdgeLine()}{processEdgeLine()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a1bdf42983f66b1811188c1fca9ccbb3f} 
+std::\+string process\+Edge\+Line (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{line}{, }\item[{\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}}}]{type}{, }\item[{const std::\+vector$<$ std::\+string $>$ \&}]{vertex\+Names}{, }\item[{const std::\+map$<$ std::\+pair$<$ int, int $>$, int $>$ \&}]{edges\+To\+Delete\+Count}{, }\item[{std::\+map$<$ std::\+pair$<$ int, int $>$, int $>$ \&}]{highlighted\+Count}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em line} & Исходная строка из файла \\
+\hline
+\doxymbox{\texttt{in}}  & {\em type} & Тип графа \\
+\hline
+\doxymbox{\texttt{in}}  & {\em vertex\+Names} & Имена вершин графа (в порядке объявления) \\
+\hline
+\doxymbox{\texttt{in}}  & {\em edges\+To\+Delete\+Count} & Количество каждой дуги, подлежащей удалению \\
+\hline
+ & {\em \+[in/\+out]\+} & highlighted\+Count Счётчик уже помеченных дуг \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Модифицированная строка (с пометкой \+[color="{}red"{}]\+) или исходная строка 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a60b864ebf63323026ffce3c0cf919ee9}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!processEdges@{processEdges}}
+\index{processEdges@{processEdges}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{processEdges()}{processEdges()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a60b864ebf63323026ffce3c0cf919ee9} 
+void process\+Edges (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ std::\+pair$<$ int, int $>$ $>$ \&}]{edge\+List}{, }\item[{const std::\+vector$<$ int $>$ \&}]{edge\+Line\+Numbers}{, }\item[{const std::\+vector$<$ int $>$ \&}]{vertex\+List}{, }\item[{\doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*}}]{graph}{, }\item[{int}]{in\+Degrees}{\+[1000]\+, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{error\+Vector}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em edge\+List} & Список дуг для добавления \\
+\hline
+\doxymbox{\texttt{in}}  & {\em edge\+Line\+Numbers} & Номера строк с дугами (для ошибок) \\
+\hline
+\doxymbox{\texttt{in}}  & {\em vertex\+List} & Список вершин графа \\
+\hline
+ & {\em \+[in/\+out]\+} & graph Граф, в который добавляются дуги \\
+\hline
+ & {\em \+[in/\+out]\+} & in\+Degrees Массив степеней захода вершин \\
+\hline
+ & {\em \+[in/\+out]\+} & error\+Vector Контейнер для ошибок \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ivanov__47__knpo_8cpp_a093ad82c389c2b6be4b3b39246f288f1}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!readTextFromFile@{readTextFromFile}}
+\index{readTextFromFile@{readTextFromFile}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{readTextFromFile()}{readTextFromFile()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a093ad82c389c2b6be4b3b39246f288f1} 
+bool read\+Text\+From\+File (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+string $>$ \&}]{file\+Text}{, }\item[{std::\+string \&}]{file\+Name}{, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{error\+Vector}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+ & {\em \+[in/\+out]\+} & file\+Text Контейнер для записи текста из файла \\
+\hline
+\doxymbox{\texttt{in}}  & {\em file\+Name} & Путь к файлу с текстом \\
+\hline
+ & {\em \+[in/\+out]\+} & error\+Vector Контейнер для ошибок \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если функция завершилась успешно 
+
+false, если функция завершилась с ошибками 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_a5a01f705cc7b4a7317a57f6bf41aef25}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!trim@{trim}}
+\index{trim@{trim}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_a5a01f705cc7b4a7317a57f6bf41aef25} 
+std::\+string trim (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{str}{}\end{DoxyParamCaption})}
+
+удаляет пробелы, табы, переносы строк и другие whitespace-\/символы с начала и конца строки. Пробелы внутри строки сохраняются. 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em str} & Исходная строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Обрезанная строка. Если строка состояла только из пробелов — пустая строка 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_acf7b86c9b4a6117aa43bc5aee344d915}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!tryBuildTreeFromVertex@{tryBuildTreeFromVertex}}
+\index{tryBuildTreeFromVertex@{tryBuildTreeFromVertex}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{tryBuildTreeFromVertex()}{tryBuildTreeFromVertex()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_acf7b86c9b4a6117aa43bc5aee344d915} 
+\doxymbox{\hyperlink{headers_8h_a3f8f7b519e692469f867b0af0ce0490e}{graph\+Type}} try\+Build\+Tree\+From\+Vertex (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&}]{graph}{, }\item[{int}]{root\+Idx}{, }\item[{int}]{vertex\+Count}{, }\item[{\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&}]{edge\+Difference}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em graph} & Исходный граф \\
+\hline
+\doxymbox{\texttt{in}}  & {\em root\+Idx} & Индекс вершины-\/корня \\
+\hline
+\doxymbox{\texttt{in}}  & {\em vertex\+Count} & Количество вершин в графе \\
+\hline
+ & {\em \+[in/\+out]\+} & edge\+Difference Разность дуг графа и дерева \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Тип графа:\+ tree, convertible\+To\+Tree или not\+Convertible\+To\+Tree 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_ab431435b8c948ce4334e6b1c3bb5d8f5}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!tryParseInt@{tryParseInt}}
+\index{tryParseInt@{tryParseInt}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{tryParseInt()}{tryParseInt()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_ab431435b8c948ce4334e6b1c3bb5d8f5} 
+bool try\+Parse\+Int (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{str}{, }\item[{int \&}]{result}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em str} & Строка для парсинга \\
+\hline
+\doxymbox{\texttt{out}}  & {\em result} & Результат парсинга (валидно только если функция вернула true) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true если строка полностью является валидным целым числом 
+
+false если строка содержит лишние символы или не является числом 
+\end{DoxyReturn}
+\Hypertarget{ivanov__47__knpo_8cpp_acfb23957a861227c7bc4e37c3f37b429}\index{ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}!writeTextToFile@{writeTextToFile}}
+\index{writeTextToFile@{writeTextToFile}!ivanov\_47\_knpo.cpp@{ivanov\_47\_knpo.cpp}}
+\doxysubsubsection{\texorpdfstring{writeTextToFile()}{writeTextToFile()}}
+{\footnotesize\ttfamily \label{ivanov__47__knpo_8cpp_acfb23957a861227c7bc4e37c3f37b429} 
+int write\+Text\+To\+File (\begin{DoxyParamCaption}\item[{std::\+vector$<$ std::\+string $>$ \&}]{output\+Text}{, }\item[{std::\+string \&}]{output\+File\+Name}{, }\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_error}{Error}} $>$ \&}]{errors\+Vector}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em output\+Text} & Текст для записи \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+File\+Name} & Имя выходного файла \\
+\hline
+ & {\em \+[in/\+out]\+} & errors\+Vector Контейнер для ошибок \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+0, если файл успешно создан 
+
+1, если файл не удалось создать 
+\end{DoxyReturn}

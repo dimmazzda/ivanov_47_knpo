@@ -1,0 +1,267 @@
+\doxysubsection{Graphviz context library (GVC) API }
+\hypertarget{group__gvc__api}{}\label{group__gvc__api}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection*{Файлы}
+\begin{DoxyCompactItemize}
+\item 
+файл \doxymbox{\hyperlink{gvc_8h}{Graphviz/\+include/\+graphviz/\+gvc.\+h}}
+\begin{DoxyCompactList}\small\item\em Graphviz context library. \end{DoxyCompactList}\item 
+файл \doxymbox{\hyperlink{gvcext_8h}{Graphviz/\+include/\+graphviz/\+gvcext.\+h}}
+\item 
+файл \doxymbox{\hyperlink{gvcjob_8h}{Graphviz/\+include/\+graphviz/\+gvcjob.\+h}}
+\item 
+файл \doxymbox{\hyperlink{gvcommon_8h}{Graphviz/\+include/\+graphviz/\+gvcommon.\+h}}
+\item 
+файл \doxymbox{\hyperlink{gvconfig_8h}{Graphviz/\+include/\+graphviz/\+gvconfig.\+h}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__gvc__api_ga1900bbae79ee742028fdade9874044ab}{LAYOUT\+\_\+\+DONE}}(g)
+\end{DoxyCompactItemize}
+\doxysubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void \doxymbox{\hyperlink{group__gvc__api_ga018b112f47c2d5d0f16ba15d96da6b83}{gv\+Toggle}} (int)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga6f9134481fe1f165031eef2f7a15d757}{gv\+NEWcontext}} (const \doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} \texorpdfstring{$\ast$}{*}builtins, int demand\+\_\+loading)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_gac3f8b67fedaba6f18a2d590fd2215dd9}{gv\+Context}} (void)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga7a7d68cec7821a013740b4f26691dde3}{gv\+Context\+Plugins}} (const \doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} \texorpdfstring{$\ast$}{*}builtins, int demand\+\_\+loading)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga00dbd3b38295f5d2a43f96f8204003f3}{gvc\+Info}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga66edadacbf11a308d4dbcdaf1839a953}{gvc\+Version}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_gaeb03050323b78e7964a86d7208745852}{gvc\+Build\+Date}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga1afe7f473fdb3f6bdc031d4dffaef68c}{gv\+Parse\+Args}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_gae4b75fef75c05fbb8caf8f7706df4532}{gv\+Next\+Input\+Graph}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga3e8b6e342763fd924d91c79c61e0cec6}{gv\+Plugins\+Graph}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga67788d439d9ee5c1eeda56ebf02813aa}{gv\+Layout}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}engine)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_gaaa732e30740522246477e06e6eca7d64}{gv\+Layout\+Jobs}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} bool \doxymbox{\hyperlink{group__gvc__api_ga970a70b771b2ad9758285406830ca31c}{gv\+Layout\+Done}} (\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void \doxymbox{\hyperlink{group__gvc__api_ga1cdc6ab9575d837bae9b4e9fa2aee014}{attach\+\_\+attrs}} (\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga76ad723902c7c6e808b174b6ef825b01}{gv\+Render}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}format, FILE \texorpdfstring{$\ast$}{*}out)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga2d56af58cb0bf82c3d978b46a6917703}{gv\+Render\+Filename}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}format, const char \texorpdfstring{$\ast$}{*}filename)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga12cfb6aba5527c755f511f27e874e364}{gv\+Render\+Context}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}format, void \texorpdfstring{$\ast$}{*}context)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga39869e53e6f5f8c7e65f44f403307204}{gv\+Render\+Data}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}format, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}result, size\+\_\+t \texorpdfstring{$\ast$}{*}length)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void \doxymbox{\hyperlink{group__gvc__api_gafa4ad95793974b7f7c630dc62cf10bf7}{gv\+Free\+Render\+Data}} (char \texorpdfstring{$\ast$}{*}data)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_gad4103215debda04c9af5c0c1a63adc7e}{gv\+Render\+Jobs}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_gad14d00ac9b4d7cf10bce3a90ffff1a19}{gv\+Free\+Layout}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void \doxymbox{\hyperlink{group__gvc__api_ga9af0ef2b1a4645bcb168768b952b161a}{gv\+Finalize}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_ga86a2da027bb6065bb5e88f630a27456c}{gv\+Free\+Context}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__gvc__api_ga95d373728973c5ac191a31b7bc7d8572}{gv\+Plugin\+List}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, const char \texorpdfstring{$\ast$}{*}kind, int \texorpdfstring{$\ast$}{*}sz)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void \doxymbox{\hyperlink{group__gvc__api_gad78d42fe0cb3303d4bec3d6db8cace41}{gv\+Add\+Library}} (\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}gvc, \doxymbox{\hyperlink{structgvplugin__library__t}{gvplugin\+\_\+library\+\_\+t}} \texorpdfstring{$\ast$}{*}lib)
+\item 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int \doxymbox{\hyperlink{group__gvc__api_gad2db2fef176ff1719e9a83e3495e2c31}{gv\+Tool\+Tred}} (\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Подробное описание}
+
+
+\label{group__gvc__api_doc-define-members}
+\Hypertarget{group__gvc__api_doc-define-members}
+\doxysubsubsection{Макросы}
+\Hypertarget{group__gvc__api_ga1900bbae79ee742028fdade9874044ab}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!LAYOUT\_DONE@{LAYOUT\_DONE}}
+\index{LAYOUT\_DONE@{LAYOUT\_DONE}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{LAYOUT\_DONE}{LAYOUT\_DONE}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga1900bbae79ee742028fdade9874044ab} 
+\+\#define LAYOUT\+\_\+\+DONE(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}{agbindrec}}(g,\ \textcolor{stringliteral}{"{}Agraphinfo\_t"{}},\ 0,\ \textcolor{keyword}{true})\ \&\&\ \doxymbox{\hyperlink{group__cgraph__graph_ga304761d6ec6f0b12b6cef1b38d79fa37}{GD\_drawing}}(g))}
+
+\end{DoxyCode}
+
+
+\label{group__gvc__api_doc-func-members}
+\Hypertarget{group__gvc__api_doc-func-members}
+\doxysubsubsection{Функции}
+\Hypertarget{group__gvc__api_ga1cdc6ab9575d837bae9b4e9fa2aee014}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!attach\_attrs@{attach\_attrs}}
+\index{attach\_attrs@{attach\_attrs}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{attach\_attrs()}{attach\_attrs()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga1cdc6ab9575d837bae9b4e9fa2aee014} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void attach\+\_\+attrs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gad78d42fe0cb3303d4bec3d6db8cace41}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvAddLibrary@{gvAddLibrary}}
+\index{gvAddLibrary@{gvAddLibrary}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvAddLibrary()}{gvAddLibrary()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gad78d42fe0cb3303d4bec3d6db8cace41} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void gv\+Add\+Library (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{structgvplugin__library__t}{gvplugin\+\_\+library\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{lib}{}\end{DoxyParamCaption})}
+
+Add a library from your user application 
+\begin{DoxyParams}{Аргументы}
+{\em gvc} & Graphviz context to add library to \\
+\hline
+{\em lib} & library to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__gvc__api_gaeb03050323b78e7964a86d7208745852}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvcBuildDate@{gvcBuildDate}}
+\index{gvcBuildDate@{gvcBuildDate}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvcBuildDate()}{gvcBuildDate()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gaeb03050323b78e7964a86d7208745852} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} gvc\+Build\+Date (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga00dbd3b38295f5d2a43f96f8204003f3}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvcInfo@{gvcInfo}}
+\index{gvcInfo@{gvcInfo}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvcInfo()}{gvcInfo()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga00dbd3b38295f5d2a43f96f8204003f3} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} gvc\+Info (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gac3f8b67fedaba6f18a2d590fd2215dd9}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvContext@{gvContext}}
+\index{gvContext@{gvContext}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvContext()}{gvContext()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gac3f8b67fedaba6f18a2d590fd2215dd9} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} gv\+Context (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga7a7d68cec7821a013740b4f26691dde3}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvContextPlugins@{gvContextPlugins}}
+\index{gvContextPlugins@{gvContextPlugins}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvContextPlugins()}{gvContextPlugins()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga7a7d68cec7821a013740b4f26691dde3} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} gv\+Context\+Plugins (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{builtins}{, }\item[{int}]{demand\+\_\+loading}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga66edadacbf11a308d4dbcdaf1839a953}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvcVersion@{gvcVersion}}
+\index{gvcVersion@{gvcVersion}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvcVersion()}{gvcVersion()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga66edadacbf11a308d4dbcdaf1839a953} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} gvc\+Version (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga9af0ef2b1a4645bcb168768b952b161a}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvFinalize@{gvFinalize}}
+\index{gvFinalize@{gvFinalize}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvFinalize()}{gvFinalize()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga9af0ef2b1a4645bcb168768b952b161a} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void gv\+Finalize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga86a2da027bb6065bb5e88f630a27456c}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvFreeContext@{gvFreeContext}}
+\index{gvFreeContext@{gvFreeContext}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvFreeContext()}{gvFreeContext()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga86a2da027bb6065bb5e88f630a27456c} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Free\+Context (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gad14d00ac9b4d7cf10bce3a90ffff1a19}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvFreeLayout@{gvFreeLayout}}
+\index{gvFreeLayout@{gvFreeLayout}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvFreeLayout()}{gvFreeLayout()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gad14d00ac9b4d7cf10bce3a90ffff1a19} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Free\+Layout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gafa4ad95793974b7f7c630dc62cf10bf7}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvFreeRenderData@{gvFreeRenderData}}
+\index{gvFreeRenderData@{gvFreeRenderData}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvFreeRenderData()}{gvFreeRenderData()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gafa4ad95793974b7f7c630dc62cf10bf7} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void gv\+Free\+Render\+Data (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga67788d439d9ee5c1eeda56ebf02813aa}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvLayout@{gvLayout}}
+\index{gvLayout@{gvLayout}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvLayout()}{gvLayout()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga67788d439d9ee5c1eeda56ebf02813aa} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Layout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{engine}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga970a70b771b2ad9758285406830ca31c}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvLayoutDone@{gvLayoutDone}}
+\index{gvLayoutDone@{gvLayoutDone}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvLayoutDone()}{gvLayoutDone()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga970a70b771b2ad9758285406830ca31c} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} bool gv\+Layout\+Done (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gaaa732e30740522246477e06e6eca7d64}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvLayoutJobs@{gvLayoutJobs}}
+\index{gvLayoutJobs@{gvLayoutJobs}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvLayoutJobs()}{gvLayoutJobs()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gaaa732e30740522246477e06e6eca7d64} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Layout\+Jobs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga6f9134481fe1f165031eef2f7a15d757}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvNEWcontext@{gvNEWcontext}}
+\index{gvNEWcontext@{gvNEWcontext}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvNEWcontext()}{gvNEWcontext()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga6f9134481fe1f165031eef2f7a15d757} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} gv\+NEWcontext (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structlt__symlist__t}{lt\+\_\+symlist\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{builtins}{, }\item[{int}]{demand\+\_\+loading}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gae4b75fef75c05fbb8caf8f7706df4532}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvNextInputGraph@{gvNextInputGraph}}
+\index{gvNextInputGraph@{gvNextInputGraph}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvNextInputGraph()}{gvNextInputGraph()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gae4b75fef75c05fbb8caf8f7706df4532} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*} gv\+Next\+Input\+Graph (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga1afe7f473fdb3f6bdc031d4dffaef68c}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvParseArgs@{gvParseArgs}}
+\index{gvParseArgs@{gvParseArgs}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvParseArgs()}{gvParseArgs()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga1afe7f473fdb3f6bdc031d4dffaef68c} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Parse\+Args (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga95d373728973c5ac191a31b7bc7d8572}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvPluginList@{gvPluginList}}
+\index{gvPluginList@{gvPluginList}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvPluginList()}{gvPluginList()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga95d373728973c5ac191a31b7bc7d8572} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} gv\+Plugin\+List (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{kind}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{sz}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga3e8b6e342763fd924d91c79c61e0cec6}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvPluginsGraph@{gvPluginsGraph}}
+\index{gvPluginsGraph@{gvPluginsGraph}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvPluginsGraph()}{gvPluginsGraph()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga3e8b6e342763fd924d91c79c61e0cec6} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} \doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*} gv\+Plugins\+Graph (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga76ad723902c7c6e808b174b6ef825b01}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvRender@{gvRender}}
+\index{gvRender@{gvRender}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvRender()}{gvRender()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga76ad723902c7c6e808b174b6ef825b01} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Render (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga12cfb6aba5527c755f511f27e874e364}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvRenderContext@{gvRenderContext}}
+\index{gvRenderContext@{gvRenderContext}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvRenderContext()}{gvRenderContext()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga12cfb6aba5527c755f511f27e874e364} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Render\+Context (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga39869e53e6f5f8c7e65f44f403307204}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvRenderData@{gvRenderData}}
+\index{gvRenderData@{gvRenderData}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvRenderData()}{gvRenderData()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga39869e53e6f5f8c7e65f44f403307204} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Render\+Data (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{result}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{length}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga2d56af58cb0bf82c3d978b46a6917703}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvRenderFilename@{gvRenderFilename}}
+\index{gvRenderFilename@{gvRenderFilename}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvRenderFilename()}{gvRenderFilename()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga2d56af58cb0bf82c3d978b46a6917703} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Render\+Filename (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gad4103215debda04c9af5c0c1a63adc7e}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvRenderJobs@{gvRenderJobs}}
+\index{gvRenderJobs@{gvRenderJobs}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvRenderJobs()}{gvRenderJobs()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gad4103215debda04c9af5c0c1a63adc7e} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Render\+Jobs (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{gvc}{, }\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_ga018b112f47c2d5d0f16ba15d96da6b83}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvToggle@{gvToggle}}
+\index{gvToggle@{gvToggle}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvToggle()}{gvToggle()}}
+{\footnotesize\ttfamily \label{group__gvc__api_ga018b112f47c2d5d0f16ba15d96da6b83} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} void gv\+Toggle (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__gvc__api_gad2db2fef176ff1719e9a83e3495e2c31}\index{Graphviz context library (GVC) API@{Graphviz context library (GVC) API}!gvToolTred@{gvToolTred}}
+\index{gvToolTred@{gvToolTred}!Graphviz context library (GVC) API@{Graphviz context library (GVC) API}}
+\doxysubsubsubsection{\texorpdfstring{gvToolTred()}{gvToolTred()}}
+{\footnotesize\ttfamily \label{group__gvc__api_gad2db2fef176ff1719e9a83e3495e2c31} 
+\doxymbox{\hyperlink{gvc_8h_a021af93a41eb0d655443edeeabbc15bc}{GVC\+\_\+\+API}} int gv\+Tool\+Tred (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+Perform a Transitive Reduction on a graph 
+\begin{DoxyParams}{Аргументы}
+{\em g} & graph to be transformed. \\
+\hline
+\end{DoxyParams}

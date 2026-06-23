@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: error handling</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__cgraph__err.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">error handling <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__misc.html">miscellaneous</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:gadaa9664d5293197783f01659b889d8c6" id="r_gadaa9664d5293197783f01659b889d8c6"><td class="memItemLeft">typedef int(*&#160;</td><td class="memItemRight"><a class="el" href="#gadaa9664d5293197783f01659b889d8c6">agusererrf</a>) (char *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga0c75ffdbe1d93ca74fe77dc46a45a6cf" id="r_ga0c75ffdbe1d93ca74fe77dc46a45a6cf"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a> { <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c">AGWARN</a>
+, <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2">AGERR</a>
+, <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77">AGMAX</a>
+, <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398">AGPREV</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gac8b80f854859b4017499e42067bae5b7" id="r_gac8b80f854859b4017499e42067bae5b7"><td class="memItemLeft">CGRAPH_API <a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#gac8b80f854859b4017499e42067bae5b7">agseterr</a> (<a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a>)</td></tr>
+<tr class="memitem:ga4776647f453831f116fee7e200ee2823" id="r_ga4776647f453831f116fee7e200ee2823"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga4776647f453831f116fee7e200ee2823">aglasterr</a> (void)</td></tr>
+<tr class="memitem:ga42ef64ab2933b0503ccc8406dfe375b7" id="r_ga42ef64ab2933b0503ccc8406dfe375b7"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#ga42ef64ab2933b0503ccc8406dfe375b7">agerr</a> (<a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a> level, const char *fmt,...) PRINTF_LIKE(2</td></tr>
+<tr class="memitem:gaf80e0604e4bcff00064559e46261b8d4" id="r_gaf80e0604e4bcff00064559e46261b8d4"><td class="memItemLeft">CGRAPH_API int CGRAPH_API void&#160;</td><td class="memItemRight"><a class="el" href="#gaf80e0604e4bcff00064559e46261b8d4">agerrorf</a> (const char *fmt,...) PRINTF_LIKE(1</td></tr>
+<tr class="memitem:ga1b3c7fe6147832a992f62fcd28e79a82" id="r_ga1b3c7fe6147832a992f62fcd28e79a82"><td class="memItemLeft">CGRAPH_API int CGRAPH_API void CGRAPH_API void&#160;</td><td class="memItemRight"><a class="el" href="#ga1b3c7fe6147832a992f62fcd28e79a82">agwarningf</a> (const char *fmt,...) PRINTF_LIKE(1</td></tr>
+<tr class="memitem:gac3dd9f429c7f6f0b7147e8ffd5c83ed5" id="r_gac3dd9f429c7f6f0b7147e8ffd5c83ed5"><td class="memItemLeft">CGRAPH_API int CGRAPH_API void CGRAPH_API void CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gac3dd9f429c7f6f0b7147e8ffd5c83ed5">agerrors</a> (void)</td></tr>
+<tr class="memitem:gacc4553d6d246fc943e79b267299437d2" id="r_gacc4553d6d246fc943e79b267299437d2"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gacc4553d6d246fc943e79b267299437d2">agreseterrors</a> (void)</td></tr>
+<tr class="memitem:gadee66a17e220d081d595875a1afc0c2c" id="r_gadee66a17e220d081d595875a1afc0c2c"><td class="memItemLeft">CGRAPH_API <a class="el" href="#gadaa9664d5293197783f01659b889d8c6">agusererrf</a>&#160;</td><td class="memItemRight"><a class="el" href="#gadee66a17e220d081d595875a1afc0c2c">agseterrf</a> (<a class="el" href="#gadaa9664d5293197783f01659b889d8c6">agusererrf</a>)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>The library provides a variety of mechanisms to control the reporting of errors and warnings. A message is only written if its type has higher priority than a programmer-controlled minimum, which is <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" title="AGWARN">AGWARN</a> by default. The programmer can set this value using <a class="el" href="#gac8b80f854859b4017499e42067bae5b7" title="agseterr">agseterr</a>, which returns the previous value. Calling <span class="tt">agseterr(AGMAX)</span> turns off the writing of messages.</p>
+<p>The function <a class="el" href="#ga42ef64ab2933b0503ccc8406dfe375b7" title="agerr">agerr</a> is the main entry point for reporting an anomaly. The first argument indicates the type of message. Usually, the first argument is <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" title="AGWARN">AGWARN</a> or <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2" title="AGERR">AGERR</a> to indicate warnings and errors, respectively. Sometimes additional context information is only available in functions calling the function where the error is actually caught. In this case, the calling function can indicate that it is continuing the current error by using <a class="el" href="#gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398" title="AGPREV">AGPREV</a> as the first argument. The remaining arguments to <a class="el" href="#ga42ef64ab2933b0503ccc8406dfe375b7" title="agerr">agerr</a> are the same as the arguments to <span class="tt">printf</span>.</p>
+<p>The functions <a class="el" href="#ga1b3c7fe6147832a992f62fcd28e79a82" title="agwarningf">agwarningf</a> and <a class="el" href="#gaf80e0604e4bcff00064559e46261b8d4" title="agerrorf">agerrorf</a> are shorthand for <span class="tt">agerr(AGWARN,...)</span> and <span class="tt">agerr(AGERR,...)</span>, respectively.</p>
+<p>Some applications desire to directly control the writing of messages. Such an application can use the function <a class="el" href="#gadee66a17e220d081d595875a1afc0c2c" title="agseterrf">agseterrf</a> to register the function that the library should call to actually write the message. The previous error function is returned. By default, the message is written to <span class="tt">stderr</span>.</p>
+<p>Errors not written are stored in a log file. The last recorded error can be retrieved by calling <a class="el" href="#ga4776647f453831f116fee7e200ee2823" title="aglasterr">aglasterr</a>. Unless the printing of error messages has been completely disabled by a call to <span class="tt">agseterr(AGMAX)</span>, standard error must not be wide-oriented, even if a user-provided error printing function is provided.</p>
+<p>The function <a class="el" href="#gac3dd9f429c7f6f0b7147e8ffd5c83ed5" title="agerrors">agerrors</a> returns non-zero if errors have been reported. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="gadaa9664d5293197783f01659b889d8c6" name="gadaa9664d5293197783f01659b889d8c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadaa9664d5293197783f01659b889d8c6">&#9670;&#160;</a></span>agusererrf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* agusererrf) (char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="ga0c75ffdbe1d93ca74fe77dc46a45a6cf" name="ga0c75ffdbe1d93ca74fe77dc46a45a6cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">&#9670;&#160;</a></span>agerrlevel_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c" name="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c"></a>AGWARN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2" name="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2"></a>AGERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77" name="gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77"></a>AGMAX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398" name="gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398"></a>AGPREV&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga42ef64ab2933b0503ccc8406dfe375b7" name="ga42ef64ab2933b0503ccc8406dfe375b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga42ef64ab2933b0503ccc8406dfe375b7">&#9670;&#160;</a></span>agerr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agerr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a></td>          <td class="paramname"><span class="paramname"><em>level</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf80e0604e4bcff00064559e46261b8d4" name="gaf80e0604e4bcff00064559e46261b8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf80e0604e4bcff00064559e46261b8d4">&#9670;&#160;</a></span>agerrorf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int CGRAPH_API void agerrorf </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac3dd9f429c7f6f0b7147e8ffd5c83ed5" name="gac3dd9f429c7f6f0b7147e8ffd5c83ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3dd9f429c7f6f0b7147e8ffd5c83ed5">&#9670;&#160;</a></span>agerrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int CGRAPH_API void CGRAPH_API void CGRAPH_API int agerrors </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4776647f453831f116fee7e200ee2823" name="ga4776647f453831f116fee7e200ee2823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4776647f453831f116fee7e200ee2823">&#9670;&#160;</a></span>aglasterr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * aglasterr </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gacc4553d6d246fc943e79b267299437d2" name="gacc4553d6d246fc943e79b267299437d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc4553d6d246fc943e79b267299437d2">&#9670;&#160;</a></span>agreseterrors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agreseterrors </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac8b80f854859b4017499e42067bae5b7" name="gac8b80f854859b4017499e42067bae5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8b80f854859b4017499e42067bae5b7">&#9670;&#160;</a></span>agseterr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a> agseterr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0c75ffdbe1d93ca74fe77dc46a45a6cf">agerrlevel_t</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadee66a17e220d081d595875a1afc0c2c" name="gadee66a17e220d081d595875a1afc0c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadee66a17e220d081d595875a1afc0c2c">&#9670;&#160;</a></span>agseterrf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="#gadaa9664d5293197783f01659b889d8c6">agusererrf</a> agseterrf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gadaa9664d5293197783f01659b889d8c6">agusererrf</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1b3c7fe6147832a992f62fcd28e79a82" name="ga1b3c7fe6147832a992f62fcd28e79a82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b3c7fe6147832a992f62fcd28e79a82">&#9670;&#160;</a></span>agwarningf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int CGRAPH_API void CGRAPH_API void agwarningf </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

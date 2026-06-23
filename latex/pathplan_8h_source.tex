@@ -1,0 +1,61 @@
+\doxysection{pathplan.\+h}
+\hypertarget{pathplan_8h_source}{}\label{pathplan_8h_source}\index{Graphviz/include/graphviz/pathplan.h@{Graphviz/include/graphviz/pathplan.h}}
+\doxymbox{\hyperlink{pathplan_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{pathgeom_8h}{pathgeom.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifdef\ PATHPLAN\_EXPORTS}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ PATHPLAN\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ PATHPLAN\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#ifndef\ PATHPLAN\_API}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ PATHPLAN\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ find\ shortest\ euclidean\ path\ within\ a\ simple\ polygon\ */}}
+\DoxyCodeLine{00046\ \ \ \ \ \doxymbox{\hyperlink{pathplan_8h_aceec0f93b171df2efd6e7bc6f66088f1}{PATHPLAN\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pathplan_8h_a37ffb3674b8a6c8ef89b04c87f143f1e}{Pshortestpath}}(\doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\_t}}\ *\ boundary,\ \doxymbox{\hyperlink{pathgeom_8h_ae03dc374d3fff2c0f275c6c17e705d1f}{Ppoint\_t}}\ endpoints[2],}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}\ *\ output\_route);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ fit\ a\ spline\ to\ an\ input\ polyline,\ without\ touching\ barrier\ segments\ */}}
+\DoxyCodeLine{00050\ \doxymbox{\hyperlink{pathplan_8h_aceec0f93b171df2efd6e7bc6f66088f1}{PATHPLAN\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pathplan_8h_a284bc4f7fc3a95f8af124f1f60aed261}{Proutespline}}(\doxymbox{\hyperlink{struct_pedge__t}{Pedge\_t}}\ *barriers,\ \textcolor{keywordtype}{size\_t}\ n\_barriers,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}\ input\_route,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_a1601338d97d595819723e748357f2dca}{Pvector\_t}}\ endpoint\_slopes[2],}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}\ *output\_route);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ utility\ function\ to\ convert\ from\ a\ set\ of\ polygonal\ obstacles\ to\ barriers\ */}}
+\DoxyCodeLine{00056\ \ \ \ \ \doxymbox{\hyperlink{pathplan_8h_aceec0f93b171df2efd6e7bc6f66088f1}{PATHPLAN\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pathplan_8h_a8b2fbb0a2f1a6791780267d8ffae36e1}{Ppolybarriers}}(\doxymbox{\hyperlink{struct_ppoly__t}{Ppoly\_t}}\ **\ polys,\ \textcolor{keywordtype}{int}\ npolys,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_pedge__t}{Pedge\_t}}\ **\ barriers,\ \textcolor{keywordtype}{int}\ *n\_barriers);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{/*\ function\ to\ convert\ a\ polyline\ into\ a\ spline\ representation\ */}}
+\DoxyCodeLine{00060\ \ \ \ \ \doxymbox{\hyperlink{pathplan_8h_aceec0f93b171df2efd6e7bc6f66088f1}{PATHPLAN\_API}}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{pathplan_8h_ac46ac37b2f74c401c14f7475634a5423}{make\_polyline}}(\doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}\ line,\ \doxymbox{\hyperlink{pathgeom_8h_a40d0fc3e3db12860642e212281e44905}{Ppolyline\_t}}*\ sline);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#undef\ PATHPLAN\_API}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

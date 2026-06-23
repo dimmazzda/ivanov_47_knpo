@@ -1,0 +1,119 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+arith.h}
+\hypertarget{arith_8h}{}\label{arith_8h}\index{Graphviz/include/graphviz/arith.h@{Graphviz/include/graphviz/arith.h}}
+{\ttfamily \+\#include $<$limits.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(a,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}}(a,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_a043815e8b2e49280dc4fcd060fc56a38}{BETWEEN}}(a,  b,  c)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_a514396dd60fa0621c83072091fb2a0cd}{SQRT2}}~1.\+41421356237309504880
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_a91a8600e2a2859a47dbc2ba39960a352}{ROUND}}(f)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_a4af1b2e9b11a7583daf59f2cb45a22e5}{RADIANS}}(deg)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_aaee81a47de7098b758f6aadc3e2d9007}{DEGREES}}(rad)
+\item 
+\+\#define \doxymbox{\hyperlink{arith_8h_ad41630f833e920c1ffa34722f45a8e77}{SQR}}(a)
+\end{DoxyCompactItemize}
+
+
+\label{arith_8h_doc-define-members}
+\Hypertarget{arith_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{arith_8h_a043815e8b2e49280dc4fcd060fc56a38}\index{arith.h@{arith.h}!BETWEEN@{BETWEEN}}
+\index{BETWEEN@{BETWEEN}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{BETWEEN}{BETWEEN}}
+{\footnotesize\ttfamily \label{arith_8h_a043815e8b2e49280dc4fcd060fc56a38} 
+\+\#define BETWEEN(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((a)\ <=\ (b))\ \&\&\ ((b)\ <=\ (c)))}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_aaee81a47de7098b758f6aadc3e2d9007}\index{arith.h@{arith.h}!DEGREES@{DEGREES}}
+\index{DEGREES@{DEGREES}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{DEGREES}{DEGREES}}
+{\footnotesize\ttfamily \label{arith_8h_aaee81a47de7098b758f6aadc3e2d9007} 
+\+\#define DEGREES(\begin{DoxyParamCaption}\item[{}]{rad}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((rad)/\doxymbox{\hyperlink{arith_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI}}\ *\ 180.0)}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_ae71449b1cc6e6250b91f539153a7a0d3}\index{arith.h@{arith.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \label{arith_8h_ae71449b1cc6e6250b91f539153a7a0d3} 
+\+\#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+\Hypertarget{arith_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\index{arith.h@{arith.h}!MAX@{MAX}}
+\index{MAX@{MAX}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \label{arith_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f} 
+\+\#define MAX(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)>(b)?(a):(b))}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\index{arith.h@{arith.h}!MIN@{MIN}}
+\index{MIN@{MIN}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \label{arith_8h_a3acffbd305ee72dcd4593c0d8af64a4f} 
+\+\#define MIN(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)<(b)?(a):(b))}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_a4af1b2e9b11a7583daf59f2cb45a22e5}\index{arith.h@{arith.h}!RADIANS@{RADIANS}}
+\index{RADIANS@{RADIANS}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{RADIANS}{RADIANS}}
+{\footnotesize\ttfamily \label{arith_8h_a4af1b2e9b11a7583daf59f2cb45a22e5} 
+\+\#define RADIANS(\begin{DoxyParamCaption}\item[{}]{deg}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((deg)/180.0\ *\ \doxymbox{\hyperlink{arith_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI}})}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_a91a8600e2a2859a47dbc2ba39960a352}\index{arith.h@{arith.h}!ROUND@{ROUND}}
+\index{ROUND@{ROUND}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{ROUND}{ROUND}}
+{\footnotesize\ttfamily \label{arith_8h_a91a8600e2a2859a47dbc2ba39960a352} 
+\+\#define ROUND(\begin{DoxyParamCaption}\item[{}]{f}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((f>=0)?(int)(f\ +\ .5):(int)(f\ -\/\ .5))}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_ad41630f833e920c1ffa34722f45a8e77}\index{arith.h@{arith.h}!SQR@{SQR}}
+\index{SQR@{SQR}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{SQR}{SQR}}
+{\footnotesize\ttfamily \label{arith_8h_ad41630f833e920c1ffa34722f45a8e77} 
+\+\#define SQR(\begin{DoxyParamCaption}\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a)\ *\ (a))}
+
+\end{DoxyCode}
+\Hypertarget{arith_8h_a514396dd60fa0621c83072091fb2a0cd}\index{arith.h@{arith.h}!SQRT2@{SQRT2}}
+\index{SQRT2@{SQRT2}!arith.h@{arith.h}}
+\doxysubsubsection{\texorpdfstring{SQRT2}{SQRT2}}
+{\footnotesize\ttfamily \label{arith_8h_a514396dd60fa0621c83072091fb2a0cd} 
+\+\#define SQRT2~1.\+41421356237309504880}
+

@@ -1,0 +1,1569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл toSave/arhvsMyProcessor/ARHVSProc/operationalDevice.qsf</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('operational_device_8qsf.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл operationalDevice.qsf</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a0d4c6904194231903ec908f0fc419d99" id="r_a0d4c6904194231903ec908f0fc419d99"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0d4c6904194231903ec908f0fc419d99">FAMILY</a> &quot;Stratix II&quot;</td></tr>
+<tr class="memitem:a97cb6312b3e426b3c97aa912e0ac0ab1" id="r_a97cb6312b3e426b3c97aa912e0ac0ab1"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a97cb6312b3e426b3c97aa912e0ac0ab1">DEVICE</a> AUTO</td></tr>
+<tr class="memitem:a0d57624c33d2d4e00a6ccdcb7b932d8e" id="r_a0d57624c33d2d4e00a6ccdcb7b932d8e"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0d57624c33d2d4e00a6ccdcb7b932d8e">TOP_LEVEL_ENTITY</a> processor</td></tr>
+<tr class="memitem:a8d1521168baa02db9facc8b9014fbffe" id="r_a8d1521168baa02db9facc8b9014fbffe"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a8d1521168baa02db9facc8b9014fbffe">ORIGINAL_QUARTUS_VERSION</a> &quot;9.1 SP2&quot;</td></tr>
+<tr class="memitem:ad93b80eeeb64a3512a4c364899a62e9a" id="r_ad93b80eeeb64a3512a4c364899a62e9a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ad93b80eeeb64a3512a4c364899a62e9a">PROJECT_CREATION_TIME_DATE</a> &quot;11:55:18  NOVEMBER 21, 2025&quot;</td></tr>
+<tr class="memitem:a3001bb0efd1de6cd33b05bb06c1a7b8a" id="r_a3001bb0efd1de6cd33b05bb06c1a7b8a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a3001bb0efd1de6cd33b05bb06c1a7b8a">LAST_QUARTUS_VERSION</a> &quot;9.1 SP2&quot;</td></tr>
+<tr class="memitem:ad89af65b071c268ad25b727b708fcfa7" id="r_ad89af65b071c268ad25b727b708fcfa7"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ad89af65b071c268ad25b727b708fcfa7">USE_GENERATED_PHYSICAL_CONSTRAINTS</a> OFF -section_id eda_blast_fpga</td></tr>
+<tr class="memitem:a7d98f204164f51b05dfd1bcc0d6b96ea" id="r_a7d98f204164f51b05dfd1bcc0d6b96ea"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a7d98f204164f51b05dfd1bcc0d6b96ea">DEVICE_FILTER_SPEED_GRADE</a> FASTEST</td></tr>
+<tr class="memitem:aeaeccd32eacaad9b517218d873deb0ba" id="r_aeaeccd32eacaad9b517218d873deb0ba"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aeaeccd32eacaad9b517218d873deb0ba">SIMULATION_MODE</a> FUNCTIONAL</td></tr>
+<tr class="memitem:a5dec62fd08e8e96ad33a6f4db329b42c" id="r_a5dec62fd08e8e96ad33a6f4db329b42c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a5dec62fd08e8e96ad33a6f4db329b42c">LL_ROOT_REGION</a> ON -entity RG8bit -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:a94191a2789c674ce9c459fe6cdb9cbdd" id="r_a94191a2789c674ce9c459fe6cdb9cbdd"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a94191a2789c674ce9c459fe6cdb9cbdd">LL_MEMBER_STATE</a> LOCKED -entity RG8bit -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:a430c1a495ddc7d831452abc258cf243d" id="r_a430c1a495ddc7d831452abc258cf243d"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a430c1a495ddc7d831452abc258cf243d">LL_ROOT_REGION</a> ON -entity demux1x9 -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:a3b690c58276e28fc18a7fa9c3325e981" id="r_a3b690c58276e28fc18a7fa9c3325e981"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a3b690c58276e28fc18a7fa9c3325e981">LL_MEMBER_STATE</a> LOCKED -entity demux1x9 -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:a7f297847c6295895dbdde08f5b0d54f1" id="r_a7f297847c6295895dbdde08f5b0d54f1"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a7f297847c6295895dbdde08f5b0d54f1">LL_ROOT_REGION</a> ON -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:ad31389bebd75c1d5b78cd3dcd54c651b" id="r_ad31389bebd75c1d5b78cd3dcd54c651b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ad31389bebd75c1d5b78cd3dcd54c651b">LL_MEMBER_STATE</a> LOCKED -section_id &quot;Root Region&quot;</td></tr>
+<tr class="memitem:a6f71e7410521045fd1fa4beddfd752b5" id="r_a6f71e7410521045fd1fa4beddfd752b5"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a6f71e7410521045fd1fa4beddfd752b5">PARTITION_NETLIST_TYPE</a> SOURCE -section_id Top</td></tr>
+<tr class="memitem:aba4dabe815ac4598439ce61d8ac8dc08" id="r_aba4dabe815ac4598439ce61d8ac8dc08"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aba4dabe815ac4598439ce61d8ac8dc08">PARTITION_COLOR</a> 16764057 -section_id Top</td></tr>
+<tr class="memitem:a83e07a1b0ef60031c4e2595ccf6a6a80" id="r_a83e07a1b0ef60031c4e2595ccf6a6a80"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a83e07a1b0ef60031c4e2595ccf6a6a80">INCREMENTAL_VECTOR_INPUT_SOURCE</a> processorTest.vwf</td></tr>
+<tr class="memitem:a6c6080cad6a68dfc981638174208f0b4" id="r_a6c6080cad6a68dfc981638174208f0b4"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a6c6080cad6a68dfc981638174208f0b4">BDF_FILE</a> RG.bdf</td></tr>
+<tr class="memitem:a536372a53c3ff7b36b9d47e9e52a10df" id="r_a536372a53c3ff7b36b9d47e9e52a10df"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a536372a53c3ff7b36b9d47e9e52a10df">BDF_FILE</a> RG8bit.bdf</td></tr>
+<tr class="memitem:a4b42ba46f39824dce05308311408459c" id="r_a4b42ba46f39824dce05308311408459c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4b42ba46f39824dce05308311408459c">VECTOR_WAVEFORM_FILE</a> RG8bitTest.vwf</td></tr>
+<tr class="memitem:a7375cfc945be041c9f791e77c4bf04af" id="r_a7375cfc945be041c9f791e77c4bf04af"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a7375cfc945be041c9f791e77c4bf04af">BDF_FILE</a> RGBlock.bdf</td></tr>
+<tr class="memitem:a86ac6aef1992ebc49c53cbf93f0c2318" id="r_a86ac6aef1992ebc49c53cbf93f0c2318"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a86ac6aef1992ebc49c53cbf93f0c2318">QIP_FILE</a> lpm_mux0.qip</td></tr>
+<tr class="memitem:a8a18ed61ca32d742bf4669192610c2d1" id="r_a8a18ed61ca32d742bf4669192610c2d1"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a8a18ed61ca32d742bf4669192610c2d1">QIP_FILE</a> lpm_constant0.qip</td></tr>
+<tr class="memitem:a06aa25caae59603ab5aed31c99dc568c" id="r_a06aa25caae59603ab5aed31c99dc568c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a06aa25caae59603ab5aed31c99dc568c">QIP_FILE</a> lpm_constant1.qip</td></tr>
+<tr class="memitem:ab39922f80c6769981aa16ba9c8e18545" id="r_ab39922f80c6769981aa16ba9c8e18545"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ab39922f80c6769981aa16ba9c8e18545">QIP_FILE</a> lpm_mux1.qip</td></tr>
+<tr class="memitem:a899381fffc119b80a7a9b45e8f98a754" id="r_a899381fffc119b80a7a9b45e8f98a754"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a899381fffc119b80a7a9b45e8f98a754">BDF_FILE</a> demux1x9.bdf</td></tr>
+<tr class="memitem:a4e33ab08895dc56dea7f3803f13aa8a9" id="r_a4e33ab08895dc56dea7f3803f13aa8a9"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4e33ab08895dc56dea7f3803f13aa8a9">QIP_FILE</a> lpm_decode0.qip</td></tr>
+<tr class="memitem:a70c4c9bb8542ce28235e711e1238e507" id="r_a70c4c9bb8542ce28235e711e1238e507"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a70c4c9bb8542ce28235e711e1238e507">BDF_FILE</a> decoder1x9.bdf</td></tr>
+<tr class="memitem:afa592abf0f0e863f9065ba279689fd7c" id="r_afa592abf0f0e863f9065ba279689fd7c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#afa592abf0f0e863f9065ba279689fd7c">VECTOR_WAVEFORM_FILE</a> RG_BLOCK_TEST.vwf</td></tr>
+<tr class="memitem:af031ba0ffe9b4ba38107e92fee18730f" id="r_af031ba0ffe9b4ba38107e92fee18730f"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#af031ba0ffe9b4ba38107e92fee18730f">BDF_FILE</a> SHRA1bit.bdf</td></tr>
+<tr class="memitem:a0a4c949a6f107e23c986d57f4a8eef9e" id="r_a0a4c949a6f107e23c986d57f4a8eef9e"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0a4c949a6f107e23c986d57f4a8eef9e">VECTOR_WAVEFORM_FILE</a> sdvigtest.vwf</td></tr>
+<tr class="memitem:ad95601c65665de0064da7ea271af969b" id="r_ad95601c65665de0064da7ea271af969b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ad95601c65665de0064da7ea271af969b">BDF_FILE</a> SHLA1bit.bdf</td></tr>
+<tr class="memitem:ae7e3739a7eabbfb3984c18105bd7b806" id="r_ae7e3739a7eabbfb3984c18105bd7b806"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ae7e3739a7eabbfb3984c18105bd7b806">BDF_FILE</a> Shifter.bdf</td></tr>
+<tr class="memitem:a29e4ecde745a1aa4ffb70280346e4925" id="r_a29e4ecde745a1aa4ffb70280346e4925"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a29e4ecde745a1aa4ffb70280346e4925">QIP_FILE</a> lpm_decode1.qip</td></tr>
+<tr class="memitem:afc6b75edf93e5cc9e36e74f097830ad7" id="r_afc6b75edf93e5cc9e36e74f097830ad7"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#afc6b75edf93e5cc9e36e74f097830ad7">QIP_FILE</a> lpm_constant2.qip</td></tr>
+<tr class="memitem:ab5c38992a365c1a4c1fa266257581850" id="r_ab5c38992a365c1a4c1fa266257581850"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ab5c38992a365c1a4c1fa266257581850">QIP_FILE</a> lpm_decode2.qip</td></tr>
+<tr class="memitem:a35297b8a4f4f4e20cab134cae86f6b55" id="r_a35297b8a4f4f4e20cab134cae86f6b55"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a35297b8a4f4f4e20cab134cae86f6b55">QIP_FILE</a> lpm_mux2.qip</td></tr>
+<tr class="memitem:aa4cba134d7c502e0b3efeaf43ddc7ffe" id="r_aa4cba134d7c502e0b3efeaf43ddc7ffe"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aa4cba134d7c502e0b3efeaf43ddc7ffe">QIP_FILE</a> lpm_mux3.qip</td></tr>
+<tr class="memitem:a9d007b90912feb4c3c09b7ed4073fe7d" id="r_a9d007b90912feb4c3c09b7ed4073fe7d"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a9d007b90912feb4c3c09b7ed4073fe7d">QIP_FILE</a> lpm_mux4.qip</td></tr>
+<tr class="memitem:a06e0a9b6204c975e9faec253a1a8385b" id="r_a06e0a9b6204c975e9faec253a1a8385b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a06e0a9b6204c975e9faec253a1a8385b">VECTOR_WAVEFORM_FILE</a> testShifter.vwf</td></tr>
+<tr class="memitem:a299cf2b768ab6c150b2a4be4504f66e5" id="r_a299cf2b768ab6c150b2a4be4504f66e5"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a299cf2b768ab6c150b2a4be4504f66e5">QIP_FILE</a> lpm_inv0.qip</td></tr>
+<tr class="memitem:aac6f1c1f41ca0b2fc81e88bd2411beed" id="r_aac6f1c1f41ca0b2fc81e88bd2411beed"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aac6f1c1f41ca0b2fc81e88bd2411beed">QIP_FILE</a> lpm_and0.qip</td></tr>
+<tr class="memitem:a876cde2b05c1bb4fd84f38f18837ebfa" id="r_a876cde2b05c1bb4fd84f38f18837ebfa"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a876cde2b05c1bb4fd84f38f18837ebfa">BDF_FILE</a> ALU.bdf</td></tr>
+<tr class="memitem:a1fecda5578910ab6d09c9c9fc0a21a15" id="r_a1fecda5578910ab6d09c9c9fc0a21a15"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a1fecda5578910ab6d09c9c9fc0a21a15">QIP_FILE</a> lpm_add_sub0.qip</td></tr>
+<tr class="memitem:ab400d61b59c8c42caecb60e3c1cf185d" id="r_ab400d61b59c8c42caecb60e3c1cf185d"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ab400d61b59c8c42caecb60e3c1cf185d">QIP_FILE</a> lpm_add_sub1.qip</td></tr>
+<tr class="memitem:a772b21a9db998d4c51750f8d04b5c522" id="r_a772b21a9db998d4c51750f8d04b5c522"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a772b21a9db998d4c51750f8d04b5c522">BDF_FILE</a> adder.bdf</td></tr>
+<tr class="memitem:a8f19a72ad33ab99dbb00281666cc7de2" id="r_a8f19a72ad33ab99dbb00281666cc7de2"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a8f19a72ad33ab99dbb00281666cc7de2">VECTOR_WAVEFORM_FILE</a> testadder.vwf</td></tr>
+<tr class="memitem:afb446fc8c9c50dda79fb10bc0ebeb19e" id="r_afb446fc8c9c50dda79fb10bc0ebeb19e"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#afb446fc8c9c50dda79fb10bc0ebeb19e">QIP_FILE</a> lpm_add_sub2.qip</td></tr>
+<tr class="memitem:af6063a94942516fce50cf9bffa7a0340" id="r_af6063a94942516fce50cf9bffa7a0340"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#af6063a94942516fce50cf9bffa7a0340">BDF_FILE</a> testimhuynyu.bdf</td></tr>
+<tr class="memitem:a001651b2b8a0446dcdcc4791e03fad1e" id="r_a001651b2b8a0446dcdcc4791e03fad1e"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a001651b2b8a0446dcdcc4791e03fad1e">VECTOR_WAVEFORM_FILE</a> testHUYNI.vwf</td></tr>
+<tr class="memitem:a0b69f2e7a208c73740dcd3cf3f4f885c" id="r_a0b69f2e7a208c73740dcd3cf3f4f885c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0b69f2e7a208c73740dcd3cf3f4f885c">QIP_FILE</a> lpm_mux6.qip</td></tr>
+<tr class="memitem:aefebaa6e4d5c701adfbe7fea0772a23a" id="r_aefebaa6e4d5c701adfbe7fea0772a23a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aefebaa6e4d5c701adfbe7fea0772a23a">QIP_FILE</a> lpm_inv1.qip</td></tr>
+<tr class="memitem:aac80a90dcba3837032af4262e355b213" id="r_aac80a90dcba3837032af4262e355b213"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aac80a90dcba3837032af4262e355b213">QIP_FILE</a> lpm_xor0.qip</td></tr>
+<tr class="memitem:a1a90caef4f8f468f7c684ea98714b1f8" id="r_a1a90caef4f8f468f7c684ea98714b1f8"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a1a90caef4f8f468f7c684ea98714b1f8">QIP_FILE</a> lpm_add_sub3.qip</td></tr>
+<tr class="memitem:a3ca8da767c22a476975f1777a7f6e396" id="r_a3ca8da767c22a476975f1777a7f6e396"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a3ca8da767c22a476975f1777a7f6e396">BDF_FILE</a> testAlu.bdf</td></tr>
+<tr class="memitem:a0cd6326bb8625de6e6b876f918ba8e65" id="r_a0cd6326bb8625de6e6b876f918ba8e65"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0cd6326bb8625de6e6b876f918ba8e65">VECTOR_WAVEFORM_FILE</a> alutest.vwf</td></tr>
+<tr class="memitem:aa71ecaaee9c2d3a730df1b5969f818b3" id="r_aa71ecaaee9c2d3a730df1b5969f818b3"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aa71ecaaee9c2d3a730df1b5969f818b3">BDF_FILE</a> operationalDevice.bdf</td></tr>
+<tr class="memitem:a41ee3b0475f61657332ad60bb5afff8e" id="r_a41ee3b0475f61657332ad60bb5afff8e"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a41ee3b0475f61657332ad60bb5afff8e">BDF_FILE</a> flagRegister.bdf</td></tr>
+<tr class="memitem:af9334b2aed321cdb22e0d7a3570b785d" id="r_af9334b2aed321cdb22e0d7a3570b785d"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#af9334b2aed321cdb22e0d7a3570b785d">QIP_FILE</a> lpm_mux7.qip</td></tr>
+<tr class="memitem:a4b9bd431852195ce330433d189b651ab" id="r_a4b9bd431852195ce330433d189b651ab"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4b9bd431852195ce330433d189b651ab">QIP_FILE</a> lpm_ram_dq0.qip</td></tr>
+<tr class="memitem:a7eae8ad18d7cbbdf09f1a8a4f0655c9c" id="r_a7eae8ad18d7cbbdf09f1a8a4f0655c9c"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a7eae8ad18d7cbbdf09f1a8a4f0655c9c">QIP_FILE</a> lpm_mux8.qip</td></tr>
+<tr class="memitem:a9453002e0ade09834ddc5edb6dc259fb" id="r_a9453002e0ade09834ddc5edb6dc259fb"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a9453002e0ade09834ddc5edb6dc259fb">QIP_FILE</a> lpm_mux9.qip</td></tr>
+<tr class="memitem:a0a19260763a0022227612d1ca99d0993" id="r_a0a19260763a0022227612d1ca99d0993"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0a19260763a0022227612d1ca99d0993">QIP_FILE</a> lpm_mux10.qip</td></tr>
+<tr class="memitem:adac9040e64853510e7b51cc8bc0f001f" id="r_adac9040e64853510e7b51cc8bc0f001f"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#adac9040e64853510e7b51cc8bc0f001f">QIP_FILE</a> lpm_mux11.qip</td></tr>
+<tr class="memitem:ac15042c8bee9463e6f58688827344619" id="r_ac15042c8bee9463e6f58688827344619"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ac15042c8bee9463e6f58688827344619">VECTOR_WAVEFORM_FILE</a> operationalDeviceTest.vwf</td></tr>
+<tr class="memitem:a017d7530185a7dabff4acf02e44811fc" id="r_a017d7530185a7dabff4acf02e44811fc"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a017d7530185a7dabff4acf02e44811fc">BDF_FILE</a> buff1bit.bdf</td></tr>
+<tr class="memitem:a4ceea740b01e1b779d99bbc8598ea951" id="r_a4ceea740b01e1b779d99bbc8598ea951"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4ceea740b01e1b779d99bbc8598ea951">BDF_FILE</a> buff6bit.bdf</td></tr>
+<tr class="memitem:a462398d9c93c2957b96121da37d34e04" id="r_a462398d9c93c2957b96121da37d34e04"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a462398d9c93c2957b96121da37d34e04">VECTOR_WAVEFORM_FILE</a> buffTest.vwf</td></tr>
+<tr class="memitem:a2fcb9a5c306987001369acb20db24b6b" id="r_a2fcb9a5c306987001369acb20db24b6b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a2fcb9a5c306987001369acb20db24b6b">BDF_FILE</a> controlDevice.bdf</td></tr>
+<tr class="memitem:a4d0a5569bb867135fda8bf063670ed10" id="r_a4d0a5569bb867135fda8bf063670ed10"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4d0a5569bb867135fda8bf063670ed10">BDF_FILE</a> decodeBlock.bdf</td></tr>
+<tr class="memitem:a296d612bbe909249890e1173f8441f0a" id="r_a296d612bbe909249890e1173f8441f0a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a296d612bbe909249890e1173f8441f0a">QIP_FILE</a> lpm_mux13.qip</td></tr>
+<tr class="memitem:a43c9f1143d12d508eb1796e5f8588786" id="r_a43c9f1143d12d508eb1796e5f8588786"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a43c9f1143d12d508eb1796e5f8588786">QIP_FILE</a> lpm_constant4.qip</td></tr>
+<tr class="memitem:a39d9fdf052d89aa924ccd8dfcd08668a" id="r_a39d9fdf052d89aa924ccd8dfcd08668a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a39d9fdf052d89aa924ccd8dfcd08668a">BDF_FILE</a> flagFormer.bdf</td></tr>
+<tr class="memitem:aed556839b44278877a90a43d9f7f0899" id="r_aed556839b44278877a90a43d9f7f0899"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aed556839b44278877a90a43d9f7f0899">VECTOR_WAVEFORM_FILE</a> testers.vwf</td></tr>
+<tr class="memitem:ae480e094722477d9ec1d4d47a9eeccaf" id="r_ae480e094722477d9ec1d4d47a9eeccaf"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ae480e094722477d9ec1d4d47a9eeccaf">QIP_FILE</a> lpm_mux14.qip</td></tr>
+<tr class="memitem:a180f2e3ae830ee9b64eb867759315a9f" id="r_a180f2e3ae830ee9b64eb867759315a9f"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a180f2e3ae830ee9b64eb867759315a9f">BDF_FILE</a> modeSelector.bdf</td></tr>
+<tr class="memitem:a03cb8280828789eff78272376ddf4c0b" id="r_a03cb8280828789eff78272376ddf4c0b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a03cb8280828789eff78272376ddf4c0b">VECTOR_WAVEFORM_FILE</a> mode_selectorTest.vwf</td></tr>
+<tr class="memitem:a2eeb9401553de5dc39a1ceb064d567a8" id="r_a2eeb9401553de5dc39a1ceb064d567a8"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a2eeb9401553de5dc39a1ceb064d567a8">MIF_FILE</a> romCodes.mif</td></tr>
+<tr class="memitem:ac2cfa57b9acb6efdb53a3b51e7814e9b" id="r_ac2cfa57b9acb6efdb53a3b51e7814e9b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ac2cfa57b9acb6efdb53a3b51e7814e9b">MIF_FILE</a> mifUPD.mif</td></tr>
+<tr class="memitem:a1b2def97561116b03b526db00669085f" id="r_a1b2def97561116b03b526db00669085f"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a1b2def97561116b03b526db00669085f">MIF_FILE</a> romMIF.mif</td></tr>
+<tr class="memitem:aef7072ed57f7932966403ef7416661cf" id="r_aef7072ed57f7932966403ef7416661cf"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aef7072ed57f7932966403ef7416661cf">BDF_FILE</a> testikLPM.bdf</td></tr>
+<tr class="memitem:ab459536e05e763c394e486082662016a" id="r_ab459536e05e763c394e486082662016a"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ab459536e05e763c394e486082662016a">MIF_FILE</a> testMIF.mif</td></tr>
+<tr class="memitem:a5db0f36e286d02a754d99c832f444a06" id="r_a5db0f36e286d02a754d99c832f444a06"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a5db0f36e286d02a754d99c832f444a06">QIP_FILE</a> lpm_rom10.qip</td></tr>
+<tr class="memitem:a89c2f2def7afe20652773dd245a6a5f7" id="r_a89c2f2def7afe20652773dd245a6a5f7"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a89c2f2def7afe20652773dd245a6a5f7">VECTOR_WAVEFORM_FILE</a> testerOFROM.vwf</td></tr>
+<tr class="memitem:acc4009d1a470792fc101b3d20d8ef4ca" id="r_acc4009d1a470792fc101b3d20d8ef4ca"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#acc4009d1a470792fc101b3d20d8ef4ca">BDF_FILE</a> processor.bdf</td></tr>
+<tr class="memitem:adfdfa92ea4294e4611f118a80bd43cba" id="r_adfdfa92ea4294e4611f118a80bd43cba"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#adfdfa92ea4294e4611f118a80bd43cba">MIF_FILE</a> ramInit.mif</td></tr>
+<tr class="memitem:af5a1996d498031e3d3cebac46e52997d" id="r_af5a1996d498031e3d3cebac46e52997d"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#af5a1996d498031e3d3cebac46e52997d">VECTOR_WAVEFORM_FILE</a> processorTest.vwf</td></tr>
+<tr class="memitem:aa311b05247c7c5954475a157bd09e6d4" id="r_aa311b05247c7c5954475a157bd09e6d4"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aa311b05247c7c5954475a157bd09e6d4">BDF_FILE</a> ramtestik.bdf</td></tr>
+<tr class="memitem:a0695c7aeffe45b577bf63966b8dd4d0b" id="r_a0695c7aeffe45b577bf63966b8dd4d0b"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a0695c7aeffe45b577bf63966b8dd4d0b">VECTOR_WAVEFORM_FILE</a> CDTest.vwf</td></tr>
+<tr class="memitem:a20b3e3e1d976420880ba867a2ae51ac5" id="r_a20b3e3e1d976420880ba867a2ae51ac5"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a20b3e3e1d976420880ba867a2ae51ac5">VECTOR_WAVEFORM_FILE</a> ramTestik.vwf</td></tr>
+<tr class="memitem:a382e8bfda51e5305b2a8b7fb0e3eb236" id="r_a382e8bfda51e5305b2a8b7fb0e3eb236"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a382e8bfda51e5305b2a8b7fb0e3eb236">VECTOR_WAVEFORM_FILE</a> romTEST.vwf</td></tr>
+<tr class="memitem:ad0a2569b696d885b28de359cb80a7731" id="r_ad0a2569b696d885b28de359cb80a7731"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#ad0a2569b696d885b28de359cb80a7731">VECTOR_WAVEFORM_FILE</a> ODTest.vwf</td></tr>
+<tr class="memitem:aa6959dc2f8217c82282c5ce307285658" id="r_aa6959dc2f8217c82282c5ce307285658"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#aa6959dc2f8217c82282c5ce307285658">VECTOR_WAVEFORM_FILE</a> decodeBlockTest.vwf</td></tr>
+<tr class="memitem:a4ed122efd757036de93e2a601fdbb5e1" id="r_a4ed122efd757036de93e2a601fdbb5e1"><td class="memItemLeft">ucf_const&#160;</td><td class="memItemRight"><a class="el" href="#a4ed122efd757036de93e2a601fdbb5e1">PARTITION_HIERARCHY</a> root_partition -to|-section_id Top</td></tr>
+</table>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a6c6080cad6a68dfc981638174208f0b4" name="a6c6080cad6a68dfc981638174208f0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6080cad6a68dfc981638174208f0b4">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[1/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a536372a53c3ff7b36b9d47e9e52a10df" name="a536372a53c3ff7b36b9d47e9e52a10df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536372a53c3ff7b36b9d47e9e52a10df">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[2/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7375cfc945be041c9f791e77c4bf04af" name="a7375cfc945be041c9f791e77c4bf04af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7375cfc945be041c9f791e77c4bf04af">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[3/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a899381fffc119b80a7a9b45e8f98a754" name="a899381fffc119b80a7a9b45e8f98a754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899381fffc119b80a7a9b45e8f98a754">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[4/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70c4c9bb8542ce28235e711e1238e507" name="a70c4c9bb8542ce28235e711e1238e507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c4c9bb8542ce28235e711e1238e507">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[5/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af031ba0ffe9b4ba38107e92fee18730f" name="af031ba0ffe9b4ba38107e92fee18730f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af031ba0ffe9b4ba38107e92fee18730f">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[6/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad95601c65665de0064da7ea271af969b" name="ad95601c65665de0064da7ea271af969b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95601c65665de0064da7ea271af969b">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[7/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7e3739a7eabbfb3984c18105bd7b806" name="ae7e3739a7eabbfb3984c18105bd7b806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e3739a7eabbfb3984c18105bd7b806">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[8/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a876cde2b05c1bb4fd84f38f18837ebfa" name="a876cde2b05c1bb4fd84f38f18837ebfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876cde2b05c1bb4fd84f38f18837ebfa">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[9/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a772b21a9db998d4c51750f8d04b5c522" name="a772b21a9db998d4c51750f8d04b5c522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772b21a9db998d4c51750f8d04b5c522">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[10/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6063a94942516fce50cf9bffa7a0340" name="af6063a94942516fce50cf9bffa7a0340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6063a94942516fce50cf9bffa7a0340">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[11/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ca8da767c22a476975f1777a7f6e396" name="a3ca8da767c22a476975f1777a7f6e396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca8da767c22a476975f1777a7f6e396">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[12/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa71ecaaee9c2d3a730df1b5969f818b3" name="aa71ecaaee9c2d3a730df1b5969f818b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71ecaaee9c2d3a730df1b5969f818b3">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[13/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41ee3b0475f61657332ad60bb5afff8e" name="a41ee3b0475f61657332ad60bb5afff8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41ee3b0475f61657332ad60bb5afff8e">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[14/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a017d7530185a7dabff4acf02e44811fc" name="a017d7530185a7dabff4acf02e44811fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017d7530185a7dabff4acf02e44811fc">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[15/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ceea740b01e1b779d99bbc8598ea951" name="a4ceea740b01e1b779d99bbc8598ea951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ceea740b01e1b779d99bbc8598ea951">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[16/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fcb9a5c306987001369acb20db24b6b" name="a2fcb9a5c306987001369acb20db24b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcb9a5c306987001369acb20db24b6b">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[17/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d0a5569bb867135fda8bf063670ed10" name="a4d0a5569bb867135fda8bf063670ed10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d0a5569bb867135fda8bf063670ed10">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[18/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39d9fdf052d89aa924ccd8dfcd08668a" name="a39d9fdf052d89aa924ccd8dfcd08668a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d9fdf052d89aa924ccd8dfcd08668a">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[19/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a180f2e3ae830ee9b64eb867759315a9f" name="a180f2e3ae830ee9b64eb867759315a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180f2e3ae830ee9b64eb867759315a9f">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[20/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef7072ed57f7932966403ef7416661cf" name="aef7072ed57f7932966403ef7416661cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7072ed57f7932966403ef7416661cf">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[21/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc4009d1a470792fc101b3d20d8ef4ca" name="acc4009d1a470792fc101b3d20d8ef4ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4009d1a470792fc101b3d20d8ef4ca">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[22/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa311b05247c7c5954475a157bd09e6d4" name="aa311b05247c7c5954475a157bd09e6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa311b05247c7c5954475a157bd09e6d4">&#9670;&#160;</a></span>BDF_FILE <span class="overload">[23/23]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97cb6312b3e426b3c97aa912e0ac0ab1" name="a97cb6312b3e426b3c97aa912e0ac0ab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cb6312b3e426b3c97aa912e0ac0ab1">&#9670;&#160;</a></span>DEVICE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d98f204164f51b05dfd1bcc0d6b96ea" name="a7d98f204164f51b05dfd1bcc0d6b96ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d98f204164f51b05dfd1bcc0d6b96ea">&#9670;&#160;</a></span>DEVICE_FILTER_SPEED_GRADE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d4c6904194231903ec908f0fc419d99" name="a0d4c6904194231903ec908f0fc419d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4c6904194231903ec908f0fc419d99">&#9670;&#160;</a></span>FAMILY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83e07a1b0ef60031c4e2595ccf6a6a80" name="a83e07a1b0ef60031c4e2595ccf6a6a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e07a1b0ef60031c4e2595ccf6a6a80">&#9670;&#160;</a></span>INCREMENTAL_VECTOR_INPUT_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3001bb0efd1de6cd33b05bb06c1a7b8a" name="a3001bb0efd1de6cd33b05bb06c1a7b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3001bb0efd1de6cd33b05bb06c1a7b8a">&#9670;&#160;</a></span>LAST_QUARTUS_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94191a2789c674ce9c459fe6cdb9cbdd" name="a94191a2789c674ce9c459fe6cdb9cbdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94191a2789c674ce9c459fe6cdb9cbdd">&#9670;&#160;</a></span>LL_MEMBER_STATE <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b690c58276e28fc18a7fa9c3325e981" name="a3b690c58276e28fc18a7fa9c3325e981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b690c58276e28fc18a7fa9c3325e981">&#9670;&#160;</a></span>LL_MEMBER_STATE <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad31389bebd75c1d5b78cd3dcd54c651b" name="ad31389bebd75c1d5b78cd3dcd54c651b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31389bebd75c1d5b78cd3dcd54c651b">&#9670;&#160;</a></span>LL_MEMBER_STATE <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a430c1a495ddc7d831452abc258cf243d" name="a430c1a495ddc7d831452abc258cf243d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430c1a495ddc7d831452abc258cf243d">&#9670;&#160;</a></span>LL_ROOT_REGION <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f297847c6295895dbdde08f5b0d54f1" name="a7f297847c6295895dbdde08f5b0d54f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f297847c6295895dbdde08f5b0d54f1">&#9670;&#160;</a></span>LL_ROOT_REGION <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dec62fd08e8e96ad33a6f4db329b42c" name="a5dec62fd08e8e96ad33a6f4db329b42c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dec62fd08e8e96ad33a6f4db329b42c">&#9670;&#160;</a></span>LL_ROOT_REGION <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2eeb9401553de5dc39a1ceb064d567a8" name="a2eeb9401553de5dc39a1ceb064d567a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eeb9401553de5dc39a1ceb064d567a8">&#9670;&#160;</a></span>MIF_FILE <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2cfa57b9acb6efdb53a3b51e7814e9b" name="ac2cfa57b9acb6efdb53a3b51e7814e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2cfa57b9acb6efdb53a3b51e7814e9b">&#9670;&#160;</a></span>MIF_FILE <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b2def97561116b03b526db00669085f" name="a1b2def97561116b03b526db00669085f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b2def97561116b03b526db00669085f">&#9670;&#160;</a></span>MIF_FILE <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab459536e05e763c394e486082662016a" name="ab459536e05e763c394e486082662016a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab459536e05e763c394e486082662016a">&#9670;&#160;</a></span>MIF_FILE <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfdfa92ea4294e4611f118a80bd43cba" name="adfdfa92ea4294e4611f118a80bd43cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfdfa92ea4294e4611f118a80bd43cba">&#9670;&#160;</a></span>MIF_FILE <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d1521168baa02db9facc8b9014fbffe" name="a8d1521168baa02db9facc8b9014fbffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d1521168baa02db9facc8b9014fbffe">&#9670;&#160;</a></span>ORIGINAL_QUARTUS_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba4dabe815ac4598439ce61d8ac8dc08" name="aba4dabe815ac4598439ce61d8ac8dc08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba4dabe815ac4598439ce61d8ac8dc08">&#9670;&#160;</a></span>PARTITION_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ed122efd757036de93e2a601fdbb5e1" name="a4ed122efd757036de93e2a601fdbb5e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed122efd757036de93e2a601fdbb5e1">&#9670;&#160;</a></span>PARTITION_HIERARCHY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f71e7410521045fd1fa4beddfd752b5" name="a6f71e7410521045fd1fa4beddfd752b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f71e7410521045fd1fa4beddfd752b5">&#9670;&#160;</a></span>PARTITION_NETLIST_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad93b80eeeb64a3512a4c364899a62e9a" name="ad93b80eeeb64a3512a4c364899a62e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad93b80eeeb64a3512a4c364899a62e9a">&#9670;&#160;</a></span>PROJECT_CREATION_TIME_DATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86ac6aef1992ebc49c53cbf93f0c2318" name="a86ac6aef1992ebc49c53cbf93f0c2318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ac6aef1992ebc49c53cbf93f0c2318">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[1/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a18ed61ca32d742bf4669192610c2d1" name="a8a18ed61ca32d742bf4669192610c2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a18ed61ca32d742bf4669192610c2d1">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[2/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06aa25caae59603ab5aed31c99dc568c" name="a06aa25caae59603ab5aed31c99dc568c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06aa25caae59603ab5aed31c99dc568c">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[3/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab39922f80c6769981aa16ba9c8e18545" name="ab39922f80c6769981aa16ba9c8e18545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39922f80c6769981aa16ba9c8e18545">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[4/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e33ab08895dc56dea7f3803f13aa8a9" name="a4e33ab08895dc56dea7f3803f13aa8a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e33ab08895dc56dea7f3803f13aa8a9">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[5/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29e4ecde745a1aa4ffb70280346e4925" name="a29e4ecde745a1aa4ffb70280346e4925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e4ecde745a1aa4ffb70280346e4925">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[6/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc6b75edf93e5cc9e36e74f097830ad7" name="afc6b75edf93e5cc9e36e74f097830ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6b75edf93e5cc9e36e74f097830ad7">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[7/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5c38992a365c1a4c1fa266257581850" name="ab5c38992a365c1a4c1fa266257581850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c38992a365c1a4c1fa266257581850">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[8/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35297b8a4f4f4e20cab134cae86f6b55" name="a35297b8a4f4f4e20cab134cae86f6b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35297b8a4f4f4e20cab134cae86f6b55">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[9/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4cba134d7c502e0b3efeaf43ddc7ffe" name="aa4cba134d7c502e0b3efeaf43ddc7ffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cba134d7c502e0b3efeaf43ddc7ffe">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[10/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d007b90912feb4c3c09b7ed4073fe7d" name="a9d007b90912feb4c3c09b7ed4073fe7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d007b90912feb4c3c09b7ed4073fe7d">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[11/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a299cf2b768ab6c150b2a4be4504f66e5" name="a299cf2b768ab6c150b2a4be4504f66e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299cf2b768ab6c150b2a4be4504f66e5">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[12/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac6f1c1f41ca0b2fc81e88bd2411beed" name="aac6f1c1f41ca0b2fc81e88bd2411beed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6f1c1f41ca0b2fc81e88bd2411beed">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[13/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fecda5578910ab6d09c9c9fc0a21a15" name="a1fecda5578910ab6d09c9c9fc0a21a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fecda5578910ab6d09c9c9fc0a21a15">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[14/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab400d61b59c8c42caecb60e3c1cf185d" name="ab400d61b59c8c42caecb60e3c1cf185d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab400d61b59c8c42caecb60e3c1cf185d">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[15/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb446fc8c9c50dda79fb10bc0ebeb19e" name="afb446fc8c9c50dda79fb10bc0ebeb19e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb446fc8c9c50dda79fb10bc0ebeb19e">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[16/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b69f2e7a208c73740dcd3cf3f4f885c" name="a0b69f2e7a208c73740dcd3cf3f4f885c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b69f2e7a208c73740dcd3cf3f4f885c">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[17/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefebaa6e4d5c701adfbe7fea0772a23a" name="aefebaa6e4d5c701adfbe7fea0772a23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefebaa6e4d5c701adfbe7fea0772a23a">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[18/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac80a90dcba3837032af4262e355b213" name="aac80a90dcba3837032af4262e355b213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac80a90dcba3837032af4262e355b213">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[19/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a90caef4f8f468f7c684ea98714b1f8" name="a1a90caef4f8f468f7c684ea98714b1f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a90caef4f8f468f7c684ea98714b1f8">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[20/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9334b2aed321cdb22e0d7a3570b785d" name="af9334b2aed321cdb22e0d7a3570b785d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9334b2aed321cdb22e0d7a3570b785d">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[21/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b9bd431852195ce330433d189b651ab" name="a4b9bd431852195ce330433d189b651ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9bd431852195ce330433d189b651ab">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[22/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eae8ad18d7cbbdf09f1a8a4f0655c9c" name="a7eae8ad18d7cbbdf09f1a8a4f0655c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eae8ad18d7cbbdf09f1a8a4f0655c9c">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[23/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9453002e0ade09834ddc5edb6dc259fb" name="a9453002e0ade09834ddc5edb6dc259fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9453002e0ade09834ddc5edb6dc259fb">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[24/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a19260763a0022227612d1ca99d0993" name="a0a19260763a0022227612d1ca99d0993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a19260763a0022227612d1ca99d0993">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[25/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adac9040e64853510e7b51cc8bc0f001f" name="adac9040e64853510e7b51cc8bc0f001f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac9040e64853510e7b51cc8bc0f001f">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[26/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a296d612bbe909249890e1173f8441f0a" name="a296d612bbe909249890e1173f8441f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296d612bbe909249890e1173f8441f0a">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[27/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43c9f1143d12d508eb1796e5f8588786" name="a43c9f1143d12d508eb1796e5f8588786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c9f1143d12d508eb1796e5f8588786">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[28/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae480e094722477d9ec1d4d47a9eeccaf" name="ae480e094722477d9ec1d4d47a9eeccaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae480e094722477d9ec1d4d47a9eeccaf">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[29/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5db0f36e286d02a754d99c832f444a06" name="a5db0f36e286d02a754d99c832f444a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db0f36e286d02a754d99c832f444a06">&#9670;&#160;</a></span>QIP_FILE <span class="overload">[30/30]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaeccd32eacaad9b517218d873deb0ba" name="aeaeccd32eacaad9b517218d873deb0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaeccd32eacaad9b517218d873deb0ba">&#9670;&#160;</a></span>SIMULATION_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d57624c33d2d4e00a6ccdcb7b932d8e" name="a0d57624c33d2d4e00a6ccdcb7b932d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d57624c33d2d4e00a6ccdcb7b932d8e">&#9670;&#160;</a></span>TOP_LEVEL_ENTITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad89af65b071c268ad25b727b708fcfa7" name="ad89af65b071c268ad25b727b708fcfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad89af65b071c268ad25b727b708fcfa7">&#9670;&#160;</a></span>USE_GENERATED_PHYSICAL_CONSTRAINTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b42ba46f39824dce05308311408459c" name="a4b42ba46f39824dce05308311408459c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b42ba46f39824dce05308311408459c">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[1/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa592abf0f0e863f9065ba279689fd7c" name="afa592abf0f0e863f9065ba279689fd7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa592abf0f0e863f9065ba279689fd7c">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[2/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a4c949a6f107e23c986d57f4a8eef9e" name="a0a4c949a6f107e23c986d57f4a8eef9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a4c949a6f107e23c986d57f4a8eef9e">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[3/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06e0a9b6204c975e9faec253a1a8385b" name="a06e0a9b6204c975e9faec253a1a8385b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e0a9b6204c975e9faec253a1a8385b">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[4/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f19a72ad33ab99dbb00281666cc7de2" name="a8f19a72ad33ab99dbb00281666cc7de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f19a72ad33ab99dbb00281666cc7de2">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[5/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a001651b2b8a0446dcdcc4791e03fad1e" name="a001651b2b8a0446dcdcc4791e03fad1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001651b2b8a0446dcdcc4791e03fad1e">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[6/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cd6326bb8625de6e6b876f918ba8e65" name="a0cd6326bb8625de6e6b876f918ba8e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd6326bb8625de6e6b876f918ba8e65">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[7/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac15042c8bee9463e6f58688827344619" name="ac15042c8bee9463e6f58688827344619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac15042c8bee9463e6f58688827344619">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[8/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a462398d9c93c2957b96121da37d34e04" name="a462398d9c93c2957b96121da37d34e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462398d9c93c2957b96121da37d34e04">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[9/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed556839b44278877a90a43d9f7f0899" name="aed556839b44278877a90a43d9f7f0899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed556839b44278877a90a43d9f7f0899">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[10/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03cb8280828789eff78272376ddf4c0b" name="a03cb8280828789eff78272376ddf4c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03cb8280828789eff78272376ddf4c0b">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[11/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89c2f2def7afe20652773dd245a6a5f7" name="a89c2f2def7afe20652773dd245a6a5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c2f2def7afe20652773dd245a6a5f7">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[12/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5a1996d498031e3d3cebac46e52997d" name="af5a1996d498031e3d3cebac46e52997d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a1996d498031e3d3cebac46e52997d">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[13/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0695c7aeffe45b577bf63966b8dd4d0b" name="a0695c7aeffe45b577bf63966b8dd4d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0695c7aeffe45b577bf63966b8dd4d0b">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[14/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20b3e3e1d976420880ba867a2ae51ac5" name="a20b3e3e1d976420880ba867a2ae51ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b3e3e1d976420880ba867a2ae51ac5">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[15/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a382e8bfda51e5305b2a8b7fb0e3eb236" name="a382e8bfda51e5305b2a8b7fb0e3eb236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382e8bfda51e5305b2a8b7fb0e3eb236">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[16/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a2569b696d885b28de359cb80a7731" name="ad0a2569b696d885b28de359cb80a7731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a2569b696d885b28de359cb80a7731">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[17/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6959dc2f8217c82282c5ce307285658" name="aa6959dc2f8217c82282c5ce307285658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6959dc2f8217c82282c5ce307285658">&#9670;&#160;</a></span>VECTOR_WAVEFORM_FILE <span class="overload">[18/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_209b31e7f079953ccd5256f19e2a339c.html">toSave</a></li><li class="navelem"><a href="dir_0898837c0471c00ad5d277930441226e.html">arhvsMyProcessor</a></li><li class="navelem"><a href="dir_78f78dbd7a4af05cc76f815311ba8a78.html">ARHVSProc</a></li><li class="navelem"><a href="operational_device_8qsf.html">operationalDevice.qsf</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

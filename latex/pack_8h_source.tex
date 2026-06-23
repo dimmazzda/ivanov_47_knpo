@@ -1,0 +1,102 @@
+\doxysection{pack.\+h}
+\hypertarget{pack_8h_source}{}\label{pack_8h_source}\index{Graphviz/include/graphviz/pack.h@{Graphviz/include/graphviz/pack.h}}
+\doxymbox{\hyperlink{pack_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{/*\ Type\ indicating\ granularity\ and\ method\ }}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ \ l\_undef\ \ \ \ -\/\ unspecified}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ \ l\_node\ \ \ \ \ -\/\ polyomino\ using\ nodes\ and\ edges}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ \ l\_clust\ \ \ \ -\/\ polyomino\ using\ nodes\ and\ edges\ and\ top-\/level\ clusters}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (assumes\ ND\_clust(n)\ unused\ by\ application)}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ *\ \ l\_graph\ \ \ \ -\/\ polyomino\ using\ computer\ graph\ bounding\ box}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ \ l\_array\ \ \ \ -\/\ array\ based\ on\ graph\ bounding\ boxes}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *\ \ l\_aspect\ \ \ -\/\ tiling\ based\ on\ graph\ bounding\ boxes\ preserving\ aspect\ ratio}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ *\ \ l\_hull\ \ \ \ \ -\/\ polyomino\ using\ convex\ hull\ (unimplemented)}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ *\ \ l\_tile\ \ \ \ \ -\/\ tiling\ using\ graph\ bounding\ box\ (unimplemented)}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ *\ \ l\_bisect\ \ \ -\/\ alternate\ bisection\ using\ graph\ bounding\ box\ (unimplemented)}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d}{l\_undef}},\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8}{l\_clust}},\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3}{l\_node}},\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225}{l\_graph}},\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8}{l\_array}},\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da}{l\_aspect}}\ \}\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ PK\_COL\_MAJOR\ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ PK\_USER\_VALS\ \ \ (1\ <<\ 1)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ PK\_LEFT\_ALIGN\ \ (1\ <<\ 2)}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ PK\_RIGHT\_ALIGN\ (1\ <<\ 3)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ PK\_TOP\_ALIGN\ \ \ (1\ <<\ 4)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ PK\_BOT\_ALIGN\ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ PK\_INPUT\_ORDER\ (1\ <<\ 6)}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_a97c604e5f0df885172f770108f3df9cd}{packval\_t}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{structpack__info_a07b6d2fc5d98620c409315133963dc5f}{aspect}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ desired\ aspect\ ratio\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpack__info_a53ddd56f6a9173e2e5a59d431d437bea}{sz}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ row/column\ size\ size\ */}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpack__info_acf43e29db789271a7494e51864e25a46}{margin}};\ \ \ \ \textcolor{comment}{/*\ margin\ left\ around\ objects,\ in\ points\ */}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structpack__info_a8a95864f25866899d8dc6955bf26002a}{doSplines}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ \doxymbox{\hyperlink{structpack__info_a421f5826aa51c41653402e9072a2f86d}{mode}};\ \ \ \ \ \textcolor{comment}{/*\ granularity\ and\ method\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ *\doxymbox{\hyperlink{structpack__info_a9d1a5430d82980b1010f029d15ac8603}{fixed}};\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ fixed[i]\ ==\ true\ implies\ g[i]\ should\ not\ be\ moved\ */}}
+\DoxyCodeLine{00074\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_a97c604e5f0df885172f770108f3df9cd}{packval\_t}}*\ \doxymbox{\hyperlink{structpack__info_aaa63ae4b75c6a88465b0507b17083dd7}{vals}};\ \ \ \ \textcolor{comment}{/*\ for\ arrays,\ sort\ numbers\ */}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structpack__info_a1b713c8f5ae1329ec64129c5ada2a34d}{flags}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \}\ \doxymbox{\hyperlink{structpack__info}{pack\_info}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#ifdef\ GVC\_EXPORTS}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ PACK\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ PACK\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#ifndef\ PACK\_API}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ PACK\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *\doxymbox{\hyperlink{pack_8h_ab35ceb2dee3044838025043794dc6e02}{putRects}}(\textcolor{keywordtype}{size\_t}\ ng,\ \doxymbox{\hyperlink{structboxf}{boxf}}\ *bbs,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}\ *pinfo);}
+\DoxyCodeLine{00091\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_a738c99226182d51e377a280138b8249b}{packRects}}(\textcolor{keywordtype}{size\_t}\ ng,\ \doxymbox{\hyperlink{structboxf}{boxf}}*\ bbs,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}*\ pinfo);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *\doxymbox{\hyperlink{pack_8h_a64a5c4e6630453df6f0d7f46057c4c5a}{putGraphs}}(\textcolor{keywordtype}{size\_t},\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}\ *);}
+\DoxyCodeLine{00094\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_aff8c8bcb14c92fecff64a8558aac3e42}{packGraphs}}(\textcolor{keywordtype}{size\_t},\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}\ *);}
+\DoxyCodeLine{00095\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_a4ec7bbcf437994fcc69a9f8dbe250fe1}{packSubgraphs}}(\textcolor{keywordtype}{size\_t},\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}\ *);}
+\DoxyCodeLine{00096\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_ae63a822ea8fcfbb4bfbf2c29d52e58ae}{pack\_graph}}(\textcolor{keywordtype}{size\_t}\ ng,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **gs,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *root,\ \textcolor{keywordtype}{bool}\ *fixed);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_a6bc74f52187d505012747477d27f9e70}{shiftGraphs}}(\textcolor{keywordtype}{size\_t},\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **,\ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ *,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ \doxymbox{\hyperlink{pack_8h_a8dbc607609ba43bc0628b183aae7e531}{getPackMode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\ g,\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ dflt);}
+\DoxyCodeLine{00101\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_ac571ff90e8fa643e83720941d3643282}{getPack}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{int}\ not\_def,\ \textcolor{keywordtype}{int}\ dflt);}
+\DoxyCodeLine{00102\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ \doxymbox{\hyperlink{pack_8h_aa86ed912bdc55f660de78bcfdb8ea6bc}{getPackInfo}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\ g,\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ dflt,\ \textcolor{keywordtype}{int}\ dfltMargin,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}*);}
+\DoxyCodeLine{00103\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ \doxymbox{\hyperlink{pack_8h_ae9b62ae8252435edccd9a7d041c35f4a}{getPackModeInfo}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\ g,\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ dflt,\ \doxymbox{\hyperlink{structpack__info}{pack\_info}}*);}
+\DoxyCodeLine{00104\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ \doxymbox{\hyperlink{pack_8h_a2c07b0207e7b9d654783384fd0850494}{parsePackModeInfo}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ p,\ \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\_mode}}\ dflt,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structpack__info}{pack\_info}}*\ pinfo);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{pack_8h_aaf317a9513fa298ac80c765fb6288ff7}{isConnected}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *);}
+\DoxyCodeLine{00108\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **\doxymbox{\hyperlink{pack_8h_abe1c51b59a72a5409c0da0b75490c59a}{ccomps}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{size\_t}\ *,\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00109\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **\doxymbox{\hyperlink{pack_8h_aecbe65b50a6e478db9c6914fedadd26f}{cccomps}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{size\_t}\ *,\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00110\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ **\doxymbox{\hyperlink{pack_8h_a27ec1f9b6d7c6b17248fdd8a890e9f90}{pccomps}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{size\_t}\ *,\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{bool}\ *);}
+\DoxyCodeLine{00111\ \ \ \ \ \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\_API}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{pack_8h_af3402f836fbe6aedb49af84d837cc250}{mapClust}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *);}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#undef\ PACK\_API}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00114\ \}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

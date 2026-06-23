@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Класс GVC::GVRenderData</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_g_v_c_1_1_g_v_render_data.html','','class_g_v_c_1_1_g_v_render_data-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс GVC::GVRenderData</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>The <a class="el" href="class_g_v_c_1_1_g_v_render_data.html" title="The GVRenderData class represents a rendered layout in a specific text format.">GVRenderData</a> class represents a rendered layout in a specific text format.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="_g_v_render_data_8h_source.html">GVRenderData.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af20c81c997c7bd1ae4e93e9df215e657" id="r_af20c81c997c7bd1ae4e93e9df215e657"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af20c81c997c7bd1ae4e93e9df215e657">~GVRenderData</a> ()</td></tr>
+<tr class="memitem:aa73cf85e5f9b2c5780a09f28cc2c510a" id="r_aa73cf85e5f9b2c5780a09f28cc2c510a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> (GVRenderData &amp;)=delete</td></tr>
+<tr class="memitem:a8bd25b1da9d54d22773519c97e6976a3" id="r_a8bd25b1da9d54d22773519c97e6976a3"><td class="memItemLeft"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a8bd25b1da9d54d22773519c97e6976a3">operator=</a> (<a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;)=delete</td></tr>
+<tr class="memitem:a12acf997c9bd76181874a4046793c9de" id="r_a12acf997c9bd76181874a4046793c9de"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a12acf997c9bd76181874a4046793c9de">GVRenderData</a> (GVRenderData &amp;&amp;)=delete</td></tr>
+<tr class="memitem:af8c8bc836bbdff54ab0d929f63e324d7" id="r_af8c8bc836bbdff54ab0d929f63e324d7"><td class="memItemLeft"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#af8c8bc836bbdff54ab0d929f63e324d7">operator=</a> (<a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;&amp;)=delete</td></tr>
+<tr class="memitem:ab5ba64938dd4d2430f4dac61cc529692" id="r_ab5ba64938dd4d2430f4dac61cc529692"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#ab5ba64938dd4d2430f4dac61cc529692">c_str</a> () const</td></tr>
+<tr class="memitem:a464172bbf3dce89a03a070bcabca4014" id="r_a464172bbf3dce89a03a070bcabca4014"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a464172bbf3dce89a03a070bcabca4014">length</a> () const</td></tr>
+<tr class="memitem:a751c282d422ac06bf71f7496bd35a0e7" id="r_a751c282d422ac06bf71f7496bd35a0e7"><td class="memItemLeft">std::string_view&#160;</td><td class="memItemRight"><a class="el" href="#a751c282d422ac06bf71f7496bd35a0e7">string_view</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a138f14e827bdbfdc1192208e30460724" id="r_a138f14e827bdbfdc1192208e30460724"><td class="memItemLeft">friend&#160;</td><td class="memItemRight"><a class="el" href="#a138f14e827bdbfdc1192208e30460724">GVLayout</a></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="af20c81c997c7bd1ae4e93e9df215e657" name="af20c81c997c7bd1ae4e93e9df215e657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20c81c997c7bd1ae4e93e9df215e657">&#9670;&#160;</a></span>~GVRenderData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GVC::GVRenderData::~GVRenderData </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa73cf85e5f9b2c5780a09f28cc2c510a" name="aa73cf85e5f9b2c5780a09f28cc2c510a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa73cf85e5f9b2c5780a09f28cc2c510a">&#9670;&#160;</a></span>GVRenderData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GVC::GVRenderData::GVRenderData </td>
+          <td>(</td>
+          <td class="paramtype">GVRenderData &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12acf997c9bd76181874a4046793c9de" name="a12acf997c9bd76181874a4046793c9de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12acf997c9bd76181874a4046793c9de">&#9670;&#160;</a></span>GVRenderData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GVC::GVRenderData::GVRenderData </td>
+          <td>(</td>
+          <td class="paramtype">GVRenderData &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ab5ba64938dd4d2430f4dac61cc529692" name="ab5ba64938dd4d2430f4dac61cc529692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ba64938dd4d2430f4dac61cc529692">&#9670;&#160;</a></span>c_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * GVC::GVRenderData::c_str </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a464172bbf3dce89a03a070bcabca4014" name="a464172bbf3dce89a03a070bcabca4014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464172bbf3dce89a03a070bcabca4014">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t GVC::GVRenderData::length </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8c8bc836bbdff54ab0d929f63e324d7" name="af8c8bc836bbdff54ab0d929f63e324d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c8bc836bbdff54ab0d929f63e324d7">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp; GVC::GVRenderData::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bd25b1da9d54d22773519c97e6976a3" name="a8bd25b1da9d54d22773519c97e6976a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd25b1da9d54d22773519c97e6976a3">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp; GVC::GVRenderData::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa73cf85e5f9b2c5780a09f28cc2c510a">GVRenderData</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a751c282d422ac06bf71f7496bd35a0e7" name="a751c282d422ac06bf71f7496bd35a0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751c282d422ac06bf71f7496bd35a0e7">&#9670;&#160;</a></span>string_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view GVC::GVRenderData::string_view </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a138f14e827bdbfdc1192208e30460724" name="a138f14e827bdbfdc1192208e30460724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138f14e827bdbfdc1192208e30460724">&#9670;&#160;</a></span>GVLayout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend GVC::GVRenderData::GVLayout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>Graphviz/include/graphviz/<a class="el" href="_g_v_render_data_8h_source.html">GVRenderData.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_g_v_c.html">GVC</a></li><li class="navelem"><a href="class_g_v_c_1_1_g_v_render_data.html">GVRenderData</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+\doxysection{arith.\+h}
+\hypertarget{arith_8h_source}{}\label{arith_8h_source}\index{Graphviz/include/graphviz/arith.h@{Graphviz/include/graphviz/arith.h}}
+\doxymbox{\hyperlink{arith_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ geometric\ functions\ (e.g.\ on\ points\ and\ boxes)\ with\ application\ to,\ but}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ no\ specific\ dependence\ on\ graphs\ */}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifdef\ MIN}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#undef\ MIN}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ MIN(a,b)\ \ \ \ ((a)<(b)?(a):(b))}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifdef\ MAX}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#undef\ MAX}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ MAX(a,b)\ \ \ \ ((a)>(b)?(a):(b))}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#ifdef\ BETWEEN}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#undef\ BETWEEN}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ BETWEEN(a,b,c)\ \ (((a)\ <=\ (b))\ \&\&\ ((b)\ <=\ (c)))}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#ifndef\ M\_PI}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ M\_PI\ \ \ \ \ \ \ \ 3.14159265358979323846}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifndef\ SQRT2}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ SQRT2\ \ \ \ \ \ \ 1.41421356237309504880}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ ROUND(f)\ \ \ \ \ \ \ \ ((f>=0)?(int)(f\ +\ .5):(int)(f\ -\/\ .5))}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ RADIANS(deg)\ \ \ \ ((deg)/180.0\ *\ M\_PI)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ DEGREES(rad)\ \ \ \ ((rad)/M\_PI\ *\ 180.0)}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ SQR(a)\ ((a)\ *\ (a))}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

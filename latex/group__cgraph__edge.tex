@@ -1,0 +1,680 @@
+\doxysubsubsubsection{edges }
+\hypertarget{group__cgraph__edge}{}\label{group__cgraph__edge}\index{edges@{edges}}
+\doxysubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agedge__s}{Agedge\+\_\+s}}
+\item 
+struct \doxymbox{\hyperlink{struct_agedgepair__s}{Agedgepair\+\_\+s}}
+\item 
+struct \doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga3fc1ac2690431efedc87114c3e6feb77}{AGIN2\+OUT}}(inedge)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_agedgepair__s_a137241a185cb7c1492f183ae85ec9935}{Agedgepair\+\_\+s.\+in} -\/\texorpdfstring{$>$}{>} \doxylink{struct_agedgepair__s_a3f91019e6eca1bc61d87e82675f0da06}{Agedgepair\+\_\+s.\+out}. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gafc0a5ce55b7eb368861077afcecba52f}{AGOUT2\+IN}}(outedge)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_agedgepair__s_a3f91019e6eca1bc61d87e82675f0da06}{Agedgepair\+\_\+s.\+out} -\/\texorpdfstring{$>$}{>} \doxylink{struct_agedgepair__s_a137241a185cb7c1492f183ae85ec9935}{Agedgepair\+\_\+s.\+in}. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaed727d3e94d3aef53f5e679cc4041da2}{AGOPP}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad}{AGMKOUT}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga8f16054047081a8639e79509f855fdf1}{AGMKIN}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaddbb048b0b1e23abd8b4d40df33f0104}{AGTAIL}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaf29d9915ddd2240bab9693727ef7b069}{AGHEAD}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga6c4d7e15c611303c142ce711229cda0a}{AGEQEDGE}}(e,  f)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga96fc1fa869456d5345e784a7bf9c615e}{agtail}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gad106624d1b561de8683c142319ff630e}{aghead}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga21ee14460f49ddb2e954f3cf9f9100a3}{agopp}}(e)
+\begin{DoxyCompactList}\small\item\em opposite edge:\+ flip \doxylink{struct_agedgepair__s_a3f91019e6eca1bc61d87e82675f0da06}{Agedgepair\+\_\+s.\+out} ⇄ \doxylink{struct_agedgepair__s_a137241a185cb7c1492f183ae85ec9935}{Agedgepair\+\_\+s.\+in} \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga8b777558e7d3375ab4e6cfd4f22c4528}{ageqedge}}(e,  f)
+\begin{DoxyCompactList}\small\item\em edges are equal \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga21c6527e075feb0693a9112e122110ac}{TAILPORT\+\_\+\+ID}}~"{}tailport"{}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga5bc7f7e2e3a0459be80728f8e6495c56}{HEADPORT\+\_\+\+ID}}~"{}headport"{}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaa2b7773c035a0866fa49e47682f03806}{ED\+\_\+alg}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga5322ddecbfd78b6219d7858130e8ba89}{ED\+\_\+conc\+\_\+opp\+\_\+flag}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga94822e795d402ebafb4f534f43fe58d3}{ED\+\_\+count}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gacb80190e3b238a47474e4e9a2d9a9a17}{ED\+\_\+cutvalue}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga9b03efc65b943a56a6da501119f61ff2}{ED\+\_\+edge\+\_\+type}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga14c23d9ac2ce08caf15e98a2b00e560f}{ED\+\_\+compound}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gacb5bb0e8c848dc4992471c3535dee33d}{ED\+\_\+adjacent}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gabb948350e25dda9a74389582ed8876d0}{ED\+\_\+factor}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga872eea083b0fc41d5cbe4aed44078d5b}{ED\+\_\+gui\+\_\+state}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7246ae9cbfda66cab6b9050c5e5a3494}{ED\+\_\+head\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gadec0e33e4e788c1ce603597b89d3055a}{ED\+\_\+head\+\_\+port}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gae590329810778be5909563f40375c458}{ED\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga60a2aa92dd94846e103ae74ea88a306a}{ED\+\_\+xlabel}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga634e2a938804e412ae5bd59c4952e1ff}{ED\+\_\+label\+\_\+ontop}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga33ee77a99cd045f6ce3432ac896dd7ef}{ED\+\_\+minlen}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaab0740676cd17e8496c1de18c579a182}{ED\+\_\+path}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga58e5543a5552a571c9ad286944f5e74d}{ED\+\_\+showboxes}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga8fb5cc3d3b3e8cb72c82e87c843f3432}{ED\+\_\+spl}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gabaffd96fcefc50e244c603930299a3fe}{ED\+\_\+tail\+\_\+label}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaebbf6cf6d8a89d415a8d0b40df2c110d}{ED\+\_\+tail\+\_\+port}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga0a6706e6b353fb3420b0bacd7d3a2251}{ED\+\_\+to\+\_\+orig}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaf626c847d81347ad341596b6809a05e2}{ED\+\_\+to\+\_\+virt}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga0ee6b93c9004250a5f12e29e2c894167}{ED\+\_\+tree\+\_\+index}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7327a70c8b4346b7ebed6867736b7d53}{ED\+\_\+xpenalty}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga331c2d40ba790391413f9c335bdf1d1b}{ED\+\_\+dist}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gaa50ab14aac03a171606749049925384f}{ED\+\_\+weight}}(e)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_gab58bf52067c43e9deb7e9bad4fccfcba}{agfindedge}}(g,  t,  h)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__edge_ga7321b58cb4928637f7309edf433bbea5}{agfindedgeattr}}(g,  a)
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agedge__s}{Agedge\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em node pair \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agedgepair__s}{Agedgepair\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__edge_ga23808484bcb2730ccccc6138ef0fc0e2}{Agedgepair\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em the edge object \end{DoxyCompactList}\item 
+typedef struct Agedgeinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__edge_ga7f6006922902c3a180aa46008d9cda04}{Agedgeinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga95def214657d6bb88fa9fb78c0a8decc}{agedge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}t, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}h, char \texorpdfstring{$\ast$}{*}name, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga0742c930a05dedd75c1af738c07a0838}{agidedge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}t, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}h, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga118a898f2c8f8da04983ee098d6b4397}{agsubedge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}e, int createflag)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga96ce3a0e231ffa09821c1c5006ad4b3f}{agfstin}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga131b383f7a6c07ba45cca2911f96acb4}{agnxtin}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}e)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_gad7746ce0558651807cc1c090dd7a10f9}{agfstout}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_ga114a41c25080ac2787b51b3b2514693b}{agnxtout}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}e)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd}{agfstedge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__edge_gac30d1b378d21509656500ad476b7029b}{agnxtedge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}e, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__edge_gaa6b8ecac59848235f597cf522634a371}{agdeledge}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}arg\+\_\+e)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+An abstract edge has two endpoint nodes called tail and head where all outedges of the same node have it as the tail value and similarly all inedges have it as the head. In an undirected graph, head and tail are interchangeable. If a graph has multi-\/edges between the same pair of nodes, the edge\textquotesingle{}s string name behaves as a secondary key.
+
+Note that an abstract edge has two distinct concrete representations:\+ as an in-\/edge and as an out-\/edge. In particular, the pointer as an out-\/edge is different from the pointer as an in-\/edge. The function \doxylink{group__cgraph__edge_ga8b777558e7d3375ab4e6cfd4f22c4528}{ageqedge} canonicalizes the pointers before doing a comparison and so can be used to test edge equality. The sense of an edge can be flipped using \doxylink{group__cgraph__edge_ga21ee14460f49ddb2e954f3cf9f9100a3}{agopp}.
+
+\label{group__cgraph__edge_doc-define-members}
+\Hypertarget{group__cgraph__edge_doc-define-members}
+\doxysubsubsubsubsection{Макросы}
+\Hypertarget{group__cgraph__edge_ga6c4d7e15c611303c142ce711229cda0a}\index{edges@{edges}!AGEQEDGE@{AGEQEDGE}}
+\index{AGEQEDGE@{AGEQEDGE}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGEQEDGE}{AGEQEDGE}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga6c4d7e15c611303c142ce711229cda0a} 
+\+\#define AGEQEDGE(\begin{DoxyParamCaption}\item[{}]{e}{, }\item[{}]{f}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad}{AGMKOUT}}(e)\ ==\ \doxymbox{\hyperlink{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad}{AGMKOUT}}(f))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga8b777558e7d3375ab4e6cfd4f22c4528}\index{edges@{edges}!ageqedge@{ageqedge}}
+\index{ageqedge@{ageqedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ageqedge}{ageqedge}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga8b777558e7d3375ab4e6cfd4f22c4528} 
+\+\#define ageqedge(\begin{DoxyParamCaption}\item[{}]{e}{, }\item[{}]{f}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__cgraph__edge_ga6c4d7e15c611303c142ce711229cda0a}{AGEQEDGE}}(e,\ f)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gab58bf52067c43e9deb7e9bad4fccfcba}\index{edges@{edges}!agfindedge@{agfindedge}}
+\index{agfindedge@{agfindedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfindedge}{agfindedge}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gab58bf52067c43e9deb7e9bad4fccfcba} 
+\+\#define agfindedge(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{t}{, }\item[{}]{h}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__edge_ga95def214657d6bb88fa9fb78c0a8decc}{agedge}}(g,t,h,NULL,0))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga7321b58cb4928637f7309edf433bbea5}\index{edges@{edges}!agfindedgeattr@{agfindedgeattr}}
+\index{agfindedgeattr@{agfindedgeattr}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfindedgeattr}{agfindedgeattr}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga7321b58cb4928637f7309edf433bbea5} 
+\+\#define agfindedgeattr(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__attr_ga7523d2c3b09fce2d069cc8f98f6b156f}{agattr\_text}}(g,\doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE}},a,NULL))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaf29d9915ddd2240bab9693727ef7b069}\index{edges@{edges}!AGHEAD@{AGHEAD}}
+\index{AGHEAD@{AGHEAD}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGHEAD}{AGHEAD}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaf29d9915ddd2240bab9693727ef7b069} 
+\+\#define AGHEAD(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad}{AGMKOUT}}(e)-\/>node)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gad106624d1b561de8683c142319ff630e}\index{edges@{edges}!aghead@{aghead}}
+\index{aghead@{aghead}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{aghead}{aghead}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gad106624d1b561de8683c142319ff630e} 
+\+\#define aghead(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__cgraph__edge_gaf29d9915ddd2240bab9693727ef7b069}{AGHEAD}}(e)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga3fc1ac2690431efedc87114c3e6feb77}\index{edges@{edges}!AGIN2OUT@{AGIN2OUT}}
+\index{AGIN2OUT@{AGIN2OUT}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGIN2OUT}{AGIN2OUT}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga3fc1ac2690431efedc87114c3e6feb77} 
+\+\#define AGIN2\+OUT(\begin{DoxyParamCaption}\item[{}]{inedge}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((inedge)\ -\/\ 1)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga8f16054047081a8639e79509f855fdf1}\index{edges@{edges}!AGMKIN@{AGMKIN}}
+\index{AGMKIN@{AGMKIN}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGMKIN}{AGMKIN}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga8f16054047081a8639e79509f855fdf1} 
+\+\#define AGMKIN(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}}(e)\ ==\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684}{AGINEDGE}}\ ?\ (e)\ :\ \doxymbox{\hyperlink{group__cgraph__edge_gafc0a5ce55b7eb368861077afcecba52f}{AGOUT2IN}}(e))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad}\index{edges@{edges}!AGMKOUT@{AGMKOUT}}
+\index{AGMKOUT@{AGMKOUT}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGMKOUT}{AGMKOUT}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga2629b0763de05c381161770b0640b0ad} 
+\+\#define AGMKOUT(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}}(e)\ ==\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb}{AGOUTEDGE}}\ ?\ (e)\ :\ \doxymbox{\hyperlink{group__cgraph__edge_ga3fc1ac2690431efedc87114c3e6feb77}{AGIN2OUT}}(e))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaed727d3e94d3aef53f5e679cc4041da2}\index{edges@{edges}!AGOPP@{AGOPP}}
+\index{AGOPP@{AGOPP}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGOPP}{AGOPP}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaed727d3e94d3aef53f5e679cc4041da2} 
+\+\#define AGOPP(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((\doxymbox{\hyperlink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}}(e)\ ==\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684}{AGINEDGE}})\ ?\ \doxymbox{\hyperlink{group__cgraph__edge_ga3fc1ac2690431efedc87114c3e6feb77}{AGIN2OUT}}(e)\ :\ \doxymbox{\hyperlink{group__cgraph__edge_gafc0a5ce55b7eb368861077afcecba52f}{AGOUT2IN}}(e))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga21ee14460f49ddb2e954f3cf9f9100a3}\index{edges@{edges}!agopp@{agopp}}
+\index{agopp@{agopp}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agopp}{agopp}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga21ee14460f49ddb2e954f3cf9f9100a3} 
+\+\#define agopp(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__cgraph__edge_gaed727d3e94d3aef53f5e679cc4041da2}{AGOPP}}(e)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gafc0a5ce55b7eb368861077afcecba52f}\index{edges@{edges}!AGOUT2IN@{AGOUT2IN}}
+\index{AGOUT2IN@{AGOUT2IN}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGOUT2IN}{AGOUT2IN}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gafc0a5ce55b7eb368861077afcecba52f} 
+\+\#define AGOUT2\+IN(\begin{DoxyParamCaption}\item[{}]{outedge}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((outedge)\ +\ 1)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaddbb048b0b1e23abd8b4d40df33f0104}\index{edges@{edges}!AGTAIL@{AGTAIL}}
+\index{AGTAIL@{AGTAIL}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{AGTAIL}{AGTAIL}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaddbb048b0b1e23abd8b4d40df33f0104} 
+\+\#define AGTAIL(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__edge_ga8f16054047081a8639e79509f855fdf1}{AGMKIN}}(e)-\/>node)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga96fc1fa869456d5345e784a7bf9c615e}\index{edges@{edges}!agtail@{agtail}}
+\index{agtail@{agtail}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agtail}{agtail}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga96fc1fa869456d5345e784a7bf9c615e} 
+\+\#define agtail(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{group__cgraph__edge_gaddbb048b0b1e23abd8b4d40df33f0104}{AGTAIL}}(e)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gacb5bb0e8c848dc4992471c3535dee33d}\index{edges@{edges}!ED\_adjacent@{ED\_adjacent}}
+\index{ED\_adjacent@{ED\_adjacent}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_adjacent}{ED\_adjacent}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gacb5bb0e8c848dc4992471c3535dee33d} 
+\+\#define ED\+\_\+adjacent(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>adjacent)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaa2b7773c035a0866fa49e47682f03806}\index{edges@{edges}!ED\_alg@{ED\_alg}}
+\index{ED\_alg@{ED\_alg}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_alg}{ED\_alg}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaa2b7773c035a0866fa49e47682f03806} 
+\+\#define ED\+\_\+alg(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>alg)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga14c23d9ac2ce08caf15e98a2b00e560f}\index{edges@{edges}!ED\_compound@{ED\_compound}}
+\index{ED\_compound@{ED\_compound}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_compound}{ED\_compound}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga14c23d9ac2ce08caf15e98a2b00e560f} 
+\+\#define ED\+\_\+compound(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>compound)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga5322ddecbfd78b6219d7858130e8ba89}\index{edges@{edges}!ED\_conc\_opp\_flag@{ED\_conc\_opp\_flag}}
+\index{ED\_conc\_opp\_flag@{ED\_conc\_opp\_flag}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_conc\_opp\_flag}{ED\_conc\_opp\_flag}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga5322ddecbfd78b6219d7858130e8ba89} 
+\+\#define ED\+\_\+conc\+\_\+opp\+\_\+flag(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>conc\_opp\_flag)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga94822e795d402ebafb4f534f43fe58d3}\index{edges@{edges}!ED\_count@{ED\_count}}
+\index{ED\_count@{ED\_count}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_count}{ED\_count}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga94822e795d402ebafb4f534f43fe58d3} 
+\+\#define ED\+\_\+count(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>count)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gacb80190e3b238a47474e4e9a2d9a9a17}\index{edges@{edges}!ED\_cutvalue@{ED\_cutvalue}}
+\index{ED\_cutvalue@{ED\_cutvalue}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_cutvalue}{ED\_cutvalue}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gacb80190e3b238a47474e4e9a2d9a9a17} 
+\+\#define ED\+\_\+cutvalue(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>cutvalue)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga331c2d40ba790391413f9c335bdf1d1b}\index{edges@{edges}!ED\_dist@{ED\_dist}}
+\index{ED\_dist@{ED\_dist}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_dist}{ED\_dist}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga331c2d40ba790391413f9c335bdf1d1b} 
+\+\#define ED\+\_\+dist(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>dist)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga9b03efc65b943a56a6da501119f61ff2}\index{edges@{edges}!ED\_edge\_type@{ED\_edge\_type}}
+\index{ED\_edge\_type@{ED\_edge\_type}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_edge\_type}{ED\_edge\_type}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga9b03efc65b943a56a6da501119f61ff2} 
+\+\#define ED\+\_\+edge\+\_\+type(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>edge\_type)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gabb948350e25dda9a74389582ed8876d0}\index{edges@{edges}!ED\_factor@{ED\_factor}}
+\index{ED\_factor@{ED\_factor}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_factor}{ED\_factor}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gabb948350e25dda9a74389582ed8876d0} 
+\+\#define ED\+\_\+factor(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>factor)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga872eea083b0fc41d5cbe4aed44078d5b}\index{edges@{edges}!ED\_gui\_state@{ED\_gui\_state}}
+\index{ED\_gui\_state@{ED\_gui\_state}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_gui\_state}{ED\_gui\_state}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga872eea083b0fc41d5cbe4aed44078d5b} 
+\+\#define ED\+\_\+gui\+\_\+state(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>gui\_state)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga7246ae9cbfda66cab6b9050c5e5a3494}\index{edges@{edges}!ED\_head\_label@{ED\_head\_label}}
+\index{ED\_head\_label@{ED\_head\_label}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_head\_label}{ED\_head\_label}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga7246ae9cbfda66cab6b9050c5e5a3494} 
+\+\#define ED\+\_\+head\+\_\+label(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>head\_label)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gadec0e33e4e788c1ce603597b89d3055a}\index{edges@{edges}!ED\_head\_port@{ED\_head\_port}}
+\index{ED\_head\_port@{ED\_head\_port}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_head\_port}{ED\_head\_port}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gadec0e33e4e788c1ce603597b89d3055a} 
+\+\#define ED\+\_\+head\+\_\+port(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>head\_port)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gae590329810778be5909563f40375c458}\index{edges@{edges}!ED\_label@{ED\_label}}
+\index{ED\_label@{ED\_label}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_label}{ED\_label}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gae590329810778be5909563f40375c458} 
+\+\#define ED\+\_\+label(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>label)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga634e2a938804e412ae5bd59c4952e1ff}\index{edges@{edges}!ED\_label\_ontop@{ED\_label\_ontop}}
+\index{ED\_label\_ontop@{ED\_label\_ontop}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_label\_ontop}{ED\_label\_ontop}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga634e2a938804e412ae5bd59c4952e1ff} 
+\+\#define ED\+\_\+label\+\_\+ontop(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>label\_ontop)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga33ee77a99cd045f6ce3432ac896dd7ef}\index{edges@{edges}!ED\_minlen@{ED\_minlen}}
+\index{ED\_minlen@{ED\_minlen}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_minlen}{ED\_minlen}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga33ee77a99cd045f6ce3432ac896dd7ef} 
+\+\#define ED\+\_\+minlen(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>minlen)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaab0740676cd17e8496c1de18c579a182}\index{edges@{edges}!ED\_path@{ED\_path}}
+\index{ED\_path@{ED\_path}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_path}{ED\_path}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaab0740676cd17e8496c1de18c579a182} 
+\+\#define ED\+\_\+path(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>\doxymbox{\hyperlink{structpath}{path}})}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga58e5543a5552a571c9ad286944f5e74d}\index{edges@{edges}!ED\_showboxes@{ED\_showboxes}}
+\index{ED\_showboxes@{ED\_showboxes}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_showboxes}{ED\_showboxes}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga58e5543a5552a571c9ad286944f5e74d} 
+\+\#define ED\+\_\+showboxes(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>showboxes)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga8fb5cc3d3b3e8cb72c82e87c843f3432}\index{edges@{edges}!ED\_spl@{ED\_spl}}
+\index{ED\_spl@{ED\_spl}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_spl}{ED\_spl}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga8fb5cc3d3b3e8cb72c82e87c843f3432} 
+\+\#define ED\+\_\+spl(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>spl)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gabaffd96fcefc50e244c603930299a3fe}\index{edges@{edges}!ED\_tail\_label@{ED\_tail\_label}}
+\index{ED\_tail\_label@{ED\_tail\_label}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_tail\_label}{ED\_tail\_label}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gabaffd96fcefc50e244c603930299a3fe} 
+\+\#define ED\+\_\+tail\+\_\+label(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>tail\_label)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaebbf6cf6d8a89d415a8d0b40df2c110d}\index{edges@{edges}!ED\_tail\_port@{ED\_tail\_port}}
+\index{ED\_tail\_port@{ED\_tail\_port}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_tail\_port}{ED\_tail\_port}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaebbf6cf6d8a89d415a8d0b40df2c110d} 
+\+\#define ED\+\_\+tail\+\_\+port(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>tail\_port)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga0a6706e6b353fb3420b0bacd7d3a2251}\index{edges@{edges}!ED\_to\_orig@{ED\_to\_orig}}
+\index{ED\_to\_orig@{ED\_to\_orig}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_to\_orig}{ED\_to\_orig}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga0a6706e6b353fb3420b0bacd7d3a2251} 
+\+\#define ED\+\_\+to\+\_\+orig(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>to\_orig)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaf626c847d81347ad341596b6809a05e2}\index{edges@{edges}!ED\_to\_virt@{ED\_to\_virt}}
+\index{ED\_to\_virt@{ED\_to\_virt}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_to\_virt}{ED\_to\_virt}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaf626c847d81347ad341596b6809a05e2} 
+\+\#define ED\+\_\+to\+\_\+virt(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>to\_virt)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga0ee6b93c9004250a5f12e29e2c894167}\index{edges@{edges}!ED\_tree\_index@{ED\_tree\_index}}
+\index{ED\_tree\_index@{ED\_tree\_index}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_tree\_index}{ED\_tree\_index}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga0ee6b93c9004250a5f12e29e2c894167} 
+\+\#define ED\+\_\+tree\+\_\+index(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>tree\_index)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_gaa50ab14aac03a171606749049925384f}\index{edges@{edges}!ED\_weight@{ED\_weight}}
+\index{ED\_weight@{ED\_weight}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_weight}{ED\_weight}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaa50ab14aac03a171606749049925384f} 
+\+\#define ED\+\_\+weight(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>weight)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga60a2aa92dd94846e103ae74ea88a306a}\index{edges@{edges}!ED\_xlabel@{ED\_xlabel}}
+\index{ED\_xlabel@{ED\_xlabel}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_xlabel}{ED\_xlabel}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga60a2aa92dd94846e103ae74ea88a306a} 
+\+\#define ED\+\_\+xlabel(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>xlabel)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga7327a70c8b4346b7ebed6867736b7d53}\index{edges@{edges}!ED\_xpenalty@{ED\_xpenalty}}
+\index{ED\_xpenalty@{ED\_xpenalty}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{ED\_xpenalty}{ED\_xpenalty}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga7327a70c8b4346b7ebed6867736b7d53} 
+\+\#define ED\+\_\+xpenalty(\begin{DoxyParamCaption}\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agedgeinfo__t}{Agedgeinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(e))-\/>xpenalty)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__edge_ga5bc7f7e2e3a0459be80728f8e6495c56}\index{edges@{edges}!HEADPORT\_ID@{HEADPORT\_ID}}
+\index{HEADPORT\_ID@{HEADPORT\_ID}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{HEADPORT\_ID}{HEADPORT\_ID}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga5bc7f7e2e3a0459be80728f8e6495c56} 
+\+\#define HEADPORT\+\_\+\+ID~"{}headport"{}}
+
+\Hypertarget{group__cgraph__edge_ga21c6527e075feb0693a9112e122110ac}\index{edges@{edges}!TAILPORT\_ID@{TAILPORT\_ID}}
+\index{TAILPORT\_ID@{TAILPORT\_ID}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{TAILPORT\_ID}{TAILPORT\_ID}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga21c6527e075feb0693a9112e122110ac} 
+\+\#define TAILPORT\+\_\+\+ID~"{}tailport"{}}
+
+
+
+\label{group__cgraph__edge_doc-typedef-members}
+\Hypertarget{group__cgraph__edge_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}\index{edges@{edges}!Agedge\_t@{Agedge\_t}}
+\index{Agedge\_t@{Agedge\_t}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agedge\_t}{Agedge\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb} 
+typedef struct \doxymbox{\hyperlink{struct_agedge__s}{Agedge\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}}}
+
+\Hypertarget{group__cgraph__edge_ga7f6006922902c3a180aa46008d9cda04}\index{edges@{edges}!Agedgeinfo\_t@{Agedgeinfo\_t}}
+\index{Agedgeinfo\_t@{Agedgeinfo\_t}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agedgeinfo\_t}{Agedgeinfo\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga7f6006922902c3a180aa46008d9cda04} 
+typedef struct Agedgeinfo\+\_\+t Agedgeinfo\+\_\+t}
+
+\Hypertarget{group__cgraph__edge_ga23808484bcb2730ccccc6138ef0fc0e2}\index{edges@{edges}!Agedgepair\_t@{Agedgepair\_t}}
+\index{Agedgepair\_t@{Agedgepair\_t}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agedgepair\_t}{Agedgepair\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga23808484bcb2730ccccc6138ef0fc0e2} 
+typedef struct \doxymbox{\hyperlink{struct_agedgepair__s}{Agedgepair\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__edge_ga23808484bcb2730ccccc6138ef0fc0e2}{Agedgepair\+\_\+t}}}
+
+
+
+\label{group__cgraph__edge_doc-func-members}
+\Hypertarget{group__cgraph__edge_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__edge_gaa6b8ecac59848235f597cf522634a371}\index{edges@{edges}!agdeledge@{agdeledge}}
+\index{agdeledge@{agdeledge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agdeledge()}{agdeledge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaa6b8ecac59848235f597cf522634a371} 
+CGRAPH\+\_\+\+API int agdeledge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{arg\+\_\+e}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga95def214657d6bb88fa9fb78c0a8decc}\index{edges@{edges}!agedge@{agedge}}
+\index{agedge@{agedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agedge()}{agedge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga95def214657d6bb88fa9fb78c0a8decc} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agedge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd}\index{edges@{edges}!agfstedge@{agfstedge}}
+\index{agfstedge@{agfstedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfstedge()}{agfstedge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agfstedge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga96ce3a0e231ffa09821c1c5006ad4b3f}\index{edges@{edges}!agfstin@{agfstin}}
+\index{agfstin@{agfstin}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfstin()}{agfstin()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga96ce3a0e231ffa09821c1c5006ad4b3f} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agfstin (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_gad7746ce0558651807cc1c090dd7a10f9}\index{edges@{edges}!agfstout@{agfstout}}
+\index{agfstout@{agfstout}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfstout()}{agfstout()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gad7746ce0558651807cc1c090dd7a10f9} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agfstout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga0742c930a05dedd75c1af738c07a0838}\index{edges@{edges}!agidedge@{agidedge}}
+\index{agidedge@{agidedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agidedge()}{agidedge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga0742c930a05dedd75c1af738c07a0838} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agidedge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h}{, }\item[{\doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}}]{id}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_gac30d1b378d21509656500ad476b7029b}\index{edges@{edges}!agnxtedge@{agnxtedge}}
+\index{agnxtedge@{agnxtedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnxtedge()}{agnxtedge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_gac30d1b378d21509656500ad476b7029b} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agnxtedge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga131b383f7a6c07ba45cca2911f96acb4}\index{edges@{edges}!agnxtin@{agnxtin}}
+\index{agnxtin@{agnxtin}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnxtin()}{agnxtin()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga131b383f7a6c07ba45cca2911f96acb4} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agnxtin (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga114a41c25080ac2787b51b3b2514693b}\index{edges@{edges}!agnxtout@{agnxtout}}
+\index{agnxtout@{agnxtout}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnxtout()}{agnxtout()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga114a41c25080ac2787b51b3b2514693b} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agnxtout (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{e}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__edge_ga118a898f2c8f8da04983ee098d6b4397}\index{edges@{edges}!agsubedge@{agsubedge}}
+\index{agsubedge@{agsubedge}!edges@{edges}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agsubedge()}{agsubedge()}}
+{\footnotesize\ttfamily \label{group__cgraph__edge_ga118a898f2c8f8da04983ee098d6b4397} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*} agsubedge (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{e}{, }\item[{int}]{createflag}{}\end{DoxyParamCaption})}
+

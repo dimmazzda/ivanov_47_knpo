@@ -1,0 +1,929 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Структура Agraphinfo_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_agraphinfo__t.html','','struct_agraphinfo__t-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Структура Agraphinfo_t<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__object.html">objects</a> &raquo; <a class="el" href="group__cgraph__graph.html">graphs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac6710eaa47b8cafeb70f780da0c8b7c7" id="r_ac6710eaa47b8cafeb70f780da0c8b7c7"><td class="memItemLeft"><a class="el" href="group__cgraph__rec.html#ga2bd56252330358f27af8321f650a1e8a">Agrec_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac6710eaa47b8cafeb70f780da0c8b7c7">hdr</a></td></tr>
+<tr class="memitem:a16f3ae645ac8947fb2660a3efe48f56a" id="r_a16f3ae645ac8947fb2660a3efe48f56a"><td class="memItemLeft"><a class="el" href="structlayout__t.html">layout_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a16f3ae645ac8947fb2660a3efe48f56a">drawing</a></td></tr>
+<tr class="memitem:a5611e8566fb1a060520544caba07dfec" id="r_a5611e8566fb1a060520544caba07dfec"><td class="memItemLeft"><a class="el" href="structtextlabel__t.html">textlabel_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5611e8566fb1a060520544caba07dfec">label</a></td></tr>
+<tr class="memitem:aed213a818c1eef6ceac20b74fcd6cfdb" id="r_aed213a818c1eef6ceac20b74fcd6cfdb"><td class="memItemLeft"><a class="el" href="structboxf.html">boxf</a>&#160;</td><td class="memItemRight"><a class="el" href="#aed213a818c1eef6ceac20b74fcd6cfdb">bb</a></td></tr>
+<tr class="memitem:abfe1c78301a2fda09e4ac05f03652d82" id="r_abfe1c78301a2fda09e4ac05f03652d82"><td class="memItemLeft"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>&#160;</td><td class="memItemRight"><a class="el" href="#abfe1c78301a2fda09e4ac05f03652d82">border</a> [4]</td></tr>
+<tr class="memitem:a663fce49617ef574ce35e71245fb04bb" id="r_a663fce49617ef574ce35e71245fb04bb"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#a663fce49617ef574ce35e71245fb04bb">gui_state</a></td></tr>
+<tr class="memitem:ae676de4f320f9dbcfd980aebe35f6036" id="r_ae676de4f320f9dbcfd980aebe35f6036"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#ae676de4f320f9dbcfd980aebe35f6036">has_labels</a></td></tr>
+<tr class="memitem:a50fb0a143c455b561615ee4cf3ae54db" id="r_a50fb0a143c455b561615ee4cf3ae54db"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a50fb0a143c455b561615ee4cf3ae54db">has_images</a></td></tr>
+<tr class="memitem:abb9abd4f0a61642fe3e690b1ccea3cf8" id="r_abb9abd4f0a61642fe3e690b1ccea3cf8"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#abb9abd4f0a61642fe3e690b1ccea3cf8">charset</a></td></tr>
+<tr class="memitem:a387c217e14e4062d699c5c28b9ee9ecb" id="r_a387c217e14e4062d699c5c28b9ee9ecb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a387c217e14e4062d699c5c28b9ee9ecb">rankdir</a></td></tr>
+<tr class="memitem:ab72ad28b6091b49a6b55940799268777" id="r_ab72ad28b6091b49a6b55940799268777"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ab72ad28b6091b49a6b55940799268777">ht1</a></td></tr>
+<tr class="memitem:a8252375d01b4dc0f4db2f8157977bb70" id="r_a8252375d01b4dc0f4db2f8157977bb70"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a8252375d01b4dc0f4db2f8157977bb70">ht2</a></td></tr>
+<tr class="memitem:af6fc30815825e5690ad3a7ebdd73d5c0" id="r_af6fc30815825e5690ad3a7ebdd73d5c0"><td class="memItemLeft">unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#af6fc30815825e5690ad3a7ebdd73d5c0">flags</a></td></tr>
+<tr class="memitem:ac4f7dffe8d497737b8babee32279b2f4" id="r_ac4f7dffe8d497737b8babee32279b2f4"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ac4f7dffe8d497737b8babee32279b2f4">alg</a></td></tr>
+<tr class="memitem:a672892c8ec364a0aaa5102fe67430032" id="r_a672892c8ec364a0aaa5102fe67430032"><td class="memItemLeft"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a672892c8ec364a0aaa5102fe67430032">gvc</a></td></tr>
+<tr class="memitem:a9d3475ead933c4f4f04d97a1c6fe171c" id="r_a9d3475ead933c4f4f04d97a1c6fe171c"><td class="memItemLeft">void(*&#160;</td><td class="memItemRight"><a class="el" href="#a9d3475ead933c4f4f04d97a1c6fe171c">cleanup</a> )(<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:a7fab880a15bc546e40c54e654c973bd5" id="r_a7fab880a15bc546e40c54e654c973bd5"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> **&#160;</td><td class="memItemRight"><a class="el" href="#a7fab880a15bc546e40c54e654c973bd5">neato_nlist</a></td></tr>
+<tr class="memitem:a6d67027255ceff9a2e25f7281b96aeda" id="r_a6d67027255ceff9a2e25f7281b96aeda"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6d67027255ceff9a2e25f7281b96aeda">move</a></td></tr>
+<tr class="memitem:afa85d2de962cabdb58a4ffc298fcfa6a" id="r_afa85d2de962cabdb58a4ffc298fcfa6a"><td class="memItemLeft">double **&#160;</td><td class="memItemRight"><a class="el" href="#afa85d2de962cabdb58a4ffc298fcfa6a">dist</a></td></tr>
+<tr class="memitem:ab11bc8bdc7e72647d3b8bcfc8ed85c0a" id="r_ab11bc8bdc7e72647d3b8bcfc8ed85c0a"><td class="memItemLeft">double **&#160;</td><td class="memItemRight"><a class="el" href="#ab11bc8bdc7e72647d3b8bcfc8ed85c0a">spring</a></td></tr>
+<tr class="memitem:a87947912fe92ae298470e49ca22ac488" id="r_a87947912fe92ae298470e49ca22ac488"><td class="memItemLeft">double **&#160;</td><td class="memItemRight"><a class="el" href="#a87947912fe92ae298470e49ca22ac488">sum_t</a></td></tr>
+<tr class="memitem:a6952aaf072c3e94c173b6b37b74b30c5" id="r_a6952aaf072c3e94c173b6b37b74b30c5"><td class="memItemLeft">double ***&#160;</td><td class="memItemRight"><a class="el" href="#a6952aaf072c3e94c173b6b37b74b30c5">t</a></td></tr>
+<tr class="memitem:aa6e7e48624432cca510bfae2e6b25225" id="r_aa6e7e48624432cca510bfae2e6b25225"><td class="memItemLeft">unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#aa6e7e48624432cca510bfae2e6b25225">ndim</a></td></tr>
+<tr class="memitem:ac05aa9ebbff3f09542c9d0121222618f" id="r_ac05aa9ebbff3f09542c9d0121222618f"><td class="memItemLeft">unsigned short&#160;</td><td class="memItemRight"><a class="el" href="#ac05aa9ebbff3f09542c9d0121222618f">odim</a></td></tr>
+<tr class="memitem:a65ab53c5a698eb5cc8e1c6fd02d69e40" id="r_a65ab53c5a698eb5cc8e1c6fd02d69e40"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a65ab53c5a698eb5cc8e1c6fd02d69e40">n_cluster</a></td></tr>
+<tr class="memitem:a4722b6d41f93a730019096ef69c7d327" id="r_a4722b6d41f93a730019096ef69c7d327"><td class="memItemLeft"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> **&#160;</td><td class="memItemRight"><a class="el" href="#a4722b6d41f93a730019096ef69c7d327">clust</a></td></tr>
+<tr class="memitem:ae83cf4395c62c044cc8b183b7b786800" id="r_ae83cf4395c62c044cc8b183b7b786800"><td class="memItemLeft"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae83cf4395c62c044cc8b183b7b786800">dotroot</a></td></tr>
+<tr class="memitem:accc3528fa8210ca59efa1f06e06b8e38" id="r_accc3528fa8210ca59efa1f06e06b8e38"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#accc3528fa8210ca59efa1f06e06b8e38">nlist</a></td></tr>
+<tr class="memitem:aef7424dd5ba8feaa6cd7dde39aca1dab" id="r_aef7424dd5ba8feaa6cd7dde39aca1dab"><td class="memItemLeft"><a class="el" href="structrank__t.html">rank_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aef7424dd5ba8feaa6cd7dde39aca1dab">rank</a></td></tr>
+<tr class="memitem:a160ac52f1da28020ade3b346fbebf7a6" id="r_a160ac52f1da28020ade3b346fbebf7a6"><td class="memItemLeft"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a160ac52f1da28020ade3b346fbebf7a6">parent</a></td></tr>
+<tr class="memitem:aa83d8f9f00b810631a1bbdc92ed67bfd" id="r_aa83d8f9f00b810631a1bbdc92ed67bfd"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa83d8f9f00b810631a1bbdc92ed67bfd">level</a></td></tr>
+<tr class="memitem:a0e253354ca7700f63b57273bc322acf2" id="r_a0e253354ca7700f63b57273bc322acf2"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0e253354ca7700f63b57273bc322acf2">minrep</a></td></tr>
+<tr class="memitem:abb130c836c0021fce2da64dc314f8d96" id="r_abb130c836c0021fce2da64dc314f8d96"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abb130c836c0021fce2da64dc314f8d96">maxrep</a></td></tr>
+<tr class="memitem:a3e13e09309f06bef10e620fa146b701e" id="r_a3e13e09309f06bef10e620fa146b701e"><td class="memItemLeft"><a class="el" href="structnlist__t.html">nlist_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3e13e09309f06bef10e620fa146b701e">comp</a></td></tr>
+<tr class="memitem:ad2b2a4ef80f54aaf1f59d63b1078df80" id="r_ad2b2a4ef80f54aaf1f59d63b1078df80"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad2b2a4ef80f54aaf1f59d63b1078df80">minset</a></td></tr>
+<tr class="memitem:a18397eb62c9d81841b336b9706bc2e3d" id="r_a18397eb62c9d81841b336b9706bc2e3d"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a18397eb62c9d81841b336b9706bc2e3d">maxset</a></td></tr>
+<tr class="memitem:a74d938af454412881ce49eea7aeecc4a" id="r_a74d938af454412881ce49eea7aeecc4a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a74d938af454412881ce49eea7aeecc4a">minrank</a></td></tr>
+<tr class="memitem:a4245d8a41eea4a2feccbd4ceba39d5ed" id="r_a4245d8a41eea4a2feccbd4ceba39d5ed"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4245d8a41eea4a2feccbd4ceba39d5ed">maxrank</a></td></tr>
+<tr class="memitem:abcdb791a459472a1a12250038f429e87" id="r_abcdb791a459472a1a12250038f429e87"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abcdb791a459472a1a12250038f429e87">has_flat_edges</a></td></tr>
+<tr class="memitem:aadf7c0bfd403eaae70fd1866e0ee5fc7" id="r_aadf7c0bfd403eaae70fd1866e0ee5fc7"><td class="memItemLeft">unsigned char&#160;</td><td class="memItemRight"><a class="el" href="#aadf7c0bfd403eaae70fd1866e0ee5fc7">showboxes</a></td></tr>
+<tr class="memitem:af9659a001c6ec47ad98e85694a4960b7" id="r_af9659a001c6ec47ad98e85694a4960b7"><td class="memItemLeft"><a class="el" href="types_8h.html#a2a6b72cfc1be9a7af92447c2f1372496">fontname_kind</a>&#160;</td><td class="memItemRight"><a class="el" href="#af9659a001c6ec47ad98e85694a4960b7">fontnames</a></td></tr>
+<tr class="memitem:a3038e54d9fc5cd4f204278307fa580b9" id="r_a3038e54d9fc5cd4f204278307fa580b9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3038e54d9fc5cd4f204278307fa580b9">nodesep</a></td></tr>
+<tr class="memitem:a74da894d104e1d18aef375d388fe05cf" id="r_a74da894d104e1d18aef375d388fe05cf"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a74da894d104e1d18aef375d388fe05cf">ranksep</a></td></tr>
+<tr class="memitem:ac3335bc89d906c82834200758e136d32" id="r_ac3335bc89d906c82834200758e136d32"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac3335bc89d906c82834200758e136d32">ln</a></td></tr>
+<tr class="memitem:aaf9a818221025b3a42ffb4696d8e71f7" id="r_aaf9a818221025b3a42ffb4696d8e71f7"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf9a818221025b3a42ffb4696d8e71f7">rn</a></td></tr>
+<tr class="memitem:af0331a91a4d5a53c016610871be267ed" id="r_af0331a91a4d5a53c016610871be267ed"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af0331a91a4d5a53c016610871be267ed">leader</a></td></tr>
+<tr class="memitem:aaba2922c000b527c79b1598d70ec05c7" id="r_aaba2922c000b527c79b1598d70ec05c7"><td class="memItemLeft"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> **&#160;</td><td class="memItemRight"><a class="el" href="#aaba2922c000b527c79b1598d70ec05c7">rankleader</a></td></tr>
+<tr class="memitem:a6f2297335c947735ad1b8be9c4e65ac7" id="r_a6f2297335c947735ad1b8be9c4e65ac7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a6f2297335c947735ad1b8be9c4e65ac7">expanded</a></td></tr>
+<tr class="memitem:a1e4caf7f5b810adbc9973a76fbd86fba" id="r_a1e4caf7f5b810adbc9973a76fbd86fba"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a1e4caf7f5b810adbc9973a76fbd86fba">installed</a></td></tr>
+<tr class="memitem:a413eca8823d1c8ee6927130ac5349b22" id="r_a413eca8823d1c8ee6927130ac5349b22"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a413eca8823d1c8ee6927130ac5349b22">set_type</a></td></tr>
+<tr class="memitem:a0b8dadeeff79b9e9ea46fcc658084205" id="r_a0b8dadeeff79b9e9ea46fcc658084205"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a0b8dadeeff79b9e9ea46fcc658084205">label_pos</a></td></tr>
+<tr class="memitem:ad68fffa1d08c7faddcb7b5ad432860cb" id="r_ad68fffa1d08c7faddcb7b5ad432860cb"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad68fffa1d08c7faddcb7b5ad432860cb">exact_ranksep</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ac4f7dffe8d497737b8babee32279b2f4" name="ac4f7dffe8d497737b8babee32279b2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f7dffe8d497737b8babee32279b2f4">&#9670;&#160;</a></span>alg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* Agraphinfo_t::alg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed213a818c1eef6ceac20b74fcd6cfdb" name="aed213a818c1eef6ceac20b74fcd6cfdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed213a818c1eef6ceac20b74fcd6cfdb">&#9670;&#160;</a></span>bb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboxf.html">boxf</a> Agraphinfo_t::bb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfe1c78301a2fda09e4ac05f03652d82" name="abfe1c78301a2fda09e4ac05f03652d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe1c78301a2fda09e4ac05f03652d82">&#9670;&#160;</a></span>border</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> Agraphinfo_t::border[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb9abd4f0a61642fe3e690b1ccea3cf8" name="abb9abd4f0a61642fe3e690b1ccea3cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9abd4f0a61642fe3e690b1ccea3cf8">&#9670;&#160;</a></span>charset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Agraphinfo_t::charset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d3475ead933c4f4f04d97a1c6fe171c" name="a9d3475ead933c4f4f04d97a1c6fe171c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3475ead933c4f4f04d97a1c6fe171c">&#9670;&#160;</a></span>cleanup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* Agraphinfo_t::cleanup) (<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4722b6d41f93a730019096ef69c7d327" name="a4722b6d41f93a730019096ef69c7d327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4722b6d41f93a730019096ef69c7d327">&#9670;&#160;</a></span>clust</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a>** Agraphinfo_t::clust</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e13e09309f06bef10e620fa146b701e" name="a3e13e09309f06bef10e620fa146b701e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e13e09309f06bef10e620fa146b701e">&#9670;&#160;</a></span>comp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnlist__t.html">nlist_t</a> Agraphinfo_t::comp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa85d2de962cabdb58a4ffc298fcfa6a" name="afa85d2de962cabdb58a4ffc298fcfa6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa85d2de962cabdb58a4ffc298fcfa6a">&#9670;&#160;</a></span>dist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** Agraphinfo_t::dist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae83cf4395c62c044cc8b183b7b786800" name="ae83cf4395c62c044cc8b183b7b786800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83cf4395c62c044cc8b183b7b786800">&#9670;&#160;</a></span>dotroot</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a>* Agraphinfo_t::dotroot</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16f3ae645ac8947fb2660a3efe48f56a" name="a16f3ae645ac8947fb2660a3efe48f56a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f3ae645ac8947fb2660a3efe48f56a">&#9670;&#160;</a></span>drawing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlayout__t.html">layout_t</a>* Agraphinfo_t::drawing</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad68fffa1d08c7faddcb7b5ad432860cb" name="ad68fffa1d08c7faddcb7b5ad432860cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68fffa1d08c7faddcb7b5ad432860cb">&#9670;&#160;</a></span>exact_ranksep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Agraphinfo_t::exact_ranksep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2297335c947735ad1b8be9c4e65ac7" name="a6f2297335c947735ad1b8be9c4e65ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2297335c947735ad1b8be9c4e65ac7">&#9670;&#160;</a></span>expanded</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Agraphinfo_t::expanded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6fc30815825e5690ad3a7ebdd73d5c0" name="af6fc30815825e5690ad3a7ebdd73d5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fc30815825e5690ad3a7ebdd73d5c0">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short Agraphinfo_t::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9659a001c6ec47ad98e85694a4960b7" name="af9659a001c6ec47ad98e85694a4960b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9659a001c6ec47ad98e85694a4960b7">&#9670;&#160;</a></span>fontnames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a2a6b72cfc1be9a7af92447c2f1372496">fontname_kind</a> Agraphinfo_t::fontnames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a663fce49617ef574ce35e71245fb04bb" name="a663fce49617ef574ce35e71245fb04bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663fce49617ef574ce35e71245fb04bb">&#9670;&#160;</a></span>gui_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Agraphinfo_t::gui_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a672892c8ec364a0aaa5102fe67430032" name="a672892c8ec364a0aaa5102fe67430032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672892c8ec364a0aaa5102fe67430032">&#9670;&#160;</a></span>gvc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a>* Agraphinfo_t::gvc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcdb791a459472a1a12250038f429e87" name="abcdb791a459472a1a12250038f429e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcdb791a459472a1a12250038f429e87">&#9670;&#160;</a></span>has_flat_edges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Agraphinfo_t::has_flat_edges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50fb0a143c455b561615ee4cf3ae54db" name="a50fb0a143c455b561615ee4cf3ae54db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50fb0a143c455b561615ee4cf3ae54db">&#9670;&#160;</a></span>has_images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Agraphinfo_t::has_images</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae676de4f320f9dbcfd980aebe35f6036" name="ae676de4f320f9dbcfd980aebe35f6036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae676de4f320f9dbcfd980aebe35f6036">&#9670;&#160;</a></span>has_labels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Agraphinfo_t::has_labels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6710eaa47b8cafeb70f780da0c8b7c7" name="ac6710eaa47b8cafeb70f780da0c8b7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6710eaa47b8cafeb70f780da0c8b7c7">&#9670;&#160;</a></span>hdr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__cgraph__rec.html#ga2bd56252330358f27af8321f650a1e8a">Agrec_t</a> Agraphinfo_t::hdr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab72ad28b6091b49a6b55940799268777" name="ab72ad28b6091b49a6b55940799268777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72ad28b6091b49a6b55940799268777">&#9670;&#160;</a></span>ht1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Agraphinfo_t::ht1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8252375d01b4dc0f4db2f8157977bb70" name="a8252375d01b4dc0f4db2f8157977bb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8252375d01b4dc0f4db2f8157977bb70">&#9670;&#160;</a></span>ht2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Agraphinfo_t::ht2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e4caf7f5b810adbc9973a76fbd86fba" name="a1e4caf7f5b810adbc9973a76fbd86fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4caf7f5b810adbc9973a76fbd86fba">&#9670;&#160;</a></span>installed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Agraphinfo_t::installed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5611e8566fb1a060520544caba07dfec" name="a5611e8566fb1a060520544caba07dfec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5611e8566fb1a060520544caba07dfec">&#9670;&#160;</a></span>label</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtextlabel__t.html">textlabel_t</a>* Agraphinfo_t::label</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b8dadeeff79b9e9ea46fcc658084205" name="a0b8dadeeff79b9e9ea46fcc658084205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b8dadeeff79b9e9ea46fcc658084205">&#9670;&#160;</a></span>label_pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Agraphinfo_t::label_pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0331a91a4d5a53c016610871be267ed" name="af0331a91a4d5a53c016610871be267ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0331a91a4d5a53c016610871be267ed">&#9670;&#160;</a></span>leader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::leader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa83d8f9f00b810631a1bbdc92ed67bfd" name="aa83d8f9f00b810631a1bbdc92ed67bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83d8f9f00b810631a1bbdc92ed67bfd">&#9670;&#160;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::level</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3335bc89d906c82834200758e136d32" name="ac3335bc89d906c82834200758e136d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3335bc89d906c82834200758e136d32">&#9670;&#160;</a></span>ln</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::ln</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4245d8a41eea4a2feccbd4ceba39d5ed" name="a4245d8a41eea4a2feccbd4ceba39d5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4245d8a41eea4a2feccbd4ceba39d5ed">&#9670;&#160;</a></span>maxrank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::maxrank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb130c836c0021fce2da64dc314f8d96" name="abb130c836c0021fce2da64dc314f8d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb130c836c0021fce2da64dc314f8d96">&#9670;&#160;</a></span>maxrep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::maxrep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18397eb62c9d81841b336b9706bc2e3d" name="a18397eb62c9d81841b336b9706bc2e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18397eb62c9d81841b336b9706bc2e3d">&#9670;&#160;</a></span>maxset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::maxset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74d938af454412881ce49eea7aeecc4a" name="a74d938af454412881ce49eea7aeecc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d938af454412881ce49eea7aeecc4a">&#9670;&#160;</a></span>minrank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::minrank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e253354ca7700f63b57273bc322acf2" name="a0e253354ca7700f63b57273bc322acf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e253354ca7700f63b57273bc322acf2">&#9670;&#160;</a></span>minrep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::minrep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2b2a4ef80f54aaf1f59d63b1078df80" name="ad2b2a4ef80f54aaf1f59d63b1078df80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b2a4ef80f54aaf1f59d63b1078df80">&#9670;&#160;</a></span>minset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::minset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d67027255ceff9a2e25f7281b96aeda" name="a6d67027255ceff9a2e25f7281b96aeda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d67027255ceff9a2e25f7281b96aeda">&#9670;&#160;</a></span>move</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::move</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65ab53c5a698eb5cc8e1c6fd02d69e40" name="a65ab53c5a698eb5cc8e1c6fd02d69e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ab53c5a698eb5cc8e1c6fd02d69e40">&#9670;&#160;</a></span>n_cluster</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::n_cluster</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6e7e48624432cca510bfae2e6b25225" name="aa6e7e48624432cca510bfae2e6b25225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e7e48624432cca510bfae2e6b25225">&#9670;&#160;</a></span>ndim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short Agraphinfo_t::ndim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fab880a15bc546e40c54e654c973bd5" name="a7fab880a15bc546e40c54e654c973bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fab880a15bc546e40c54e654c973bd5">&#9670;&#160;</a></span>neato_nlist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>** Agraphinfo_t::neato_nlist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accc3528fa8210ca59efa1f06e06b8e38" name="accc3528fa8210ca59efa1f06e06b8e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc3528fa8210ca59efa1f06e06b8e38">&#9670;&#160;</a></span>nlist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::nlist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3038e54d9fc5cd4f204278307fa580b9" name="a3038e54d9fc5cd4f204278307fa580b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3038e54d9fc5cd4f204278307fa580b9">&#9670;&#160;</a></span>nodesep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::nodesep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac05aa9ebbff3f09542c9d0121222618f" name="ac05aa9ebbff3f09542c9d0121222618f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05aa9ebbff3f09542c9d0121222618f">&#9670;&#160;</a></span>odim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short Agraphinfo_t::odim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a160ac52f1da28020ade3b346fbebf7a6" name="a160ac52f1da28020ade3b346fbebf7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160ac52f1da28020ade3b346fbebf7a6">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a>* Agraphinfo_t::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef7424dd5ba8feaa6cd7dde39aca1dab" name="aef7424dd5ba8feaa6cd7dde39aca1dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7424dd5ba8feaa6cd7dde39aca1dab">&#9670;&#160;</a></span>rank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structrank__t.html">rank_t</a>* Agraphinfo_t::rank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a387c217e14e4062d699c5c28b9ee9ecb" name="a387c217e14e4062d699c5c28b9ee9ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387c217e14e4062d699c5c28b9ee9ecb">&#9670;&#160;</a></span>rankdir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::rankdir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaba2922c000b527c79b1598d70ec05c7" name="aaba2922c000b527c79b1598d70ec05c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba2922c000b527c79b1598d70ec05c7">&#9670;&#160;</a></span>rankleader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>** Agraphinfo_t::rankleader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74da894d104e1d18aef375d388fe05cf" name="a74da894d104e1d18aef375d388fe05cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74da894d104e1d18aef375d388fe05cf">&#9670;&#160;</a></span>ranksep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Agraphinfo_t::ranksep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf9a818221025b3a42ffb4696d8e71f7" name="aaf9a818221025b3a42ffb4696d8e71f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9a818221025b3a42ffb4696d8e71f7">&#9670;&#160;</a></span>rn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* Agraphinfo_t::rn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a413eca8823d1c8ee6927130ac5349b22" name="a413eca8823d1c8ee6927130ac5349b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a413eca8823d1c8ee6927130ac5349b22">&#9670;&#160;</a></span>set_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Agraphinfo_t::set_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadf7c0bfd403eaae70fd1866e0ee5fc7" name="aadf7c0bfd403eaae70fd1866e0ee5fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf7c0bfd403eaae70fd1866e0ee5fc7">&#9670;&#160;</a></span>showboxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char Agraphinfo_t::showboxes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab11bc8bdc7e72647d3b8bcfc8ed85c0a" name="ab11bc8bdc7e72647d3b8bcfc8ed85c0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11bc8bdc7e72647d3b8bcfc8ed85c0a">&#9670;&#160;</a></span>spring</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** Agraphinfo_t::spring</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87947912fe92ae298470e49ca22ac488" name="a87947912fe92ae298470e49ca22ac488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87947912fe92ae298470e49ca22ac488">&#9670;&#160;</a></span>sum_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** Agraphinfo_t::sum_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6952aaf072c3e94c173b6b37b74b30c5" name="a6952aaf072c3e94c173b6b37b74b30c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6952aaf072c3e94c173b6b37b74b30c5">&#9670;&#160;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double*** Agraphinfo_t::t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>Graphviz/include/graphviz/<a class="el" href="types_8h_source.html">types.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_agraphinfo__t.html">Agraphinfo_t</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

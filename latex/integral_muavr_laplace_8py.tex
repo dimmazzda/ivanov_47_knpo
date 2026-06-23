@@ -1,0 +1,39 @@
+\doxysection{Файл Teor\+Ver/\+ТеорВерЛР3\+\_\+задание2/\+integral\+Muavr\+Laplace.py}
+\hypertarget{integral_muavr_laplace_8py}{}\label{integral_muavr_laplace_8py}\index{TeorVer/ТеорВерЛР3\_задание2/integralMuavrLaplace.py@{TeorVer/ТеорВерЛР3\_задание2/integralMuavrLaplace.py}}
+\doxysubsubsection*{Пространства имен}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespaceintegral_muavr_laplace}{integral\+Muavr\+Laplace}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_affa3fae965dbf621468a8b0edef3b929}{integral\+Muavr\+Laplace.\+phi}} (x)
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}{integral\+Muavr\+Laplace.\+simpson}} (a, b, n=1000)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{integral\+Muavr\+Laplace.\+n}} = int(input("{}Введите n:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}{integral\+Muavr\+Laplace.\+m1}} = int(input("{}Введите m1:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}{integral\+Muavr\+Laplace.\+m2}} = int(input("{}Введите m2:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{integral\+Muavr\+Laplace.\+p}} = float(input("{}Введите p:\+ "{}))
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}{integral\+Muavr\+Laplace.\+q}} = 1 -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{integral\+Muavr\+Laplace.\+npq}} = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}{q}}
+\item 
+bool \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a24bcd02be741443f234a87a450493033}{integral\+Muavr\+Laplace.\+method\+\_\+applicable}} = True
+\item 
+tuple \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}{integral\+Muavr\+Laplace.\+x1}} = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}{m1}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})
+\item 
+tuple \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}{integral\+Muavr\+Laplace.\+x2}} = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}{m2}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a53d8d86583ae0d082011a1e0742a3785}{integral\+Muavr\+Laplace.\+P\+\_\+ml}} = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}{simpson}}(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}{x1}}, \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}{x2}})
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a0ba52a625772f984b5ab564b779860ac}{integral\+Muavr\+Laplace.\+P\+\_\+bern}} = 0
+\end{DoxyCompactItemize}

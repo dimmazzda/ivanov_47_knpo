@@ -1,0 +1,316 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+pack.h}
+\hypertarget{pack_8h}{}\label{pack_8h}\index{Graphviz/include/graphviz/pack.h@{Graphviz/include/graphviz/pack.h}}
+
+
+support for connected components  
+
+
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include "{}types.\+h"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_aaa8a6cd9eee9dffc3393e5a57ec42e0b}{PK\+\_\+\+COL\+\_\+\+MAJOR}}~(1 $<$$<$ 0)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_aad7ebfc06d7717a7e5a41535578d664f}{PK\+\_\+\+USER\+\_\+\+VALS}}~(1 $<$$<$ 1)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_ac9096c006fab9e69731d50e40b52bf9d}{PK\+\_\+\+LEFT\+\_\+\+ALIGN}}~(1 $<$$<$ 2)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_ae9a9561061b4ede23536b37ce77c36b2}{PK\+\_\+\+RIGHT\+\_\+\+ALIGN}}~(1 $<$$<$ 3)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_a5791c249f2cb2fbc3f69686df02c7299}{PK\+\_\+\+TOP\+\_\+\+ALIGN}}~(1 $<$$<$ 4)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_ac552e54a874d7d7e13e8230ba35caabc}{PK\+\_\+\+BOT\+\_\+\+ALIGN}}~(1 $<$$<$ 5)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_adbe0e9aa2ef0e581468a15d6f4b31629}{PK\+\_\+\+INPUT\+\_\+\+ORDER}}~(1 $<$$<$ 6)
+\item 
+\+\#define \doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}}~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \doxymbox{\hyperlink{pack_8h_a97c604e5f0df885172f770108f3df9cd}{packval\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} \{ \newline
+\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d}{l\+\_\+undef}}
+, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8}{l\+\_\+clust}}
+, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3}{l\+\_\+node}}
+, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225}{l\+\_\+graph}}
+, \newline
+\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8}{l\+\_\+array}}
+, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da}{l\+\_\+aspect}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_ab35ceb2dee3044838025043794dc6e02}{put\+Rects}} (size\+\_\+t ng, \doxymbox{\hyperlink{structboxf}{boxf}} \texorpdfstring{$\ast$}{*}bbs, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}pinfo)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_a738c99226182d51e377a280138b8249b}{pack\+Rects}} (size\+\_\+t ng, \doxymbox{\hyperlink{structboxf}{boxf}} \texorpdfstring{$\ast$}{*}bbs, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}pinfo)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_a64a5c4e6630453df6f0d7f46057c4c5a}{put\+Graphs}} (size\+\_\+t, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_aff8c8bcb14c92fecff64a8558aac3e42}{pack\+Graphs}} (size\+\_\+t, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_a4ec7bbcf437994fcc69a9f8dbe250fe1}{pack\+Subgraphs}} (size\+\_\+t, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_ae63a822ea8fcfbb4bfbf2c29d52e58ae}{pack\+\_\+graph}} (size\+\_\+t ng, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}gs, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}root, bool \texorpdfstring{$\ast$}{*}fixed)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_a6bc74f52187d505012747477d27f9e70}{shift\+Graphs}} (size\+\_\+t, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, bool)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} \doxymbox{\hyperlink{pack_8h_a8dbc607609ba43bc0628b183aae7e531}{get\+Pack\+Mode}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} dflt)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_ac571ff90e8fa643e83720941d3643282}{get\+Pack}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, int not\+\_\+def, int dflt)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} \doxymbox{\hyperlink{pack_8h_aa86ed912bdc55f660de78bcfdb8ea6bc}{get\+Pack\+Info}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} dflt, int dflt\+Margin, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} \doxymbox{\hyperlink{pack_8h_ae9b62ae8252435edccd9a7d041c35f4a}{get\+Pack\+Mode\+Info}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} dflt, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} \doxymbox{\hyperlink{pack_8h_a2c07b0207e7b9d654783384fd0850494}{parse\+Pack\+Mode\+Info}} (const char \texorpdfstring{$\ast$}{*}p, \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} dflt, \doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}pinfo)
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int \doxymbox{\hyperlink{pack_8h_aaf317a9513fa298ac80c765fb6288ff7}{is\+Connected}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_abe1c51b59a72a5409c0da0b75490c59a}{ccomps}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, size\+\_\+t \texorpdfstring{$\ast$}{*}, char \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_aecbe65b50a6e478db9c6914fedadd26f}{cccomps}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, size\+\_\+t \texorpdfstring{$\ast$}{*}, char \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_a27ec1f9b6d7c6b17248fdd8a890e9f90}{pccomps}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, size\+\_\+t \texorpdfstring{$\ast$}{*}, char \texorpdfstring{$\ast$}{*}, bool \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{pack_8h_af3402f836fbe6aedb49af84d837cc250}{map\+Clust}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+{\bfseries{libpack}} supports the use of connected components in the context of laying out graphs using other graphviz libraries. One set of functions can be used to take a single graph and break it apart into connected components. A complementary set of functions takes a collection of graphs (not necessarily components of a single graph) which have been laid out separately, and packs them together.
+
+As this library is meant to be used with {\ttfamily libcommon}, it relies on the \doxylink{struct_agraphinfo__t}{Agraphinfo\+\_\+t}, \doxylink{struct_agnodeinfo__t}{Agnodeinfo\+\_\+t} and \doxylink{struct_agedgeinfo__t}{Agedgeinfo\+\_\+t} used in that library.
+
+\href{https://graphviz.org/pdf/pack.3.pdf}{\texttt{man 3 libpack}} 
+
+\label{pack_8h_doc-define-members}
+\Hypertarget{pack_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}\index{pack.h@{pack.h}!PACK\_API@{PACK\_API}}
+\index{PACK\_API@{PACK\_API}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PACK\_API}{PACK\_API}}
+{\footnotesize\ttfamily \label{pack_8h_af1731d7d57f4b76b63de86911fd36cc5} 
+\+\#define PACK\+\_\+\+API~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{pack_8h_ac552e54a874d7d7e13e8230ba35caabc}\index{pack.h@{pack.h}!PK\_BOT\_ALIGN@{PK\_BOT\_ALIGN}}
+\index{PK\_BOT\_ALIGN@{PK\_BOT\_ALIGN}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_BOT\_ALIGN}{PK\_BOT\_ALIGN}}
+{\footnotesize\ttfamily \label{pack_8h_ac552e54a874d7d7e13e8230ba35caabc} 
+\+\#define PK\+\_\+\+BOT\+\_\+\+ALIGN~(1 $<$$<$ 5)}
+
+\Hypertarget{pack_8h_aaa8a6cd9eee9dffc3393e5a57ec42e0b}\index{pack.h@{pack.h}!PK\_COL\_MAJOR@{PK\_COL\_MAJOR}}
+\index{PK\_COL\_MAJOR@{PK\_COL\_MAJOR}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_COL\_MAJOR}{PK\_COL\_MAJOR}}
+{\footnotesize\ttfamily \label{pack_8h_aaa8a6cd9eee9dffc3393e5a57ec42e0b} 
+\+\#define PK\+\_\+\+COL\+\_\+\+MAJOR~(1 $<$$<$ 0)}
+
+\Hypertarget{pack_8h_adbe0e9aa2ef0e581468a15d6f4b31629}\index{pack.h@{pack.h}!PK\_INPUT\_ORDER@{PK\_INPUT\_ORDER}}
+\index{PK\_INPUT\_ORDER@{PK\_INPUT\_ORDER}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_INPUT\_ORDER}{PK\_INPUT\_ORDER}}
+{\footnotesize\ttfamily \label{pack_8h_adbe0e9aa2ef0e581468a15d6f4b31629} 
+\+\#define PK\+\_\+\+INPUT\+\_\+\+ORDER~(1 $<$$<$ 6)}
+
+\Hypertarget{pack_8h_ac9096c006fab9e69731d50e40b52bf9d}\index{pack.h@{pack.h}!PK\_LEFT\_ALIGN@{PK\_LEFT\_ALIGN}}
+\index{PK\_LEFT\_ALIGN@{PK\_LEFT\_ALIGN}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_LEFT\_ALIGN}{PK\_LEFT\_ALIGN}}
+{\footnotesize\ttfamily \label{pack_8h_ac9096c006fab9e69731d50e40b52bf9d} 
+\+\#define PK\+\_\+\+LEFT\+\_\+\+ALIGN~(1 $<$$<$ 2)}
+
+\Hypertarget{pack_8h_ae9a9561061b4ede23536b37ce77c36b2}\index{pack.h@{pack.h}!PK\_RIGHT\_ALIGN@{PK\_RIGHT\_ALIGN}}
+\index{PK\_RIGHT\_ALIGN@{PK\_RIGHT\_ALIGN}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_RIGHT\_ALIGN}{PK\_RIGHT\_ALIGN}}
+{\footnotesize\ttfamily \label{pack_8h_ae9a9561061b4ede23536b37ce77c36b2} 
+\+\#define PK\+\_\+\+RIGHT\+\_\+\+ALIGN~(1 $<$$<$ 3)}
+
+\Hypertarget{pack_8h_a5791c249f2cb2fbc3f69686df02c7299}\index{pack.h@{pack.h}!PK\_TOP\_ALIGN@{PK\_TOP\_ALIGN}}
+\index{PK\_TOP\_ALIGN@{PK\_TOP\_ALIGN}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_TOP\_ALIGN}{PK\_TOP\_ALIGN}}
+{\footnotesize\ttfamily \label{pack_8h_a5791c249f2cb2fbc3f69686df02c7299} 
+\+\#define PK\+\_\+\+TOP\+\_\+\+ALIGN~(1 $<$$<$ 4)}
+
+\Hypertarget{pack_8h_aad7ebfc06d7717a7e5a41535578d664f}\index{pack.h@{pack.h}!PK\_USER\_VALS@{PK\_USER\_VALS}}
+\index{PK\_USER\_VALS@{PK\_USER\_VALS}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{PK\_USER\_VALS}{PK\_USER\_VALS}}
+{\footnotesize\ttfamily \label{pack_8h_aad7ebfc06d7717a7e5a41535578d664f} 
+\+\#define PK\+\_\+\+USER\+\_\+\+VALS~(1 $<$$<$ 1)}
+
+
+
+\label{pack_8h_doc-typedef-members}
+\Hypertarget{pack_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{pack_8h_a97c604e5f0df885172f770108f3df9cd}\index{pack.h@{pack.h}!packval\_t@{packval\_t}}
+\index{packval\_t@{packval\_t}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{packval\_t}{packval\_t}}
+{\footnotesize\ttfamily \label{pack_8h_a97c604e5f0df885172f770108f3df9cd} 
+typedef unsigned int \doxymbox{\hyperlink{pack_8h_a97c604e5f0df885172f770108f3df9cd}{packval\+\_\+t}}}
+
+
+
+\label{pack_8h_doc-enum-members}
+\Hypertarget{pack_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2}\index{pack.h@{pack.h}!pack\_mode@{pack\_mode}}
+\index{pack\_mode@{pack\_mode}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{pack\_mode}{pack\_mode}}
+{\footnotesize\ttfamily \label{pack_8h_a7867530e1843c636960ccb52dcd347f2} 
+enum \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_undef@{l\_undef}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_undef@{l\_undef}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2a3e4ba46fe266df0f9085e24436ef948d} 
+l\+\_\+undef&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_clust@{l\_clust}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_clust@{l\_clust}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2a25d95f2b6e3f7585e495b55407867cf8} 
+l\+\_\+clust&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_node@{l\_node}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_node@{l\_node}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2ad0a4de273d36beb0c21b0f4ec7215ac3} 
+l\+\_\+node&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_graph@{l\_graph}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_graph@{l\_graph}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2a7dbba35a1cb87ad4e71c4e0634447225} 
+l\+\_\+graph&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_array@{l\_array}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_array@{l\_array}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2ab38798bc7ab1ac9bd8fd061f00da32a8} 
+l\+\_\+array&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{l\_aspect@{l\_aspect}!pack.h@{pack.h}}
+\index{pack.h@{pack.h}!l\_aspect@{l\_aspect}}
+}\Hypertarget{pack_8h_a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da}\label{pack_8h_a7867530e1843c636960ccb52dcd347f2a11c19ffbb2842ba3bc029f22a14723da} 
+l\+\_\+aspect&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{pack_8h_doc-func-members}
+\Hypertarget{pack_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{pack_8h_aecbe65b50a6e478db9c6914fedadd26f}\index{pack.h@{pack.h}!cccomps@{cccomps}}
+\index{cccomps@{cccomps}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{cccomps()}{cccomps()}}
+{\footnotesize\ttfamily \label{pack_8h_aecbe65b50a6e478db9c6914fedadd26f} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} cccomps (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_abe1c51b59a72a5409c0da0b75490c59a}\index{pack.h@{pack.h}!ccomps@{ccomps}}
+\index{ccomps@{ccomps}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{ccomps()}{ccomps()}}
+{\footnotesize\ttfamily \label{pack_8h_abe1c51b59a72a5409c0da0b75490c59a} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} ccomps (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_ac571ff90e8fa643e83720941d3643282}\index{pack.h@{pack.h}!getPack@{getPack}}
+\index{getPack@{getPack}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{getPack()}{getPack()}}
+{\footnotesize\ttfamily \label{pack_8h_ac571ff90e8fa643e83720941d3643282} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int get\+Pack (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{int}]{not\+\_\+def}{, }\item[{int}]{dflt}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_aa86ed912bdc55f660de78bcfdb8ea6bc}\index{pack.h@{pack.h}!getPackInfo@{getPackInfo}}
+\index{getPackInfo@{getPackInfo}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{getPackInfo()}{getPackInfo()}}
+{\footnotesize\ttfamily \label{pack_8h_aa86ed912bdc55f660de78bcfdb8ea6bc} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} get\+Pack\+Info (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}}}]{dflt}{, }\item[{int}]{dflt\+Margin}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a8dbc607609ba43bc0628b183aae7e531}\index{pack.h@{pack.h}!getPackMode@{getPackMode}}
+\index{getPackMode@{getPackMode}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{getPackMode()}{getPackMode()}}
+{\footnotesize\ttfamily \label{pack_8h_a8dbc607609ba43bc0628b183aae7e531} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} get\+Pack\+Mode (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}}}]{dflt}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_ae9b62ae8252435edccd9a7d041c35f4a}\index{pack.h@{pack.h}!getPackModeInfo@{getPackModeInfo}}
+\index{getPackModeInfo@{getPackModeInfo}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{getPackModeInfo()}{getPackModeInfo()}}
+{\footnotesize\ttfamily \label{pack_8h_ae9b62ae8252435edccd9a7d041c35f4a} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} get\+Pack\+Mode\+Info (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}}}]{dflt}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_aaf317a9513fa298ac80c765fb6288ff7}\index{pack.h@{pack.h}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily \label{pack_8h_aaf317a9513fa298ac80c765fb6288ff7} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int is\+Connected (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_af3402f836fbe6aedb49af84d837cc250}\index{pack.h@{pack.h}!mapClust@{mapClust}}
+\index{mapClust@{mapClust}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{mapClust()}{mapClust()}}
+{\footnotesize\ttfamily \label{pack_8h_af3402f836fbe6aedb49af84d837cc250} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} map\+Clust (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_ae63a822ea8fcfbb4bfbf2c29d52e58ae}\index{pack.h@{pack.h}!pack\_graph@{pack\_graph}}
+\index{pack\_graph@{pack\_graph}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{pack\_graph()}{pack\_graph()}}
+{\footnotesize\ttfamily \label{pack_8h_ae63a822ea8fcfbb4bfbf2c29d52e58ae} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int pack\+\_\+graph (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ng}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{gs}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{root}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{fixed}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_aff8c8bcb14c92fecff64a8558aac3e42}\index{pack.h@{pack.h}!packGraphs@{packGraphs}}
+\index{packGraphs@{packGraphs}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{packGraphs()}{packGraphs()}}
+{\footnotesize\ttfamily \label{pack_8h_aff8c8bcb14c92fecff64a8558aac3e42} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int pack\+Graphs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a738c99226182d51e377a280138b8249b}\index{pack.h@{pack.h}!packRects@{packRects}}
+\index{packRects@{packRects}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{packRects()}{packRects()}}
+{\footnotesize\ttfamily \label{pack_8h_a738c99226182d51e377a280138b8249b} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int pack\+Rects (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ng}{, }\item[{\doxymbox{\hyperlink{structboxf}{boxf}} \texorpdfstring{$\ast$}{*}}]{bbs}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{pinfo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a4ec7bbcf437994fcc69a9f8dbe250fe1}\index{pack.h@{pack.h}!packSubgraphs@{packSubgraphs}}
+\index{packSubgraphs@{packSubgraphs}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{packSubgraphs()}{packSubgraphs()}}
+{\footnotesize\ttfamily \label{pack_8h_a4ec7bbcf437994fcc69a9f8dbe250fe1} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int pack\+Subgraphs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a2c07b0207e7b9d654783384fd0850494}\index{pack.h@{pack.h}!parsePackModeInfo@{parsePackModeInfo}}
+\index{parsePackModeInfo@{parsePackModeInfo}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{parsePackModeInfo()}{parsePackModeInfo()}}
+{\footnotesize\ttfamily \label{pack_8h_a2c07b0207e7b9d654783384fd0850494} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}} parse\+Pack\+Mode\+Info (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{\doxymbox{\hyperlink{pack_8h_a7867530e1843c636960ccb52dcd347f2}{pack\+\_\+mode}}}]{dflt}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{pinfo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a27ec1f9b6d7c6b17248fdd8a890e9f90}\index{pack.h@{pack.h}!pccomps@{pccomps}}
+\index{pccomps@{pccomps}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{pccomps()}{pccomps()}}
+{\footnotesize\ttfamily \label{pack_8h_a27ec1f9b6d7c6b17248fdd8a890e9f90} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} pccomps (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{size\+\_\+t \texorpdfstring{$\ast$}{*}}]{}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{bool \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a64a5c4e6630453df6f0d7f46057c4c5a}\index{pack.h@{pack.h}!putGraphs@{putGraphs}}
+\index{putGraphs@{putGraphs}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{putGraphs()}{putGraphs()}}
+{\footnotesize\ttfamily \label{pack_8h_a64a5c4e6630453df6f0d7f46057c4c5a} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} put\+Graphs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_ab35ceb2dee3044838025043794dc6e02}\index{pack.h@{pack.h}!putRects@{putRects}}
+\index{putRects@{putRects}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{putRects()}{putRects()}}
+{\footnotesize\ttfamily \label{pack_8h_ab35ceb2dee3044838025043794dc6e02} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} put\+Rects (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ng}{, }\item[{\doxymbox{\hyperlink{structboxf}{boxf}} \texorpdfstring{$\ast$}{*}}]{bbs}{, }\item[{\doxymbox{\hyperlink{structpack__info}{pack\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{pinfo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{pack_8h_a6bc74f52187d505012747477d27f9e70}\index{pack.h@{pack.h}!shiftGraphs@{shiftGraphs}}
+\index{shiftGraphs@{shiftGraphs}!pack.h@{pack.h}}
+\doxysubsubsection{\texorpdfstring{shiftGraphs()}{shiftGraphs()}}
+{\footnotesize\ttfamily \label{pack_8h_a6bc74f52187d505012747477d27f9e70} 
+\doxymbox{\hyperlink{pack_8h_af1731d7d57f4b76b63de86911fd36cc5}{PACK\+\_\+\+API}} int shift\+Graphs (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{bool}]{}{}\end{DoxyParamCaption})}
+

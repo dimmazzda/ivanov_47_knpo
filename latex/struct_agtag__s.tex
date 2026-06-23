@@ -1,0 +1,67 @@
+\doxysection{Структура Agtag\+\_\+s}
+\hypertarget{struct_agtag__s}{}\label{struct_agtag__s}\index{Agtag\_s@{Agtag\_s}}
+
+
+tag in \doxylink{struct_agobj__s}{Agobj\+\_\+s} for graphs, nodes, and edges.  
+
+
+
+
+{\ttfamily \+\#include $<$cgraph.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \doxymbox{\hyperlink{struct_agtag__s_a3151531a8a8e65463e3430ac63b98eea}{objtype}}:\+ 2
+\begin{DoxyCompactList}\small\item\em access with \doxylink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE} \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be}{mtflock}}:\+ 1
+\begin{DoxyCompactList}\small\item\em move-\/to-\/front lock, guards \doxylink{struct_agobj__s_ac595be4c079abaf534843935f4db97b6}{Agobj\+\_\+s::\+data} \end{DoxyCompactList}\item 
+unsigned \doxymbox{\hyperlink{struct_agtag__s_a299f4a9923f3a3b4b97d4ac2a5d74810}{attrwf}}:\+ 1
+\item 
+unsigned \doxymbox{\hyperlink{struct_agtag__s_a32e66cb84ffcc0b778c7658205e1e541}{seq}}:\+ (sizeof(unsigned) \texorpdfstring{$\ast$}{*} 8 -\/ 4)
+\item 
+\doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} \doxymbox{\hyperlink{struct_agtag__s_aead7c6281f5867d66019770132f16ab3}{id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+While there may be several structs for a given node or edges, there is only one unique ID (per main graph). 
+
+\label{struct_agtag__s_doc-variable-members}
+\Hypertarget{struct_agtag__s_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{struct_agtag__s_a299f4a9923f3a3b4b97d4ac2a5d74810}\index{Agtag\_s@{Agtag\_s}!attrwf@{attrwf}}
+\index{attrwf@{attrwf}!Agtag\_s@{Agtag\_s}}
+\doxysubsubsection{\texorpdfstring{attrwf}{attrwf}}
+{\footnotesize\ttfamily \label{struct_agtag__s_a299f4a9923f3a3b4b97d4ac2a5d74810} 
+unsigned Agtag\+\_\+s::\+attrwf}
+
+\Hypertarget{struct_agtag__s_aead7c6281f5867d66019770132f16ab3}\index{Agtag\_s@{Agtag\_s}!id@{id}}
+\index{id@{id}!Agtag\_s@{Agtag\_s}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{struct_agtag__s_aead7c6281f5867d66019770132f16ab3} 
+\doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} Agtag\+\_\+s::\+id}
+
+\Hypertarget{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be}\index{Agtag\_s@{Agtag\_s}!mtflock@{mtflock}}
+\index{mtflock@{mtflock}!Agtag\_s@{Agtag\_s}}
+\doxysubsubsection{\texorpdfstring{mtflock}{mtflock}}
+{\footnotesize\ttfamily \label{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be} 
+unsigned Agtag\+\_\+s::\+mtflock}
+
+\Hypertarget{struct_agtag__s_a3151531a8a8e65463e3430ac63b98eea}\index{Agtag\_s@{Agtag\_s}!objtype@{objtype}}
+\index{objtype@{objtype}!Agtag\_s@{Agtag\_s}}
+\doxysubsubsection{\texorpdfstring{objtype}{objtype}}
+{\footnotesize\ttfamily \label{struct_agtag__s_a3151531a8a8e65463e3430ac63b98eea} 
+unsigned Agtag\+\_\+s::\+objtype}
+
+\Hypertarget{struct_agtag__s_a32e66cb84ffcc0b778c7658205e1e541}\index{Agtag\_s@{Agtag\_s}!seq@{seq}}
+\index{seq@{seq}!Agtag\_s@{Agtag\_s}}
+\doxysubsubsection{\texorpdfstring{seq}{seq}}
+{\footnotesize\ttfamily \label{struct_agtag__s_a32e66cb84ffcc0b778c7658205e1e541} 
+unsigned Agtag\+\_\+s::\+seq}
+
+
+
+Объявления и описания членов структуры находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+Graphviz/\+include/\+graphviz/\+\doxymbox{\hyperlink{cgraph_8h}{cgraph.\+h}}\end{DoxyCompactItemize}

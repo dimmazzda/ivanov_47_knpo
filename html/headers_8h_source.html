@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Исходный файл C:/Users/Дмитрий/source/repos/ivanov_47_knpo/ivanov_47_knpo/headers.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('headers_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">headers.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="headers_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490eafa9867eb9c29433c284981cc06413b57">   52</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> { <a class="code hl_enumvalue" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490ea9d9f0ad70d95b267fda40075d0c175a8">tree</a>, <a class="code hl_enumvalue" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490eafa9867eb9c29433c284981cc06413b57">convertibleToTree</a>, <a class="code hl_enumvalue" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490ea9d437de50202df67d5e4bb3f063a0a36">notConvertibleToTree</a> };</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffd">   58</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffd">errorType</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdad3dfd2cafc36ddb2de5631863b7f8cb7">   59</a></span>    <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda70c996e5c727116a7da0d09727739660">inFileNotExist</a>, <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdad3dfd2cafc36ddb2de5631863b7f8cb7">createOutFileFail</a>, <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda754540592addfb5cbbbc70bbdee2dda4">edgeNumberError</a>, <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdae7b5854aafdb508f40348564fe95f1b3">verticesNumberError</a>,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988">   60</a></span>    <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988">defenitionLineSyntaxError</a>, <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda1518ee993957042de8f0391858b6f4f5">innerDescriptionSyntaxError</a>, <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda00dce12c51057a7afa272b0869582168">endLineSyntaxError</a></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structadjacency_list.html">   70</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//поля структуры</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structadjacency_list.html#a9e5e04100d7defcdf332b58fc4e1a584">   74</a></span>    std::vector&lt;std::vector&lt;int&gt;&gt; <a class="code hl_variable" href="structadjacency_list.html#a9e5e04100d7defcdf332b58fc4e1a584">neighbours</a>; </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structadjacency_list.html#a5cdc6a2c9f0faef95b0b74f8b0833996">   75</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structadjacency_list.html#a5cdc6a2c9f0faef95b0b74f8b0833996">countOfVertices</a> = 0; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">//методы</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structadjacency_list.html#a9389bdf15afb4896f4480d6a308d59bb">isEmpty</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structadjacency_list.html#aa75a0ef0b5b5836b168572df5708ec78">isEqualTo</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a> &amp; otherList);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a> * <a class="code hl_function" href="structadjacency_list.html#aae4f3b782a9b161a3502993b2d677848">substract</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a> &amp; subtrahend);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="};">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_error.html">  114</a></span><span class="keyword">class </span><a class="code hl_function" href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error</a></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">//поля</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_error.html#ace282524365cfa282569141008d87cf1">  118</a></span>    <a class="code hl_enumeration" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffd">errorType</a> <a class="code hl_variable" href="class_error.html#ace282524365cfa282569141008d87cf1">type</a> = <a class="code hl_enumvalue" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988">defenitionLineSyntaxError</a>;     </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_error.html#a25f87a7089257e6dfd0dff6c2db50003">  119</a></span>    std::string <a class="code hl_variable" href="class_error.html#a25f87a7089257e6dfd0dff6c2db50003">errorInputFileWay</a>;      </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_error.html#ae03a955cba26da091cb6297060e44733">  120</a></span>    std::string <a class="code hl_variable" href="class_error.html#ae03a955cba26da091cb6297060e44733">errorOutputFileWay</a>;     </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_error.html#af271bf76144dd69b235cff2005b950da">  121</a></span>    std::string <a class="code hl_variable" href="class_error.html#af271bf76144dd69b235cff2005b950da">errorTagName</a>;           </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_error.html#a0a68d7cee0febeeaf288bee19020cdef">  122</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_error.html#a0a68d7cee0febeeaf288bee19020cdef">line</a> = 0;                           </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">//конструктор/деструктор</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_function" href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error</a>();                </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_function" href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error</a>(<a class="code hl_enumeration" href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffd">errorType</a> <a class="code hl_variable" href="class_error.html#ace282524365cfa282569141008d87cf1">type</a>);  </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_function" href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_error.html#a0a68d7cee0febeeaf288bee19020cdef">line</a>);        </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="class_error.html#a1a45d42a3a035d510333cdfeb36a0e93">~Error</a>();               </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">//методы</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    std::string <a class="code hl_function" href="class_error.html#a1ce614c1825787b826fe0349e7dca8dc">generateErrorMessage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_error.html#aa05c46825e48ef92d2c90adbe497f5be">isEqualTo</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error</a>&amp; otherError) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>};</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="};">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_dir_graph.html">  152</a></span><span class="keyword">class </span><a class="code hl_function" href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph</a></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>{</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// поля</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_dir_graph.html#a94d3d1dd413f938c0eca995bb0bf2141">  156</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="class_dir_graph.html#a94d3d1dd413f938c0eca995bb0bf2141">vertices</a>;      </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_dir_graph.html#a199d516e49886a86839275954489a7b0">  157</a></span>    <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a> <a class="code hl_variable" href="class_dir_graph.html#a199d516e49886a86839275954489a7b0">edges</a>;    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="comment">// конструктор/деструктор</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_function" href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph</a>();     </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_function" href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph</a>(<span class="keywordtype">int</span> countOfVertices);      </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_function" href="class_dir_graph.html#a3b321c8f734f1dcd9912537a66fed389">~DirGraph</a>();    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// методы</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_dir_graph.html#a8bca7a0af41481d14816792b3a6eaeaa">getVertexCount</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_dir_graph.html#ab74cac37fedb36f9c9d7a0a80fc12799">hasEdge</a>(<span class="keywordtype">int</span> fromVertex, <span class="keywordtype">int</span> toVertex);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_dir_graph.html#a15a22fd8f3ad29fd2eaa23a2eac4df5c">addEdge</a>(<span class="keywordtype">int</span> fromVertex, <span class="keywordtype">int</span> toVertex);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a>* <a class="code hl_function" href="class_dir_graph.html#a1dc1d1db5f70c46a164a40adf3ab34f3">getEdges</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_dir_graph.html#a6657a5b7b1b8b5e0e9019db557760eed">dirGraphIsEqual</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph</a>&amp; otherGraph);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_function" href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph</a>* <a class="code hl_function" href="class_dir_graph.html#a3d986feb5b3d0140af07be70bd0015bb">generateSpanningTree</a>(<span class="keywordtype">int</span> rootVertex) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>};</div>
+</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">// описания функций</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keywordtype">int</span> <a class="code hl_function" href="headers_8h.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keywordtype">bool</span> <a class="code hl_function" href="headers_8h.html#a093ad82c389c2b6be4b3b39246f288f1">readTextFromFile</a>(std::vector&lt;std::string&gt;&amp; fileText, std::string&amp; fileName, std::vector&lt;Error&gt;&amp; errorVector);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="keywordtype">bool</span> <a class="code hl_function" href="headers_8h.html#ab431435b8c948ce4334e6b1c3bb5d8f5">tryParseInt</a>(<span class="keyword">const</span> std::string&amp; str, <span class="keywordtype">int</span>&amp; result);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keywordtype">void</span> <a class="code hl_function" href="headers_8h.html#aa5410876102f5c4c410f2a4dbcf33532">parseInnerLine</a>(<span class="keyword">const</span> std::string&amp; line, <span class="keywordtype">int</span> lineNumber, std::vector&lt;int&gt;&amp; vertexList, std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp; edgeList, std::vector&lt;int&gt;&amp; edgeLineNumbers, <span class="keywordtype">bool</span>&amp; edgesStarted, std::vector&lt;Error&gt;&amp; errorVector);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="keywordtype">void</span> <a class="code hl_function" href="headers_8h.html#a60b864ebf63323026ffce3c0cf919ee9">processEdges</a>(<span class="keyword">const</span> std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp; edgeList, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; edgeLineNumbers, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; vertexList, <a class="code hl_class" href="class_dir_graph.html">DirGraph</a>* graph, <span class="keywordtype">int</span> inDegrees[1000], std::vector&lt;Error&gt;&amp; errorVector);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><a class="code hl_class" href="class_dir_graph.html">DirGraph</a>* <a class="code hl_function" href="headers_8h.html#a41963a7c7731566bd55f6522eb6e3195">parseGraphFromText</a>(std::vector&lt;std::string&gt;&amp; fileText, <span class="keywordtype">int</span> inDegrees[1000], std::vector&lt;Error&gt;&amp; errorVector);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>std::string <a class="code hl_function" href="headers_8h.html#a5a01f705cc7b4a7317a57f6bf41aef25">trim</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="keywordtype">bool</span> <a class="code hl_function" href="headers_8h.html#abe8e52bfa901d7a508084e909fc3249d">extractTokensFromString</a>(std::string&amp; str, <span class="keyword">const</span> std::string&amp; delimeter, std::vector&lt;std::string&gt;&amp; tokens);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><a class="code hl_enumeration" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> <a class="code hl_function" href="headers_8h.html#acf7b86c9b4a6117aa43bc5aee344d915">tryBuildTreeFromVertex</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dir_graph.html">DirGraph</a>&amp; graph, <span class="keywordtype">int</span> rootIdx, <span class="keywordtype">int</span> vertexCount, <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a>&amp; edgeDifference);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><a class="code hl_enumeration" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> <a class="code hl_function" href="headers_8h.html#a862d24e23d8544b1c80213413cc8e9fc">findGraphType</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dir_graph.html">DirGraph</a>&amp; graph, <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a>&amp; edgeDifference, <span class="keywordtype">int</span> inDegrees[1000]);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keywordtype">void</span> <a class="code hl_function" href="headers_8h.html#a16d6086fe09142fd48acdf26c2aeb756">printErrorsMessages</a>(<span class="keyword">const</span> std::vector&lt;Error&gt;&amp; errorsVector);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>std::string <a class="code hl_function" href="headers_8h.html#a1bdf42983f66b1811188c1fca9ccbb3f">processEdgeLine</a>(<span class="keyword">const</span> std::string&amp; line, <a class="code hl_enumeration" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> type, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; vertexNames, <span class="keyword">const</span> std::map&lt;std::pair&lt;int, int&gt;, <span class="keywordtype">int</span>&gt;&amp; edgesToDeleteCount, std::map&lt;std::pair&lt;int, int&gt;, <span class="keywordtype">int</span>&gt;&amp; highlightedCount);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>std::vector&lt;std::string&gt; <a class="code hl_function" href="headers_8h.html#a4ef3aec89a4de921f48fb8704c021bcb">generateOutputText</a>(<a class="code hl_enumeration" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> type, std::vector&lt;std::string&gt;&amp; inputFilePlainText, <a class="code hl_struct" href="structadjacency_list.html">adjacencyList</a>&amp; edgesToDelete);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="keywordtype">int</span> <a class="code hl_function" href="headers_8h.html#acfb23957a861227c7bc4e37c3f37b429">writeTextToFile</a>(std::vector&lt;std::string&gt;&amp; outputText, std::string&amp; outputFileName, std::vector&lt;Error&gt;&amp; errorsVector);</div>
+<div class="ttc" id="aclass_dir_graph_html"><div class="ttname"><a href="class_dir_graph.html">DirGraph</a></div><div class="ttdoc">класс ориентированного графа</div><div class="ttdef"><b>Определения</b> headers.h:153</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a15a22fd8f3ad29fd2eaa23a2eac4df5c"><div class="ttname"><a href="class_dir_graph.html#a15a22fd8f3ad29fd2eaa23a2eac4df5c">DirGraph::addEdge</a></div><div class="ttdeci">bool addEdge(int fromVertex, int toVertex)</div><div class="ttdoc">добавить дугу в граф</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:160</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a199d516e49886a86839275954489a7b0"><div class="ttname"><a href="class_dir_graph.html#a199d516e49886a86839275954489a7b0">DirGraph::edges</a></div><div class="ttdeci">adjacencyList edges</div><div class="ttdoc">дуги графа в виде списка смежности</div><div class="ttdef"><b>Определения</b> headers.h:157</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a1dc1d1db5f70c46a164a40adf3ab34f3"><div class="ttname"><a href="class_dir_graph.html#a1dc1d1db5f70c46a164a40adf3ab34f3">DirGraph::getEdges</a></div><div class="ttdeci">adjacencyList * getEdges() const</div><div class="ttdoc">получить дуги графа</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:191</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a3b321c8f734f1dcd9912537a66fed389"><div class="ttname"><a href="class_dir_graph.html#a3b321c8f734f1dcd9912537a66fed389">DirGraph::~DirGraph</a></div><div class="ttdeci">~DirGraph()</div><div class="ttdoc">деструктор по умолчаниюю</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:119</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a3d986feb5b3d0140af07be70bd0015bb"><div class="ttname"><a href="class_dir_graph.html#a3d986feb5b3d0140af07be70bd0015bb">DirGraph::generateSpanningTree</a></div><div class="ttdeci">DirGraph * generateSpanningTree(int rootVertex) const</div><div class="ttdoc">построить остовное дерево графа</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:217</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a6657a5b7b1b8b5e0e9019db557760eed"><div class="ttname"><a href="class_dir_graph.html#a6657a5b7b1b8b5e0e9019db557760eed">DirGraph::dirGraphIsEqual</a></div><div class="ttdeci">bool dirGraphIsEqual(const DirGraph &amp;otherGraph)</div><div class="ttdoc">проверить графы на равенство</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:204</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a8bca7a0af41481d14816792b3a6eaeaa"><div class="ttname"><a href="class_dir_graph.html#a8bca7a0af41481d14816792b3a6eaeaa">DirGraph::getVertexCount</a></div><div class="ttdeci">int getVertexCount()</div><div class="ttdoc">получить количество вершин</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:123</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a900673adda6b2e049a1441421d15a177"><div class="ttname"><a href="class_dir_graph.html#a900673adda6b2e049a1441421d15a177">DirGraph::DirGraph</a></div><div class="ttdeci">DirGraph()</div><div class="ttdoc">конструктор по умолчанию создаёт пустой граф</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:103</div></div>
+<div class="ttc" id="aclass_dir_graph_html_a94d3d1dd413f938c0eca995bb0bf2141"><div class="ttname"><a href="class_dir_graph.html#a94d3d1dd413f938c0eca995bb0bf2141">DirGraph::vertices</a></div><div class="ttdeci">std::vector&lt; int &gt; vertices</div><div class="ttdoc">список вершин графа (упорядоченный)</div><div class="ttdef"><b>Определения</b> headers.h:156</div></div>
+<div class="ttc" id="aclass_dir_graph_html_ab74cac37fedb36f9c9d7a0a80fc12799"><div class="ttname"><a href="class_dir_graph.html#ab74cac37fedb36f9c9d7a0a80fc12799">DirGraph::hasEdge</a></div><div class="ttdeci">bool hasEdge(int fromVertex, int toVertex)</div><div class="ttdoc">проверка на наличие дуги</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:127</div></div>
+<div class="ttc" id="aclass_error_html_a0a68d7cee0febeeaf288bee19020cdef"><div class="ttname"><a href="class_error.html#a0a68d7cee0febeeaf288bee19020cdef">Error::line</a></div><div class="ttdeci">int line</div><div class="ttdoc">номер строки с ошибкой, если ошибка во внутренней структуре файла</div><div class="ttdef"><b>Определения</b> headers.h:122</div></div>
+<div class="ttc" id="aclass_error_html_a1a45d42a3a035d510333cdfeb36a0e93"><div class="ttname"><a href="class_error.html#a1a45d42a3a035d510333cdfeb36a0e93">Error::~Error</a></div><div class="ttdeci">~Error()</div><div class="ttdoc">базовый деструктор</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:314</div></div>
+<div class="ttc" id="aclass_error_html_a1ce614c1825787b826fe0349e7dca8dc"><div class="ttname"><a href="class_error.html#a1ce614c1825787b826fe0349e7dca8dc">Error::generateErrorMessage</a></div><div class="ttdeci">std::string generateErrorMessage() const</div><div class="ttdoc">генерация сообщения об ошибке</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:330</div></div>
+<div class="ttc" id="aclass_error_html_a25f87a7089257e6dfd0dff6c2db50003"><div class="ttname"><a href="class_error.html#a25f87a7089257e6dfd0dff6c2db50003">Error::errorInputFileWay</a></div><div class="ttdeci">std::string errorInputFileWay</div><div class="ttdoc">строка пути, откуда не удалось прочитать файл</div><div class="ttdef"><b>Определения</b> headers.h:119</div></div>
+<div class="ttc" id="aclass_error_html_aa05c46825e48ef92d2c90adbe497f5be"><div class="ttname"><a href="class_error.html#aa05c46825e48ef92d2c90adbe497f5be">Error::isEqualTo</a></div><div class="ttdeci">bool isEqualTo(const Error &amp;otherError) const</div><div class="ttdoc">проверка ошибок на равенство</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:318</div></div>
+<div class="ttc" id="aclass_error_html_aca339d00ad8481fb4c184f0ece42698b"><div class="ttname"><a href="class_error.html#aca339d00ad8481fb4c184f0ece42698b">Error::Error</a></div><div class="ttdeci">Error()</div><div class="ttdoc">базовый конструктор</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:292</div></div>
+<div class="ttc" id="aclass_error_html_ace282524365cfa282569141008d87cf1"><div class="ttname"><a href="class_error.html#ace282524365cfa282569141008d87cf1">Error::type</a></div><div class="ttdeci">errorType type</div><div class="ttdoc">тип ошибки</div><div class="ttdef"><b>Определения</b> headers.h:118</div></div>
+<div class="ttc" id="aclass_error_html_ae03a955cba26da091cb6297060e44733"><div class="ttname"><a href="class_error.html#ae03a955cba26da091cb6297060e44733">Error::errorOutputFileWay</a></div><div class="ttdeci">std::string errorOutputFileWay</div><div class="ttdoc">строка пути, куда не удалось записать файл</div><div class="ttdef"><b>Определения</b> headers.h:120</div></div>
+<div class="ttc" id="aclass_error_html_af271bf76144dd69b235cff2005b950da"><div class="ttname"><a href="class_error.html#af271bf76144dd69b235cff2005b950da">Error::errorTagName</a></div><div class="ttdeci">std::string errorTagName</div><div class="ttdoc">строка, хранящая имя неизвестного тега</div><div class="ttdef"><b>Определения</b> headers.h:121</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffd"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffd">errorType</a></div><div class="ttdeci">errorType</div><div class="ttdoc">возможные ошибки</div><div class="ttdef"><b>Определения</b> headers.h:58</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffda00dce12c51057a7afa272b0869582168"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda00dce12c51057a7afa272b0869582168">endLineSyntaxError</a></div><div class="ttdeci">@ endLineSyntaxError</div><div class="ttdef"><b>Определения</b> headers.h:60</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffda1518ee993957042de8f0391858b6f4f5"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda1518ee993957042de8f0391858b6f4f5">innerDescriptionSyntaxError</a></div><div class="ttdeci">@ innerDescriptionSyntaxError</div><div class="ttdef"><b>Определения</b> headers.h:60</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffda70c996e5c727116a7da0d09727739660"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda70c996e5c727116a7da0d09727739660">inFileNotExist</a></div><div class="ttdeci">@ inFileNotExist</div><div class="ttdef"><b>Определения</b> headers.h:59</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffda754540592addfb5cbbbc70bbdee2dda4"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffda754540592addfb5cbbbc70bbdee2dda4">edgeNumberError</a></div><div class="ttdeci">@ edgeNumberError</div><div class="ttdef"><b>Определения</b> headers.h:59</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffdad3dfd2cafc36ddb2de5631863b7f8cb7"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdad3dfd2cafc36ddb2de5631863b7f8cb7">createOutFileFail</a></div><div class="ttdeci">@ createOutFileFail</div><div class="ttdef"><b>Определения</b> headers.h:59</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffdae7b5854aafdb508f40348564fe95f1b3"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdae7b5854aafdb508f40348564fe95f1b3">verticesNumberError</a></div><div class="ttdeci">@ verticesNumberError</div><div class="ttdef"><b>Определения</b> headers.h:59</div></div>
+<div class="ttc" id="aheaders_8h_html_a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988"><div class="ttname"><a href="headers_8h.html#a0455f547a8d97c35c868b184e0c92ffdaf1fcaf1cc7a4ff41627948ee05467988">defenitionLineSyntaxError</a></div><div class="ttdeci">@ defenitionLineSyntaxError</div><div class="ttdef"><b>Определения</b> headers.h:60</div></div>
+<div class="ttc" id="aheaders_8h_html_a093ad82c389c2b6be4b3b39246f288f1"><div class="ttname"><a href="headers_8h.html#a093ad82c389c2b6be4b3b39246f288f1">readTextFromFile</a></div><div class="ttdeci">bool readTextFromFile(std::vector&lt; std::string &gt; &amp;fileText, std::string &amp;fileName, std::vector&lt; Error &gt; &amp;errorVector)</div><div class="ttdoc">функция чтения текста из файла</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:726</div></div>
+<div class="ttc" id="aheaders_8h_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="headers_8h.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">главная функция программы</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:910</div></div>
+<div class="ttc" id="aheaders_8h_html_a16d6086fe09142fd48acdf26c2aeb756"><div class="ttname"><a href="headers_8h.html#a16d6086fe09142fd48acdf26c2aeb756">printErrorsMessages</a></div><div class="ttdeci">void printErrorsMessages(const std::vector&lt; Error &gt; &amp;errorsVector)</div><div class="ttdoc">вывод в консоль информации об ошибках</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:758</div></div>
+<div class="ttc" id="aheaders_8h_html_a1bdf42983f66b1811188c1fca9ccbb3f"><div class="ttname"><a href="headers_8h.html#a1bdf42983f66b1811188c1fca9ccbb3f">processEdgeLine</a></div><div class="ttdeci">std::string processEdgeLine(const std::string &amp;line, graphType type, const std::vector&lt; std::string &gt; &amp;vertexNames, const std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;edgesToDeleteCount, std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;highlightedCount)</div><div class="ttdoc">Обработка строки с дугой: если дуга подлежит удалению, помечает её красным</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:768</div></div>
+<div class="ttc" id="aheaders_8h_html_a3f8f7b519e692469f867b0af0ce0490e"><div class="ttname"><a href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a></div><div class="ttdeci">graphType</div><div class="ttdoc">возможные типы графа в терминах задачи</div><div class="ttdef"><b>Определения</b> headers.h:52</div></div>
+<div class="ttc" id="aheaders_8h_html_a3f8f7b519e692469f867b0af0ce0490ea9d437de50202df67d5e4bb3f063a0a36"><div class="ttname"><a href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490ea9d437de50202df67d5e4bb3f063a0a36">notConvertibleToTree</a></div><div class="ttdeci">@ notConvertibleToTree</div><div class="ttdef"><b>Определения</b> headers.h:52</div></div>
+<div class="ttc" id="aheaders_8h_html_a3f8f7b519e692469f867b0af0ce0490ea9d9f0ad70d95b267fda40075d0c175a8"><div class="ttname"><a href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490ea9d9f0ad70d95b267fda40075d0c175a8">tree</a></div><div class="ttdeci">@ tree</div><div class="ttdef"><b>Определения</b> headers.h:52</div></div>
+<div class="ttc" id="aheaders_8h_html_a3f8f7b519e692469f867b0af0ce0490eafa9867eb9c29433c284981cc06413b57"><div class="ttname"><a href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490eafa9867eb9c29433c284981cc06413b57">convertibleToTree</a></div><div class="ttdeci">@ convertibleToTree</div><div class="ttdef"><b>Определения</b> headers.h:52</div></div>
+<div class="ttc" id="aheaders_8h_html_a41963a7c7731566bd55f6522eb6e3195"><div class="ttname"><a href="headers_8h.html#a41963a7c7731566bd55f6522eb6e3195">parseGraphFromText</a></div><div class="ttdeci">DirGraph * parseGraphFromText(std::vector&lt; std::string &gt; &amp;fileText, int inDegrees[1000], std::vector&lt; Error &gt; &amp;errorVector)</div><div class="ttdoc">функция парсинга графа из текста</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:538</div></div>
+<div class="ttc" id="aheaders_8h_html_a4ef3aec89a4de921f48fb8704c021bcb"><div class="ttname"><a href="headers_8h.html#a4ef3aec89a4de921f48fb8704c021bcb">generateOutputText</a></div><div class="ttdeci">std::vector&lt; std::string &gt; generateOutputText(graphType type, std::vector&lt; std::string &gt; &amp;inputFilePlainText, adjacencyList &amp;edgesToDelete)</div><div class="ttdoc">формирование текста выходного файла</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:818</div></div>
+<div class="ttc" id="aheaders_8h_html_a5a01f705cc7b4a7317a57f6bf41aef25"><div class="ttname"><a href="headers_8h.html#a5a01f705cc7b4a7317a57f6bf41aef25">trim</a></div><div class="ttdeci">std::string trim(const std::string &amp;str)</div><div class="ttdoc">обрезает пробельные символы по краям строки</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:373</div></div>
+<div class="ttc" id="aheaders_8h_html_a60b864ebf63323026ffce3c0cf919ee9"><div class="ttname"><a href="headers_8h.html#a60b864ebf63323026ffce3c0cf919ee9">processEdges</a></div><div class="ttdeci">void processEdges(const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edgeList, const std::vector&lt; int &gt; &amp;edgeLineNumbers, const std::vector&lt; int &gt; &amp;vertexList, DirGraph *graph, int inDegrees[1000], std::vector&lt; Error &gt; &amp;errorVector)</div><div class="ttdoc">Добавление дуг в граф и подсчет степеней захода</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:512</div></div>
+<div class="ttc" id="aheaders_8h_html_a862d24e23d8544b1c80213413cc8e9fc"><div class="ttname"><a href="headers_8h.html#a862d24e23d8544b1c80213413cc8e9fc">findGraphType</a></div><div class="ttdeci">graphType findGraphType(const DirGraph &amp;graph, adjacencyList &amp;edgeDifference, int inDegrees[1000])</div><div class="ttdoc">определить тип графа</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:654</div></div>
+<div class="ttc" id="aheaders_8h_html_aa5410876102f5c4c410f2a4dbcf33532"><div class="ttname"><a href="headers_8h.html#aa5410876102f5c4c410f2a4dbcf33532">parseInnerLine</a></div><div class="ttdeci">void parseInnerLine(const std::string &amp;line, int lineNumber, std::vector&lt; int &gt; &amp;vertexList, std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edgeList, std::vector&lt; int &gt; &amp;edgeLineNumbers, bool &amp;edgesStarted, std::vector&lt; Error &gt; &amp;errorVector)</div><div class="ttdoc">Обработка одной строки внутреннего описания графа</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:456</div></div>
+<div class="ttc" id="aheaders_8h_html_ab431435b8c948ce4334e6b1c3bb5d8f5"><div class="ttname"><a href="headers_8h.html#ab431435b8c948ce4334e6b1c3bb5d8f5">tryParseInt</a></div><div class="ttdeci">bool tryParseInt(const std::string &amp;str, int &amp;result)</div><div class="ttdoc">Попытка распарсить строку как целое число</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:441</div></div>
+<div class="ttc" id="aheaders_8h_html_abe8e52bfa901d7a508084e909fc3249d"><div class="ttname"><a href="headers_8h.html#abe8e52bfa901d7a508084e909fc3249d">extractTokensFromString</a></div><div class="ttdeci">bool extractTokensFromString(std::string &amp;str, const std::string &amp;delimeter, std::vector&lt; std::string &gt; &amp;tokens)</div><div class="ttdoc">делит строку на токены по заданному разделителю</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:393</div></div>
+<div class="ttc" id="aheaders_8h_html_acf7b86c9b4a6117aa43bc5aee344d915"><div class="ttname"><a href="headers_8h.html#acf7b86c9b4a6117aa43bc5aee344d915">tryBuildTreeFromVertex</a></div><div class="ttdeci">graphType tryBuildTreeFromVertex(const DirGraph &amp;graph, int rootIdx, int vertexCount, adjacencyList &amp;edgeDifference)</div><div class="ttdoc">попытаться построить остовное дерево из указанной вершины</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:632</div></div>
+<div class="ttc" id="aheaders_8h_html_acfb23957a861227c7bc4e37c3f37b429"><div class="ttname"><a href="headers_8h.html#acfb23957a861227c7bc4e37c3f37b429">writeTextToFile</a></div><div class="ttdeci">int writeTextToFile(std::vector&lt; std::string &gt; &amp;outputText, std::string &amp;outputFileName, std::vector&lt; Error &gt; &amp;errorsVector)</div><div class="ttdoc">запись текста в файл</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:889</div></div>
+<div class="ttc" id="astructadjacency_list_html"><div class="ttname"><a href="structadjacency_list.html">adjacencyList</a></div><div class="ttdoc">список смежности</div><div class="ttdef"><b>Определения</b> headers.h:71</div></div>
+<div class="ttc" id="astructadjacency_list_html_a5cdc6a2c9f0faef95b0b74f8b0833996"><div class="ttname"><a href="structadjacency_list.html#a5cdc6a2c9f0faef95b0b74f8b0833996">adjacencyList::countOfVertices</a></div><div class="ttdeci">int countOfVertices</div><div class="ttdoc">количество вершин</div><div class="ttdef"><b>Определения</b> headers.h:75</div></div>
+<div class="ttc" id="astructadjacency_list_html_a9389bdf15afb4896f4480d6a308d59bb"><div class="ttname"><a href="structadjacency_list.html#a9389bdf15afb4896f4480d6a308d59bb">adjacencyList::isEmpty</a></div><div class="ttdeci">bool isEmpty()</div><div class="ttdoc">проверка на полное отсутствие дуг</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:12</div></div>
+<div class="ttc" id="astructadjacency_list_html_a9e5e04100d7defcdf332b58fc4e1a584"><div class="ttname"><a href="structadjacency_list.html#a9e5e04100d7defcdf332b58fc4e1a584">adjacencyList::neighbours</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; neighbours</div><div class="ttdoc">двуменый массив дуг</div><div class="ttdef"><b>Определения</b> headers.h:74</div></div>
+<div class="ttc" id="astructadjacency_list_html_aa75a0ef0b5b5836b168572df5708ec78"><div class="ttname"><a href="structadjacency_list.html#aa75a0ef0b5b5836b168572df5708ec78">adjacencyList::isEqualTo</a></div><div class="ttdeci">bool isEqualTo(const adjacencyList &amp;otherList)</div><div class="ttdoc">проверка на равенство двух списков</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:20</div></div>
+<div class="ttc" id="astructadjacency_list_html_aae4f3b782a9b161a3502993b2d677848"><div class="ttname"><a href="structadjacency_list.html#aae4f3b782a9b161a3502993b2d677848">adjacencyList::substract</a></div><div class="ttdeci">adjacencyList * substract(const adjacencyList &amp;subtrahend)</div><div class="ttdoc">нахождение разности двух списков</div><div class="ttdef"><b>Определения</b> ivanov_47_knpo.cpp:60</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a href="dir_bc79896f2fcf251bcba1d7e901b3e4b4.html">ivanov_47_knpo</a></li><li class="navelem"><a href="dir_df698c81c547ce8a122ebd7bcc3eab7c.html">ivanov_47_knpo</a></li><li class="navelem"><a href="headers_8h.html">headers.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

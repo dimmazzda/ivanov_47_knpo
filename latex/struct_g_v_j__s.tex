@@ -1,0 +1,579 @@
+\doxysection{Структура GVJ\+\_\+s}
+\hypertarget{struct_g_v_j__s}{}\label{struct_g_v_j__s}\index{GVJ\_s@{GVJ\_s}}
+
+
+{\ttfamily \+\#include $<$gvcjob.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_ab9f701ce9e14e718974579da1324ce93}{gvc}}
+\item 
+\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a0f52091bcfcaaaa0fd8e0d10cb4afff0}{next}}
+\item 
+\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_afa286d4946319b5194646ed12ede3172}{next\+\_\+active}}
+\item 
+\doxymbox{\hyperlink{gvcommon_8h_a682c74239da6b560c423ec936e7ed73a}{GVCOMMON\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a9ab244fc7b03a142509df51b8c15982c}{common}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a02731e816998f46b1511d36eff0260ec}{obj\+\_\+state\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a44ffb5f110d308af695e3a018e2f5a39}{obj}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_ae104856f5323392e3017dc430e7faae9}{input\+\_\+filename}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_ae1f25b3227421cb79a058d93f437b037}{graph\+\_\+index}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_aab3eab903c84af0622ba9128d7f21382}{layout\+\_\+type}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a3274d07a8e222e5b0dd980b2d2646353}{output\+\_\+filename}}
+\item 
+FILE \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_aa26a7ae90613b8ba8998ad9349e7e240}{output\+\_\+file}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a5d3304c201c3fb12979e490e21aa9d2f}{output\+\_\+data}}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{struct_g_v_j__s_a041d2bc4329f2bddc3a1542a3e253b9c}{output\+\_\+data\+\_\+allocated}}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{struct_g_v_j__s_a1d9620c65f1a4aaae2375a619f1733da}{output\+\_\+data\+\_\+position}}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_ae1ac152c41d1cbdad5985701a8ff520f}{output\+\_\+langname}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_a4218b0118ee56dcb61554b95df15eb92}{output\+\_\+lang}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a8788f43ffca88d5e43ed142d8e2d9fa1}{gvplugin\+\_\+active\+\_\+render\+\_\+t}} \doxymbox{\hyperlink{struct_g_v_j__s_a7c677fb2a5098a0a31317fab379003fb}{render}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a6bd180a852d179da562b0c365c59b631}{gvplugin\+\_\+active\+\_\+device\+\_\+t}} \doxymbox{\hyperlink{struct_g_v_j__s_a4cfcfe68c4de55779272f4018962d9b8}{device}}
+\item 
+\doxymbox{\hyperlink{structgvplugin__active__loadimage__t}{gvplugin\+\_\+active\+\_\+loadimage\+\_\+t}} \doxymbox{\hyperlink{struct_g_v_j__s_a3a61e329c5f6657a34601099afb4255c}{loadimage}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a0c978aacd50e6c6bb3a16577fc53c475}{gvdevice\+\_\+callbacks\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a420b1ebf4c6cd958dcb5f5cce9ac7691}{callbacks}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_aa5798205b1140cb5629d61c3e092683c}{device\+\_\+dpi}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_adfe0aeba13681e10b2681f86b5fbe4e1}{device\+\_\+sets\+\_\+dpi}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a764ccadd64f751ef3e62f964917514a4}{display}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_a275e59c24ae814353b5ae869ce4260bf}{screen}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a64830ffbd1737c52ae85d6d0fb22831c}{context}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_a6fcb01e109672547235272b31ff172de}{external\+\_\+context}}
+\item 
+unsigned char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a98d245ed2fbc50670e45adcf3f0d1864}{imagedata}}
+\begin{DoxyCompactList}\small\item\em location of imagedata \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_a229f318e0a40f64ee14fa48403b420b3}{flags}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_aca0d52f7d0ac15f43895a9563c169665}{num\+Layers}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_abb36098c4e1c4fa70723cfe2726ab05b}{layer\+Num}}
+\item 
+\doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{struct_g_v_j__s_a343ebd309080301793f10b20f5d06fd6}{pages\+Array\+Size}}
+\item 
+\doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{struct_g_v_j__s_aa149d3dc69fdbf0bd65e2e18385e3a6f}{pages\+Array\+First}}
+\item 
+\doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{struct_g_v_j__s_a8ff911bab3a238320610a9f5396dc4f8}{pages\+Array\+Major}}
+\item 
+\doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{struct_g_v_j__s_a822f7b6818edd83b3ee8372d11e2a0a1}{pages\+Array\+Minor}}
+\item 
+\doxymbox{\hyperlink{structpoint}{point}} \doxymbox{\hyperlink{struct_g_v_j__s_a72a37c77ccb37a2d3ca571321ce34790}{pages\+Array\+Elem}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_ad8d2942d661c53d0939a822e1e70b8d6}{num\+Pages}}
+\item 
+\doxymbox{\hyperlink{structboxf}{boxf}} \doxymbox{\hyperlink{struct_g_v_j__s_a467d9cb63aef2952d17062bbdd059ce4}{bb}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_af317a6ccf3a9c3bfd30f7acfebffc8c7}{pad}}
+\item 
+\doxymbox{\hyperlink{structboxf}{boxf}} \doxymbox{\hyperlink{struct_g_v_j__s_a27f43293e7efed88e0f3d6a659b5a808}{clip}}
+\item 
+\doxymbox{\hyperlink{structboxf}{boxf}} \doxymbox{\hyperlink{struct_g_v_j__s_ade176a7ef34192906b3a0d9a768c0531}{page\+Box}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a33f9ae349f2c963f8c5eb688dfbe7f2a}{page\+Size}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a97b66020d5c48e04cc8e7bfbdd92604a}{focus}}
+\item 
+double \doxymbox{\hyperlink{struct_g_v_j__s_aa7150d5a2b906bb0d55a3bbde37bd174}{zoom}}
+\item 
+int \doxymbox{\hyperlink{struct_g_v_j__s_a0454cd254446c0c665668753d3101fe0}{rotation}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a8730f8538f37b391b283cce40d8e22ce}{view}}
+\item 
+\doxymbox{\hyperlink{structboxf}{boxf}} \doxymbox{\hyperlink{struct_g_v_j__s_ab79b9bda0057e30579e491cf2e6043c7}{canvas\+Box}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a33e6ec2c386e79a238893dcfbfdf81cd}{margin}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a407924052cc9e202a9049a3459b8be25}{dpi}}
+\item 
+unsigned int \doxymbox{\hyperlink{struct_g_v_j__s_abe26e05b4aa822e54bce9fc43df91544}{width}}
+\item 
+unsigned int \doxymbox{\hyperlink{struct_g_v_j__s_aff7f63596a03a702ac81ced539ce9dd5}{height}}
+\item 
+\doxymbox{\hyperlink{structbox}{box}} \doxymbox{\hyperlink{struct_g_v_j__s_aa65400f688e5a55542d78a7e0895e77a}{page\+Bounding\+Box}}
+\item 
+\doxymbox{\hyperlink{structbox}{box}} \doxymbox{\hyperlink{struct_g_v_j__s_aa74767ae7fb43838cffab78cb070ecf3}{bounding\+Box}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_aaa5f8435371e394c3198ec28b2b64a38}{scale}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_af9b309b5c532cb1e9c99d0887e4afe1d}{translation}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a8ea411b5b762e464b77fdacaa9e3bc78}{devscale}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_a2bc9054f6a3f07db0be8e4eaf88219f4}{fit\+\_\+mode}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_a55083d3c29bc09710d23caad6ae743e4}{needs\+\_\+refresh}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_a0ad86a7130050c6f0b8947028815ea60}{click}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_acf717d82d1be7de712e4dd25d37f5adb}{has\+\_\+grown}}
+\item 
+bool \doxymbox{\hyperlink{struct_g_v_j__s_a721b108778a4d4f579a3e77bc423dfb1}{has\+\_\+been\+\_\+rendered}}
+\item 
+unsigned char \doxymbox{\hyperlink{struct_g_v_j__s_a34ef13bb3aca34988f182397a03ddf58}{button}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_a82e616ad7b025f257a223c88ce0106c7}{pointer}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \doxymbox{\hyperlink{struct_g_v_j__s_af84d07cd0a5249a05873b4112bb4817f}{oldpointer}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a140f56fd1588cdecdae80154732b1364}{current\+\_\+obj}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a9492bc5460537eb36a1afadaf259017a}{selected\+\_\+obj}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a495f696f150e1783c866bb962f1492ad}{active\+\_\+tooltip}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a498a5e939b92f7944e1c83a79f0fae99}{selected\+\_\+href}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_acb540b2b04de30dc35616a60d1c848cb}{window}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a6de1c57369bc42ccc482b87d6174bc20}{gvevent\+\_\+key\+\_\+binding\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a63b502b4c43204061b38859e2817ce36}{keybindings}}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{struct_g_v_j__s_af59990a1da32edae5e8f122998a199e5}{numkeys}}
+\item 
+void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_g_v_j__s_a6ee50f25f739863b055c8c0912f58ba1}{keycodes}}
+\end{DoxyCompactItemize}
+
+
+\label{struct_g_v_j__s_doc-variable-members}
+\Hypertarget{struct_g_v_j__s_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{struct_g_v_j__s_a495f696f150e1783c866bb962f1492ad}\index{GVJ\_s@{GVJ\_s}!active\_tooltip@{active\_tooltip}}
+\index{active\_tooltip@{active\_tooltip}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{active\_tooltip}{active\_tooltip}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a495f696f150e1783c866bb962f1492ad} 
+char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+active\+\_\+tooltip}
+
+\Hypertarget{struct_g_v_j__s_a467d9cb63aef2952d17062bbdd059ce4}\index{GVJ\_s@{GVJ\_s}!bb@{bb}}
+\index{bb@{bb}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{bb}{bb}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a467d9cb63aef2952d17062bbdd059ce4} 
+\doxymbox{\hyperlink{structboxf}{boxf}} GVJ\+\_\+s::\+bb}
+
+\Hypertarget{struct_g_v_j__s_aa74767ae7fb43838cffab78cb070ecf3}\index{GVJ\_s@{GVJ\_s}!boundingBox@{boundingBox}}
+\index{boundingBox@{boundingBox}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{boundingBox}{boundingBox}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa74767ae7fb43838cffab78cb070ecf3} 
+\doxymbox{\hyperlink{structbox}{box}} GVJ\+\_\+s::\+bounding\+Box}
+
+\Hypertarget{struct_g_v_j__s_a34ef13bb3aca34988f182397a03ddf58}\index{GVJ\_s@{GVJ\_s}!button@{button}}
+\index{button@{button}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a34ef13bb3aca34988f182397a03ddf58} 
+unsigned char GVJ\+\_\+s::\+button}
+
+\Hypertarget{struct_g_v_j__s_a420b1ebf4c6cd958dcb5f5cce9ac7691}\index{GVJ\_s@{GVJ\_s}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a420b1ebf4c6cd958dcb5f5cce9ac7691} 
+\doxymbox{\hyperlink{gvcjob_8h_a0c978aacd50e6c6bb3a16577fc53c475}{gvdevice\+\_\+callbacks\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+callbacks}
+
+\Hypertarget{struct_g_v_j__s_ab79b9bda0057e30579e491cf2e6043c7}\index{GVJ\_s@{GVJ\_s}!canvasBox@{canvasBox}}
+\index{canvasBox@{canvasBox}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{canvasBox}{canvasBox}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ab79b9bda0057e30579e491cf2e6043c7} 
+\doxymbox{\hyperlink{structboxf}{boxf}} GVJ\+\_\+s::\+canvas\+Box}
+
+\Hypertarget{struct_g_v_j__s_a0ad86a7130050c6f0b8947028815ea60}\index{GVJ\_s@{GVJ\_s}!click@{click}}
+\index{click@{click}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{click}{click}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a0ad86a7130050c6f0b8947028815ea60} 
+bool GVJ\+\_\+s::\+click}
+
+\Hypertarget{struct_g_v_j__s_a27f43293e7efed88e0f3d6a659b5a808}\index{GVJ\_s@{GVJ\_s}!clip@{clip}}
+\index{clip@{clip}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{clip}{clip}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a27f43293e7efed88e0f3d6a659b5a808} 
+\doxymbox{\hyperlink{structboxf}{boxf}} GVJ\+\_\+s::\+clip}
+
+\Hypertarget{struct_g_v_j__s_a9ab244fc7b03a142509df51b8c15982c}\index{GVJ\_s@{GVJ\_s}!common@{common}}
+\index{common@{common}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{common}{common}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a9ab244fc7b03a142509df51b8c15982c} 
+\doxymbox{\hyperlink{gvcommon_8h_a682c74239da6b560c423ec936e7ed73a}{GVCOMMON\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+common}
+
+\Hypertarget{struct_g_v_j__s_a64830ffbd1737c52ae85d6d0fb22831c}\index{GVJ\_s@{GVJ\_s}!context@{context}}
+\index{context@{context}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a64830ffbd1737c52ae85d6d0fb22831c} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+context}
+
+\Hypertarget{struct_g_v_j__s_a140f56fd1588cdecdae80154732b1364}\index{GVJ\_s@{GVJ\_s}!current\_obj@{current\_obj}}
+\index{current\_obj@{current\_obj}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{current\_obj}{current\_obj}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a140f56fd1588cdecdae80154732b1364} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+current\+\_\+obj}
+
+\Hypertarget{struct_g_v_j__s_a4cfcfe68c4de55779272f4018962d9b8}\index{GVJ\_s@{GVJ\_s}!device@{device}}
+\index{device@{device}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a4cfcfe68c4de55779272f4018962d9b8} 
+\doxymbox{\hyperlink{gvcjob_8h_a6bd180a852d179da562b0c365c59b631}{gvplugin\+\_\+active\+\_\+device\+\_\+t}} GVJ\+\_\+s::\+device}
+
+\Hypertarget{struct_g_v_j__s_aa5798205b1140cb5629d61c3e092683c}\index{GVJ\_s@{GVJ\_s}!device\_dpi@{device\_dpi}}
+\index{device\_dpi@{device\_dpi}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{device\_dpi}{device\_dpi}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa5798205b1140cb5629d61c3e092683c} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+device\+\_\+dpi}
+
+\Hypertarget{struct_g_v_j__s_adfe0aeba13681e10b2681f86b5fbe4e1}\index{GVJ\_s@{GVJ\_s}!device\_sets\_dpi@{device\_sets\_dpi}}
+\index{device\_sets\_dpi@{device\_sets\_dpi}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{device\_sets\_dpi}{device\_sets\_dpi}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_adfe0aeba13681e10b2681f86b5fbe4e1} 
+bool GVJ\+\_\+s::\+device\+\_\+sets\+\_\+dpi}
+
+\Hypertarget{struct_g_v_j__s_a8ea411b5b762e464b77fdacaa9e3bc78}\index{GVJ\_s@{GVJ\_s}!devscale@{devscale}}
+\index{devscale@{devscale}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{devscale}{devscale}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a8ea411b5b762e464b77fdacaa9e3bc78} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+devscale}
+
+\Hypertarget{struct_g_v_j__s_a764ccadd64f751ef3e62f964917514a4}\index{GVJ\_s@{GVJ\_s}!display@{display}}
+\index{display@{display}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a764ccadd64f751ef3e62f964917514a4} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+display}
+
+\Hypertarget{struct_g_v_j__s_a407924052cc9e202a9049a3459b8be25}\index{GVJ\_s@{GVJ\_s}!dpi@{dpi}}
+\index{dpi@{dpi}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{dpi}{dpi}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a407924052cc9e202a9049a3459b8be25} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+dpi}
+
+\Hypertarget{struct_g_v_j__s_a6fcb01e109672547235272b31ff172de}\index{GVJ\_s@{GVJ\_s}!external\_context@{external\_context}}
+\index{external\_context@{external\_context}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{external\_context}{external\_context}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a6fcb01e109672547235272b31ff172de} 
+bool GVJ\+\_\+s::\+external\+\_\+context}
+
+\Hypertarget{struct_g_v_j__s_a2bc9054f6a3f07db0be8e4eaf88219f4}\index{GVJ\_s@{GVJ\_s}!fit\_mode@{fit\_mode}}
+\index{fit\_mode@{fit\_mode}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{fit\_mode}{fit\_mode}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a2bc9054f6a3f07db0be8e4eaf88219f4} 
+bool GVJ\+\_\+s::\+fit\+\_\+mode}
+
+\Hypertarget{struct_g_v_j__s_a229f318e0a40f64ee14fa48403b420b3}\index{GVJ\_s@{GVJ\_s}!flags@{flags}}
+\index{flags@{flags}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a229f318e0a40f64ee14fa48403b420b3} 
+int GVJ\+\_\+s::\+flags}
+
+\Hypertarget{struct_g_v_j__s_a97b66020d5c48e04cc8e7bfbdd92604a}\index{GVJ\_s@{GVJ\_s}!focus@{focus}}
+\index{focus@{focus}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{focus}{focus}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a97b66020d5c48e04cc8e7bfbdd92604a} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+focus}
+
+\Hypertarget{struct_g_v_j__s_ae1f25b3227421cb79a058d93f437b037}\index{GVJ\_s@{GVJ\_s}!graph\_index@{graph\_index}}
+\index{graph\_index@{graph\_index}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{graph\_index}{graph\_index}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ae1f25b3227421cb79a058d93f437b037} 
+int GVJ\+\_\+s::\+graph\+\_\+index}
+
+\Hypertarget{struct_g_v_j__s_ab9f701ce9e14e718974579da1324ce93}\index{GVJ\_s@{GVJ\_s}!gvc@{gvc}}
+\index{gvc@{gvc}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{gvc}{gvc}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ab9f701ce9e14e718974579da1324ce93} 
+\doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+gvc}
+
+\Hypertarget{struct_g_v_j__s_a721b108778a4d4f579a3e77bc423dfb1}\index{GVJ\_s@{GVJ\_s}!has\_been\_rendered@{has\_been\_rendered}}
+\index{has\_been\_rendered@{has\_been\_rendered}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{has\_been\_rendered}{has\_been\_rendered}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a721b108778a4d4f579a3e77bc423dfb1} 
+bool GVJ\+\_\+s::\+has\+\_\+been\+\_\+rendered}
+
+\Hypertarget{struct_g_v_j__s_acf717d82d1be7de712e4dd25d37f5adb}\index{GVJ\_s@{GVJ\_s}!has\_grown@{has\_grown}}
+\index{has\_grown@{has\_grown}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{has\_grown}{has\_grown}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_acf717d82d1be7de712e4dd25d37f5adb} 
+bool GVJ\+\_\+s::\+has\+\_\+grown}
+
+\Hypertarget{struct_g_v_j__s_aff7f63596a03a702ac81ced539ce9dd5}\index{GVJ\_s@{GVJ\_s}!height@{height}}
+\index{height@{height}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aff7f63596a03a702ac81ced539ce9dd5} 
+unsigned int GVJ\+\_\+s::\+height}
+
+\Hypertarget{struct_g_v_j__s_a98d245ed2fbc50670e45adcf3f0d1864}\index{GVJ\_s@{GVJ\_s}!imagedata@{imagedata}}
+\index{imagedata@{imagedata}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{imagedata}{imagedata}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a98d245ed2fbc50670e45adcf3f0d1864} 
+unsigned char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+imagedata}
+
+\Hypertarget{struct_g_v_j__s_ae104856f5323392e3017dc430e7faae9}\index{GVJ\_s@{GVJ\_s}!input\_filename@{input\_filename}}
+\index{input\_filename@{input\_filename}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{input\_filename}{input\_filename}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ae104856f5323392e3017dc430e7faae9} 
+char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+input\+\_\+filename}
+
+\Hypertarget{struct_g_v_j__s_a63b502b4c43204061b38859e2817ce36}\index{GVJ\_s@{GVJ\_s}!keybindings@{keybindings}}
+\index{keybindings@{keybindings}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{keybindings}{keybindings}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a63b502b4c43204061b38859e2817ce36} 
+\doxymbox{\hyperlink{gvcjob_8h_a6de1c57369bc42ccc482b87d6174bc20}{gvevent\+\_\+key\+\_\+binding\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+keybindings}
+
+\Hypertarget{struct_g_v_j__s_a6ee50f25f739863b055c8c0912f58ba1}\index{GVJ\_s@{GVJ\_s}!keycodes@{keycodes}}
+\index{keycodes@{keycodes}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{keycodes}{keycodes}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a6ee50f25f739863b055c8c0912f58ba1} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+keycodes}
+
+\Hypertarget{struct_g_v_j__s_abb36098c4e1c4fa70723cfe2726ab05b}\index{GVJ\_s@{GVJ\_s}!layerNum@{layerNum}}
+\index{layerNum@{layerNum}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{layerNum}{layerNum}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_abb36098c4e1c4fa70723cfe2726ab05b} 
+int GVJ\+\_\+s::\+layer\+Num}
+
+\Hypertarget{struct_g_v_j__s_aab3eab903c84af0622ba9128d7f21382}\index{GVJ\_s@{GVJ\_s}!layout\_type@{layout\_type}}
+\index{layout\_type@{layout\_type}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{layout\_type}{layout\_type}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aab3eab903c84af0622ba9128d7f21382} 
+const char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+layout\+\_\+type}
+
+\Hypertarget{struct_g_v_j__s_a3a61e329c5f6657a34601099afb4255c}\index{GVJ\_s@{GVJ\_s}!loadimage@{loadimage}}
+\index{loadimage@{loadimage}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{loadimage}{loadimage}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a3a61e329c5f6657a34601099afb4255c} 
+\doxymbox{\hyperlink{structgvplugin__active__loadimage__t}{gvplugin\+\_\+active\+\_\+loadimage\+\_\+t}} GVJ\+\_\+s::\+loadimage}
+
+\Hypertarget{struct_g_v_j__s_a33e6ec2c386e79a238893dcfbfdf81cd}\index{GVJ\_s@{GVJ\_s}!margin@{margin}}
+\index{margin@{margin}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{margin}{margin}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a33e6ec2c386e79a238893dcfbfdf81cd} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+margin}
+
+\Hypertarget{struct_g_v_j__s_a55083d3c29bc09710d23caad6ae743e4}\index{GVJ\_s@{GVJ\_s}!needs\_refresh@{needs\_refresh}}
+\index{needs\_refresh@{needs\_refresh}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{needs\_refresh}{needs\_refresh}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a55083d3c29bc09710d23caad6ae743e4} 
+bool GVJ\+\_\+s::\+needs\+\_\+refresh}
+
+\Hypertarget{struct_g_v_j__s_a0f52091bcfcaaaa0fd8e0d10cb4afff0}\index{GVJ\_s@{GVJ\_s}!next@{next}}
+\index{next@{next}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a0f52091bcfcaaaa0fd8e0d10cb4afff0} 
+\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+next}
+
+\Hypertarget{struct_g_v_j__s_afa286d4946319b5194646ed12ede3172}\index{GVJ\_s@{GVJ\_s}!next\_active@{next\_active}}
+\index{next\_active@{next\_active}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{next\_active}{next\_active}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_afa286d4946319b5194646ed12ede3172} 
+\doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+next\+\_\+active}
+
+\Hypertarget{struct_g_v_j__s_af59990a1da32edae5e8f122998a199e5}\index{GVJ\_s@{GVJ\_s}!numkeys@{numkeys}}
+\index{numkeys@{numkeys}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{numkeys}{numkeys}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_af59990a1da32edae5e8f122998a199e5} 
+size\+\_\+t GVJ\+\_\+s::\+numkeys}
+
+\Hypertarget{struct_g_v_j__s_aca0d52f7d0ac15f43895a9563c169665}\index{GVJ\_s@{GVJ\_s}!numLayers@{numLayers}}
+\index{numLayers@{numLayers}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{numLayers}{numLayers}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aca0d52f7d0ac15f43895a9563c169665} 
+int GVJ\+\_\+s::\+num\+Layers}
+
+\Hypertarget{struct_g_v_j__s_ad8d2942d661c53d0939a822e1e70b8d6}\index{GVJ\_s@{GVJ\_s}!numPages@{numPages}}
+\index{numPages@{numPages}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{numPages}{numPages}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ad8d2942d661c53d0939a822e1e70b8d6} 
+int GVJ\+\_\+s::\+num\+Pages}
+
+\Hypertarget{struct_g_v_j__s_a44ffb5f110d308af695e3a018e2f5a39}\index{GVJ\_s@{GVJ\_s}!obj@{obj}}
+\index{obj@{obj}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{obj}{obj}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a44ffb5f110d308af695e3a018e2f5a39} 
+\doxymbox{\hyperlink{gvcjob_8h_a02731e816998f46b1511d36eff0260ec}{obj\+\_\+state\+\_\+t}}\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+obj}
+
+\Hypertarget{struct_g_v_j__s_af84d07cd0a5249a05873b4112bb4817f}\index{GVJ\_s@{GVJ\_s}!oldpointer@{oldpointer}}
+\index{oldpointer@{oldpointer}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{oldpointer}{oldpointer}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_af84d07cd0a5249a05873b4112bb4817f} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+oldpointer}
+
+\Hypertarget{struct_g_v_j__s_a5d3304c201c3fb12979e490e21aa9d2f}\index{GVJ\_s@{GVJ\_s}!output\_data@{output\_data}}
+\index{output\_data@{output\_data}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_data}{output\_data}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a5d3304c201c3fb12979e490e21aa9d2f} 
+char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+output\+\_\+data}
+
+\Hypertarget{struct_g_v_j__s_a041d2bc4329f2bddc3a1542a3e253b9c}\index{GVJ\_s@{GVJ\_s}!output\_data\_allocated@{output\_data\_allocated}}
+\index{output\_data\_allocated@{output\_data\_allocated}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_data\_allocated}{output\_data\_allocated}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a041d2bc4329f2bddc3a1542a3e253b9c} 
+size\+\_\+t GVJ\+\_\+s::\+output\+\_\+data\+\_\+allocated}
+
+\Hypertarget{struct_g_v_j__s_a1d9620c65f1a4aaae2375a619f1733da}\index{GVJ\_s@{GVJ\_s}!output\_data\_position@{output\_data\_position}}
+\index{output\_data\_position@{output\_data\_position}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_data\_position}{output\_data\_position}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a1d9620c65f1a4aaae2375a619f1733da} 
+size\+\_\+t GVJ\+\_\+s::\+output\+\_\+data\+\_\+position}
+
+\Hypertarget{struct_g_v_j__s_aa26a7ae90613b8ba8998ad9349e7e240}\index{GVJ\_s@{GVJ\_s}!output\_file@{output\_file}}
+\index{output\_file@{output\_file}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_file}{output\_file}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa26a7ae90613b8ba8998ad9349e7e240} 
+FILE\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+output\+\_\+file}
+
+\Hypertarget{struct_g_v_j__s_a3274d07a8e222e5b0dd980b2d2646353}\index{GVJ\_s@{GVJ\_s}!output\_filename@{output\_filename}}
+\index{output\_filename@{output\_filename}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_filename}{output\_filename}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a3274d07a8e222e5b0dd980b2d2646353} 
+const char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+output\+\_\+filename}
+
+\Hypertarget{struct_g_v_j__s_a4218b0118ee56dcb61554b95df15eb92}\index{GVJ\_s@{GVJ\_s}!output\_lang@{output\_lang}}
+\index{output\_lang@{output\_lang}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_lang}{output\_lang}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a4218b0118ee56dcb61554b95df15eb92} 
+int GVJ\+\_\+s::\+output\+\_\+lang}
+
+\Hypertarget{struct_g_v_j__s_ae1ac152c41d1cbdad5985701a8ff520f}\index{GVJ\_s@{GVJ\_s}!output\_langname@{output\_langname}}
+\index{output\_langname@{output\_langname}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{output\_langname}{output\_langname}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ae1ac152c41d1cbdad5985701a8ff520f} 
+const char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+output\+\_\+langname}
+
+\Hypertarget{struct_g_v_j__s_af317a6ccf3a9c3bfd30f7acfebffc8c7}\index{GVJ\_s@{GVJ\_s}!pad@{pad}}
+\index{pad@{pad}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pad}{pad}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_af317a6ccf3a9c3bfd30f7acfebffc8c7} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+pad}
+
+\Hypertarget{struct_g_v_j__s_aa65400f688e5a55542d78a7e0895e77a}\index{GVJ\_s@{GVJ\_s}!pageBoundingBox@{pageBoundingBox}}
+\index{pageBoundingBox@{pageBoundingBox}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pageBoundingBox}{pageBoundingBox}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa65400f688e5a55542d78a7e0895e77a} 
+\doxymbox{\hyperlink{structbox}{box}} GVJ\+\_\+s::\+page\+Bounding\+Box}
+
+\Hypertarget{struct_g_v_j__s_ade176a7ef34192906b3a0d9a768c0531}\index{GVJ\_s@{GVJ\_s}!pageBox@{pageBox}}
+\index{pageBox@{pageBox}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pageBox}{pageBox}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_ade176a7ef34192906b3a0d9a768c0531} 
+\doxymbox{\hyperlink{structboxf}{boxf}} GVJ\+\_\+s::\+page\+Box}
+
+\Hypertarget{struct_g_v_j__s_a72a37c77ccb37a2d3ca571321ce34790}\index{GVJ\_s@{GVJ\_s}!pagesArrayElem@{pagesArrayElem}}
+\index{pagesArrayElem@{pagesArrayElem}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pagesArrayElem}{pagesArrayElem}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a72a37c77ccb37a2d3ca571321ce34790} 
+\doxymbox{\hyperlink{structpoint}{point}} GVJ\+\_\+s::\+pages\+Array\+Elem}
+
+\Hypertarget{struct_g_v_j__s_aa149d3dc69fdbf0bd65e2e18385e3a6f}\index{GVJ\_s@{GVJ\_s}!pagesArrayFirst@{pagesArrayFirst}}
+\index{pagesArrayFirst@{pagesArrayFirst}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pagesArrayFirst}{pagesArrayFirst}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa149d3dc69fdbf0bd65e2e18385e3a6f} 
+\doxymbox{\hyperlink{structpoint}{point}} GVJ\+\_\+s::\+pages\+Array\+First}
+
+\Hypertarget{struct_g_v_j__s_a8ff911bab3a238320610a9f5396dc4f8}\index{GVJ\_s@{GVJ\_s}!pagesArrayMajor@{pagesArrayMajor}}
+\index{pagesArrayMajor@{pagesArrayMajor}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pagesArrayMajor}{pagesArrayMajor}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a8ff911bab3a238320610a9f5396dc4f8} 
+\doxymbox{\hyperlink{structpoint}{point}} GVJ\+\_\+s::\+pages\+Array\+Major}
+
+\Hypertarget{struct_g_v_j__s_a822f7b6818edd83b3ee8372d11e2a0a1}\index{GVJ\_s@{GVJ\_s}!pagesArrayMinor@{pagesArrayMinor}}
+\index{pagesArrayMinor@{pagesArrayMinor}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pagesArrayMinor}{pagesArrayMinor}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a822f7b6818edd83b3ee8372d11e2a0a1} 
+\doxymbox{\hyperlink{structpoint}{point}} GVJ\+\_\+s::\+pages\+Array\+Minor}
+
+\Hypertarget{struct_g_v_j__s_a343ebd309080301793f10b20f5d06fd6}\index{GVJ\_s@{GVJ\_s}!pagesArraySize@{pagesArraySize}}
+\index{pagesArraySize@{pagesArraySize}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pagesArraySize}{pagesArraySize}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a343ebd309080301793f10b20f5d06fd6} 
+\doxymbox{\hyperlink{structpoint}{point}} GVJ\+\_\+s::\+pages\+Array\+Size}
+
+\Hypertarget{struct_g_v_j__s_a33f9ae349f2c963f8c5eb688dfbe7f2a}\index{GVJ\_s@{GVJ\_s}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pageSize}{pageSize}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a33f9ae349f2c963f8c5eb688dfbe7f2a} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+page\+Size}
+
+\Hypertarget{struct_g_v_j__s_a82e616ad7b025f257a223c88ce0106c7}\index{GVJ\_s@{GVJ\_s}!pointer@{pointer}}
+\index{pointer@{pointer}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a82e616ad7b025f257a223c88ce0106c7} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+pointer}
+
+\Hypertarget{struct_g_v_j__s_a7c677fb2a5098a0a31317fab379003fb}\index{GVJ\_s@{GVJ\_s}!render@{render}}
+\index{render@{render}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{render}{render}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a7c677fb2a5098a0a31317fab379003fb} 
+\doxymbox{\hyperlink{gvcjob_8h_a8788f43ffca88d5e43ed142d8e2d9fa1}{gvplugin\+\_\+active\+\_\+render\+\_\+t}} GVJ\+\_\+s::\+render}
+
+\Hypertarget{struct_g_v_j__s_a0454cd254446c0c665668753d3101fe0}\index{GVJ\_s@{GVJ\_s}!rotation@{rotation}}
+\index{rotation@{rotation}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a0454cd254446c0c665668753d3101fe0} 
+int GVJ\+\_\+s::\+rotation}
+
+\Hypertarget{struct_g_v_j__s_aaa5f8435371e394c3198ec28b2b64a38}\index{GVJ\_s@{GVJ\_s}!scale@{scale}}
+\index{scale@{scale}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aaa5f8435371e394c3198ec28b2b64a38} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+scale}
+
+\Hypertarget{struct_g_v_j__s_a275e59c24ae814353b5ae869ce4260bf}\index{GVJ\_s@{GVJ\_s}!screen@{screen}}
+\index{screen@{screen}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{screen}{screen}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a275e59c24ae814353b5ae869ce4260bf} 
+int GVJ\+\_\+s::\+screen}
+
+\Hypertarget{struct_g_v_j__s_a498a5e939b92f7944e1c83a79f0fae99}\index{GVJ\_s@{GVJ\_s}!selected\_href@{selected\_href}}
+\index{selected\_href@{selected\_href}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{selected\_href}{selected\_href}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a498a5e939b92f7944e1c83a79f0fae99} 
+char\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+selected\+\_\+href}
+
+\Hypertarget{struct_g_v_j__s_a9492bc5460537eb36a1afadaf259017a}\index{GVJ\_s@{GVJ\_s}!selected\_obj@{selected\_obj}}
+\index{selected\_obj@{selected\_obj}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{selected\_obj}{selected\_obj}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a9492bc5460537eb36a1afadaf259017a} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+selected\+\_\+obj}
+
+\Hypertarget{struct_g_v_j__s_af9b309b5c532cb1e9c99d0887e4afe1d}\index{GVJ\_s@{GVJ\_s}!translation@{translation}}
+\index{translation@{translation}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{translation}{translation}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_af9b309b5c532cb1e9c99d0887e4afe1d} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+translation}
+
+\Hypertarget{struct_g_v_j__s_a8730f8538f37b391b283cce40d8e22ce}\index{GVJ\_s@{GVJ\_s}!view@{view}}
+\index{view@{view}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_a8730f8538f37b391b283cce40d8e22ce} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} GVJ\+\_\+s::\+view}
+
+\Hypertarget{struct_g_v_j__s_abe26e05b4aa822e54bce9fc43df91544}\index{GVJ\_s@{GVJ\_s}!width@{width}}
+\index{width@{width}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_abe26e05b4aa822e54bce9fc43df91544} 
+unsigned int GVJ\+\_\+s::\+width}
+
+\Hypertarget{struct_g_v_j__s_acb540b2b04de30dc35616a60d1c848cb}\index{GVJ\_s@{GVJ\_s}!window@{window}}
+\index{window@{window}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_acb540b2b04de30dc35616a60d1c848cb} 
+void\texorpdfstring{$\ast$}{*} GVJ\+\_\+s::\+window}
+
+\Hypertarget{struct_g_v_j__s_aa7150d5a2b906bb0d55a3bbde37bd174}\index{GVJ\_s@{GVJ\_s}!zoom@{zoom}}
+\index{zoom@{zoom}!GVJ\_s@{GVJ\_s}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily \label{struct_g_v_j__s_aa7150d5a2b906bb0d55a3bbde37bd174} 
+double GVJ\+\_\+s::\+zoom}
+
+
+
+Объявления и описания членов структуры находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+Graphviz/\+include/\+graphviz/\+\doxymbox{\hyperlink{gvcjob_8h}{gvcjob.\+h}}\end{DoxyCompactItemize}

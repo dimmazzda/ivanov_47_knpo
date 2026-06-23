@@ -1,0 +1,669 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+cdt.h}
+\hypertarget{cdt_8h}{}\label{cdt_8h}\index{Graphviz/include/graphviz/cdt.h@{Graphviz/include/graphviz/cdt.h}}
+
+
+container data types API  
+
+
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structdtlink__s__}{dtlink\+\_\+s\+\_\+}}
+\item 
+struct \doxymbox{\hyperlink{struct_dthold__t}{Dthold\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{struct_dtdata__t}{Dtdata\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structdtdisc__s__}{dtdisc\+\_\+s\+\_\+}}
+\item 
+struct \doxymbox{\hyperlink{structdt__s__}{dt\+\_\+s\+\_\+}}
+\item 
+struct \doxymbox{\hyperlink{struct_dtstat__t}{Dtstat\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a15ac0da44b92ccaf93b7087cb6cf641e}{CDT\+\_\+\+VERSION}}~20241216L
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}}~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a576667c8240d18ab1da1138a42fe9f7c}{DTDISC}}(dc,  ky,  sz,  lk,  mkf,  frf,  cmpf)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a257bbc9fe9828352a627cd1894030fbb}{DT\+\_\+\+SET}}~0000001     /\+\texorpdfstring{$\ast$}{*} set with unique elements     \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_ab540f5d778fb80e2f825295c8ddf3ba7}{DT\+\_\+\+OSET}}~0000004    /\+\texorpdfstring{$\ast$}{*} ordered set (self-\/adjusting tree) \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a1acc2651207891a7c4d5f525aef60bc8}{DT\+\_\+\+OBAG}}~0000010    /\+\texorpdfstring{$\ast$}{*} ordered multiset          \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_ab2ed93cb7ebee29498a079e553945b57}{DT\+\_\+\+METHODS}}~0000377 /\+\texorpdfstring{$\ast$}{*} all currently supported methods  \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a8f9920c0fee0b9f50e0a3b23abd3fd26}{DT\+\_\+\+INSERT}}~0000001  /\+\texorpdfstring{$\ast$}{*} insert object if not found      \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a645de2061b32735724c54c87fd5406a2}{DT\+\_\+\+DELETE}}~0000002  /\+\texorpdfstring{$\ast$}{*} delete object if found      \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a47e5c8e948e61a82e17cb2a4bdb6caa2}{DT\+\_\+\+SEARCH}}~0000004  /\+\texorpdfstring{$\ast$}{*} look for an object          \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a24fcda2658f9defe5bdb1984860d6240}{DT\+\_\+\+NEXT}}~0000010    /\+\texorpdfstring{$\ast$}{*} look for next element     \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a1bea70faf05bae1b0a7548ea96e1d511}{DT\+\_\+\+PREV}}~0000020    /\+\texorpdfstring{$\ast$}{*} find previous element     \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a9f480f0a639e6cbdfc740e489f034433}{DT\+\_\+\+RENEW}}~0000040   /\+\texorpdfstring{$\ast$}{*} renewing an object         \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a7001f50d84e9fedcf3f838636af4e62c}{DT\+\_\+\+CLEAR}}~0000100   /\+\texorpdfstring{$\ast$}{*} clearing all objects           \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_af046cba51c33a3931219518d4d1fcf99}{DT\+\_\+\+FIRST}}~0000200   /\+\texorpdfstring{$\ast$}{*} get first object           \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a192bea83114b73344ba3e9aab4c796e3}{DT\+\_\+\+LAST}}~0000400    /\+\texorpdfstring{$\ast$}{*} get last object           \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a01aca514b0b658320c893611601af6fa}{DT\+\_\+\+MATCH}}~0001000   /\+\texorpdfstring{$\ast$}{*} find object matching key       \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a4fa66c08b3e8b07466485051fa8c328e}{DT\+\_\+\+VSEARCH}}~0002000 /\+\texorpdfstring{$\ast$}{*} search using internal representation \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a93e662669aa505475549609079d64592}{DT\+\_\+\+DETACH}}~0010000  /\+\texorpdfstring{$\ast$}{*} detach an object from the dictionary    \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\+\_\+\+DT}}(dt)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a0c558c127c5b56704889617c71bcdf09}{\+\_\+\+DTDSC}}(dc,  ky,  sz,  lk,  cmpf)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a2366c9db1803f36d06e9e255fdbc6514}{\+\_\+\+DTLNK}}(o,  lk)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_acd1eb06f8072a9014ff132c253884d10}{\+\_\+\+DTOBJ}}(e,  lk)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a08a47e323cf4fdbd6f9d7bf0855ce5bf}{\+\_\+\+DTKEY}}(o,  ky,  sz)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_acb44035c01b5dd7ffc96abe81d755ed9}{\+\_\+\+DTCMP}}(k1,  k2,  cmpf,  sz)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a79be8633be14ddf98d3b356e0d40564d}{dtlink}}(d,  e)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a4717180611823cdf0c057abe1a45315a}{dtobj}}(d,  e)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a820a52522c7b2de0619a793965d7d881}{dtfinger}}(d)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_af954ac773cdfecad7ec5ac45e9a63a23}{dtfirst}}(d)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_af6ea20c91403c1ef595681fc6b6ac30f}{dtnext}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_aba7b1b643434cc61b1692a1875c6029b}{dtlast}}(d)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_aa6a97d9b70597ac2a34565f956ae3703}{dtprev}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a62014aa3c3853e006d7115b1dbfb81c9}{dtsearch}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a4dff83f53eb9464965da060528b4cae8}{dtmatch}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a8ac18f2bf845640bd563a1545d2e3675}{dtinsert}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_ad351bb07a26ff918184f200ee1d655cc}{dtdelete}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a6590446c25a135161df8945b8633b42a}{dtdetach}}(d,  o)
+\item 
+\+\#define \doxymbox{\hyperlink{cdt_8h_a5cc1e11802758b8c71f085d463393ef0}{dtclear}}(d)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{structdtlink__s__}{dtlink\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{structdtdisc__s__}{dtdisc\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{structdt__s__}{dt\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{structdt__s__}{dt\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\+\_\+t}}
+\item 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_ad302f306f9f77c3b1cfe6c0fdde2ffae}{Dtsearch\+\_\+f}}) (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}, int)
+\item 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a00198acc389f43f605c7c29567606f83}{Dtmake\+\_\+f}}) (void \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a42b4d6568328f598b0280b22c17d3573}{Dtfree\+\_\+f}}) (void \texorpdfstring{$\ast$}{*})
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a379a2fcb714d83cb4e1122f1e22b8bb0}{Dtcompar\+\_\+f}}) (void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_ae8ae3b9b0bb933f4b05923f28607feaa}{dtopen}} (\doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int \doxymbox{\hyperlink{cdt_8h_ab24362a4f1e5bd3d3dccb25199f34270}{dtclose}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_aa1e08b44b868cd6e22a6be6fadd0cbaa}{dtview}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_ae83316e035da221c8a2f61d1e531e0d4}{dtdisc}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}dt, \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a369970d5990f9a2a19ba566769affa68}{dtmethod}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a46b3a35c57ac634867000dcccf6afd78}{dtflatten}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a60ae78bab00270d3483f563980926821}{dtextract}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int \doxymbox{\hyperlink{cdt_8h_ae141b0f4f8a18fb671dab2fc4602c234}{dtrestore}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int \doxymbox{\hyperlink{cdt_8h_a1d4b83678cb2801ec406dc2836e3ce0d}{dtwalk}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, int(\texorpdfstring{$\ast$}{*})(void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}), void \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} void \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_ab997ab5fe58d2ec14780b2d82e5c3dd6}{dtrenew}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int \doxymbox{\hyperlink{cdt_8h_a70a5fc2d51f74f30b0a96228309b9873}{dtsize}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int \doxymbox{\hyperlink{cdt_8h_ad5ced427c61b36dcd86b13701106418e}{dtstat}} (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{struct_dtstat__t}{Dtstat\+\_\+t}} \texorpdfstring{$\ast$}{*}, int)
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} unsigned int \doxymbox{\hyperlink{cdt_8h_a75d95f2da18bdf82424eb16734354b9d}{dtstrhash}} (void \texorpdfstring{$\ast$}{*}, int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a43b7ee8085f341e219abd810b5861695}{Dtset}}
+\begin{DoxyCompactList}\small\item\em set with unique elements \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_ac17f2af349b0d37468df9c3890d65765}{Dtoset}}
+\begin{DoxyCompactList}\small\item\em ordered set (self-\/adjusting tree) \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_a5b337ee2980fe41be2e220c0102d9898}{Dtobag}}
+\begin{DoxyCompactList}\small\item\em ordered multiset \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{cdt_8h_aaf0578dbe76c834fcda77fdb36f90743}{Dttree}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+{\bfseries{CDT}} manages run-\/time dictionaries using standard container data types:\+ unordered set/\+multiset, ordered set/\+multiset, list, and stack.
+
+\href{https://graphviz.org/pdf/cdt.3.pdf}{\texttt{man 3 cdt}} 
+
+\label{cdt_8h_doc-define-members}
+\Hypertarget{cdt_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}\index{cdt.h@{cdt.h}!\_DT@{\_DT}}
+\index{\_DT@{\_DT}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DT}{\_DT}}
+{\footnotesize\ttfamily \label{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655} 
+\+\#define \+\_\+\+DT(\begin{DoxyParamCaption}\item[{}]{dt}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\_t}}\ *)(dt))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_acb44035c01b5dd7ffc96abe81d755ed9}\index{cdt.h@{cdt.h}!\_DTCMP@{\_DTCMP}}
+\index{\_DTCMP@{\_DTCMP}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DTCMP}{\_DTCMP}}
+{\footnotesize\ttfamily \label{cdt_8h_acb44035c01b5dd7ffc96abe81d755ed9} 
+\+\#define \+\_\+\+DTCMP(\begin{DoxyParamCaption}\item[{}]{k1}{, }\item[{}]{k2}{, }\item[{}]{cmpf}{, }\item[{}]{sz}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(cmpf\ ?\ (cmpf)(k1,\ k2)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ :\ (sz\ <=\ 0\ ?\ strcmp(k1,\ k2)\ :\ memcmp(k1,\ k2,\ (size\_t)sz)))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a0c558c127c5b56704889617c71bcdf09}\index{cdt.h@{cdt.h}!\_DTDSC@{\_DTDSC}}
+\index{\_DTDSC@{\_DTDSC}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DTDSC}{\_DTDSC}}
+{\footnotesize\ttfamily \label{cdt_8h_a0c558c127c5b56704889617c71bcdf09} 
+\+\#define \+\_\+\+DTDSC(\begin{DoxyParamCaption}\item[{}]{dc}{, }\item[{}]{ky}{, }\item[{}]{sz}{, }\item[{}]{lk}{, }\item[{}]{cmpf}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(ky\ =\ dc-\/>key,\ sz\ =\ dc-\/>size,\ lk\ =\ dc-\/>link,\ cmpf\ =\ dc-\/>comparf)}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a08a47e323cf4fdbd6f9d7bf0855ce5bf}\index{cdt.h@{cdt.h}!\_DTKEY@{\_DTKEY}}
+\index{\_DTKEY@{\_DTKEY}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DTKEY}{\_DTKEY}}
+{\footnotesize\ttfamily \label{cdt_8h_a08a47e323cf4fdbd6f9d7bf0855ce5bf} 
+\+\#define \+\_\+\+DTKEY(\begin{DoxyParamCaption}\item[{}]{o}{, }\item[{}]{ky}{, }\item[{}]{sz}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keywordtype}{void}\ *)(sz\ <\ 0\ ?\ *((\textcolor{keywordtype}{char}\ **)((\textcolor{keywordtype}{char}\ *)(o)\ +\ ky))\ :\ ((\textcolor{keywordtype}{char}\ *)(o)\ +\ ky))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a2366c9db1803f36d06e9e255fdbc6514}\index{cdt.h@{cdt.h}!\_DTLNK@{\_DTLNK}}
+\index{\_DTLNK@{\_DTLNK}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DTLNK}{\_DTLNK}}
+{\footnotesize\ttfamily \label{cdt_8h_a2366c9db1803f36d06e9e255fdbc6514} 
+\+\#define \+\_\+\+DTLNK(\begin{DoxyParamCaption}\item[{}]{o}{, }\item[{}]{lk}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *)((\textcolor{keywordtype}{char}\ *)(o)\ +\ lk))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_acd1eb06f8072a9014ff132c253884d10}\index{cdt.h@{cdt.h}!\_DTOBJ@{\_DTOBJ}}
+\index{\_DTOBJ@{\_DTOBJ}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{\_DTOBJ}{\_DTOBJ}}
+{\footnotesize\ttfamily \label{cdt_8h_acd1eb06f8072a9014ff132c253884d10} 
+\+\#define \+\_\+\+DTOBJ(\begin{DoxyParamCaption}\item[{}]{e}{, }\item[{}]{lk}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(lk\ <\ 0\ ?\ ((\doxymbox{\hyperlink{struct_dthold__t}{Dthold\_t}}\ *)(e))-\/>obj\ :\ (\textcolor{keywordtype}{void}\ *)((\textcolor{keywordtype}{char}\ *)(e)\ -\/\ lk))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a907f3780dfe2def28491c21efee0418d}\index{cdt.h@{cdt.h}!CDT\_API@{CDT\_API}}
+\index{CDT\_API@{CDT\_API}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{CDT\_API}{CDT\_API}}
+{\footnotesize\ttfamily \label{cdt_8h_a907f3780dfe2def28491c21efee0418d} 
+\+\#define CDT\+\_\+\+API~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a15ac0da44b92ccaf93b7087cb6cf641e}\index{cdt.h@{cdt.h}!CDT\_VERSION@{CDT\_VERSION}}
+\index{CDT\_VERSION@{CDT\_VERSION}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{CDT\_VERSION}{CDT\_VERSION}}
+{\footnotesize\ttfamily \label{cdt_8h_a15ac0da44b92ccaf93b7087cb6cf641e} 
+\+\#define CDT\+\_\+\+VERSION~20241216L}
+
+\Hypertarget{cdt_8h_a7001f50d84e9fedcf3f838636af4e62c}\index{cdt.h@{cdt.h}!DT\_CLEAR@{DT\_CLEAR}}
+\index{DT\_CLEAR@{DT\_CLEAR}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_CLEAR}{DT\_CLEAR}}
+{\footnotesize\ttfamily \label{cdt_8h_a7001f50d84e9fedcf3f838636af4e62c} 
+\+\#define DT\+\_\+\+CLEAR~0000100   /\+\texorpdfstring{$\ast$}{*} clearing all objects           \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a645de2061b32735724c54c87fd5406a2}\index{cdt.h@{cdt.h}!DT\_DELETE@{DT\_DELETE}}
+\index{DT\_DELETE@{DT\_DELETE}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_DELETE}{DT\_DELETE}}
+{\footnotesize\ttfamily \label{cdt_8h_a645de2061b32735724c54c87fd5406a2} 
+\+\#define DT\+\_\+\+DELETE~0000002  /\+\texorpdfstring{$\ast$}{*} delete object if found      \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a93e662669aa505475549609079d64592}\index{cdt.h@{cdt.h}!DT\_DETACH@{DT\_DETACH}}
+\index{DT\_DETACH@{DT\_DETACH}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_DETACH}{DT\_DETACH}}
+{\footnotesize\ttfamily \label{cdt_8h_a93e662669aa505475549609079d64592} 
+\+\#define DT\+\_\+\+DETACH~0010000  /\+\texorpdfstring{$\ast$}{*} detach an object from the dictionary    \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_af046cba51c33a3931219518d4d1fcf99}\index{cdt.h@{cdt.h}!DT\_FIRST@{DT\_FIRST}}
+\index{DT\_FIRST@{DT\_FIRST}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_FIRST}{DT\_FIRST}}
+{\footnotesize\ttfamily \label{cdt_8h_af046cba51c33a3931219518d4d1fcf99} 
+\+\#define DT\+\_\+\+FIRST~0000200   /\+\texorpdfstring{$\ast$}{*} get first object           \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a8f9920c0fee0b9f50e0a3b23abd3fd26}\index{cdt.h@{cdt.h}!DT\_INSERT@{DT\_INSERT}}
+\index{DT\_INSERT@{DT\_INSERT}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_INSERT}{DT\_INSERT}}
+{\footnotesize\ttfamily \label{cdt_8h_a8f9920c0fee0b9f50e0a3b23abd3fd26} 
+\+\#define DT\+\_\+\+INSERT~0000001  /\+\texorpdfstring{$\ast$}{*} insert object if not found      \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a192bea83114b73344ba3e9aab4c796e3}\index{cdt.h@{cdt.h}!DT\_LAST@{DT\_LAST}}
+\index{DT\_LAST@{DT\_LAST}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_LAST}{DT\_LAST}}
+{\footnotesize\ttfamily \label{cdt_8h_a192bea83114b73344ba3e9aab4c796e3} 
+\+\#define DT\+\_\+\+LAST~0000400    /\+\texorpdfstring{$\ast$}{*} get last object           \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a01aca514b0b658320c893611601af6fa}\index{cdt.h@{cdt.h}!DT\_MATCH@{DT\_MATCH}}
+\index{DT\_MATCH@{DT\_MATCH}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_MATCH}{DT\_MATCH}}
+{\footnotesize\ttfamily \label{cdt_8h_a01aca514b0b658320c893611601af6fa} 
+\+\#define DT\+\_\+\+MATCH~0001000   /\+\texorpdfstring{$\ast$}{*} find object matching key       \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_ab2ed93cb7ebee29498a079e553945b57}\index{cdt.h@{cdt.h}!DT\_METHODS@{DT\_METHODS}}
+\index{DT\_METHODS@{DT\_METHODS}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_METHODS}{DT\_METHODS}}
+{\footnotesize\ttfamily \label{cdt_8h_ab2ed93cb7ebee29498a079e553945b57} 
+\+\#define DT\+\_\+\+METHODS~0000377 /\+\texorpdfstring{$\ast$}{*} all currently supported methods  \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a24fcda2658f9defe5bdb1984860d6240}\index{cdt.h@{cdt.h}!DT\_NEXT@{DT\_NEXT}}
+\index{DT\_NEXT@{DT\_NEXT}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_NEXT}{DT\_NEXT}}
+{\footnotesize\ttfamily \label{cdt_8h_a24fcda2658f9defe5bdb1984860d6240} 
+\+\#define DT\+\_\+\+NEXT~0000010    /\+\texorpdfstring{$\ast$}{*} look for next element     \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a1acc2651207891a7c4d5f525aef60bc8}\index{cdt.h@{cdt.h}!DT\_OBAG@{DT\_OBAG}}
+\index{DT\_OBAG@{DT\_OBAG}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_OBAG}{DT\_OBAG}}
+{\footnotesize\ttfamily \label{cdt_8h_a1acc2651207891a7c4d5f525aef60bc8} 
+\+\#define DT\+\_\+\+OBAG~0000010    /\+\texorpdfstring{$\ast$}{*} ordered multiset          \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_ab540f5d778fb80e2f825295c8ddf3ba7}\index{cdt.h@{cdt.h}!DT\_OSET@{DT\_OSET}}
+\index{DT\_OSET@{DT\_OSET}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_OSET}{DT\_OSET}}
+{\footnotesize\ttfamily \label{cdt_8h_ab540f5d778fb80e2f825295c8ddf3ba7} 
+\+\#define DT\+\_\+\+OSET~0000004    /\+\texorpdfstring{$\ast$}{*} ordered set (self-\/adjusting tree) \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a1bea70faf05bae1b0a7548ea96e1d511}\index{cdt.h@{cdt.h}!DT\_PREV@{DT\_PREV}}
+\index{DT\_PREV@{DT\_PREV}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_PREV}{DT\_PREV}}
+{\footnotesize\ttfamily \label{cdt_8h_a1bea70faf05bae1b0a7548ea96e1d511} 
+\+\#define DT\+\_\+\+PREV~0000020    /\+\texorpdfstring{$\ast$}{*} find previous element     \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a9f480f0a639e6cbdfc740e489f034433}\index{cdt.h@{cdt.h}!DT\_RENEW@{DT\_RENEW}}
+\index{DT\_RENEW@{DT\_RENEW}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_RENEW}{DT\_RENEW}}
+{\footnotesize\ttfamily \label{cdt_8h_a9f480f0a639e6cbdfc740e489f034433} 
+\+\#define DT\+\_\+\+RENEW~0000040   /\+\texorpdfstring{$\ast$}{*} renewing an object         \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a47e5c8e948e61a82e17cb2a4bdb6caa2}\index{cdt.h@{cdt.h}!DT\_SEARCH@{DT\_SEARCH}}
+\index{DT\_SEARCH@{DT\_SEARCH}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_SEARCH}{DT\_SEARCH}}
+{\footnotesize\ttfamily \label{cdt_8h_a47e5c8e948e61a82e17cb2a4bdb6caa2} 
+\+\#define DT\+\_\+\+SEARCH~0000004  /\+\texorpdfstring{$\ast$}{*} look for an object          \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a257bbc9fe9828352a627cd1894030fbb}\index{cdt.h@{cdt.h}!DT\_SET@{DT\_SET}}
+\index{DT\_SET@{DT\_SET}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_SET}{DT\_SET}}
+{\footnotesize\ttfamily \label{cdt_8h_a257bbc9fe9828352a627cd1894030fbb} 
+\+\#define DT\+\_\+\+SET~0000001     /\+\texorpdfstring{$\ast$}{*} set with unique elements     \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a4fa66c08b3e8b07466485051fa8c328e}\index{cdt.h@{cdt.h}!DT\_VSEARCH@{DT\_VSEARCH}}
+\index{DT\_VSEARCH@{DT\_VSEARCH}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DT\_VSEARCH}{DT\_VSEARCH}}
+{\footnotesize\ttfamily \label{cdt_8h_a4fa66c08b3e8b07466485051fa8c328e} 
+\+\#define DT\+\_\+\+VSEARCH~0002000 /\+\texorpdfstring{$\ast$}{*} search using internal representation \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{cdt_8h_a5cc1e11802758b8c71f085d463393ef0}\index{cdt.h@{cdt.h}!dtclear@{dtclear}}
+\index{dtclear@{dtclear}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtclear}{dtclear}}
+{\footnotesize\ttfamily \label{cdt_8h_a5cc1e11802758b8c71f085d463393ef0} 
+\+\#define dtclear(\begin{DoxyParamCaption}\item[{}]{d}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(0),\ \doxymbox{\hyperlink{cdt_8h_a7001f50d84e9fedcf3f838636af4e62c}{DT\_CLEAR}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_ad351bb07a26ff918184f200ee1d655cc}\index{cdt.h@{cdt.h}!dtdelete@{dtdelete}}
+\index{dtdelete@{dtdelete}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtdelete}{dtdelete}}
+{\footnotesize\ttfamily \label{cdt_8h_ad351bb07a26ff918184f200ee1d655cc} 
+\+\#define dtdelete(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a645de2061b32735724c54c87fd5406a2}{DT\_DELETE}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a6590446c25a135161df8945b8633b42a}\index{cdt.h@{cdt.h}!dtdetach@{dtdetach}}
+\index{dtdetach@{dtdetach}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtdetach}{dtdetach}}
+{\footnotesize\ttfamily \label{cdt_8h_a6590446c25a135161df8945b8633b42a} 
+\+\#define dtdetach(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a93e662669aa505475549609079d64592}{DT\_DETACH}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a576667c8240d18ab1da1138a42fe9f7c}\index{cdt.h@{cdt.h}!DTDISC@{DTDISC}}
+\index{DTDISC@{DTDISC}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{DTDISC}{DTDISC}}
+{\footnotesize\ttfamily \label{cdt_8h_a576667c8240d18ab1da1138a42fe9f7c} 
+\+\#define DTDISC(\begin{DoxyParamCaption}\item[{}]{dc}{, }\item[{}]{ky}{, }\item[{}]{sz}{, }\item[{}]{lk}{, }\item[{}]{mkf}{, }\item[{}]{frf}{, }\item[{}]{cmpf}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((dc)-\/>key\ =\ (ky),\ (dc)-\/>size\ =\ (sz),\ (dc)-\/>link\ =\ (lk),\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ (dc)-\/>makef\ =\ (mkf),\ (dc)-\/>freef\ =\ (frf),\ (dc)-\/>comparf\ =\ (cmpf))}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a820a52522c7b2de0619a793965d7d881}\index{cdt.h@{cdt.h}!dtfinger@{dtfinger}}
+\index{dtfinger@{dtfinger}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtfinger}{dtfinger}}
+{\footnotesize\ttfamily \label{cdt_8h_a820a52522c7b2de0619a793965d7d881} 
+\+\#define dtfinger(\begin{DoxyParamCaption}\item[{}]{d}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>data.here\ ?\ \doxymbox{\hyperlink{cdt_8h_a4717180611823cdf0c057abe1a45315a}{dtobj}}((d),\ \doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>data.here)\ :\ NULL)}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_af954ac773cdfecad7ec5ac45e9a63a23}\index{cdt.h@{cdt.h}!dtfirst@{dtfirst}}
+\index{dtfirst@{dtfirst}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtfirst}{dtfirst}}
+{\footnotesize\ttfamily \label{cdt_8h_af954ac773cdfecad7ec5ac45e9a63a23} 
+\+\#define dtfirst(\begin{DoxyParamCaption}\item[{}]{d}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(0),\ \doxymbox{\hyperlink{cdt_8h_af046cba51c33a3931219518d4d1fcf99}{DT\_FIRST}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a8ac18f2bf845640bd563a1545d2e3675}\index{cdt.h@{cdt.h}!dtinsert@{dtinsert}}
+\index{dtinsert@{dtinsert}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtinsert}{dtinsert}}
+{\footnotesize\ttfamily \label{cdt_8h_a8ac18f2bf845640bd563a1545d2e3675} 
+\+\#define dtinsert(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a8f9920c0fee0b9f50e0a3b23abd3fd26}{DT\_INSERT}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_aba7b1b643434cc61b1692a1875c6029b}\index{cdt.h@{cdt.h}!dtlast@{dtlast}}
+\index{dtlast@{dtlast}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtlast}{dtlast}}
+{\footnotesize\ttfamily \label{cdt_8h_aba7b1b643434cc61b1692a1875c6029b} 
+\+\#define dtlast(\begin{DoxyParamCaption}\item[{}]{d}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(0),\ \doxymbox{\hyperlink{cdt_8h_a192bea83114b73344ba3e9aab4c796e3}{DT\_LAST}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a79be8633be14ddf98d3b356e0d40564d}\index{cdt.h@{cdt.h}!dtlink@{dtlink}}
+\index{dtlink@{dtlink}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtlink}{dtlink}}
+{\footnotesize\ttfamily \label{cdt_8h_a79be8633be14ddf98d3b356e0d40564d} 
+\+\#define dtlink(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *)(e))-\/>right)}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a4dff83f53eb9464965da060528b4cae8}\index{cdt.h@{cdt.h}!dtmatch@{dtmatch}}
+\index{dtmatch@{dtmatch}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtmatch}{dtmatch}}
+{\footnotesize\ttfamily \label{cdt_8h_a4dff83f53eb9464965da060528b4cae8} 
+\+\#define dtmatch(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a01aca514b0b658320c893611601af6fa}{DT\_MATCH}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_af6ea20c91403c1ef595681fc6b6ac30f}\index{cdt.h@{cdt.h}!dtnext@{dtnext}}
+\index{dtnext@{dtnext}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtnext}{dtnext}}
+{\footnotesize\ttfamily \label{cdt_8h_af6ea20c91403c1ef595681fc6b6ac30f} 
+\+\#define dtnext(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a24fcda2658f9defe5bdb1984860d6240}{DT\_NEXT}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a4717180611823cdf0c057abe1a45315a}\index{cdt.h@{cdt.h}!dtobj@{dtobj}}
+\index{dtobj@{dtobj}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtobj}{dtobj}}
+{\footnotesize\ttfamily \label{cdt_8h_a4717180611823cdf0c057abe1a45315a} 
+\+\#define dtobj(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{e}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{cdt_8h_acd1eb06f8072a9014ff132c253884d10}{\_DTOBJ}}((e),\ \doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>disc-\/>link)}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_aa6a97d9b70597ac2a34565f956ae3703}\index{cdt.h@{cdt.h}!dtprev@{dtprev}}
+\index{dtprev@{dtprev}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtprev}{dtprev}}
+{\footnotesize\ttfamily \label{cdt_8h_aa6a97d9b70597ac2a34565f956ae3703} 
+\+\#define dtprev(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a1bea70faf05bae1b0a7548ea96e1d511}{DT\_PREV}})}
+
+\end{DoxyCode}
+\Hypertarget{cdt_8h_a62014aa3c3853e006d7115b1dbfb81c9}\index{cdt.h@{cdt.h}!dtsearch@{dtsearch}}
+\index{dtsearch@{dtsearch}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtsearch}{dtsearch}}
+{\footnotesize\ttfamily \label{cdt_8h_a62014aa3c3853e006d7115b1dbfb81c9} 
+\+\#define dtsearch(\begin{DoxyParamCaption}\item[{}]{d}{, }\item[{}]{o}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(*(\doxymbox{\hyperlink{cdt_8h_a71abe7f6cb4cc1c3892cc2e3f7798655}{\_DT}}(d)-\/>searchf))((d),\ (\textcolor{keywordtype}{void}\ *)(o),\ \doxymbox{\hyperlink{cdt_8h_a47e5c8e948e61a82e17cb2a4bdb6caa2}{DT\_SEARCH}})}
+
+\end{DoxyCode}
+
+
+\label{cdt_8h_doc-typedef-members}
+\Hypertarget{cdt_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}\index{cdt.h@{cdt.h}!Dict\_t@{Dict\_t}}
+\index{Dict\_t@{Dict\_t}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dict\_t}{Dict\_t}}
+{\footnotesize\ttfamily \label{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58} 
+typedef struct \doxymbox{\hyperlink{structdt__s__}{dt\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\+\_\+t}}}
+
+\Hypertarget{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}\index{cdt.h@{cdt.h}!Dt\_t@{Dt\_t}}
+\index{Dt\_t@{Dt\_t}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dt\_t}{Dt\_t}}
+{\footnotesize\ttfamily \label{cdt_8h_aa4cb2c86c90226c860518e4cf924a173} 
+typedef struct \doxymbox{\hyperlink{structdt__s__}{dt\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}}}
+
+\Hypertarget{cdt_8h_a379a2fcb714d83cb4e1122f1e22b8bb0}\index{cdt.h@{cdt.h}!Dtcompar\_f@{Dtcompar\_f}}
+\index{Dtcompar\_f@{Dtcompar\_f}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtcompar\_f}{Dtcompar\_f}}
+{\footnotesize\ttfamily \label{cdt_8h_a379a2fcb714d83cb4e1122f1e22b8bb0} 
+typedef int(\texorpdfstring{$\ast$}{*} Dtcompar\+\_\+f) (void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{cdt_8h_a59a978b45171686ba566b57638fd371f}\index{cdt.h@{cdt.h}!Dtdisc\_t@{Dtdisc\_t}}
+\index{Dtdisc\_t@{Dtdisc\_t}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtdisc\_t}{Dtdisc\_t}}
+{\footnotesize\ttfamily \label{cdt_8h_a59a978b45171686ba566b57638fd371f} 
+typedef struct \doxymbox{\hyperlink{structdtdisc__s__}{dtdisc\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}}}
+
+\Hypertarget{cdt_8h_a42b4d6568328f598b0280b22c17d3573}\index{cdt.h@{cdt.h}!Dtfree\_f@{Dtfree\_f}}
+\index{Dtfree\_f@{Dtfree\_f}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtfree\_f}{Dtfree\_f}}
+{\footnotesize\ttfamily \label{cdt_8h_a42b4d6568328f598b0280b22c17d3573} 
+typedef void(\texorpdfstring{$\ast$}{*} Dtfree\+\_\+f) (void \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}\index{cdt.h@{cdt.h}!Dtlink\_t@{Dtlink\_t}}
+\index{Dtlink\_t@{Dtlink\_t}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtlink\_t}{Dtlink\_t}}
+{\footnotesize\ttfamily \label{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6} 
+typedef struct \doxymbox{\hyperlink{structdtlink__s__}{dtlink\+\_\+s\+\_\+}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}}}
+
+\Hypertarget{cdt_8h_a00198acc389f43f605c7c29567606f83}\index{cdt.h@{cdt.h}!Dtmake\_f@{Dtmake\_f}}
+\index{Dtmake\_f@{Dtmake\_f}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtmake\_f}{Dtmake\_f}}
+{\footnotesize\ttfamily \label{cdt_8h_a00198acc389f43f605c7c29567606f83} 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Dtmake\+\_\+f) (void \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{cdt_8h_ad302f306f9f77c3b1cfe6c0fdde2ffae}\index{cdt.h@{cdt.h}!Dtsearch\_f@{Dtsearch\_f}}
+\index{Dtsearch\_f@{Dtsearch\_f}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtsearch\_f}{Dtsearch\_f}}
+{\footnotesize\ttfamily \label{cdt_8h_ad302f306f9f77c3b1cfe6c0fdde2ffae} 
+typedef void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Dtsearch\+\_\+f) (\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}, int)}
+
+
+
+\label{cdt_8h_doc-func-members}
+\Hypertarget{cdt_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{cdt_8h_ab24362a4f1e5bd3d3dccb25199f34270}\index{cdt.h@{cdt.h}!dtclose@{dtclose}}
+\index{dtclose@{dtclose}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtclose()}{dtclose()}}
+{\footnotesize\ttfamily \label{cdt_8h_ab24362a4f1e5bd3d3dccb25199f34270} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int dtclose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_ae83316e035da221c8a2f61d1e531e0d4}\index{cdt.h@{cdt.h}!dtdisc@{dtdisc}}
+\index{dtdisc@{dtdisc}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtdisc()}{dtdisc()}}
+{\footnotesize\ttfamily \label{cdt_8h_ae83316e035da221c8a2f61d1e531e0d4} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*} dtdisc (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{dt}{, }\item[{\doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a60ae78bab00270d3483f563980926821}\index{cdt.h@{cdt.h}!dtextract@{dtextract}}
+\index{dtextract@{dtextract}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtextract()}{dtextract()}}
+{\footnotesize\ttfamily \label{cdt_8h_a60ae78bab00270d3483f563980926821} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} dtextract (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a46b3a35c57ac634867000dcccf6afd78}\index{cdt.h@{cdt.h}!dtflatten@{dtflatten}}
+\index{dtflatten@{dtflatten}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtflatten()}{dtflatten()}}
+{\footnotesize\ttfamily \label{cdt_8h_a46b3a35c57ac634867000dcccf6afd78} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*} dtflatten (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a369970d5990f9a2a19ba566769affa68}\index{cdt.h@{cdt.h}!dtmethod@{dtmethod}}
+\index{dtmethod@{dtmethod}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtmethod()}{dtmethod()}}
+{\footnotesize\ttfamily \label{cdt_8h_a369970d5990f9a2a19ba566769affa68} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*} dtmethod (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_ae8ae3b9b0bb933f4b05923f28607feaa}\index{cdt.h@{cdt.h}!dtopen@{dtopen}}
+\index{dtopen@{dtopen}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtopen()}{dtopen()}}
+{\footnotesize\ttfamily \label{cdt_8h_ae8ae3b9b0bb933f4b05923f28607feaa} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*} dtopen (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_a59a978b45171686ba566b57638fd371f}{Dtdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_ab997ab5fe58d2ec14780b2d82e5c3dd6}\index{cdt.h@{cdt.h}!dtrenew@{dtrenew}}
+\index{dtrenew@{dtrenew}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtrenew()}{dtrenew()}}
+{\footnotesize\ttfamily \label{cdt_8h_ab997ab5fe58d2ec14780b2d82e5c3dd6} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} void \texorpdfstring{$\ast$}{*} dtrenew (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_ae141b0f4f8a18fb671dab2fc4602c234}\index{cdt.h@{cdt.h}!dtrestore@{dtrestore}}
+\index{dtrestore@{dtrestore}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtrestore()}{dtrestore()}}
+{\footnotesize\ttfamily \label{cdt_8h_ae141b0f4f8a18fb671dab2fc4602c234} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int dtrestore (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a70a5fc2d51f74f30b0a96228309b9873}\index{cdt.h@{cdt.h}!dtsize@{dtsize}}
+\index{dtsize@{dtsize}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtsize()}{dtsize()}}
+{\footnotesize\ttfamily \label{cdt_8h_a70a5fc2d51f74f30b0a96228309b9873} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int dtsize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_ad5ced427c61b36dcd86b13701106418e}\index{cdt.h@{cdt.h}!dtstat@{dtstat}}
+\index{dtstat@{dtstat}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtstat()}{dtstat()}}
+{\footnotesize\ttfamily \label{cdt_8h_ad5ced427c61b36dcd86b13701106418e} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int dtstat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{struct_dtstat__t}{Dtstat\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{int}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a75d95f2da18bdf82424eb16734354b9d}\index{cdt.h@{cdt.h}!dtstrhash@{dtstrhash}}
+\index{dtstrhash@{dtstrhash}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtstrhash()}{dtstrhash()}}
+{\footnotesize\ttfamily \label{cdt_8h_a75d95f2da18bdf82424eb16734354b9d} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} unsigned int dtstrhash (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{}{, }\item[{int}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_aa1e08b44b868cd6e22a6be6fadd0cbaa}\index{cdt.h@{cdt.h}!dtview@{dtview}}
+\index{dtview@{dtview}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtview()}{dtview()}}
+{\footnotesize\ttfamily \label{cdt_8h_aa1e08b44b868cd6e22a6be6fadd0cbaa} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*} dtview (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{cdt_8h_a1d4b83678cb2801ec406dc2836e3ce0d}\index{cdt.h@{cdt.h}!dtwalk@{dtwalk}}
+\index{dtwalk@{dtwalk}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{dtwalk()}{dtwalk()}}
+{\footnotesize\ttfamily \label{cdt_8h_a1d4b83678cb2801ec406dc2836e3ce0d} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} int dtwalk (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{cdt_8h_aa4cb2c86c90226c860518e4cf924a173}{Dt\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{int(\texorpdfstring{$\ast$}{*}}]{~}{)(void \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}), }\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+
+
+\label{cdt_8h_doc-var-members}
+\Hypertarget{cdt_8h_doc-var-members}
+\doxysubsection{Переменные}
+\Hypertarget{cdt_8h_a5b337ee2980fe41be2e220c0102d9898}\index{cdt.h@{cdt.h}!Dtobag@{Dtobag}}
+\index{Dtobag@{Dtobag}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtobag}{Dtobag}}
+{\footnotesize\ttfamily \label{cdt_8h_a5b337ee2980fe41be2e220c0102d9898} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}}\texorpdfstring{$\ast$}{*} Dtobag\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{cdt_8h_ac17f2af349b0d37468df9c3890d65765}\index{cdt.h@{cdt.h}!Dtoset@{Dtoset}}
+\index{Dtoset@{Dtoset}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtoset}{Dtoset}}
+{\footnotesize\ttfamily \label{cdt_8h_ac17f2af349b0d37468df9c3890d65765} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}}\texorpdfstring{$\ast$}{*} Dtoset\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{cdt_8h_a43b7ee8085f341e219abd810b5861695}\index{cdt.h@{cdt.h}!Dtset@{Dtset}}
+\index{Dtset@{Dtset}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dtset}{Dtset}}
+{\footnotesize\ttfamily \label{cdt_8h_a43b7ee8085f341e219abd810b5861695} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}}\texorpdfstring{$\ast$}{*} Dtset\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{cdt_8h_aaf0578dbe76c834fcda77fdb36f90743}\index{cdt.h@{cdt.h}!Dttree@{Dttree}}
+\index{Dttree@{Dttree}!cdt.h@{cdt.h}}
+\doxysubsubsection{\texorpdfstring{Dttree}{Dttree}}
+{\footnotesize\ttfamily \label{cdt_8h_aaf0578dbe76c834fcda77fdb36f90743} 
+\doxymbox{\hyperlink{cdt_8h_a907f3780dfe2def28491c21efee0418d}{CDT\+\_\+\+API}} \doxymbox{\hyperlink{struct_dtmethod__t}{Dtmethod\+\_\+t}}\texorpdfstring{$\ast$}{*} Dttree\hspace{0.3cm}{\ttfamily [extern]}}
+

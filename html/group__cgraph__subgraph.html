@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: subgraphs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__cgraph__subgraph.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">subgraphs <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__object.html">objects</a> &raquo; <a class="el" href="group__cgraph__graph.html">graphs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga2ca7f6ee15e2ed41b86b715d776ab230" id="r_ga2ca7f6ee15e2ed41b86b715d776ab230"><td class="memItemLeft">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga2ca7f6ee15e2ed41b86b715d776ab230">agsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, char *name, int cflag)</td></tr>
+<tr class="memitem:ga1c19df4ad0b6221455f56230f7ef3252" id="r_ga1c19df4ad0b6221455f56230f7ef3252"><td class="memItemLeft">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga1c19df4ad0b6221455f56230f7ef3252">agidsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__object.html#ga496f55d8b021184f08084dcecc4724ec">IDTYPE</a> id)</td></tr>
+<tr class="memdesc:ga1c19df4ad0b6221455f56230f7ef3252"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <br /></td></tr>
+<tr class="memitem:gabcd8466586e7f9dafd183b291427231f" id="r_gabcd8466586e7f9dafd183b291427231f"><td class="memItemLeft">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gabcd8466586e7f9dafd183b291427231f">agfstsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g)</td></tr>
+<tr class="memitem:gae997729f968b4ecc622d1a5eedf2b785" id="r_gae997729f968b4ecc622d1a5eedf2b785"><td class="memItemLeft">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gae997729f968b4ecc622d1a5eedf2b785">agnxtsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *subg)</td></tr>
+<tr class="memitem:gaf7bfbe45c1682b483146507823af9007" id="r_gaf7bfbe45c1682b483146507823af9007"><td class="memItemLeft">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaf7bfbe45c1682b483146507823af9007">agparent</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g)</td></tr>
+<tr class="memitem:gab1c83c6ec6158127af8d718352cea710" id="r_gab1c83c6ec6158127af8d718352cea710"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gab1c83c6ec6158127af8d718352cea710">agdelsubg</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *sub)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>A "main" or "root" graph defines a namespace for a collection of graph objects (subgraphs, nodes, edges) and their attributes. Objects may be named by unique strings or by integer IDs.</p>
+<p><a class="el" href="#ga2ca7f6ee15e2ed41b86b715d776ab230" title="agsubg">agsubg</a> finds or creates a subgraph by name.</p>
+<p><a class="el" href="#ga1c19df4ad0b6221455f56230f7ef3252" title="agidsubg">agidsubg</a> allows a programmer to specify the subgraph by a unique integer ID.</p>
+<p>A new subgraph is initially empty and is of the same kind as its parent. Nested subgraph trees may be created. A subgraph's name is only interpreted relative to its parent.</p>
+<p>A program can scan subgraphs under a given graph using <a class="el" href="#gabcd8466586e7f9dafd183b291427231f" title="agfstsubg">agfstsubg</a> and <a class="el" href="#gae997729f968b4ecc622d1a5eedf2b785" title="agnxtsubg">agnxtsubg</a>.</p>
+<p>A subgraph is deleted with <a class="el" href="#gab1c83c6ec6158127af8d718352cea710" title="agdelsubg">agdelsubg</a> (or <a class="el" href="group__cgraph__graph.html#ga3ee45d1d24d5cd3752fa361aea60d17e" title="agclose">agclose</a>).</p>
+<p>The <a class="el" href="#gaf7bfbe45c1682b483146507823af9007" title="agparent">agparent</a> function returns the immediate parent graph of a subgraph, or itself if the graph is already a root graph. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="gab1c83c6ec6158127af8d718352cea710" name="gab1c83c6ec6158127af8d718352cea710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1c83c6ec6158127af8d718352cea710">&#9670;&#160;</a></span>agdelsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agdelsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>sub</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabcd8466586e7f9dafd183b291427231f" name="gabcd8466586e7f9dafd183b291427231f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabcd8466586e7f9dafd183b291427231f">&#9670;&#160;</a></span>agfstsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> * agfstsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1c19df4ad0b6221455f56230f7ef3252" name="ga1c19df4ad0b6221455f56230f7ef3252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c19df4ad0b6221455f56230f7ef3252">&#9670;&#160;</a></span>agidsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> * agidsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__cgraph__object.html#ga496f55d8b021184f08084dcecc4724ec">IDTYPE</a></td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae997729f968b4ecc622d1a5eedf2b785" name="gae997729f968b4ecc622d1a5eedf2b785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae997729f968b4ecc622d1a5eedf2b785">&#9670;&#160;</a></span>agnxtsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> * agnxtsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf7bfbe45c1682b483146507823af9007" name="gaf7bfbe45c1682b483146507823af9007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7bfbe45c1682b483146507823af9007">&#9670;&#160;</a></span>agparent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> * agparent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2ca7f6ee15e2ed41b86b715d776ab230" name="ga2ca7f6ee15e2ed41b86b715d776ab230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ca7f6ee15e2ed41b86b715d776ab230">&#9670;&#160;</a></span>agsubg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API <a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> * agsubg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cflag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+\doxysection{gvcext.\+h}
+\hypertarget{gvcext_8h_source}{}\label{gvcext_8h_source}\index{Graphviz/include/graphviz/gvcext.h@{Graphviz/include/graphviz/gvcext.h}}
+\doxymbox{\hyperlink{gvcext_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ Common\ header\ used\ by\ both\ clients\ and\ plugins\ */}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ Define\ an\ apis\ array\ of\ name\ strings\ using\ an\ enumerated\ api\_t\ as\ index.}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ The\ enumerated\ type\ is\ defined\ here.\ \ The\ apis\ array\ is}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ inititialized\ in\ gvplugin.c\ by\ redefining\ ELEM\ and\ reinvoking\ APIS.}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ APIS\ ELEM(render)\ ELEM(layout)\ ELEM(textlayout)\ ELEM(device)\ ELEM(loadimage)}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ Define\ api\_t\ using\ names\ based\ on\ the\ plugin\ names\ with\ API\_\ prefixed.}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ ELEM(x)\ API\_\#\#x,}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \doxymbox{\hyperlink{gvcext_8h_abdbe963515b51a66d3c4bedcdac270d8}{APIS}}\ \}\ \doxymbox{\hyperlink{gvcext_8h_ae124da9cae472afed2b4d3c7ef2ff574}{api\_t}};\ \textcolor{comment}{/*\ API\_render,\ API\_layout,\ ...\ */}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#undef\ ELEM}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_g_v_j__s}{GVJ\_s}}\ \doxymbox{\hyperlink{gvcext_8h_a9a257c86c8fde7d294726bece96315e5}{GVJ\_t}};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }GVG\_s\ \doxymbox{\hyperlink{gvcext_8h_af6bd0e091413025a4d30fa7eca90b641}{GVG\_t}};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }GVC\_s\ \doxymbox{\hyperlink{gvcext_8h_ad6cf1b9d460390425d8f423380c2a7ed}{GVC\_t}};\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structlt__symlist__t_a2261f1d6864e82f62f61ec8ec248aa4f}{name}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}*\ \doxymbox{\hyperlink{structlt__symlist__t_a72296d014346c3eddcab6f06cdbac935}{address}};}
+\DoxyCodeLine{00042\ \ \ \ \ \}\ \doxymbox{\hyperlink{structlt__symlist__t}{lt\_symlist\_t}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }gvplugin\_available\_s\ \doxymbox{\hyperlink{gvcext_8h_aae45d96279062a78e72e7c861600fd0e}{gvplugin\_available\_t}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#if\ !defined(LTDL\_H)}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{structlt__symlist__t}{lt\_symlist\_t}}\ \doxymbox{\hyperlink{gvcext_8h_a3722c3fc0f0be8654c675764e4bb7ef5}{lt\_preloaded\_symbols}}[];}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00051\ \}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,977 @@
+\doxysubsubsubsection{graphs }
+\hypertarget{group__cgraph__graph}{}\label{group__cgraph__graph}\index{graphs@{graphs}}
+\doxysubsubsubsubsubsection*{Разделы}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__cgraph__callback}{callbacks}}
+\begin{DoxyCompactList}\small\item\em virtual methods of initialization, modification, and finalization of graph objects \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{group__cgraph__subgraph}{subgraphs}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agdesc__s}{Agdesc\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em graph descriptor \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agdstate__s}{Agdstate\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em client state (closures) \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agclos__s}{Agclos\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em shared resources for \doxylink{struct_agraph__s}{Agraph\+\_\+s} \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agraph__s}{Agraph\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em graph or subgraph \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7c4edc4279776663c7e0b498d32415f5}{GD\+\_\+parent}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa9a0f0587dc81585dd7e19bb37714b19}{GD\+\_\+level}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga304761d6ec6f0b12b6cef1b38d79fa37}{GD\+\_\+drawing}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga901aff57f7816b36b6e5f362c05ac2fe}{GD\+\_\+bb}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf0cd94956a3b6c26beb40b95ec14757f}{GD\+\_\+gvc}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gadbe1e26fccc1a3d1c0a78767510e81c6}{GD\+\_\+cleanup}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaeffb42301531359813d5128f243e1124}{GD\+\_\+dist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga67b630030eacd3cb15dd2433b3a863f5}{GD\+\_\+alg}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga518eb6cf9ba677d9d0315c492dfd582a}{GD\+\_\+border}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga5668dcc358c7a2113b24345806c6f59e}{GD\+\_\+clust}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaad569cb58d6640eb26ac9f5a41553e9f}{GD\+\_\+dotroot}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gad268734b2d2575d8e2af51e432748e2e}{GD\+\_\+comp}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf859a2be52c0c4c885468241f9f50cdc}{GD\+\_\+exact\+\_\+ranksep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gabeb0f73d67e12a8f52c28954d050e1f7}{GD\+\_\+expanded}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga75bb1b66668ed3d3aeb42c85a4448e9a}{GD\+\_\+flags}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf93c88eaf216675d42119439ec9e2a1e}{GD\+\_\+gui\+\_\+state}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae0c0e1c4d187901d851cb77143519def}{GD\+\_\+charset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga52c46fcffcec9b43212679e86a9c1339}{GD\+\_\+has\+\_\+labels}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7c90d72524042801c0d132672570dee5}{GD\+\_\+has\+\_\+images}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7d659b279f968f7560a4e95e8b92f388}{GD\+\_\+has\+\_\+flat\+\_\+edges}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae62105b8f1d3ab03b871a1ffb41b60cc}{GD\+\_\+ht1}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa9979ba2b7959ac3390f5a7a0f46bb9d}{GD\+\_\+ht2}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga5c6afbddcdf2311322cebb07fd21f3dd}{GD\+\_\+installed}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gad73f51275d97d6aa889862b23950a99b}{GD\+\_\+label}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gac660bf2efd1a9f02e8746d5c80b0491a}{GD\+\_\+leader}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga1d10b818e1ff69372cfb54ee0d469129}{GD\+\_\+rankdir2}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaee757533265228f46df219420f410273}{GD\+\_\+rankdir}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf280ec2b75bc7b00e15e6141c2b3eae7}{GD\+\_\+flip}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gab5f0385f4efbc680994dd7d1739c61b7}{GD\+\_\+realrankdir}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga0858386b028d64c0dbd191691a8be606}{GD\+\_\+realflip}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gae1191ea3f43a6549bc00200e704fd27f}{GD\+\_\+ln}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga20984ce193d2d03b0aa85804f60aa1ae}{GD\+\_\+maxrank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga248701de5d81b4dc60f61ef53811ad18}{GD\+\_\+maxset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga0573f46f314d41f1dd3a93b5d5222d6d}{GD\+\_\+minrank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9f72a5780dc55294ba4fc9dc43dd4cfc}{GD\+\_\+minset}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga6d5d20d8a29ad9536bc3529b64225e24}{GD\+\_\+minrep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga44fd0386ed15c0c89a6e8862d6cc3f42}{GD\+\_\+maxrep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga8732c573a23261f021563cb7889aec18}{GD\+\_\+move}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaa6e5b25c4fec6eb18582a419b9ddd3fc}{GD\+\_\+n\+\_\+cluster}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gac7982d95b7f3e2f3aa38108cdaeca3dd}{GD\+\_\+ndim}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf8d793183ce04d75e7ebb59c98136d59}{GD\+\_\+odim}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf5f0296e7ebe013231a5337c3f346a64}{GD\+\_\+neato\+\_\+nlist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga90f9dcaed839738a87a918807c5b4a44}{GD\+\_\+nlist}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gada22146929ee5be60bd05c07159d6c9e}{GD\+\_\+nodesep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga7ab3956e95627faa3d013a0b7e9be148}{GD\+\_\+rank}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf4f41d9fcc3048ec7cf65ccfe26839b0}{GD\+\_\+rankleader}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gafa6fda64bce7de9858030b3bd9ff577c}{GD\+\_\+ranksep}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga6c9ffdd449bb900a5f2a45f26d494b68}{GD\+\_\+rn}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaac3b0f6b60c2b5c3eed9a0cfe90ecb66}{GD\+\_\+set\+\_\+type}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga96143dd3e09b113a765ea9bbe944f72f}{GD\+\_\+label\+\_\+pos}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9be6d03614124729a3f3ecc18851f7b7}{GD\+\_\+showboxes}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga25ebc4c1126df610cfe80ccc012e00a2}{GD\+\_\+fontnames}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_gaf3ac828276b6b469e04bcc567ab4fbe5}{GD\+\_\+spring}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga589a746bbed5d188d6965e7337bf1a75}{GD\+\_\+sum\+\_\+t}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga9432fa3c11bc7b85dd20bf70a6aaf5d9}{GD\+\_\+t}}(g)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__graph_ga086057e1ffaf626987d480a024641c6e}{agfindgraphattr}}(g,  a)
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agraph__s}{Agraph\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em graph, subgraph (or hyperedge) \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agdesc__s}{Agdesc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em graph descriptor \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agdstate__s}{Agdstate\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03}{Agdstate\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em client state (closures) \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agclos__s}{Agclos\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e}{Agclos\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em common fields for graph/\+subgs \end{DoxyCompactList}\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b}{agobjfn\+\_\+t}}) (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}} \texorpdfstring{$\ast$}{*}obj, void \texorpdfstring{$\ast$}{*}arg)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga1346110b9185ce19585655259ebd3f54}{agobjupdfn\+\_\+t}}) (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}} \texorpdfstring{$\ast$}{*}obj, void \texorpdfstring{$\ast$}{*}arg, \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\+\_\+t}} \texorpdfstring{$\ast$}{*}sym)
+\item 
+typedef struct Agraphinfo\+\_\+t \doxymbox{\hyperlink{group__cgraph__graph_gac63023c62153c35af49136637b3918ca}{Agraphinfo\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga85e142c9c453c325cb722ef837d11dd2}{agopen}} (char \texorpdfstring{$\ast$}{*}name, \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} desc, \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}disc)
+\begin{DoxyCompactList}\small\item\em creates a new graph with the given name and kind \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e}{agclose}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em deletes a graph, freeing its associated storage \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_gaa713e98b20e21ae1d9d95303981b38e5}{agread}} (void \texorpdfstring{$\ast$}{*}chan, \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}disc)
+\begin{DoxyCompactList}\small\item\em constructs a new graph \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga4903073e6680f7882f371865875e639e}{agmemread}} (const char \texorpdfstring{$\ast$}{*}cp)
+\begin{DoxyCompactList}\small\item\em reads a graph from the input string \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga966226a22960e8ceac4e7f1c6517828b}{agmemconcat}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}cp)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__graph_ga2a5e1d8106f8c9792c5761af60713a76}{agconcat}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, const char \texorpdfstring{$\ast$}{*}filename, void \texorpdfstring{$\ast$}{*}chan, \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}disc)
+\begin{DoxyCompactList}\small\item\em merges the file contents with a pre-\/existing graph \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga43c761e45309ba677ca59d8296312483}{agwrite}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, void \texorpdfstring{$\ast$}{*}chan)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga5cd1939122326a203075ca855ff6daf2}{agisdirected}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga7ed846573acf4555f86ab5c452fc640e}{agisundirected}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga21defec3b5fab9f37781d0909a7d6bde}{agisstrict}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__graph_ga45a62bb0e62e5ee18c6e5167648cd923}{agissimple}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__graph_ga8a3475f98b683496724e35f34a56c8c5}{Agdirected}}
+\begin{DoxyCompactList}\small\item\em directed \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__graph_ga90a816224a1dfa7732f06ce0a9770220}{Agstrictdirected}}
+\begin{DoxyCompactList}\small\item\em strict directed. A strict graph cannot have multi-\/edges or self-\/arcs. \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__graph_ga13c8f3f32c6538e915cdc7784dd09bba}{Agundirected}}
+\begin{DoxyCompactList}\small\item\em undirected \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} \doxymbox{\hyperlink{group__cgraph__graph_gadb18db99d62071a35bec738edc2b0636}{Agstrictundirected}}
+\begin{DoxyCompactList}\small\item\em strict undirected \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+The functions \doxylink{group__cgraph__graph_ga5cd1939122326a203075ca855ff6daf2}{agisdirected}, \doxylink{group__cgraph__graph_ga7ed846573acf4555f86ab5c452fc640e}{agisundirected}, \doxylink{group__cgraph__graph_ga21defec3b5fab9f37781d0909a7d6bde}{agisstrict}, and \doxylink{group__cgraph__graph_ga45a62bb0e62e5ee18c6e5167648cd923}{agissimple} can be used to query if a graph is directed, undirected, strict (at most one edge with a given tail and head), or simple (strict with no loops), respectively.
+
+\label{group__cgraph__graph_doc-define-members}
+\Hypertarget{group__cgraph__graph_doc-define-members}
+\doxysubsubsubsubsection{Макросы}
+\Hypertarget{group__cgraph__graph_ga086057e1ffaf626987d480a024641c6e}\index{graphs@{graphs}!agfindgraphattr@{agfindgraphattr}}
+\index{agfindgraphattr@{agfindgraphattr}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agfindgraphattr}{agfindgraphattr}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga086057e1ffaf626987d480a024641c6e} 
+\+\#define agfindgraphattr(\begin{DoxyParamCaption}\item[{}]{g}{, }\item[{}]{a}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__attr_ga7523d2c3b09fce2d069cc8f98f6b156f}{agattr\_text}}(g,\doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}},a,NULL))}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga67b630030eacd3cb15dd2433b3a863f5}\index{graphs@{graphs}!GD\_alg@{GD\_alg}}
+\index{GD\_alg@{GD\_alg}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_alg}{GD\_alg}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga67b630030eacd3cb15dd2433b3a863f5} 
+\+\#define GD\+\_\+alg(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>alg)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga901aff57f7816b36b6e5f362c05ac2fe}\index{graphs@{graphs}!GD\_bb@{GD\_bb}}
+\index{GD\_bb@{GD\_bb}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_bb}{GD\_bb}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga901aff57f7816b36b6e5f362c05ac2fe} 
+\+\#define GD\+\_\+bb(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>bb)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga518eb6cf9ba677d9d0315c492dfd582a}\index{graphs@{graphs}!GD\_border@{GD\_border}}
+\index{GD\_border@{GD\_border}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_border}{GD\_border}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga518eb6cf9ba677d9d0315c492dfd582a} 
+\+\#define GD\+\_\+border(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>border)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gae0c0e1c4d187901d851cb77143519def}\index{graphs@{graphs}!GD\_charset@{GD\_charset}}
+\index{GD\_charset@{GD\_charset}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_charset}{GD\_charset}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gae0c0e1c4d187901d851cb77143519def} 
+\+\#define GD\+\_\+charset(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>charset)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gadbe1e26fccc1a3d1c0a78767510e81c6}\index{graphs@{graphs}!GD\_cleanup@{GD\_cleanup}}
+\index{GD\_cleanup@{GD\_cleanup}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_cleanup}{GD\_cleanup}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gadbe1e26fccc1a3d1c0a78767510e81c6} 
+\+\#define GD\+\_\+cleanup(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>cleanup)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga5668dcc358c7a2113b24345806c6f59e}\index{graphs@{graphs}!GD\_clust@{GD\_clust}}
+\index{GD\_clust@{GD\_clust}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_clust}{GD\_clust}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga5668dcc358c7a2113b24345806c6f59e} 
+\+\#define GD\+\_\+clust(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>clust)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gad268734b2d2575d8e2af51e432748e2e}\index{graphs@{graphs}!GD\_comp@{GD\_comp}}
+\index{GD\_comp@{GD\_comp}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_comp}{GD\_comp}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gad268734b2d2575d8e2af51e432748e2e} 
+\+\#define GD\+\_\+comp(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>comp)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaeffb42301531359813d5128f243e1124}\index{graphs@{graphs}!GD\_dist@{GD\_dist}}
+\index{GD\_dist@{GD\_dist}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_dist}{GD\_dist}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaeffb42301531359813d5128f243e1124} 
+\+\#define GD\+\_\+dist(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>dist)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaad569cb58d6640eb26ac9f5a41553e9f}\index{graphs@{graphs}!GD\_dotroot@{GD\_dotroot}}
+\index{GD\_dotroot@{GD\_dotroot}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_dotroot}{GD\_dotroot}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaad569cb58d6640eb26ac9f5a41553e9f} 
+\+\#define GD\+\_\+dotroot(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>dotroot)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga304761d6ec6f0b12b6cef1b38d79fa37}\index{graphs@{graphs}!GD\_drawing@{GD\_drawing}}
+\index{GD\_drawing@{GD\_drawing}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_drawing}{GD\_drawing}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga304761d6ec6f0b12b6cef1b38d79fa37} 
+\+\#define GD\+\_\+drawing(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>drawing)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf859a2be52c0c4c885468241f9f50cdc}\index{graphs@{graphs}!GD\_exact\_ranksep@{GD\_exact\_ranksep}}
+\index{GD\_exact\_ranksep@{GD\_exact\_ranksep}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_exact\_ranksep}{GD\_exact\_ranksep}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf859a2be52c0c4c885468241f9f50cdc} 
+\+\#define GD\+\_\+exact\+\_\+ranksep(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>exact\_ranksep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gabeb0f73d67e12a8f52c28954d050e1f7}\index{graphs@{graphs}!GD\_expanded@{GD\_expanded}}
+\index{GD\_expanded@{GD\_expanded}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_expanded}{GD\_expanded}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gabeb0f73d67e12a8f52c28954d050e1f7} 
+\+\#define GD\+\_\+expanded(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>expanded)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga75bb1b66668ed3d3aeb42c85a4448e9a}\index{graphs@{graphs}!GD\_flags@{GD\_flags}}
+\index{GD\_flags@{GD\_flags}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_flags}{GD\_flags}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga75bb1b66668ed3d3aeb42c85a4448e9a} 
+\+\#define GD\+\_\+flags(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>flags)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf280ec2b75bc7b00e15e6141c2b3eae7}\index{graphs@{graphs}!GD\_flip@{GD\_flip}}
+\index{GD\_flip@{GD\_flip}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_flip}{GD\_flip}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf280ec2b75bc7b00e15e6141c2b3eae7} 
+\+\#define GD\+\_\+flip(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__graph_gaee757533265228f46df219420f410273}{GD\_rankdir}}(g)\ \&\ 1)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga25ebc4c1126df610cfe80ccc012e00a2}\index{graphs@{graphs}!GD\_fontnames@{GD\_fontnames}}
+\index{GD\_fontnames@{GD\_fontnames}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_fontnames}{GD\_fontnames}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga25ebc4c1126df610cfe80ccc012e00a2} 
+\+\#define GD\+\_\+fontnames(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>fontnames)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf93c88eaf216675d42119439ec9e2a1e}\index{graphs@{graphs}!GD\_gui\_state@{GD\_gui\_state}}
+\index{GD\_gui\_state@{GD\_gui\_state}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_gui\_state}{GD\_gui\_state}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf93c88eaf216675d42119439ec9e2a1e} 
+\+\#define GD\+\_\+gui\+\_\+state(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>gui\_state)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf0cd94956a3b6c26beb40b95ec14757f}\index{graphs@{graphs}!GD\_gvc@{GD\_gvc}}
+\index{GD\_gvc@{GD\_gvc}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_gvc}{GD\_gvc}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf0cd94956a3b6c26beb40b95ec14757f} 
+\+\#define GD\+\_\+gvc(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>gvc)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga7d659b279f968f7560a4e95e8b92f388}\index{graphs@{graphs}!GD\_has\_flat\_edges@{GD\_has\_flat\_edges}}
+\index{GD\_has\_flat\_edges@{GD\_has\_flat\_edges}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_has\_flat\_edges}{GD\_has\_flat\_edges}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga7d659b279f968f7560a4e95e8b92f388} 
+\+\#define GD\+\_\+has\+\_\+flat\+\_\+edges(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>has\_flat\_edges)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga7c90d72524042801c0d132672570dee5}\index{graphs@{graphs}!GD\_has\_images@{GD\_has\_images}}
+\index{GD\_has\_images@{GD\_has\_images}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_has\_images}{GD\_has\_images}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga7c90d72524042801c0d132672570dee5} 
+\+\#define GD\+\_\+has\+\_\+images(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>has\_images)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga52c46fcffcec9b43212679e86a9c1339}\index{graphs@{graphs}!GD\_has\_labels@{GD\_has\_labels}}
+\index{GD\_has\_labels@{GD\_has\_labels}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_has\_labels}{GD\_has\_labels}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga52c46fcffcec9b43212679e86a9c1339} 
+\+\#define GD\+\_\+has\+\_\+labels(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>has\_labels)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gae62105b8f1d3ab03b871a1ffb41b60cc}\index{graphs@{graphs}!GD\_ht1@{GD\_ht1}}
+\index{GD\_ht1@{GD\_ht1}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_ht1}{GD\_ht1}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gae62105b8f1d3ab03b871a1ffb41b60cc} 
+\+\#define GD\+\_\+ht1(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>ht1)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaa9979ba2b7959ac3390f5a7a0f46bb9d}\index{graphs@{graphs}!GD\_ht2@{GD\_ht2}}
+\index{GD\_ht2@{GD\_ht2}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_ht2}{GD\_ht2}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaa9979ba2b7959ac3390f5a7a0f46bb9d} 
+\+\#define GD\+\_\+ht2(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>ht2)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga5c6afbddcdf2311322cebb07fd21f3dd}\index{graphs@{graphs}!GD\_installed@{GD\_installed}}
+\index{GD\_installed@{GD\_installed}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_installed}{GD\_installed}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga5c6afbddcdf2311322cebb07fd21f3dd} 
+\+\#define GD\+\_\+installed(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>installed)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gad73f51275d97d6aa889862b23950a99b}\index{graphs@{graphs}!GD\_label@{GD\_label}}
+\index{GD\_label@{GD\_label}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_label}{GD\_label}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gad73f51275d97d6aa889862b23950a99b} 
+\+\#define GD\+\_\+label(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>label)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga96143dd3e09b113a765ea9bbe944f72f}\index{graphs@{graphs}!GD\_label\_pos@{GD\_label\_pos}}
+\index{GD\_label\_pos@{GD\_label\_pos}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_label\_pos}{GD\_label\_pos}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga96143dd3e09b113a765ea9bbe944f72f} 
+\+\#define GD\+\_\+label\+\_\+pos(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>label\_pos)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gac660bf2efd1a9f02e8746d5c80b0491a}\index{graphs@{graphs}!GD\_leader@{GD\_leader}}
+\index{GD\_leader@{GD\_leader}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_leader}{GD\_leader}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gac660bf2efd1a9f02e8746d5c80b0491a} 
+\+\#define GD\+\_\+leader(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>leader)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaa9a0f0587dc81585dd7e19bb37714b19}\index{graphs@{graphs}!GD\_level@{GD\_level}}
+\index{GD\_level@{GD\_level}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_level}{GD\_level}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaa9a0f0587dc81585dd7e19bb37714b19} 
+\+\#define GD\+\_\+level(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>level)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gae1191ea3f43a6549bc00200e704fd27f}\index{graphs@{graphs}!GD\_ln@{GD\_ln}}
+\index{GD\_ln@{GD\_ln}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_ln}{GD\_ln}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gae1191ea3f43a6549bc00200e704fd27f} 
+\+\#define GD\+\_\+ln(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>ln)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga20984ce193d2d03b0aa85804f60aa1ae}\index{graphs@{graphs}!GD\_maxrank@{GD\_maxrank}}
+\index{GD\_maxrank@{GD\_maxrank}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_maxrank}{GD\_maxrank}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga20984ce193d2d03b0aa85804f60aa1ae} 
+\+\#define GD\+\_\+maxrank(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>maxrank)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga44fd0386ed15c0c89a6e8862d6cc3f42}\index{graphs@{graphs}!GD\_maxrep@{GD\_maxrep}}
+\index{GD\_maxrep@{GD\_maxrep}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_maxrep}{GD\_maxrep}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga44fd0386ed15c0c89a6e8862d6cc3f42} 
+\+\#define GD\+\_\+maxrep(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>maxrep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga248701de5d81b4dc60f61ef53811ad18}\index{graphs@{graphs}!GD\_maxset@{GD\_maxset}}
+\index{GD\_maxset@{GD\_maxset}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_maxset}{GD\_maxset}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga248701de5d81b4dc60f61ef53811ad18} 
+\+\#define GD\+\_\+maxset(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>maxset)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga0573f46f314d41f1dd3a93b5d5222d6d}\index{graphs@{graphs}!GD\_minrank@{GD\_minrank}}
+\index{GD\_minrank@{GD\_minrank}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_minrank}{GD\_minrank}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga0573f46f314d41f1dd3a93b5d5222d6d} 
+\+\#define GD\+\_\+minrank(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>minrank)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga6d5d20d8a29ad9536bc3529b64225e24}\index{graphs@{graphs}!GD\_minrep@{GD\_minrep}}
+\index{GD\_minrep@{GD\_minrep}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_minrep}{GD\_minrep}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga6d5d20d8a29ad9536bc3529b64225e24} 
+\+\#define GD\+\_\+minrep(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>minrep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga9f72a5780dc55294ba4fc9dc43dd4cfc}\index{graphs@{graphs}!GD\_minset@{GD\_minset}}
+\index{GD\_minset@{GD\_minset}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_minset}{GD\_minset}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga9f72a5780dc55294ba4fc9dc43dd4cfc} 
+\+\#define GD\+\_\+minset(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>minset)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga8732c573a23261f021563cb7889aec18}\index{graphs@{graphs}!GD\_move@{GD\_move}}
+\index{GD\_move@{GD\_move}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_move}{GD\_move}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga8732c573a23261f021563cb7889aec18} 
+\+\#define GD\+\_\+move(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>move)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaa6e5b25c4fec6eb18582a419b9ddd3fc}\index{graphs@{graphs}!GD\_n\_cluster@{GD\_n\_cluster}}
+\index{GD\_n\_cluster@{GD\_n\_cluster}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_n\_cluster}{GD\_n\_cluster}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaa6e5b25c4fec6eb18582a419b9ddd3fc} 
+\+\#define GD\+\_\+n\+\_\+cluster(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>n\_cluster)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gac7982d95b7f3e2f3aa38108cdaeca3dd}\index{graphs@{graphs}!GD\_ndim@{GD\_ndim}}
+\index{GD\_ndim@{GD\_ndim}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_ndim}{GD\_ndim}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gac7982d95b7f3e2f3aa38108cdaeca3dd} 
+\+\#define GD\+\_\+ndim(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>ndim)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf5f0296e7ebe013231a5337c3f346a64}\index{graphs@{graphs}!GD\_neato\_nlist@{GD\_neato\_nlist}}
+\index{GD\_neato\_nlist@{GD\_neato\_nlist}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_neato\_nlist}{GD\_neato\_nlist}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf5f0296e7ebe013231a5337c3f346a64} 
+\+\#define GD\+\_\+neato\+\_\+nlist(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>neato\_nlist)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga90f9dcaed839738a87a918807c5b4a44}\index{graphs@{graphs}!GD\_nlist@{GD\_nlist}}
+\index{GD\_nlist@{GD\_nlist}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_nlist}{GD\_nlist}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga90f9dcaed839738a87a918807c5b4a44} 
+\+\#define GD\+\_\+nlist(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>nlist)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gada22146929ee5be60bd05c07159d6c9e}\index{graphs@{graphs}!GD\_nodesep@{GD\_nodesep}}
+\index{GD\_nodesep@{GD\_nodesep}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_nodesep}{GD\_nodesep}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gada22146929ee5be60bd05c07159d6c9e} 
+\+\#define GD\+\_\+nodesep(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>nodesep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf8d793183ce04d75e7ebb59c98136d59}\index{graphs@{graphs}!GD\_odim@{GD\_odim}}
+\index{GD\_odim@{GD\_odim}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_odim}{GD\_odim}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf8d793183ce04d75e7ebb59c98136d59} 
+\+\#define GD\+\_\+odim(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>odim)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga7c4edc4279776663c7e0b498d32415f5}\index{graphs@{graphs}!GD\_parent@{GD\_parent}}
+\index{GD\_parent@{GD\_parent}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_parent}{GD\_parent}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga7c4edc4279776663c7e0b498d32415f5} 
+\+\#define GD\+\_\+parent(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>parent)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga7ab3956e95627faa3d013a0b7e9be148}\index{graphs@{graphs}!GD\_rank@{GD\_rank}}
+\index{GD\_rank@{GD\_rank}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_rank}{GD\_rank}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga7ab3956e95627faa3d013a0b7e9be148} 
+\+\#define GD\+\_\+rank(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rank)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaee757533265228f46df219420f410273}\index{graphs@{graphs}!GD\_rankdir@{GD\_rankdir}}
+\index{GD\_rankdir@{GD\_rankdir}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_rankdir}{GD\_rankdir}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaee757533265228f46df219420f410273} 
+\+\#define GD\+\_\+rankdir(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rankdir\ \&\ 0x3)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga1d10b818e1ff69372cfb54ee0d469129}\index{graphs@{graphs}!GD\_rankdir2@{GD\_rankdir2}}
+\index{GD\_rankdir2@{GD\_rankdir2}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_rankdir2}{GD\_rankdir2}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga1d10b818e1ff69372cfb54ee0d469129} 
+\+\#define GD\+\_\+rankdir2(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rankdir)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf4f41d9fcc3048ec7cf65ccfe26839b0}\index{graphs@{graphs}!GD\_rankleader@{GD\_rankleader}}
+\index{GD\_rankleader@{GD\_rankleader}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_rankleader}{GD\_rankleader}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf4f41d9fcc3048ec7cf65ccfe26839b0} 
+\+\#define GD\+\_\+rankleader(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rankleader)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gafa6fda64bce7de9858030b3bd9ff577c}\index{graphs@{graphs}!GD\_ranksep@{GD\_ranksep}}
+\index{GD\_ranksep@{GD\_ranksep}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_ranksep}{GD\_ranksep}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gafa6fda64bce7de9858030b3bd9ff577c} 
+\+\#define GD\+\_\+ranksep(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>ranksep)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga0858386b028d64c0dbd191691a8be606}\index{graphs@{graphs}!GD\_realflip@{GD\_realflip}}
+\index{GD\_realflip@{GD\_realflip}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_realflip}{GD\_realflip}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga0858386b028d64c0dbd191691a8be606} 
+\+\#define GD\+\_\+realflip(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__graph_gab5f0385f4efbc680994dd7d1739c61b7}{GD\_realrankdir}}(g)\ \&\ 1)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gab5f0385f4efbc680994dd7d1739c61b7}\index{graphs@{graphs}!GD\_realrankdir@{GD\_realrankdir}}
+\index{GD\_realrankdir@{GD\_realrankdir}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_realrankdir}{GD\_realrankdir}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gab5f0385f4efbc680994dd7d1739c61b7} 
+\+\#define GD\+\_\+realrankdir(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rankdir)\ >>\ 2)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga6c9ffdd449bb900a5f2a45f26d494b68}\index{graphs@{graphs}!GD\_rn@{GD\_rn}}
+\index{GD\_rn@{GD\_rn}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_rn}{GD\_rn}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga6c9ffdd449bb900a5f2a45f26d494b68} 
+\+\#define GD\+\_\+rn(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>rn)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaac3b0f6b60c2b5c3eed9a0cfe90ecb66}\index{graphs@{graphs}!GD\_set\_type@{GD\_set\_type}}
+\index{GD\_set\_type@{GD\_set\_type}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_set\_type}{GD\_set\_type}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaac3b0f6b60c2b5c3eed9a0cfe90ecb66} 
+\+\#define GD\+\_\+set\+\_\+type(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>set\_type)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga9be6d03614124729a3f3ecc18851f7b7}\index{graphs@{graphs}!GD\_showboxes@{GD\_showboxes}}
+\index{GD\_showboxes@{GD\_showboxes}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_showboxes}{GD\_showboxes}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga9be6d03614124729a3f3ecc18851f7b7} 
+\+\#define GD\+\_\+showboxes(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>showboxes)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_gaf3ac828276b6b469e04bcc567ab4fbe5}\index{graphs@{graphs}!GD\_spring@{GD\_spring}}
+\index{GD\_spring@{GD\_spring}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_spring}{GD\_spring}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaf3ac828276b6b469e04bcc567ab4fbe5} 
+\+\#define GD\+\_\+spring(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>spring)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga589a746bbed5d188d6965e7337bf1a75}\index{graphs@{graphs}!GD\_sum\_t@{GD\_sum\_t}}
+\index{GD\_sum\_t@{GD\_sum\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_sum\_t}{GD\_sum\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga589a746bbed5d188d6965e7337bf1a75} 
+\+\#define GD\+\_\+sum\+\_\+t(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>sum\_t)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__graph_ga9432fa3c11bc7b85dd20bf70a6aaf5d9}\index{graphs@{graphs}!GD\_t@{GD\_t}}
+\index{GD\_t@{GD\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{GD\_t}{GD\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga9432fa3c11bc7b85dd20bf70a6aaf5d9} 
+\+\#define GD\+\_\+t(\begin{DoxyParamCaption}\item[{}]{g}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{struct_agraphinfo__t}{Agraphinfo\_t}}*)\doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(g))-\/>t)}
+
+\end{DoxyCode}
+
+
+\label{group__cgraph__graph_doc-typedef-members}
+\Hypertarget{group__cgraph__graph_doc-typedef-members}
+\doxysubsubsubsubsection{Типы}
+\Hypertarget{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e}\index{graphs@{graphs}!Agclos\_t@{Agclos\_t}}
+\index{Agclos\_t@{Agclos\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agclos\_t}{Agclos\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e} 
+typedef struct \doxymbox{\hyperlink{struct_agclos__s}{Agclos\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e}{Agclos\+\_\+t}}}
+
+\Hypertarget{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}\index{graphs@{graphs}!Agdesc\_t@{Agdesc\_t}}
+\index{Agdesc\_t@{Agdesc\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agdesc\_t}{Agdesc\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5} 
+typedef struct \doxymbox{\hyperlink{struct_agdesc__s}{Agdesc\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}}}
+
+\Hypertarget{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03}\index{graphs@{graphs}!Agdstate\_t@{Agdstate\_t}}
+\index{Agdstate\_t@{Agdstate\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agdstate\_t}{Agdstate\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03} 
+typedef struct \doxymbox{\hyperlink{struct_agdstate__s}{Agdstate\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03}{Agdstate\+\_\+t}}}
+
+\Hypertarget{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b}\index{graphs@{graphs}!agobjfn\_t@{agobjfn\_t}}
+\index{agobjfn\_t@{agobjfn\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agobjfn\_t}{agobjfn\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b} 
+typedef void(\texorpdfstring{$\ast$}{*} agobjfn\+\_\+t) (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}} \texorpdfstring{$\ast$}{*}obj, void \texorpdfstring{$\ast$}{*}arg)}
+
+\Hypertarget{group__cgraph__graph_ga1346110b9185ce19585655259ebd3f54}\index{graphs@{graphs}!agobjupdfn\_t@{agobjupdfn\_t}}
+\index{agobjupdfn\_t@{agobjupdfn\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agobjupdfn\_t}{agobjupdfn\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga1346110b9185ce19585655259ebd3f54} 
+typedef void(\texorpdfstring{$\ast$}{*} agobjupdfn\+\_\+t) (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}} \texorpdfstring{$\ast$}{*}obj, void \texorpdfstring{$\ast$}{*}arg, \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\+\_\+t}} \texorpdfstring{$\ast$}{*}sym)}
+
+\Hypertarget{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}\index{graphs@{graphs}!Agraph\_t@{Agraph\_t}}
+\index{Agraph\_t@{Agraph\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agraph\_t}{Agraph\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga48061c3baade540af78ac621211ae926} 
+typedef struct \doxymbox{\hyperlink{struct_agraph__s}{Agraph\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}}}
+
+\Hypertarget{group__cgraph__graph_gac63023c62153c35af49136637b3918ca}\index{graphs@{graphs}!Agraphinfo\_t@{Agraphinfo\_t}}
+\index{Agraphinfo\_t@{Agraphinfo\_t}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agraphinfo\_t}{Agraphinfo\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gac63023c62153c35af49136637b3918ca} 
+typedef struct Agraphinfo\+\_\+t Agraphinfo\+\_\+t}
+
+
+
+\label{group__cgraph__graph_doc-func-members}
+\Hypertarget{group__cgraph__graph_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e}\index{graphs@{graphs}!agclose@{agclose}}
+\index{agclose@{agclose}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agclose()}{agclose()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e} 
+CGRAPH\+\_\+\+API int agclose (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga2a5e1d8106f8c9792c5761af60713a76}\index{graphs@{graphs}!agconcat@{agconcat}}
+\index{agconcat@{agconcat}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agconcat()}{agconcat()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga2a5e1d8106f8c9792c5761af60713a76} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agconcat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{chan}{, }\item[{\doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{disc}{}\end{DoxyParamCaption})}
+
+Though I/\+O methods may be overridden, the default is that the channel argument is a stdio FILE pointer. In that case, if any of the streams are wide-\/oriented, the behavior is undefined.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em filename} & Path of the input file source, used only for diagnostics \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__cgraph__graph_ga5cd1939122326a203075ca855ff6daf2}\index{graphs@{graphs}!agisdirected@{agisdirected}}
+\index{agisdirected@{agisdirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agisdirected()}{agisdirected()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga5cd1939122326a203075ca855ff6daf2} 
+CGRAPH\+\_\+\+API int agisdirected (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga45a62bb0e62e5ee18c6e5167648cd923}\index{graphs@{graphs}!agissimple@{agissimple}}
+\index{agissimple@{agissimple}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agissimple()}{agissimple()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga45a62bb0e62e5ee18c6e5167648cd923} 
+CGRAPH\+\_\+\+API int agissimple (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga21defec3b5fab9f37781d0909a7d6bde}\index{graphs@{graphs}!agisstrict@{agisstrict}}
+\index{agisstrict@{agisstrict}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agisstrict()}{agisstrict()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga21defec3b5fab9f37781d0909a7d6bde} 
+CGRAPH\+\_\+\+API int agisstrict (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga7ed846573acf4555f86ab5c452fc640e}\index{graphs@{graphs}!agisundirected@{agisundirected}}
+\index{agisundirected@{agisundirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agisundirected()}{agisundirected()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga7ed846573acf4555f86ab5c452fc640e} 
+CGRAPH\+\_\+\+API int agisundirected (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga966226a22960e8ceac4e7f1c6517828b}\index{graphs@{graphs}!agmemconcat@{agmemconcat}}
+\index{agmemconcat@{agmemconcat}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agmemconcat()}{agmemconcat()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga966226a22960e8ceac4e7f1c6517828b} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agmemconcat (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{cp}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga4903073e6680f7882f371865875e639e}\index{graphs@{graphs}!agmemread@{agmemread}}
+\index{agmemread@{agmemread}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agmemread()}{agmemread()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga4903073e6680f7882f371865875e639e} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agmemread (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{cp}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga85e142c9c453c325cb722ef837d11dd2}\index{graphs@{graphs}!agopen@{agopen}}
+\index{agopen@{agopen}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agopen()}{agopen()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga85e142c9c453c325cb722ef837d11dd2} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agopen (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}}}]{desc}{, }\item[{\doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{disc}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em desc} & -\/ graph kind, can be \doxylink{group__cgraph__graph_ga8a3475f98b683496724e35f34a56c8c5}{Agdirected}, \doxylink{group__cgraph__graph_ga13c8f3f32c6538e915cdc7784dd09bba}{Agundirected}, \doxylink{group__cgraph__graph_ga90a816224a1dfa7732f06ce0a9770220}{Agstrictdirected} or \doxylink{group__cgraph__graph_gadb18db99d62071a35bec738edc2b0636}{Agstrictundirected}. A strict graph cannot have multi-\/edges or self-\/arcs.\\
+\hline
+{\em disc} & -\/ discipline structure which can be used to tailor I/\+O and ID allocation. Typically, a NULL value will be used to indicate the default discipline \doxylink{group__cgraph__disc_gade3d1614ee2c32df0edd7a022f66478a}{Ag\+Default\+Disc}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__cgraph__graph_gaa713e98b20e21ae1d9d95303981b38e5}\index{graphs@{graphs}!agread@{agread}}
+\index{agread@{agread}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agread()}{agread()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gaa713e98b20e21ae1d9d95303981b38e5} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{chan}{, }\item[{\doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{disc}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__graph_ga43c761e45309ba677ca59d8296312483}\index{graphs@{graphs}!agwrite@{agwrite}}
+\index{agwrite@{agwrite}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agwrite()}{agwrite()}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga43c761e45309ba677ca59d8296312483} 
+CGRAPH\+\_\+\+API int agwrite (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{chan}{}\end{DoxyParamCaption})}
+
+
+
+\label{group__cgraph__graph_doc-var-members}
+\Hypertarget{group__cgraph__graph_doc-var-members}
+\doxysubsubsubsubsection{Переменные}
+\Hypertarget{group__cgraph__graph_ga8a3475f98b683496724e35f34a56c8c5}\index{graphs@{graphs}!Agdirected@{Agdirected}}
+\index{Agdirected@{Agdirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agdirected}{Agdirected}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga8a3475f98b683496724e35f34a56c8c5} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} Agdirected\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{group__cgraph__graph_ga90a816224a1dfa7732f06ce0a9770220}\index{graphs@{graphs}!Agstrictdirected@{Agstrictdirected}}
+\index{Agstrictdirected@{Agstrictdirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agstrictdirected}{Agstrictdirected}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga90a816224a1dfa7732f06ce0a9770220} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} Agstrictdirected\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{group__cgraph__graph_gadb18db99d62071a35bec738edc2b0636}\index{graphs@{graphs}!Agstrictundirected@{Agstrictundirected}}
+\index{Agstrictundirected@{Agstrictundirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agstrictundirected}{Agstrictundirected}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_gadb18db99d62071a35bec738edc2b0636} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} Agstrictundirected\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{group__cgraph__graph_ga13c8f3f32c6538e915cdc7784dd09bba}\index{graphs@{graphs}!Agundirected@{Agundirected}}
+\index{Agundirected@{Agundirected}!graphs@{graphs}}
+\doxysubsubsubsubsubsection{\texorpdfstring{Agundirected}{Agundirected}}
+{\footnotesize\ttfamily \label{group__cgraph__graph_ga13c8f3f32c6538e915cdc7784dd09bba} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\+\_\+t}} Agundirected\hspace{0.3cm}{\ttfamily [extern]}}
+
+\input{group__cgraph__callback}
+\input{group__cgraph__subgraph}

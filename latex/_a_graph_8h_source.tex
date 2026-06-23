@@ -1,0 +1,57 @@
+\doxysection{AGraph.\+h}
+\hypertarget{_a_graph_8h_source}{}\label{_a_graph_8h_source}\index{Graphviz/include/graphviz/AGraph.h@{Graphviz/include/graphviz/AGraph.h}}
+\doxymbox{\hyperlink{_a_graph_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{cgraph_8h}{cgraph.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#if\ cgraph\_\_\_EXPORTS\ }\textcolor{comment}{//\ CMake's\ substitution\ of\ cgraph++\_EXPORTS}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ AGRAPH\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ AGRAPH\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ AGRAPH\_API}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ AGRAPH\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_c_graph}{CGraph}}\ \{}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{_a_graph_8h_a960d889a4e4688b09455efacd32761f8}{AGRAPH\_API}}\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}(\textcolor{keyword}{const}\ std::string\ \&dot);}
+\DoxyCodeLine{00029\ \ \ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aafcf15131c318326451d822499ab2b5e}{\string~AGraph}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//\ delete\ copy\ since\ we\ manage\ a\ C\ struct\ using\ a\ raw\ pointer\ and\ the\ struct}}
+\DoxyCodeLine{00032\ \ \ \textcolor{comment}{//\ cannot\ be\ easily\ copied\ since\ it\ contains\ even\ more\ raw\ pointers}}
+\DoxyCodeLine{00033\ \ \ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_a166be5c074b2a78a1b63fb3b7308fb1d}{AGraph}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&\doxymbox{\hyperlink{class_c_graph_1_1_a_graph_ae3f0e2ccab692d527bde1d5f71d890a8}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{comment}{//\ implement\ move\ since\ we\ manage\ a\ C\ struct\ using\ a\ raw\ pointer}}
+\DoxyCodeLine{00037\ \ \ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aa92d36d7aaab7af2f053e5e7ea45693b}{AGraph}}(\doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&\&other)\ noexcept\ :\ m\_g(std::exchange(other.m\_g,\ \textcolor{keyword}{nullptr}))\ \{\}}
+\DoxyCodeLine{00038\ \ \ \doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&\doxymbox{\hyperlink{class_c_graph_1_1_a_graph_abd64f522ad3ff3fa3201ea3699721a45}{operator=}}(\doxymbox{\hyperlink{class_c_graph_1_1_a_graph_aeee18de63b091ed9ccd40a642e5cccaa}{AGraph}}\ \&\&other)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{using\ }std::swap;}
+\DoxyCodeLine{00040\ \ \ \ \ swap(m\_g,\ other.m\_g);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00042\ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{comment}{//\ get\ a\ non-\/owning\ pointer\ to\ the\ underlying\ C\ data\ structure}}
+\DoxyCodeLine{00045\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{class_c_graph_1_1_a_graph_a64f85ea562bdc9f53f832a527b270686}{c\_struct}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_g;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \textcolor{comment}{//\ the\ underlying\ C\ data\ structure}}
+\DoxyCodeLine{00049\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *m\_g\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \}\ \textcolor{comment}{//\ namespace\ CGraph}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#undef\ AGRAPH\_API}}
+
+\end{DoxyCode}

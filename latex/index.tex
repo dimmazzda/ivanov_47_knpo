@@ -1,0 +1,31 @@
+\chapter{Программа переброски слагаемых и множителей }
+\hypertarget{index}{}\label{index}\index{Программа переброски слагаемых и множителей@{Программа переброски слагаемых и множителей}}
+\hypertarget{index_sec_purpose}{}\doxysection{\texorpdfstring{Назначение}{Назначение}}\label{index_sec_purpose}
+Программа принимает ориентированный граф описанный по стандартному формату dot и определяет, является ли считанный граф деревом, а также можно ли его привести к дереву и какие дуги для этого понадобится удалить.~\newline
+Тип графа выносится отдельным узлом с подписью result\+Of\+Analysis, дуги, которые можно удалить для приведения графа к дереву помечаеются красным цветом\hypertarget{index_sec_limits}{}\doxysection{\texorpdfstring{Ограничения}{Ограничения}}\label{index_sec_limits}
+
+\begin{DoxyItemize}
+\item имена вершин -\/ целые неотрицательные числа, объявления вершин производятся на отдельных строках до объявления дуг
+\item дуги описываются через знак "{}-\/$>$"{}
+\item Строки объявления и закрывающая скобка находятся на отдельных строках
+\item максимум 1000 вершин и 100000 дуг
+\end{DoxyItemize}\hypertarget{index_sec_examples}{}\doxysection{\texorpdfstring{Пример преобразования:\+}{Пример преобразования:\+}}\label{index_sec_examples}
+Входное выражение:\+~\newline
+digraph G \{~\newline
+0~\newline
+1~\newline
+2~\newline
+0-\/\texorpdfstring{$>$}{>}1~\newline
+1-\/\texorpdfstring{$>$}{>}2~\newline
+2-\/\texorpdfstring{$>$}{>}1~\newline
+\}~\newline
+Выходное выражение:\+~\newline
+digraph G \{~\newline
+0~\newline
+1~\newline
+2~\newline
+0-\/\texorpdfstring{$>$}{>}1~\newline
+1-\/\texorpdfstring{$>$}{>}2~\newline
+2-\/\texorpdfstring{$>$}{>}1 \+[color="{}red"{}]\+~\newline
+"{}result\+Of\+Analysis:\+ convertible\+To\+Tree"{}~\newline
+\}~\newline

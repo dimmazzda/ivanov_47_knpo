@@ -1,0 +1,269 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+usershape.h}
+\hypertarget{usershape_8h}{}\label{usershape_8h}\index{Graphviz/include/graphviz/usershape.h@{Graphviz/include/graphviz/usershape.h}}
+{\ttfamily \+\#include "{}cdt.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structusershape__s}{usershape\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{structusershape__s}{usershape\+\_\+s}} \doxymbox{\hyperlink{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}{usershape\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68c}{imagetype\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4}{FT\+\_\+\+NULL}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d}{FT\+\_\+\+BMP}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9}{FT\+\_\+\+GIF}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9}{FT\+\_\+\+PNG}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806}{FT\+\_\+\+JPEG}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f}{FT\+\_\+\+PDF}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2}{FT\+\_\+\+PS}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a}{FT\+\_\+\+EPS}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd}{FT\+\_\+\+SVG}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8}{FT\+\_\+\+XML}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba}{FT\+\_\+\+RIFF}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e}{FT\+\_\+\+WEBP}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140}{FT\+\_\+\+ICO}}
+, \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075}{FT\+\_\+\+TIFF}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3a}{imagescale\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4}{IMAGESCALE\+\_\+\+FALSE}}
+, \doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb}{IMAGESCALE\+\_\+\+TRUE}}
+, \doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3}{IMAGESCALE\+\_\+\+WIDTH}}
+, \doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69}{IMAGESCALE\+\_\+\+HEIGHT}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69}{IMAGESCALE\+\_\+\+BOTH}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213}{imagepos\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de}{IMAGEPOS\+\_\+\+TOP\+\_\+\+LEFT}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052}{IMAGEPOS\+\_\+\+TOP\+\_\+\+CENTER}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0}{IMAGEPOS\+\_\+\+TOP\+\_\+\+RIGHT}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c}{IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+LEFT}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50}{IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+CENTER}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9}{IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+RIGHT}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523}{IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+LEFT}}
+, \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f}{IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+CENTER}}
+, \newline
+\doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd}{IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+RIGHT}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{usershape_8h_doc-typedef-members}
+\Hypertarget{usershape_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}\index{usershape.h@{usershape.h}!usershape\_t@{usershape\_t}}
+\index{usershape\_t@{usershape\_t}!usershape.h@{usershape.h}}
+\doxysubsubsection{\texorpdfstring{usershape\_t}{usershape\_t}}
+{\footnotesize\ttfamily \label{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa} 
+typedef struct \doxymbox{\hyperlink{structusershape__s}{usershape\+\_\+s}} \doxymbox{\hyperlink{usershape_8h_a65c9d64037cce8c0cbf5fce493c8f8aa}{usershape\+\_\+t}}}
+
+
+
+\label{usershape_8h_doc-enum-members}
+\Hypertarget{usershape_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213}\index{usershape.h@{usershape.h}!imagepos\_t@{imagepos\_t}}
+\index{imagepos\_t@{imagepos\_t}!usershape.h@{usershape.h}}
+\doxysubsubsection{\texorpdfstring{imagepos\_t}{imagepos\_t}}
+{\footnotesize\ttfamily \label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213} 
+enum \doxymbox{\hyperlink{usershape_8h_a4e1017f08e4582a10b465cfbe053e213}{imagepos\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_TOP\_LEFT@{IMAGEPOS\_TOP\_LEFT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_TOP\_LEFT@{IMAGEPOS\_TOP\_LEFT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ab51d9b1d42075407cd05abc6bb4d87de} 
+IMAGEPOS\+\_\+\+TOP\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_TOP\_CENTER@{IMAGEPOS\_TOP\_CENTER}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_TOP\_CENTER@{IMAGEPOS\_TOP\_CENTER}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a6e73f977cc2ea3f931932f94e1683052} 
+IMAGEPOS\+\_\+\+TOP\+\_\+\+CENTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_TOP\_RIGHT@{IMAGEPOS\_TOP\_RIGHT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_TOP\_RIGHT@{IMAGEPOS\_TOP\_RIGHT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a1ba53d0b8d63ca4a6be4f8c1e14322c0} 
+IMAGEPOS\+\_\+\+TOP\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_MIDDLE\_LEFT@{IMAGEPOS\_MIDDLE\_LEFT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_MIDDLE\_LEFT@{IMAGEPOS\_MIDDLE\_LEFT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a5553d402f8d65ad557e1bd1bb15c249c} 
+IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_MIDDLE\_CENTER@{IMAGEPOS\_MIDDLE\_CENTER}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_MIDDLE\_CENTER@{IMAGEPOS\_MIDDLE\_CENTER}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a0302fdcf7a6930cfbd59a1c797253e50} 
+IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+CENTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_MIDDLE\_RIGHT@{IMAGEPOS\_MIDDLE\_RIGHT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_MIDDLE\_RIGHT@{IMAGEPOS\_MIDDLE\_RIGHT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ad4f1a8dd72f2cc12e4b8413bcfc2d3c9} 
+IMAGEPOS\+\_\+\+MIDDLE\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_BOTTOM\_LEFT@{IMAGEPOS\_BOTTOM\_LEFT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_BOTTOM\_LEFT@{IMAGEPOS\_BOTTOM\_LEFT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213aa0dae2cd4c7f5176119eb1a600c14523} 
+IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_BOTTOM\_CENTER@{IMAGEPOS\_BOTTOM\_CENTER}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_BOTTOM\_CENTER@{IMAGEPOS\_BOTTOM\_CENTER}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213ac942a24b74dad6df43af6c53c73b4d9f} 
+IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+CENTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGEPOS\_BOTTOM\_RIGHT@{IMAGEPOS\_BOTTOM\_RIGHT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGEPOS\_BOTTOM\_RIGHT@{IMAGEPOS\_BOTTOM\_RIGHT}}
+}\Hypertarget{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd}\label{usershape_8h_a4e1017f08e4582a10b465cfbe053e213a17312a6d632c3b0430d0998227f6eacd} 
+IMAGEPOS\+\_\+\+BOTTOM\+\_\+\+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3a}\index{usershape.h@{usershape.h}!imagescale\_t@{imagescale\_t}}
+\index{imagescale\_t@{imagescale\_t}!usershape.h@{usershape.h}}
+\doxysubsubsection{\texorpdfstring{imagescale\_t}{imagescale\_t}}
+{\footnotesize\ttfamily \label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3a} 
+enum \doxymbox{\hyperlink{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3a}{imagescale\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGESCALE\_FALSE@{IMAGESCALE\_FALSE}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGESCALE\_FALSE@{IMAGESCALE\_FALSE}}
+}\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4}\label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaa6975fef817ef0d16444e5e00517f4d4} 
+IMAGESCALE\+\_\+\+FALSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGESCALE\_TRUE@{IMAGESCALE\_TRUE}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGESCALE\_TRUE@{IMAGESCALE\_TRUE}}
+}\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb}\label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aad717637d007a479a8c79506c788552eb} 
+IMAGESCALE\+\_\+\+TRUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGESCALE\_WIDTH@{IMAGESCALE\_WIDTH}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGESCALE\_WIDTH@{IMAGESCALE\_WIDTH}}
+}\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3}\label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa90b17fb9509bfbadd5d6482da6082fd3} 
+IMAGESCALE\+\_\+\+WIDTH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGESCALE\_HEIGHT@{IMAGESCALE\_HEIGHT}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGESCALE\_HEIGHT@{IMAGESCALE\_HEIGHT}}
+}\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69}\label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aaf80d0583c21361ddea092abcd3febd69} 
+IMAGESCALE\+\_\+\+HEIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMAGESCALE\_BOTH@{IMAGESCALE\_BOTH}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!IMAGESCALE\_BOTH@{IMAGESCALE\_BOTH}}
+}\Hypertarget{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69}\label{usershape_8h_a5d2e5a4ec27171d56dfb4b70dd7edd3aa48862d700578d34a1962e920c0d5fc69} 
+IMAGESCALE\+\_\+\+BOTH&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68c}\index{usershape.h@{usershape.h}!imagetype\_t@{imagetype\_t}}
+\index{imagetype\_t@{imagetype\_t}!usershape.h@{usershape.h}}
+\doxysubsubsection{\texorpdfstring{imagetype\_t}{imagetype\_t}}
+{\footnotesize\ttfamily \label{usershape_8h_aec44135355da1b53a922fab69dbea68c} 
+enum \doxymbox{\hyperlink{usershape_8h_aec44135355da1b53a922fab69dbea68c}{imagetype\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_NULL@{FT\_NULL}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_NULL@{FT\_NULL}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca79883d4b08887e83d6524dd8c3707ae4} 
+FT\+\_\+\+NULL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_BMP@{FT\_BMP}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_BMP@{FT\_BMP}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca2bceee6b711e02338bd66c353e93bd1d} 
+FT\+\_\+\+BMP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_GIF@{FT\_GIF}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_GIF@{FT\_GIF}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9}\label{usershape_8h_aec44135355da1b53a922fab69dbea68caa223a8b55968cc4d158e3f39785d97b9} 
+FT\+\_\+\+GIF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PNG@{FT\_PNG}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_PNG@{FT\_PNG}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9}\label{usershape_8h_aec44135355da1b53a922fab69dbea68caf39cc306c377ddbe015dfabf21e87fa9} 
+FT\+\_\+\+PNG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_JPEG@{FT\_JPEG}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_JPEG@{FT\_JPEG}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806}\label{usershape_8h_aec44135355da1b53a922fab69dbea68cab22b0236a0aca03e1af2ebf1abdb5806} 
+FT\+\_\+\+JPEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PDF@{FT\_PDF}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_PDF@{FT\_PDF}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f}\label{usershape_8h_aec44135355da1b53a922fab69dbea68cafe7767fb699260787f22a1b16ad3170f} 
+FT\+\_\+\+PDF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_PS@{FT\_PS}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_PS@{FT\_PS}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca5695cb9d6a9c164e6b9e2df89a87c8e2} 
+FT\+\_\+\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_EPS@{FT\_EPS}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_EPS@{FT\_EPS}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca8a7db53132ecb176bdf91d97d0e3449a} 
+FT\+\_\+\+EPS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_SVG@{FT\_SVG}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_SVG@{FT\_SVG}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca95560ad16c0c86c770a1b583f687e5bd} 
+FT\+\_\+\+SVG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_XML@{FT\_XML}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_XML@{FT\_XML}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8}\label{usershape_8h_aec44135355da1b53a922fab69dbea68cafd9557ac85fad23d142b73412c4f07d8} 
+FT\+\_\+\+XML&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_RIFF@{FT\_RIFF}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_RIFF@{FT\_RIFF}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba}\label{usershape_8h_aec44135355da1b53a922fab69dbea68caf24f2bdcca5a21f4933ddc44ec8721ba} 
+FT\+\_\+\+RIFF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_WEBP@{FT\_WEBP}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_WEBP@{FT\_WEBP}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e}\label{usershape_8h_aec44135355da1b53a922fab69dbea68caa1fd8a33a477ef727c9c76a55f12fa4e} 
+FT\+\_\+\+WEBP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_ICO@{FT\_ICO}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_ICO@{FT\_ICO}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca5b72ca79c6448373f3f1500526162140} 
+FT\+\_\+\+ICO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FT\_TIFF@{FT\_TIFF}!usershape.h@{usershape.h}}
+\index{usershape.h@{usershape.h}!FT\_TIFF@{FT\_TIFF}}
+}\Hypertarget{usershape_8h_aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075}\label{usershape_8h_aec44135355da1b53a922fab69dbea68ca7a0b6de7a57d01f96973814ee4d32075} 
+FT\+\_\+\+TIFF&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,488 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+xdot.h}
+\hypertarget{xdot_8h}{}\label{xdot_8h}\index{Graphviz/include/graphviz/xdot.h@{Graphviz/include/graphviz/xdot.h}}
+
+
+parsing and deparsing of \href{https://graphviz.org/docs/outputs/canon/\#xdot}{\texttt{xdot}} operations  
+
+
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structxdot__color__stop}{xdot\+\_\+color\+\_\+stop}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__linear__grad}{xdot\+\_\+linear\+\_\+grad}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__radial__grad}{xdot\+\_\+radial\+\_\+grad}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__color}{xdot\+\_\+color}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__point}{xdot\+\_\+point}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__rect}{xdot\+\_\+rect}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__polyline}{xdot\+\_\+polyline}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__text}{xdot\+\_\+text}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__image}{xdot\+\_\+image}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__font}{xdot\+\_\+font}}
+\item 
+struct \doxymbox{\hyperlink{struct__xdot__op}{\+\_\+xdot\+\_\+op}}
+\item 
+struct \doxymbox{\hyperlink{structxdot}{xdot}}
+\item 
+struct \doxymbox{\hyperlink{structxdot__stats}{xdot\+\_\+stats}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}}~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{xdot_8h_a7186f24afcfa0a2476a28760acca249f}{XDOT\+\_\+\+PARSE\+\_\+\+ERROR}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{struct__xdot__op}{\+\_\+xdot\+\_\+op}} \doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}{drawfunc\+\_\+t}}) (\doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}} \texorpdfstring{$\ast$}{*}, int)
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a79292a4183011bf60e3a715c5b427315}{freefunc\+\_\+t}}) (\doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23d}{xdot\+\_\+grad\+\_\+type}} \{ \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6}{xd\+\_\+none}}
+, \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d}{xd\+\_\+linear}}
+, \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678}{xd\+\_\+radial}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{xdot_8h_a886393475707990cd9a4a8d6b44d949e}{xdot\+\_\+align}} \{ \doxymbox{\hyperlink{xdot_8h_a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850}{xd\+\_\+left}}
+, \doxymbox{\hyperlink{xdot_8h_a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d}{xd\+\_\+center}}
+, \doxymbox{\hyperlink{xdot_8h_a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27}{xd\+\_\+right}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614}{xdot\+\_\+kind}} \{ \newline
+\doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8}{xd\+\_\+filled\+\_\+ellipse}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2}{xd\+\_\+unfilled\+\_\+ellipse}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff}{xd\+\_\+filled\+\_\+polygon}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc}{xd\+\_\+unfilled\+\_\+polygon}}
+, \newline
+\doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9}{xd\+\_\+filled\+\_\+bezier}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249}{xd\+\_\+unfilled\+\_\+bezier}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7}{xd\+\_\+polyline}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80}{xd\+\_\+text}}
+, \newline
+\doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7}{xd\+\_\+fill\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76}{xd\+\_\+pen\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da}{xd\+\_\+font}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf}{xd\+\_\+style}}
+, \newline
+\doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b}{xd\+\_\+image}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa}{xd\+\_\+grad\+\_\+fill\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159}{xd\+\_\+grad\+\_\+pen\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d}{xd\+\_\+fontchar}}
+ \}
+\item 
+enum \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7}{xop\+\_\+kind}} \{ \newline
+\doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849}{xop\+\_\+ellipse}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93}{xop\+\_\+polygon}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69}{xop\+\_\+bezier}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d}{xop\+\_\+polyline}}
+, \newline
+\doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c}{xop\+\_\+text}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8}{xop\+\_\+fill\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08}{xop\+\_\+pen\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911}{xop\+\_\+font}}
+, \newline
+\doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af}{xop\+\_\+style}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a}{xop\+\_\+image}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c}{xop\+\_\+grad\+\_\+color}}
+, \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583}{xop\+\_\+fontchar}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_ab0d52f47955fa1ceb0c38633f71adf66}{parse\+XDotF}} (char \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}{drawfunc\+\_\+t}} opfns\+[$\,$]\+, size\+\_\+t sz)
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a98c8818d87ed6f3e72213d11cd5abee9}{parse\+XDot\+FOn}} (char \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}{drawfunc\+\_\+t}} opfns\+[$\,$]\+, size\+\_\+t sz, \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a9f16fc5f2dec9bf85289a9a1a6ff1ba2}{parse\+XDot}} (char \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a1c7e297b272814da9a7d3481c330cf8c}{sprint\+XDot}} (\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void \doxymbox{\hyperlink{xdot_8h_a1715f8bf6aa035ded98c2a29c95a8bd7}{fprint\+XDot}} (FILE \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void \doxymbox{\hyperlink{xdot_8h_a1648a6f9fe3baf32c809364c493a9802}{json\+XDot}} (FILE \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void \doxymbox{\hyperlink{xdot_8h_a5515091902141890b8e895d499615b5b}{free\+XDot}} (\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} int \doxymbox{\hyperlink{xdot_8h_aa02fbafb913ba22fea989e8c0249207b}{stat\+XDot}} (\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}, \doxymbox{\hyperlink{structxdot__stats}{xdot\+\_\+stats}} \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23d}{xdot\+\_\+grad\+\_\+type}} \doxymbox{\hyperlink{xdot_8h_a8fd6a4562b4829343c678eaa77640fd8}{color\+Type\+XDot}} (char \texorpdfstring{$\ast$}{*})
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{xdot_8h_a326bb058d7364c46a5d9e2a329d8923c}{parse\+XDot\+Color}} (char \texorpdfstring{$\ast$}{*}cp, \doxymbox{\hyperlink{structxdot__color}{xdot\+\_\+color}} \texorpdfstring{$\ast$}{*}clr)
+\item 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void \doxymbox{\hyperlink{xdot_8h_a7bdeac6f0d42a9781d93e76ada3968ef}{free\+XDot\+Color}} (\doxymbox{\hyperlink{structxdot__color}{xdot\+\_\+color}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+{\bfseries{libxdot}} provides support for parsing and deparsing graphical operations specified by the xdot language. \href{https://graphviz.org/docs/outputs/canon/\#xdot}{\texttt{xdot}} is extended dot format containing complete layout information.
+
+\href{https://graphviz.org/pdf/xdot.3.pdf}{\texttt{man 3 xdot}} 
+
+\label{xdot_8h_doc-define-members}
+\Hypertarget{xdot_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}\index{xdot.h@{xdot.h}!XDOT\_API@{XDOT\_API}}
+\index{XDOT\_API@{XDOT\_API}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{XDOT\_API}{XDOT\_API}}
+{\footnotesize\ttfamily \label{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30} 
+\+\#define XDOT\+\_\+\+API~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+}
+
+\Hypertarget{xdot_8h_a7186f24afcfa0a2476a28760acca249f}\index{xdot.h@{xdot.h}!XDOT\_PARSE\_ERROR@{XDOT\_PARSE\_ERROR}}
+\index{XDOT\_PARSE\_ERROR@{XDOT\_PARSE\_ERROR}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{XDOT\_PARSE\_ERROR}{XDOT\_PARSE\_ERROR}}
+{\footnotesize\ttfamily \label{xdot_8h_a7186f24afcfa0a2476a28760acca249f} 
+\+\#define XDOT\+\_\+\+PARSE\+\_\+\+ERROR~1}
+
+
+
+\label{xdot_8h_doc-typedef-members}
+\Hypertarget{xdot_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}\index{xdot.h@{xdot.h}!drawfunc\_t@{drawfunc\_t}}
+\index{drawfunc\_t@{drawfunc\_t}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{drawfunc\_t}{drawfunc\_t}}
+{\footnotesize\ttfamily \label{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60} 
+typedef void(\texorpdfstring{$\ast$}{*} drawfunc\+\_\+t) (\doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}} \texorpdfstring{$\ast$}{*}, int)}
+
+\Hypertarget{xdot_8h_a79292a4183011bf60e3a715c5b427315}\index{xdot.h@{xdot.h}!freefunc\_t@{freefunc\_t}}
+\index{freefunc\_t@{freefunc\_t}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{freefunc\_t}{freefunc\_t}}
+{\footnotesize\ttfamily \label{xdot_8h_a79292a4183011bf60e3a715c5b427315} 
+typedef void(\texorpdfstring{$\ast$}{*} freefunc\+\_\+t) (\doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{xdot_8h_a506f55feaed523333fd66154d076c475}\index{xdot.h@{xdot.h}!xdot\_op@{xdot\_op}}
+\index{xdot\_op@{xdot\_op}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{xdot\_op}{xdot\_op}}
+{\footnotesize\ttfamily \label{xdot_8h_a506f55feaed523333fd66154d076c475} 
+typedef struct \doxymbox{\hyperlink{struct__xdot__op}{\+\_\+xdot\+\_\+op}} \doxymbox{\hyperlink{xdot_8h_a506f55feaed523333fd66154d076c475}{xdot\+\_\+op}}}
+
+
+
+\label{xdot_8h_doc-enum-members}
+\Hypertarget{xdot_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{xdot_8h_a886393475707990cd9a4a8d6b44d949e}\index{xdot.h@{xdot.h}!xdot\_align@{xdot\_align}}
+\index{xdot\_align@{xdot\_align}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{xdot\_align}{xdot\_align}}
+{\footnotesize\ttfamily \label{xdot_8h_a886393475707990cd9a4a8d6b44d949e} 
+enum \doxymbox{\hyperlink{xdot_8h_a886393475707990cd9a4a8d6b44d949e}{xdot\+\_\+align}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_left@{xd\_left}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_left@{xd\_left}}
+}\Hypertarget{xdot_8h_a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850}\label{xdot_8h_a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850} 
+xd\+\_\+left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_center@{xd\_center}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_center@{xd\_center}}
+}\Hypertarget{xdot_8h_a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d}\label{xdot_8h_a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d} 
+xd\+\_\+center&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_right@{xd\_right}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_right@{xd\_right}}
+}\Hypertarget{xdot_8h_a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27}\label{xdot_8h_a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27} 
+xd\+\_\+right&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{xdot_8h_a01060e38b65176015a53e621a323b23d}\index{xdot.h@{xdot.h}!xdot\_grad\_type@{xdot\_grad\_type}}
+\index{xdot\_grad\_type@{xdot\_grad\_type}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{xdot\_grad\_type}{xdot\_grad\_type}}
+{\footnotesize\ttfamily \label{xdot_8h_a01060e38b65176015a53e621a323b23d} 
+enum \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23d}{xdot\+\_\+grad\+\_\+type}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_none@{xd\_none}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_none@{xd\_none}}
+}\Hypertarget{xdot_8h_a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6}\label{xdot_8h_a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6} 
+xd\+\_\+none&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_linear@{xd\_linear}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_linear@{xd\_linear}}
+}\Hypertarget{xdot_8h_a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d}\label{xdot_8h_a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d} 
+xd\+\_\+linear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_radial@{xd\_radial}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_radial@{xd\_radial}}
+}\Hypertarget{xdot_8h_a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678}\label{xdot_8h_a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678} 
+xd\+\_\+radial&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614}\index{xdot.h@{xdot.h}!xdot\_kind@{xdot\_kind}}
+\index{xdot\_kind@{xdot\_kind}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{xdot\_kind}{xdot\_kind}}
+{\footnotesize\ttfamily \label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614} 
+enum \doxymbox{\hyperlink{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614}{xdot\+\_\+kind}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_filled\_ellipse@{xd\_filled\_ellipse}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_filled\_ellipse@{xd\_filled\_ellipse}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8} 
+xd\+\_\+filled\+\_\+ellipse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_unfilled\_ellipse@{xd\_unfilled\_ellipse}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_unfilled\_ellipse@{xd\_unfilled\_ellipse}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2} 
+xd\+\_\+unfilled\+\_\+ellipse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_filled\_polygon@{xd\_filled\_polygon}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_filled\_polygon@{xd\_filled\_polygon}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff} 
+xd\+\_\+filled\+\_\+polygon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_unfilled\_polygon@{xd\_unfilled\_polygon}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_unfilled\_polygon@{xd\_unfilled\_polygon}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc} 
+xd\+\_\+unfilled\+\_\+polygon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_filled\_bezier@{xd\_filled\_bezier}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_filled\_bezier@{xd\_filled\_bezier}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9} 
+xd\+\_\+filled\+\_\+bezier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_unfilled\_bezier@{xd\_unfilled\_bezier}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_unfilled\_bezier@{xd\_unfilled\_bezier}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249} 
+xd\+\_\+unfilled\+\_\+bezier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_polyline@{xd\_polyline}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_polyline@{xd\_polyline}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7} 
+xd\+\_\+polyline&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_text@{xd\_text}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_text@{xd\_text}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80} 
+xd\+\_\+text&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_fill\_color@{xd\_fill\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_fill\_color@{xd\_fill\_color}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7} 
+xd\+\_\+fill\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_pen\_color@{xd\_pen\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_pen\_color@{xd\_pen\_color}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76} 
+xd\+\_\+pen\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_font@{xd\_font}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_font@{xd\_font}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da} 
+xd\+\_\+font&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_style@{xd\_style}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_style@{xd\_style}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf} 
+xd\+\_\+style&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_image@{xd\_image}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_image@{xd\_image}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b} 
+xd\+\_\+image&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_grad\_fill\_color@{xd\_grad\_fill\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_grad\_fill\_color@{xd\_grad\_fill\_color}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa} 
+xd\+\_\+grad\+\_\+fill\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_grad\_pen\_color@{xd\_grad\_pen\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_grad\_pen\_color@{xd\_grad\_pen\_color}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159} 
+xd\+\_\+grad\+\_\+pen\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xd\_fontchar@{xd\_fontchar}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xd\_fontchar@{xd\_fontchar}}
+}\Hypertarget{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d}\label{xdot_8h_ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d} 
+xd\+\_\+fontchar&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7}\index{xdot.h@{xdot.h}!xop\_kind@{xop\_kind}}
+\index{xop\_kind@{xop\_kind}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{xop\_kind}{xop\_kind}}
+{\footnotesize\ttfamily \label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7} 
+enum \doxymbox{\hyperlink{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7}{xop\+\_\+kind}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_ellipse@{xop\_ellipse}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_ellipse@{xop\_ellipse}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849} 
+xop\+\_\+ellipse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_polygon@{xop\_polygon}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_polygon@{xop\_polygon}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93} 
+xop\+\_\+polygon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_bezier@{xop\_bezier}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_bezier@{xop\_bezier}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69} 
+xop\+\_\+bezier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_polyline@{xop\_polyline}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_polyline@{xop\_polyline}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d} 
+xop\+\_\+polyline&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_text@{xop\_text}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_text@{xop\_text}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c} 
+xop\+\_\+text&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_fill\_color@{xop\_fill\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_fill\_color@{xop\_fill\_color}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8} 
+xop\+\_\+fill\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_pen\_color@{xop\_pen\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_pen\_color@{xop\_pen\_color}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08} 
+xop\+\_\+pen\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_font@{xop\_font}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_font@{xop\_font}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911} 
+xop\+\_\+font&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_style@{xop\_style}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_style@{xop\_style}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af} 
+xop\+\_\+style&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_image@{xop\_image}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_image@{xop\_image}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a} 
+xop\+\_\+image&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_grad\_color@{xop\_grad\_color}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_grad\_color@{xop\_grad\_color}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c} 
+xop\+\_\+grad\+\_\+color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{xop\_fontchar@{xop\_fontchar}!xdot.h@{xdot.h}}
+\index{xdot.h@{xdot.h}!xop\_fontchar@{xop\_fontchar}}
+}\Hypertarget{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583}\label{xdot_8h_a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583} 
+xop\+\_\+fontchar&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{xdot_8h_doc-func-members}
+\Hypertarget{xdot_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{xdot_8h_a8fd6a4562b4829343c678eaa77640fd8}\index{xdot.h@{xdot.h}!colorTypeXDot@{colorTypeXDot}}
+\index{colorTypeXDot@{colorTypeXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{colorTypeXDot()}{colorTypeXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a8fd6a4562b4829343c678eaa77640fd8} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{xdot_8h_a01060e38b65176015a53e621a323b23d}{xdot\+\_\+grad\+\_\+type}} color\+Type\+XDot (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a1715f8bf6aa035ded98c2a29c95a8bd7}\index{xdot.h@{xdot.h}!fprintXDot@{fprintXDot}}
+\index{fprintXDot@{fprintXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{fprintXDot()}{fprintXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a1715f8bf6aa035ded98c2a29c95a8bd7} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void fprint\+XDot (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a5515091902141890b8e895d499615b5b}\index{xdot.h@{xdot.h}!freeXDot@{freeXDot}}
+\index{freeXDot@{freeXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{freeXDot()}{freeXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a5515091902141890b8e895d499615b5b} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void free\+XDot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a7bdeac6f0d42a9781d93e76ada3968ef}\index{xdot.h@{xdot.h}!freeXDotColor@{freeXDotColor}}
+\index{freeXDotColor@{freeXDotColor}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{freeXDotColor()}{freeXDotColor()}}
+{\footnotesize\ttfamily \label{xdot_8h_a7bdeac6f0d42a9781d93e76ada3968ef} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void free\+XDot\+Color (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structxdot__color}{xdot\+\_\+color}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a1648a6f9fe3baf32c809364c493a9802}\index{xdot.h@{xdot.h}!jsonXDot@{jsonXDot}}
+\index{jsonXDot@{jsonXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{jsonXDot()}{jsonXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a1648a6f9fe3baf32c809364c493a9802} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} void json\+XDot (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a9f16fc5f2dec9bf85289a9a1a6ff1ba2}\index{xdot.h@{xdot.h}!parseXDot@{parseXDot}}
+\index{parseXDot@{parseXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{parseXDot()}{parseXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a9f16fc5f2dec9bf85289a9a1a6ff1ba2} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} parse\+XDot (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a326bb058d7364c46a5d9e2a329d8923c}\index{xdot.h@{xdot.h}!parseXDotColor@{parseXDotColor}}
+\index{parseXDotColor@{parseXDotColor}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{parseXDotColor()}{parseXDotColor()}}
+{\footnotesize\ttfamily \label{xdot_8h_a326bb058d7364c46a5d9e2a329d8923c} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} parse\+XDot\+Color (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cp}{, }\item[{\doxymbox{\hyperlink{structxdot__color}{xdot\+\_\+color}} \texorpdfstring{$\ast$}{*}}]{clr}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_ab0d52f47955fa1ceb0c38633f71adf66}\index{xdot.h@{xdot.h}!parseXDotF@{parseXDotF}}
+\index{parseXDotF@{parseXDotF}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{parseXDotF()}{parseXDotF()}}
+{\footnotesize\ttfamily \label{xdot_8h_ab0d52f47955fa1ceb0c38633f71adf66} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} parse\+XDotF (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}{drawfunc\+\_\+t}}}]{opfns}{\+[$\,$]\+, }\item[{size\+\_\+t}]{sz}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a98c8818d87ed6f3e72213d11cd5abee9}\index{xdot.h@{xdot.h}!parseXDotFOn@{parseXDotFOn}}
+\index{parseXDotFOn@{parseXDotFOn}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{parseXDotFOn()}{parseXDotFOn()}}
+{\footnotesize\ttfamily \label{xdot_8h_a98c8818d87ed6f3e72213d11cd5abee9} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} \doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*} parse\+XDot\+FOn (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{xdot_8h_a8bb541a0389eff13933e5fb7ab8b9f60}{drawfunc\+\_\+t}}}]{opfns}{\+[$\,$]\+, }\item[{size\+\_\+t}]{sz}{, }\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_a1c7e297b272814da9a7d3481c330cf8c}\index{xdot.h@{xdot.h}!sprintXDot@{sprintXDot}}
+\index{sprintXDot@{sprintXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{sprintXDot()}{sprintXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_a1c7e297b272814da9a7d3481c330cf8c} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} sprint\+XDot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{xdot_8h_aa02fbafb913ba22fea989e8c0249207b}\index{xdot.h@{xdot.h}!statXDot@{statXDot}}
+\index{statXDot@{statXDot}!xdot.h@{xdot.h}}
+\doxysubsubsection{\texorpdfstring{statXDot()}{statXDot()}}
+{\footnotesize\ttfamily \label{xdot_8h_aa02fbafb913ba22fea989e8c0249207b} 
+\doxymbox{\hyperlink{xdot_8h_aad7e8e9500a6253fd33a8eafb79e4a30}{XDOT\+\_\+\+API}} int stat\+XDot (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structxdot}{xdot}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{\doxymbox{\hyperlink{structxdot__stats}{xdot\+\_\+stats}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+

@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл C:/Users/Дмитрий/source/repos/ivanov_47_knpo/ivanov_47_knpo/ivanov_47_knpo.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('ivanov__47__knpo_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл ivanov_47_knpo.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="headers_8h_source.html">headers.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;queue&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;stack&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;windows.h&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a5a01f705cc7b4a7317a57f6bf41aef25" id="r_a5a01f705cc7b4a7317a57f6bf41aef25"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a5a01f705cc7b4a7317a57f6bf41aef25">trim</a> (const std::string &amp;str)</td></tr>
+<tr class="memdesc:a5a01f705cc7b4a7317a57f6bf41aef25"><td class="mdescLeft">&#160;</td><td class="mdescRight">обрезает пробельные символы по краям строки  <br /></td></tr>
+<tr class="memitem:abe8e52bfa901d7a508084e909fc3249d" id="r_abe8e52bfa901d7a508084e909fc3249d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abe8e52bfa901d7a508084e909fc3249d">extractTokensFromString</a> (std::string &amp;str, const std::string &amp;delimeter, std::vector&lt; std::string &gt; &amp;tokens)</td></tr>
+<tr class="memdesc:abe8e52bfa901d7a508084e909fc3249d"><td class="mdescLeft">&#160;</td><td class="mdescRight">делит строку на токены по заданному разделителю  <br /></td></tr>
+<tr class="memitem:ab431435b8c948ce4334e6b1c3bb5d8f5" id="r_ab431435b8c948ce4334e6b1c3bb5d8f5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab431435b8c948ce4334e6b1c3bb5d8f5">tryParseInt</a> (const std::string &amp;str, int &amp;result)</td></tr>
+<tr class="memdesc:ab431435b8c948ce4334e6b1c3bb5d8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Попытка распарсить строку как целое число  <br /></td></tr>
+<tr class="memitem:aa5410876102f5c4c410f2a4dbcf33532" id="r_aa5410876102f5c4c410f2a4dbcf33532"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5410876102f5c4c410f2a4dbcf33532">parseInnerLine</a> (const std::string &amp;line, int lineNumber, std::vector&lt; int &gt; &amp;vertexList, std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edgeList, std::vector&lt; int &gt; &amp;edgeLineNumbers, bool &amp;edgesStarted, std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorVector)</td></tr>
+<tr class="memdesc:aa5410876102f5c4c410f2a4dbcf33532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка одной строки внутреннего описания графа  <br /></td></tr>
+<tr class="memitem:a60b864ebf63323026ffce3c0cf919ee9" id="r_a60b864ebf63323026ffce3c0cf919ee9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a60b864ebf63323026ffce3c0cf919ee9">processEdges</a> (const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;edgeList, const std::vector&lt; int &gt; &amp;edgeLineNumbers, const std::vector&lt; int &gt; &amp;vertexList, <a class="el" href="class_dir_graph.html">DirGraph</a> *graph, int inDegrees[1000], std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorVector)</td></tr>
+<tr class="memdesc:a60b864ebf63323026ffce3c0cf919ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление дуг в граф и подсчет степеней захода  <br /></td></tr>
+<tr class="memitem:a41963a7c7731566bd55f6522eb6e3195" id="r_a41963a7c7731566bd55f6522eb6e3195"><td class="memItemLeft"><a class="el" href="class_dir_graph.html">DirGraph</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a41963a7c7731566bd55f6522eb6e3195">parseGraphFromText</a> (std::vector&lt; std::string &gt; &amp;fileText, int inDegrees[1000], std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorVector)</td></tr>
+<tr class="memdesc:a41963a7c7731566bd55f6522eb6e3195"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция парсинга графа из текста  <br /></td></tr>
+<tr class="memitem:acf7b86c9b4a6117aa43bc5aee344d915" id="r_acf7b86c9b4a6117aa43bc5aee344d915"><td class="memItemLeft"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a>&#160;</td><td class="memItemRight"><a class="el" href="#acf7b86c9b4a6117aa43bc5aee344d915">tryBuildTreeFromVertex</a> (const <a class="el" href="class_dir_graph.html">DirGraph</a> &amp;graph, int rootIdx, int vertexCount, <a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;edgeDifference)</td></tr>
+<tr class="memdesc:acf7b86c9b4a6117aa43bc5aee344d915"><td class="mdescLeft">&#160;</td><td class="mdescRight">попытаться построить остовное дерево из указанной вершины  <br /></td></tr>
+<tr class="memitem:a862d24e23d8544b1c80213413cc8e9fc" id="r_a862d24e23d8544b1c80213413cc8e9fc"><td class="memItemLeft"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a862d24e23d8544b1c80213413cc8e9fc">findGraphType</a> (const <a class="el" href="class_dir_graph.html">DirGraph</a> &amp;graph, <a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;edgeDifference, int inDegrees[1000])</td></tr>
+<tr class="memdesc:a862d24e23d8544b1c80213413cc8e9fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">определить тип графа  <br /></td></tr>
+<tr class="memitem:a093ad82c389c2b6be4b3b39246f288f1" id="r_a093ad82c389c2b6be4b3b39246f288f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a093ad82c389c2b6be4b3b39246f288f1">readTextFromFile</a> (std::vector&lt; std::string &gt; &amp;fileText, std::string &amp;fileName, std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorVector)</td></tr>
+<tr class="memdesc:a093ad82c389c2b6be4b3b39246f288f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция чтения текста из файла  <br /></td></tr>
+<tr class="memitem:a16d6086fe09142fd48acdf26c2aeb756" id="r_a16d6086fe09142fd48acdf26c2aeb756"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16d6086fe09142fd48acdf26c2aeb756">printErrorsMessages</a> (const std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorsVector)</td></tr>
+<tr class="memdesc:a16d6086fe09142fd48acdf26c2aeb756"><td class="mdescLeft">&#160;</td><td class="mdescRight">вывод в консоль информации об ошибках  <br /></td></tr>
+<tr class="memitem:a1bdf42983f66b1811188c1fca9ccbb3f" id="r_a1bdf42983f66b1811188c1fca9ccbb3f"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#a1bdf42983f66b1811188c1fca9ccbb3f">processEdgeLine</a> (const std::string &amp;line, <a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> type, const std::vector&lt; std::string &gt; &amp;vertexNames, const std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;edgesToDeleteCount, std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;highlightedCount)</td></tr>
+<tr class="memdesc:a1bdf42983f66b1811188c1fca9ccbb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка строки с дугой: если дуга подлежит удалению, помечает её красным  <br /></td></tr>
+<tr class="memitem:a4ef3aec89a4de921f48fb8704c021bcb" id="r_a4ef3aec89a4de921f48fb8704c021bcb"><td class="memItemLeft">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4ef3aec89a4de921f48fb8704c021bcb">generateOutputText</a> (<a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> type, std::vector&lt; std::string &gt; &amp;inputFilePlainText, <a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;edgesToDelete)</td></tr>
+<tr class="memdesc:a4ef3aec89a4de921f48fb8704c021bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">формирование текста выходного файла  <br /></td></tr>
+<tr class="memitem:acfb23957a861227c7bc4e37c3f37b429" id="r_acfb23957a861227c7bc4e37c3f37b429"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acfb23957a861227c7bc4e37c3f37b429">writeTextToFile</a> (std::vector&lt; std::string &gt; &amp;outputText, std::string &amp;outputFileName, std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;errorsVector)</td></tr>
+<tr class="memdesc:acfb23957a861227c7bc4e37c3f37b429"><td class="mdescLeft">&#160;</td><td class="mdescRight">запись текста в файл  <br /></td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">главная функция программы  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="abe8e52bfa901d7a508084e909fc3249d" name="abe8e52bfa901d7a508084e909fc3249d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8e52bfa901d7a508084e909fc3249d">&#9670;&#160;</a></span>extractTokensFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool extractTokensFromString </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>delimeter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>возможен многосимвольный разделитель </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Строка символов </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimeter</td><td>Строка с разделителем </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>tokens Вектор с токенами </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true Если функция завершилась успешно </dd>
+<dd>
+false Если функция завершилась с ошибками </dd></dl>
+
+</div>
+</div>
+<a id="a862d24e23d8544b1c80213413cc8e9fc" name="a862d24e23d8544b1c80213413cc8e9fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862d24e23d8544b1c80213413cc8e9fc">&#9670;&#160;</a></span>findGraphType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> findGraphType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_dir_graph.html">DirGraph</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>graph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeDifference</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>inDegrees</em></span>[1000]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>определяет тип графа в соответствии с перечесленим <a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e" title="возможные типы графа в терминах задачи">graphType</a> и возвращает его. Если граф приводим к дереву, находит список дуг, удаление которых сделает граф деревом </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graph</td><td>Константная ссылка на граф </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>edgeDifference Список смежности для разности дуг между графом и его остовным деревом </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inDegrees</td><td>Вычисленные при парсинге степепи заходов вершин </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Тип графа </dd></dl>
+
+</div>
+</div>
+<a id="a4ef3aec89a4de921f48fb8704c021bcb" name="a4ef3aec89a4de921f48fb8704c021bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ef3aec89a4de921f48fb8704c021bcb">&#9670;&#160;</a></span>generateOutputText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; generateOutputText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>inputFilePlainText</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>edgesToDelete</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Найденный тип входного графа </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputFilePlainText</td><td>Текстовое описание входного графа </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgesToDelete</td><td>Дуги для удаления </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Вектор строк с текстом выходного файла </dd></dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>Количество переданных аргументов командной строки </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>Путь к проектному файлу </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>Путь к выходной директории </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0, если функция завершилась успешно </dd></dl>
+
+</div>
+</div>
+<a id="a41963a7c7731566bd55f6522eb6e3195" name="a41963a7c7731566bd55f6522eb6e3195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41963a7c7731566bd55f6522eb6e3195">&#9670;&#160;</a></span>parseGraphFromText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dir_graph.html">DirGraph</a> * parseGraphFromText </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>fileText</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>inDegrees</em></span>[1000], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileText</td><td>Контейнер с текстом </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>inDegrees Массив со степенями полузаходов вершин </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>errorVector Контейнер для ошибок </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на созданный граф </dd></dl>
+
+</div>
+</div>
+<a id="aa5410876102f5c4c410f2a4dbcf33532" name="aa5410876102f5c4c410f2a4dbcf33532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5410876102f5c4c410f2a4dbcf33532">&#9670;&#160;</a></span>parseInnerLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parseInnerLine </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>lineNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vertexList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeLineNumbers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>edgesStarted</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Определяет тип строки (дуга или вершина), парсит её и добавляет в соответствующий список. При ошибке синтаксиса добавляет ошибку в errorVector. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Строка для обработки </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lineNumber</td><td>Номер строки в файле (для сообщений об ошибках) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>vertexList Список вершин (может быть дополнен) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>edgeList Список дуг (может быть дополнен) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>edgeLineNumbers Номера строк с дугами (может быть дополнен) </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>edgesStarted Флаг: встречалась ли уже хотя бы одна дуга </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>errorVector Контейнер для ошибок </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a16d6086fe09142fd48acdf26c2aeb756" name="a16d6086fe09142fd48acdf26c2aeb756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d6086fe09142fd48acdf26c2aeb756">&#9670;&#160;</a></span>printErrorsMessages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printErrorsMessages </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorsVector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorsVector</td><td>контейнер с ошибками </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1bdf42983f66b1811188c1fca9ccbb3f" name="a1bdf42983f66b1811188c1fca9ccbb3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdf42983f66b1811188c1fca9ccbb3f">&#9670;&#160;</a></span>processEdgeLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string processEdgeLine </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vertexNames</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>edgesToDeleteCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; std::pair&lt; int, int &gt;, int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>highlightedCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>Исходная строка из файла </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Тип графа </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexNames</td><td>Имена вершин графа (в порядке объявления) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgesToDeleteCount</td><td>Количество каждой дуги, подлежащей удалению </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>highlightedCount Счётчик уже помеченных дуг </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Модифицированная строка (с пометкой [color="red"]) или исходная строка </dd></dl>
+
+</div>
+</div>
+<a id="a60b864ebf63323026ffce3c0cf919ee9" name="a60b864ebf63323026ffce3c0cf919ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b864ebf63323026ffce3c0cf919ee9">&#9670;&#160;</a></span>processEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processEdges </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeLineNumbers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; int &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>vertexList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_dir_graph.html">DirGraph</a> *</td>          <td class="paramname"><span class="paramname"><em>graph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>inDegrees</em></span>[1000], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgeList</td><td>Список дуг для добавления </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgeLineNumbers</td><td>Номера строк с дугами (для ошибок) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexList</td><td>Список вершин графа </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>graph Граф, в который добавляются дуги </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>inDegrees Массив степеней захода вершин </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>errorVector Контейнер для ошибок </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a093ad82c389c2b6be4b3b39246f288f1" name="a093ad82c389c2b6be4b3b39246f288f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093ad82c389c2b6be4b3b39246f288f1">&#9670;&#160;</a></span>readTextFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool readTextFromFile </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>fileText</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>fileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>fileText Контейнер для записи текста из файла </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>Путь к файлу с текстом </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>errorVector Контейнер для ошибок </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если функция завершилась успешно </dd>
+<dd>
+false, если функция завершилась с ошибками </dd></dl>
+
+</div>
+</div>
+<a id="a5a01f705cc7b4a7317a57f6bf41aef25" name="a5a01f705cc7b4a7317a57f6bf41aef25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a01f705cc7b4a7317a57f6bf41aef25">&#9670;&#160;</a></span>trim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string trim </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>удаляет пробелы, табы, переносы строк и другие whitespace-символы с начала и конца строки. Пробелы внутри строки сохраняются. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Исходная строка </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Обрезанная строка. Если строка состояла только из пробелов — пустая строка </dd></dl>
+
+</div>
+</div>
+<a id="acf7b86c9b4a6117aa43bc5aee344d915" name="acf7b86c9b4a6117aa43bc5aee344d915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7b86c9b4a6117aa43bc5aee344d915">&#9670;&#160;</a></span>tryBuildTreeFromVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="headers_8h.html#a3f8f7b519e692469f867b0af0ce0490e">graphType</a> tryBuildTreeFromVertex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_dir_graph.html">DirGraph</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>graph</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>rootIdx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>vertexCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structadjacency_list.html">adjacencyList</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>edgeDifference</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graph</td><td>Исходный граф </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rootIdx</td><td>Индекс вершины-корня </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexCount</td><td>Количество вершин в графе </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>edgeDifference Разность дуг графа и дерева </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Тип графа: tree, convertibleToTree или notConvertibleToTree </dd></dl>
+
+</div>
+</div>
+<a id="ab431435b8c948ce4334e6b1c3bb5d8f5" name="ab431435b8c948ce4334e6b1c3bb5d8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab431435b8c948ce4334e6b1c3bb5d8f5">&#9670;&#160;</a></span>tryParseInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tryParseInt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Строка для парсинга </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>Результат парсинга (валидно только если функция вернула true) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если строка полностью является валидным целым числом </dd>
+<dd>
+false если строка содержит лишние символы или не является числом </dd></dl>
+
+</div>
+</div>
+<a id="acfb23957a861227c7bc4e37c3f37b429" name="acfb23957a861227c7bc4e37c3f37b429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb23957a861227c7bc4e37c3f37b429">&#9670;&#160;</a></span>writeTextToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int writeTextToFile </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>outputText</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>outputFileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_error.html">Error</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>errorsVector</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputText</td><td>Текст для записи </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputFileName</td><td>Имя выходного файла </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>errorsVector Контейнер для ошибок </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0, если файл успешно создан </dd>
+<dd>
+1, если файл не удалось создать </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a href="dir_bc79896f2fcf251bcba1d7e901b3e4b4.html">ivanov_47_knpo</a></li><li class="navelem"><a href="dir_df698c81c547ce8a122ebd7bcc3eab7c.html">ivanov_47_knpo</a></li><li class="navelem"><a href="ivanov__47__knpo_8cpp.html">ivanov_47_knpo.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+color.h}
+\hypertarget{color_8h}{}\label{color_8h}\index{Graphviz/include/graphviz/color.h@{Graphviz/include/graphviz/color.h}}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structhsvrgbacolor__t}{hsvrgbacolor\+\_\+t}}
+\item 
+struct \doxymbox{\hyperlink{structcolor__s}{color\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{color_8h_a33b51f43e7445305cc51be2f8cf37df5}{COLOR\+\_\+\+MALLOC\+\_\+\+FAIL}}~-\/1
+\item 
+\+\#define \doxymbox{\hyperlink{color_8h_aeae63bffec753f28eca373ef5ebd1493}{COLOR\+\_\+\+UNKNOWN}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{color_8h_a2bbbfc6b13243b5d5ea1159eed41942c}{COLOR\+\_\+\+OK}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct hsvrgbacolor\+\_\+t \doxymbox{\hyperlink{color_8h_a512822a53763651db1a8dbc273cc96d3}{hsvrgbacolor\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{structcolor__s}{color\+\_\+s}} \doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20}{color\+\_\+type\+\_\+t}} \{ \newline
+\doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182}{HSVA\+\_\+\+DOUBLE}}
+, \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563}{RGBA\+\_\+\+BYTE}}
+, \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6}{RGBA\+\_\+\+WORD}}
+, \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945}{RGBA\+\_\+\+DOUBLE}}
+, \newline
+\doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b}{COLOR\+\_\+\+STRING}}
+, \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466}{COLOR\+\_\+\+INDEX}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{color_8h_doc-define-members}
+\Hypertarget{color_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{color_8h_a33b51f43e7445305cc51be2f8cf37df5}\index{color.h@{color.h}!COLOR\_MALLOC\_FAIL@{COLOR\_MALLOC\_FAIL}}
+\index{COLOR\_MALLOC\_FAIL@{COLOR\_MALLOC\_FAIL}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_MALLOC\_FAIL}{COLOR\_MALLOC\_FAIL}}
+{\footnotesize\ttfamily \label{color_8h_a33b51f43e7445305cc51be2f8cf37df5} 
+\+\#define COLOR\+\_\+\+MALLOC\+\_\+\+FAIL~-\/1}
+
+\Hypertarget{color_8h_a2bbbfc6b13243b5d5ea1159eed41942c}\index{color.h@{color.h}!COLOR\_OK@{COLOR\_OK}}
+\index{COLOR\_OK@{COLOR\_OK}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_OK}{COLOR\_OK}}
+{\footnotesize\ttfamily \label{color_8h_a2bbbfc6b13243b5d5ea1159eed41942c} 
+\+\#define COLOR\+\_\+\+OK~0}
+
+\Hypertarget{color_8h_aeae63bffec753f28eca373ef5ebd1493}\index{color.h@{color.h}!COLOR\_UNKNOWN@{COLOR\_UNKNOWN}}
+\index{COLOR\_UNKNOWN@{COLOR\_UNKNOWN}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{COLOR\_UNKNOWN}{COLOR\_UNKNOWN}}
+{\footnotesize\ttfamily \label{color_8h_aeae63bffec753f28eca373ef5ebd1493} 
+\+\#define COLOR\+\_\+\+UNKNOWN~1}
+
+
+
+\label{color_8h_doc-typedef-members}
+\Hypertarget{color_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{color_8h_ae1191eed3030f43658df2fef5fa202de}\index{color.h@{color.h}!gvcolor\_t@{gvcolor\_t}}
+\index{gvcolor\_t@{gvcolor\_t}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{gvcolor\_t}{gvcolor\_t}}
+{\footnotesize\ttfamily \label{color_8h_ae1191eed3030f43658df2fef5fa202de} 
+typedef struct \doxymbox{\hyperlink{structcolor__s}{color\+\_\+s}} \doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}}}
+
+\Hypertarget{color_8h_a512822a53763651db1a8dbc273cc96d3}\index{color.h@{color.h}!hsvrgbacolor\_t@{hsvrgbacolor\_t}}
+\index{hsvrgbacolor\_t@{hsvrgbacolor\_t}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{hsvrgbacolor\_t}{hsvrgbacolor\_t}}
+{\footnotesize\ttfamily \label{color_8h_a512822a53763651db1a8dbc273cc96d3} 
+typedef struct hsvrgbacolor\+\_\+t hsvrgbacolor\+\_\+t}
+
+
+
+\label{color_8h_doc-enum-members}
+\Hypertarget{color_8h_doc-enum-members}
+\doxysubsection{Перечисления}
+\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20}\index{color.h@{color.h}!color\_type\_t@{color\_type\_t}}
+\index{color\_type\_t@{color\_type\_t}!color.h@{color.h}}
+\doxysubsubsection{\texorpdfstring{color\_type\_t}{color\_type\_t}}
+{\footnotesize\ttfamily \label{color_8h_a0254bf137f575a4c9b56103c6859fe20} 
+enum \doxymbox{\hyperlink{color_8h_a0254bf137f575a4c9b56103c6859fe20}{color\+\_\+type\+\_\+t}}}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HSVA\_DOUBLE@{HSVA\_DOUBLE}!color.h@{color.h}}
+\index{color.h@{color.h}!HSVA\_DOUBLE@{HSVA\_DOUBLE}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20a4ec09b7c709fcb6ce271c8224e868182} 
+HSVA\+\_\+\+DOUBLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RGBA\_BYTE@{RGBA\_BYTE}!color.h@{color.h}}
+\index{color.h@{color.h}!RGBA\_BYTE@{RGBA\_BYTE}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20aa6fd28dfa5d78b69ad9a5a6663089563} 
+RGBA\+\_\+\+BYTE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RGBA\_WORD@{RGBA\_WORD}!color.h@{color.h}}
+\index{color.h@{color.h}!RGBA\_WORD@{RGBA\_WORD}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20aa2500a5f9637a454382c55acf03654f6} 
+RGBA\+\_\+\+WORD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RGBA\_DOUBLE@{RGBA\_DOUBLE}!color.h@{color.h}}
+\index{color.h@{color.h}!RGBA\_DOUBLE@{RGBA\_DOUBLE}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20a87fbf87a09385a65d3080a64cf80b945} 
+RGBA\+\_\+\+DOUBLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLOR\_STRING@{COLOR\_STRING}!color.h@{color.h}}
+\index{color.h@{color.h}!COLOR\_STRING@{COLOR\_STRING}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20aef9051aa6077a779f60cc7bb2513913b} 
+COLOR\+\_\+\+STRING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLOR\_INDEX@{COLOR\_INDEX}!color.h@{color.h}}
+\index{color.h@{color.h}!COLOR\_INDEX@{COLOR\_INDEX}}
+}\Hypertarget{color_8h_a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466}\label{color_8h_a0254bf137f575a4c9b56103c6859fe20ae60d922c402a91f1721af706f61ea466} 
+COLOR\+\_\+\+INDEX&\\
+\hline
+
+\end{DoxyEnumFields}

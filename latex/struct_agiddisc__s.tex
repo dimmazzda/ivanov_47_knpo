@@ -1,0 +1,75 @@
+\doxysection{Структура Agiddisc\+\_\+s}
+\hypertarget{struct_agiddisc__s}{}\label{struct_agiddisc__s}\index{Agiddisc\_s@{Agiddisc\_s}}
+
+
+object ID allocator discipline  
+
+
+
+
+{\ttfamily \+\#include $<$cgraph.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_a397fdb109291bbf3d1b8631b8a95b787}{open}} )(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\item 
+long(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_a3ab41faa293b078e0300801c7edebe3b}{map}} )(void \texorpdfstring{$\ast$}{*}state, int objtype, char \texorpdfstring{$\ast$}{*}str, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} \texorpdfstring{$\ast$}{*}id, int createflag)
+\item 
+void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_a9de80173636ffa2e2920f485fb5d1d89}{free}} )(void \texorpdfstring{$\ast$}{*}state, int objtype, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id)
+\item 
+char \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_aabfb032d134e3e5b9e4b192c1a96f597}{print}} )(void \texorpdfstring{$\ast$}{*}state, int objtype, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id)
+\item 
+void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_a67673147fdf87cec41296dc37406d3ea}{close}} )(void \texorpdfstring{$\ast$}{*}state)
+\item 
+void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{struct_agiddisc__s_a3bd7dd8eeab462cfd538f3019d283c64}{idregister}} )(void \texorpdfstring{$\ast$}{*}state, int objtype, void \texorpdfstring{$\ast$}{*}obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+An ID allocator discipline allows a client to control assignment of IDs (uninterpreted integer values) to objects, and possibly how they are mapped to and from strings. object ID allocator 
+
+\label{struct_agiddisc__s_doc-variable-members}
+\Hypertarget{struct_agiddisc__s_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{struct_agiddisc__s_a67673147fdf87cec41296dc37406d3ea}\index{Agiddisc\_s@{Agiddisc\_s}!close@{close}}
+\index{close@{close}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{close}{close}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_a67673147fdf87cec41296dc37406d3ea} 
+void(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+close) (void \texorpdfstring{$\ast$}{*}state)}
+
+\Hypertarget{struct_agiddisc__s_a9de80173636ffa2e2920f485fb5d1d89}\index{Agiddisc\_s@{Agiddisc\_s}!free@{free}}
+\index{free@{free}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{free}{free}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_a9de80173636ffa2e2920f485fb5d1d89} 
+void(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+free) (void \texorpdfstring{$\ast$}{*}state, int objtype, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id)}
+
+\Hypertarget{struct_agiddisc__s_a3bd7dd8eeab462cfd538f3019d283c64}\index{Agiddisc\_s@{Agiddisc\_s}!idregister@{idregister}}
+\index{idregister@{idregister}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{idregister}{idregister}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_a3bd7dd8eeab462cfd538f3019d283c64} 
+void(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+idregister) (void \texorpdfstring{$\ast$}{*}state, int objtype, void \texorpdfstring{$\ast$}{*}obj)}
+
+\Hypertarget{struct_agiddisc__s_a3ab41faa293b078e0300801c7edebe3b}\index{Agiddisc\_s@{Agiddisc\_s}!map@{map}}
+\index{map@{map}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_a3ab41faa293b078e0300801c7edebe3b} 
+long(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+map) (void \texorpdfstring{$\ast$}{*}state, int objtype, char \texorpdfstring{$\ast$}{*}str, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} \texorpdfstring{$\ast$}{*}id, int createflag)}
+
+\Hypertarget{struct_agiddisc__s_a397fdb109291bbf3d1b8631b8a95b787}\index{Agiddisc\_s@{Agiddisc\_s}!open@{open}}
+\index{open@{open}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_a397fdb109291bbf3d1b8631b8a95b787} 
+void \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+open) (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\+\_\+t}} \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{struct_agiddisc__s_aabfb032d134e3e5b9e4b192c1a96f597}\index{Agiddisc\_s@{Agiddisc\_s}!print@{print}}
+\index{print@{print}!Agiddisc\_s@{Agiddisc\_s}}
+\doxysubsubsection{\texorpdfstring{print}{print}}
+{\footnotesize\ttfamily \label{struct_agiddisc__s_aabfb032d134e3e5b9e4b192c1a96f597} 
+char \texorpdfstring{$\ast$}{*}(\texorpdfstring{$\ast$}{*} Agiddisc\+\_\+s::\+print) (void \texorpdfstring{$\ast$}{*}state, int objtype, \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}} id)}
+
+
+
+Объявления и описания членов структуры находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+Graphviz/\+include/\+graphviz/\+\doxymbox{\hyperlink{cgraph_8h}{cgraph.\+h}}\end{DoxyCompactItemize}

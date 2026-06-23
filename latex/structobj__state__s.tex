@@ -1,0 +1,475 @@
+\doxysection{Структура obj\+\_\+state\+\_\+s}
+\hypertarget{structobj__state__s}{}\label{structobj__state__s}\index{obj\_state\_s@{obj\_state\_s}}
+
+
+{\ttfamily \+\#include $<$gvcjob.\+h$>$}
+
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a02731e816998f46b1511d36eff0260ec}{obj\+\_\+state\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_ac7e652fa645b990a3d273c322c72ed37}{parent}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_ac87c026b772bad1b7bb6edea6200fc92}{obj\+\_\+type}} \doxymbox{\hyperlink{structobj__state__s_a686b61b585902fdb816869e1fc705f46}{type}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a1372678d0083a80f6658fa10e20e5928}{g}}\\
+\>\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\_t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a993330749d875cfdde890df21c90977b}{sg}}\\
+\>\doxymbox{\hyperlink{types_8h_aa54efbeed985023658063bdae73347ec}{node\_t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a8881569da82b88c1a535103486995cab}{n}}\\
+\>\doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\_t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a1c67e6c02b5ba0ed613e8012b76b2937}{e}}\\
+\} \doxymbox{\hyperlink{structobj__state__s_a56a884d5d44cb431bbd1ebc83f6f2c39}{u}}\\
+
+\end{tabbing}\item 
+\doxymbox{\hyperlink{gvcjob_8h_a9d67f57cb353edb06b582591b3f1eaf0}{emit\+\_\+state\+\_\+t}} \doxymbox{\hyperlink{structobj__state__s_ab8fe9ae126dfd7c449be2be22734efd5}{emit\+\_\+state}}
+\item 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} \doxymbox{\hyperlink{structobj__state__s_aa214195f79e7eedee74006bbe9765f79}{pencolor}}
+\item 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} \doxymbox{\hyperlink{structobj__state__s_a25db9225d76b6e43e74d70f3bfc23ae1}{fillcolor}}
+\item 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} \doxymbox{\hyperlink{structobj__state__s_a73194a8c35b272cbf588ee0c91531b2b}{stopcolor}}
+\item 
+int \doxymbox{\hyperlink{structobj__state__s_ab51fa5bd497eb6e0723587da6d232043}{gradient\+\_\+angle}}
+\item 
+double \doxymbox{\hyperlink{structobj__state__s_a2c66787d48ed6a875b64981c46aa0048}{gradient\+\_\+frac}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a056abdc3e65632a0666767d8395bdc44}{pen\+\_\+type}} \doxymbox{\hyperlink{structobj__state__s_a7e97e6de2402896579423006d60898ba}{pen}}
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a8b3c1e8eaca9ba6bf60627aee8bb9e72}{fill\+\_\+type}} \doxymbox{\hyperlink{structobj__state__s_afe082b5b0510dd76bbf67af5ab822790}{fill}}
+\item 
+double \doxymbox{\hyperlink{structobj__state__s_aff055afa76950cf86469f202b2a24bce}{penwidth}}
+\item 
+char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_ab16ee35fe85d88cdf01eca253d04c6e7}{rawstyle}}
+\item 
+double \doxymbox{\hyperlink{structobj__state__s_a3fdff9f4082ad335b463d4249f25fcb3}{z}}
+\item 
+double \doxymbox{\hyperlink{structobj__state__s_ac811d320f6f7f92b3bde32973c008123}{tail\+\_\+z}}
+\item 
+double \doxymbox{\hyperlink{structobj__state__s_accbb1d0b8a6396d098b25b8845d41332}{head\+\_\+z}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_aecd95cd41e2138f93653455a56d94dbb}{label}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a5d7d0d7323188a1e70b3c931b5a160cd}{xlabel}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a2d61811979b08939e64c3cd351f5771d}{taillabel}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a0dba8f9bfa3c473395dc9b8c8a875c54}{headlabel}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a46647452bcb8f9c39a81d86a70c58f1b}{url}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_ab49cb90241cd45f10de7c3bbd8a9d119}{id}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a548c5cdf0cca91b6326a74240c892cbc}{labelurl}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a556a06e041082ccdded147aca3b84141}{tailurl}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a9f9572f9eae6c8ca21a02119755c253d}{headurl}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a26e255085bf4abac828ff3d355d10caf}{tooltip}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a64d8062b517dc492b186a92ba8edca8e}{labeltooltip}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a6d3a114f924c556b7d0daa6b3a6fc21a}{tailtooltip}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a833143bf1da45c6a561c255a7843e605}{headtooltip}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a67ecd72ea2c7797ee1eba30f6617c7ec}{target}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_abbd1afaea15ed5882237086d37f7804c}{labeltarget}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_ac94ea92ecf1e13e33dd3543f143336db}{tailtarget}}
+\item 
+char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a67a65a9f5ea7d8ddaffb9c2daeb9417f}{headtarget}}
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a4a399071e23511e55ec0f0bed9498b58}{explicit\+\_\+tooltip}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a868b91918dbb0b205714abae1d50e776}{explicit\+\_\+tailtooltip}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_ad56d3a32b2223c0c57e43ecd538aed6c}{explicit\+\_\+headtooltip}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a849f801a4e4ded4ee63a6252e65430d7}{explicit\+\_\+labeltooltip}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a14e900b425aa0c3b2c0ee7e5bedf42f8}{explicit\+\_\+tailtarget}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a98192ce9d96d928a6a4d61bf0af4db11}{explicit\+\_\+headtarget}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a27c6c75743c7964d477be71222a4348b}{explicit\+\_\+edgetarget}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a85fe2940b9a172b121a6367221360a47}{explicit\+\_\+tailurl}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_a8ad9790f997f253d768656c106637676}{explicit\+\_\+headurl}}:\+1
+\item 
+unsigned \doxymbox{\hyperlink{structobj__state__s_ae3497e84f301a86d70a73b58663e4f72}{labeledgealigned}}:\+1
+\item 
+\doxymbox{\hyperlink{gvcjob_8h_a5ce3b3a21716351feb74e0155b6499bb}{map\+\_\+shape\+\_\+t}} \doxymbox{\hyperlink{structobj__state__s_a85f1fc3bc225a43626d8b6b1c0e21f00}{url\+\_\+map\+\_\+shape}}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{structobj__state__s_aee57847ab4c6b3328d9e36dfe624149f}{url\+\_\+map\+\_\+n}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a1d158324172a38958b42d46939da8345}{url\+\_\+map\+\_\+p}}
+\item 
+size\+\_\+t \doxymbox{\hyperlink{structobj__state__s_a3bea5dd8dfb8a5d8a568753bd1420ed6}{url\+\_\+bsplinemap\+\_\+poly\+\_\+n}}
+\item 
+size\+\_\+t \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a6b3a3e105444a53c96b1c094a453f482}{url\+\_\+bsplinemap\+\_\+n}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a862a9abf5d1961cca70e34ccdf0cb150}{url\+\_\+bsplinemap\+\_\+p}}
+\item 
+int \doxymbox{\hyperlink{structobj__state__s_a0553e8338e2157222e76d52ed6aa5ee5}{tailendurl\+\_\+map\+\_\+n}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a23f5fdf30bc511ddbc117463732dab49}{tailendurl\+\_\+map\+\_\+p}}
+\item 
+int \doxymbox{\hyperlink{structobj__state__s_abc46c842b84cdf93ef64c76053de1444}{headendurl\+\_\+map\+\_\+n}}
+\item 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structobj__state__s_a4725b38952851159659998e665abe35d}{headendurl\+\_\+map\+\_\+p}}
+\end{DoxyCompactItemize}
+
+
+\label{structobj__state__s_doc-variable-members}
+\Hypertarget{structobj__state__s_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structobj__state__s_a1c67e6c02b5ba0ed613e8012b76b2937}\index{obj\_state\_s@{obj\_state\_s}!e@{e}}
+\index{e@{e}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily \label{structobj__state__s_a1c67e6c02b5ba0ed613e8012b76b2937} 
+\doxymbox{\hyperlink{types_8h_ab6289995bb0656f4da2ae67d80fea6d2}{edge\+\_\+t}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+e}
+
+\Hypertarget{structobj__state__s_ab8fe9ae126dfd7c449be2be22734efd5}\index{obj\_state\_s@{obj\_state\_s}!emit\_state@{emit\_state}}
+\index{emit\_state@{emit\_state}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{emit\_state}{emit\_state}}
+{\footnotesize\ttfamily \label{structobj__state__s_ab8fe9ae126dfd7c449be2be22734efd5} 
+\doxymbox{\hyperlink{gvcjob_8h_a9d67f57cb353edb06b582591b3f1eaf0}{emit\+\_\+state\+\_\+t}} obj\+\_\+state\+\_\+s::\+emit\+\_\+state}
+
+\Hypertarget{structobj__state__s_a27c6c75743c7964d477be71222a4348b}\index{obj\_state\_s@{obj\_state\_s}!explicit\_edgetarget@{explicit\_edgetarget}}
+\index{explicit\_edgetarget@{explicit\_edgetarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_edgetarget}{explicit\_edgetarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_a27c6c75743c7964d477be71222a4348b} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+edgetarget}
+
+\Hypertarget{structobj__state__s_a98192ce9d96d928a6a4d61bf0af4db11}\index{obj\_state\_s@{obj\_state\_s}!explicit\_headtarget@{explicit\_headtarget}}
+\index{explicit\_headtarget@{explicit\_headtarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_headtarget}{explicit\_headtarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_a98192ce9d96d928a6a4d61bf0af4db11} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+headtarget}
+
+\Hypertarget{structobj__state__s_ad56d3a32b2223c0c57e43ecd538aed6c}\index{obj\_state\_s@{obj\_state\_s}!explicit\_headtooltip@{explicit\_headtooltip}}
+\index{explicit\_headtooltip@{explicit\_headtooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_headtooltip}{explicit\_headtooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_ad56d3a32b2223c0c57e43ecd538aed6c} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+headtooltip}
+
+\Hypertarget{structobj__state__s_a8ad9790f997f253d768656c106637676}\index{obj\_state\_s@{obj\_state\_s}!explicit\_headurl@{explicit\_headurl}}
+\index{explicit\_headurl@{explicit\_headurl}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_headurl}{explicit\_headurl}}
+{\footnotesize\ttfamily \label{structobj__state__s_a8ad9790f997f253d768656c106637676} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+headurl}
+
+\Hypertarget{structobj__state__s_a849f801a4e4ded4ee63a6252e65430d7}\index{obj\_state\_s@{obj\_state\_s}!explicit\_labeltooltip@{explicit\_labeltooltip}}
+\index{explicit\_labeltooltip@{explicit\_labeltooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_labeltooltip}{explicit\_labeltooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a849f801a4e4ded4ee63a6252e65430d7} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+labeltooltip}
+
+\Hypertarget{structobj__state__s_a14e900b425aa0c3b2c0ee7e5bedf42f8}\index{obj\_state\_s@{obj\_state\_s}!explicit\_tailtarget@{explicit\_tailtarget}}
+\index{explicit\_tailtarget@{explicit\_tailtarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_tailtarget}{explicit\_tailtarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_a14e900b425aa0c3b2c0ee7e5bedf42f8} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+tailtarget}
+
+\Hypertarget{structobj__state__s_a868b91918dbb0b205714abae1d50e776}\index{obj\_state\_s@{obj\_state\_s}!explicit\_tailtooltip@{explicit\_tailtooltip}}
+\index{explicit\_tailtooltip@{explicit\_tailtooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_tailtooltip}{explicit\_tailtooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a868b91918dbb0b205714abae1d50e776} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+tailtooltip}
+
+\Hypertarget{structobj__state__s_a85fe2940b9a172b121a6367221360a47}\index{obj\_state\_s@{obj\_state\_s}!explicit\_tailurl@{explicit\_tailurl}}
+\index{explicit\_tailurl@{explicit\_tailurl}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_tailurl}{explicit\_tailurl}}
+{\footnotesize\ttfamily \label{structobj__state__s_a85fe2940b9a172b121a6367221360a47} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+tailurl}
+
+\Hypertarget{structobj__state__s_a4a399071e23511e55ec0f0bed9498b58}\index{obj\_state\_s@{obj\_state\_s}!explicit\_tooltip@{explicit\_tooltip}}
+\index{explicit\_tooltip@{explicit\_tooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{explicit\_tooltip}{explicit\_tooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a4a399071e23511e55ec0f0bed9498b58} 
+unsigned obj\+\_\+state\+\_\+s::\+explicit\+\_\+tooltip}
+
+\Hypertarget{structobj__state__s_afe082b5b0510dd76bbf67af5ab822790}\index{obj\_state\_s@{obj\_state\_s}!fill@{fill}}
+\index{fill@{fill}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{fill}{fill}}
+{\footnotesize\ttfamily \label{structobj__state__s_afe082b5b0510dd76bbf67af5ab822790} 
+\doxymbox{\hyperlink{gvcjob_8h_a8b3c1e8eaca9ba6bf60627aee8bb9e72}{fill\+\_\+type}} obj\+\_\+state\+\_\+s::\+fill}
+
+\Hypertarget{structobj__state__s_a25db9225d76b6e43e74d70f3bfc23ae1}\index{obj\_state\_s@{obj\_state\_s}!fillcolor@{fillcolor}}
+\index{fillcolor@{fillcolor}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{fillcolor}{fillcolor}}
+{\footnotesize\ttfamily \label{structobj__state__s_a25db9225d76b6e43e74d70f3bfc23ae1} 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} obj\+\_\+state\+\_\+s::\+fillcolor}
+
+\Hypertarget{structobj__state__s_a1372678d0083a80f6658fa10e20e5928}\index{obj\_state\_s@{obj\_state\_s}!g@{g}}
+\index{g@{g}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \label{structobj__state__s_a1372678d0083a80f6658fa10e20e5928} 
+\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+g}
+
+\Hypertarget{structobj__state__s_ab51fa5bd497eb6e0723587da6d232043}\index{obj\_state\_s@{obj\_state\_s}!gradient\_angle@{gradient\_angle}}
+\index{gradient\_angle@{gradient\_angle}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{gradient\_angle}{gradient\_angle}}
+{\footnotesize\ttfamily \label{structobj__state__s_ab51fa5bd497eb6e0723587da6d232043} 
+int obj\+\_\+state\+\_\+s::\+gradient\+\_\+angle}
+
+\Hypertarget{structobj__state__s_a2c66787d48ed6a875b64981c46aa0048}\index{obj\_state\_s@{obj\_state\_s}!gradient\_frac@{gradient\_frac}}
+\index{gradient\_frac@{gradient\_frac}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{gradient\_frac}{gradient\_frac}}
+{\footnotesize\ttfamily \label{structobj__state__s_a2c66787d48ed6a875b64981c46aa0048} 
+double obj\+\_\+state\+\_\+s::\+gradient\+\_\+frac}
+
+\Hypertarget{structobj__state__s_accbb1d0b8a6396d098b25b8845d41332}\index{obj\_state\_s@{obj\_state\_s}!head\_z@{head\_z}}
+\index{head\_z@{head\_z}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{head\_z}{head\_z}}
+{\footnotesize\ttfamily \label{structobj__state__s_accbb1d0b8a6396d098b25b8845d41332} 
+double obj\+\_\+state\+\_\+s::\+head\+\_\+z}
+
+\Hypertarget{structobj__state__s_abc46c842b84cdf93ef64c76053de1444}\index{obj\_state\_s@{obj\_state\_s}!headendurl\_map\_n@{headendurl\_map\_n}}
+\index{headendurl\_map\_n@{headendurl\_map\_n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headendurl\_map\_n}{headendurl\_map\_n}}
+{\footnotesize\ttfamily \label{structobj__state__s_abc46c842b84cdf93ef64c76053de1444} 
+int obj\+\_\+state\+\_\+s::\+headendurl\+\_\+map\+\_\+n}
+
+\Hypertarget{structobj__state__s_a4725b38952851159659998e665abe35d}\index{obj\_state\_s@{obj\_state\_s}!headendurl\_map\_p@{headendurl\_map\_p}}
+\index{headendurl\_map\_p@{headendurl\_map\_p}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headendurl\_map\_p}{headendurl\_map\_p}}
+{\footnotesize\ttfamily \label{structobj__state__s_a4725b38952851159659998e665abe35d} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+headendurl\+\_\+map\+\_\+p}
+
+\Hypertarget{structobj__state__s_a0dba8f9bfa3c473395dc9b8c8a875c54}\index{obj\_state\_s@{obj\_state\_s}!headlabel@{headlabel}}
+\index{headlabel@{headlabel}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headlabel}{headlabel}}
+{\footnotesize\ttfamily \label{structobj__state__s_a0dba8f9bfa3c473395dc9b8c8a875c54} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+headlabel}
+
+\Hypertarget{structobj__state__s_a67a65a9f5ea7d8ddaffb9c2daeb9417f}\index{obj\_state\_s@{obj\_state\_s}!headtarget@{headtarget}}
+\index{headtarget@{headtarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headtarget}{headtarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_a67a65a9f5ea7d8ddaffb9c2daeb9417f} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+headtarget}
+
+\Hypertarget{structobj__state__s_a833143bf1da45c6a561c255a7843e605}\index{obj\_state\_s@{obj\_state\_s}!headtooltip@{headtooltip}}
+\index{headtooltip@{headtooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headtooltip}{headtooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a833143bf1da45c6a561c255a7843e605} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+headtooltip}
+
+\Hypertarget{structobj__state__s_a9f9572f9eae6c8ca21a02119755c253d}\index{obj\_state\_s@{obj\_state\_s}!headurl@{headurl}}
+\index{headurl@{headurl}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{headurl}{headurl}}
+{\footnotesize\ttfamily \label{structobj__state__s_a9f9572f9eae6c8ca21a02119755c253d} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+headurl}
+
+\Hypertarget{structobj__state__s_ab49cb90241cd45f10de7c3bbd8a9d119}\index{obj\_state\_s@{obj\_state\_s}!id@{id}}
+\index{id@{id}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structobj__state__s_ab49cb90241cd45f10de7c3bbd8a9d119} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+id}
+
+\Hypertarget{structobj__state__s_aecd95cd41e2138f93653455a56d94dbb}\index{obj\_state\_s@{obj\_state\_s}!label@{label}}
+\index{label@{label}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily \label{structobj__state__s_aecd95cd41e2138f93653455a56d94dbb} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+label}
+
+\Hypertarget{structobj__state__s_ae3497e84f301a86d70a73b58663e4f72}\index{obj\_state\_s@{obj\_state\_s}!labeledgealigned@{labeledgealigned}}
+\index{labeledgealigned@{labeledgealigned}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{labeledgealigned}{labeledgealigned}}
+{\footnotesize\ttfamily \label{structobj__state__s_ae3497e84f301a86d70a73b58663e4f72} 
+unsigned obj\+\_\+state\+\_\+s::\+labeledgealigned}
+
+\Hypertarget{structobj__state__s_abbd1afaea15ed5882237086d37f7804c}\index{obj\_state\_s@{obj\_state\_s}!labeltarget@{labeltarget}}
+\index{labeltarget@{labeltarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{labeltarget}{labeltarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_abbd1afaea15ed5882237086d37f7804c} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+labeltarget}
+
+\Hypertarget{structobj__state__s_a64d8062b517dc492b186a92ba8edca8e}\index{obj\_state\_s@{obj\_state\_s}!labeltooltip@{labeltooltip}}
+\index{labeltooltip@{labeltooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{labeltooltip}{labeltooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a64d8062b517dc492b186a92ba8edca8e} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+labeltooltip}
+
+\Hypertarget{structobj__state__s_a548c5cdf0cca91b6326a74240c892cbc}\index{obj\_state\_s@{obj\_state\_s}!labelurl@{labelurl}}
+\index{labelurl@{labelurl}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{labelurl}{labelurl}}
+{\footnotesize\ttfamily \label{structobj__state__s_a548c5cdf0cca91b6326a74240c892cbc} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+labelurl}
+
+\Hypertarget{structobj__state__s_a8881569da82b88c1a535103486995cab}\index{obj\_state\_s@{obj\_state\_s}!n@{n}}
+\index{n@{n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \label{structobj__state__s_a8881569da82b88c1a535103486995cab} 
+\doxymbox{\hyperlink{types_8h_aa54efbeed985023658063bdae73347ec}{node\+\_\+t}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+n}
+
+\Hypertarget{structobj__state__s_ac7e652fa645b990a3d273c322c72ed37}\index{obj\_state\_s@{obj\_state\_s}!parent@{parent}}
+\index{parent@{parent}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \label{structobj__state__s_ac7e652fa645b990a3d273c322c72ed37} 
+\doxymbox{\hyperlink{gvcjob_8h_a02731e816998f46b1511d36eff0260ec}{obj\+\_\+state\+\_\+t}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+parent}
+
+\Hypertarget{structobj__state__s_a7e97e6de2402896579423006d60898ba}\index{obj\_state\_s@{obj\_state\_s}!pen@{pen}}
+\index{pen@{pen}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{pen}{pen}}
+{\footnotesize\ttfamily \label{structobj__state__s_a7e97e6de2402896579423006d60898ba} 
+\doxymbox{\hyperlink{gvcjob_8h_a056abdc3e65632a0666767d8395bdc44}{pen\+\_\+type}} obj\+\_\+state\+\_\+s::\+pen}
+
+\Hypertarget{structobj__state__s_aa214195f79e7eedee74006bbe9765f79}\index{obj\_state\_s@{obj\_state\_s}!pencolor@{pencolor}}
+\index{pencolor@{pencolor}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{pencolor}{pencolor}}
+{\footnotesize\ttfamily \label{structobj__state__s_aa214195f79e7eedee74006bbe9765f79} 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} obj\+\_\+state\+\_\+s::\+pencolor}
+
+\Hypertarget{structobj__state__s_aff055afa76950cf86469f202b2a24bce}\index{obj\_state\_s@{obj\_state\_s}!penwidth@{penwidth}}
+\index{penwidth@{penwidth}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{penwidth}{penwidth}}
+{\footnotesize\ttfamily \label{structobj__state__s_aff055afa76950cf86469f202b2a24bce} 
+double obj\+\_\+state\+\_\+s::\+penwidth}
+
+\Hypertarget{structobj__state__s_ab16ee35fe85d88cdf01eca253d04c6e7}\index{obj\_state\_s@{obj\_state\_s}!rawstyle@{rawstyle}}
+\index{rawstyle@{rawstyle}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{rawstyle}{rawstyle}}
+{\footnotesize\ttfamily \label{structobj__state__s_ab16ee35fe85d88cdf01eca253d04c6e7} 
+char\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+rawstyle}
+
+\Hypertarget{structobj__state__s_a993330749d875cfdde890df21c90977b}\index{obj\_state\_s@{obj\_state\_s}!sg@{sg}}
+\index{sg@{sg}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{sg}{sg}}
+{\footnotesize\ttfamily \label{structobj__state__s_a993330749d875cfdde890df21c90977b} 
+\doxymbox{\hyperlink{types_8h_aedca4e11cb6b1a3893747040cb785c12}{graph\+\_\+t}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+sg}
+
+\Hypertarget{structobj__state__s_a73194a8c35b272cbf588ee0c91531b2b}\index{obj\_state\_s@{obj\_state\_s}!stopcolor@{stopcolor}}
+\index{stopcolor@{stopcolor}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{stopcolor}{stopcolor}}
+{\footnotesize\ttfamily \label{structobj__state__s_a73194a8c35b272cbf588ee0c91531b2b} 
+\doxymbox{\hyperlink{color_8h_ae1191eed3030f43658df2fef5fa202de}{gvcolor\+\_\+t}} obj\+\_\+state\+\_\+s::\+stopcolor}
+
+\Hypertarget{structobj__state__s_ac811d320f6f7f92b3bde32973c008123}\index{obj\_state\_s@{obj\_state\_s}!tail\_z@{tail\_z}}
+\index{tail\_z@{tail\_z}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tail\_z}{tail\_z}}
+{\footnotesize\ttfamily \label{structobj__state__s_ac811d320f6f7f92b3bde32973c008123} 
+double obj\+\_\+state\+\_\+s::\+tail\+\_\+z}
+
+\Hypertarget{structobj__state__s_a0553e8338e2157222e76d52ed6aa5ee5}\index{obj\_state\_s@{obj\_state\_s}!tailendurl\_map\_n@{tailendurl\_map\_n}}
+\index{tailendurl\_map\_n@{tailendurl\_map\_n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tailendurl\_map\_n}{tailendurl\_map\_n}}
+{\footnotesize\ttfamily \label{structobj__state__s_a0553e8338e2157222e76d52ed6aa5ee5} 
+int obj\+\_\+state\+\_\+s::\+tailendurl\+\_\+map\+\_\+n}
+
+\Hypertarget{structobj__state__s_a23f5fdf30bc511ddbc117463732dab49}\index{obj\_state\_s@{obj\_state\_s}!tailendurl\_map\_p@{tailendurl\_map\_p}}
+\index{tailendurl\_map\_p@{tailendurl\_map\_p}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tailendurl\_map\_p}{tailendurl\_map\_p}}
+{\footnotesize\ttfamily \label{structobj__state__s_a23f5fdf30bc511ddbc117463732dab49} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+tailendurl\+\_\+map\+\_\+p}
+
+\Hypertarget{structobj__state__s_a2d61811979b08939e64c3cd351f5771d}\index{obj\_state\_s@{obj\_state\_s}!taillabel@{taillabel}}
+\index{taillabel@{taillabel}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{taillabel}{taillabel}}
+{\footnotesize\ttfamily \label{structobj__state__s_a2d61811979b08939e64c3cd351f5771d} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+taillabel}
+
+\Hypertarget{structobj__state__s_ac94ea92ecf1e13e33dd3543f143336db}\index{obj\_state\_s@{obj\_state\_s}!tailtarget@{tailtarget}}
+\index{tailtarget@{tailtarget}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tailtarget}{tailtarget}}
+{\footnotesize\ttfamily \label{structobj__state__s_ac94ea92ecf1e13e33dd3543f143336db} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+tailtarget}
+
+\Hypertarget{structobj__state__s_a6d3a114f924c556b7d0daa6b3a6fc21a}\index{obj\_state\_s@{obj\_state\_s}!tailtooltip@{tailtooltip}}
+\index{tailtooltip@{tailtooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tailtooltip}{tailtooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a6d3a114f924c556b7d0daa6b3a6fc21a} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+tailtooltip}
+
+\Hypertarget{structobj__state__s_a556a06e041082ccdded147aca3b84141}\index{obj\_state\_s@{obj\_state\_s}!tailurl@{tailurl}}
+\index{tailurl@{tailurl}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tailurl}{tailurl}}
+{\footnotesize\ttfamily \label{structobj__state__s_a556a06e041082ccdded147aca3b84141} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+tailurl}
+
+\Hypertarget{structobj__state__s_a67ecd72ea2c7797ee1eba30f6617c7ec}\index{obj\_state\_s@{obj\_state\_s}!target@{target}}
+\index{target@{target}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \label{structobj__state__s_a67ecd72ea2c7797ee1eba30f6617c7ec} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+target}
+
+\Hypertarget{structobj__state__s_a26e255085bf4abac828ff3d355d10caf}\index{obj\_state\_s@{obj\_state\_s}!tooltip@{tooltip}}
+\index{tooltip@{tooltip}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{tooltip}{tooltip}}
+{\footnotesize\ttfamily \label{structobj__state__s_a26e255085bf4abac828ff3d355d10caf} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+tooltip}
+
+\Hypertarget{structobj__state__s_a686b61b585902fdb816869e1fc705f46}\index{obj\_state\_s@{obj\_state\_s}!type@{type}}
+\index{type@{type}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{structobj__state__s_a686b61b585902fdb816869e1fc705f46} 
+\doxymbox{\hyperlink{gvcjob_8h_ac87c026b772bad1b7bb6edea6200fc92}{obj\+\_\+type}} obj\+\_\+state\+\_\+s::\+type}
+
+\Hypertarget{structobj__state__s_a56a884d5d44cb431bbd1ebc83f6f2c39}\index{obj\_state\_s@{obj\_state\_s}!u@{u}}
+\index{u@{u}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{[union]}{[union]}}
+{\footnotesize\ttfamily \label{structobj__state__s_a56a884d5d44cb431bbd1ebc83f6f2c39} 
+union  \{ ... \}  obj\+\_\+state\+\_\+s::\+u}
+
+\Hypertarget{structobj__state__s_a46647452bcb8f9c39a81d86a70c58f1b}\index{obj\_state\_s@{obj\_state\_s}!url@{url}}
+\index{url@{url}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url}{url}}
+{\footnotesize\ttfamily \label{structobj__state__s_a46647452bcb8f9c39a81d86a70c58f1b} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+url}
+
+\Hypertarget{structobj__state__s_a6b3a3e105444a53c96b1c094a453f482}\index{obj\_state\_s@{obj\_state\_s}!url\_bsplinemap\_n@{url\_bsplinemap\_n}}
+\index{url\_bsplinemap\_n@{url\_bsplinemap\_n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_bsplinemap\_n}{url\_bsplinemap\_n}}
+{\footnotesize\ttfamily \label{structobj__state__s_a6b3a3e105444a53c96b1c094a453f482} 
+size\+\_\+t\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+url\+\_\+bsplinemap\+\_\+n}
+
+\Hypertarget{structobj__state__s_a862a9abf5d1961cca70e34ccdf0cb150}\index{obj\_state\_s@{obj\_state\_s}!url\_bsplinemap\_p@{url\_bsplinemap\_p}}
+\index{url\_bsplinemap\_p@{url\_bsplinemap\_p}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_bsplinemap\_p}{url\_bsplinemap\_p}}
+{\footnotesize\ttfamily \label{structobj__state__s_a862a9abf5d1961cca70e34ccdf0cb150} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+url\+\_\+bsplinemap\+\_\+p}
+
+\Hypertarget{structobj__state__s_a3bea5dd8dfb8a5d8a568753bd1420ed6}\index{obj\_state\_s@{obj\_state\_s}!url\_bsplinemap\_poly\_n@{url\_bsplinemap\_poly\_n}}
+\index{url\_bsplinemap\_poly\_n@{url\_bsplinemap\_poly\_n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_bsplinemap\_poly\_n}{url\_bsplinemap\_poly\_n}}
+{\footnotesize\ttfamily \label{structobj__state__s_a3bea5dd8dfb8a5d8a568753bd1420ed6} 
+size\+\_\+t obj\+\_\+state\+\_\+s::\+url\+\_\+bsplinemap\+\_\+poly\+\_\+n}
+
+\Hypertarget{structobj__state__s_aee57847ab4c6b3328d9e36dfe624149f}\index{obj\_state\_s@{obj\_state\_s}!url\_map\_n@{url\_map\_n}}
+\index{url\_map\_n@{url\_map\_n}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_map\_n}{url\_map\_n}}
+{\footnotesize\ttfamily \label{structobj__state__s_aee57847ab4c6b3328d9e36dfe624149f} 
+size\+\_\+t obj\+\_\+state\+\_\+s::\+url\+\_\+map\+\_\+n}
+
+\Hypertarget{structobj__state__s_a1d158324172a38958b42d46939da8345}\index{obj\_state\_s@{obj\_state\_s}!url\_map\_p@{url\_map\_p}}
+\index{url\_map\_p@{url\_map\_p}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_map\_p}{url\_map\_p}}
+{\footnotesize\ttfamily \label{structobj__state__s_a1d158324172a38958b42d46939da8345} 
+\doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+url\+\_\+map\+\_\+p}
+
+\Hypertarget{structobj__state__s_a85f1fc3bc225a43626d8b6b1c0e21f00}\index{obj\_state\_s@{obj\_state\_s}!url\_map\_shape@{url\_map\_shape}}
+\index{url\_map\_shape@{url\_map\_shape}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{url\_map\_shape}{url\_map\_shape}}
+{\footnotesize\ttfamily \label{structobj__state__s_a85f1fc3bc225a43626d8b6b1c0e21f00} 
+\doxymbox{\hyperlink{gvcjob_8h_a5ce3b3a21716351feb74e0155b6499bb}{map\+\_\+shape\+\_\+t}} obj\+\_\+state\+\_\+s::\+url\+\_\+map\+\_\+shape}
+
+\Hypertarget{structobj__state__s_a5d7d0d7323188a1e70b3c931b5a160cd}\index{obj\_state\_s@{obj\_state\_s}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{xlabel}{xlabel}}
+{\footnotesize\ttfamily \label{structobj__state__s_a5d7d0d7323188a1e70b3c931b5a160cd} 
+char\texorpdfstring{$\ast$}{*} obj\+\_\+state\+\_\+s::\+xlabel}
+
+\Hypertarget{structobj__state__s_a3fdff9f4082ad335b463d4249f25fcb3}\index{obj\_state\_s@{obj\_state\_s}!z@{z}}
+\index{z@{z}!obj\_state\_s@{obj\_state\_s}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{structobj__state__s_a3fdff9f4082ad335b463d4249f25fcb3} 
+double obj\+\_\+state\+\_\+s::\+z}
+
+
+
+Объявления и описания членов структуры находятся в файле:\+\begin{DoxyCompactItemize}
+\item 
+Graphviz/\+include/\+graphviz/\+\doxymbox{\hyperlink{gvcjob_8h}{gvcjob.\+h}}\end{DoxyCompactItemize}

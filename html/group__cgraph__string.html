@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: string utilities</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__cgraph__string.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">string utilities <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__cgraph__api.html">Cgraph API</a> &raquo; <a class="el" href="group__cgraph__misc.html">miscellaneous</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>reference-counted strings  
+<a href="#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga63d197f6e77d5f5ac6d3b47580624b84" id="r_ga63d197f6e77d5f5ac6d3b47580624b84"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga63d197f6e77d5f5ac6d3b47580624b84">agstrdup</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *, const char *)</td></tr>
+<tr class="memdesc:ga63d197f6e77d5f5ac6d3b47580624b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to a reference-counted copy of the argument string, creating one if necessary  <br /></td></tr>
+<tr class="memitem:gac1bad18507cb3da698daac382085bfe2" id="r_gac1bad18507cb3da698daac382085bfe2"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#gac1bad18507cb3da698daac382085bfe2">agstrdup_text</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *, const char *)</td></tr>
+<tr class="memdesc:gac1bad18507cb3da698daac382085bfe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to a reference-counted regular text copy of the argument string, creating one if necessary  <br /></td></tr>
+<tr class="memitem:ga4443d4d88064813323bac27514c727ac" id="r_ga4443d4d88064813323bac27514c727ac"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga4443d4d88064813323bac27514c727ac">agstrdup_html</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *, const char *)</td></tr>
+<tr class="memdesc:ga4443d4d88064813323bac27514c727ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a pointer to a reference-counted HTML-like copy of the argument string, creating one if necessary  <br /></td></tr>
+<tr class="memitem:ga4b85c338d71db56dccc18040f53638a7" id="r_ga4b85c338d71db56dccc18040f53638a7"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#ga4b85c338d71db56dccc18040f53638a7">aghtmlstr</a> (const char *)</td></tr>
+<tr class="memitem:ga83740b274c978d83d6ac8ac5b5cf0196" id="r_ga83740b274c978d83d6ac8ac5b5cf0196"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga83740b274c978d83d6ac8ac5b5cf0196">agstrbind</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, const char *)</td></tr>
+<tr class="memitem:ga092b478a64289fe521da748b84efa7d0" id="r_ga092b478a64289fe521da748b84efa7d0"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga092b478a64289fe521da748b84efa7d0">agstrbind_text</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, const char *)</td></tr>
+<tr class="memitem:gaa50f90c93be533d833a0637d9c0bab7d" id="r_gaa50f90c93be533d833a0637d9c0bab7d"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#gaa50f90c93be533d833a0637d9c0bab7d">agstrbind_html</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *g, const char *)</td></tr>
+<tr class="memitem:gaa0bb43286b278c334a2db74b0d699338" id="r_gaa0bb43286b278c334a2db74b0d699338"><td class="memItemLeft">CGRAPH_API int&#160;</td><td class="memItemRight"><a class="el" href="#gaa0bb43286b278c334a2db74b0d699338">agstrfree</a> (<a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *, const char *, bool is_html)</td></tr>
+<tr class="memitem:ga713d5399c53b10bf008eb7a1682ca98a" id="r_ga713d5399c53b10bf008eb7a1682ca98a"><td class="memItemLeft">CGRAPH_API char *&#160;</td><td class="memItemRight"><a class="el" href="#ga713d5399c53b10bf008eb7a1682ca98a">agstrcanon</a> (char *, char *)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Storage management of strings as reference-counted strings. The caller does not need to dynamically allocate storage.</p>
+<p>All uses of cgraph strings need to be freed using <a class="el" href="#gaa0bb43286b278c334a2db74b0d699338" title="agstrfree">agstrfree</a> in order to correctly maintain the reference count. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga4b85c338d71db56dccc18040f53638a7" name="ga4b85c338d71db56dccc18040f53638a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b85c338d71db56dccc18040f53638a7">&#9670;&#160;</a></span>aghtmlstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int aghtmlstr </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>query if a string is an ordinary string or an HTML-like string </p>
+
+</div>
+</div>
+<a id="ga83740b274c978d83d6ac8ac5b5cf0196" name="ga83740b274c978d83d6ac8ac5b5cf0196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83740b274c978d83d6ac8ac5b5cf0196">&#9670;&#160;</a></span>agstrbind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrbind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns a pointer to a reference-counted string if it exists, or NULL if not </p>
+
+</div>
+</div>
+<a id="gaa50f90c93be533d833a0637d9c0bab7d" name="gaa50f90c93be533d833a0637d9c0bab7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa50f90c93be533d833a0637d9c0bab7d">&#9670;&#160;</a></span>agstrbind_html()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrbind_html </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns a pointer to a reference-counted HTML-like string if it exists, or NULL if not </p>
+
+</div>
+</div>
+<a id="ga092b478a64289fe521da748b84efa7d0" name="ga092b478a64289fe521da748b84efa7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga092b478a64289fe521da748b84efa7d0">&#9670;&#160;</a></span>agstrbind_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrbind_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>returns a pointer to a reference-counted regular text string if it exists, or NULL if not </p>
+
+</div>
+</div>
+<a id="ga713d5399c53b10bf008eb7a1682ca98a" name="ga713d5399c53b10bf008eb7a1682ca98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga713d5399c53b10bf008eb7a1682ca98a">&#9670;&#160;</a></span>agstrcanon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrcanon </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga63d197f6e77d5f5ac6d3b47580624b84" name="ga63d197f6e77d5f5ac6d3b47580624b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga63d197f6e77d5f5ac6d3b47580624b84">&#9670;&#160;</a></span>agstrdup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrdup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Use of this function should be avoided where possible. It is not possible to explicitly indicate whether the caller is trying to create a regular text string or an HTML-like string. It is better to be explicit with your intent and instead call either <a class="el" href="#gac1bad18507cb3da698daac382085bfe2" title="agstrdup_text">agstrdup_text</a> or <a class="el" href="#ga4443d4d88064813323bac27514c727ac" title="agstrdup_html">agstrdup_html</a>. </p>
+
+</div>
+</div>
+<a id="ga4443d4d88064813323bac27514c727ac" name="ga4443d4d88064813323bac27514c727ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4443d4d88064813323bac27514c727ac">&#9670;&#160;</a></span>agstrdup_html()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrdup_html </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac1bad18507cb3da698daac382085bfe2" name="gac1bad18507cb3da698daac382085bfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1bad18507cb3da698daac382085bfe2">&#9670;&#160;</a></span>agstrdup_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API char * agstrdup_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa0bb43286b278c334a2db74b0d699338" name="gaa0bb43286b278c334a2db74b0d699338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa0bb43286b278c334a2db74b0d699338">&#9670;&#160;</a></span>agstrfree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CGRAPH_API int agstrfree </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__cgraph__graph.html#ga48061c3baade540af78ac621211ae926">Agraph_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_html</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_html</td><td>Is the string being freed an HTML-like string? </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/gvpr.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gvpr_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл gvpr.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>graph pattern scanning and processing language API, main function <a class="el" href="#a7bfc5d1442371298917d5abbfacf5a30" title="gvpr">gvpr</a>  
+</p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="cgraph_8h_source.html">cgraph.h</a>&quot;</code><br />
+</div>
+<p><a href="gvpr_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:gvprbinding" id="r_gvprbinding"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvprbinding.html">gvprbinding</a></td></tr>
+<tr class="memitem:gvpropts" id="r_gvpropts"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvpropts.html">gvpropts</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aece3c462f476e1bce110a8300e35a4a8" id="r_aece3c462f476e1bce110a8300e35a4a8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aece3c462f476e1bce110a8300e35a4a8">GVPR_API</a>&#160;&#160;&#160;/* nothing */</td></tr>
+<tr class="memitem:a66f65dd088e7ed5c8447dc81b2569c78" id="r_a66f65dd088e7ed5c8447dc81b2569c78"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a66f65dd088e7ed5c8447dc81b2569c78">GV_USE_EXIT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a38cd2fbc19f4ed8556e193658c38332f" id="r_a38cd2fbc19f4ed8556e193658c38332f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a38cd2fbc19f4ed8556e193658c38332f">GV_USE_OUTGRAPH</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:ac8e2a9e0b506fe8c5ba0f9ca5f559c3e" id="r_ac8e2a9e0b506fe8c5ba0f9ca5f559c3e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac8e2a9e0b506fe8c5ba0f9ca5f559c3e">GV_USE_JUMP</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:aa1a38061c7f737724afc46b5be28f460" id="r_aa1a38061c7f737724afc46b5be28f460"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa1a38061c7f737724afc46b5be28f460">GV_NEXT_SET</a>&#160;&#160;&#160;8</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a315a0a5d4cb7e5277a215eaceff46e09" id="r_a315a0a5d4cb7e5277a215eaceff46e09"><td class="memItemLeft">typedef ssize_t(*&#160;</td><td class="memItemRight"><a class="el" href="#a315a0a5d4cb7e5277a215eaceff46e09">gvprwr</a>) (void *, const char *buf, size_t nbyte, void *)</td></tr>
+<tr class="memitem:a63948625781ab9e178029d681b5eb4a9" id="r_a63948625781ab9e178029d681b5eb4a9"><td class="memItemLeft">typedef int(*&#160;</td><td class="memItemRight"><a class="el" href="#a63948625781ab9e178029d681b5eb4a9">gvpruserfn</a>) (char *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a7bfc5d1442371298917d5abbfacf5a30" id="r_a7bfc5d1442371298917d5abbfacf5a30"><td class="memItemLeft"><a class="el" href="#aece3c462f476e1bce110a8300e35a4a8">GVPR_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#a7bfc5d1442371298917d5abbfacf5a30">gvpr</a> (int argc, char *argv[], <a class="el" href="structgvpropts.html">gvpropts</a> *opts)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="aa1a38061c7f737724afc46b5be28f460" name="aa1a38061c7f737724afc46b5be28f460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a38061c7f737724afc46b5be28f460">&#9670;&#160;</a></span>GV_NEXT_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GV_NEXT_SET&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66f65dd088e7ed5c8447dc81b2569c78" name="a66f65dd088e7ed5c8447dc81b2569c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f65dd088e7ed5c8447dc81b2569c78">&#9670;&#160;</a></span>GV_USE_EXIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GV_USE_EXIT&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8e2a9e0b506fe8c5ba0f9ca5f559c3e" name="ac8e2a9e0b506fe8c5ba0f9ca5f559c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e2a9e0b506fe8c5ba0f9ca5f559c3e">&#9670;&#160;</a></span>GV_USE_JUMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GV_USE_JUMP&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38cd2fbc19f4ed8556e193658c38332f" name="a38cd2fbc19f4ed8556e193658c38332f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cd2fbc19f4ed8556e193658c38332f">&#9670;&#160;</a></span>GV_USE_OUTGRAPH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GV_USE_OUTGRAPH&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aece3c462f476e1bce110a8300e35a4a8" name="aece3c462f476e1bce110a8300e35a4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece3c462f476e1bce110a8300e35a4a8">&#9670;&#160;</a></span>GVPR_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVPR_API&#160;&#160;&#160;/* nothing */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="a63948625781ab9e178029d681b5eb4a9" name="a63948625781ab9e178029d681b5eb4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63948625781ab9e178029d681b5eb4a9">&#9670;&#160;</a></span>gvpruserfn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* gvpruserfn) (char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a315a0a5d4cb7e5277a215eaceff46e09" name="a315a0a5d4cb7e5277a215eaceff46e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315a0a5d4cb7e5277a215eaceff46e09">&#9670;&#160;</a></span>gvprwr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ssize_t(* gvprwr) (void *, const char *buf, size_t nbyte, void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a7bfc5d1442371298917d5abbfacf5a30" name="a7bfc5d1442371298917d5abbfacf5a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfc5d1442371298917d5abbfacf5a30">&#9670;&#160;</a></span>gvpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aece3c462f476e1bce110a8300e35a4a8">GVPR_API</a> int gvpr </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgvpropts.html">gvpropts</a> *</td>          <td class="paramname"><span class="paramname"><em>opts</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opts</td><td>Options affecting gvpr behavior. Pass <span class="tt">NULL</span> for defaults. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="gvpr_8h.html">gvpr.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+\doxysubsubsection{objects }
+\hypertarget{group__cgraph__object}{}\label{group__cgraph__object}\index{objects@{objects}}
+
+
+parent for \doxylink{group__cgraph__graph}{graphs}, \doxylink{group__cgraph__node}{nodes}, and \doxylink{group__cgraph__edge}{edges}.  
+
+
+\doxysubsubsubsubsection*{Разделы}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{group__cgraph__node}{nodes}}
+\item 
+\doxymbox{\hyperlink{group__cgraph__graph}{graphs}}
+\item 
+\doxymbox{\hyperlink{group__cgraph__edge}{edges}}
+\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_agtag__s}{Agtag\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em tag in \doxylink{struct_agobj__s}{Agobj\+\_\+s} for graphs, nodes, and edges. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{struct_agobj__s}{Agobj\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em a generic header of \doxylink{struct_agraph__s}{Agraph\+\_\+s}, \doxylink{struct_agnode__s}{Agnode\+\_\+s} and \doxylink{struct_agedge__s}{Agedge\+\_\+s} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}{AGTAG}}(obj)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}}(obj)
+\begin{DoxyCompactList}\small\item\em returns \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}, \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}, or \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE} depending on the type of the object \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_ga27963b35a047acbd49f14b70e6a86c57}{AGID}}(obj)
+\begin{DoxyCompactList}\small\item\em returns the unique integer ID associated with the object \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_gafba562b0e6220df03e91273360b621c0}{AGSEQ}}(obj)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_gaf18db1d379fa0df06c9253f320b6be84}{AGATTRWF}}(obj)
+\item 
+\+\#define \doxymbox{\hyperlink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}}(obj)
+\begin{DoxyCompactList}\small\item\em returns \doxylink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\+\_\+t} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint64\+\_\+t \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}
+\begin{DoxyCompactList}\small\item\em unique per main graph ID \end{DoxyCompactList}\item 
+typedef struct \doxymbox{\hyperlink{struct_agtag__s}{Agtag\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c}{Agtag\+\_\+t}}
+\item 
+typedef struct \doxymbox{\hyperlink{struct_agobj__s}{Agobj\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em generic object header \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}}
+, \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}}
+, \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE}}
+, \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb}{AGOUTEDGE}} = AGEDGE
+, \newline
+\doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684}{AGINEDGE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Object tags. Can\textquotesingle{}t exceed 2 bits. See \doxylink{struct_agtag__s}{Agtag\+\_\+s}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__object_gaf9dd5dd7686f83a45c2e0b8b1e68853e}{agraphof}} (void \texorpdfstring{$\ast$}{*}obj)
+\item 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__object_ga3f720bb07e800136f69b875bcff5b814}{agroot}} (void \texorpdfstring{$\ast$}{*}obj)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__object_ga11b0b313275e821e4fdf0bad5db4f47b}{agcontains}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}, void \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em returns non-\/zero if {\bfseries{obj}} is a member of (sub)graph \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{group__cgraph__object_ga015fdcf259e5cfbbc903ad3f1990556b}{agnameof}} (void \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em returns a string descriptor for the object. \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__object_ga19273212a3f0fca17c542858e6bd1e0b}{agdelete}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, void \texorpdfstring{$\ast$}{*}obj)
+\begin{DoxyCompactList}\small\item\em deletes object. Equivalent to \doxylink{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e}{agclose}, \doxylink{group__cgraph__node_ga0673ef5a28252affd27980820f2c2774}{agdelnode}, and \doxylink{group__cgraph__edge_gaa6b8ecac59848235f597cf522634a371}{agdeledge} for {\bfseries{obj}} being a graph, node or edge, respectively. \end{DoxyCompactList}\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__cgraph__object_gafa0793c2b414e7a69a0cd3c79a407e65}{agobjkind}} (void \texorpdfstring{$\ast$}{*}obj)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsection{Подробное описание}
+Common parameter for functions {\bfseries{obj}} is generic pointer to \doxylink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}, \doxylink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}, or \doxylink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\+\_\+t}
+
+\doxylink{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}{AGDATA}, \doxylink{group__cgraph__object_ga27963b35a047acbd49f14b70e6a86c57}{AGID}, \doxylink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}, and others are macros returning the specified fields of the argument object.
+
+\label{group__cgraph__object_doc-define-members}
+\Hypertarget{group__cgraph__object_doc-define-members}
+\doxysubsubsubsection{Макросы}
+\Hypertarget{group__cgraph__object_gaf18db1d379fa0df06c9253f320b6be84}\index{objects@{objects}!AGATTRWF@{AGATTRWF}}
+\index{AGATTRWF@{AGATTRWF}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGATTRWF}{AGATTRWF}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gaf18db1d379fa0df06c9253f320b6be84} 
+\+\#define AGATTRWF(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}{AGTAG}}(obj).attrwf)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb}\index{objects@{objects}!AGDATA@{AGDATA}}
+\index{AGDATA@{AGDATA}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGDATA}{AGDATA}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga12a48d1c8103f642da615024eee9d7eb} 
+\+\#define AGDATA(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ *)(obj))-\/>data)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__object_ga27963b35a047acbd49f14b70e6a86c57}\index{objects@{objects}!AGID@{AGID}}
+\index{AGID@{AGID}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGID}{AGID}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga27963b35a047acbd49f14b70e6a86c57} 
+\+\#define AGID(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}{AGTAG}}(obj).id)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__object_gafba562b0e6220df03e91273360b621c0}\index{objects@{objects}!AGSEQ@{AGSEQ}}
+\index{AGSEQ@{AGSEQ}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGSEQ}{AGSEQ}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gafba562b0e6220df03e91273360b621c0} 
+\+\#define AGSEQ(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}{AGTAG}}(obj).seq)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}\index{objects@{objects}!AGTAG@{AGTAG}}
+\index{AGTAG@{AGTAG}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGTAG}{AGTAG}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1} 
+\+\#define AGTAG(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((\doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ *)(obj))-\/>tag)}
+
+\end{DoxyCode}
+\Hypertarget{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}\index{objects@{objects}!AGTYPE@{AGTYPE}}
+\index{AGTYPE@{AGTYPE}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{AGTYPE}{AGTYPE}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23} 
+\+\#define AGTYPE(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{group__cgraph__object_gabf2980fa393039cd2ff1130e5eb491a1}{AGTAG}}(obj).objtype)}
+
+\end{DoxyCode}
+
+
+\label{group__cgraph__object_doc-typedef-members}
+\Hypertarget{group__cgraph__object_doc-typedef-members}
+\doxysubsubsubsection{Типы}
+\Hypertarget{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}\index{objects@{objects}!Agobj\_t@{Agobj\_t}}
+\index{Agobj\_t@{Agobj\_t}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{Agobj\_t}{Agobj\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8} 
+typedef struct \doxymbox{\hyperlink{struct_agobj__s}{Agobj\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\+\_\+t}}}
+
+\Hypertarget{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c}\index{objects@{objects}!Agtag\_t@{Agtag\_t}}
+\index{Agtag\_t@{Agtag\_t}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{Agtag\_t}{Agtag\_t}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c} 
+typedef struct \doxymbox{\hyperlink{struct_agtag__s}{Agtag\+\_\+s}} \doxymbox{\hyperlink{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c}{Agtag\+\_\+t}}}
+
+\Hypertarget{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}\index{objects@{objects}!IDTYPE@{IDTYPE}}
+\index{IDTYPE@{IDTYPE}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{IDTYPE}{IDTYPE}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec} 
+typedef uint64\+\_\+t \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}}
+
+
+
+\label{group__cgraph__object_doc-enum-members}
+\Hypertarget{group__cgraph__object_doc-enum-members}
+\doxysubsubsubsection{Перечисления}
+\Hypertarget{group__cgraph__object_ga7c43c4e305e970d5256c3f4844152f98}\doxysubsubsubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga7c43c4e305e970d5256c3f4844152f98} 
+anonymous enum}
+
+\begin{DoxyEnumFields}[2]{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGRAPH@{AGRAPH}!objects@{objects}}
+\index{objects@{objects}!AGRAPH@{AGRAPH}}
+}\Hypertarget{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}\label{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14} 
+AGRAPH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGNODE@{AGNODE}!objects@{objects}}
+\index{objects@{objects}!AGNODE@{AGNODE}}
+}\Hypertarget{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}\label{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f} 
+AGNODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGEDGE@{AGEDGE}!objects@{objects}}
+\index{objects@{objects}!AGEDGE@{AGEDGE}}
+}\Hypertarget{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}\label{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1} 
+AGEDGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGOUTEDGE@{AGOUTEDGE}!objects@{objects}}
+\index{objects@{objects}!AGOUTEDGE@{AGOUTEDGE}}
+}\Hypertarget{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb}\label{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb} 
+AGOUTEDGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AGINEDGE@{AGINEDGE}!objects@{objects}}
+\index{objects@{objects}!AGINEDGE@{AGINEDGE}}
+}\Hypertarget{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684}\label{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684} 
+AGINEDGE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{group__cgraph__object_doc-func-members}
+\Hypertarget{group__cgraph__object_doc-func-members}
+\doxysubsubsubsection{Функции}
+\Hypertarget{group__cgraph__object_ga11b0b313275e821e4fdf0bad5db4f47b}\index{objects@{objects}!agcontains@{agcontains}}
+\index{agcontains@{agcontains}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agcontains()}{agcontains()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga11b0b313275e821e4fdf0bad5db4f47b} 
+CGRAPH\+\_\+\+API int agcontains (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__object_ga19273212a3f0fca17c542858e6bd1e0b}\index{objects@{objects}!agdelete@{agdelete}}
+\index{agdelete@{agdelete}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agdelete()}{agdelete()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga19273212a3f0fca17c542858e6bd1e0b} 
+CGRAPH\+\_\+\+API int agdelete (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Возвращает}
+-\/1 if {\bfseries{obj}} does not belong to graph {\bfseries{g}}. 
+\end{DoxyReturn}
+\Hypertarget{group__cgraph__object_ga015fdcf259e5cfbbc903ad3f1990556b}\index{objects@{objects}!agnameof@{agnameof}}
+\index{agnameof@{agnameof}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agnameof()}{agnameof()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga015fdcf259e5cfbbc903ad3f1990556b} 
+CGRAPH\+\_\+\+API char \texorpdfstring{$\ast$}{*} agnameof (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__object_gafa0793c2b414e7a69a0cd3c79a407e65}\index{objects@{objects}!agobjkind@{agobjkind}}
+\index{agobjkind@{agobjkind}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agobjkind()}{agobjkind()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gafa0793c2b414e7a69a0cd3c79a407e65} 
+CGRAPH\+\_\+\+API int agobjkind (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})}
+
+returns \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}, \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}, or \doxylink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE} depending on the type of the object. Synonym for \doxylink{group__cgraph__object_ga91e26f76d41f9f199ef969d977412f23}{AGTYPE}. \Hypertarget{group__cgraph__object_gaf9dd5dd7686f83a45c2e0b8b1e68853e}\index{objects@{objects}!agraphof@{agraphof}}
+\index{agraphof@{agraphof}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agraphof()}{agraphof()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_gaf9dd5dd7686f83a45c2e0b8b1e68853e} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agraphof (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__cgraph__object_ga3f720bb07e800136f69b875bcff5b814}\index{objects@{objects}!agroot@{agroot}}
+\index{agroot@{agroot}!objects@{objects}}
+\doxysubsubsubsubsection{\texorpdfstring{agroot()}{agroot()}}
+{\footnotesize\ttfamily \label{group__cgraph__object_ga3f720bb07e800136f69b875bcff5b814} 
+CGRAPH\+\_\+\+API \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*} agroot (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{obj}{}\end{DoxyParamCaption})}
+
+takes any graph object (graph, subgraph, node, edge) and returns the root graph in which it lives \input{group__cgraph__node}
+\input{group__cgraph__graph}
+\input{group__cgraph__edge}

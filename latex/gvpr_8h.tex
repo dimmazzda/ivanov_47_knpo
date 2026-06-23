@@ -1,0 +1,109 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+gvpr.h}
+\hypertarget{gvpr_8h}{}\label{gvpr_8h}\index{Graphviz/include/graphviz/gvpr.h@{Graphviz/include/graphviz/gvpr.h}}
+
+
+graph pattern scanning and processing language API, main function \doxylink{gvpr_8h_a7bfc5d1442371298917d5abbfacf5a30}{gvpr}  
+
+
+{\ttfamily \+\#include $<$stddef.\+h$>$}\newline
+{\ttfamily \+\#include "{}cgraph.\+h"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structgvprbinding}{gvprbinding}}
+\item 
+struct \doxymbox{\hyperlink{structgvpropts}{gvpropts}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{gvpr_8h_aece3c462f476e1bce110a8300e35a4a8}{GVPR\+\_\+\+API}}~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+
+\item 
+\+\#define \doxymbox{\hyperlink{gvpr_8h_a66f65dd088e7ed5c8447dc81b2569c78}{GV\+\_\+\+USE\+\_\+\+EXIT}}~1
+\item 
+\+\#define \doxymbox{\hyperlink{gvpr_8h_a38cd2fbc19f4ed8556e193658c38332f}{GV\+\_\+\+USE\+\_\+\+OUTGRAPH}}~2
+\item 
+\+\#define \doxymbox{\hyperlink{gvpr_8h_ac8e2a9e0b506fe8c5ba0f9ca5f559c3e}{GV\+\_\+\+USE\+\_\+\+JUMP}}~4
+\item 
+\+\#define \doxymbox{\hyperlink{gvpr_8h_aa1a38061c7f737724afc46b5be28f460}{GV\+\_\+\+NEXT\+\_\+\+SET}}~8
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef ssize\+\_\+t(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{gvpr_8h_a315a0a5d4cb7e5277a215eaceff46e09}{gvprwr}}) (void \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}buf, size\+\_\+t nbyte, void \texorpdfstring{$\ast$}{*})
+\item 
+typedef int(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{gvpr_8h_a63948625781ab9e178029d681b5eb4a9}{gvpruserfn}}) (char \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{gvpr_8h_aece3c462f476e1bce110a8300e35a4a8}{GVPR\+\_\+\+API}} int \doxymbox{\hyperlink{gvpr_8h_a7bfc5d1442371298917d5abbfacf5a30}{gvpr}} (int argc, char \texorpdfstring{$\ast$}{*}argv\+[$\,$]\+, \doxymbox{\hyperlink{structgvpropts}{gvpropts}} \texorpdfstring{$\ast$}{*}opts)
+\end{DoxyCompactItemize}
+
+
+\label{gvpr_8h_doc-define-members}
+\Hypertarget{gvpr_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{gvpr_8h_aa1a38061c7f737724afc46b5be28f460}\index{gvpr.h@{gvpr.h}!GV\_NEXT\_SET@{GV\_NEXT\_SET}}
+\index{GV\_NEXT\_SET@{GV\_NEXT\_SET}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{GV\_NEXT\_SET}{GV\_NEXT\_SET}}
+{\footnotesize\ttfamily \label{gvpr_8h_aa1a38061c7f737724afc46b5be28f460} 
+\+\#define GV\+\_\+\+NEXT\+\_\+\+SET~8}
+
+\Hypertarget{gvpr_8h_a66f65dd088e7ed5c8447dc81b2569c78}\index{gvpr.h@{gvpr.h}!GV\_USE\_EXIT@{GV\_USE\_EXIT}}
+\index{GV\_USE\_EXIT@{GV\_USE\_EXIT}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{GV\_USE\_EXIT}{GV\_USE\_EXIT}}
+{\footnotesize\ttfamily \label{gvpr_8h_a66f65dd088e7ed5c8447dc81b2569c78} 
+\+\#define GV\+\_\+\+USE\+\_\+\+EXIT~1}
+
+\Hypertarget{gvpr_8h_ac8e2a9e0b506fe8c5ba0f9ca5f559c3e}\index{gvpr.h@{gvpr.h}!GV\_USE\_JUMP@{GV\_USE\_JUMP}}
+\index{GV\_USE\_JUMP@{GV\_USE\_JUMP}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{GV\_USE\_JUMP}{GV\_USE\_JUMP}}
+{\footnotesize\ttfamily \label{gvpr_8h_ac8e2a9e0b506fe8c5ba0f9ca5f559c3e} 
+\+\#define GV\+\_\+\+USE\+\_\+\+JUMP~4}
+
+\Hypertarget{gvpr_8h_a38cd2fbc19f4ed8556e193658c38332f}\index{gvpr.h@{gvpr.h}!GV\_USE\_OUTGRAPH@{GV\_USE\_OUTGRAPH}}
+\index{GV\_USE\_OUTGRAPH@{GV\_USE\_OUTGRAPH}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{GV\_USE\_OUTGRAPH}{GV\_USE\_OUTGRAPH}}
+{\footnotesize\ttfamily \label{gvpr_8h_a38cd2fbc19f4ed8556e193658c38332f} 
+\+\#define GV\+\_\+\+USE\+\_\+\+OUTGRAPH~2}
+
+\Hypertarget{gvpr_8h_aece3c462f476e1bce110a8300e35a4a8}\index{gvpr.h@{gvpr.h}!GVPR\_API@{GVPR\_API}}
+\index{GVPR\_API@{GVPR\_API}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{GVPR\_API}{GVPR\_API}}
+{\footnotesize\ttfamily \label{gvpr_8h_aece3c462f476e1bce110a8300e35a4a8} 
+\+\#define GVPR\+\_\+\+API~/\+\texorpdfstring{$\ast$}{*} nothing \texorpdfstring{$\ast$}{*}/\+}
+
+
+
+\label{gvpr_8h_doc-typedef-members}
+\Hypertarget{gvpr_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{gvpr_8h_a63948625781ab9e178029d681b5eb4a9}\index{gvpr.h@{gvpr.h}!gvpruserfn@{gvpruserfn}}
+\index{gvpruserfn@{gvpruserfn}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{gvpruserfn}{gvpruserfn}}
+{\footnotesize\ttfamily \label{gvpr_8h_a63948625781ab9e178029d681b5eb4a9} 
+typedef int(\texorpdfstring{$\ast$}{*} gvpruserfn) (char \texorpdfstring{$\ast$}{*})}
+
+\Hypertarget{gvpr_8h_a315a0a5d4cb7e5277a215eaceff46e09}\index{gvpr.h@{gvpr.h}!gvprwr@{gvprwr}}
+\index{gvprwr@{gvprwr}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{gvprwr}{gvprwr}}
+{\footnotesize\ttfamily \label{gvpr_8h_a315a0a5d4cb7e5277a215eaceff46e09} 
+typedef ssize\+\_\+t(\texorpdfstring{$\ast$}{*} gvprwr) (void \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}buf, size\+\_\+t nbyte, void \texorpdfstring{$\ast$}{*})}
+
+
+
+\label{gvpr_8h_doc-func-members}
+\Hypertarget{gvpr_8h_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{gvpr_8h_a7bfc5d1442371298917d5abbfacf5a30}\index{gvpr.h@{gvpr.h}!gvpr@{gvpr}}
+\index{gvpr@{gvpr}!gvpr.h@{gvpr.h}}
+\doxysubsubsection{\texorpdfstring{gvpr()}{gvpr()}}
+{\footnotesize\ttfamily \label{gvpr_8h_a7bfc5d1442371298917d5abbfacf5a30} 
+\doxymbox{\hyperlink{gvpr_8h_aece3c462f476e1bce110a8300e35a4a8}{GVPR\+\_\+\+API}} int gvpr (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\+[$\,$]\+, }\item[{\doxymbox{\hyperlink{structgvpropts}{gvpropts}} \texorpdfstring{$\ast$}{*}}]{opts}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+\begin{DoxyParams}{Аргументы}
+{\em opts} & Options affecting gvpr behavior. Pass {\ttfamily NULL} for defaults. \\
+\hline
+\end{DoxyParams}

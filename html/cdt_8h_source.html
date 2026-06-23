@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Исходный файл Graphviz/include/graphviz/cdt.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('cdt_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">cdt.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="cdt_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*  Public interface for the dictionary library</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">**</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">**      Written by Kiem-Phong Vo</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="cdt_8h.html#a15ac0da44b92ccaf93b7087cb6cf641e">   24</a></span><span class="preprocessor">#define CDT_VERSION 20241216L</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stddef.h&gt;</span> <span class="comment">/* size_t */</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#ifdef GVDLL</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifdef EXPORT_CDT</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define CDT_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define CDT_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef CDT_API</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">   38</a></span><span class="preprocessor">#define CDT_API </span><span class="comment">/* nothing */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">   41</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdtlink__s__.html">dtlink_s_</a> <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">   42</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdtdisc__s__.html">dtdisc_s_</a> <a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">   43</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdt__s__.html">dt_s_</a> <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="cdt_8h.html#a0351a17d49d8cee0c6cea7412ddd6d58">   44</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdt__s__.html">dt_s_</a> <a class="code hl_typedef" href="cdt_8h.html#a0351a17d49d8cee0c6cea7412ddd6d58">Dict_t</a>; <span class="comment">/* for libdict compatibility */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="cdt_8h.html#ad302f306f9f77c3b1cfe6c0fdde2ffae">   45</a></span><span class="keyword">typedef</span> <span class="keywordtype">void</span> *(*Dtsearch_f)(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <span class="keywordtype">void</span> *, int);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="cdt_8h.html#a00198acc389f43f605c7c29567606f83">   46</a></span><span class="keyword">typedef</span> <span class="keywordtype">void</span> *(*Dtmake_f)(<span class="keywordtype">void</span> *, <a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="cdt_8h.html#a42b4d6568328f598b0280b22c17d3573">   47</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="cdt_8h.html#a42b4d6568328f598b0280b22c17d3573">Dtfree_f</a>)(<span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="cdt_8h.html#a379a2fcb714d83cb4e1122f1e22b8bb0">   48</a></span><span class="keyword">typedef</span> int (*<a class="code hl_typedef" href="cdt_8h.html#a379a2fcb714d83cb4e1122f1e22b8bb0">Dtcompar_f</a>)(<span class="keywordtype">void</span> *, <span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structdtlink__s__.html">   50</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdtlink__s__.html">dtlink_s_</a> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structdtlink__s__.html#acf6084bccaf1f23aecfdafa71712b544">   51</a></span>  <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_variable" href="structdtlink__s__.html#acf6084bccaf1f23aecfdafa71712b544">right</a>; <span class="comment">/* right child       */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structdtlink__s__.html#a91787a7c279d549d5ddb61a08b91c5e0">   53</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="structdtlink__s__.html#a91787a7c279d549d5ddb61a08b91c5e0">_hash</a>; <span class="comment">/* hash value       */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structdtlink__s__.html#a45fc2b57c4ac5d3c709f8dae01194902">   54</a></span>    <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_variable" href="structdtlink__s__.html#a45fc2b57c4ac5d3c709f8dae01194902">_left</a>;    <span class="comment">/* left child       */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structdtlink__s__.html#a7b77145682f8894bfbe5556f641d961c">   55</a></span>  } <a class="code hl_variable" href="structdtlink__s__.html#a7b77145682f8894bfbe5556f641d961c">hl</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/* private structure to hold an object */</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_dthold__t.html">   59</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_dthold__t.html#a6985aa3adc31ea11ff20fcaf1b3a7579">   60</a></span>  <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> <a class="code hl_variable" href="struct_dthold__t.html#a6985aa3adc31ea11ff20fcaf1b3a7579">hdr</a>; <span class="comment">/* header       */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_dthold__t.html#aa71cbfb0be97101fba3ed2860c25b013">   61</a></span>  <span class="keywordtype">void</span> *<a class="code hl_variable" href="struct_dthold__t.html#aa71cbfb0be97101fba3ed2860c25b013">obj</a>;    <span class="comment">/* user object      */</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <a class="code hl_struct" href="struct_dthold__t.html">Dthold_t</a>;</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">/* method to manipulate dictionary structure */</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_dtmethod__t.html">   65</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_dtmethod__t.html#a8cee5d5079bca1862b7957fd0eb9effe">   66</a></span>  <a class="code hl_typedef" href="cdt_8h.html#ad302f306f9f77c3b1cfe6c0fdde2ffae">Dtsearch_f</a> <a class="code hl_variable" href="struct_dtmethod__t.html#a8cee5d5079bca1862b7957fd0eb9effe">searchf</a>; <span class="comment">/* search function    */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_dtmethod__t.html#ac835513fbc0677fcaa19598be547bf95">   67</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtmethod__t.html#ac835513fbc0677fcaa19598be547bf95">type</a>;           <span class="comment">/* type of operation  */</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a>;</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">/* stuff that may be in shared memory */</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html">   71</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#aa0c6d977db109d2a25b060006b274a2d">   72</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtdata__t.html#aa0c6d977db109d2a25b060006b274a2d">type</a>;       <span class="comment">/* type of dictionary         */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#a9ede06e9fc5b33bf3eb6839186bfc2f1">   73</a></span>  <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_variable" href="struct_dtdata__t.html#a9ede06e9fc5b33bf3eb6839186bfc2f1">here</a>; <span class="comment">/* finger to last search element  */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#a18e7d48a510dad9794fbc35341a85aca">   75</a></span>    <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> **<a class="code hl_variable" href="struct_dtdata__t.html#a18e7d48a510dad9794fbc35341a85aca">_htab</a>; <span class="comment">/* hash table             */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#ae0ae3c6a5fc177e2c9936195993192b1">   76</a></span>    <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_variable" href="struct_dtdata__t.html#ae0ae3c6a5fc177e2c9936195993192b1">_head</a>;  <span class="comment">/* linked list                */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#a0ea5826d2ba5250db1c4c5d6355bfe2c">   77</a></span>  } hh;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#ac4a8d385d1cd1a3cb502a91c44807b2d">   78</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtdata__t.html#ac4a8d385d1cd1a3cb502a91c44807b2d">ntab</a>; <span class="comment">/* number of hash slots         */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#a184544acd7ee3823a86d1e08b2a29011">   79</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtdata__t.html#a184544acd7ee3823a86d1e08b2a29011">size</a>; <span class="comment">/* number of objects            */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct_dtdata__t.html#aff0a0c7a4ddce3a90dab372b85e9946a">   80</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtdata__t.html#aff0a0c7a4ddce3a90dab372b85e9946a">loop</a>; <span class="comment">/* number of nested loops       */</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <a class="code hl_struct" href="struct_dtdata__t.html">Dtdata_t</a>;</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/* structure to hold methods that manipulate an object */</span></div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html">   84</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdtdisc__s__.html">dtdisc_s_</a> {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#a41894c9a2eb002d137e7e7c7c2580c8e">   85</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structdtdisc__s__.html#a41894c9a2eb002d137e7e7c7c2580c8e">key</a>;            <span class="comment">/* where the key begins in an object  */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#a45250930b71a8bfdc5d51d61357c34aa">   86</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structdtdisc__s__.html#a45250930b71a8bfdc5d51d61357c34aa">size</a>;           <span class="comment">/* key size and type          */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#a858e3daef49a3a773ac8bdb46faa9db9">   87</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structdtdisc__s__.html#a858e3daef49a3a773ac8bdb46faa9db9">link</a>;           <span class="comment">/* offset to Dtlink_t field       */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#aa28904b653a597d147fb8ad2f0369e2e">   88</a></span>  <a class="code hl_typedef" href="cdt_8h.html#a00198acc389f43f605c7c29567606f83">Dtmake_f</a> <a class="code hl_variable" href="structdtdisc__s__.html#aa28904b653a597d147fb8ad2f0369e2e">makef</a>;     <span class="comment">/* object constructor         */</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#a04697f5205ea7b05b43938befe2939ff">   89</a></span>  <a class="code hl_typedef" href="cdt_8h.html#a42b4d6568328f598b0280b22c17d3573">Dtfree_f</a> <a class="code hl_variable" href="structdtdisc__s__.html#a04697f5205ea7b05b43938befe2939ff">freef</a>;     <span class="comment">/* object destructor          */</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structdtdisc__s__.html#a88017b70b9e4ec7e15d050299a55a0ff">   90</a></span>  <a class="code hl_typedef" href="cdt_8h.html#a379a2fcb714d83cb4e1122f1e22b8bb0">Dtcompar_f</a> <a class="code hl_variable" href="structdtdisc__s__.html#a88017b70b9e4ec7e15d050299a55a0ff">comparf</a>; <span class="comment">/* to compare two objects     */</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="" data-end="">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="cdt_8h.html#a576667c8240d18ab1da1138a42fe9f7c">   93</a></span><span class="preprocessor">#define DTDISC(dc, ky, sz, lk, mkf, frf, cmpf)                                 \</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">  ((dc)-&gt;key = (ky), (dc)-&gt;size = (sz), (dc)-&gt;link = (lk),                     \</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">   (dc)-&gt;makef = (mkf), (dc)-&gt;freef = (frf), (dc)-&gt;comparf = (cmpf))</span></div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">/* the dictionary structure itself */</span></div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="};">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="structdt__s__.html">   98</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdt__s__.html">dt_s_</a> {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structdt__s__.html#a2fd09092232229457d8c94e898a96d35">   99</a></span>  <a class="code hl_typedef" href="cdt_8h.html#ad302f306f9f77c3b1cfe6c0fdde2ffae">Dtsearch_f</a> <a class="code hl_variable" href="structdt__s__.html#a2fd09092232229457d8c94e898a96d35">searchf</a>; <span class="comment">/* search function            */</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structdt__s__.html#ac8734b94b0970d143142edb4dbfb04a2">  100</a></span>  <a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *<a class="code hl_variable" href="structdt__s__.html#ac8734b94b0970d143142edb4dbfb04a2">disc</a>;     <span class="comment">/* method to manipulate objs      */</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structdt__s__.html#a36d42a101c68038d276e61c1a75cfd5a">  101</a></span>  <a class="code hl_struct" href="struct_dtdata__t.html">Dtdata_t</a> <a class="code hl_variable" href="structdt__s__.html#a36d42a101c68038d276e61c1a75cfd5a">data</a>;      </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structdt__s__.html#a02122d7943da452b81883782c5957022">  102</a></span>  <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_variable" href="structdt__s__.html#a02122d7943da452b81883782c5957022">meth</a>;   <span class="comment">/* dictionary method          */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="structdt__s__.html#aa0a8c498fd25675b05acdcfd7c78375b">  103</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structdt__s__.html#aa0a8c498fd25675b05acdcfd7c78375b">nview</a>;          <span class="comment">/* number of parent view dictionaries */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structdt__s__.html#af8e1741ddd533084ff2ba10bf86c5d10">  104</a></span>  <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *<a class="code hl_variable" href="structdt__s__.html#af8e1741ddd533084ff2ba10bf86c5d10">view</a>;         <span class="comment">/* next on viewpath           */</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="structdt__s__.html#a1c3968d444ad77f8a6a22c10832a0263">  105</a></span>  <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *<a class="code hl_variable" href="structdt__s__.html#a1c3968d444ad77f8a6a22c10832a0263">walk</a>;         <span class="comment">/* dictionary being walked        */</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structdt__s__.html#a664f4b3b8ea8cde8b23ff0e617cda75f">  106</a></span>  <span class="keywordtype">void</span> *<a class="code hl_variable" href="structdt__s__.html#a664f4b3b8ea8cde8b23ff0e617cda75f">user</a>;         <span class="comment">/* for user&#39;s usage           */</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>};</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/* structure to get status of a dictionary */</span></div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="};">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html">  110</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html#acc92e8ade5aee3e8bcd89b9c0eaea058">  111</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtstat__t.html#acc92e8ade5aee3e8bcd89b9c0eaea058">dt_meth</a>;      <span class="comment">/* method type              */</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html#a8a9d5cfd31a6fa1cab4c8baf16da03eb">  112</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_dtstat__t.html#a8a9d5cfd31a6fa1cab4c8baf16da03eb">dt_size</a>;      <span class="comment">/* number of elements           */</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html#a0253744732cd3d09038eaa16383b0eac">  113</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="struct_dtstat__t.html#a0253744732cd3d09038eaa16383b0eac">dt_n</a>;      <span class="comment">// number of chains or levels</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html#ac57eaae93530dbfd779bdd9a8dcb1a7b">  114</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="struct_dtstat__t.html#ac57eaae93530dbfd779bdd9a8dcb1a7b">dt_max</a>;    <span class="comment">// max size of a chain or a level</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="struct_dtstat__t.html#ace746b08589a21d58b734048bd0c193b">  115</a></span>  <span class="keywordtype">size_t</span> *<a class="code hl_variable" href="struct_dtstat__t.html#ace746b08589a21d58b734048bd0c193b">dt_count</a>; <span class="comment">// counts of chains or levels by size</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <a class="code hl_struct" href="struct_dtstat__t.html">Dtstat_t</a>;</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">/* supported storage methods */</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="cdt_8h.html#a257bbc9fe9828352a627cd1894030fbb">  119</a></span><span class="preprocessor">#define DT_SET 0000001     </span><span class="comment">/* set with unique elements      */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="cdt_8h.html#ab540f5d778fb80e2f825295c8ddf3ba7">  120</a></span><span class="preprocessor">#define DT_OSET 0000004    </span><span class="comment">/* ordered set (self-adjusting tree) */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="cdt_8h.html#a1acc2651207891a7c4d5f525aef60bc8">  121</a></span><span class="preprocessor">#define DT_OBAG 0000010    </span><span class="comment">/* ordered multiset          */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="cdt_8h.html#ab2ed93cb7ebee29498a079e553945b57">  122</a></span><span class="preprocessor">#define DT_METHODS 0000377 </span><span class="comment">/* all currently supported methods   */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">/* types of search */</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="cdt_8h.html#a8f9920c0fee0b9f50e0a3b23abd3fd26">  125</a></span><span class="preprocessor">#define DT_INSERT 0000001  </span><span class="comment">/* insert object if not found        */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="cdt_8h.html#a645de2061b32735724c54c87fd5406a2">  126</a></span><span class="preprocessor">#define DT_DELETE 0000002  </span><span class="comment">/* delete object if found        */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="cdt_8h.html#a47e5c8e948e61a82e17cb2a4bdb6caa2">  127</a></span><span class="preprocessor">#define DT_SEARCH 0000004  </span><span class="comment">/* look for an object            */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="cdt_8h.html#a24fcda2658f9defe5bdb1984860d6240">  128</a></span><span class="preprocessor">#define DT_NEXT 0000010    </span><span class="comment">/* look for next element     */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="cdt_8h.html#a1bea70faf05bae1b0a7548ea96e1d511">  129</a></span><span class="preprocessor">#define DT_PREV 0000020    </span><span class="comment">/* find previous element     */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="cdt_8h.html#a9f480f0a639e6cbdfc740e489f034433">  130</a></span><span class="preprocessor">#define DT_RENEW 0000040   </span><span class="comment">/* renewing an object            */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="cdt_8h.html#a7001f50d84e9fedcf3f838636af4e62c">  131</a></span><span class="preprocessor">#define DT_CLEAR 0000100   </span><span class="comment">/* clearing all objects          */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="cdt_8h.html#af046cba51c33a3931219518d4d1fcf99">  132</a></span><span class="preprocessor">#define DT_FIRST 0000200   </span><span class="comment">/* get first object          */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="cdt_8h.html#a192bea83114b73344ba3e9aab4c796e3">  133</a></span><span class="preprocessor">#define DT_LAST 0000400    </span><span class="comment">/* get last object           */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="cdt_8h.html#a01aca514b0b658320c893611601af6fa">  134</a></span><span class="preprocessor">#define DT_MATCH 0001000   </span><span class="comment">/* find object matching key      */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="cdt_8h.html#a4fa66c08b3e8b07466485051fa8c328e">  135</a></span><span class="preprocessor">#define DT_VSEARCH 0002000 </span><span class="comment">/* search using internal representation  */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="cdt_8h.html#a93e662669aa505475549609079d64592">  136</a></span><span class="preprocessor">#define DT_DETACH 0010000  </span><span class="comment">/* detach an object from the dictionary  */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keyword">extern</span> <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_variable" href="cdt_8h.html#a43b7ee8085f341e219abd810b5861695">Dtset</a>;  </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keyword">extern</span> <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_variable" href="cdt_8h.html#ac17f2af349b0d37468df9c3890d65765">Dtoset</a>; </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keyword">extern</span> <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_variable" href="cdt_8h.html#a5b337ee2980fe41be2e220c0102d9898">Dtobag</a>; </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keyword">extern</span> <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_variable" href="cdt_8h.html#aaf0578dbe76c834fcda77fdb36f90743">Dttree</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="cdt_8h.html#ae8ae3b9b0bb933f4b05923f28607feaa">  144</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *<a class="code hl_function" href="cdt_8h.html#ae8ae3b9b0bb933f4b05923f28607feaa">dtopen</a>(<a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *, <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="cdt_8h.html#ab24362a4f1e5bd3d3dccb25199f34270">  145</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#ab24362a4f1e5bd3d3dccb25199f34270">dtclose</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="cdt_8h.html#aa1e08b44b868cd6e22a6be6fadd0cbaa">  146</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *<a class="code hl_function" href="cdt_8h.html#aa1e08b44b868cd6e22a6be6fadd0cbaa">dtview</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="cdt_8h.html#ae83316e035da221c8a2f61d1e531e0d4">  147</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *<a class="code hl_function" href="cdt_8h.html#ae83316e035da221c8a2f61d1e531e0d4">dtdisc</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *dt, <a class="code hl_typedef" href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a> *);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="cdt_8h.html#a369970d5990f9a2a19ba566769affa68">  148</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *<a class="code hl_function" href="cdt_8h.html#a369970d5990f9a2a19ba566769affa68">dtmethod</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="code hl_struct" href="struct_dtmethod__t.html">Dtmethod_t</a> *);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="cdt_8h.html#a46b3a35c57ac634867000dcccf6afd78">  150</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_function" href="cdt_8h.html#a46b3a35c57ac634867000dcccf6afd78">dtflatten</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="cdt_8h.html#a60ae78bab00270d3483f563980926821">  151</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *<a class="code hl_function" href="cdt_8h.html#a60ae78bab00270d3483f563980926821">dtextract</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="cdt_8h.html#ae141b0f4f8a18fb671dab2fc4602c234">  152</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#ae141b0f4f8a18fb671dab2fc4602c234">dtrestore</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="code hl_typedef" href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a> *);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="cdt_8h.html#a1d4b83678cb2801ec406dc2836e3ce0d">  154</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#a1d4b83678cb2801ec406dc2836e3ce0d">dtwalk</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <span class="keywordtype">int</span> (*)(<span class="keywordtype">void</span> *, <span class="keywordtype">void</span> *), <span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="cdt_8h.html#ab997ab5fe58d2ec14780b2d82e5c3dd6">  156</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">void</span> *<a class="code hl_function" href="cdt_8h.html#ab997ab5fe58d2ec14780b2d82e5c3dd6">dtrenew</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="cdt_8h.html#a70a5fc2d51f74f30b0a96228309b9873">  158</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#a70a5fc2d51f74f30b0a96228309b9873">dtsize</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="cdt_8h.html#ad5ced427c61b36dcd86b13701106418e">  159</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#ad5ced427c61b36dcd86b13701106418e">dtstat</a>(<a class="code hl_typedef" href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a> *, <a class="code hl_struct" href="struct_dtstat__t.html">Dtstat_t</a> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="cdt_8h.html#a75d95f2da18bdf82424eb16734354b9d">  160</a></span><a class="code hl_define" href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="cdt_8h.html#a75d95f2da18bdf82424eb16734354b9d">dtstrhash</a>(<span class="keywordtype">void</span> *, <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">/* internal functions for translating among holder, object and key */</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="cdt_8h.html#a71abe7f6cb4cc1c3892cc2e3f7798655">  163</a></span><span class="preprocessor">#define _DT(dt) ((Dt_t *)(dt))</span></div>
+<div class="foldopen" id="foldopen00164" data-start="" data-end="">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="cdt_8h.html#a0c558c127c5b56704889617c71bcdf09">  164</a></span><span class="preprocessor">#define _DTDSC(dc, ky, sz, lk, cmpf)                                           \</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">  (ky = dc-&gt;key, sz = dc-&gt;size, lk = dc-&gt;link, cmpf = dc-&gt;comparf)</span></div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="cdt_8h.html#a2366c9db1803f36d06e9e255fdbc6514">  166</a></span><span class="preprocessor">#define _DTLNK(o, lk) ((Dtlink_t *)((char *)(o) + lk))</span></div>
+<div class="foldopen" id="foldopen00167" data-start="" data-end="">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="cdt_8h.html#acd1eb06f8072a9014ff132c253884d10">  167</a></span><span class="preprocessor">#define _DTOBJ(e, lk)                                                          \</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">  (lk &lt; 0 ? ((Dthold_t *)(e))-&gt;obj : (void *)((char *)(e) - lk))</span></div>
+</div>
+<div class="foldopen" id="foldopen00169" data-start="" data-end="">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="cdt_8h.html#a08a47e323cf4fdbd6f9d7bf0855ce5bf">  169</a></span><span class="preprocessor">#define _DTKEY(o, ky, sz)                                                      \</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">  (void *)(sz &lt; 0 ? *((char **)((char *)(o) + ky)) : ((char *)(o) + ky))</span></div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="foldopen" id="foldopen00172" data-start="" data-end="">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="cdt_8h.html#acb44035c01b5dd7ffc96abe81d755ed9">  172</a></span><span class="preprocessor">#define _DTCMP(k1, k2, cmpf, sz)                                               \</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">  (cmpf ? (cmpf)(k1, k2)                                                       \</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">        : (sz &lt;= 0 ? strcmp(k1, k2) : memcmp(k1, k2, (size_t)sz)))</span></div>
+</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="cdt_8h.html#a79be8633be14ddf98d3b356e0d40564d">  176</a></span><span class="preprocessor">#define dtlink(d, e) (((Dtlink_t *)(e))-&gt;right)</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="cdt_8h.html#a4717180611823cdf0c057abe1a45315a">  177</a></span><span class="preprocessor">#define dtobj(d, e) _DTOBJ((e), _DT(d)-&gt;disc-&gt;link)</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="cdt_8h.html#a820a52522c7b2de0619a793965d7d881">  178</a></span><span class="preprocessor">#define dtfinger(d) (_DT(d)-&gt;data.here ? dtobj((d), _DT(d)-&gt;data.here) : NULL)</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="cdt_8h.html#af954ac773cdfecad7ec5ac45e9a63a23">  180</a></span><span class="preprocessor">#define dtfirst(d) (*(_DT(d)-&gt;searchf))((d), (void *)(0), DT_FIRST)</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="cdt_8h.html#af6ea20c91403c1ef595681fc6b6ac30f">  181</a></span><span class="preprocessor">#define dtnext(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_NEXT)</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="cdt_8h.html#aba7b1b643434cc61b1692a1875c6029b">  182</a></span><span class="preprocessor">#define dtlast(d) (*(_DT(d)-&gt;searchf))((d), (void *)(0), DT_LAST)</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="cdt_8h.html#aa6a97d9b70597ac2a34565f956ae3703">  183</a></span><span class="preprocessor">#define dtprev(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_PREV)</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="cdt_8h.html#a62014aa3c3853e006d7115b1dbfb81c9">  184</a></span><span class="preprocessor">#define dtsearch(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_SEARCH)</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="cdt_8h.html#a4dff83f53eb9464965da060528b4cae8">  185</a></span><span class="preprocessor">#define dtmatch(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_MATCH)</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="cdt_8h.html#a8ac18f2bf845640bd563a1545d2e3675">  186</a></span><span class="preprocessor">#define dtinsert(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_INSERT)</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="cdt_8h.html#ad351bb07a26ff918184f200ee1d655cc">  187</a></span><span class="preprocessor">#define dtdelete(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_DELETE)</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="cdt_8h.html#a6590446c25a135161df8945b8633b42a">  188</a></span><span class="preprocessor">#define dtdetach(d, o) (*(_DT(d)-&gt;searchf))((d), (void *)(o), DT_DETACH)</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="cdt_8h.html#a5cc1e11802758b8c71f085d463393ef0">  189</a></span><span class="preprocessor">#define dtclear(d) (*(_DT(d)-&gt;searchf))((d), (void *)(0), DT_CLEAR)</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acdt_8h_html_a00198acc389f43f605c7c29567606f83"><div class="ttname"><a href="cdt_8h.html#a00198acc389f43f605c7c29567606f83">Dtmake_f</a></div><div class="ttdeci">void *(* Dtmake_f)(void *, Dtdisc_t *)</div><div class="ttdef"><b>Определения</b> cdt.h:46</div></div>
+<div class="ttc" id="acdt_8h_html_a0351a17d49d8cee0c6cea7412ddd6d58"><div class="ttname"><a href="cdt_8h.html#a0351a17d49d8cee0c6cea7412ddd6d58">Dict_t</a></div><div class="ttdeci">struct dt_s_ Dict_t</div><div class="ttdef"><b>Определения</b> cdt.h:44</div></div>
+<div class="ttc" id="acdt_8h_html_a1d4b83678cb2801ec406dc2836e3ce0d"><div class="ttname"><a href="cdt_8h.html#a1d4b83678cb2801ec406dc2836e3ce0d">dtwalk</a></div><div class="ttdeci">CDT_API int dtwalk(Dt_t *, int(*)(void *, void *), void *)</div></div>
+<div class="ttc" id="acdt_8h_html_a369970d5990f9a2a19ba566769affa68"><div class="ttname"><a href="cdt_8h.html#a369970d5990f9a2a19ba566769affa68">dtmethod</a></div><div class="ttdeci">CDT_API Dtmethod_t * dtmethod(Dt_t *, Dtmethod_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_a379a2fcb714d83cb4e1122f1e22b8bb0"><div class="ttname"><a href="cdt_8h.html#a379a2fcb714d83cb4e1122f1e22b8bb0">Dtcompar_f</a></div><div class="ttdeci">int(* Dtcompar_f)(void *, void *)</div><div class="ttdef"><b>Определения</b> cdt.h:48</div></div>
+<div class="ttc" id="acdt_8h_html_a42b4d6568328f598b0280b22c17d3573"><div class="ttname"><a href="cdt_8h.html#a42b4d6568328f598b0280b22c17d3573">Dtfree_f</a></div><div class="ttdeci">void(* Dtfree_f)(void *)</div><div class="ttdef"><b>Определения</b> cdt.h:47</div></div>
+<div class="ttc" id="acdt_8h_html_a43b7ee8085f341e219abd810b5861695"><div class="ttname"><a href="cdt_8h.html#a43b7ee8085f341e219abd810b5861695">Dtset</a></div><div class="ttdeci">CDT_API Dtmethod_t * Dtset</div><div class="ttdoc">set with unique elements</div></div>
+<div class="ttc" id="acdt_8h_html_a46b3a35c57ac634867000dcccf6afd78"><div class="ttname"><a href="cdt_8h.html#a46b3a35c57ac634867000dcccf6afd78">dtflatten</a></div><div class="ttdeci">CDT_API Dtlink_t * dtflatten(Dt_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_a59a978b45171686ba566b57638fd371f"><div class="ttname"><a href="cdt_8h.html#a59a978b45171686ba566b57638fd371f">Dtdisc_t</a></div><div class="ttdeci">struct dtdisc_s_ Dtdisc_t</div><div class="ttdef"><b>Определения</b> cdt.h:42</div></div>
+<div class="ttc" id="acdt_8h_html_a5b337ee2980fe41be2e220c0102d9898"><div class="ttname"><a href="cdt_8h.html#a5b337ee2980fe41be2e220c0102d9898">Dtobag</a></div><div class="ttdeci">CDT_API Dtmethod_t * Dtobag</div><div class="ttdoc">ordered multiset</div></div>
+<div class="ttc" id="acdt_8h_html_a60ae78bab00270d3483f563980926821"><div class="ttname"><a href="cdt_8h.html#a60ae78bab00270d3483f563980926821">dtextract</a></div><div class="ttdeci">CDT_API Dtlink_t * dtextract(Dt_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_a70a5fc2d51f74f30b0a96228309b9873"><div class="ttname"><a href="cdt_8h.html#a70a5fc2d51f74f30b0a96228309b9873">dtsize</a></div><div class="ttdeci">CDT_API int dtsize(Dt_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_a75d95f2da18bdf82424eb16734354b9d"><div class="ttname"><a href="cdt_8h.html#a75d95f2da18bdf82424eb16734354b9d">dtstrhash</a></div><div class="ttdeci">CDT_API unsigned int dtstrhash(void *, int)</div></div>
+<div class="ttc" id="acdt_8h_html_a907f3780dfe2def28491c21efee0418d"><div class="ttname"><a href="cdt_8h.html#a907f3780dfe2def28491c21efee0418d">CDT_API</a></div><div class="ttdeci">#define CDT_API</div><div class="ttdef"><b>Определения</b> cdt.h:38</div></div>
+<div class="ttc" id="acdt_8h_html_aa1e08b44b868cd6e22a6be6fadd0cbaa"><div class="ttname"><a href="cdt_8h.html#aa1e08b44b868cd6e22a6be6fadd0cbaa">dtview</a></div><div class="ttdeci">CDT_API Dt_t * dtview(Dt_t *, Dt_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_aa4cb2c86c90226c860518e4cf924a173"><div class="ttname"><a href="cdt_8h.html#aa4cb2c86c90226c860518e4cf924a173">Dt_t</a></div><div class="ttdeci">struct dt_s_ Dt_t</div><div class="ttdef"><b>Определения</b> cdt.h:43</div></div>
+<div class="ttc" id="acdt_8h_html_aaf0578dbe76c834fcda77fdb36f90743"><div class="ttname"><a href="cdt_8h.html#aaf0578dbe76c834fcda77fdb36f90743">Dttree</a></div><div class="ttdeci">CDT_API Dtmethod_t * Dttree</div></div>
+<div class="ttc" id="acdt_8h_html_ab24362a4f1e5bd3d3dccb25199f34270"><div class="ttname"><a href="cdt_8h.html#ab24362a4f1e5bd3d3dccb25199f34270">dtclose</a></div><div class="ttdeci">CDT_API int dtclose(Dt_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_ab997ab5fe58d2ec14780b2d82e5c3dd6"><div class="ttname"><a href="cdt_8h.html#ab997ab5fe58d2ec14780b2d82e5c3dd6">dtrenew</a></div><div class="ttdeci">CDT_API void * dtrenew(Dt_t *, void *)</div></div>
+<div class="ttc" id="acdt_8h_html_ac17f2af349b0d37468df9c3890d65765"><div class="ttname"><a href="cdt_8h.html#ac17f2af349b0d37468df9c3890d65765">Dtoset</a></div><div class="ttdeci">CDT_API Dtmethod_t * Dtoset</div><div class="ttdoc">ordered set (self-adjusting tree)</div></div>
+<div class="ttc" id="acdt_8h_html_ad302f306f9f77c3b1cfe6c0fdde2ffae"><div class="ttname"><a href="cdt_8h.html#ad302f306f9f77c3b1cfe6c0fdde2ffae">Dtsearch_f</a></div><div class="ttdeci">void *(* Dtsearch_f)(Dt_t *, void *, int)</div><div class="ttdef"><b>Определения</b> cdt.h:45</div></div>
+<div class="ttc" id="acdt_8h_html_ad5ced427c61b36dcd86b13701106418e"><div class="ttname"><a href="cdt_8h.html#ad5ced427c61b36dcd86b13701106418e">dtstat</a></div><div class="ttdeci">CDT_API int dtstat(Dt_t *, Dtstat_t *, int)</div></div>
+<div class="ttc" id="acdt_8h_html_ae141b0f4f8a18fb671dab2fc4602c234"><div class="ttname"><a href="cdt_8h.html#ae141b0f4f8a18fb671dab2fc4602c234">dtrestore</a></div><div class="ttdeci">CDT_API int dtrestore(Dt_t *, Dtlink_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_ae83316e035da221c8a2f61d1e531e0d4"><div class="ttname"><a href="cdt_8h.html#ae83316e035da221c8a2f61d1e531e0d4">dtdisc</a></div><div class="ttdeci">CDT_API Dtdisc_t * dtdisc(Dt_t *dt, Dtdisc_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_ae8ae3b9b0bb933f4b05923f28607feaa"><div class="ttname"><a href="cdt_8h.html#ae8ae3b9b0bb933f4b05923f28607feaa">dtopen</a></div><div class="ttdeci">CDT_API Dt_t * dtopen(Dtdisc_t *, Dtmethod_t *)</div></div>
+<div class="ttc" id="acdt_8h_html_af1f4e66a09b733bea11936c64fe24bb6"><div class="ttname"><a href="cdt_8h.html#af1f4e66a09b733bea11936c64fe24bb6">Dtlink_t</a></div><div class="ttdeci">struct dtlink_s_ Dtlink_t</div><div class="ttdef"><b>Определения</b> cdt.h:41</div></div>
+<div class="ttc" id="astruct_dtdata__t_html"><div class="ttname"><a href="struct_dtdata__t.html">Dtdata_t</a></div><div class="ttdef"><b>Определения</b> cdt.h:71</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_a184544acd7ee3823a86d1e08b2a29011"><div class="ttname"><a href="struct_dtdata__t.html#a184544acd7ee3823a86d1e08b2a29011">Dtdata_t::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Определения</b> cdt.h:79</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_a18e7d48a510dad9794fbc35341a85aca"><div class="ttname"><a href="struct_dtdata__t.html#a18e7d48a510dad9794fbc35341a85aca">Dtdata_t::_htab</a></div><div class="ttdeci">Dtlink_t ** _htab</div><div class="ttdef"><b>Определения</b> cdt.h:75</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_a9ede06e9fc5b33bf3eb6839186bfc2f1"><div class="ttname"><a href="struct_dtdata__t.html#a9ede06e9fc5b33bf3eb6839186bfc2f1">Dtdata_t::here</a></div><div class="ttdeci">Dtlink_t * here</div><div class="ttdef"><b>Определения</b> cdt.h:73</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_aa0c6d977db109d2a25b060006b274a2d"><div class="ttname"><a href="struct_dtdata__t.html#aa0c6d977db109d2a25b060006b274a2d">Dtdata_t::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Определения</b> cdt.h:72</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_ac4a8d385d1cd1a3cb502a91c44807b2d"><div class="ttname"><a href="struct_dtdata__t.html#ac4a8d385d1cd1a3cb502a91c44807b2d">Dtdata_t::ntab</a></div><div class="ttdeci">int ntab</div><div class="ttdef"><b>Определения</b> cdt.h:78</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_ae0ae3c6a5fc177e2c9936195993192b1"><div class="ttname"><a href="struct_dtdata__t.html#ae0ae3c6a5fc177e2c9936195993192b1">Dtdata_t::_head</a></div><div class="ttdeci">Dtlink_t * _head</div><div class="ttdef"><b>Определения</b> cdt.h:76</div></div>
+<div class="ttc" id="astruct_dtdata__t_html_aff0a0c7a4ddce3a90dab372b85e9946a"><div class="ttname"><a href="struct_dtdata__t.html#aff0a0c7a4ddce3a90dab372b85e9946a">Dtdata_t::loop</a></div><div class="ttdeci">int loop</div><div class="ttdef"><b>Определения</b> cdt.h:80</div></div>
+<div class="ttc" id="astruct_dthold__t_html"><div class="ttname"><a href="struct_dthold__t.html">Dthold_t</a></div><div class="ttdef"><b>Определения</b> cdt.h:59</div></div>
+<div class="ttc" id="astruct_dthold__t_html_a6985aa3adc31ea11ff20fcaf1b3a7579"><div class="ttname"><a href="struct_dthold__t.html#a6985aa3adc31ea11ff20fcaf1b3a7579">Dthold_t::hdr</a></div><div class="ttdeci">Dtlink_t hdr</div><div class="ttdef"><b>Определения</b> cdt.h:60</div></div>
+<div class="ttc" id="astruct_dthold__t_html_aa71cbfb0be97101fba3ed2860c25b013"><div class="ttname"><a href="struct_dthold__t.html#aa71cbfb0be97101fba3ed2860c25b013">Dthold_t::obj</a></div><div class="ttdeci">void * obj</div><div class="ttdef"><b>Определения</b> cdt.h:61</div></div>
+<div class="ttc" id="astruct_dtmethod__t_html"><div class="ttname"><a href="struct_dtmethod__t.html">Dtmethod_t</a></div><div class="ttdef"><b>Определения</b> cdt.h:65</div></div>
+<div class="ttc" id="astruct_dtmethod__t_html_a8cee5d5079bca1862b7957fd0eb9effe"><div class="ttname"><a href="struct_dtmethod__t.html#a8cee5d5079bca1862b7957fd0eb9effe">Dtmethod_t::searchf</a></div><div class="ttdeci">Dtsearch_f searchf</div><div class="ttdef"><b>Определения</b> cdt.h:66</div></div>
+<div class="ttc" id="astruct_dtmethod__t_html_ac835513fbc0677fcaa19598be547bf95"><div class="ttname"><a href="struct_dtmethod__t.html#ac835513fbc0677fcaa19598be547bf95">Dtmethod_t::type</a></div><div class="ttdeci">int type</div><div class="ttdef"><b>Определения</b> cdt.h:67</div></div>
+<div class="ttc" id="astruct_dtstat__t_html"><div class="ttname"><a href="struct_dtstat__t.html">Dtstat_t</a></div><div class="ttdef"><b>Определения</b> cdt.h:110</div></div>
+<div class="ttc" id="astruct_dtstat__t_html_a0253744732cd3d09038eaa16383b0eac"><div class="ttname"><a href="struct_dtstat__t.html#a0253744732cd3d09038eaa16383b0eac">Dtstat_t::dt_n</a></div><div class="ttdeci">size_t dt_n</div><div class="ttdef"><b>Определения</b> cdt.h:113</div></div>
+<div class="ttc" id="astruct_dtstat__t_html_a8a9d5cfd31a6fa1cab4c8baf16da03eb"><div class="ttname"><a href="struct_dtstat__t.html#a8a9d5cfd31a6fa1cab4c8baf16da03eb">Dtstat_t::dt_size</a></div><div class="ttdeci">int dt_size</div><div class="ttdef"><b>Определения</b> cdt.h:112</div></div>
+<div class="ttc" id="astruct_dtstat__t_html_ac57eaae93530dbfd779bdd9a8dcb1a7b"><div class="ttname"><a href="struct_dtstat__t.html#ac57eaae93530dbfd779bdd9a8dcb1a7b">Dtstat_t::dt_max</a></div><div class="ttdeci">size_t dt_max</div><div class="ttdef"><b>Определения</b> cdt.h:114</div></div>
+<div class="ttc" id="astruct_dtstat__t_html_acc92e8ade5aee3e8bcd89b9c0eaea058"><div class="ttname"><a href="struct_dtstat__t.html#acc92e8ade5aee3e8bcd89b9c0eaea058">Dtstat_t::dt_meth</a></div><div class="ttdeci">int dt_meth</div><div class="ttdef"><b>Определения</b> cdt.h:111</div></div>
+<div class="ttc" id="astruct_dtstat__t_html_ace746b08589a21d58b734048bd0c193b"><div class="ttname"><a href="struct_dtstat__t.html#ace746b08589a21d58b734048bd0c193b">Dtstat_t::dt_count</a></div><div class="ttdeci">size_t * dt_count</div><div class="ttdef"><b>Определения</b> cdt.h:115</div></div>
+<div class="ttc" id="astructdt__s___html"><div class="ttname"><a href="structdt__s__.html">dt_s_</a></div><div class="ttdef"><b>Определения</b> cdt.h:98</div></div>
+<div class="ttc" id="astructdt__s___html_a02122d7943da452b81883782c5957022"><div class="ttname"><a href="structdt__s__.html#a02122d7943da452b81883782c5957022">dt_s_::meth</a></div><div class="ttdeci">Dtmethod_t * meth</div><div class="ttdef"><b>Определения</b> cdt.h:102</div></div>
+<div class="ttc" id="astructdt__s___html_a1c3968d444ad77f8a6a22c10832a0263"><div class="ttname"><a href="structdt__s__.html#a1c3968d444ad77f8a6a22c10832a0263">dt_s_::walk</a></div><div class="ttdeci">Dt_t * walk</div><div class="ttdef"><b>Определения</b> cdt.h:105</div></div>
+<div class="ttc" id="astructdt__s___html_a2fd09092232229457d8c94e898a96d35"><div class="ttname"><a href="structdt__s__.html#a2fd09092232229457d8c94e898a96d35">dt_s_::searchf</a></div><div class="ttdeci">Dtsearch_f searchf</div><div class="ttdef"><b>Определения</b> cdt.h:99</div></div>
+<div class="ttc" id="astructdt__s___html_a36d42a101c68038d276e61c1a75cfd5a"><div class="ttname"><a href="structdt__s__.html#a36d42a101c68038d276e61c1a75cfd5a">dt_s_::data</a></div><div class="ttdeci">Dtdata_t data</div><div class="ttdoc">sharable data</div><div class="ttdef"><b>Определения</b> cdt.h:101</div></div>
+<div class="ttc" id="astructdt__s___html_a664f4b3b8ea8cde8b23ff0e617cda75f"><div class="ttname"><a href="structdt__s__.html#a664f4b3b8ea8cde8b23ff0e617cda75f">dt_s_::user</a></div><div class="ttdeci">void * user</div><div class="ttdef"><b>Определения</b> cdt.h:106</div></div>
+<div class="ttc" id="astructdt__s___html_aa0a8c498fd25675b05acdcfd7c78375b"><div class="ttname"><a href="structdt__s__.html#aa0a8c498fd25675b05acdcfd7c78375b">dt_s_::nview</a></div><div class="ttdeci">int nview</div><div class="ttdef"><b>Определения</b> cdt.h:103</div></div>
+<div class="ttc" id="astructdt__s___html_ac8734b94b0970d143142edb4dbfb04a2"><div class="ttname"><a href="structdt__s__.html#ac8734b94b0970d143142edb4dbfb04a2">dt_s_::disc</a></div><div class="ttdeci">Dtdisc_t * disc</div><div class="ttdef"><b>Определения</b> cdt.h:100</div></div>
+<div class="ttc" id="astructdt__s___html_af8e1741ddd533084ff2ba10bf86c5d10"><div class="ttname"><a href="structdt__s__.html#af8e1741ddd533084ff2ba10bf86c5d10">dt_s_::view</a></div><div class="ttdeci">Dt_t * view</div><div class="ttdef"><b>Определения</b> cdt.h:104</div></div>
+<div class="ttc" id="astructdtdisc__s___html"><div class="ttname"><a href="structdtdisc__s__.html">dtdisc_s_</a></div><div class="ttdef"><b>Определения</b> cdt.h:84</div></div>
+<div class="ttc" id="astructdtdisc__s___html_a04697f5205ea7b05b43938befe2939ff"><div class="ttname"><a href="structdtdisc__s__.html#a04697f5205ea7b05b43938befe2939ff">dtdisc_s_::freef</a></div><div class="ttdeci">Dtfree_f freef</div><div class="ttdef"><b>Определения</b> cdt.h:89</div></div>
+<div class="ttc" id="astructdtdisc__s___html_a41894c9a2eb002d137e7e7c7c2580c8e"><div class="ttname"><a href="structdtdisc__s__.html#a41894c9a2eb002d137e7e7c7c2580c8e">dtdisc_s_::key</a></div><div class="ttdeci">int key</div><div class="ttdef"><b>Определения</b> cdt.h:85</div></div>
+<div class="ttc" id="astructdtdisc__s___html_a45250930b71a8bfdc5d51d61357c34aa"><div class="ttname"><a href="structdtdisc__s__.html#a45250930b71a8bfdc5d51d61357c34aa">dtdisc_s_::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Определения</b> cdt.h:86</div></div>
+<div class="ttc" id="astructdtdisc__s___html_a858e3daef49a3a773ac8bdb46faa9db9"><div class="ttname"><a href="structdtdisc__s__.html#a858e3daef49a3a773ac8bdb46faa9db9">dtdisc_s_::link</a></div><div class="ttdeci">int link</div><div class="ttdef"><b>Определения</b> cdt.h:87</div></div>
+<div class="ttc" id="astructdtdisc__s___html_a88017b70b9e4ec7e15d050299a55a0ff"><div class="ttname"><a href="structdtdisc__s__.html#a88017b70b9e4ec7e15d050299a55a0ff">dtdisc_s_::comparf</a></div><div class="ttdeci">Dtcompar_f comparf</div><div class="ttdef"><b>Определения</b> cdt.h:90</div></div>
+<div class="ttc" id="astructdtdisc__s___html_aa28904b653a597d147fb8ad2f0369e2e"><div class="ttname"><a href="structdtdisc__s__.html#aa28904b653a597d147fb8ad2f0369e2e">dtdisc_s_::makef</a></div><div class="ttdeci">Dtmake_f makef</div><div class="ttdef"><b>Определения</b> cdt.h:88</div></div>
+<div class="ttc" id="astructdtlink__s___html"><div class="ttname"><a href="structdtlink__s__.html">dtlink_s_</a></div><div class="ttdef"><b>Определения</b> cdt.h:50</div></div>
+<div class="ttc" id="astructdtlink__s___html_a45fc2b57c4ac5d3c709f8dae01194902"><div class="ttname"><a href="structdtlink__s__.html#a45fc2b57c4ac5d3c709f8dae01194902">dtlink_s_::_left</a></div><div class="ttdeci">Dtlink_t * _left</div><div class="ttdef"><b>Определения</b> cdt.h:54</div></div>
+<div class="ttc" id="astructdtlink__s___html_a7b77145682f8894bfbe5556f641d961c"><div class="ttname"><a href="structdtlink__s__.html#a7b77145682f8894bfbe5556f641d961c">dtlink_s_::hl</a></div><div class="ttdeci">union dtlink_s_::@036137101272214376256077352133300273335167073160 hl</div></div>
+<div class="ttc" id="astructdtlink__s___html_a91787a7c279d549d5ddb61a08b91c5e0"><div class="ttname"><a href="structdtlink__s__.html#a91787a7c279d549d5ddb61a08b91c5e0">dtlink_s_::_hash</a></div><div class="ttdeci">unsigned int _hash</div><div class="ttdef"><b>Определения</b> cdt.h:53</div></div>
+<div class="ttc" id="astructdtlink__s___html_acf6084bccaf1f23aecfdafa71712b544"><div class="ttname"><a href="structdtlink__s__.html#acf6084bccaf1f23aecfdafa71712b544">dtlink_s_::right</a></div><div class="ttdeci">Dtlink_t * right</div><div class="ttdef"><b>Определения</b> cdt.h:51</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="cdt_8h.html">cdt.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

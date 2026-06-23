@@ -1,0 +1,122 @@
+\doxysection{Пространство имен integral\+Muavr\+Laplace}
+\hypertarget{namespaceintegral_muavr_laplace}{}\label{namespaceintegral_muavr_laplace}\index{integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_affa3fae965dbf621468a8b0edef3b929}{phi}} (x)
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}{simpson}} (a, b, n=1000)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} = int(input("{}Введите n:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}{m1}} = int(input("{}Введите m1:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}{m2}} = int(input("{}Введите m2:\+ "{}))
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}} = float(input("{}Введите p:\+ "{}))
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}{q}} = 1 -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}} = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}{q}}
+\item 
+bool \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a24bcd02be741443f234a87a450493033}{method\+\_\+applicable}} = True
+\item 
+tuple \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}{x1}} = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}{m1}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})
+\item 
+tuple \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}{x2}} = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}{m2}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})
+\item 
+\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a53d8d86583ae0d082011a1e0742a3785}{P\+\_\+ml}} = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}{simpson}}(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}{x1}}, \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}{x2}})
+\item 
+int \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a0ba52a625772f984b5ab564b779860ac}{P\+\_\+bern}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{namespaceintegral_muavr_laplace_doc-func-members}
+\Hypertarget{namespaceintegral_muavr_laplace_doc-func-members}
+\doxysubsection{Функции}
+\Hypertarget{namespaceintegral_muavr_laplace_affa3fae965dbf621468a8b0edef3b929}\index{integralMuavrLaplace@{integralMuavrLaplace}!phi@{phi}}
+\index{phi@{phi}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{phi()}{phi()}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_affa3fae965dbf621468a8b0edef3b929} 
+phi (\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+\Hypertarget{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}\index{integralMuavrLaplace@{integralMuavrLaplace}!simpson@{simpson}}
+\index{simpson@{simpson}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{simpson()}{simpson()}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c} 
+simpson (\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{n}{ = {\ttfamily 1000}}\end{DoxyParamCaption})}
+
+
+
+\label{namespaceintegral_muavr_laplace_doc-var-members}
+\Hypertarget{namespaceintegral_muavr_laplace_doc-var-members}
+\doxysubsection{Переменные}
+\Hypertarget{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}\index{integralMuavrLaplace@{integralMuavrLaplace}!m1@{m1}}
+\index{m1@{m1}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{m1}{m1}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61} 
+integral\+Muavr\+Laplace.\+m1 = int(input("{}Введите m1:\+ "{}))}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}\index{integralMuavrLaplace@{integralMuavrLaplace}!m2@{m2}}
+\index{m2@{m2}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{m2}{m2}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06} 
+integral\+Muavr\+Laplace.\+m2 = int(input("{}Введите m2:\+ "{}))}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a24bcd02be741443f234a87a450493033}\index{integralMuavrLaplace@{integralMuavrLaplace}!method\_applicable@{method\_applicable}}
+\index{method\_applicable@{method\_applicable}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{method\_applicable}{method\_applicable}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a24bcd02be741443f234a87a450493033} 
+bool method\+\_\+applicable = True}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}\index{integralMuavrLaplace@{integralMuavrLaplace}!n@{n}}
+\index{n@{n}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba} 
+integral\+Muavr\+Laplace.\+n = int(input("{}Введите n:\+ "{}))}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}\index{integralMuavrLaplace@{integralMuavrLaplace}!npq@{npq}}
+\index{npq@{npq}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{npq}{npq}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed} 
+int integral\+Muavr\+Laplace.\+npq = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}{q}}}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}\index{integralMuavrLaplace@{integralMuavrLaplace}!p@{p}}
+\index{p@{p}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee} 
+integral\+Muavr\+Laplace.\+p = float(input("{}Введите p:\+ "{}))}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a0ba52a625772f984b5ab564b779860ac}\index{integralMuavrLaplace@{integralMuavrLaplace}!P\_bern@{P\_bern}}
+\index{P\_bern@{P\_bern}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{P\_bern}{P\_bern}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a0ba52a625772f984b5ab564b779860ac} 
+int integral\+Muavr\+Laplace.\+P\+\_\+bern = 0}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a53d8d86583ae0d082011a1e0742a3785}\index{integralMuavrLaplace@{integralMuavrLaplace}!P\_ml@{P\_ml}}
+\index{P\_ml@{P\_ml}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{P\_ml}{P\_ml}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a53d8d86583ae0d082011a1e0742a3785} 
+integral\+Muavr\+Laplace.\+P\+\_\+ml = \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_ac35356062d970d9d68b325f46a349c9c}{simpson}}(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}{x1}}, \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}{x2}})}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79}\index{integralMuavrLaplace@{integralMuavrLaplace}!q@{q}}
+\index{q@{q}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a573dc70ebafa69b50683aad3d5756d79} 
+int integral\+Muavr\+Laplace.\+q = 1 -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}}
+
+\Hypertarget{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a}\index{integralMuavrLaplace@{integralMuavrLaplace}!x1@{x1}}
+\index{x1@{x1}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{x1}{x1}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_a07662849d3950dc98511edccf266344a} 
+tuple integral\+Muavr\+Laplace.\+x1 = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a32209e32ffcdc8fcd5a3aea97435fc61}{m1}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})}
+
+\Hypertarget{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03}\index{integralMuavrLaplace@{integralMuavrLaplace}!x2@{x2}}
+\index{x2@{x2}!integralMuavrLaplace@{integralMuavrLaplace}}
+\doxysubsubsection{\texorpdfstring{x2}{x2}}
+{\footnotesize\ttfamily \label{namespaceintegral_muavr_laplace_abf98f0c08475663f18c576a12484be03} 
+tuple integral\+Muavr\+Laplace.\+x2 = (\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a264586e387a08a864a085a53a9545e06}{m2}} -\/ \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a17688931b0b6565f8bc41f94accbafba}{n}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a06597c57941eb44e0a791e189273a9ee}{p}}) /\+ math.\+sqrt(\doxymbox{\hyperlink{namespaceintegral_muavr_laplace_a100e1c6d68cf40e1741a4c2de5dd8fed}{npq}})}
+

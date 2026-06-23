@@ -1,0 +1,1021 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/gvcjob.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gvcjob_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл gvcjob.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__gvc__api.html">Graphviz context library (GVC) API</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="gvcommon_8h_source.html">gvcommon.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="color_8h_source.html">color.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+</div>
+<p><a href="gvcjob_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:gvrender_5Ffeatures_5Ft" id="r_gvrender_5Ffeatures_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvrender__features__t.html">gvrender_features_t</a></td></tr>
+<tr class="memitem:gvdevice_5Ffeatures_5Ft" id="r_gvdevice_5Ffeatures_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvdevice__features__t.html">gvdevice_features_t</a></td></tr>
+<tr class="memitem:gvplugin_5Factive_5Fdevice_5Fs" id="r_gvplugin_5Factive_5Fdevice_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvplugin__active__device__s.html">gvplugin_active_device_s</a></td></tr>
+<tr class="memitem:gvplugin_5Factive_5Frender_5Fs" id="r_gvplugin_5Factive_5Frender_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvplugin__active__render__s.html">gvplugin_active_render_s</a></td></tr>
+<tr class="memitem:gvplugin_5Factive_5Floadimage_5Ft" id="r_gvplugin_5Factive_5Floadimage_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvplugin__active__loadimage__t.html">gvplugin_active_loadimage_t</a></td></tr>
+<tr class="memitem:gvdevice_5Fcallbacks_5Fs" id="r_gvdevice_5Fcallbacks_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvdevice__callbacks__s.html">gvdevice_callbacks_s</a></td></tr>
+<tr class="memitem:gvevent_5Fkey_5Fbinding_5Fs" id="r_gvevent_5Fkey_5Fbinding_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structgvevent__key__binding__s.html">gvevent_key_binding_s</a></td></tr>
+<tr class="memitem:obj_5Fstate_5Fs" id="r_obj_5Fstate_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structobj__state__s.html">obj_state_s</a></td></tr>
+<tr class="memitem:GVJ_5Fs" id="r_GVJ_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_g_v_j__s.html">GVJ_s</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a4163b4a4e9d8f2949741962dca6c5944" id="r_a4163b4a4e9d8f2949741962dca6c5944"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4163b4a4e9d8f2949741962dca6c5944">ARRAY_SIZE</a>(A)</td></tr>
+<tr class="memitem:ad03a35ae3e8eb2d22ba05e3ab13469c2" id="r_ad03a35ae3e8eb2d22ba05e3ab13469c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad03a35ae3e8eb2d22ba05e3ab13469c2">PENWIDTH_NORMAL</a>&#160;&#160;&#160;1.</td></tr>
+<tr class="memitem:aa9d4b93a7285736626367c79e6a7e65b" id="r_aa9d4b93a7285736626367c79e6a7e65b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa9d4b93a7285736626367c79e6a7e65b">PENWIDTH_BOLD</a>&#160;&#160;&#160;2.</td></tr>
+<tr class="memitem:a33cff4ced6fee87fe933a71a93d1ddd8" id="r_a33cff4ced6fee87fe933a71a93d1ddd8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a33cff4ced6fee87fe933a71a93d1ddd8">EMIT_SORTED</a>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
+<tr class="memitem:ae4042465ba24c90c087a0e3071ea8939" id="r_ae4042465ba24c90c087a0e3071ea8939"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae4042465ba24c90c087a0e3071ea8939">EMIT_COLORS</a>&#160;&#160;&#160;(1&lt;&lt;1)</td></tr>
+<tr class="memitem:a01da62f83c93432d776dfb82ee06cc7f" id="r_a01da62f83c93432d776dfb82ee06cc7f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a01da62f83c93432d776dfb82ee06cc7f">EMIT_CLUSTERS_LAST</a>&#160;&#160;&#160;(1&lt;&lt;2)</td></tr>
+<tr class="memitem:a995caee67c9846d771eefc6132318bbc" id="r_a995caee67c9846d771eefc6132318bbc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a995caee67c9846d771eefc6132318bbc">EMIT_PREORDER</a>&#160;&#160;&#160;(1&lt;&lt;3)</td></tr>
+<tr class="memitem:a409796dc1ac7058fa2a40d578a7297cc" id="r_a409796dc1ac7058fa2a40d578a7297cc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a409796dc1ac7058fa2a40d578a7297cc">EMIT_EDGE_SORTED</a>&#160;&#160;&#160;(1&lt;&lt;4)</td></tr>
+<tr class="memitem:a67eb586db6b3ae361191f4fa2f0d6517" id="r_a67eb586db6b3ae361191f4fa2f0d6517"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a67eb586db6b3ae361191f4fa2f0d6517">GVDEVICE_DOES_PAGES</a>&#160;&#160;&#160;(1&lt;&lt;5)</td></tr>
+<tr class="memitem:a6a8bc9b005d1a7185df952fa8c618c8c" id="r_a6a8bc9b005d1a7185df952fa8c618c8c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6a8bc9b005d1a7185df952fa8c618c8c">GVDEVICE_DOES_LAYERS</a>&#160;&#160;&#160;(1&lt;&lt;6)</td></tr>
+<tr class="memitem:aa811a27986a93bb5f01e98426b9331e5" id="r_aa811a27986a93bb5f01e98426b9331e5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa811a27986a93bb5f01e98426b9331e5">GVDEVICE_EVENTS</a>&#160;&#160;&#160;(1&lt;&lt;7)</td></tr>
+<tr class="memitem:a6ee2b7613e1ad8bae8dd3a884ec58c06" id="r_a6ee2b7613e1ad8bae8dd3a884ec58c06"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6ee2b7613e1ad8bae8dd3a884ec58c06">GVDEVICE_DOES_TRUECOLOR</a>&#160;&#160;&#160;(1&lt;&lt;8)</td></tr>
+<tr class="memitem:a7a9454ee5e1bc0aa49d8c39c468b66c4" id="r_a7a9454ee5e1bc0aa49d8c39c468b66c4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7a9454ee5e1bc0aa49d8c39c468b66c4">GVDEVICE_BINARY_FORMAT</a>&#160;&#160;&#160;(1&lt;&lt;9)</td></tr>
+<tr class="memitem:a2c946332a8e7484bda55e93d62e7312d" id="r_a2c946332a8e7484bda55e93d62e7312d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2c946332a8e7484bda55e93d62e7312d">GVDEVICE_COMPRESSED_FORMAT</a>&#160;&#160;&#160;(1&lt;&lt;10)</td></tr>
+<tr class="memitem:a106f6008cfc71d48b8b67cd47c530e6d" id="r_a106f6008cfc71d48b8b67cd47c530e6d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a106f6008cfc71d48b8b67cd47c530e6d">GVDEVICE_NO_WRITER</a>&#160;&#160;&#160;(1&lt;&lt;11)</td></tr>
+<tr class="memitem:addcf4609271d0fed66432102fcc49e60" id="r_addcf4609271d0fed66432102fcc49e60"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#addcf4609271d0fed66432102fcc49e60">GVRENDER_Y_GOES_DOWN</a>&#160;&#160;&#160;(1&lt;&lt;12)</td></tr>
+<tr class="memitem:ad6673704b17c99db9588bfe4bea1ceae" id="r_ad6673704b17c99db9588bfe4bea1ceae"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad6673704b17c99db9588bfe4bea1ceae">GVRENDER_DOES_TRANSFORM</a>&#160;&#160;&#160;(1&lt;&lt;13)</td></tr>
+<tr class="memitem:a42800cf2328a05b351d97de328f71835" id="r_a42800cf2328a05b351d97de328f71835"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a42800cf2328a05b351d97de328f71835">GVRENDER_DOES_LABELS</a>&#160;&#160;&#160;(1&lt;&lt;15)</td></tr>
+<tr class="memitem:aaa937a02c6c7be59cdab7b6f82da6586" id="r_aaa937a02c6c7be59cdab7b6f82da6586"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaa937a02c6c7be59cdab7b6f82da6586">GVRENDER_DOES_MAPS</a>&#160;&#160;&#160;(1&lt;&lt;16)</td></tr>
+<tr class="memitem:af2ff5cf11d0ecef08c1e384a04f959e1" id="r_af2ff5cf11d0ecef08c1e384a04f959e1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af2ff5cf11d0ecef08c1e384a04f959e1">GVRENDER_DOES_MAP_RECTANGLE</a>&#160;&#160;&#160;(1&lt;&lt;17)</td></tr>
+<tr class="memitem:af6d511694b77a3a5571a8dc0126fcdb9" id="r_af6d511694b77a3a5571a8dc0126fcdb9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af6d511694b77a3a5571a8dc0126fcdb9">GVRENDER_DOES_MAP_CIRCLE</a>&#160;&#160;&#160;(1&lt;&lt;18)</td></tr>
+<tr class="memitem:af0bcd860ee725637b5103ffe3a30ea62" id="r_af0bcd860ee725637b5103ffe3a30ea62"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af0bcd860ee725637b5103ffe3a30ea62">GVRENDER_DOES_MAP_POLYGON</a>&#160;&#160;&#160;(1&lt;&lt;19)</td></tr>
+<tr class="memitem:a1a555b3636bc63f4552b4a16be7f89ee" id="r_a1a555b3636bc63f4552b4a16be7f89ee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1a555b3636bc63f4552b4a16be7f89ee">GVRENDER_DOES_MAP_ELLIPSE</a>&#160;&#160;&#160;(1&lt;&lt;20)</td></tr>
+<tr class="memitem:acf41c3ae6a6d67d1ad1e1f5c1ae516f0" id="r_acf41c3ae6a6d67d1ad1e1f5c1ae516f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acf41c3ae6a6d67d1ad1e1f5c1ae516f0">GVRENDER_DOES_MAP_BSPLINE</a>&#160;&#160;&#160;(1&lt;&lt;21)</td></tr>
+<tr class="memitem:a3abe26a1a0e7d49d56453a51959594dd" id="r_a3abe26a1a0e7d49d56453a51959594dd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3abe26a1a0e7d49d56453a51959594dd">GVRENDER_DOES_TOOLTIPS</a>&#160;&#160;&#160;(1&lt;&lt;22)</td></tr>
+<tr class="memitem:ab011b585d098198162a67fb32cae2cd0" id="r_ab011b585d098198162a67fb32cae2cd0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab011b585d098198162a67fb32cae2cd0">GVRENDER_DOES_TARGETS</a>&#160;&#160;&#160;(1&lt;&lt;23)</td></tr>
+<tr class="memitem:a3d70997394b899458fd789d902b1764e" id="r_a3d70997394b899458fd789d902b1764e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3d70997394b899458fd789d902b1764e">GVRENDER_DOES_Z</a>&#160;&#160;&#160;(1&lt;&lt;24)</td></tr>
+<tr class="memitem:a4a3678c81c256d0d298d18a3e72cbcab" id="r_a4a3678c81c256d0d298d18a3e72cbcab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4a3678c81c256d0d298d18a3e72cbcab">GVRENDER_NO_WHITE_BG</a>&#160;&#160;&#160;(1&lt;&lt;25)</td></tr>
+<tr class="memitem:a862bdd7c9410e889ce13a7728af40bbb" id="r_a862bdd7c9410e889ce13a7728af40bbb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a862bdd7c9410e889ce13a7728af40bbb">LAYOUT_NOT_REQUIRED</a>&#160;&#160;&#160;(1&lt;&lt;26)</td></tr>
+<tr class="memitem:a430d4d79ac8eba41cf38a7f11265dee4" id="r_a430d4d79ac8eba41cf38a7f11265dee4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a430d4d79ac8eba41cf38a7f11265dee4">OUTPUT_NOT_REQUIRED</a>&#160;&#160;&#160;(1&lt;&lt;27)</td></tr>
+<tr class="memitem:a5370b8bc484c0586d8537944b1f3a8b3" id="r_a5370b8bc484c0586d8537944b1f3a8b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5370b8bc484c0586d8537944b1f3a8b3">LAYOUT_USES_RANKDIR</a>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:acc098e86302e99b8dd0a76e841b01e87" id="r_acc098e86302e99b8dd0a76e841b01e87"><td class="memItemLeft">typedef struct <a class="el" href="structgvdevice__engine__s.html">gvdevice_engine_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc098e86302e99b8dd0a76e841b01e87">gvdevice_engine_t</a></td></tr>
+<tr class="memitem:aa97e4762258d383100569d7edf4f3199" id="r_aa97e4762258d383100569d7edf4f3199"><td class="memItemLeft">typedef struct gvformatter_engine_s&#160;</td><td class="memItemRight"><a class="el" href="#aa97e4762258d383100569d7edf4f3199">gvformatter_engine_t</a></td></tr>
+<tr class="memitem:aa1b4a9a81e4c8d4e96a557de936fcb44" id="r_aa1b4a9a81e4c8d4e96a557de936fcb44"><td class="memItemLeft">typedef struct <a class="el" href="structgvrender__engine__s.html">gvrender_engine_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa1b4a9a81e4c8d4e96a557de936fcb44">gvrender_engine_t</a></td></tr>
+<tr class="memitem:a6239c348363fd19ac844b85bbcaee9ec" id="r_a6239c348363fd19ac844b85bbcaee9ec"><td class="memItemLeft">typedef struct <a class="el" href="structgvlayout__engine__s.html">gvlayout_engine_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6239c348363fd19ac844b85bbcaee9ec">gvlayout_engine_t</a></td></tr>
+<tr class="memitem:af590c2b964f21ea238a2f2ab665215a8" id="r_af590c2b964f21ea238a2f2ab665215a8"><td class="memItemLeft">typedef struct <a class="el" href="structgvtextlayout__engine__s.html">gvtextlayout_engine_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#af590c2b964f21ea238a2f2ab665215a8">gvtextlayout_engine_t</a></td></tr>
+<tr class="memitem:a73586fb7b758379b308c315388f92a09" id="r_a73586fb7b758379b308c315388f92a09"><td class="memItemLeft">typedef struct <a class="el" href="structgvloadimage__engine__s.html">gvloadimage_engine_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a73586fb7b758379b308c315388f92a09">gvloadimage_engine_t</a></td></tr>
+<tr class="memitem:a6bd180a852d179da562b0c365c59b631" id="r_a6bd180a852d179da562b0c365c59b631"><td class="memItemLeft">typedef struct <a class="el" href="structgvplugin__active__device__s.html">gvplugin_active_device_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6bd180a852d179da562b0c365c59b631">gvplugin_active_device_t</a></td></tr>
+<tr class="memitem:a8788f43ffca88d5e43ed142d8e2d9fa1" id="r_a8788f43ffca88d5e43ed142d8e2d9fa1"><td class="memItemLeft">typedef struct <a class="el" href="structgvplugin__active__render__s.html">gvplugin_active_render_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8788f43ffca88d5e43ed142d8e2d9fa1">gvplugin_active_render_t</a></td></tr>
+<tr class="memitem:a0c5ed8bb62cb3ee06cdf5c42eb70e169" id="r_a0c5ed8bb62cb3ee06cdf5c42eb70e169"><td class="memItemLeft">typedef struct gvplugin_active_loadimage_t&#160;</td><td class="memItemRight"><a class="el" href="#a0c5ed8bb62cb3ee06cdf5c42eb70e169">gvplugin_active_loadimage_t</a></td></tr>
+<tr class="memitem:a0c978aacd50e6c6bb3a16577fc53c475" id="r_a0c978aacd50e6c6bb3a16577fc53c475"><td class="memItemLeft">typedef struct <a class="el" href="structgvdevice__callbacks__s.html">gvdevice_callbacks_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c978aacd50e6c6bb3a16577fc53c475">gvdevice_callbacks_t</a></td></tr>
+<tr class="memitem:a4f6a6d73e7cd18369649c5cce7f65278" id="r_a4f6a6d73e7cd18369649c5cce7f65278"><td class="memItemLeft">typedef int(*&#160;</td><td class="memItemRight"><a class="el" href="#a4f6a6d73e7cd18369649c5cce7f65278">gvevent_key_callback_t</a>) (<a class="el" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job)</td></tr>
+<tr class="memitem:a6de1c57369bc42ccc482b87d6174bc20" id="r_a6de1c57369bc42ccc482b87d6174bc20"><td class="memItemLeft">typedef struct <a class="el" href="structgvevent__key__binding__s.html">gvevent_key_binding_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6de1c57369bc42ccc482b87d6174bc20">gvevent_key_binding_t</a></td></tr>
+<tr class="memitem:a02731e816998f46b1511d36eff0260ec" id="r_a02731e816998f46b1511d36eff0260ec"><td class="memItemLeft">typedef struct <a class="el" href="structobj__state__s.html">obj_state_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a02731e816998f46b1511d36eff0260ec">obj_state_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a056abdc3e65632a0666767d8395bdc44" id="r_a056abdc3e65632a0666767d8395bdc44"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a056abdc3e65632a0666767d8395bdc44">pen_type</a> { <a class="el" href="#a056abdc3e65632a0666767d8395bdc44a1ea6f58bfade3f78fe217ef328fce04d">PEN_NONE</a>
+, <a class="el" href="#a056abdc3e65632a0666767d8395bdc44ab1f05ac68389e236654d79692b26e7ff">PEN_DASHED</a>
+, <a class="el" href="#a056abdc3e65632a0666767d8395bdc44aa7d50db1156eddf79a8c8c316d3790b1">PEN_DOTTED</a>
+, <a class="el" href="#a056abdc3e65632a0666767d8395bdc44a9dd963620972293d3b7821d923ce51d9">PEN_SOLID</a>
+ }</td></tr>
+<tr class="memitem:a8b3c1e8eaca9ba6bf60627aee8bb9e72" id="r_a8b3c1e8eaca9ba6bf60627aee8bb9e72"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72">fill_type</a> { <a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72a4d3aeee5877e819284efa1e457b22f34">FILL_NONE</a>
+, <a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72a9d6d4108c1f3913f3a4b6a09a9962809">FILL_SOLID</a>
+, <a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72a4a6e86dd59b94007d997b9cb3c5e2e33">FILL_LINEAR</a>
+, <a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72a333224a0f8e27c7b44dd3786468a53d6">FILL_RADIAL</a>
+ }</td></tr>
+<tr class="memitem:a053425e9fef4e52c94d07c3ea352a591" id="r_a053425e9fef4e52c94d07c3ea352a591"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a053425e9fef4e52c94d07c3ea352a591">font_type</a> { <a class="el" href="#a053425e9fef4e52c94d07c3ea352a591a5162dac0177f2dd4e0a8435e5184e359">FONT_REGULAR</a>
+, <a class="el" href="#a053425e9fef4e52c94d07c3ea352a591a7a078f2b20d42d7f352d35396217e1ba">FONT_BOLD</a>
+, <a class="el" href="#a053425e9fef4e52c94d07c3ea352a591aff11f5dd59d891ef3b880dbccca4ea2a">FONT_ITALIC</a>
+ }</td></tr>
+<tr class="memitem:a27a2d3d0fcd201122f8c13d604f91e38" id="r_a27a2d3d0fcd201122f8c13d604f91e38"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a27a2d3d0fcd201122f8c13d604f91e38">label_type</a> { <a class="el" href="#a27a2d3d0fcd201122f8c13d604f91e38ac99e5e928ef0f8ce232b1758b68ba244">LABEL_PLAIN</a>
+, <a class="el" href="#a27a2d3d0fcd201122f8c13d604f91e38a666836f69dad5233e18b0ee914d1cd7d">LABEL_HTML</a>
+ }</td></tr>
+<tr class="memitem:a5ce3b3a21716351feb74e0155b6499bb" id="r_a5ce3b3a21716351feb74e0155b6499bb"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a5ce3b3a21716351feb74e0155b6499bb">map_shape_t</a> { <a class="el" href="#a5ce3b3a21716351feb74e0155b6499bba93750fa7b7e32fdde29435cbc49c0990">MAP_RECTANGLE</a>
+, <a class="el" href="#a5ce3b3a21716351feb74e0155b6499bba52bb0ede7a27b16527d915d512786bf8">MAP_CIRCLE</a>
+, <a class="el" href="#a5ce3b3a21716351feb74e0155b6499bba8b0f19b8c292d1d2e9772feb41cc4496">MAP_POLYGON</a>
+ }</td></tr>
+<tr class="memitem:ac87c026b772bad1b7bb6edea6200fc92" id="r_ac87c026b772bad1b7bb6edea6200fc92"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92">obj_type</a> { <a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670">ROOTGRAPH_OBJTYPE</a>
+, <a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92a32600cff05c8f94a126d59b08bbac81c">CLUSTER_OBJTYPE</a>
+, <a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92a97f20f6ae4bbbf503430fb49f051a61e">NODE_OBJTYPE</a>
+, <a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92a4b2fac9faf34f5eb8777db67b361e35f">EDGE_OBJTYPE</a>
+ }</td></tr>
+<tr class="memitem:a9d67f57cb353edb06b582591b3f1eaf0" id="r_a9d67f57cb353edb06b582591b3f1eaf0"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0">emit_state_t</a> { <br />
+&#160;&#160;<a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a68607c437efe73900c9263cd4f03b9a2">EMIT_GDRAW</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a0e2e1037a7ea49ba93e1660b916905ab">EMIT_CDRAW</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb">EMIT_TDRAW</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a3e59bbb4aff494333b724015f3391986">EMIT_HDRAW</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0ac9c989cb015d82004843b3cd9ccabce7">EMIT_GLABEL</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0aef804da377cf9ba079e759674b76fdf8">EMIT_CLABEL</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995">EMIT_TLABEL</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a449206c43bd305ad3caee2c54c04a892">EMIT_HLABEL</a>
+, <br />
+&#160;&#160;<a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0a1d814d818b407b71c600c5c59cbf43ae">EMIT_NDRAW</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0ae215588aa83a61551880c7783ff2eb4c">EMIT_EDRAW</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd">EMIT_NLABEL</a>
+, <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0accb8094c46739f15f6a36a30392bdeba">EMIT_ELABEL</a>
+<br />
+ }</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="a4163b4a4e9d8f2949741962dca6c5944" name="a4163b4a4e9d8f2949741962dca6c5944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4163b4a4e9d8f2949741962dca6c5944">&#9670;&#160;</a></span>ARRAY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARRAY_SIZE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>A</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(A)/<span class="keyword">sizeof</span>(A[0]))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01da62f83c93432d776dfb82ee06cc7f" name="a01da62f83c93432d776dfb82ee06cc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01da62f83c93432d776dfb82ee06cc7f">&#9670;&#160;</a></span>EMIT_CLUSTERS_LAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMIT_CLUSTERS_LAST&#160;&#160;&#160;(1&lt;&lt;2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4042465ba24c90c087a0e3071ea8939" name="ae4042465ba24c90c087a0e3071ea8939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4042465ba24c90c087a0e3071ea8939">&#9670;&#160;</a></span>EMIT_COLORS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMIT_COLORS&#160;&#160;&#160;(1&lt;&lt;1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a409796dc1ac7058fa2a40d578a7297cc" name="a409796dc1ac7058fa2a40d578a7297cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409796dc1ac7058fa2a40d578a7297cc">&#9670;&#160;</a></span>EMIT_EDGE_SORTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMIT_EDGE_SORTED&#160;&#160;&#160;(1&lt;&lt;4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a995caee67c9846d771eefc6132318bbc" name="a995caee67c9846d771eefc6132318bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a995caee67c9846d771eefc6132318bbc">&#9670;&#160;</a></span>EMIT_PREORDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMIT_PREORDER&#160;&#160;&#160;(1&lt;&lt;3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33cff4ced6fee87fe933a71a93d1ddd8" name="a33cff4ced6fee87fe933a71a93d1ddd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33cff4ced6fee87fe933a71a93d1ddd8">&#9670;&#160;</a></span>EMIT_SORTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EMIT_SORTED&#160;&#160;&#160;(1&lt;&lt;0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a9454ee5e1bc0aa49d8c39c468b66c4" name="a7a9454ee5e1bc0aa49d8c39c468b66c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9454ee5e1bc0aa49d8c39c468b66c4">&#9670;&#160;</a></span>GVDEVICE_BINARY_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_BINARY_FORMAT&#160;&#160;&#160;(1&lt;&lt;9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c946332a8e7484bda55e93d62e7312d" name="a2c946332a8e7484bda55e93d62e7312d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c946332a8e7484bda55e93d62e7312d">&#9670;&#160;</a></span>GVDEVICE_COMPRESSED_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_COMPRESSED_FORMAT&#160;&#160;&#160;(1&lt;&lt;10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a8bc9b005d1a7185df952fa8c618c8c" name="a6a8bc9b005d1a7185df952fa8c618c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8bc9b005d1a7185df952fa8c618c8c">&#9670;&#160;</a></span>GVDEVICE_DOES_LAYERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_DOES_LAYERS&#160;&#160;&#160;(1&lt;&lt;6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67eb586db6b3ae361191f4fa2f0d6517" name="a67eb586db6b3ae361191f4fa2f0d6517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67eb586db6b3ae361191f4fa2f0d6517">&#9670;&#160;</a></span>GVDEVICE_DOES_PAGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_DOES_PAGES&#160;&#160;&#160;(1&lt;&lt;5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ee2b7613e1ad8bae8dd3a884ec58c06" name="a6ee2b7613e1ad8bae8dd3a884ec58c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee2b7613e1ad8bae8dd3a884ec58c06">&#9670;&#160;</a></span>GVDEVICE_DOES_TRUECOLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_DOES_TRUECOLOR&#160;&#160;&#160;(1&lt;&lt;8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa811a27986a93bb5f01e98426b9331e5" name="aa811a27986a93bb5f01e98426b9331e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa811a27986a93bb5f01e98426b9331e5">&#9670;&#160;</a></span>GVDEVICE_EVENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_EVENTS&#160;&#160;&#160;(1&lt;&lt;7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a106f6008cfc71d48b8b67cd47c530e6d" name="a106f6008cfc71d48b8b67cd47c530e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106f6008cfc71d48b8b67cd47c530e6d">&#9670;&#160;</a></span>GVDEVICE_NO_WRITER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVDEVICE_NO_WRITER&#160;&#160;&#160;(1&lt;&lt;11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42800cf2328a05b351d97de328f71835" name="a42800cf2328a05b351d97de328f71835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42800cf2328a05b351d97de328f71835">&#9670;&#160;</a></span>GVRENDER_DOES_LABELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_LABELS&#160;&#160;&#160;(1&lt;&lt;15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf41c3ae6a6d67d1ad1e1f5c1ae516f0" name="acf41c3ae6a6d67d1ad1e1f5c1ae516f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf41c3ae6a6d67d1ad1e1f5c1ae516f0">&#9670;&#160;</a></span>GVRENDER_DOES_MAP_BSPLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAP_BSPLINE&#160;&#160;&#160;(1&lt;&lt;21)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6d511694b77a3a5571a8dc0126fcdb9" name="af6d511694b77a3a5571a8dc0126fcdb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d511694b77a3a5571a8dc0126fcdb9">&#9670;&#160;</a></span>GVRENDER_DOES_MAP_CIRCLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAP_CIRCLE&#160;&#160;&#160;(1&lt;&lt;18)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a555b3636bc63f4552b4a16be7f89ee" name="a1a555b3636bc63f4552b4a16be7f89ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a555b3636bc63f4552b4a16be7f89ee">&#9670;&#160;</a></span>GVRENDER_DOES_MAP_ELLIPSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAP_ELLIPSE&#160;&#160;&#160;(1&lt;&lt;20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0bcd860ee725637b5103ffe3a30ea62" name="af0bcd860ee725637b5103ffe3a30ea62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bcd860ee725637b5103ffe3a30ea62">&#9670;&#160;</a></span>GVRENDER_DOES_MAP_POLYGON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAP_POLYGON&#160;&#160;&#160;(1&lt;&lt;19)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2ff5cf11d0ecef08c1e384a04f959e1" name="af2ff5cf11d0ecef08c1e384a04f959e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ff5cf11d0ecef08c1e384a04f959e1">&#9670;&#160;</a></span>GVRENDER_DOES_MAP_RECTANGLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAP_RECTANGLE&#160;&#160;&#160;(1&lt;&lt;17)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa937a02c6c7be59cdab7b6f82da6586" name="aaa937a02c6c7be59cdab7b6f82da6586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa937a02c6c7be59cdab7b6f82da6586">&#9670;&#160;</a></span>GVRENDER_DOES_MAPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_MAPS&#160;&#160;&#160;(1&lt;&lt;16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab011b585d098198162a67fb32cae2cd0" name="ab011b585d098198162a67fb32cae2cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab011b585d098198162a67fb32cae2cd0">&#9670;&#160;</a></span>GVRENDER_DOES_TARGETS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_TARGETS&#160;&#160;&#160;(1&lt;&lt;23)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3abe26a1a0e7d49d56453a51959594dd" name="a3abe26a1a0e7d49d56453a51959594dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abe26a1a0e7d49d56453a51959594dd">&#9670;&#160;</a></span>GVRENDER_DOES_TOOLTIPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_TOOLTIPS&#160;&#160;&#160;(1&lt;&lt;22)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6673704b17c99db9588bfe4bea1ceae" name="ad6673704b17c99db9588bfe4bea1ceae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6673704b17c99db9588bfe4bea1ceae">&#9670;&#160;</a></span>GVRENDER_DOES_TRANSFORM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_TRANSFORM&#160;&#160;&#160;(1&lt;&lt;13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d70997394b899458fd789d902b1764e" name="a3d70997394b899458fd789d902b1764e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d70997394b899458fd789d902b1764e">&#9670;&#160;</a></span>GVRENDER_DOES_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_DOES_Z&#160;&#160;&#160;(1&lt;&lt;24)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a3678c81c256d0d298d18a3e72cbcab" name="a4a3678c81c256d0d298d18a3e72cbcab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3678c81c256d0d298d18a3e72cbcab">&#9670;&#160;</a></span>GVRENDER_NO_WHITE_BG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_NO_WHITE_BG&#160;&#160;&#160;(1&lt;&lt;25)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addcf4609271d0fed66432102fcc49e60" name="addcf4609271d0fed66432102fcc49e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcf4609271d0fed66432102fcc49e60">&#9670;&#160;</a></span>GVRENDER_Y_GOES_DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GVRENDER_Y_GOES_DOWN&#160;&#160;&#160;(1&lt;&lt;12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a862bdd7c9410e889ce13a7728af40bbb" name="a862bdd7c9410e889ce13a7728af40bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862bdd7c9410e889ce13a7728af40bbb">&#9670;&#160;</a></span>LAYOUT_NOT_REQUIRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LAYOUT_NOT_REQUIRED&#160;&#160;&#160;(1&lt;&lt;26)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5370b8bc484c0586d8537944b1f3a8b3" name="a5370b8bc484c0586d8537944b1f3a8b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5370b8bc484c0586d8537944b1f3a8b3">&#9670;&#160;</a></span>LAYOUT_USES_RANKDIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LAYOUT_USES_RANKDIR&#160;&#160;&#160;(1&lt;&lt;0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a430d4d79ac8eba41cf38a7f11265dee4" name="a430d4d79ac8eba41cf38a7f11265dee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a430d4d79ac8eba41cf38a7f11265dee4">&#9670;&#160;</a></span>OUTPUT_NOT_REQUIRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OUTPUT_NOT_REQUIRED&#160;&#160;&#160;(1&lt;&lt;27)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9d4b93a7285736626367c79e6a7e65b" name="aa9d4b93a7285736626367c79e6a7e65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9d4b93a7285736626367c79e6a7e65b">&#9670;&#160;</a></span>PENWIDTH_BOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PENWIDTH_BOLD&#160;&#160;&#160;2.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad03a35ae3e8eb2d22ba05e3ab13469c2" name="ad03a35ae3e8eb2d22ba05e3ab13469c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03a35ae3e8eb2d22ba05e3ab13469c2">&#9670;&#160;</a></span>PENWIDTH_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PENWIDTH_NORMAL&#160;&#160;&#160;1.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="a0c978aacd50e6c6bb3a16577fc53c475" name="a0c978aacd50e6c6bb3a16577fc53c475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c978aacd50e6c6bb3a16577fc53c475">&#9670;&#160;</a></span>gvdevice_callbacks_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvdevice__callbacks__s.html">gvdevice_callbacks_s</a> <a class="el" href="#a0c978aacd50e6c6bb3a16577fc53c475">gvdevice_callbacks_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc098e86302e99b8dd0a76e841b01e87" name="acc098e86302e99b8dd0a76e841b01e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc098e86302e99b8dd0a76e841b01e87">&#9670;&#160;</a></span>gvdevice_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvdevice__engine__s.html">gvdevice_engine_s</a> <a class="el" href="#acc098e86302e99b8dd0a76e841b01e87">gvdevice_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6de1c57369bc42ccc482b87d6174bc20" name="a6de1c57369bc42ccc482b87d6174bc20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de1c57369bc42ccc482b87d6174bc20">&#9670;&#160;</a></span>gvevent_key_binding_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvevent__key__binding__s.html">gvevent_key_binding_s</a> <a class="el" href="#a6de1c57369bc42ccc482b87d6174bc20">gvevent_key_binding_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f6a6d73e7cd18369649c5cce7f65278" name="a4f6a6d73e7cd18369649c5cce7f65278"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6a6d73e7cd18369649c5cce7f65278">&#9670;&#160;</a></span>gvevent_key_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* gvevent_key_callback_t) (<a class="el" href="gvcext_8h.html#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a> *job)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa97e4762258d383100569d7edf4f3199" name="aa97e4762258d383100569d7edf4f3199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97e4762258d383100569d7edf4f3199">&#9670;&#160;</a></span>gvformatter_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct gvformatter_engine_s <a class="el" href="#aa97e4762258d383100569d7edf4f3199">gvformatter_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6239c348363fd19ac844b85bbcaee9ec" name="a6239c348363fd19ac844b85bbcaee9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6239c348363fd19ac844b85bbcaee9ec">&#9670;&#160;</a></span>gvlayout_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvlayout__engine__s.html">gvlayout_engine_s</a> <a class="el" href="#a6239c348363fd19ac844b85bbcaee9ec">gvlayout_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73586fb7b758379b308c315388f92a09" name="a73586fb7b758379b308c315388f92a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73586fb7b758379b308c315388f92a09">&#9670;&#160;</a></span>gvloadimage_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvloadimage__engine__s.html">gvloadimage_engine_s</a> <a class="el" href="#a73586fb7b758379b308c315388f92a09">gvloadimage_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bd180a852d179da562b0c365c59b631" name="a6bd180a852d179da562b0c365c59b631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd180a852d179da562b0c365c59b631">&#9670;&#160;</a></span>gvplugin_active_device_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvplugin__active__device__s.html">gvplugin_active_device_s</a> <a class="el" href="#a6bd180a852d179da562b0c365c59b631">gvplugin_active_device_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c5ed8bb62cb3ee06cdf5c42eb70e169" name="a0c5ed8bb62cb3ee06cdf5c42eb70e169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5ed8bb62cb3ee06cdf5c42eb70e169">&#9670;&#160;</a></span>gvplugin_active_loadimage_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct gvplugin_active_loadimage_t gvplugin_active_loadimage_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8788f43ffca88d5e43ed142d8e2d9fa1" name="a8788f43ffca88d5e43ed142d8e2d9fa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8788f43ffca88d5e43ed142d8e2d9fa1">&#9670;&#160;</a></span>gvplugin_active_render_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvplugin__active__render__s.html">gvplugin_active_render_s</a> <a class="el" href="#a8788f43ffca88d5e43ed142d8e2d9fa1">gvplugin_active_render_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1b4a9a81e4c8d4e96a557de936fcb44" name="aa1b4a9a81e4c8d4e96a557de936fcb44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b4a9a81e4c8d4e96a557de936fcb44">&#9670;&#160;</a></span>gvrender_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvrender__engine__s.html">gvrender_engine_s</a> <a class="el" href="#aa1b4a9a81e4c8d4e96a557de936fcb44">gvrender_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af590c2b964f21ea238a2f2ab665215a8" name="af590c2b964f21ea238a2f2ab665215a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af590c2b964f21ea238a2f2ab665215a8">&#9670;&#160;</a></span>gvtextlayout_engine_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structgvtextlayout__engine__s.html">gvtextlayout_engine_s</a> <a class="el" href="#af590c2b964f21ea238a2f2ab665215a8">gvtextlayout_engine_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02731e816998f46b1511d36eff0260ec" name="a02731e816998f46b1511d36eff0260ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02731e816998f46b1511d36eff0260ec">&#9670;&#160;</a></span>obj_state_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structobj__state__s.html">obj_state_s</a> <a class="el" href="#a02731e816998f46b1511d36eff0260ec">obj_state_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="a9d67f57cb353edb06b582591b3f1eaf0" name="a9d67f57cb353edb06b582591b3f1eaf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d67f57cb353edb06b582591b3f1eaf0">&#9670;&#160;</a></span>emit_state_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a9d67f57cb353edb06b582591b3f1eaf0">emit_state_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a68607c437efe73900c9263cd4f03b9a2" name="a9d67f57cb353edb06b582591b3f1eaf0a68607c437efe73900c9263cd4f03b9a2"></a>EMIT_GDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a0e2e1037a7ea49ba93e1660b916905ab" name="a9d67f57cb353edb06b582591b3f1eaf0a0e2e1037a7ea49ba93e1660b916905ab"></a>EMIT_CDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb" name="a9d67f57cb353edb06b582591b3f1eaf0a2b3a09852e892aef3b852d6015725cfb"></a>EMIT_TDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a3e59bbb4aff494333b724015f3391986" name="a9d67f57cb353edb06b582591b3f1eaf0a3e59bbb4aff494333b724015f3391986"></a>EMIT_HDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0ac9c989cb015d82004843b3cd9ccabce7" name="a9d67f57cb353edb06b582591b3f1eaf0ac9c989cb015d82004843b3cd9ccabce7"></a>EMIT_GLABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0aef804da377cf9ba079e759674b76fdf8" name="a9d67f57cb353edb06b582591b3f1eaf0aef804da377cf9ba079e759674b76fdf8"></a>EMIT_CLABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995" name="a9d67f57cb353edb06b582591b3f1eaf0af46f555368f3e4b5ab9f135588ec5995"></a>EMIT_TLABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a449206c43bd305ad3caee2c54c04a892" name="a9d67f57cb353edb06b582591b3f1eaf0a449206c43bd305ad3caee2c54c04a892"></a>EMIT_HLABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0a1d814d818b407b71c600c5c59cbf43ae" name="a9d67f57cb353edb06b582591b3f1eaf0a1d814d818b407b71c600c5c59cbf43ae"></a>EMIT_NDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0ae215588aa83a61551880c7783ff2eb4c" name="a9d67f57cb353edb06b582591b3f1eaf0ae215588aa83a61551880c7783ff2eb4c"></a>EMIT_EDRAW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd" name="a9d67f57cb353edb06b582591b3f1eaf0ac27f9399c30523b952cdef6b74a016bd"></a>EMIT_NLABEL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9d67f57cb353edb06b582591b3f1eaf0accb8094c46739f15f6a36a30392bdeba" name="a9d67f57cb353edb06b582591b3f1eaf0accb8094c46739f15f6a36a30392bdeba"></a>EMIT_ELABEL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a8b3c1e8eaca9ba6bf60627aee8bb9e72" name="a8b3c1e8eaca9ba6bf60627aee8bb9e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72">&#9670;&#160;</a></span>fill_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a8b3c1e8eaca9ba6bf60627aee8bb9e72">fill_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a8b3c1e8eaca9ba6bf60627aee8bb9e72a4d3aeee5877e819284efa1e457b22f34" name="a8b3c1e8eaca9ba6bf60627aee8bb9e72a4d3aeee5877e819284efa1e457b22f34"></a>FILL_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b3c1e8eaca9ba6bf60627aee8bb9e72a9d6d4108c1f3913f3a4b6a09a9962809" name="a8b3c1e8eaca9ba6bf60627aee8bb9e72a9d6d4108c1f3913f3a4b6a09a9962809"></a>FILL_SOLID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b3c1e8eaca9ba6bf60627aee8bb9e72a4a6e86dd59b94007d997b9cb3c5e2e33" name="a8b3c1e8eaca9ba6bf60627aee8bb9e72a4a6e86dd59b94007d997b9cb3c5e2e33"></a>FILL_LINEAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8b3c1e8eaca9ba6bf60627aee8bb9e72a333224a0f8e27c7b44dd3786468a53d6" name="a8b3c1e8eaca9ba6bf60627aee8bb9e72a333224a0f8e27c7b44dd3786468a53d6"></a>FILL_RADIAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a053425e9fef4e52c94d07c3ea352a591" name="a053425e9fef4e52c94d07c3ea352a591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053425e9fef4e52c94d07c3ea352a591">&#9670;&#160;</a></span>font_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a053425e9fef4e52c94d07c3ea352a591">font_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a053425e9fef4e52c94d07c3ea352a591a5162dac0177f2dd4e0a8435e5184e359" name="a053425e9fef4e52c94d07c3ea352a591a5162dac0177f2dd4e0a8435e5184e359"></a>FONT_REGULAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a053425e9fef4e52c94d07c3ea352a591a7a078f2b20d42d7f352d35396217e1ba" name="a053425e9fef4e52c94d07c3ea352a591a7a078f2b20d42d7f352d35396217e1ba"></a>FONT_BOLD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a053425e9fef4e52c94d07c3ea352a591aff11f5dd59d891ef3b880dbccca4ea2a" name="a053425e9fef4e52c94d07c3ea352a591aff11f5dd59d891ef3b880dbccca4ea2a"></a>FONT_ITALIC&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a27a2d3d0fcd201122f8c13d604f91e38" name="a27a2d3d0fcd201122f8c13d604f91e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a2d3d0fcd201122f8c13d604f91e38">&#9670;&#160;</a></span>label_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a27a2d3d0fcd201122f8c13d604f91e38">label_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a27a2d3d0fcd201122f8c13d604f91e38ac99e5e928ef0f8ce232b1758b68ba244" name="a27a2d3d0fcd201122f8c13d604f91e38ac99e5e928ef0f8ce232b1758b68ba244"></a>LABEL_PLAIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a27a2d3d0fcd201122f8c13d604f91e38a666836f69dad5233e18b0ee914d1cd7d" name="a27a2d3d0fcd201122f8c13d604f91e38a666836f69dad5233e18b0ee914d1cd7d"></a>LABEL_HTML&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5ce3b3a21716351feb74e0155b6499bb" name="a5ce3b3a21716351feb74e0155b6499bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce3b3a21716351feb74e0155b6499bb">&#9670;&#160;</a></span>map_shape_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5ce3b3a21716351feb74e0155b6499bb">map_shape_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a5ce3b3a21716351feb74e0155b6499bba93750fa7b7e32fdde29435cbc49c0990" name="a5ce3b3a21716351feb74e0155b6499bba93750fa7b7e32fdde29435cbc49c0990"></a>MAP_RECTANGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5ce3b3a21716351feb74e0155b6499bba52bb0ede7a27b16527d915d512786bf8" name="a5ce3b3a21716351feb74e0155b6499bba52bb0ede7a27b16527d915d512786bf8"></a>MAP_CIRCLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5ce3b3a21716351feb74e0155b6499bba8b0f19b8c292d1d2e9772feb41cc4496" name="a5ce3b3a21716351feb74e0155b6499bba8b0f19b8c292d1d2e9772feb41cc4496"></a>MAP_POLYGON&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac87c026b772bad1b7bb6edea6200fc92" name="ac87c026b772bad1b7bb6edea6200fc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87c026b772bad1b7bb6edea6200fc92">&#9670;&#160;</a></span>obj_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ac87c026b772bad1b7bb6edea6200fc92">obj_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670" name="ac87c026b772bad1b7bb6edea6200fc92a552c0763f679b759c8083a2312db5670"></a>ROOTGRAPH_OBJTYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac87c026b772bad1b7bb6edea6200fc92a32600cff05c8f94a126d59b08bbac81c" name="ac87c026b772bad1b7bb6edea6200fc92a32600cff05c8f94a126d59b08bbac81c"></a>CLUSTER_OBJTYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac87c026b772bad1b7bb6edea6200fc92a97f20f6ae4bbbf503430fb49f051a61e" name="ac87c026b772bad1b7bb6edea6200fc92a97f20f6ae4bbbf503430fb49f051a61e"></a>NODE_OBJTYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac87c026b772bad1b7bb6edea6200fc92a4b2fac9faf34f5eb8777db67b361e35f" name="ac87c026b772bad1b7bb6edea6200fc92a4b2fac9faf34f5eb8777db67b361e35f"></a>EDGE_OBJTYPE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a056abdc3e65632a0666767d8395bdc44" name="a056abdc3e65632a0666767d8395bdc44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056abdc3e65632a0666767d8395bdc44">&#9670;&#160;</a></span>pen_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a056abdc3e65632a0666767d8395bdc44">pen_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a056abdc3e65632a0666767d8395bdc44a1ea6f58bfade3f78fe217ef328fce04d" name="a056abdc3e65632a0666767d8395bdc44a1ea6f58bfade3f78fe217ef328fce04d"></a>PEN_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a056abdc3e65632a0666767d8395bdc44ab1f05ac68389e236654d79692b26e7ff" name="a056abdc3e65632a0666767d8395bdc44ab1f05ac68389e236654d79692b26e7ff"></a>PEN_DASHED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a056abdc3e65632a0666767d8395bdc44aa7d50db1156eddf79a8c8c316d3790b1" name="a056abdc3e65632a0666767d8395bdc44aa7d50db1156eddf79a8c8c316d3790b1"></a>PEN_DOTTED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a056abdc3e65632a0666767d8395bdc44a9dd963620972293d3b7821d923ce51d9" name="a056abdc3e65632a0666767d8395bdc44a9dd963620972293d3b7821d923ce51d9"></a>PEN_SOLID&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="gvcjob_8h.html">gvcjob.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

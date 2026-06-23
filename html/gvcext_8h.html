@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/gvcext.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gvcext_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл gvcext.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a> &raquo; <a class="el" href="group__gvc__api.html">Graphviz context library (GVC) API</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="gvcext_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:lt_5Fsymlist_5Ft" id="r_lt_5Fsymlist_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structlt__symlist__t.html">lt_symlist_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:abdbe963515b51a66d3c4bedcdac270d8" id="r_abdbe963515b51a66d3c4bedcdac270d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abdbe963515b51a66d3c4bedcdac270d8">APIS</a>&#160;&#160;&#160;<a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(render) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(layout) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(textlayout) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(device) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(loadimage)</td></tr>
+<tr class="memitem:a362272c997ae8f67a45bc9a4b399c736" id="r_a362272c997ae8f67a45bc9a4b399c736"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(x)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a9a257c86c8fde7d294726bece96315e5" id="r_a9a257c86c8fde7d294726bece96315e5"><td class="memItemLeft">typedef struct <a class="el" href="struct_g_v_j__s.html">GVJ_s</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a></td></tr>
+<tr class="memitem:af6bd0e091413025a4d30fa7eca90b641" id="r_af6bd0e091413025a4d30fa7eca90b641"><td class="memItemLeft">typedef struct GVG_s&#160;</td><td class="memItemRight"><a class="el" href="#af6bd0e091413025a4d30fa7eca90b641">GVG_t</a></td></tr>
+<tr class="memitem:ad6cf1b9d460390425d8f423380c2a7ed" id="r_ad6cf1b9d460390425d8f423380c2a7ed"><td class="memItemLeft">typedef struct GVC_s&#160;</td><td class="memItemRight"><a class="el" href="#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a></td></tr>
+<tr class="memdesc:ad6cf1b9d460390425d8f423380c2a7ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">graphviz context  <br /></td></tr>
+<tr class="memitem:aae45d96279062a78e72e7c861600fd0e" id="r_aae45d96279062a78e72e7c861600fd0e"><td class="memItemLeft">typedef struct gvplugin_available_s&#160;</td><td class="memItemRight"><a class="el" href="#aae45d96279062a78e72e7c861600fd0e">gvplugin_available_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ae124da9cae472afed2b4d3c7ef2ff574" id="r_ae124da9cae472afed2b4d3c7ef2ff574"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ae124da9cae472afed2b4d3c7ef2ff574">api_t</a> { <a class="el" href="#ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de">APIS</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a3722c3fc0f0be8654c675764e4bb7ef5" id="r_a3722c3fc0f0be8654c675764e4bb7ef5"><td class="memItemLeft"><a class="el" href="structlt__symlist__t.html">lt_symlist_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3722c3fc0f0be8654c675764e4bb7ef5">lt_preloaded_symbols</a> []</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="abdbe963515b51a66d3c4bedcdac270d8" name="abdbe963515b51a66d3c4bedcdac270d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdbe963515b51a66d3c4bedcdac270d8">&#9670;&#160;</a></span>APIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APIS&#160;&#160;&#160;<a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(render) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(layout) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(textlayout) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(device) <a class="el" href="#a362272c997ae8f67a45bc9a4b399c736">ELEM</a>(loadimage)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a362272c997ae8f67a45bc9a4b399c736" name="a362272c997ae8f67a45bc9a4b399c736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362272c997ae8f67a45bc9a4b399c736">&#9670;&#160;</a></span>ELEM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ELEM</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">API_##x,</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="ad6cf1b9d460390425d8f423380c2a7ed" name="ad6cf1b9d460390425d8f423380c2a7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6cf1b9d460390425d8f423380c2a7ed">&#9670;&#160;</a></span>GVC_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct GVC_s <a class="el" href="#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6bd0e091413025a4d30fa7eca90b641" name="af6bd0e091413025a4d30fa7eca90b641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bd0e091413025a4d30fa7eca90b641">&#9670;&#160;</a></span>GVG_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct GVG_s <a class="el" href="#af6bd0e091413025a4d30fa7eca90b641">GVG_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a257c86c8fde7d294726bece96315e5" name="a9a257c86c8fde7d294726bece96315e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a257c86c8fde7d294726bece96315e5">&#9670;&#160;</a></span>GVJ_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_g_v_j__s.html">GVJ_s</a> <a class="el" href="#a9a257c86c8fde7d294726bece96315e5">GVJ_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae45d96279062a78e72e7c861600fd0e" name="aae45d96279062a78e72e7c861600fd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45d96279062a78e72e7c861600fd0e">&#9670;&#160;</a></span>gvplugin_available_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct gvplugin_available_s <a class="el" href="#aae45d96279062a78e72e7c861600fd0e">gvplugin_available_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="ae124da9cae472afed2b4d3c7ef2ff574" name="ae124da9cae472afed2b4d3c7ef2ff574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae124da9cae472afed2b4d3c7ef2ff574">&#9670;&#160;</a></span>api_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ae124da9cae472afed2b4d3c7ef2ff574">api_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de" name="ae124da9cae472afed2b4d3c7ef2ff574a1db8fae03314e9c083f6d4b0172c00de"></a>APIS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Переменные</h2>
+<a id="a3722c3fc0f0be8654c675764e4bb7ef5" name="a3722c3fc0f0be8654c675764e4bb7ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3722c3fc0f0be8654c675764e4bb7ef5">&#9670;&#160;</a></span>lt_preloaded_symbols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlt__symlist__t.html">lt_symlist_t</a> lt_preloaded_symbols[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="gvcext_8h.html">gvcext.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

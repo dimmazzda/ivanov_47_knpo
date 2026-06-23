@@ -1,0 +1,175 @@
+\doxysection{Класс Dir\+Graph}
+\hypertarget{class_dir_graph}{}\label{class_dir_graph}\index{DirGraph@{DirGraph}}
+
+
+класс ориентированного графа  
+
+
+
+
+{\ttfamily \+\#include $<$headers.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_dir_graph_a900673adda6b2e049a1441421d15a177}{Dir\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em конструктор по умолчанию создаёт пустой граф \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dir_graph_ad27cabf023c22e325c965158b7cea9c7}{Dir\+Graph}} (int count\+Of\+Vertices)
+\begin{DoxyCompactList}\small\item\em создаёт граф с указанным количеством вершин без дуг \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dir_graph_a3b321c8f734f1dcd9912537a66fed389}{\texorpdfstring{$\sim$}{\string~}\+Dir\+Graph}} ()
+\begin{DoxyCompactList}\small\item\em деструктор по умолчаниюю \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_dir_graph_a8bca7a0af41481d14816792b3a6eaeaa}{get\+Vertex\+Count}} ()
+\begin{DoxyCompactList}\small\item\em получить количество вершин \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_dir_graph_ab74cac37fedb36f9c9d7a0a80fc12799}{has\+Edge}} (int from\+Vertex, int to\+Vertex)
+\begin{DoxyCompactList}\small\item\em проверка на наличие дуги \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_dir_graph_a15a22fd8f3ad29fd2eaa23a2eac4df5c}{add\+Edge}} (int from\+Vertex, int to\+Vertex)
+\begin{DoxyCompactList}\small\item\em добавить дугу в граф \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_dir_graph_a1dc1d1db5f70c46a164a40adf3ab34f3}{get\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em получить дуги графа \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_dir_graph_a6657a5b7b1b8b5e0e9019db557760eed}{dir\+Graph\+Is\+Equal}} (const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&other\+Graph)
+\begin{DoxyCompactList}\small\item\em проверить графы на равенство \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_dir_graph_a3d986feb5b3d0140af07be70bd0015bb}{generate\+Spanning\+Tree}} (int root\+Vertex) const
+\begin{DoxyCompactList}\small\item\em построить остовное дерево графа \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ int $>$ \doxymbox{\hyperlink{class_dir_graph_a94d3d1dd413f938c0eca995bb0bf2141}{vertices}}
+\begin{DoxyCompactList}\small\item\em список вершин графа (упорядоченный) \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \doxymbox{\hyperlink{class_dir_graph_a199d516e49886a86839275954489a7b0}{edges}}
+\begin{DoxyCompactList}\small\item\em дуги графа в виде списка смежности \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{class_dir_graph_doc-constructors}
+\Hypertarget{class_dir_graph_doc-constructors}
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{class_dir_graph_a900673adda6b2e049a1441421d15a177}\index{DirGraph@{DirGraph}!DirGraph@{DirGraph}}
+\index{DirGraph@{DirGraph}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{DirGraph()}{DirGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_dir_graph_a900673adda6b2e049a1441421d15a177} 
+Dir\+Graph::\+\+Dir\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_dir_graph_ad27cabf023c22e325c965158b7cea9c7}\index{DirGraph@{DirGraph}!DirGraph@{DirGraph}}
+\index{DirGraph@{DirGraph}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{DirGraph()}{DirGraph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_dir_graph_ad27cabf023c22e325c965158b7cea9c7} 
+Dir\+Graph::\+\+Dir\+Graph (\begin{DoxyParamCaption}\item[{int}]{count\+Of\+Vertices}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\Hypertarget{class_dir_graph_a3b321c8f734f1dcd9912537a66fed389}\index{DirGraph@{DirGraph}!````~DirGraph@{\texorpdfstring{$\sim$}{\string~}DirGraph}}
+\index{````~DirGraph@{\texorpdfstring{$\sim$}{\string~}DirGraph}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DirGraph()}{\string~DirGraph()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a3b321c8f734f1dcd9912537a66fed389} 
+Dir\+Graph::\+\texorpdfstring{$\sim$}{\string~}\+Dir\+Graph (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_dir_graph_doc-func-members}
+\Hypertarget{class_dir_graph_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{class_dir_graph_a15a22fd8f3ad29fd2eaa23a2eac4df5c}\index{DirGraph@{DirGraph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a15a22fd8f3ad29fd2eaa23a2eac4df5c} 
+bool Dir\+Graph::\+add\+Edge (\begin{DoxyParamCaption}\item[{int}]{from\+Vertex}{, }\item[{int}]{to\+Vertex}{}\end{DoxyParamCaption})}
+
+добавляет дугу в граф, если входные вершины содержатся в графе 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em from\+Vertex} & Индекс вершины, из которой исходит дуга \\
+\hline
+\doxymbox{\texttt{in}}  & {\em to\+Vertex} & Индекс вершины, в которую заходит дуга \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true Если дуга добавлена 
+
+false Если дуга не добавлена 
+\end{DoxyReturn}
+\Hypertarget{class_dir_graph_a6657a5b7b1b8b5e0e9019db557760eed}\index{DirGraph@{DirGraph}!dirGraphIsEqual@{dirGraphIsEqual}}
+\index{dirGraphIsEqual@{dirGraphIsEqual}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{dirGraphIsEqual()}{dirGraphIsEqual()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a6657a5b7b1b8b5e0e9019db557760eed} 
+bool Dir\+Graph::\+dir\+Graph\+Is\+Equal (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \&}]{other\+Graph}{}\end{DoxyParamCaption})}
+
+графы равны если полностью совпадают вершины и дуги между ними \begin{DoxyNote}{Заметки}
+порядок описания дуг внутри списка смежности неважен, только состав 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em other\+Graph} & Константная ссылка на второй граф для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+указатель на список смежности 
+\end{DoxyReturn}
+\Hypertarget{class_dir_graph_a3d986feb5b3d0140af07be70bd0015bb}\index{DirGraph@{DirGraph}!generateSpanningTree@{generateSpanningTree}}
+\index{generateSpanningTree@{generateSpanningTree}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{generateSpanningTree()}{generateSpanningTree()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a3d986feb5b3d0140af07be70bd0015bb} 
+\doxymbox{\hyperlink{class_dir_graph}{Dir\+Graph}} \texorpdfstring{$\ast$}{*} Dir\+Graph::\+generate\+Spanning\+Tree (\begin{DoxyParamCaption}\item[{int}]{root\+Vertex}{}\end{DoxyParamCaption}) const}
+
+обходит граф в ширину из указанной вершины и попутно строит остовное дерево 
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em root\+Vertex} & Индекс вершины-\/корня \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+указатель на новый граф -\/ остовное дерево 
+\end{DoxyReturn}
+\Hypertarget{class_dir_graph_a1dc1d1db5f70c46a164a40adf3ab34f3}\index{DirGraph@{DirGraph}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a1dc1d1db5f70c46a164a40adf3ab34f3} 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \texorpdfstring{$\ast$}{*} Dir\+Graph::\+get\+Edges (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+извлекает дуги графа в виде списка смежности для последующих операций \begin{DoxyReturn}{Возвращает}
+указатель на список смежности 
+\end{DoxyReturn}
+\Hypertarget{class_dir_graph_a8bca7a0af41481d14816792b3a6eaeaa}\index{DirGraph@{DirGraph}!getVertexCount@{getVertexCount}}
+\index{getVertexCount@{getVertexCount}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{getVertexCount()}{getVertexCount()}}
+{\footnotesize\ttfamily \label{class_dir_graph_a8bca7a0af41481d14816792b3a6eaeaa} 
+int Dir\+Graph::\+get\+Vertex\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Возвращает}
+количество вершин графа 
+\end{DoxyReturn}
+\Hypertarget{class_dir_graph_ab74cac37fedb36f9c9d7a0a80fc12799}\index{DirGraph@{DirGraph}!hasEdge@{hasEdge}}
+\index{hasEdge@{hasEdge}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{hasEdge()}{hasEdge()}}
+{\footnotesize\ttfamily \label{class_dir_graph_ab74cac37fedb36f9c9d7a0a80fc12799} 
+bool Dir\+Graph::\+has\+Edge (\begin{DoxyParamCaption}\item[{int}]{from\+Vertex}{, }\item[{int}]{to\+Vertex}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\doxymbox{\texttt{in}}  & {\em from\+Vertex} & Индекс вершины, из которой исходит дуга \\
+\hline
+\doxymbox{\texttt{in}}  & {\em to\+Vertex} & Индекс вершины, в которую заходит дуга \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true Если дуга есть в графе 
+
+false Если дуги нет в графе 
+\end{DoxyReturn}
+
+
+\label{class_dir_graph_doc-variable-members}
+\Hypertarget{class_dir_graph_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{class_dir_graph_a199d516e49886a86839275954489a7b0}\index{DirGraph@{DirGraph}!edges@{edges}}
+\index{edges@{edges}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{edges}{edges}}
+{\footnotesize\ttfamily \label{class_dir_graph_a199d516e49886a86839275954489a7b0} 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} Dir\+Graph::\+edges}
+
+\Hypertarget{class_dir_graph_a94d3d1dd413f938c0eca995bb0bf2141}\index{DirGraph@{DirGraph}!vertices@{vertices}}
+\index{vertices@{vertices}!DirGraph@{DirGraph}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily \label{class_dir_graph_a94d3d1dd413f938c0eca995bb0bf2141} 
+std::\+vector$<$int$>$ Dir\+Graph::\+vertices}
+
+
+
+Объявления и описания членов классов находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{headers_8h}{headers.\+h}}\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{ivanov__47__knpo_8cpp}{ivanov\+\_\+47\+\_\+knpo.\+cpp}}\end{DoxyCompactItemize}

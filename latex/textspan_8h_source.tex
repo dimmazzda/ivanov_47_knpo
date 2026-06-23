@@ -1,0 +1,76 @@
+\doxysection{textspan.\+h}
+\hypertarget{textspan_8h_source}{}\label{textspan_8h_source}\index{Graphviz/include/graphviz/textspan.h@{Graphviz/include/graphviz/textspan.h}}
+\doxymbox{\hyperlink{textspan_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property\ }}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ GV\_TEXTFONT\_FLAGS\_WIDTH\ 7}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/*\ Bold,\ Italic,\ Underline,\ Sup,\ Sub,\ Strike\ */}}
+\DoxyCodeLine{00027\ \textcolor{comment}{/*\ Stored\ in\ textfont\_t.flags,\ which\ is\ GV\_TEXTFONT\_FLAGS\_WIDTH\ bits,\ so\ full\ */}}
+\DoxyCodeLine{00028\ \textcolor{comment}{/*\ Probably\ should\ be\ moved\ to\ textspan\_t\ */}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ HTML\_BF\ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ HTML\_IF\ \ \ (1\ <<\ 1)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ HTML\_UL\ \ \ (1\ <<\ 2)}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ HTML\_SUP\ \ (1\ <<\ 3)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ HTML\_SUB\ \ (1\ <<\ 4)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ HTML\_S\ \ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ HTML\_OL\ \ \ (1\ <<\ 6)}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct___postscript_alias}{\_PostscriptAlias}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_ae91d9fb74773f27ac269ec8eced78711}{name}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_a4f6899fa8e2509620111921ebe8ab57e}{family}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_aa65cef099056fd22694be55ccb4ba644}{weight}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_adb1fcebcd35721f0db37c88ff977a9e6}{stretch}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_aa6d83731291f8bae6d03cb9ad03ff7c9}{style}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct___postscript_alias_a71df902192476abfa483718bfee6d060}{xfig\_code}};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_aa77f987f34aceb2cf6324c801df0c348}{svg\_font\_family}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_a61b16006aac6beac2ad679bed52ec747}{svg\_font\_weight}};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{char}*\ \doxymbox{\hyperlink{struct___postscript_alias_a4e64d3713bf50bf9ed6a718576d58a09}{svg\_font\_style}};}
+\DoxyCodeLine{00047\ \ \ \ \ \}\ \doxymbox{\hyperlink{textspan_8h_a64daaed4d4310af8ede71e519c3b7bd0}{PostscriptAlias}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{/*\ font\ information}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ *\ If\ name\ or\ color\ is\ NULL,\ or\ size\ <\ 0,\ that\ attribute}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ *\ is\ unspecified.\ }}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \doxymbox{\hyperlink{structtextfont__t_a57869d742504b4de73aa609641d2ee6d}{name}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \doxymbox{\hyperlink{structtextfont__t_a0efd68bfcd391cb61a04f4cf8082f681}{color}};}
+\DoxyCodeLine{00056\ \ \ \ \ \doxymbox{\hyperlink{textspan_8h_a64daaed4d4310af8ede71e519c3b7bd0}{PostscriptAlias}}\ *\doxymbox{\hyperlink{structtextfont__t_a57cdad13761e851f8a373bb860542e8c}{postscript\_alias}};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structtextfont__t_aee3e2129ddd89e25f57407d50a4dadcd}{size}};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structtextfont__t_add445e68ddb397dc3b10870c9f3e6ee7}{flags}}:\doxymbox{\hyperlink{textspan_8h_adbdc734333fb879544dfb7b9a93f5c46}{GV\_TEXTFONT\_FLAGS\_WIDTH}};\ \textcolor{comment}{//\ HTML\_UL,\ HTML\_IF,\ HTML\_BF,\ etc.}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structtextfont__t_aef7f7dd723ee85bd8e7822ac256729c3}{cnt}}:(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int)\ *\ 8\ -\/\ \doxymbox{\hyperlink{textspan_8h_adbdc734333fb879544dfb7b9a93f5c46}{GV\_TEXTFONT\_FLAGS\_WIDTH}});}
+\DoxyCodeLine{00061\ \ \ \ \ \}\ \doxymbox{\hyperlink{structtextfont__t}{textfont\_t}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*\ atomic\ unit\ of\ text\ emitted\ using\ a\ single\ htmlfont\_t\ */}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{structtextspan__t_a31a8ceef5544790802908441b9f60d7c}{str}};\ \ \ \ \ \ \textcolor{comment}{/*\ stored\ in\ utf-\/8\ */}}
+\DoxyCodeLine{00066\ \ \ \ \ \doxymbox{\hyperlink{structtextfont__t}{textfont\_t}}\ *\doxymbox{\hyperlink{structtextspan__t_abffd51901f2150a45535fcb6d903e2d5}{font}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{structtextspan__t_a4e63eb99a9a5dbc29b4e57bd5d9e7d84}{layout}};}
+\DoxyCodeLine{00068\ \ \ \ \ void\ (*\doxymbox{\hyperlink{structtextspan__t_af4b2c72495e663712d59173149b542bc}{free\_layout}})\ (\textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{structtextspan__t_a4e63eb99a9a5dbc29b4e57bd5d9e7d84}{layout}});\ \ \ \textcolor{comment}{/*\ FIXME\ -\/\ this\ is\ ugly\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structtextspan__t_a2721db6774a1a6d174fb7d40a99b1700}{yoffset\_layout}},\ \doxymbox{\hyperlink{structtextspan__t_ae6c460d9cc5beb5dcad4939579332bac}{yoffset\_centerline}};}
+\DoxyCodeLine{00070\ \ \ \ \ \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}\ \doxymbox{\hyperlink{structtextspan__t_a83c75776d17b32647e2851cc97fb6f33}{size}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{structtextspan__t_a4b35e6b131ae224e0f6b71a66925a8b7}{just}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \}\ \doxymbox{\hyperlink{structtextspan__t}{textspan\_t}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

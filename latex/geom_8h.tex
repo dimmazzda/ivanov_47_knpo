@@ -1,0 +1,257 @@
+\doxysection{Файл Graphviz/\+include/\+graphviz/\+geom.h}
+\hypertarget{geom_8h}{}\label{geom_8h}\index{Graphviz/include/graphviz/geom.h@{Graphviz/include/graphviz/geom.h}}
+
+
+geometric types and macros (e.\+g. points and boxes)  
+
+
+{\ttfamily \+\#include "{}arith.\+h"{}}\newline
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structpoint}{point}}
+\item 
+struct \doxymbox{\hyperlink{structpointf__s}{pointf\+\_\+s}}
+\item 
+struct \doxymbox{\hyperlink{structlinef}{linef}}
+\item 
+struct \doxymbox{\hyperlink{structbox}{box}}
+\item 
+struct \doxymbox{\hyperlink{structboxf}{boxf}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ab69353e0ac74a73ef0ff9a8e7c060b0f}{HAVE\+\_\+\+POINTF\+\_\+S}}
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ac001b1c07c2060720b4634dae4ebc0cc}{INSIDE}}(p,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a83a8ce04331b6e094a610e83109691b4}{OVERLAP}}(b0,  b1)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a125a16152ae7c6187c963a9a05ad8257}{CONTAINS}}(b0,  b1)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a652bb32013460334427cd57045378a28}{LEN2}}(a,  b)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_acc0ec5372e4853b86c8e7ebe3a600bea}{DIST2}}(p,  q)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ae5c251cef9401f6422380216727a4549}{DIST}}(p,  q)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\+\_\+\+PER\+\_\+\+INCH}}~72
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ae888418f7e295106634bee702d3b20ac}{POINTS\+\_\+\+PER\+\_\+\+CM}}~((double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\+\_\+\+PER\+\_\+\+INCH}} \texorpdfstring{$\ast$}{*} 0.\+393700787)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a3e85993634dfb89ca1e1c3623b4174a2}{POINTS\+\_\+\+PER\+\_\+\+MM}}~((double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\+\_\+\+PER\+\_\+\+INCH}} \texorpdfstring{$\ast$}{*} 0.\+0393700787)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_aa3f1922d8d1737c1b16cf23c40434f10}{POINTS}}(a\+\_\+inches)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_ae9e5ed37f3560b239db0497a354dffbc}{INCH2\+PS}}(a\+\_\+inches)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a7118931f8434d39d9e127817e70373d4}{PS2\+INCH}}(a\+\_\+points)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a53d8aa26e51b7fb6061863174547aa95}{P2\+PF}}(p,  pf)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_abf5270b3786d98a43aa4cf9c29869c0d}{PF2P}}(pf,  p)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a1f7542f527f0017fb314ba84dba193e6}{B2\+BF}}(b,  bf)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_aa31f5c05f726b16a20cf2376dc6bd652}{APPROXEQPT}}(p,  q,  tol)
+\item 
+\+\#define \doxymbox{\hyperlink{geom_8h_a423711bbbda1aa37fecdf461f508aa37}{MILLIPOINT}}~.\+001
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \doxymbox{\hyperlink{structpointf__s}{pointf\+\_\+s}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+with application to, but no specific dependence on graphs 
+
+\label{geom_8h_doc-define-members}
+\Hypertarget{geom_8h_doc-define-members}
+\doxysubsection{Макросы}
+\Hypertarget{geom_8h_aa31f5c05f726b16a20cf2376dc6bd652}\index{geom.h@{geom.h}!APPROXEQPT@{APPROXEQPT}}
+\index{APPROXEQPT@{APPROXEQPT}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{APPROXEQPT}{APPROXEQPT}}
+{\footnotesize\ttfamily \label{geom_8h_aa31f5c05f726b16a20cf2376dc6bd652} 
+\+\#define APPROXEQPT(\begin{DoxyParamCaption}\item[{}]{p}{, }\item[{}]{q}{, }\item[{}]{tol}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{geom_8h_acc0ec5372e4853b86c8e7ebe3a600bea}{DIST2}}((p),(q))\ <\ \doxymbox{\hyperlink{arith_8h_ad41630f833e920c1ffa34722f45a8e77}{SQR}}(tol))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_a1f7542f527f0017fb314ba84dba193e6}\index{geom.h@{geom.h}!B2BF@{B2BF}}
+\index{B2BF@{B2BF}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{B2BF}{B2BF}}
+{\footnotesize\ttfamily \label{geom_8h_a1f7542f527f0017fb314ba84dba193e6} 
+\+\#define B2\+BF(\begin{DoxyParamCaption}\item[{}]{b}{, }\item[{}]{bf}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{geom_8h_a53d8aa26e51b7fb6061863174547aa95}{P2PF}}((b).LL,(bf).LL),\doxymbox{\hyperlink{geom_8h_a53d8aa26e51b7fb6061863174547aa95}{P2PF}}((b).UR,(bf).UR))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_a125a16152ae7c6187c963a9a05ad8257}\index{geom.h@{geom.h}!CONTAINS@{CONTAINS}}
+\index{CONTAINS@{CONTAINS}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{CONTAINS}{CONTAINS}}
+{\footnotesize\ttfamily \label{geom_8h_a125a16152ae7c6187c963a9a05ad8257} 
+\+\#define CONTAINS(\begin{DoxyParamCaption}\item[{}]{b0}{, }\item[{}]{b1}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((b0).UR.x\ >=\ (b1).UR.x)\ \&\&\ ((b0).UR.y\ >=\ (b1).UR.y)\ \&\&\ ((b0).LL.x\ <=\ (b1).LL.x)\ \&\&\ ((b0).LL.y\ <=\ (b1).LL.y))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_ae5c251cef9401f6422380216727a4549}\index{geom.h@{geom.h}!DIST@{DIST}}
+\index{DIST@{DIST}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{DIST}{DIST}}
+{\footnotesize\ttfamily \label{geom_8h_ae5c251cef9401f6422380216727a4549} 
+\+\#define DIST(\begin{DoxyParamCaption}\item[{}]{p}{, }\item[{}]{q}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(sqrt(\doxymbox{\hyperlink{geom_8h_acc0ec5372e4853b86c8e7ebe3a600bea}{DIST2}}((p),(q))))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_acc0ec5372e4853b86c8e7ebe3a600bea}\index{geom.h@{geom.h}!DIST2@{DIST2}}
+\index{DIST2@{DIST2}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{DIST2}{DIST2}}
+{\footnotesize\ttfamily \label{geom_8h_acc0ec5372e4853b86c8e7ebe3a600bea} 
+\+\#define DIST2(\begin{DoxyParamCaption}\item[{}]{p}{, }\item[{}]{q}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{geom_8h_a652bb32013460334427cd57045378a28}{LEN2}}(((p).x\ -\/\ (q).x),((p).y\ -\/\ (q).y)))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_ab69353e0ac74a73ef0ff9a8e7c060b0f}\index{geom.h@{geom.h}!HAVE\_POINTF\_S@{HAVE\_POINTF\_S}}
+\index{HAVE\_POINTF\_S@{HAVE\_POINTF\_S}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{HAVE\_POINTF\_S}{HAVE\_POINTF\_S}}
+{\footnotesize\ttfamily \label{geom_8h_ab69353e0ac74a73ef0ff9a8e7c060b0f} 
+\+\#define HAVE\+\_\+\+POINTF\+\_\+S}
+
+\Hypertarget{geom_8h_ae9e5ed37f3560b239db0497a354dffbc}\index{geom.h@{geom.h}!INCH2PS@{INCH2PS}}
+\index{INCH2PS@{INCH2PS}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{INCH2PS}{INCH2PS}}
+{\footnotesize\ttfamily \label{geom_8h_ae9e5ed37f3560b239db0497a354dffbc} 
+\+\#define INCH2\+PS(\begin{DoxyParamCaption}\item[{}]{a\+\_\+inches}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a\_inches)*(double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\_PER\_INCH}})}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_ac001b1c07c2060720b4634dae4ebc0cc}\index{geom.h@{geom.h}!INSIDE@{INSIDE}}
+\index{INSIDE@{INSIDE}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{INSIDE}{INSIDE}}
+{\footnotesize\ttfamily \label{geom_8h_ac001b1c07c2060720b4634dae4ebc0cc} 
+\+\#define INSIDE(\begin{DoxyParamCaption}\item[{}]{p}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{arith_8h_a043815e8b2e49280dc4fcd060fc56a38}{BETWEEN}}((b).LL.x,(p).x,(b).UR.x)\ \&\&\ \doxymbox{\hyperlink{arith_8h_a043815e8b2e49280dc4fcd060fc56a38}{BETWEEN}}((b).LL.y,(p).y,(b).UR.y))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_a652bb32013460334427cd57045378a28}\index{geom.h@{geom.h}!LEN2@{LEN2}}
+\index{LEN2@{LEN2}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{LEN2}{LEN2}}
+{\footnotesize\ttfamily \label{geom_8h_a652bb32013460334427cd57045378a28} 
+\+\#define LEN2(\begin{DoxyParamCaption}\item[{}]{a}{, }\item[{}]{b}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{arith_8h_ad41630f833e920c1ffa34722f45a8e77}{SQR}}(a)\ +\ \doxymbox{\hyperlink{arith_8h_ad41630f833e920c1ffa34722f45a8e77}{SQR}}(b))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_a423711bbbda1aa37fecdf461f508aa37}\index{geom.h@{geom.h}!MILLIPOINT@{MILLIPOINT}}
+\index{MILLIPOINT@{MILLIPOINT}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{MILLIPOINT}{MILLIPOINT}}
+{\footnotesize\ttfamily \label{geom_8h_a423711bbbda1aa37fecdf461f508aa37} 
+\+\#define MILLIPOINT~.\+001}
+
+\Hypertarget{geom_8h_a83a8ce04331b6e094a610e83109691b4}\index{geom.h@{geom.h}!OVERLAP@{OVERLAP}}
+\index{OVERLAP@{OVERLAP}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{OVERLAP}{OVERLAP}}
+{\footnotesize\ttfamily \label{geom_8h_a83a8ce04331b6e094a610e83109691b4} 
+\+\#define OVERLAP(\begin{DoxyParamCaption}\item[{}]{b0}{, }\item[{}]{b1}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(((b0).UR.x\ >=\ (b1).LL.x)\ \&\&\ ((b1).UR.x\ >=\ (b0).LL.x)\ \&\&\ ((b0).UR.y\ >=\ (b1).LL.y)\ \&\&\ ((b1).UR.y\ >=\ (b0).LL.y))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_a53d8aa26e51b7fb6061863174547aa95}\index{geom.h@{geom.h}!P2PF@{P2PF}}
+\index{P2PF@{P2PF}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{P2PF}{P2PF}}
+{\footnotesize\ttfamily \label{geom_8h_a53d8aa26e51b7fb6061863174547aa95} 
+\+\#define P2\+PF(\begin{DoxyParamCaption}\item[{}]{p}{, }\item[{}]{pf}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((pf).x\ =\ (p).x,(pf).y\ =\ (p).y)}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_abf5270b3786d98a43aa4cf9c29869c0d}\index{geom.h@{geom.h}!PF2P@{PF2P}}
+\index{PF2P@{PF2P}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{PF2P}{PF2P}}
+{\footnotesize\ttfamily \label{geom_8h_abf5270b3786d98a43aa4cf9c29869c0d} 
+\+\#define PF2P(\begin{DoxyParamCaption}\item[{}]{pf}{, }\item[{}]{p}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((p).x\ =\ \doxymbox{\hyperlink{arith_8h_a91a8600e2a2859a47dbc2ba39960a352}{ROUND}}((pf).x),(p).y\ =\ \doxymbox{\hyperlink{arith_8h_a91a8600e2a2859a47dbc2ba39960a352}{ROUND}}((pf).y))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_aa3f1922d8d1737c1b16cf23c40434f10}\index{geom.h@{geom.h}!POINTS@{POINTS}}
+\index{POINTS@{POINTS}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{POINTS}{POINTS}}
+{\footnotesize\ttfamily \label{geom_8h_aa3f1922d8d1737c1b16cf23c40434f10} 
+\+\#define POINTS(\begin{DoxyParamCaption}\item[{}]{a\+\_\+inches}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\doxymbox{\hyperlink{arith_8h_a91a8600e2a2859a47dbc2ba39960a352}{ROUND}}((a\_inches)*\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\_PER\_INCH}}))}
+
+\end{DoxyCode}
+\Hypertarget{geom_8h_ae888418f7e295106634bee702d3b20ac}\index{geom.h@{geom.h}!POINTS\_PER\_CM@{POINTS\_PER\_CM}}
+\index{POINTS\_PER\_CM@{POINTS\_PER\_CM}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{POINTS\_PER\_CM}{POINTS\_PER\_CM}}
+{\footnotesize\ttfamily \label{geom_8h_ae888418f7e295106634bee702d3b20ac} 
+\+\#define POINTS\+\_\+\+PER\+\_\+\+CM~((double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\+\_\+\+PER\+\_\+\+INCH}} \texorpdfstring{$\ast$}{*} 0.\+393700787)}
+
+\Hypertarget{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}\index{geom.h@{geom.h}!POINTS\_PER\_INCH@{POINTS\_PER\_INCH}}
+\index{POINTS\_PER\_INCH@{POINTS\_PER\_INCH}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{POINTS\_PER\_INCH}{POINTS\_PER\_INCH}}
+{\footnotesize\ttfamily \label{geom_8h_ae99ebec8aa1d257ed1164f2676994a08} 
+\+\#define POINTS\+\_\+\+PER\+\_\+\+INCH~72}
+
+\Hypertarget{geom_8h_a3e85993634dfb89ca1e1c3623b4174a2}\index{geom.h@{geom.h}!POINTS\_PER\_MM@{POINTS\_PER\_MM}}
+\index{POINTS\_PER\_MM@{POINTS\_PER\_MM}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{POINTS\_PER\_MM}{POINTS\_PER\_MM}}
+{\footnotesize\ttfamily \label{geom_8h_a3e85993634dfb89ca1e1c3623b4174a2} 
+\+\#define POINTS\+\_\+\+PER\+\_\+\+MM~((double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\+\_\+\+PER\+\_\+\+INCH}} \texorpdfstring{$\ast$}{*} 0.\+0393700787)}
+
+\Hypertarget{geom_8h_a7118931f8434d39d9e127817e70373d4}\index{geom.h@{geom.h}!PS2INCH@{PS2INCH}}
+\index{PS2INCH@{PS2INCH}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{PS2INCH}{PS2INCH}}
+{\footnotesize\ttfamily \label{geom_8h_a7118931f8434d39d9e127817e70373d4} 
+\+\#define PS2\+INCH(\begin{DoxyParamCaption}\item[{}]{a\+\_\+points}{}\end{DoxyParamCaption})}
+
+{\bfseries Макроопределение:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((a\_points)/(double)\doxymbox{\hyperlink{geom_8h_ae99ebec8aa1d257ed1164f2676994a08}{POINTS\_PER\_INCH}})}
+
+\end{DoxyCode}
+
+
+\label{geom_8h_doc-typedef-members}
+\Hypertarget{geom_8h_doc-typedef-members}
+\doxysubsection{Типы}
+\Hypertarget{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}\index{geom.h@{geom.h}!pointf@{pointf}}
+\index{pointf@{pointf}!geom.h@{geom.h}}
+\doxysubsubsection{\texorpdfstring{pointf}{pointf}}
+{\footnotesize\ttfamily \label{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084} 
+typedef struct \doxymbox{\hyperlink{structpointf__s}{pointf\+\_\+s}} \doxymbox{\hyperlink{geom_8h_ab1d4fa1dc6a3884bc0f897efb568a084}{pointf}}}
+

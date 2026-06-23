@@ -1,0 +1,59 @@
+\doxysubsubsubsection{set cardinality }
+\hypertarget{group__card}{}\label{group__card}\index{set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__card_ga4adc84a502d28ec87c931b98407846fd}{agnnodes}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__card_gab6fefbed26b04eadf563f407a7d3774a}{agnedges}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__card_ga2995244a8e345f4574876251e8b449d2}{agnsubg}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b}{agdegree}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n, int in, int out)
+\item 
+CGRAPH\+\_\+\+API int \doxymbox{\hyperlink{group__card_gab2d5ab6810e74b55cf287bcb8490a8be}{agcountuniqedges}} (\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}g, \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}n, int in, int out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsubsubsection{Подробное описание}
+By default, nodes are stored in ordered sets for efficient random access to insert, find, and delete nodes.
+
+\doxylink{group__card_ga4adc84a502d28ec87c931b98407846fd}{agnnodes}, \doxylink{group__card_gab6fefbed26b04eadf563f407a7d3774a}{agnedges}, and \doxylink{group__card_ga2995244a8e345f4574876251e8b449d2}{agnsubg} return the sizes of node, edge and subgraph sets of a graph.
+
+The function \doxylink{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b}{agdegree} returns the size of a node’s edge set, and takes flags to select in-\/edges, out-\/edges, or both.
+
+The function \doxylink{group__card_gab2d5ab6810e74b55cf287bcb8490a8be}{agcountuniqedges} returns the size of a node’s edge set, and takes flags to select in-\/edges, out-\/edges, or both. Unlike \doxylink{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b}{agdegree}, each loop is only counted once. 
+
+\label{group__card_doc-func-members}
+\Hypertarget{group__card_doc-func-members}
+\doxysubsubsubsubsection{Функции}
+\Hypertarget{group__card_gab2d5ab6810e74b55cf287bcb8490a8be}\index{set cardinality@{set cardinality}!agcountuniqedges@{agcountuniqedges}}
+\index{agcountuniqedges@{agcountuniqedges}!set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agcountuniqedges()}{agcountuniqedges()}}
+{\footnotesize\ttfamily \label{group__card_gab2d5ab6810e74b55cf287bcb8490a8be} 
+CGRAPH\+\_\+\+API int agcountuniqedges (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{int}]{in}{, }\item[{int}]{out}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b}\index{set cardinality@{set cardinality}!agdegree@{agdegree}}
+\index{agdegree@{agdegree}!set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agdegree()}{agdegree()}}
+{\footnotesize\ttfamily \label{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b} 
+CGRAPH\+\_\+\+API int agdegree (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{int}]{in}{, }\item[{int}]{out}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__card_gab6fefbed26b04eadf563f407a7d3774a}\index{set cardinality@{set cardinality}!agnedges@{agnedges}}
+\index{agnedges@{agnedges}!set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnedges()}{agnedges()}}
+{\footnotesize\ttfamily \label{group__card_gab6fefbed26b04eadf563f407a7d3774a} 
+CGRAPH\+\_\+\+API int agnedges (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__card_ga4adc84a502d28ec87c931b98407846fd}\index{set cardinality@{set cardinality}!agnnodes@{agnnodes}}
+\index{agnnodes@{agnnodes}!set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnnodes()}{agnnodes()}}
+{\footnotesize\ttfamily \label{group__card_ga4adc84a502d28ec87c931b98407846fd} 
+CGRAPH\+\_\+\+API int agnnodes (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+\Hypertarget{group__card_ga2995244a8e345f4574876251e8b449d2}\index{set cardinality@{set cardinality}!agnsubg@{agnsubg}}
+\index{agnsubg@{agnsubg}!set cardinality@{set cardinality}}
+\doxysubsubsubsubsubsection{\texorpdfstring{agnsubg()}{agnsubg()}}
+{\footnotesize\ttfamily \label{group__card_ga2995244a8e345f4574876251e8b449d2} 
+CGRAPH\+\_\+\+API int agnsubg (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+

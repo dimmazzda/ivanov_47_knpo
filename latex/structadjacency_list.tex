@@ -1,0 +1,105 @@
+\doxysection{Структура adjacency\+List}
+\hypertarget{structadjacency_list}{}\label{structadjacency_list}\index{adjacencyList@{adjacencyList}}
+
+
+список смежности  
+
+
+
+
+{\ttfamily \+\#include $<$headers.\+h$>$}
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{structadjacency_list_a9389bdf15afb4896f4480d6a308d59bb}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em проверка на полное отсутствие дуг \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{structadjacency_list_aa75a0ef0b5b5836b168572df5708ec78}{is\+Equal\+To}} (const \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&other\+List)
+\begin{DoxyCompactList}\small\item\em проверка на равенство двух списков \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structadjacency_list_aae4f3b782a9b161a3502993b2d677848}{substract}} (const \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&subtrahend)
+\begin{DoxyCompactList}\small\item\em нахождение разности двух списков \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ std::\+vector$<$ int $>$ $>$ \doxymbox{\hyperlink{structadjacency_list_a9e5e04100d7defcdf332b58fc4e1a584}{neighbours}}
+\begin{DoxyCompactList}\small\item\em двуменый массив дуг \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{structadjacency_list_a5cdc6a2c9f0faef95b0b74f8b0833996}{count\+Of\+Vertices}} = 0
+\begin{DoxyCompactList}\small\item\em количество вершин \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+представляет собой двуменрый массив, первый индекс -\/ номер вершины-\/источника, второй индекс -\/ номер вершины-\/приёмника, возможны несколько вхождений одной вершины-\/приёмника для описания кратных связей 
+
+\label{structadjacency_list_doc-func-members}
+\Hypertarget{structadjacency_list_doc-func-members}
+\doxysubsection{Методы}
+\Hypertarget{structadjacency_list_a9389bdf15afb4896f4480d6a308d59bb}\index{adjacencyList@{adjacencyList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!adjacencyList@{adjacencyList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{structadjacency_list_a9389bdf15afb4896f4480d6a308d59bb} 
+bool adjacency\+List::\+is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Возвращает}
+true Если список пустой 
+
+false Если список непустой 
+\end{DoxyReturn}
+\Hypertarget{structadjacency_list_aa75a0ef0b5b5836b168572df5708ec78}\index{adjacencyList@{adjacencyList}!isEqualTo@{isEqualTo}}
+\index{isEqualTo@{isEqualTo}!adjacencyList@{adjacencyList}}
+\doxysubsubsection{\texorpdfstring{isEqualTo()}{isEqualTo()}}
+{\footnotesize\ttfamily \label{structadjacency_list_aa75a0ef0b5b5836b168572df5708ec78} 
+bool adjacency\+List::\+is\+Equal\+To (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&}]{other\+List}{}\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{Заметки}
+порядок описания дуг внутри векторов неважен 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em other\+List} & \+[in]\+ Константная ссылка на второй список смежности для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true Если списки равны 
+
+false Если списки неравны 
+\end{DoxyReturn}
+\Hypertarget{structadjacency_list_aae4f3b782a9b161a3502993b2d677848}\index{adjacencyList@{adjacencyList}!substract@{substract}}
+\index{substract@{substract}!adjacencyList@{adjacencyList}}
+\doxysubsubsection{\texorpdfstring{substract()}{substract()}}
+{\footnotesize\ttfamily \label{structadjacency_list_aae4f3b782a9b161a3502993b2d677848} 
+\doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \texorpdfstring{$\ast$}{*} adjacency\+List::\+substract (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{structadjacency_list}{adjacency\+List}} \&}]{subtrahend}{}\end{DoxyParamCaption})}
+
+убирает из первого списка все дуги, содержащиеся во втором \begin{DoxyNote}{Заметки}
+каждая дуга вычитается в том количестве, в котором содержится в вычитаемом 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Аргументы}
+{\em subtrahend} & \+[in]\+ Константная ссылка на вычитаемое \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Указатель на новый список -\/ результат вычитания 
+\end{DoxyReturn}
+
+
+\label{structadjacency_list_doc-variable-members}
+\Hypertarget{structadjacency_list_doc-variable-members}
+\doxysubsection{Данные класса}
+\Hypertarget{structadjacency_list_a5cdc6a2c9f0faef95b0b74f8b0833996}\index{adjacencyList@{adjacencyList}!countOfVertices@{countOfVertices}}
+\index{countOfVertices@{countOfVertices}!adjacencyList@{adjacencyList}}
+\doxysubsubsection{\texorpdfstring{countOfVertices}{countOfVertices}}
+{\footnotesize\ttfamily \label{structadjacency_list_a5cdc6a2c9f0faef95b0b74f8b0833996} 
+int adjacency\+List::\+count\+Of\+Vertices = 0}
+
+\Hypertarget{structadjacency_list_a9e5e04100d7defcdf332b58fc4e1a584}\index{adjacencyList@{adjacencyList}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!adjacencyList@{adjacencyList}}
+\doxysubsubsection{\texorpdfstring{neighbours}{neighbours}}
+{\footnotesize\ttfamily \label{structadjacency_list_a9e5e04100d7defcdf332b58fc4e1a584} 
+std::\+vector$<$std::\+vector$<$int$>$ $>$ adjacency\+List::\+neighbours}
+
+
+
+Объявления и описания членов структур находятся в файлах:\+\begin{DoxyCompactItemize}
+\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{headers_8h}{headers.\+h}}\item 
+C:\+/\+\+Users/\+Дмитрий/\+source/\+repos/\+ivanov\+\_\+47\+\_\+knpo/\+ivanov\+\_\+47\+\_\+knpo/\+\doxymbox{\hyperlink{ivanov__47__knpo_8cpp}{ivanov\+\_\+47\+\_\+knpo.\+cpp}}\end{DoxyCompactItemize}

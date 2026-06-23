@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Graphviz context library (GVC) API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group__gvc__api.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Graphviz context library (GVC) API <div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Файлы</h2></td></tr>
+<tr class="memitem:Graphviz_2Finclude_2Fgraphviz_2Fgvc_2Eh" id="r_Graphviz_2Finclude_2Fgraphviz_2Fgvc_2Eh"><td class="memItemLeft">файл &#160;</td><td class="memItemRight"><a class="el" href="gvc_8h.html">Graphviz/include/graphviz/gvc.h</a></td></tr>
+<tr class="memdesc:gvc_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Graphviz context library. <br /></td></tr>
+<tr class="memitem:Graphviz_2Finclude_2Fgraphviz_2Fgvcext_2Eh" id="r_Graphviz_2Finclude_2Fgraphviz_2Fgvcext_2Eh"><td class="memItemLeft">файл &#160;</td><td class="memItemRight"><a class="el" href="gvcext_8h.html">Graphviz/include/graphviz/gvcext.h</a></td></tr>
+<tr class="memitem:Graphviz_2Finclude_2Fgraphviz_2Fgvcjob_2Eh" id="r_Graphviz_2Finclude_2Fgraphviz_2Fgvcjob_2Eh"><td class="memItemLeft">файл &#160;</td><td class="memItemRight"><a class="el" href="gvcjob_8h.html">Graphviz/include/graphviz/gvcjob.h</a></td></tr>
+<tr class="memitem:Graphviz_2Finclude_2Fgraphviz_2Fgvcommon_2Eh" id="r_Graphviz_2Finclude_2Fgraphviz_2Fgvcommon_2Eh"><td class="memItemLeft">файл &#160;</td><td class="memItemRight"><a class="el" href="gvcommon_8h.html">Graphviz/include/graphviz/gvcommon.h</a></td></tr>
+<tr class="memitem:Graphviz_2Finclude_2Fgraphviz_2Fgvconfig_2Eh" id="r_Graphviz_2Finclude_2Fgraphviz_2Fgvconfig_2Eh"><td class="memItemLeft">файл &#160;</td><td class="memItemRight"><a class="el" href="gvconfig_8h.html">Graphviz/include/graphviz/gvconfig.h</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ga1900bbae79ee742028fdade9874044ab" id="r_ga1900bbae79ee742028fdade9874044ab"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga1900bbae79ee742028fdade9874044ab">LAYOUT_DONE</a>(g)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga018b112f47c2d5d0f16ba15d96da6b83" id="r_ga018b112f47c2d5d0f16ba15d96da6b83"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#ga018b112f47c2d5d0f16ba15d96da6b83">gvToggle</a> (int)</td></tr>
+<tr class="memitem:ga6f9134481fe1f165031eef2f7a15d757" id="r_ga6f9134481fe1f165031eef2f7a15d757"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga6f9134481fe1f165031eef2f7a15d757">gvNEWcontext</a> (const <a class="el" href="structlt__symlist__t.html">lt_symlist_t</a> *builtins, int demand_loading)</td></tr>
+<tr class="memitem:gac3f8b67fedaba6f18a2d590fd2215dd9" id="r_gac3f8b67fedaba6f18a2d590fd2215dd9"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gac3f8b67fedaba6f18a2d590fd2215dd9">gvContext</a> (void)</td></tr>
+<tr class="memitem:ga7a7d68cec7821a013740b4f26691dde3" id="r_ga7a7d68cec7821a013740b4f26691dde3"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga7a7d68cec7821a013740b4f26691dde3">gvContextPlugins</a> (const <a class="el" href="structlt__symlist__t.html">lt_symlist_t</a> *builtins, int demand_loading)</td></tr>
+<tr class="memitem:ga00dbd3b38295f5d2a43f96f8204003f3" id="r_ga00dbd3b38295f5d2a43f96f8204003f3"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char **&#160;</td><td class="memItemRight"><a class="el" href="#ga00dbd3b38295f5d2a43f96f8204003f3">gvcInfo</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *)</td></tr>
+<tr class="memitem:ga66edadacbf11a308d4dbcdaf1839a953" id="r_ga66edadacbf11a308d4dbcdaf1839a953"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char *&#160;</td><td class="memItemRight"><a class="el" href="#ga66edadacbf11a308d4dbcdaf1839a953">gvcVersion</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *)</td></tr>
+<tr class="memitem:gaeb03050323b78e7964a86d7208745852" id="r_gaeb03050323b78e7964a86d7208745852"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char *&#160;</td><td class="memItemRight"><a class="el" href="#gaeb03050323b78e7964a86d7208745852">gvcBuildDate</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *)</td></tr>
+<tr class="memitem:ga1afe7f473fdb3f6bdc031d4dffaef68c" id="r_ga1afe7f473fdb3f6bdc031d4dffaef68c"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga1afe7f473fdb3f6bdc031d4dffaef68c">gvParseArgs</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, int argc, char **argv)</td></tr>
+<tr class="memitem:gae4b75fef75c05fbb8caf8f7706df4532" id="r_gae4b75fef75c05fbb8caf8f7706df4532"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gae4b75fef75c05fbb8caf8f7706df4532">gvNextInputGraph</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc)</td></tr>
+<tr class="memitem:ga3e8b6e342763fd924d91c79c61e0cec6" id="r_ga3e8b6e342763fd924d91c79c61e0cec6"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga3e8b6e342763fd924d91c79c61e0cec6">gvPluginsGraph</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc)</td></tr>
+<tr class="memitem:ga67788d439d9ee5c1eeda56ebf02813aa" id="r_ga67788d439d9ee5c1eeda56ebf02813aa"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga67788d439d9ee5c1eeda56ebf02813aa">gvLayout</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g, const char *engine)</td></tr>
+<tr class="memitem:gaaa732e30740522246477e06e6eca7d64" id="r_gaaa732e30740522246477e06e6eca7d64"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#gaaa732e30740522246477e06e6eca7d64">gvLayoutJobs</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:ga970a70b771b2ad9758285406830ca31c" id="r_ga970a70b771b2ad9758285406830ca31c"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> bool&#160;</td><td class="memItemRight"><a class="el" href="#ga970a70b771b2ad9758285406830ca31c">gvLayoutDone</a> (<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:ga1cdc6ab9575d837bae9b4e9fa2aee014" id="r_ga1cdc6ab9575d837bae9b4e9fa2aee014"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#ga1cdc6ab9575d837bae9b4e9fa2aee014">attach_attrs</a> (<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:ga76ad723902c7c6e808b174b6ef825b01" id="r_ga76ad723902c7c6e808b174b6ef825b01"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga76ad723902c7c6e808b174b6ef825b01">gvRender</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g, const char *format, FILE *out)</td></tr>
+<tr class="memitem:ga2d56af58cb0bf82c3d978b46a6917703" id="r_ga2d56af58cb0bf82c3d978b46a6917703"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga2d56af58cb0bf82c3d978b46a6917703">gvRenderFilename</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g, const char *format, const char *filename)</td></tr>
+<tr class="memitem:ga12cfb6aba5527c755f511f27e874e364" id="r_ga12cfb6aba5527c755f511f27e874e364"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga12cfb6aba5527c755f511f27e874e364">gvRenderContext</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g, const char *format, void *context)</td></tr>
+<tr class="memitem:ga39869e53e6f5f8c7e65f44f403307204" id="r_ga39869e53e6f5f8c7e65f44f403307204"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga39869e53e6f5f8c7e65f44f403307204">gvRenderData</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g, const char *format, char **result, size_t *length)</td></tr>
+<tr class="memitem:gafa4ad95793974b7f7c630dc62cf10bf7" id="r_gafa4ad95793974b7f7c630dc62cf10bf7"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#gafa4ad95793974b7f7c630dc62cf10bf7">gvFreeRenderData</a> (char *data)</td></tr>
+<tr class="memitem:gad4103215debda04c9af5c0c1a63adc7e" id="r_gad4103215debda04c9af5c0c1a63adc7e"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#gad4103215debda04c9af5c0c1a63adc7e">gvRenderJobs</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:gad14d00ac9b4d7cf10bce3a90ffff1a19" id="r_gad14d00ac9b4d7cf10bce3a90ffff1a19"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#gad14d00ac9b4d7cf10bce3a90ffff1a19">gvFreeLayout</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+<tr class="memitem:ga9af0ef2b1a4645bcb168768b952b161a" id="r_ga9af0ef2b1a4645bcb168768b952b161a"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#ga9af0ef2b1a4645bcb168768b952b161a">gvFinalize</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc)</td></tr>
+<tr class="memitem:ga86a2da027bb6065bb5e88f630a27456c" id="r_ga86a2da027bb6065bb5e88f630a27456c"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#ga86a2da027bb6065bb5e88f630a27456c">gvFreeContext</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc)</td></tr>
+<tr class="memitem:ga95d373728973c5ac191a31b7bc7d8572" id="r_ga95d373728973c5ac191a31b7bc7d8572"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char **&#160;</td><td class="memItemRight"><a class="el" href="#ga95d373728973c5ac191a31b7bc7d8572">gvPluginList</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, const char *kind, int *sz)</td></tr>
+<tr class="memitem:gad78d42fe0cb3303d4bec3d6db8cace41" id="r_gad78d42fe0cb3303d4bec3d6db8cace41"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#gad78d42fe0cb3303d4bec3d6db8cace41">gvAddLibrary</a> (<a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *gvc, <a class="el" href="structgvplugin__library__t.html">gvplugin_library_t</a> *lib)</td></tr>
+<tr class="memitem:gad2db2fef176ff1719e9a83e3495e2c31" id="r_gad2db2fef176ff1719e9a83e3495e2c31"><td class="memItemLeft"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#gad2db2fef176ff1719e9a83e3495e2c31">gvToolTred</a> (<a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *g)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"></div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="ga1900bbae79ee742028fdade9874044ab" name="ga1900bbae79ee742028fdade9874044ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1900bbae79ee742028fdade9874044ab">&#9670;&#160;</a></span>LAYOUT_DONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LAYOUT_DONE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Макроопределение:</b><div class="fragment"><div class="line">(<a class="code hl_function" href="group__cgraph__rec.html#ga6bdb778abe4c0e93b957329520e31917">agbindrec</a>(g, <span class="stringliteral">&quot;Agraphinfo_t&quot;</span>, 0, <span class="keyword">true</span>) &amp;&amp; <a class="code hl_define" href="group__cgraph__graph.html#ga304761d6ec6f0b12b6cef1b38d79fa37">GD_drawing</a>(g))</div>
+<div class="ttc" id="agroup__cgraph__graph_html_ga304761d6ec6f0b12b6cef1b38d79fa37"><div class="ttname"><a href="group__cgraph__graph.html#ga304761d6ec6f0b12b6cef1b38d79fa37">GD_drawing</a></div><div class="ttdeci">#define GD_drawing(g)</div><div class="ttdef"><b>Определения</b> types.h:353</div></div>
+<div class="ttc" id="agroup__cgraph__rec_html_ga6bdb778abe4c0e93b957329520e31917"><div class="ttname"><a href="group__cgraph__rec.html#ga6bdb778abe4c0e93b957329520e31917">agbindrec</a></div><div class="ttdeci">CGRAPH_API void * agbindrec(void *obj, const char *name, unsigned int recsize, int move_to_front)</div><div class="ttdoc">attaches a new record of the given size to the object</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="ga1cdc6ab9575d837bae9b4e9fa2aee014" name="ga1cdc6ab9575d837bae9b4e9fa2aee014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cdc6ab9575d837bae9b4e9fa2aee014">&#9670;&#160;</a></span>attach_attrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void attach_attrs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad78d42fe0cb3303d4bec3d6db8cace41" name="gad78d42fe0cb3303d4bec3d6db8cace41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad78d42fe0cb3303d4bec3d6db8cace41">&#9670;&#160;</a></span>gvAddLibrary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void gvAddLibrary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structgvplugin__library__t.html">gvplugin_library_t</a> *</td>          <td class="paramname"><span class="paramname"><em>lib</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a library from your user application </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gvc</td><td>Graphviz context to add library to </td></tr>
+    <tr><td class="paramname">lib</td><td>library to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaeb03050323b78e7964a86d7208745852" name="gaeb03050323b78e7964a86d7208745852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb03050323b78e7964a86d7208745852">&#9670;&#160;</a></span>gvcBuildDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char * gvcBuildDate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga00dbd3b38295f5d2a43f96f8204003f3" name="ga00dbd3b38295f5d2a43f96f8204003f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00dbd3b38295f5d2a43f96f8204003f3">&#9670;&#160;</a></span>gvcInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char ** gvcInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac3f8b67fedaba6f18a2d590fd2215dd9" name="gac3f8b67fedaba6f18a2d590fd2215dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3f8b67fedaba6f18a2d590fd2215dd9">&#9670;&#160;</a></span>gvContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> * gvContext </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7a7d68cec7821a013740b4f26691dde3" name="ga7a7d68cec7821a013740b4f26691dde3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a7d68cec7821a013740b4f26691dde3">&#9670;&#160;</a></span>gvContextPlugins()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> * gvContextPlugins </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlt__symlist__t.html">lt_symlist_t</a> *</td>          <td class="paramname"><span class="paramname"><em>builtins</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>demand_loading</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga66edadacbf11a308d4dbcdaf1839a953" name="ga66edadacbf11a308d4dbcdaf1839a953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66edadacbf11a308d4dbcdaf1839a953">&#9670;&#160;</a></span>gvcVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char * gvcVersion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9af0ef2b1a4645bcb168768b952b161a" name="ga9af0ef2b1a4645bcb168768b952b161a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9af0ef2b1a4645bcb168768b952b161a">&#9670;&#160;</a></span>gvFinalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void gvFinalize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga86a2da027bb6065bb5e88f630a27456c" name="ga86a2da027bb6065bb5e88f630a27456c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86a2da027bb6065bb5e88f630a27456c">&#9670;&#160;</a></span>gvFreeContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvFreeContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad14d00ac9b4d7cf10bce3a90ffff1a19" name="gad14d00ac9b4d7cf10bce3a90ffff1a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad14d00ac9b4d7cf10bce3a90ffff1a19">&#9670;&#160;</a></span>gvFreeLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvFreeLayout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafa4ad95793974b7f7c630dc62cf10bf7" name="gafa4ad95793974b7f7c630dc62cf10bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa4ad95793974b7f7c630dc62cf10bf7">&#9670;&#160;</a></span>gvFreeRenderData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void gvFreeRenderData </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga67788d439d9ee5c1eeda56ebf02813aa" name="ga67788d439d9ee5c1eeda56ebf02813aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67788d439d9ee5c1eeda56ebf02813aa">&#9670;&#160;</a></span>gvLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvLayout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>engine</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga970a70b771b2ad9758285406830ca31c" name="ga970a70b771b2ad9758285406830ca31c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga970a70b771b2ad9758285406830ca31c">&#9670;&#160;</a></span>gvLayoutDone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> bool gvLayoutDone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaaa732e30740522246477e06e6eca7d64" name="gaaa732e30740522246477e06e6eca7d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa732e30740522246477e06e6eca7d64">&#9670;&#160;</a></span>gvLayoutJobs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvLayoutJobs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6f9134481fe1f165031eef2f7a15d757" name="ga6f9134481fe1f165031eef2f7a15d757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f9134481fe1f165031eef2f7a15d757">&#9670;&#160;</a></span>gvNEWcontext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> * gvNEWcontext </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlt__symlist__t.html">lt_symlist_t</a> *</td>          <td class="paramname"><span class="paramname"><em>builtins</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>demand_loading</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae4b75fef75c05fbb8caf8f7706df4532" name="gae4b75fef75c05fbb8caf8f7706df4532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4b75fef75c05fbb8caf8f7706df4532">&#9670;&#160;</a></span>gvNextInputGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> * gvNextInputGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1afe7f473fdb3f6bdc031d4dffaef68c" name="ga1afe7f473fdb3f6bdc031d4dffaef68c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1afe7f473fdb3f6bdc031d4dffaef68c">&#9670;&#160;</a></span>gvParseArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvParseArgs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga95d373728973c5ac191a31b7bc7d8572" name="ga95d373728973c5ac191a31b7bc7d8572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga95d373728973c5ac191a31b7bc7d8572">&#9670;&#160;</a></span>gvPluginList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> char ** gvPluginList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>kind</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3e8b6e342763fd924d91c79c61e0cec6" name="ga3e8b6e342763fd924d91c79c61e0cec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e8b6e342763fd924d91c79c61e0cec6">&#9670;&#160;</a></span>gvPluginsGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> <a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> * gvPluginsGraph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga76ad723902c7c6e808b174b6ef825b01" name="ga76ad723902c7c6e808b174b6ef825b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga76ad723902c7c6e808b174b6ef825b01">&#9670;&#160;</a></span>gvRender()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvRender </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga12cfb6aba5527c755f511f27e874e364" name="ga12cfb6aba5527c755f511f27e874e364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12cfb6aba5527c755f511f27e874e364">&#9670;&#160;</a></span>gvRenderContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvRenderContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>context</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga39869e53e6f5f8c7e65f44f403307204" name="ga39869e53e6f5f8c7e65f44f403307204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39869e53e6f5f8c7e65f44f403307204">&#9670;&#160;</a></span>gvRenderData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvRenderData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2d56af58cb0bf82c3d978b46a6917703" name="ga2d56af58cb0bf82c3d978b46a6917703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d56af58cb0bf82c3d978b46a6917703">&#9670;&#160;</a></span>gvRenderFilename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvRenderFilename </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad4103215debda04c9af5c0c1a63adc7e" name="gad4103215debda04c9af5c0c1a63adc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4103215debda04c9af5c0c1a63adc7e">&#9670;&#160;</a></span>gvRenderJobs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvRenderJobs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gvcext_8h.html#ad6cf1b9d460390425d8f423380c2a7ed">GVC_t</a> *</td>          <td class="paramname"><span class="paramname"><em>gvc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga018b112f47c2d5d0f16ba15d96da6b83" name="ga018b112f47c2d5d0f16ba15d96da6b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga018b112f47c2d5d0f16ba15d96da6b83">&#9670;&#160;</a></span>gvToggle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> void gvToggle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad2db2fef176ff1719e9a83e3495e2c31" name="gad2db2fef176ff1719e9a83e3495e2c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2db2fef176ff1719e9a83e3495e2c31">&#9670;&#160;</a></span>gvToolTred()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="gvc_8h.html#a021af93a41eb0d655443edeeabbc15bc">GVC_API</a> int gvToolTred </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#aedca4e11cb6b1a3893747040cb785c12">graph_t</a> *</td>          <td class="paramname"><span class="paramname"><em>g</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Perform a Transitive Reduction on a graph </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>graph to be transformed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

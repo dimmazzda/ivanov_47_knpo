@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Объединение inside_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('unioninside__t.html','','unioninside__t-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Объединение inside_t</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon">struct {&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a7671ae6fb3dbcc44d391d42276ac90c9" id="r_a7671ae6fb3dbcc44d391d42276ac90c9"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a> *&#160;&#160;&#160;<a class="el" href="#a3620bd8adf966518855eb3d6f7e00559">p</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a008813116514be1926af90cf3ac241a5" id="r_a008813116514be1926af90cf3ac241a5"><td class="memItemLeft anon">&#160;&#160;&#160;double *&#160;&#160;&#160;<a class="el" href="#a614e5d44bf0a98a27a1544cb50ed148f">r</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:aae29bd03758ac02a10e2e806a847d80c" id="r_aae29bd03758ac02a10e2e806a847d80c"><td class="memItemLeft anonEnd">}&#160;</td><td class="memItemRight"><a class="el" href="#aae29bd03758ac02a10e2e806a847d80c">a</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft anon">struct {&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a4e22106f9565ee3ee373e1e004b60f6e" id="r_a4e22106f9565ee3ee373e1e004b60f6e"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;&#160;&#160;<a class="el" href="#a789bb3785487dc37f6f11b50fa725cc0">n</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a123ca6842e5cc83e1c08cca913974a93" id="r_a123ca6842e5cc83e1c08cca913974a93"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="structboxf.html">boxf</a> *&#160;&#160;&#160;<a class="el" href="#acb06ba5b5c29c0dc784bbe6ddccc8e09">bp</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a1d2504dfd4168e1450a6867e994bbd0e" id="r_a1d2504dfd4168e1450a6867e994bbd0e"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a> *&#160;&#160;&#160;<a class="el" href="#a83b023bbf47c73c7b9c1e0b20ad5aa02">lastn</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a1d2504dfd4168e1450a6867e994bbd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">last node argument  <a href="#a83b023bbf47c73c7b9c1e0b20ad5aa02">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a23350ca7c8e8a76ab64665f3ccc9325a" id="r_a23350ca7c8e8a76ab64665f3ccc9325a"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a6f975e678a3fb58c6b917a44b1aef3fa">radius</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a23350ca7c8e8a76ab64665f3ccc9325a"><td class="mdescLeft">&#160;</td><td class="mdescRight">last radius seen  <a href="#a6f975e678a3fb58c6b917a44b1aef3fa">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a252fc80b0ef4bf330827fcfab1ebd9be" id="r_a252fc80b0ef4bf330827fcfab1ebd9be"><td class="memItemLeft anon">&#160;&#160;&#160;<a class="el" href="structpolygon__t.html">polygon_t</a> *&#160;&#160;&#160;<a class="el" href="#a8300ac20ca2b16e72abdbc5f21d7dfa7">last_poly</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a252fc80b0ef4bf330827fcfab1ebd9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">last seen polygon  <a href="#a8300ac20ca2b16e72abdbc5f21d7dfa7">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a0c324b8d8e46745f18266fdcea8887ec" id="r_a0c324b8d8e46745f18266fdcea8887ec"><td class="memItemLeft anon">&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="#a8eea4af8e5a7f99aa2b736d42070e7e9">last</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a0c324b8d8e46745f18266fdcea8887ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">last used polygon vertex  <a href="#a8eea4af8e5a7f99aa2b736d42070e7e9">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a29037b0507b502a5c158c0dbecea4981" id="r_a29037b0507b502a5c158c0dbecea4981"><td class="memItemLeft anon">&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="#af89203e76b2da244d4f8a0fb2d2037b0">outp</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a29037b0507b502a5c158c0dbecea4981"><td class="mdescLeft">&#160;</td><td class="mdescRight">last used outline periphery  <a href="#af89203e76b2da244d4f8a0fb2d2037b0">Подробнее...</a><br /></td></tr>
+<tr class="memitem:a2578747d24e1fab3dc28e9da995d07fa" id="r_a2578747d24e1fab3dc28e9da995d07fa"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a4183f457ad5766fd38872bfb11880162">scalex</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a19388def67038089987b3a0d6e904eba" id="r_a19388def67038089987b3a0d6e904eba"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a360b877b642ae8ec60d0fd1795584dcc">scaley</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a3c1de7a8a47b0d3d6342b53bd2c70fe8" id="r_a3c1de7a8a47b0d3d6342b53bd2c70fe8"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a7f3ab834b496b33c4d80c32e66107de6">box_URx</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memitem:a1704f8970306c54e848ac51b6408d000" id="r_a1704f8970306c54e848ac51b6408d000"><td class="memItemLeft anon">&#160;&#160;&#160;double&#160;&#160;&#160;<a class="el" href="#a97e4caa3a20734b719e78ae45e1164c8">box_URy</a>&#160;</td><td class="memItemRight"></td></tr>
+<tr class="memdesc:a1704f8970306c54e848ac51b6408d000"><td class="mdescLeft">&#160;</td><td class="mdescRight">various computed sizes of aspects of the last seen polygon  <a href="#a97e4caa3a20734b719e78ae45e1164c8">Подробнее...</a><br /></td></tr>
+<tr class="memitem:aceb1db7c0f5bd7c1e5129bf6d3c0668f" id="r_aceb1db7c0f5bd7c1e5129bf6d3c0668f"><td class="memItemLeft anonEnd">}&#160;</td><td class="memItemRight"><a class="el" href="#aceb1db7c0f5bd7c1e5129bf6d3c0668f">s</a></td></tr>
+</table>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="aae29bd03758ac02a10e2e806a847d80c" name="aae29bd03758ac02a10e2e806a847d80c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae29bd03758ac02a10e2e806a847d80c">&#9670;&#160;</a></span>[struct]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct  { ... }  inside_t::a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f3ab834b496b33c4d80c32e66107de6" name="a7f3ab834b496b33c4d80c32e66107de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f3ab834b496b33c4d80c32e66107de6">&#9670;&#160;</a></span>box_URx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inside_t::box_URx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97e4caa3a20734b719e78ae45e1164c8" name="a97e4caa3a20734b719e78ae45e1164c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97e4caa3a20734b719e78ae45e1164c8">&#9670;&#160;</a></span>box_URy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inside_t::box_URy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb06ba5b5c29c0dc784bbe6ddccc8e09" name="acb06ba5b5c29c0dc784bbe6ddccc8e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb06ba5b5c29c0dc784bbe6ddccc8e09">&#9670;&#160;</a></span>bp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboxf.html">boxf</a>* inside_t::bp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8eea4af8e5a7f99aa2b736d42070e7e9" name="a8eea4af8e5a7f99aa2b736d42070e7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eea4af8e5a7f99aa2b736d42070e7e9">&#9670;&#160;</a></span>last</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t inside_t::last</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8300ac20ca2b16e72abdbc5f21d7dfa7" name="a8300ac20ca2b16e72abdbc5f21d7dfa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8300ac20ca2b16e72abdbc5f21d7dfa7">&#9670;&#160;</a></span>last_poly</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpolygon__t.html">polygon_t</a>* inside_t::last_poly</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83b023bbf47c73c7b9c1e0b20ad5aa02" name="a83b023bbf47c73c7b9c1e0b20ad5aa02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b023bbf47c73c7b9c1e0b20ad5aa02">&#9670;&#160;</a></span>lastn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* inside_t::lastn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a789bb3785487dc37f6f11b50fa725cc0" name="a789bb3785487dc37f6f11b50fa725cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a789bb3785487dc37f6f11b50fa725cc0">&#9670;&#160;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#aa54efbeed985023658063bdae73347ec">node_t</a>* inside_t::n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af89203e76b2da244d4f8a0fb2d2037b0" name="af89203e76b2da244d4f8a0fb2d2037b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89203e76b2da244d4f8a0fb2d2037b0">&#9670;&#160;</a></span>outp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t inside_t::outp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3620bd8adf966518855eb3d6f7e00559" name="a3620bd8adf966518855eb3d6f7e00559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3620bd8adf966518855eb3d6f7e00559">&#9670;&#160;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geom_8h.html#ab1d4fa1dc6a3884bc0f897efb568a084">pointf</a>* inside_t::p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a614e5d44bf0a98a27a1544cb50ed148f" name="a614e5d44bf0a98a27a1544cb50ed148f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614e5d44bf0a98a27a1544cb50ed148f">&#9670;&#160;</a></span>r</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double* inside_t::r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f975e678a3fb58c6b917a44b1aef3fa" name="a6f975e678a3fb58c6b917a44b1aef3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f975e678a3fb58c6b917a44b1aef3fa">&#9670;&#160;</a></span>radius</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inside_t::radius</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aceb1db7c0f5bd7c1e5129bf6d3c0668f" name="aceb1db7c0f5bd7c1e5129bf6d3c0668f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceb1db7c0f5bd7c1e5129bf6d3c0668f">&#9670;&#160;</a></span>[struct]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct  { ... }  inside_t::s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4183f457ad5766fd38872bfb11880162" name="a4183f457ad5766fd38872bfb11880162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4183f457ad5766fd38872bfb11880162">&#9670;&#160;</a></span>scalex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inside_t::scalex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a360b877b642ae8ec60d0fd1795584dcc" name="a360b877b642ae8ec60d0fd1795584dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360b877b642ae8ec60d0fd1795584dcc">&#9670;&#160;</a></span>scaley</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inside_t::scaley</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов объединения находятся в файле:<ul>
+<li>Graphviz/include/graphviz/<a class="el" href="types_8h_source.html">types.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="unioninside__t.html">inside_t</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

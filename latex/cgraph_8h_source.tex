@@ -1,0 +1,480 @@
+\doxysection{cgraph.\+h}
+\hypertarget{cgraph_8h_source}{}\label{cgraph_8h_source}\index{Graphviz/include/graphviz/cgraph.h@{Graphviz/include/graphviz/cgraph.h}}
+\doxymbox{\hyperlink{cgraph_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*************************************************************************}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2011\ AT\&T\ Intellectual\ Property}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ All\ rights\ reserved.\ This\ program\ and\ the\ accompanying\ materials}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ are\ made\ available\ under\ the\ terms\ of\ the\ Eclipse\ Public\ License\ v1.0}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ which\ accompanies\ this\ distribution,\ and\ is\ available\ at}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ https://www.eclipse.org/legal/epl-\/v10.html}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ Contributors:\ Details\ at\ https://graphviz.org}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *************************************************************************/}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{cdt_8h}{cdt.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifdef\ GVDLL}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#ifdef\ EXPORT\_CGRAPH}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ CGRAPH\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ CGRAPH\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#ifndef\ CGRAPH\_API}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ CGRAPH\_API\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ forward\ struct\ type\ declarations\ */}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{typedef}\ uint64\_t\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}};\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agtag__s}{Agtag\_s}}\ \doxymbox{\hyperlink{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c}{Agtag\_t}};}
+\DoxyCodeLine{00075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agobj__s}{Agobj\_s}}\ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}};\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agraph__s}{Agraph\_s}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}};\ \ \ \ \ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdesc__s}{Agdesc\_s}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}};\ \ \ \ \ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdstate__s}{Agdstate\_s}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03}{Agdstate\_t}};\ }
+\DoxyCodeLine{00082\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agclos__s}{Agclos\_s}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e}{Agclos\_t}};\ \ \ \ \ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agnode__s}{Agnode\_s}}\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}};\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agsubnode__s}{Agsubnode\_s}}\ \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\_t}};}
+\DoxyCodeLine{00091\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agedge__s}{Agedge\_s}}\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agedgepair__s}{Agedgepair\_s}}\ \doxymbox{\hyperlink{group__cgraph__edge_ga23808484bcb2730ccccc6138ef0fc0e2}{Agedgepair\_t}};\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agiddisc__s}{Agiddisc\_s}}\ \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\_t}};\ }
+\DoxyCodeLine{00097\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agiodisc__s}{Agiodisc\_s}}\ \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\_t}};\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdisc__s}{Agdisc\_s}}\ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}};\ \ \ \ \ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agcbdisc__s}{Agcbdisc\_s}}\ \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\_t}};\ \ \ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agcbstack__s}{Agcbstack\_s}}\ \doxymbox{\hyperlink{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}{Agcbstack\_t}};\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agsym__s}{Agsym\_s}}\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agattr__s}{Agattr\_s}}\ \doxymbox{\hyperlink{group__cgraph__rec_ga842c1770dab888f97a2124fd1c4beab5}{Agattr\_t}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdatadict__s}{Agdatadict\_s}}\ \doxymbox{\hyperlink{group__cgraph__rec_gaf9586e118422d27a92e6c9ac694e8810}{Agdatadict\_t}};\ }
+\DoxyCodeLine{00168\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agrec__s}{Agrec\_s}}\ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agrec__s}{Agrec\_s}}\ \{}
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{struct_agrec__s_a81a026cc6c0a0759940833065f88971d}{name}};}
+\DoxyCodeLine{00174\ \ \ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}}\ *\doxymbox{\hyperlink{struct_agrec__s_a621c3208b7772dc3b5911997c41d2d87}{next}};\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ following\ this\ would\ be\ any\ programmer-\/defined\ data\ */}}
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agtag__s}{Agtag\_s}}\ \{}
+\DoxyCodeLine{00199\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agtag__s_a3151531a8a8e65463e3430ac63b98eea}{objtype}}\ :\ 2;\ \textcolor{comment}{/*\ see\ enum\ below\ */}}
+\DoxyCodeLine{00200\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agtag__s_aaa4d9a53a33a194e419ce32d9e2db3be}{mtflock}}\ :\ 1;\ }
+\DoxyCodeLine{00201\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agtag__s_a299f4a9923f3a3b4b97d4ac2a5d74810}{attrwf}}\ :\ 1;\ \ \textcolor{comment}{/*\ attrs\ written\ (parity,\ write.c)\ */}}
+\DoxyCodeLine{00202\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agtag__s_a32e66cb84ffcc0b778c7658205e1e541}{seq}}\ :\ (\textcolor{keyword}{sizeof}(unsigned)\ *\ 8\ -\/\ 4);\ \textcolor{comment}{/*\ sequence\ no.\ */}}
+\DoxyCodeLine{00203\ \ \ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ \doxymbox{\hyperlink{struct_agtag__s_aead7c6281f5867d66019770132f16ab3}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ client\ \ ID\ */}}
+\DoxyCodeLine{00204\ \};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{enum}\ \{\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98ab0ef15c9721d699101799a52f499aa14}{AGRAPH}},\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a3dc0fc9889b0101640e46038fcf56a5f}{AGNODE}},\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE}},\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a1e749de2c6d04a9bca3a05fa638d9fbb}{AGOUTEDGE}}\ =\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a2ae074e3366f229465b0e30a423e2cb1}{AGEDGE}},\ \doxymbox{\hyperlink{group__cgraph__object_gga7c43c4e305e970d5256c3f4844152f98a8738b27cfa6c5ba5e2817d4b2d9fd684}{AGINEDGE}}\ \};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00210\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agobj__s}{Agobj\_s}}\ \{}
+\DoxyCodeLine{00211\ \ \ \doxymbox{\hyperlink{group__cgraph__object_gaacd16fe557116c340e6bad52ac843f3c}{Agtag\_t}}\ \doxymbox{\hyperlink{struct_agobj__s_aec3227ecf50548d9bc58169218c7fbfa}{tag}};\ \ \ }
+\DoxyCodeLine{00212\ \ \ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}}\ *\doxymbox{\hyperlink{struct_agobj__s_ac595be4c079abaf534843935f4db97b6}{data}};\ }
+\DoxyCodeLine{00213\ \};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{preprocessor}{\#define\ AGTAG(obj)\ (((Agobj\_t\ *)(obj))-\/>tag)}}
+\DoxyCodeLine{00216\ \textcolor{preprocessor}{\#define\ AGTYPE(obj)\ (AGTAG(obj).objtype)}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{preprocessor}{\#define\ AGID(obj)\ (AGTAG(obj).id)}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#define\ AGSEQ(obj)\ (AGTAG(obj).seq)}}
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#define\ AGATTRWF(obj)\ (AGTAG(obj).attrwf)}}
+\DoxyCodeLine{00225\ \textcolor{preprocessor}{\#define\ AGDATA(obj)\ (((Agobj\_t\ *)(obj))-\/>data)}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agsubnode__s}{Agsubnode\_s}}\ \{\ \textcolor{comment}{/*\ the\ node-\/per-\/graph-\/or-\/subgraph\ record\ */}}
+\DoxyCodeLine{00249\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agsubnode__s_a4218b45bb1bc8e8d8220e38207e90688}{seq\_link}};\ \textcolor{comment}{/*\ must\ be\ first\ */}}
+\DoxyCodeLine{00250\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agsubnode__s_a4f80a8fafe5aca9e0c738cb1fcd8abae}{id\_link}};}
+\DoxyCodeLine{00251\ \ \ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{struct_agsubnode__s_aabe87bcb566b5db602a8d1f332362f1e}{node}};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ the\ object\ */}}
+\DoxyCodeLine{00252\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{struct_agsubnode__s_a47a9f2427ab60c3d6b159edb10bcde04}{in\_id}},\ *\doxymbox{\hyperlink{struct_agsubnode__s_a40380062bc9ec5f5abbe0e2e80381769}{out\_id}};\ \ \ \textcolor{comment}{/*\ by\ node/ID\ for\ random\ access\ */}}
+\DoxyCodeLine{00253\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ *\doxymbox{\hyperlink{struct_agsubnode__s_ac437338b91fb9ace063f906895f94b48}{in\_seq}},\ *\doxymbox{\hyperlink{struct_agsubnode__s_a04181be1bf192265a7eb0f73ec7816a2}{out\_seq}};\ \textcolor{comment}{/*\ by\ node/sequence\ for\ serial\ access\ */}}
+\DoxyCodeLine{00254\ \};}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agnode__s}{Agnode\_s}}\ \{}
+\DoxyCodeLine{00257\ \ \ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ \doxymbox{\hyperlink{struct_agnode__s_a845da849523fd004d8ee7e4f1c243ed8}{base}};}
+\DoxyCodeLine{00258\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{struct_agnode__s_a4770aff479fc297fdc82ac7186d96fc3}{root}};}
+\DoxyCodeLine{00259\ \ \ \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\_t}}\ \doxymbox{\hyperlink{struct_agnode__s_a12600f113e31a45d5d8bcdb4a24924f8}{mainsub}};\ \textcolor{comment}{/*\ embedded\ for\ main\ graph\ */}}
+\DoxyCodeLine{00260\ \};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00265\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agedge__s}{Agedge\_s}}\ \{}
+\DoxyCodeLine{00266\ \ \ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ \doxymbox{\hyperlink{struct_agnode__s_a845da849523fd004d8ee7e4f1c243ed8}{base}};}
+\DoxyCodeLine{00267\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agedge__s_aeb714f7f2f5eafe02c32688ea5a1e8eb}{id\_link}};\ \textcolor{comment}{/*\ main\ graph\ only\ */}}
+\DoxyCodeLine{00268\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agedge__s_a5c8faf20904e419b31077f6bf52b2473}{seq\_link}};}
+\DoxyCodeLine{00269\ \ \ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{struct_agedge__s_a8f8b0e3a0ee65e27315555609e76c509}{node}};\ \textcolor{comment}{/*\ the\ endpoint\ node\ */}}
+\DoxyCodeLine{00270\ \};}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agedgepair__s}{Agedgepair\_s}}\ \{}
+\DoxyCodeLine{00273\ \ \ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ \doxymbox{\hyperlink{struct_agedgepair__s_a3f91019e6eca1bc61d87e82675f0da06}{out}},\ \doxymbox{\hyperlink{struct_agedgepair__s_a137241a185cb7c1492f183ae85ec9935}{in}};}
+\DoxyCodeLine{00274\ \};}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00281\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdesc__s}{Agdesc\_s}}\ \{\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ graph\ descriptor\ */}}
+\DoxyCodeLine{00282\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_aad7b02a96be88194a0cf276f4feab454}{directed}}\ :\ 1;\ \ \textcolor{comment}{/*\ if\ edges\ are\ asymmetric\ */}}
+\DoxyCodeLine{00283\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a4ffc2f9ef86cbde12240f67a91fd0d22}{strict}}\ :\ 1;\ \ \ \ \textcolor{comment}{/*\ if\ multi-\/edges\ forbidden\ */}}
+\DoxyCodeLine{00284\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a4349db6362aa021c96b397dbaf972ab1}{no\_loop}}\ :\ 1;\ \ \ \textcolor{comment}{/*\ if\ no\ loops\ */}}
+\DoxyCodeLine{00285\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a22d8b07b83f80fa6caa3a01e4bce5f56}{maingraph}}\ :\ 1;\ \textcolor{comment}{/*\ if\ this\ is\ the\ top\ level\ graph\ */}}
+\DoxyCodeLine{00286\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a61d6e2c04ac9740f89bcdaec2d2836cb}{no\_write}}\ :\ 1;\ \ \textcolor{comment}{/*\ if\ a\ temporary\ subgraph\ */}}
+\DoxyCodeLine{00287\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a0428b81e63abec9a2d63a4cb20a38119}{has\_attrs}}\ :\ 1;\ \textcolor{comment}{/*\ if\ string\ attr\ tables\ should\ be\ initialized\ */}}
+\DoxyCodeLine{00288\ \ \ \textcolor{keywordtype}{unsigned}\ \doxymbox{\hyperlink{struct_agdesc__s_a7b98909aeaab188ebb64f1ef4442ff03}{has\_cmpnd}}\ :\ 1;\ \textcolor{comment}{/*\ if\ may\ contain\ collapsed\ nodes\ */}}
+\DoxyCodeLine{00289\ \};}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00313\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agiddisc__s}{Agiddisc\_s}}\ \{}
+\DoxyCodeLine{00314\ \ \ \textcolor{keywordtype}{void}\ *(*open)(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ *);\ \textcolor{comment}{/*\ associated\ with\ a\ graph\ */}}
+\DoxyCodeLine{00315\ \ \ long\ (*\doxymbox{\hyperlink{struct_agiddisc__s_a3ab41faa293b078e0300801c7edebe3b}{map}})(\textcolor{keywordtype}{void}\ *state,\ \textcolor{keywordtype}{int}\ objtype,\ \textcolor{keywordtype}{char}\ *str,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ *id,\ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00316\ \ \ void\ (*\doxymbox{\hyperlink{struct_agiddisc__s_a9de80173636ffa2e2920f485fb5d1d89}{free}})(\textcolor{keywordtype}{void}\ *state,\ \textcolor{keywordtype}{int}\ objtype,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ id);}
+\DoxyCodeLine{00317\ \ \ \textcolor{keywordtype}{char}\ *(*print)(\textcolor{keywordtype}{void}\ *state,\ \textcolor{keywordtype}{int}\ objtype,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ id);}
+\DoxyCodeLine{00318\ \ \ void\ (*\doxymbox{\hyperlink{struct_agiddisc__s_a67673147fdf87cec41296dc37406d3ea}{close}})(\textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00319\ \ \ void\ (*\doxymbox{\hyperlink{struct_agiddisc__s_a3bd7dd8eeab462cfd538f3019d283c64}{idregister}})(\textcolor{keywordtype}{void}\ *state,\ \textcolor{keywordtype}{int}\ objtype,\ \textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00320\ \};}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00323\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agiodisc__s}{Agiodisc\_s}}\ \{}
+\DoxyCodeLine{00324\ \ \ int\ (*\doxymbox{\hyperlink{struct_agiodisc__s_a1c91df0b5961319ef5b5ead586f172bc}{afread}})(\textcolor{keywordtype}{void}\ *chan,\ \textcolor{keywordtype}{char}\ *buf,\ \textcolor{keywordtype}{int}\ bufsize);}
+\DoxyCodeLine{00325\ \ \ int\ (*\doxymbox{\hyperlink{struct_agiodisc__s_afec9a0e3659c2330ec58b906163df067}{putstr}})(\textcolor{keywordtype}{void}\ *chan,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00326\ \ \ int\ (*\doxymbox{\hyperlink{struct_agiodisc__s_ad4d831af53e796ce8857e80c0f230380}{flush}})(\textcolor{keywordtype}{void}\ *chan);\ \textcolor{comment}{/*\ sync\ */}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ error\ messages?\ */}}
+\DoxyCodeLine{00328\ \};}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00333\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdisc__s}{Agdisc\_s}}\ \{}
+\DoxyCodeLine{00334\ \ \ \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\_t}}\ *\doxymbox{\hyperlink{struct_agdisc__s_ab074802fcaf2893c1a8af598e4da3657}{id}};}
+\DoxyCodeLine{00335\ \ \ \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\_t}}\ *\doxymbox{\hyperlink{struct_agdisc__s_af525f08f2c7787d98d31c2bcdc01eec1}{io}};}
+\DoxyCodeLine{00336\ \};}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \textcolor{comment}{/*\ default\ resource\ disciplines\ */}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__disc_ga8e845730a89de4d3b5609b996f94c9ac}{Agiddisc\_t}}\ \doxymbox{\hyperlink{group__cgraph__disc_ga8dfe7271f23a5f54f97e73fa363ba0f3}{AgIdDisc}};}
+\DoxyCodeLine{00341\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__disc_gaacaa7e5682be10f0c44bd7a93a00df8d}{Agiodisc\_t}}\ \doxymbox{\hyperlink{group__cgraph__disc_ga24e9bd096c4092649607924dc6e969c8}{AgIoDisc}};}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ \doxymbox{\hyperlink{group__cgraph__disc_gade3d1614ee2c32df0edd7a022f66478a}{AgDefaultDisc}};}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00359\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdstate__s}{Agdstate\_s}}\ \{}
+\DoxyCodeLine{00360\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{struct_agdisc__s_ab074802fcaf2893c1a8af598e4da3657}{id}};}
+\DoxyCodeLine{00361\ \ \ \textcolor{comment}{/*\ IO\ must\ be\ initialized\ and\ finalized\ outside\ Cgraph,}}
+\DoxyCodeLine{00362\ \textcolor{comment}{\ \ \ *\ and\ channels\ (FILES)\ are\ passed\ as\ void*\ arguments.\ */}}
+\DoxyCodeLine{00363\ \};}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b}{agobjfn\_t}})(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ *obj,\ \textcolor{keywordtype}{void}\ *arg);}
+\DoxyCodeLine{00366\ \textcolor{keyword}{typedef}\ void\ (*\doxymbox{\hyperlink{group__cgraph__graph_ga1346110b9185ce19585655259ebd3f54}{agobjupdfn\_t}})(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ *obj,\ \textcolor{keywordtype}{void}\ *arg,}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *sym);}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00384\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agcbdisc__s}{Agcbdisc\_s}}\ \{}
+\DoxyCodeLine{00385\ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00386\ \ \ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b}{agobjfn\_t}}\ \doxymbox{\hyperlink{struct_agcbdisc__s_a15d357569202b04cf212ccbe4b73977e}{ins}};}
+\DoxyCodeLine{00387\ \ \ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga1346110b9185ce19585655259ebd3f54}{agobjupdfn\_t}}\ \doxymbox{\hyperlink{struct_agcbdisc__s_a000572ce35b9b5434bedab66db20c6b6}{mod}};}
+\DoxyCodeLine{00388\ \ \ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga328f1953f5f8ccc75b7ea4bfbfcc3a6b}{agobjfn\_t}}\ \doxymbox{\hyperlink{struct_agcbdisc__s_ae615345d124523a5f0afe31dca91c626}{del}};}
+\DoxyCodeLine{00389\ \ \ \}\ \doxymbox{\hyperlink{struct_agcbdisc__s_a04ad3f2c2c84870709dd2be139c17d53}{graph}},\ \doxymbox{\hyperlink{struct_agcbdisc__s_a46860c9b9e1b1bc549a77ec40f25a17e}{node}},\ \doxymbox{\hyperlink{struct_agcbdisc__s_ad3114c2173ab019e936499a8aa45110b}{edge}};}
+\DoxyCodeLine{00390\ \};}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00393\ }
+\DoxyCodeLine{00395\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agcbstack__s}{Agcbstack\_s}}\ \{}
+\DoxyCodeLine{00396\ \ \ \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\_t}}\ *\doxymbox{\hyperlink{struct_agcbstack__s_a66f93d84dd836107bc51059f9199d6dd}{f}};\ \ \ \ \ \textcolor{comment}{/*\ methods\ */}}
+\DoxyCodeLine{00397\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{struct_agcbstack__s_a51705caf5df97bf3921b62ac681962fb}{state}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ closure\ */}}
+\DoxyCodeLine{00398\ \ \ \doxymbox{\hyperlink{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}{Agcbstack\_t}}\ *\doxymbox{\hyperlink{struct_agcbstack__s_a8545d3b71a0d0cc635d77c2e05a03c92}{prev}};\ \textcolor{comment}{/*\ kept\ in\ a\ stack,\ unlike\ other\ disciplines\ */}}
+\DoxyCodeLine{00399\ \};}
+\DoxyCodeLine{00400\ }
+\DoxyCodeLine{00401\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__callback_ga536796e152d4e2880c6754897dacb1ca}{agpushdisc}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\_t}}\ *disc,\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{struct_agcbstack__s_a51705caf5df97bf3921b62ac681962fb}{state}});}
+\DoxyCodeLine{00402\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__callback_ga04dc55e336444df2689c70304e91a769}{agpopdisc}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__callback_ga1268b501cf6ea9359343e0545e0d89bc}{Agcbdisc\_t}}\ *disc);}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00407\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agclos__s}{Agclos\_s}}\ \{}
+\DoxyCodeLine{00408\ \ \ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ \doxymbox{\hyperlink{struct_agclos__s_a12813e817b42fb7acff7a0224f5ee1f8}{disc}};\ \ \ \ \textcolor{comment}{/*\ resource\ discipline\ functions\ */}}
+\DoxyCodeLine{00409\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga238c6bc86df30b49961fb0b64f33ea03}{Agdstate\_t}}\ \doxymbox{\hyperlink{struct_agclos__s_a2407bce6f259fb4eb550b9a00c7033d9}{state}};\ \textcolor{comment}{/*\ resource\ closures\ */}}
+\DoxyCodeLine{00410\ \ \ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{struct_agclos__s_ae4cb7ac1c55c2f0fdfd4c2ad686ab445}{strdict}};\ \ \ \ }
+\DoxyCodeLine{00411\ \ \ uint64\_t\ \doxymbox{\hyperlink{struct_agclos__s_af0a0d39ca8e22b2ec300011814e5a7cb}{seq}}[3];\ \ \textcolor{comment}{/*\ local\ object\ sequence\ number\ counter\ */}}
+\DoxyCodeLine{00412\ \ \ \doxymbox{\hyperlink{group__cgraph__callback_ga2557226a5c2e12011ae3af38218ce16a}{Agcbstack\_t}}\ *\doxymbox{\hyperlink{struct_agclos__s_a9d4df52e196ebe4d6e141e51f9b304c8}{cb}};\ \ \textcolor{comment}{/*\ user\ and\ system\ callback\ function\ stacks\ */}}
+\DoxyCodeLine{00413\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agclos__s_a5c96003fbd8314a65558dfca1d63a36b}{lookup\_by\_name}}[3];}
+\DoxyCodeLine{00414\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agclos__s_a0eca5f4d1ff837a9f053289f53e7d64b}{lookup\_by\_id}}[3];}
+\DoxyCodeLine{00415\ \};}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00418\ \textcolor{keyword}{struct\ }graphviz\_node\_set;}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00421\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agraph__s}{Agraph\_s}}\ \{}
+\DoxyCodeLine{00422\ \ \ \doxymbox{\hyperlink{group__cgraph__object_ga90bb56515d2b9598f7f967f39cb864e8}{Agobj\_t}}\ \doxymbox{\hyperlink{struct_agraph__s_a447008827c7a64913987af5b0f563552}{base}};}
+\DoxyCodeLine{00423\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{struct_agraph__s_ad6f53e25d7267f4c5f75445d1b8ee82e}{desc}};}
+\DoxyCodeLine{00424\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agraph__s_a2df8de34f665d3e04123cb3823fa9da8}{seq\_link}};}
+\DoxyCodeLine{00425\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agraph__s_ad84d96da2fef8187844e25ae212b8bc2}{id\_link}};}
+\DoxyCodeLine{00426\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agraph__s_a967321ce1713e7199389dd453bde7426}{n\_seq}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00427\ \ \ \textcolor{keyword}{struct\ }graphviz\_node\_set\ *\doxymbox{\hyperlink{struct_agraph__s_a09ad8c48bb9f36bc6b0c018d3ecba63a}{n\_id}};\ }
+\DoxyCodeLine{00428\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agraph__s_a7a8383ba36c1b1d8f3c170cd50b73254}{e\_seq}},\ *\doxymbox{\hyperlink{struct_agraph__s_af6550c5851469c3d9c944f3d26ceb498}{e\_id}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00429\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agraph__s_a0e17e012e2810d1df135d886f59b0ce8}{g\_seq}},\ *\doxymbox{\hyperlink{struct_agraph__s_a41e200329310a25f37bfe259230a59f3}{g\_id}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00430\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{struct_agraph__s_acda4588a8b424083abea7af9b19f0948}{parent}},\ *\doxymbox{\hyperlink{struct_agraph__s_a0fbfab093a6b660ef4e033419bf6929e}{root}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00431\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga06d0f63c3d8a11010e5cde97404bda9e}{Agclos\_t}}\ *\doxymbox{\hyperlink{struct_agraph__s_a9b555fcff98f03ecb326721d2f7dbf73}{clos}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00432\ \};}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \textcolor{comment}{/*\ graphs\ */}}
+\DoxyCodeLine{00435\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__graph_ga85e142c9c453c325cb722ef837d11dd2}{agopen}}(\textcolor{keywordtype}{char}\ *name,\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{struct_agraph__s_ad6f53e25d7267f4c5f75445d1b8ee82e}{desc}},\ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ *disc);}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga3ee45d1d24d5cd3752fa361aea60d17e}{agclose}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00450\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__graph_gaa713e98b20e21ae1d9d95303981b38e5}{agread}}(\textcolor{keywordtype}{void}\ *chan,\ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ *disc);}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__graph_ga4903073e6680f7882f371865875e639e}{agmemread}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cp);}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__graph_ga966226a22960e8ceac4e7f1c6517828b}{agmemconcat}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *cp);}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__graph_ga2a5e1d8106f8c9792c5761af60713a76}{agconcat}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename,\ \textcolor{keywordtype}{void}\ *chan,}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{group__cgraph__disc_gacd835fb7cf0a8a5d8b1dc3198dafff40}{Agdisc\_t}}\ *disc);}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga43c761e45309ba677ca59d8296312483}{agwrite}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{void}\ *chan);}
+\DoxyCodeLine{00471\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga5cd1939122326a203075ca855ff6daf2}{agisdirected}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00472\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga7ed846573acf4555f86ab5c452fc640e}{agisundirected}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00473\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga21defec3b5fab9f37781d0909a7d6bde}{agisstrict}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00474\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__graph_ga45a62bb0e62e5ee18c6e5167648cd923}{agissimple}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00479\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_ga1e8d44a7de90600adccd069df68e1fdc}{agnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00480\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_ga61fc8bec39e11279c569d2e2f798361c}{agidnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00481\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_ga03a53b6f715e313db550a8f6190eb10c}{agsubnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n,\ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00482\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_gad268407778a4c0bf3751274fefdba46b}{agfstnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00483\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_ga47450693c22286ed8d4a1d99c2397409}{agnxtnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00484\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_gaa18cb7517fbe8be4bdcb18cf52acd2c7}{aglstnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00485\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_ga42ea9ee41f66ac773553fa490ae931c0}{agprvnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__node_ga035d8e8997e582435a8c5a7b8b87dd27}{Agsubnode\_t}}\ *\doxymbox{\hyperlink{group__cgraph__node_gadad4a1e185307c87499d6f729a4a2348}{agsubrep}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00488\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__node_gad53cb3497ec9bec98db2ac7e5c54f0b3}{agnodebefore}}(\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *u,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *v);\ \textcolor{comment}{/*\ we\ have\ no\ shame\ */}}
+\DoxyCodeLine{00489\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__node_ga0673ef5a28252affd27980820f2c2774}{agdelnode}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *arg\_n);}
+\DoxyCodeLine{00491\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__node_ga94e70a22f74df89275f02b0f4450b9d9}{agrelabel\_node}}(\doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n,\ \textcolor{keywordtype}{char}\ *newname);}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga95def214657d6bb88fa9fb78c0a8decc}{agedge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *t,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *h,\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00517\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga0742c930a05dedd75c1af738c07a0838}{agidedge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *t,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *h,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ \textcolor{keywordtype}{id},}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00519\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga118a898f2c8f8da04983ee098d6b4397}{agsubedge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *e,\ \textcolor{keywordtype}{int}\ createflag);}
+\DoxyCodeLine{00520\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga96ce3a0e231ffa09821c1c5006ad4b3f}{agfstin}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00521\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga131b383f7a6c07ba45cca2911f96acb4}{agnxtin}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *e);}
+\DoxyCodeLine{00522\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_gad7746ce0558651807cc1c090dd7a10f9}{agfstout}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00523\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_ga114a41c25080ac2787b51b3b2514693b}{agnxtout}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *e);}
+\DoxyCodeLine{00524\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_gaf925ab5ddb3ed9a9dd5d5df1a84ea6bd}{agfstedge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00525\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *\doxymbox{\hyperlink{group__cgraph__edge_gac30d1b378d21509656500ad476b7029b}{agnxtedge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *e,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n);}
+\DoxyCodeLine{00526\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__edge_gaa6b8ecac59848235f597cf522634a371}{agdeledge}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__edge_ga7c54f4922d88107ff771babd5e04dacb}{Agedge\_t}}\ *arg\_e);}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \textcolor{comment}{//\ Generic\ object\ (graphs,\ nodes\ and\ edges)\ functions}}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__object_gaf9dd5dd7686f83a45c2e0b8b1e68853e}{agraphof}}(\textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00535\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__object_ga3f720bb07e800136f69b875bcff5b814}{agroot}}(\textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00539\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__object_ga11b0b313275e821e4fdf0bad5db4f47b}{agcontains}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__object_ga015fdcf259e5cfbbc903ad3f1990556b}{agnameof}}(\textcolor{keywordtype}{void}\ *);}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__object_ga19273212a3f0fca17c542858e6bd1e0b}{agdelete}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__object_gafa0793c2b414e7a69a0cd3c79a407e65}{agobjkind}}(\textcolor{keywordtype}{void}\ *obj);}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00569\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_ga63d197f6e77d5f5ac6d3b47580624b84}{agstrdup}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00577\ }
+\DoxyCodeLine{00578\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_gac1bad18507cb3da698daac382085bfe2}{agstrdup\_text}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_ga4443d4d88064813323bac27514c727ac}{agstrdup\_html}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00586\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__string_ga4b85c338d71db56dccc18040f53638a7}{aghtmlstr}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00589\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_ga83740b274c978d83d6ac8ac5b5cf0196}{agstrbind}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00592\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_ga092b478a64289fe521da748b84efa7d0}{agstrbind\_text}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00595\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_gaa50f90c93be533d833a0637d9c0bab7d}{agstrbind\_html}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00599\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__string_gaa0bb43286b278c334a2db74b0d699338}{agstrfree}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{bool}\ is\_html);}
+\DoxyCodeLine{00601\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__string_ga713d5399c53b10bf008eb7a1682ca98a}{agstrcanon}}(\textcolor{keywordtype}{char}\ *,\ \textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00603\ }
+\DoxyCodeLine{00625\ }
+\DoxyCodeLine{00626\ \textcolor{comment}{//\ definitions\ for\ dynamic\ string\ attributes}}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00629\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agattr__s}{Agattr\_s}}\ \{\ \textcolor{comment}{/*\ dynamic\ string\ attributes\ */}}
+\DoxyCodeLine{00630\ \ \ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}}\ \doxymbox{\hyperlink{struct_agattr__s_a65ed9f532ea4c37212e082f371c76f64}{h}};\ \ \ \ \ \ \textcolor{comment}{/*\ common\ data\ header\ */}}
+\DoxyCodeLine{00631\ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agattr__s_a51be4c30f96d27984600b85051ad9fd6}{dict}};\ \ \ }
+\DoxyCodeLine{00632\ \ \ \textcolor{keywordtype}{char}\ **\doxymbox{\hyperlink{struct_agattr__s_a38d49282c8716587a4f63031ec39862a}{str}};\ \ \ \ \ }
+\DoxyCodeLine{00633\ \};}
+\DoxyCodeLine{00634\ }
+\DoxyCodeLine{00637\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agsym__s}{Agsym\_s}}\ \{}
+\DoxyCodeLine{00638\ \ \ \doxymbox{\hyperlink{cdt_8h_af1f4e66a09b733bea11936c64fe24bb6}{Dtlink\_t}}\ \doxymbox{\hyperlink{struct_agsym__s_a3215840b16d670d0eb94533ad41873a9}{link}};}
+\DoxyCodeLine{00639\ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{struct_agsym__s_a32fa0e00a7562b95a9267665f3037242}{name}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ attribute's\ name\ */}}
+\DoxyCodeLine{00640\ \ \ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{struct_agsym__s_a96cdbbc35f9ab5c8b63844efc52d17a5}{defval}};\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ its\ default\ value\ for\ initialization\ */}}
+\DoxyCodeLine{00641\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_agsym__s_a5a6475a4ac603c315e5dc204019a68f8}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00642\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_agsym__s_a5342149697c414fecf5d5819094feacf}{kind}};\ \ \textcolor{comment}{/*\ referent\ object\ type\ */}}
+\DoxyCodeLine{00643\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_agsym__s_a937a34cd9a0816660dc59c8415f3fb2a}{fixed}};\ \textcolor{comment}{/*\ immutable\ value\ */}}
+\DoxyCodeLine{00644\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_agsym__s_abb1f3e75947263511d6f8d0b29b077c5}{print}};\ \textcolor{comment}{/*\ always\ print\ */}}
+\DoxyCodeLine{00645\ \ \ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{struct_agsym__s_a5601059514bcf9398907d4ac164ed2a1}{owner}};\ }
+\DoxyCodeLine{00647\ \};}
+\DoxyCodeLine{00648\ }
+\DoxyCodeLine{00649\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_agdatadict__s}{Agdatadict\_s}}\ \{\ }
+\DoxyCodeLine{00650\ \ \ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}}\ \doxymbox{\hyperlink{struct_agdatadict__s_afea537a2ef42a5ea94192afd1b048197}{h}};\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ installed\ in\ list\ of\ graph\ recs\ */}}
+\DoxyCodeLine{00651\ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00652\ \ \ \ \ \doxymbox{\hyperlink{cdt_8h_a0351a17d49d8cee0c6cea7412ddd6d58}{Dict\_t}}\ *\doxymbox{\hyperlink{struct_agdatadict__s_a1337738c5e41cba9e851b46115bd3fda}{n}},\ *\doxymbox{\hyperlink{struct_agdatadict__s_a5dd15dd18a930d79bc062fd059bb79ba}{e}},\ *\doxymbox{\hyperlink{struct_agdatadict__s_acc8e76ca65e34568e3878047002857f4}{g}};}
+\DoxyCodeLine{00653\ \ \ \}\ \doxymbox{\hyperlink{struct_agdatadict__s_ac67a7c05e51feb6d800073209f535445}{dict}};}
+\DoxyCodeLine{00654\ \};}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00656\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *\doxymbox{\hyperlink{group__cgraph__attr_ga7523d2c3b09fce2d069cc8f98f6b156f}{agattr\_text}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{struct_agdatadict__s_acc8e76ca65e34568e3878047002857f4}{g}},\ \textcolor{keywordtype}{int}\ kind,\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00676\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *\doxymbox{\hyperlink{group__cgraph__attr_ga7550a6132763746371a013a614d23a28}{agattr\_html}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{int}\ kind,\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00693\ }
+\DoxyCodeLine{00694\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *\doxymbox{\hyperlink{group__cgraph__attr_gac9976dbfd1f6494265db70a8b5757e13}{agattr}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{int}\ kind,\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00714\ }
+\DoxyCodeLine{00715\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *\doxymbox{\hyperlink{group__cgraph__attr_ga5b16c999c865cb06c9a77a22985c502e}{agattrsym}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00717\ }
+\DoxyCodeLine{00718\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *\doxymbox{\hyperlink{group__cgraph__attr_ga960a710d65dc71930d5e164a606e5353}{agnxtattr}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{int}\ kind,\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *attr);}
+\DoxyCodeLine{00722\ }
+\DoxyCodeLine{00723\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga4ae52a8faaa6ea2db87b5d36fb1cde6b}{agcopyattr}}(\textcolor{keywordtype}{void}\ *oldobj,\ \textcolor{keywordtype}{void}\ *newobj);}
+\DoxyCodeLine{00729\ }
+\DoxyCodeLine{00732\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ *\doxymbox{\hyperlink{group__cgraph__rec_ga6bdb778abe4c0e93b957329520e31917}{agbindrec}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ recsize,}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ move\_to\_front);}
+\DoxyCodeLine{00737\ }
+\DoxyCodeLine{00738\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__rec_ga2bd56252330358f27af8321f650a1e8a}{Agrec\_t}}\ *\doxymbox{\hyperlink{group__cgraph__rec_ga5cb2db42cf08631f32b7653114cddaee}{aggetrec}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keywordtype}{int}\ move\_to\_front);}
+\DoxyCodeLine{00740\ }
+\DoxyCodeLine{00741\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__rec_ga296164f98874ccee53917ebbabd08e1d}{agdelrec}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00743\ }
+\DoxyCodeLine{00744\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__rec_gaf60635002636d33f14f1da1c9e348f8a}{aginit}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{int}\ kind,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rec\_name,}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rec\_size,\ \textcolor{keywordtype}{int}\ move\_to\_front);}
+\DoxyCodeLine{00752\ }
+\DoxyCodeLine{00753\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__rec_gab9b463c58a79b8520413c6bc26fad4b5}{agclean}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{int}\ kind,\ \textcolor{keywordtype}{char}\ *rec\_name);}
+\DoxyCodeLine{00756\ }
+\DoxyCodeLine{00758\ }
+\DoxyCodeLine{00759\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__attr_ga86a945a79cd78918470570ea81ad61f4}{agget}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00760\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__attr_gad2d0f1fbd29039ec42d12ffb24c015b6}{agxget}}(\textcolor{keywordtype}{void}\ *obj,\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *sym);}
+\DoxyCodeLine{00761\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_gac158869cc4f6d0493674d68c3cfe3ad5}{agset}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00762\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga5b702f7bba1ab2c62b62e1b6d7d14a16}{agset\_text}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00763\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga49f1ff7ed03359b73890eaba8490936b}{agset\_html}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00764\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga457f6b56df5722cd546e990efd77c751}{agxset}}(\textcolor{keywordtype}{void}\ *obj,\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *sym,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00765\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga4d6ea06ab4c3fbd68c0558431a354b20}{agxset\_text}}(\textcolor{keywordtype}{void}\ *obj,\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *sym,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00766\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_gab6ad5eafa62023d93f38fb7bd3018f6f}{agxset\_html}}(\textcolor{keywordtype}{void}\ *obj,\ \doxymbox{\hyperlink{group__cgraph__rec_ga51d4ce67ee895cc7051b19db92d771d6}{Agsym\_t}}\ *sym,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value);}
+\DoxyCodeLine{00767\ }
+\DoxyCodeLine{00768\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga769d4c96620da1c03d4fa07a00bcb500}{agsafeset\_text}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value,}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *def);}
+\DoxyCodeLine{00780\ }
+\DoxyCodeLine{00781\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga6ea9796aba5ac126140e62258811753a}{agsafeset\_html}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value,}
+\DoxyCodeLine{00782\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *def);}
+\DoxyCodeLine{00793\ }
+\DoxyCodeLine{00794\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__attr_ga079949a7a6a03570588c0d8f829d1d96}{agsafeset}}(\textcolor{keywordtype}{void}\ *obj,\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *value,}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *def);}
+\DoxyCodeLine{00823\ }
+\DoxyCodeLine{00825\ }
+\DoxyCodeLine{00852\ }
+\DoxyCodeLine{00853\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__subgraph_ga2ca7f6ee15e2ed41b86b715d776ab230}{agsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cflag);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ constructor\ */}}
+\DoxyCodeLine{00855\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__subgraph_ga1c19df4ad0b6221455f56230f7ef3252}{agidsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__object_ga496f55d8b021184f08084dcecc4724ec}{IDTYPE}}\ \textcolor{keywordtype}{id});\ }
+\DoxyCodeLine{00856\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__subgraph_gabcd8466586e7f9dafd183b291427231f}{agfstsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00857\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__subgraph_gae997729f968b4ecc622d1a5eedf2b785}{agnxtsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *subg);}
+\DoxyCodeLine{00858\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *\doxymbox{\hyperlink{group__cgraph__subgraph_gaf7bfbe45c1682b483146507823af9007}{agparent}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00859\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__subgraph_gab1c83c6ec6158127af8d718352cea710}{agdelsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *sub);\ \textcolor{comment}{/*\ could\ be\ agclose\ */}}
+\DoxyCodeLine{00861\ }
+\DoxyCodeLine{00866\ }
+\DoxyCodeLine{00885\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__card_ga4adc84a502d28ec87c931b98407846fd}{agnnodes}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00886\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__card_gab6fefbed26b04eadf563f407a7d3774a}{agnedges}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00887\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__card_ga2995244a8e345f4574876251e8b449d2}{agnsubg}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g);}
+\DoxyCodeLine{00888\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__card_ga7bde08e6e67433a4afd6c046e0b62d9b}{agdegree}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n,\ \textcolor{keywordtype}{int}\ in,\ \textcolor{keywordtype}{int}\ out);}
+\DoxyCodeLine{00889\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__card_gab2d5ab6810e74b55cf287bcb8490a8be}{agcountuniqedges}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__node_ga26c742547e98b7c2331cad7c85ff16c6}{Agnode\_t}}\ *n,\ \textcolor{keywordtype}{int}\ in,\ \textcolor{keywordtype}{int}\ out);}
+\DoxyCodeLine{00891\ }
+\DoxyCodeLine{00893\ }
+\DoxyCodeLine{00894\ \textcolor{comment}{/*\ support\ for\ extra\ API\ misuse\ warnings\ if\ available\ */}}
+\DoxyCodeLine{00895\ \textcolor{preprocessor}{\#ifdef\ \_\_GNUC\_\_}}
+\DoxyCodeLine{00896\ \textcolor{preprocessor}{\#define\ PRINTF\_LIKE(index,\ first)\ \_\_attribute\_\_((format(printf,\ index,\ first)))}}
+\DoxyCodeLine{00897\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00898\ \textcolor{preprocessor}{\#define\ PRINTF\_LIKE(index,\ first)\ }\textcolor{comment}{/*\ nothing\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00899\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00900\ }
+\DoxyCodeLine{00902\ }
+\DoxyCodeLine{00943\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa4486cfed6fa2babf34e58bdb3707461c}{AGWARN}},\ \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa76eb3bf18a02c1e78b1be01b25c296f2}{AGERR}},\ \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfa737e3522a0c1ebe6f2bc9faa54da2a77}{AGMAX}},\ \doxymbox{\hyperlink{group__cgraph__err_gga0c75ffdbe1d93ca74fe77dc46a45a6cfabd794ca4c498f8e4c0cf4d26755e0398}{AGPREV}}\ \}\ \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\_t}};}
+\DoxyCodeLine{00944\ \textcolor{keyword}{typedef}\ int\ (*\doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}})(\textcolor{keywordtype}{char}\ *);}
+\DoxyCodeLine{00945\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\_t}}\ \doxymbox{\hyperlink{group__cgraph__err_gac8b80f854859b4017499e42067bae5b7}{agseterr}}(\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\_t}});}
+\DoxyCodeLine{00946\ CGRAPH\_API\ \textcolor{keywordtype}{char}\ *\doxymbox{\hyperlink{group__cgraph__err_ga4776647f453831f116fee7e200ee2823}{aglasterr}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00947\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__err_ga42ef64ab2933b0503ccc8406dfe375b7}{agerr}}(\doxymbox{\hyperlink{group__cgraph__err_ga0c75ffdbe1d93ca74fe77dc46a45a6cf}{agerrlevel\_t}}\ level,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fmt,\ ...)}
+\DoxyCodeLine{00948\ \ \ \ \ PRINTF\_LIKE(2,\ 3);}
+\DoxyCodeLine{00949\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__err_gaf80e0604e4bcff00064559e46261b8d4}{agerrorf}}(const\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ PRINTF\_LIKE(1,\ 2);}
+\DoxyCodeLine{00950\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__err_ga1b3c7fe6147832a992f62fcd28e79a82}{agwarningf}}(const\ \textcolor{keywordtype}{char}\ *fmt,\ ...)\ PRINTF\_LIKE(1,\ 2);}
+\DoxyCodeLine{00951\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__err_gac3dd9f429c7f6f0b7147e8ffd5c83ed5}{agerrors}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00952\ CGRAPH\_API\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{group__cgraph__err_gacc4553d6d246fc943e79b267299437d2}{agreseterrors}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00953\ CGRAPH\_API\ \doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}}\ \doxymbox{\hyperlink{group__cgraph__err_gadee66a17e220d081d595875a1afc0c2c}{agseterrf}}(\doxymbox{\hyperlink{group__cgraph__err_gadaa9664d5293197783f01659b889d8c6}{agusererrf}});}
+\DoxyCodeLine{00955\ }
+\DoxyCodeLine{00956\ \textcolor{preprocessor}{\#undef\ PRINTF\_LIKE}}
+\DoxyCodeLine{00958\ }
+\DoxyCodeLine{00961\ \textcolor{comment}{/*\ data\ access\ macros\ */}}
+\DoxyCodeLine{00962\ \textcolor{comment}{/*\ this\ assumes\ that\ e[0]\ is\ out\ and\ e[1]\ is\ inedge,\ see\ @ref\ Agedgepair\_s\ \ */}}
+\DoxyCodeLine{00963\ \textcolor{preprocessor}{\#define\ AGIN2OUT(inedge)\ ((inedge)\ -\/\ 1)\ }}
+\DoxyCodeLine{00964\ \textcolor{preprocessor}{\#define\ AGOUT2IN(outedge)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00965\ \textcolor{preprocessor}{\ \ ((outedge)\ +\ 1)\ }}
+\DoxyCodeLine{00966\ \textcolor{preprocessor}{\#define\ AGOPP(e)\ ((AGTYPE(e)\ ==\ AGINEDGE)\ ?\ AGIN2OUT(e)\ :\ AGOUT2IN(e))}}
+\DoxyCodeLine{00967\ \textcolor{preprocessor}{\#define\ AGMKOUT(e)\ (AGTYPE(e)\ ==\ AGOUTEDGE\ ?\ (e)\ :\ AGIN2OUT(e))}}
+\DoxyCodeLine{00968\ \textcolor{preprocessor}{\#define\ AGMKIN(e)\ (AGTYPE(e)\ ==\ AGINEDGE\ ?\ (e)\ :\ AGOUT2IN(e))}}
+\DoxyCodeLine{00969\ \textcolor{preprocessor}{\#define\ AGTAIL(e)\ (AGMKIN(e)-\/>node)}}
+\DoxyCodeLine{00970\ \textcolor{preprocessor}{\#define\ AGHEAD(e)\ (AGMKOUT(e)-\/>node)}}
+\DoxyCodeLine{00971\ \textcolor{preprocessor}{\#define\ AGEQEDGE(e,\ f)\ (AGMKOUT(e)\ ==\ AGMKOUT(f))}}
+\DoxyCodeLine{00972\ \textcolor{comment}{/*\ These\ macros\ are\ also\ exposed\ as\ functions,\ so\ they\ can\ be\ linked\ against.\ */}}
+\DoxyCodeLine{00973\ \textcolor{preprocessor}{\#define\ agtail(e)\ AGTAIL(e)}}
+\DoxyCodeLine{00974\ \textcolor{preprocessor}{\#define\ aghead(e)\ AGHEAD(e)}}
+\DoxyCodeLine{00975\ \textcolor{preprocessor}{\#define\ agopp(e)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00976\ \textcolor{preprocessor}{\ \ AGOPP(e)\ }}
+\DoxyCodeLine{00977\ \textcolor{preprocessor}{\#define\ ageqedge(e,\ f)\ AGEQEDGE(e,\ f)\ }}
+\DoxyCodeLine{00978\ }
+\DoxyCodeLine{00979\ \textcolor{preprocessor}{\#define\ TAILPORT\_ID\ "{}tailport"{}}}
+\DoxyCodeLine{00980\ \textcolor{preprocessor}{\#define\ HEADPORT\_ID\ "{}headport"{}}}
+\DoxyCodeLine{00982\ }
+\DoxyCodeLine{00985\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga8a3475f98b683496724e35f34a56c8c5}{Agdirected}};\ }
+\DoxyCodeLine{00986\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga90a816224a1dfa7732f06ce0a9770220}{Agstrictdirected}};}
+\DoxyCodeLine{00988\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{group__cgraph__graph_ga13c8f3f32c6538e915cdc7784dd09bba}{Agundirected}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00989\ CGRAPH\_API\ \textcolor{keyword}{extern}\ \doxymbox{\hyperlink{group__cgraph__graph_ga57bf9a7fac6e52ad51c90f5fac1230b5}{Agdesc\_t}}\ \doxymbox{\hyperlink{group__cgraph__graph_gadb18db99d62071a35bec738edc2b0636}{Agstrictundirected}};\ }
+\DoxyCodeLine{00991\ }
+\DoxyCodeLine{00996\ }
+\DoxyCodeLine{00997\ \textcolor{comment}{/*\ this\ is\ expedient\ but\ a\ bit\ slimey\ because\ it\ "{}knows"{}\ that\ dict\ entries\ of}}
+\DoxyCodeLine{00998\ \textcolor{comment}{both\ nodes\ and\ edges\ are\ embedded\ in\ main\ graph\ objects\ but\ allocated\ separately}}
+\DoxyCodeLine{00999\ \textcolor{comment}{in\ subgraphs\ */}}
+\DoxyCodeLine{01000\ \textcolor{preprocessor}{\#define\ AGSNMAIN(sn)\ ((sn)\ ==\ (\&((sn)-\/>node-\/>mainsub)))}}
+\DoxyCodeLine{01002\ }
+\DoxyCodeLine{01005\ }
+\DoxyCodeLine{01007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01008\ \ \ FILE\ *outFile;}
+\DoxyCodeLine{01009\ \ \ \textcolor{keywordtype}{bool}\ doWrite;}
+\DoxyCodeLine{01010\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structgraphviz__acyclic__options__t_a654913d3b8c57a54a8eb72b6d212ef4b}{Verbose}};}
+\DoxyCodeLine{01011\ \}\ \doxymbox{\hyperlink{structgraphviz__acyclic__options__t}{graphviz\_acyclic\_options\_t}};}
+\DoxyCodeLine{01012\ }
+\DoxyCodeLine{01021\ CGRAPH\_API\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{group__cgraph__app_ga2e387331b63287e21a41d9da429a64c8}{graphviz\_acyclic}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,}
+\DoxyCodeLine{01022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structgraphviz__acyclic__options__t}{graphviz\_acyclic\_options\_t}}\ *opts,}
+\DoxyCodeLine{01023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ *num\_rev);}
+\DoxyCodeLine{01024\ }
+\DoxyCodeLine{01026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01027\ \ \ \textcolor{keywordtype}{bool}\ Verbose;}
+\DoxyCodeLine{01028\ \ \ \textcolor{keywordtype}{bool}\ PrintRemovedEdges;}
+\DoxyCodeLine{01029\ \ \ FILE\ *\doxymbox{\hyperlink{structgraphviz__tred__options__t_ab2fc7ead4ad9d4315e8c7c49665d793b}{out}};\ }
+\DoxyCodeLine{01030\ \ \ FILE\ *\doxymbox{\hyperlink{structgraphviz__tred__options__t_a5de872bc4635879a5175cfe85b40481c}{err}};\ }
+\DoxyCodeLine{01031\ \}\ \doxymbox{\hyperlink{structgraphviz__tred__options__t}{graphviz\_tred\_options\_t}};}
+\DoxyCodeLine{01032\ }
+\DoxyCodeLine{01040\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__app_ga791b278307ca081f4bddcea037cb27b7}{graphviz\_tred}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structgraphviz__tred__options__t}{graphviz\_tred\_options\_t}}\ *opts);}
+\DoxyCodeLine{01041\ }
+\DoxyCodeLine{01043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{01044\ \ \ \textcolor{keywordtype}{bool}\ Do\_fans;}
+\DoxyCodeLine{01045\ \ \ \textcolor{keywordtype}{int}\ MaxMinlen;}
+\DoxyCodeLine{01046\ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structgraphviz__unflatten__options__t_aa455d8120e56474f4c73f4d3f6976295}{ChainLimit}};}
+\DoxyCodeLine{01047\ \}\ \doxymbox{\hyperlink{structgraphviz__unflatten__options__t}{graphviz\_unflatten\_options\_t}};}
+\DoxyCodeLine{01048\ }
+\DoxyCodeLine{01055\ CGRAPH\_API\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{group__cgraph__app_gadf040141eb79b2031a0a438d0b421ab4}{graphviz\_unflatten}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,}
+\DoxyCodeLine{01056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{structgraphviz__unflatten__options__t}{graphviz\_unflatten\_options\_t}}\ *opts);}
+\DoxyCodeLine{01057\ }
+\DoxyCodeLine{01071\ CGRAPH\_API\ \textcolor{keywordtype}{size\_t}\ \doxymbox{\hyperlink{group__cgraph__app_ga0e2371ffd718351120a6808bba7af6ab}{graphviz\_node\_induce}}(\doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *g,\ \doxymbox{\hyperlink{group__cgraph__graph_ga48061c3baade540af78ac621211ae926}{Agraph\_t}}\ *edgeset);}
+\DoxyCodeLine{01073\ }
+\DoxyCodeLine{01074\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{01075\ \}}
+\DoxyCodeLine{01076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

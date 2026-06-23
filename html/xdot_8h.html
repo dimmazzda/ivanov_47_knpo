@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Программа нахождения типа графа: Файл Graphviz/include/graphviz/xdot.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Программа нахождения типа графа
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+  init_search();
+});
+</script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('xdot_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Файл xdot.h<div class="ingroups"><a class="el" href="group__public__apis.html">Graphviz public APIs</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>parsing and deparsing of <a href="https://graphviz.org/docs/outputs/canon/#xdot">xdot</a> operations  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="xdot_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:xdot_5Fcolor_5Fstop" id="r_xdot_5Fcolor_5Fstop"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__color__stop.html">xdot_color_stop</a></td></tr>
+<tr class="memitem:xdot_5Flinear_5Fgrad" id="r_xdot_5Flinear_5Fgrad"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__linear__grad.html">xdot_linear_grad</a></td></tr>
+<tr class="memitem:xdot_5Fradial_5Fgrad" id="r_xdot_5Fradial_5Fgrad"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__radial__grad.html">xdot_radial_grad</a></td></tr>
+<tr class="memitem:xdot_5Fcolor" id="r_xdot_5Fcolor"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__color.html">xdot_color</a></td></tr>
+<tr class="memitem:xdot_5Fpoint" id="r_xdot_5Fpoint"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__point.html">xdot_point</a></td></tr>
+<tr class="memitem:xdot_5Frect" id="r_xdot_5Frect"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__rect.html">xdot_rect</a></td></tr>
+<tr class="memitem:xdot_5Fpolyline" id="r_xdot_5Fpolyline"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__polyline.html">xdot_polyline</a></td></tr>
+<tr class="memitem:xdot_5Ftext" id="r_xdot_5Ftext"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__text.html">xdot_text</a></td></tr>
+<tr class="memitem:xdot_5Fimage" id="r_xdot_5Fimage"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__image.html">xdot_image</a></td></tr>
+<tr class="memitem:xdot_5Ffont" id="r_xdot_5Ffont"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__font.html">xdot_font</a></td></tr>
+<tr class="memitem:_5Fxdot_5Fop" id="r__5Fxdot_5Fop"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct__xdot__op.html">_xdot_op</a></td></tr>
+<tr class="memitem:xdot" id="r_xdot"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot.html">xdot</a></td></tr>
+<tr class="memitem:xdot_5Fstats" id="r_xdot_5Fstats"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structxdot__stats.html">xdot_stats</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aad7e8e9500a6253fd33a8eafb79e4a30" id="r_aad7e8e9500a6253fd33a8eafb79e4a30"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a>&#160;&#160;&#160;/* nothing */</td></tr>
+<tr class="memitem:a7186f24afcfa0a2476a28760acca249f" id="r_a7186f24afcfa0a2476a28760acca249f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7186f24afcfa0a2476a28760acca249f">XDOT_PARSE_ERROR</a>&#160;&#160;&#160;1</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a506f55feaed523333fd66154d076c475" id="r_a506f55feaed523333fd66154d076c475"><td class="memItemLeft">typedef struct <a class="el" href="struct__xdot__op.html">_xdot_op</a>&#160;</td><td class="memItemRight"><a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a></td></tr>
+<tr class="memitem:a8bb541a0389eff13933e5fb7ab8b9f60" id="r_a8bb541a0389eff13933e5fb7ab8b9f60"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a8bb541a0389eff13933e5fb7ab8b9f60">drawfunc_t</a>) (<a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a> *, int)</td></tr>
+<tr class="memitem:a79292a4183011bf60e3a715c5b427315" id="r_a79292a4183011bf60e3a715c5b427315"><td class="memItemLeft">typedef void(*&#160;</td><td class="memItemRight"><a class="el" href="#a79292a4183011bf60e3a715c5b427315">freefunc_t</a>) (<a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a> *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a01060e38b65176015a53e621a323b23d" id="r_a01060e38b65176015a53e621a323b23d"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a01060e38b65176015a53e621a323b23d">xdot_grad_type</a> { <a class="el" href="#a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6">xd_none</a>
+, <a class="el" href="#a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d">xd_linear</a>
+, <a class="el" href="#a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678">xd_radial</a>
+ }</td></tr>
+<tr class="memitem:a886393475707990cd9a4a8d6b44d949e" id="r_a886393475707990cd9a4a8d6b44d949e"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a886393475707990cd9a4a8d6b44d949e">xdot_align</a> { <a class="el" href="#a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850">xd_left</a>
+, <a class="el" href="#a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d">xd_center</a>
+, <a class="el" href="#a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27">xd_right</a>
+ }</td></tr>
+<tr class="memitem:ad1a5946e6f85d31e5d8f5718e723b614" id="r_ad1a5946e6f85d31e5d8f5718e723b614"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614">xdot_kind</a> { <br />
+&#160;&#160;<a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8">xd_filled_ellipse</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2">xd_unfilled_ellipse</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff">xd_filled_polygon</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc">xd_unfilled_polygon</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9">xd_filled_bezier</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249">xd_unfilled_bezier</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7">xd_polyline</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80">xd_text</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7">xd_fill_color</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76">xd_pen_color</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da">xd_font</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf">xd_style</a>
+, <br />
+&#160;&#160;<a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b">xd_image</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa">xd_grad_fill_color</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159">xd_grad_pen_color</a>
+, <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d">xd_fontchar</a>
+<br />
+ }</td></tr>
+<tr class="memitem:a87f5dc0f21d895468ad1bb7864716ab7" id="r_a87f5dc0f21d895468ad1bb7864716ab7"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7">xop_kind</a> { <br />
+&#160;&#160;<a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849">xop_ellipse</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93">xop_polygon</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69">xop_bezier</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d">xop_polyline</a>
+, <br />
+&#160;&#160;<a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c">xop_text</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8">xop_fill_color</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08">xop_pen_color</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911">xop_font</a>
+, <br />
+&#160;&#160;<a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af">xop_style</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a">xop_image</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c">xop_grad_color</a>
+, <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583">xop_fontchar</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ab0d52f47955fa1ceb0c38633f71adf66" id="r_ab0d52f47955fa1ceb0c38633f71adf66"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab0d52f47955fa1ceb0c38633f71adf66">parseXDotF</a> (char *, <a class="el" href="#a8bb541a0389eff13933e5fb7ab8b9f60">drawfunc_t</a> opfns[], size_t sz)</td></tr>
+<tr class="memitem:a98c8818d87ed6f3e72213d11cd5abee9" id="r_a98c8818d87ed6f3e72213d11cd5abee9"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a98c8818d87ed6f3e72213d11cd5abee9">parseXDotFOn</a> (char *, <a class="el" href="#a8bb541a0389eff13933e5fb7ab8b9f60">drawfunc_t</a> opfns[], size_t sz, <a class="el" href="structxdot.html">xdot</a> *)</td></tr>
+<tr class="memitem:a9f16fc5f2dec9bf85289a9a1a6ff1ba2" id="r_a9f16fc5f2dec9bf85289a9a1a6ff1ba2"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f16fc5f2dec9bf85289a9a1a6ff1ba2">parseXDot</a> (char *)</td></tr>
+<tr class="memitem:a1c7e297b272814da9a7d3481c330cf8c" id="r_a1c7e297b272814da9a7d3481c330cf8c"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> char *&#160;</td><td class="memItemRight"><a class="el" href="#a1c7e297b272814da9a7d3481c330cf8c">sprintXDot</a> (<a class="el" href="structxdot.html">xdot</a> *)</td></tr>
+<tr class="memitem:a1715f8bf6aa035ded98c2a29c95a8bd7" id="r_a1715f8bf6aa035ded98c2a29c95a8bd7"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a1715f8bf6aa035ded98c2a29c95a8bd7">fprintXDot</a> (FILE *, <a class="el" href="structxdot.html">xdot</a> *)</td></tr>
+<tr class="memitem:a1648a6f9fe3baf32c809364c493a9802" id="r_a1648a6f9fe3baf32c809364c493a9802"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a1648a6f9fe3baf32c809364c493a9802">jsonXDot</a> (FILE *, <a class="el" href="structxdot.html">xdot</a> *)</td></tr>
+<tr class="memitem:a5515091902141890b8e895d499615b5b" id="r_a5515091902141890b8e895d499615b5b"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a5515091902141890b8e895d499615b5b">freeXDot</a> (<a class="el" href="structxdot.html">xdot</a> *)</td></tr>
+<tr class="memitem:aa02fbafb913ba22fea989e8c0249207b" id="r_aa02fbafb913ba22fea989e8c0249207b"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> int&#160;</td><td class="memItemRight"><a class="el" href="#aa02fbafb913ba22fea989e8c0249207b">statXDot</a> (<a class="el" href="structxdot.html">xdot</a> *, <a class="el" href="structxdot__stats.html">xdot_stats</a> *)</td></tr>
+<tr class="memitem:a8fd6a4562b4829343c678eaa77640fd8" id="r_a8fd6a4562b4829343c678eaa77640fd8"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="#a01060e38b65176015a53e621a323b23d">xdot_grad_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8fd6a4562b4829343c678eaa77640fd8">colorTypeXDot</a> (char *)</td></tr>
+<tr class="memitem:a326bb058d7364c46a5d9e2a329d8923c" id="r_a326bb058d7364c46a5d9e2a329d8923c"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> char *&#160;</td><td class="memItemRight"><a class="el" href="#a326bb058d7364c46a5d9e2a329d8923c">parseXDotColor</a> (char *cp, <a class="el" href="structxdot__color.html">xdot_color</a> *clr)</td></tr>
+<tr class="memitem:a7bdeac6f0d42a9781d93e76ada3968ef" id="r_a7bdeac6f0d42a9781d93e76ada3968ef"><td class="memItemLeft"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a7bdeac6f0d42a9781d93e76ada3968ef">freeXDotColor</a> (<a class="el" href="structxdot__color.html">xdot_color</a> *)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p><b>libxdot</b> provides support for parsing and deparsing graphical operations specified by the xdot language. <a href="https://graphviz.org/docs/outputs/canon/#xdot">xdot</a> is extended dot format containing complete layout information.</p>
+<p><a href="https://graphviz.org/pdf/xdot.3.pdf">man 3 xdot</a> </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Макросы</h2>
+<a id="aad7e8e9500a6253fd33a8eafb79e4a30" name="aad7e8e9500a6253fd33a8eafb79e4a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad7e8e9500a6253fd33a8eafb79e4a30">&#9670;&#160;</a></span>XDOT_API</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XDOT_API&#160;&#160;&#160;/* nothing */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7186f24afcfa0a2476a28760acca249f" name="a7186f24afcfa0a2476a28760acca249f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7186f24afcfa0a2476a28760acca249f">&#9670;&#160;</a></span>XDOT_PARSE_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XDOT_PARSE_ERROR&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Типы</h2>
+<a id="a8bb541a0389eff13933e5fb7ab8b9f60" name="a8bb541a0389eff13933e5fb7ab8b9f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bb541a0389eff13933e5fb7ab8b9f60">&#9670;&#160;</a></span>drawfunc_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* drawfunc_t) (<a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a> *, int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79292a4183011bf60e3a715c5b427315" name="a79292a4183011bf60e3a715c5b427315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79292a4183011bf60e3a715c5b427315">&#9670;&#160;</a></span>freefunc_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* freefunc_t) (<a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a506f55feaed523333fd66154d076c475" name="a506f55feaed523333fd66154d076c475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a506f55feaed523333fd66154d076c475">&#9670;&#160;</a></span>xdot_op</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__xdot__op.html">_xdot_op</a> <a class="el" href="#a506f55feaed523333fd66154d076c475">xdot_op</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Перечисления</h2>
+<a id="a886393475707990cd9a4a8d6b44d949e" name="a886393475707990cd9a4a8d6b44d949e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a886393475707990cd9a4a8d6b44d949e">&#9670;&#160;</a></span>xdot_align</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a886393475707990cd9a4a8d6b44d949e">xdot_align</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850" name="a886393475707990cd9a4a8d6b44d949ea2b05aaacaccf9d9908bdf4eaa398d850"></a>xd_left&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d" name="a886393475707990cd9a4a8d6b44d949eab1f9b5dd7ee0355ddea7ed33b124ed6d"></a>xd_center&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27" name="a886393475707990cd9a4a8d6b44d949ea920caceffc61f8ba55fb9c86ea040c27"></a>xd_right&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a01060e38b65176015a53e621a323b23d" name="a01060e38b65176015a53e621a323b23d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01060e38b65176015a53e621a323b23d">&#9670;&#160;</a></span>xdot_grad_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a01060e38b65176015a53e621a323b23d">xdot_grad_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6" name="a01060e38b65176015a53e621a323b23da71feb521fcc8501c57df3fe4cb56d3d6"></a>xd_none&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d" name="a01060e38b65176015a53e621a323b23dafa9f80d7310606f7beb71efc23fa1e1d"></a>xd_linear&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678" name="a01060e38b65176015a53e621a323b23dab07aecb846e426571c12da1dd81d2678"></a>xd_radial&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad1a5946e6f85d31e5d8f5718e723b614" name="ad1a5946e6f85d31e5d8f5718e723b614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a5946e6f85d31e5d8f5718e723b614">&#9670;&#160;</a></span>xdot_kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad1a5946e6f85d31e5d8f5718e723b614">xdot_kind</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8" name="ad1a5946e6f85d31e5d8f5718e723b614ac67ac83da91e0936688e001179f54dd8"></a>xd_filled_ellipse&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2" name="ad1a5946e6f85d31e5d8f5718e723b614a6025a99348cb8b8ae44efc6d895e1fa2"></a>xd_unfilled_ellipse&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff" name="ad1a5946e6f85d31e5d8f5718e723b614a2378c0498798b5038a365d74b0d8c1ff"></a>xd_filled_polygon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc" name="ad1a5946e6f85d31e5d8f5718e723b614ad78bcfadd69ce111dada65437af837bc"></a>xd_unfilled_polygon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9" name="ad1a5946e6f85d31e5d8f5718e723b614ae1cd67f58d148611bf4edf498cac17e9"></a>xd_filled_bezier&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249" name="ad1a5946e6f85d31e5d8f5718e723b614a97b92939bf6d98bd8e61804e18382249"></a>xd_unfilled_bezier&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7" name="ad1a5946e6f85d31e5d8f5718e723b614aa9edeec1231c27190557a37850dabea7"></a>xd_polyline&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80" name="ad1a5946e6f85d31e5d8f5718e723b614aad78a30070a1822eb5d0b8e138921d80"></a>xd_text&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7" name="ad1a5946e6f85d31e5d8f5718e723b614a8a46cf5aeba1a738152dec6143e822e7"></a>xd_fill_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76" name="ad1a5946e6f85d31e5d8f5718e723b614a43ff4c622c7695f006735ed109b21f76"></a>xd_pen_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da" name="ad1a5946e6f85d31e5d8f5718e723b614a82b7d5d2c36ad76631ed45626a1de0da"></a>xd_font&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf" name="ad1a5946e6f85d31e5d8f5718e723b614ae416b233e61d4a3457edfa81bfbbc6bf"></a>xd_style&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b" name="ad1a5946e6f85d31e5d8f5718e723b614ac8a1d069e825cf2366f9956f277f249b"></a>xd_image&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa" name="ad1a5946e6f85d31e5d8f5718e723b614aa14b3f6b86b8db96d641e602fac81cfa"></a>xd_grad_fill_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159" name="ad1a5946e6f85d31e5d8f5718e723b614ae10350ec758d3f3d0ff3ca1f9efe3159"></a>xd_grad_pen_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d" name="ad1a5946e6f85d31e5d8f5718e723b614a78b47c64ca4516c851b3b5362ff9eb6d"></a>xd_fontchar&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a87f5dc0f21d895468ad1bb7864716ab7" name="a87f5dc0f21d895468ad1bb7864716ab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f5dc0f21d895468ad1bb7864716ab7">&#9670;&#160;</a></span>xop_kind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a87f5dc0f21d895468ad1bb7864716ab7">xop_kind</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849" name="a87f5dc0f21d895468ad1bb7864716ab7aee9caee09464545dc5b161a63655e849"></a>xop_ellipse&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93" name="a87f5dc0f21d895468ad1bb7864716ab7a33f263220de1ae45f0716b798d7f4c93"></a>xop_polygon&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69" name="a87f5dc0f21d895468ad1bb7864716ab7a4368e30cc5db8f1dce014d5796cfed69"></a>xop_bezier&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d" name="a87f5dc0f21d895468ad1bb7864716ab7af77502923f189d3cb0889524af89c15d"></a>xop_polyline&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c" name="a87f5dc0f21d895468ad1bb7864716ab7a4c676d2452de11e8bf5670af24d5ab7c"></a>xop_text&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8" name="a87f5dc0f21d895468ad1bb7864716ab7a4766ced0171799ef2e561bc40ef386d8"></a>xop_fill_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08" name="a87f5dc0f21d895468ad1bb7864716ab7aa81bb9a5311242a8d590327640d11b08"></a>xop_pen_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911" name="a87f5dc0f21d895468ad1bb7864716ab7a3831c17c56be6ea7e5085ca6e5183911"></a>xop_font&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af" name="a87f5dc0f21d895468ad1bb7864716ab7a797a798e076d96ae13ca037c664064af"></a>xop_style&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a" name="a87f5dc0f21d895468ad1bb7864716ab7a3c1a14e18b33159d8d5953cae2c1e79a"></a>xop_image&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c" name="a87f5dc0f21d895468ad1bb7864716ab7a97ed31b54afd52e19d4958ad835b4a2c"></a>xop_grad_color&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583" name="a87f5dc0f21d895468ad1bb7864716ab7a5d212bffe3f9df92584372a4e4742583"></a>xop_fontchar&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
+<a id="a8fd6a4562b4829343c678eaa77640fd8" name="a8fd6a4562b4829343c678eaa77640fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fd6a4562b4829343c678eaa77640fd8">&#9670;&#160;</a></span>colorTypeXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="#a01060e38b65176015a53e621a323b23d">xdot_grad_type</a> colorTypeXDot </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1715f8bf6aa035ded98c2a29c95a8bd7" name="a1715f8bf6aa035ded98c2a29c95a8bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1715f8bf6aa035ded98c2a29c95a8bd7">&#9670;&#160;</a></span>fprintXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void fprintXDot </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5515091902141890b8e895d499615b5b" name="a5515091902141890b8e895d499615b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5515091902141890b8e895d499615b5b">&#9670;&#160;</a></span>freeXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void freeXDot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bdeac6f0d42a9781d93e76ada3968ef" name="a7bdeac6f0d42a9781d93e76ada3968ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bdeac6f0d42a9781d93e76ada3968ef">&#9670;&#160;</a></span>freeXDotColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void freeXDotColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structxdot__color.html">xdot_color</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1648a6f9fe3baf32c809364c493a9802" name="a1648a6f9fe3baf32c809364c493a9802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1648a6f9fe3baf32c809364c493a9802">&#9670;&#160;</a></span>jsonXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> void jsonXDot </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f16fc5f2dec9bf85289a9a1a6ff1ba2" name="a9f16fc5f2dec9bf85289a9a1a6ff1ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f16fc5f2dec9bf85289a9a1a6ff1ba2">&#9670;&#160;</a></span>parseXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> * parseXDot </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a326bb058d7364c46a5d9e2a329d8923c" name="a326bb058d7364c46a5d9e2a329d8923c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326bb058d7364c46a5d9e2a329d8923c">&#9670;&#160;</a></span>parseXDotColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> char * parseXDotColor </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>cp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxdot__color.html">xdot_color</a> *</td>          <td class="paramname"><span class="paramname"><em>clr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0d52f47955fa1ceb0c38633f71adf66" name="ab0d52f47955fa1ceb0c38633f71adf66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d52f47955fa1ceb0c38633f71adf66">&#9670;&#160;</a></span>parseXDotF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> * parseXDotF </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a8bb541a0389eff13933e5fb7ab8b9f60">drawfunc_t</a></td>          <td class="paramname"><span class="paramname"><em>opfns</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98c8818d87ed6f3e72213d11cd5abee9" name="a98c8818d87ed6f3e72213d11cd5abee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c8818d87ed6f3e72213d11cd5abee9">&#9670;&#160;</a></span>parseXDotFOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> <a class="el" href="structxdot.html">xdot</a> * parseXDotFOn </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a8bb541a0389eff13933e5fb7ab8b9f60">drawfunc_t</a></td>          <td class="paramname"><span class="paramname"><em>opfns</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>sz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c7e297b272814da9a7d3481c330cf8c" name="a1c7e297b272814da9a7d3481c330cf8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7e297b272814da9a7d3481c330cf8c">&#9670;&#160;</a></span>sprintXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> char * sprintXDot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa02fbafb913ba22fea989e8c0249207b" name="aa02fbafb913ba22fea989e8c0249207b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02fbafb913ba22fea989e8c0249207b">&#9670;&#160;</a></span>statXDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aad7e8e9500a6253fd33a8eafb79e4a30">XDOT_API</a> int statXDot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structxdot.html">xdot</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structxdot__stats.html">xdot_stats</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_56dbd473aeb1f340a56d41f0e068d500.html">Graphviz</a></li><li class="navelem"><a href="dir_052c8bb5ec3783b45b68459f59875b12.html">include</a></li><li class="navelem"><a href="dir_4105aeee0a11adc789b32d33bfeaac81.html">graphviz</a></li><li class="navelem"><a href="xdot_8h.html">xdot.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
